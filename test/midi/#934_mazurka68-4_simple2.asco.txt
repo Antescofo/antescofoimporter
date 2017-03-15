@@ -1,0 +1,177 @@
+﻿; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: #934_mazurka68-4_simple2.mid
+; MIDI file type 1 (multiple tracks)
+; Converted to Antescofo on Tue Sep 15 02:22:44 2015
+
+; start
+BPM 126
+
+; ----------- measure 1 --- beat 0 --- time signature 3/4
+
+BPM 124
+NOTE 0 1 measure1
+CHORD (6500 7100) 1/2
+CHORD (6400 7100) 1/2
+CHORD (6500 7100) 1
+
+; ----------- measure 2 --- beat 3 --- time signature 3/4
+
+CHORD (6500 7200) 1 measure2
+NOTE 7200 1/2
+NOTE 7300 1/2
+NOTE 7300 1/2
+NOTE 7200 1/2
+
+; ----------- measure 3 --- beat 6 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 4 --- beat 9 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 5 --- beat 12 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 6 --- beat 15 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 7 --- beat 18 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 8 --- beat 21 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 9 --- beat 24 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 10 --- beat 27 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 11 --- beat 30 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 12 --- beat 33 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 13 --- beat 36 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 14 --- beat 39 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 15 --- beat 42 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 16 --- beat 45 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 17 --- beat 48 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 18 --- beat 51 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 19 --- beat 54 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 20 --- beat 57 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 21 --- beat 60 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 22 --- beat 63 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 23 --- beat 66 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 24 --- beat 69 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 25 --- beat 72 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 26 --- beat 75 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 27 --- beat 78 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 28 --- beat 81 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 29 --- beat 84 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 30 --- beat 87 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 31 --- beat 90 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 32 --- beat 93 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 33 --- beat 96 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 34 --- beat 99 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 35 --- beat 102 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 36 --- beat 105 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 37 --- beat 108 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 38 --- beat 111 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 39 --- beat 114 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 40 --- beat 117 --- time signature 3/4
+

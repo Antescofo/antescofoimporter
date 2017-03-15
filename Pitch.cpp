@@ -11,22 +11,42 @@
 using namespace antescofo;
 using namespace std;
 
-Pitch::Pitch( int pitch ):
-    pitch_( pitch ),
-    features_( None )
+Pitch::Pitch():
+    midiCents_  ( 0 ),
+    note_       ( 0 ),
+    accidental_ ( 0 ),
+    octave_     ( 0 ),
+    features_   ( None )
 {
     //NOTHING ELSE
 }
 
-Pitch::Pitch( int pitch, const EntryFeatures feature ):
-    pitch_( pitch ),
+Pitch::Pitch( int cents ):
+    midiCents_  ( cents ),
+    note_       ( 0 ),
+    accidental_ ( 0 ),
+    octave_     ( 0 ),
+    features_   ( None )
+{
+    if ( cents < 0 )
+        features_ |= Tiedbackwards;
+}
+
+Pitch::Pitch( int cents, const EntryFeatures feature ):
+    midiCents_( cents ),
+    note_       ( 0 ),
+    accidental_ ( 0 ),
+    octave_     ( 0 ),
     features_( feature )
 {
-    //NOTHING ELSE
+    features_ &= ~OriginalEnharmony;
 }
 
 Pitch::Pitch( const Pitch& otherPitch ):
-    pitch_( otherPitch.pitch_ ),
+    midiCents_( otherPitch.midiCents_ ),
+    note_       ( otherPitch.note_ ),
+    accidental_ ( otherPitch.accidental_ ),
+    octave_     ( otherPitch.octave_ ),
     features_( otherPitch.features_ )
 {
     //NOTHING ELSE
@@ -39,18 +59,26 @@ Pitch::~Pitch()
 
 bool Pitch::operator==( const Pitch& otherPitch ) const
 {
-    return ( pitch_ == otherPitch.pitch_ );
+    return ( midiCents_ == otherPitch.midiCents_ );
+}
+
+bool Pitch::operator==( int cents ) const
+{
+    return ( midiCents_ == cents );
 }
 
 bool Pitch::operator<( const Pitch& otherPitch ) const
 {
-    return abs( pitch_ ) < abs( otherPitch.pitch_ );
+    return midiCents_ < otherPitch.midiCents_;
 }
 
 Pitch& Pitch::operator=( const Pitch& otherPitch )
 {
-    pitch_ = otherPitch.pitch_;
+    midiCents_ = otherPitch.midiCents_;
     features_ = otherPitch.features_;
+    note_ = otherPitch.note_;
+    accidental_ = otherPitch.accidental_;
+    octave_ = otherPitch.octave_;
     return *this;
 }
 
@@ -59,19 +87,58 @@ bool Pitch::comparePitch( const Pitch& p1, const Pitch& p2 )
     return p1 < p2;
 }
 
+void Pitch::resetNote()
+{
+    note_ = 0;
+    accidental_ = 0;
+    octave_ = 0;
+}
+
 string Pitch::serialize() const
 {
-    int midiCents = pitch_;
-    if ( abs( midiCents-( midiCents/100 )*100 ) == 1 )   //pitch marked as trill (ex: 6400-> 6401)
-    {
-        midiCents = abs( ( midiCents/100 )*100 );
-    }
-    unsigned int absCents = abs( midiCents );
-    if ( features_&DisplayCents || absCents == 0 || absCents%100 != 0 )
-        return to_string( midiCents );
-    unsigned int relative = ( absCents/100 )%12;
-    char symbolic[3];
+    bool isTied = (features_&Tiedbackwards) && midiCents_ != 0;
+    char symbolic[4];
     char* ptr = symbolic;
+    int midiCents = midiCents_;
+    if ( midiCents-( midiCents/100 )*100 == 1 )   //pitch marked as trill (ex: 6400-> 6401)
+    {
+        midiCents = ( midiCents/100 )*100;
+    }
+    int microtone = midiCents%100;
+    if ( microtone == 0 && features_&OriginalEnharmony && note_ != 0 && !( features_& (Transposed&NaturalHarmonic&Trill) ) )
+    {
+        *ptr = note_;
+        if ( accidental_ == -2 )
+        {
+            *(++ptr) = 'b';
+            *(++ptr) = 'b';
+        }
+        else if ( accidental_ == -1 )
+        {
+            *(++ptr) = 'b';
+        }
+        else if ( accidental_ == 1 )
+        {
+            *(++ptr) = '#';
+        }
+        else if ( accidental_ == 2 )
+        {
+            *(++ptr) = 'x';
+        }
+        *(++ptr) = 0;
+        string display = (isTied? string( "-"):string("") ) + symbolic + to_string( octave_ );
+        /*
+        if ( microtone )
+        {
+            display += (accidental_>=0?"+":"-");
+            display += to_string(microtone);
+        }
+        */
+        return display;
+    }
+    if ( features_&DisplayCents || midiCents == 0 || midiCents%100 != 0 )
+        return ((isTied && midiCents != 0)? string( "-"):string("") ) + to_string( midiCents );
+    unsigned int relative = ( midiCents/100 )%12;
     switch ( relative )
     {
         case 0: *ptr = 'C'; break;
@@ -88,10 +155,10 @@ string Pitch::serialize() const
         case 11: *ptr = 'B'; break;
     }
     *(++ptr) = 0;
-    return ( (features_&Tiedbackwards)? string( "-"):string("") ) + string( symbolic ) + to_string( ((int) absCents/1200) - 1 );
+    return ( isTied? string( "-"):string("") ) + symbolic + to_string( ((int) midiCents/1200) - 1 );
 }
 
-void Pitch::setFeature( const EntryFeatures bits )
+void Pitch::setFeatureBits( const EntryFeatures bits )
 {
     features_ |= bits;
 }
@@ -103,12 +170,12 @@ bool Pitch::isTiedBackwards() const
 
 bool Pitch::isFlat() const
 {
-    return ( features_ & Flat );
+    return ( accidental_ == -1 );
 }
 
 bool Pitch::isSharp() const
 {
-    return ( features_ & Sharp );
+    return ( accidental_ == 1 );
 }
 
 bool Pitch::isTrillPitch() const
@@ -118,6 +185,17 @@ bool Pitch::isTrillPitch() const
 
 bool Pitch::isRest() const
 {
-    return ( pitch_ == 0 );
+    return ( midiCents_ == 0 );
 }
 
+void Pitch::setTied( bool status )
+{
+    if ( status)
+    {
+        features_ |= Tiedbackwards;
+    }
+    else
+    {
+        features_ &= ~Tiedbackwards;
+    }
+}

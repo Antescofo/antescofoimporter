@@ -14,8 +14,10 @@
 #include <sstream>
 #include <dirent.h>
 #include <time.h>
+#ifdef __APPLE__
 #include <mach/clock.h>
 #include <mach/mach.h>
+#endif
 #include <sys/timeb.h>
 #include <errno.h>
 #include <stdlib.h>
@@ -26,6 +28,7 @@ using namespace std;
 static long long nanoseconds()
 {
     struct timespec now;
+#ifdef __APPLE__
     clock_serv_t cclock;
     mach_timespec_t mts;
     host_get_clock_service(mach_host_self(), CALENDAR_CLOCK, &cclock);
@@ -33,6 +36,9 @@ static long long nanoseconds()
     mach_port_deallocate(mach_task_self(), cclock);
     now.tv_sec = mts.tv_sec;
     now.tv_nsec = mts.tv_nsec;
+#elif defined __linux__
+    clock_gettime( CLOCK_REALTIME, &now );
+#endif
     return (float) now.tv_nsec + now.tv_sec*1.0e9;
 }
 

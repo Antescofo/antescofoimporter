@@ -25,14 +25,14 @@ namespace antescofo
     class BeatPerMinute: public Event
     {
     public:
-        explicit BeatPerMinute( int measure, float bpm, float originalBeats, float originalBase );
-        explicit BeatPerMinute( int measure, float start, float bpm );  //used mostly for MIDI import
+        explicit BeatPerMinute( float measure, float bpm, float originalBeats, float originalBase, bool generated = 0 );
+        explicit BeatPerMinute( float measure, float start, float bpm );  //used mostly for MIDI import
         virtual ~BeatPerMinute();
         
-        virtual void        serialize( std::ostringstream& stream );
-        virtual EventType   type() const { return Event_BeatPerMinute; }
-        virtual bool        hasNotes() const;
-        virtual float       start() const;
+        void        serialize( std::ostringstream& stream ) override;
+        EventType   type() const override { return Event_BeatPerMinute; }
+        bool        hasNotes() const override;
+        float       start() const override;
         
         float   tempo() const { return bpm_; }
         
@@ -41,6 +41,7 @@ namespace antescofo
         float   start_;
         float   beats_;
         float   base_;
+        bool    generated_;
     };
 }
 

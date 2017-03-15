@@ -1,58 +1,58 @@
-; Antescofo score generated using native importer
+﻿; Antescofo score generated using native importer
 ; Copyright (c) IRCAM 2015
 ; Designed by Robert Piéchaud
 
 ; Original file: complex_violin_glissandi.xml
 ; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
 ; MusicXML version 3.0
-; Converted to Antescofo on Wed May 27 08:00:58 2015
+; Converted to Antescofo on Tue Sep 15 02:30:57 2015
 ; Credits: Violin glissandi
 
 ; start
 
 ; ----------- measure 1 --- beat 0 --- time signature 4/4
 
-MULTI ((F#4 F5) -> (D4 A4)) 2 measure1
-CHORD (D4 A4) 2
+MULTI ((6600 7700) -> (6200 6900)) 2 measure1
+CHORD (6200 6900) 2
 
 ; ----------- measure 2 --- beat 4 --- time signature 4/4
 
 NOTE 0 3 measure2
-NOTE G3 1
+NOTE 5500 1
 
 ; ----------- measure 3 --- beat 8 --- time signature 4/4
 
-MULTI ((G3 F#4 F5) -> (G3 E4 C#5)) 1 measure3
-MULTI ((E4 C#5) -> (D4 A4)) 1
-CHORD (D4 A4) 2
+MULTI ((-5500 6600 7700) -> (-5500 6400 7300)) 1 measure3
+MULTI ((6400 7300) -> (6200 6900)) 1
+CHORD (6200 6900) 2
 
 ; ----------- measure 4 --- beat 12 --- time signature 4/4
 
 NOTE 0 3 measure4
-NOTE G3 1
+NOTE 5500 1
 
 ; ----------- measure 5 --- beat 16 --- time signature 4/4
 
-MULTI ((G3 B4 B5) -> (G3 A4 G#5)) 1/2 measure5
-MULTI ((A4 G#5) -> (D4 A4)) 3/2
-CHORD (D4 A4) 2
+MULTI ((-5500 7100 8300) -> (-5500 6900 8000)) 1/2 measure5
+MULTI ((6900 8000) -> (6200 6900)) 3/2
+CHORD (6200 6900) 2
 
 ; ----------- measure 6 --- beat 20 --- time signature 4/4
 
 NOTE 0 2 measure6
-MULTI ((F#4 F5)' -> (D4 A4)') 2
+MULTI ((6600 7700)' -> (6200 6900)') 2
 
 ; ----------- measure 7 --- beat 24 --- time signature 4/4
 
-TRILL ((D4 A4)) 2 measure7
+TRILL ((6200 6900)) 2 measure7
 NOTE 0 2
 
 ; ----------- measure 8 --- beat 28 --- time signature 4/4
 
 NOTE 0 2 measure8
-MULTI ((F#4 F5)' -> (D4 A4)') 2
+MULTI ((6600 7700)' -> (6200 6900)') 2
 
 ; ----------- measure 9 --- beat 32 --- time signature 4/4
 
-TRILL ((D4 A4)) 2 measure9
+TRILL ((6200 6900)) 2 measure9
 NOTE 0 2

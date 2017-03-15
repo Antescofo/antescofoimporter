@@ -1,0 +1,57 @@
+﻿; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: #948b_piano.xml
+; exported from Sibelius 7.5.1 ~ Direct export, not from Dolet
+; MusicXML version 3.0
+; Converted to Antescofo on Sat Sep 12 16:26:40 2015
+; Credits: Maria Republica
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 9/8
+
+BPM 66.67 ; ( ← 𝅘𝅥 =100) 
+NOTE 0 3
+
+; ----------- measure 2 --- beat 2 --- time signature 9/8
+
+NOTE 0 3
+
+; ----------- measure 3 --- beat 4 --- time signature 6/8
+
+NOTE 0 2 measure3
+
+; ----------- measure 4 --- beat 6 --- time signature 3/8
+
+BPM 100 @modulate
+NOTE 0 3/2 measure4
+
+; ----------- measure 5 --- beat 7 --- time signature 9/8
+
+BPM 66.67 @modulate ; ( ← 𝅘𝅥 =100) 
+NOTE 0 3 measure5
+
+; ----------- measure 6 --- beat 10 --- time signature 7/8
+
+BPM 100 @modulate
+CHORD (B1 E2) 2 measure6
+CHORD (-B1 -E2) 3/2
+
+; ----------- measure 7 --- beat  12.3 --- time signature 9/8
+
+BPM 66.67 @modulate ; ( ← 𝅘𝅥 =100) 
+NOTE 0 2 measure7
+CHORD (-E2 G#4) 1/12
+CHORD (D#2 A4) 1/12
+CHORD (C#2 A#4) 1/12
+CHORD (C2 B4) 1/12
+CHORD (-B1 C#5) 1/12
+CHORD (A#1 D5) 1/12
+CHORD (G#1 D#5) 1/12
+CHORD (G1 E5) 1/12
+CHORD (F#1 F#5) 1/12
+CHORD (E1 G5) 1/12
+CHORD (D#1 G#5) 1/12
+CHORD (D1 A#5) 1/12

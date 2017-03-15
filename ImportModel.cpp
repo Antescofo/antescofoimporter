@@ -17,6 +17,7 @@
 #include "ImporterWrapper.h"
 #include "Event.h"
 #include "Entry.h"
+#include "Pitch.h"
 #include "BeatPerMinute.h"
 #include <math.h>
 #ifdef _WIN32
@@ -30,8 +31,7 @@ using namespace std;
 
 ImportModel::ImportModel( ImporterWrapper& wrapper ) :
     wrapper_          ( wrapper ),
-    verbose_          ( true ),
-    displayMidiCents_ ( false )
+    verbose_          ( true )
 {
     //NOTHING
 }
@@ -55,15 +55,24 @@ bool ImportModel::save( const string& outputPath )
     return false;
 }
 
-void ImportModel::setPitchesAsMidiCents( bool status )
-{
-    displayMidiCents_ = status;
-}
-
 ostringstream& ImportModel::getSerialization()
 {
     serialize();
     return serialization_;
+}
+
+string ImportModel::displayScoreInfo() const
+{
+    string scoreInfo;
+    string path = wrapper_.getInputPath();
+    size_t sep = path.find_last_of("\\/");
+    if ( sep != string::npos )
+        path = path.substr( sep + 1, path.size() - sep - 1 );
+    scoreInfo = "File: " + path + "\nOrigin: " + fileOrigin_;
+    if ( credits_.length() )
+        scoreInfo += "\nCredits & info: " + credits_;
+    scoreInfo += "\n";
+    return scoreInfo;
 }
 
 void ImportModel::setHeader()
@@ -75,8 +84,8 @@ void ImportModel::setHeader()
     
     char bom [4];
     sprintf( bom, "\xef\xbb\xbf" );
-    //serialization_ << bom; //BOM (Byte order Mark) for UTF8
-    serialization_  << "; Antescofo score generated using native importer" << endl
+    serialization_ << bom; //BOM (Byte order Mark) for UTF8
+    serialization_  << "; Antescofo score generated using native importer " << wrapper_.getVersion() << endl
     << "; Copyright (c) IRCAM 2015" << endl
     << "; Designed by Robert Piéchaud" << endl << endl
     << "; Original file: " << path << endl;
@@ -104,7 +113,8 @@ void ImportModel::serialize()
         Event* event = *it;
         if ( previousMeasure != event->measure() )
         {
-            if ( previousMeasure != 0 && !areThereNotesInMeasure( previousMeasure ) )
+            float duration = getMeasureDuration( previousMeasure );
+            if ( previousMeasure != 0 && !areThereNotesInMeasure( previousMeasure ) && duration > 0 )
             {
                 serialization_  << "NOTE 0 " << getMeasureDuration( previousMeasure )
                                 << " ; empty measure" << endl;
@@ -126,10 +136,10 @@ void ImportModel::serialize()
             {
                 if ( (*itNext)->features() & ( GlissandoEnd | GlissandoStart ) )
                 {
-                    const std::list<int>& pitches = ((Entry*)(*itNext))->pitches();
+                    const std::list<Pitch>& pitches = ((Entry*)(*itNext))->pitches();
                     for ( auto pitch = pitches.begin(); pitch != pitches.end(); ++pitch )
                     {
-                        (*it)->addSecondaryPitch( *pitch, None );
+                        (*it)->addSecondaryPitch( *pitch );
                     }
                     break;
                 }
@@ -163,7 +173,10 @@ void ImportModel::clear()
     credits_ = "";
     auto it = events_.begin();
     while ( it != events_.end() )
+    {
+        delete *it;
         it = events_.erase( it );
+    }
 }
 
 void ImportModel::setFileOrigin( const string& origin )
@@ -181,14 +194,13 @@ void ImportModel::setCredits( const string& credits )
     credits_ = credits;
 }
 
-
-bool ImportModel::showMidiCents() const
+float ImportModel::addNote( float measure, float start, float duration, Pitch& pitch )
 {
-    return displayMidiCents_;
-}
-
-float ImportModel::addNote( int measure, float start, float duration, int cents, EntryFeatures features /* = None */ )
-{
+    EntryFeatures& features = pitch.features();
+    if ( wrapper_.pitchesAsMidiCents() )
+        features |= DisplayCents;
+    if ( wrapper_.hasOriginalPitches() )
+        features |= OriginalEnharmony;
     bool splitAndForward = false;
     float forwardDuration ( duration );
     auto it = events_.begin();
@@ -196,10 +208,10 @@ float ImportModel::addNote( int measure, float start, float duration, int cents,
     {
         if ( it == events_.end() )
         {
-            emplaceEvent( it, new Entry( measure, start, duration, cents, showMidiCents(), features ) );
+            emplaceEvent( it, new Entry( measure, start, duration, pitch ) );
             break;
         }
-        else if ( (*it)->measure() < measure )
+        else if ( (*it)->type() == Event_BeatPerMinute || (*it)->measure() < measure )
         {
             ++it;
             continue;
@@ -207,102 +219,135 @@ float ImportModel::addNote( int measure, float start, float duration, int cents,
         else
         {
             Event* event = *it;
-            int m = event->measure();
+            float m = event->measure();
             float s = event->start();
             float d = event->duration();
             EntryFeatures f = event->features();
             if ( event->hasNotes() && m == measure
-                                   && d == 0.0
-                                   && duration == 0.0
-                                   && features & Chord
-                                   && isEqual( s, start ) ) //special case of grace note chord
+                && d == 0.0
+                && duration == 0.0
+                && features & Chord
+                && isEqual( s, start ) ) //special case of grace note chord
             {
                 while ( it != events_.end() && (*it)->duration() == 0.0 )
                 {
                     ++it;
                 }
                 --it;
-                (*it)->addPitch( cents, features );
-                //forwardDuration = 0.0;
+                (*it)->addPitch( pitch );
                 break;
             }
             else if ( event->hasNotes() && f & AlternateTremolo
-                                        && features & TremoloEnd
-                                        && m == measure
-                                        && isEqual( s, start ) ) //special case of second part of alternate (unmeasured) tremolo
+                     && features & TremoloEnd
+                     && m == measure
+                     && isEqual( s, start ) ) //special case of second part of alternate (unmeasured) tremolo
             {
-                if ( cents != 0 )
-                    event->addSecondaryPitch( cents, features );
-                //forwardDuration = 0.0;
+                if ( pitch.midiCents() != 0 )
+                    event->addSecondaryPitch( pitch );
                 break;
             }
             else if ( event->hasNotes() && m == measure
-                                        && d > 0
-                                        && isEqual( s, start )
-                                        && isEqual( d, duration ) ) //new note and event have same duration & position (no new part)
+                     && d > 0
+                     && isEqual( s, start )
+                     && isEqual( d, duration ) ) //new note and event have same duration & position (no new part)
             {
-                if ( cents != 0 )
-                    event->addPitch( cents, features );
-                //forwardDuration = 0.0;
+                if ( pitch.midiCents() != 0 )
+                    event->addPitch( pitch );
                 break;
             }
             else if ( event->hasNotes() && m == measure
-                                        && isBefore( s, start )
-                                        && d > 0
-                                        && duration > 0
-                                        && isEqual( start + duration, s + d ) ) // new entry starts amidst the event, both have same end (1 new part)
+                     && isBefore( s, start )
+                     && d > 0
+                     && duration > 0
+                     && isEqual( start + duration, s + d ) ) // new entry starts amidst the event, both have same end (1 new part)
             {
-                if ( cents != 0 )
+                if ( pitch.midiCents() != 0 )
                 {
                     it = splitEvent( it, start - s );
-                    (*it)->addPitch( cents, features );
+                    (*it)->addPitch( pitch );
                 }
-                //forwardDuration -= start - s;
                 break;
             }
             else if ( event->hasNotes() && m == measure
-                                        && d > 0
-                                        && isEqual( s, start )
-                                        && isBefore( duration, d ) ) // new entry starts like the event, and finishes before (1 new part)
+                     && d > 0
+                     && isEqual( s, start )
+                     && isBefore( duration, d ) ) // new entry starts like the event, and finishes before (1 new part)
             {
-                if ( cents != 0 )
+                if ( pitch.midiCents() != 0 )
                 {
-                  it = splitEvent( it, duration );
-                  --it;
-                  (*it)->addPitch( cents, features );
+                    it = splitEvent( it, duration );
+                    --it;
+                    (*it)->addPitch( pitch );
                 }
                 break;
             }
             else if ( event->hasNotes() && m == measure
-                                        && isBefore( s, start )
-                                        && d > 0
-                                        && duration > 0
-                                        && isAfter( s + d, start + duration ) ) //new entry starts amidst the event, and finishes before (2 new part)
+                     && features&MidiNote
+                     && d > 0
+                     && duration > 0
+                     && isEqual( start, s )
+                     && isAfter( duration, d ) ) // new entry starts like the event, and finishes after (no new part, goes on)
+            {
+                    (*it)->addPitch( pitch );
+                    pitch.flagFeatures( Tiedbackwards );
+                    features |= Tiedbackwards;
+                    duration -= d;
+                    start += d;
+            }
+            else if ( event->hasNotes() && m == measure
+                     && isBefore( s, start )
+                     && d > 0
+                     && duration > 0
+                     && isAfter( s + d, start + duration ) ) //new entry starts amidst the event, and finishes before (2 new part)
             {
                 it = splitEvent( it, start - s );
                 it = splitEvent( it, duration );
-                (*--it)->addPitch( cents, features );
+                (*--it)->addPitch( pitch );
                 break;
             }
             else if ( event->hasNotes() && m == measure
-                                        && isBefore( s, start )
-                                        && d > 0
-                                        && duration > 0
-                                        && isBefore( start, s + d )
-                                        && isBefore( s + d, start + duration ) ) //new entry starts amidst the event, and finishes after (1 new part, goes on)
+                     && isBefore( start, s )
+                     && d > 0
+                     && duration > 0
+                     && isBefore( s + d, start + duration ) ) //new entry starts before the event, and finishes after (1 new part, goes on)
+            {
+                it = emplaceEvent( it, new Entry( measure, start, s - start, pitch ));
+                pitch.flagFeatures( Tiedbackwards );
+                features |= Tiedbackwards;
+                (*++it)->addPitch( pitch );
+                duration -= ( s - start + d );
+                start = s + d;
+            }
+            else if ( event->hasNotes() && m == measure
+                     && isBefore( start, s )
+                     && d > 0
+                     && duration > 0
+                     && isEqual( start + duration, s + d ) ) //new entry starts before the event, both have same end (1 new part, stops)
+            {
+                it = emplaceEvent( it, new Entry( measure, start, s - start, pitch ));
+                pitch.flagFeatures( Tiedbackwards );
+                (*++it)->addPitch( pitch );
+                break;
+            }
+            else if ( event->hasNotes() && m == measure
+                     && isBefore( s, start )
+                     && d > 0
+                     && duration > 0
+                     && isBefore( start, s + d )
+                     && isBefore( s + d, start + duration ) ) //new entry starts amidst the event, and finishes after (1 new part, goes on)
             {
                 float delta = s + d - start;
-                if ( features & MidiNote && delta < ALPHA && cents > 0 )
+                if ( features&MidiNote && delta < EPSILON_MIDI && pitch.midiCents() > 0 )
                 {
                     (*it)->changeDuration( start - s );
                 }
                 else
                 {
-                    if ( cents != 0 )
+                    if ( pitch.midiCents() != 0 )
                     {
                         it = splitEvent( it, start - s );
-                        (*it)->addPitch( cents, features );
-                        cents = -abs( cents );
+                        (*it)->addPitch( pitch );
+                        features |= Tiedbackwards;
                     }
                     duration = ( start + duration ) - ( s + d );
                     start = s + d;
@@ -310,24 +355,23 @@ float ImportModel::addNote( int measure, float start, float duration, int cents,
                 }
             }
             else if ( event->hasNotes() && m == measure
-                                        && isEqual( s, start )
-                                        && ( d > 0 || ( d == 0 && splitAndForward ))
-                                        && duration > 0
-                                        && isBefore( s + d, start + duration ) ) //new entry starts like the event, and finishes after (no part, goes on)
+                     && isEqual( s, start )
+                     && ( d > 0 || ( d == 0 && splitAndForward ))
+                     && duration > 0
+                     && isBefore( s + d, start + duration ) ) //new entry starts like the event, and finishes after (no part, goes on)
             {
-                if ( cents != 0 )
+                if ( pitch.midiCents() != 0 )
                 {
-                  (*it)->addPitch( cents, features );
+                    (*it)->addPitch( pitch );
                 }
                 duration = duration - d;
-                //forwardDuration = duration;
                 start = s + d;
-                cents = -abs( cents );
+                features |= Tiedbackwards;
                 splitAndForward = true;
             }
             else if ( m > measure || ( m == measure && isAfter( s, start ) ) ) //new entry starts after any event in this measure
             {
-                emplaceEvent( it, new Entry( measure, start, duration, cents, showMidiCents(), features ));
+                emplaceEvent( it, new Entry( measure, start, duration, pitch ));
                 break;
             }
         }
@@ -336,13 +380,13 @@ float ImportModel::addNote( int measure, float start, float duration, int cents,
     return forwardDuration;
 }
 
-float ImportModel::addRepeatedNotes( int measure, float initial, float duration, float divisions, int cents )
+float ImportModel::addRepeatedNotes( float measure, float initial, float duration, float divisions, Pitch& pitch )
 {
     float fullDuration ( duration );
     float start = initial;
     for ( int i = 0; i < divisions; ++i )
     {
-        addNote( measure, start, duration/divisions, cents, false );
+        addNote( measure, start, duration/divisions, pitch );
         start += duration/divisions;
     }
     return fullDuration;
@@ -357,6 +401,7 @@ deque<Event*>::iterator ImportModel::splitEvent( deque<Event*>::iterator it, flo
     newEvent->changeStart( (*it)->start() + splitTime );
     newEvent->tiePitches();
     (*it)->changeDuration( splitTime );
+    (*it)->removeFeatures( MeasureRest );
     if ( newEvent->features()&GlissandoStart )
     {
         auto itnext = it + 1;
@@ -366,15 +411,17 @@ deque<Event*>::iterator ImportModel::splitEvent( deque<Event*>::iterator it, flo
         {
             Entry* entryAfter = (Entry*) *itnext;
             Entry* newEntry = (Entry*) newEvent;
-            std::list<int>& pitchesNew = newEntry->pitches();
-            std::list<int>& pitchesAfter = entryAfter->pitches();
+            std::list<Pitch>& pitchesNew = newEntry->pitches();
+            std::list<Pitch>& pitchesAfter = entryAfter->pitches();
             if ( pitchesNew.size() == pitchesAfter.size() )
             {
                 for ( auto it1 = pitchesNew.begin(), it2 = pitchesAfter.begin(); it1 != pitchesNew.end(); ++it1, ++it2 )
                 {
                     float factor = (*it)->duration() / ((*it)->duration() + newEvent->duration());
-                    int inBetween = abs(*it1) + ( (int)((float)(abs(*it2) - abs(*it1))*factor)/100)*100;
-                    *it1 = inBetween;
+                    int inBetween = it1->midiCents() + ( (int)((float)( it2->midiCents() - it1->midiCents() )*factor)/100)*100;
+                    (*it1).setMidiCents( inBetween );
+                    (*it1).unflagFeatures( OriginalEnharmony );
+                    (*it1).setTied( false );
                 }
             }
         }
@@ -384,7 +431,7 @@ deque<Event*>::iterator ImportModel::splitEvent( deque<Event*>::iterator it, flo
     return it;
 }
 
-Event* ImportModel::findMeasure( int measure ) const
+Event* ImportModel::findMeasure( float measure ) const
 {
     Event* measureEvent = nullptr;
     deque<Event*>::const_iterator it = events_.begin();
@@ -401,24 +448,47 @@ Event* ImportModel::findMeasure( int measure ) const
     return measureEvent;
 }
 
-float ImportModel::getMeasureDuration( int measure ) const
+float ImportModel::getMeasureDuration( float measure ) const
 {
     float duration = 0.0;
     deque<Event*>::const_iterator it = events_.begin();
+    bool found = false;
     while ( it != events_.end() )
     {
         const Event* event = *it;
-        if ( event->isMeasure() && event->measure() == measure )
+        if ( event->hasNotes() && event->measure() == measure )
         {
-            duration = event->duration();
-            break;
+            duration += event->duration();
+            found = true;
         }
+        else if ( found && event->measure() != measure )
+            break;
         ++it;
     }
     return duration;
 }
 
-bool ImportModel::areThereNotesInMeasure( int measure ) const
+float ImportModel::getMeasureAccumulutatedBeats( float measure ) const
+{
+    float duration = 0.0;
+    deque<Event*>::const_iterator it = events_.begin();
+    bool found = false;
+    while ( it != events_.end() )
+    {
+        const Event* event = *it;
+        if ( event->hasNotes() && event->measure() == measure )
+        {
+            duration += event->duration();
+            found = true;
+        }
+        else if ( found && event->measure() != measure )
+            break;
+        ++it;
+    }
+    return duration;
+}
+
+bool ImportModel::areThereNotesInMeasure( float measure ) const
 {
     bool notes = false;
     auto it = events_.begin();
@@ -497,7 +567,7 @@ void ImportModel::replaceEvent( Event* event )
 void ImportModel::beautify()
 {
     consolidateNotesAndRests();
-    consolidateTempos();
+    consolidateTemposAndMeasures();
 }
 
 void ImportModel::consolidateNotesAndRests()
@@ -530,11 +600,22 @@ void ImportModel::consolidateNotesAndRests()
     }
 }
 
-void ImportModel::consolidateTempos()
+void ImportModel::consolidateTemposAndMeasures()
 {
-    for ( unsigned long i = events_.size() - 1; i > 0; --i )
+    bool notesFound = false;
+    for ( long i = events_.size() - 1; i > 0; --i )
     {
         Event* event = events_[i];
+        if ( !notesFound && event->hasNotes() )
+            notesFound = true;
+        if ( !notesFound &&
+            ( event->type() == Event_BeatPerMinute || ( event->type() == Event_Measure && wrapper_.inputIsMIDI() ) ) )
+        {
+            auto it = events_.begin() + i;
+            events_.erase( it );
+            delete event;
+            continue;
+        }
         if ( event->type() != Event_BeatPerMinute )
         {
             continue;
@@ -557,4 +638,25 @@ void ImportModel::consolidateTempos()
             delete eventBefore;
         }
     }
+}
+
+bool ImportModel::isEqual( float t1, float t2 )
+{
+    if ( wrapper_.inputIsMIDI() )
+        return fabs( t1 - t2 ) < EPSILON_MIDI;
+    return fabs( t1 - t2 ) < EPSILON;
+}
+
+bool ImportModel::isAfter( float t1, float t2 )
+{
+    if ( wrapper_.inputIsMIDI() )
+        return ( t1 - t2 ) > EPSILON_MIDI;
+    return ( t1 - t2 ) > EPSILON;
+}
+
+bool ImportModel::isBefore( float t1, float t2 )
+{
+    if ( wrapper_.inputIsMIDI() )
+        return ( t2 - t1 ) > EPSILON_MIDI;
+    return ( t2 - t1 ) > EPSILON;
 }

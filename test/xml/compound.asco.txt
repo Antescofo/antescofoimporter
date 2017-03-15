@@ -1,0 +1,59 @@
+﻿; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: compound.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0
+; Converted to Antescofo on Wed Oct  7 10:23:28 2015
+; Credits: Score
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+BPM 108
+NOTE C5 1 measure1
+NOTE B4 1
+NOTE A4 1
+NOTE G4 1
+
+; ----------- measure 2 --- beat 4 --- time signature 3/4
+
+NOTE A4 1 measure2
+NOTE B4 1
+NOTE C5 1
+
+; ----------- measure 3 --- beat 7 --- time signature 6/8
+
+BPM 72 @modulate ; ( ← 𝅘𝅥 =108) 
+NOTE B4 1 measure3
+NOTE A4 1/3
+NOTE B4 1/3
+NOTE C5 1/3
+
+; ----------- measure 4 --- beat 9 --- time signature 4/4
+
+BPM 108 @modulate
+NOTE D5 1 measure4
+NOTE C5 1/2
+NOTE B4 1/2
+NOTE A4 1
+NOTE G4 1
+
+; ----------- measure 5 --- beat 13 --- time signature 9/8
+
+BPM 72 @modulate ; ( ← 𝅘𝅥 =108) 
+NOTE F4 1/3 measure5
+NOTE G4 1/3
+NOTE A4 1/3
+NOTE B4 1
+NOTE C5 2/3
+NOTE 0 1/3
+
+; ----------- measure 6 --- beat 16 --- time signature 3/4
+
+BPM 108 @modulate
+NOTE D5 3/2 measure6
+NOTE C5 1/2
+NOTE B4 1

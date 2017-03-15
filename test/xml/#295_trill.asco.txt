@@ -1,0 +1,21 @@
+﻿; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: #295_trill.xml
+; exported from Sibelius 7.5.0 ~ Direct export, not from Dolet
+; MusicXML version 3.0
+; Converted to Antescofo on Fri Oct  9 11:29:08 2015
+; Credits: Tesla ou l'effet d'étrangeté Version alto solo et électronique
+
+; start
+
+; ----------- measure 1 --- beat 0
+
+NOTE -G3 128 measure1
+TRILL (F#4 G4) 384
+NOTE G4 0
+NOTE -F#4 256
+NOTE 0 320
+CHORD (C3 B3 G#4 F#5) 64
+CHORD (-G#4 -F#5) 128

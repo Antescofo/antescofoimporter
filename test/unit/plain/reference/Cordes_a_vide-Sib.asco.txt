@@ -1,0 +1,91 @@
+﻿; Antescofo score generated using native importer version 0.1.39
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: Cordes_a_vide-Sib.xml
+; exported from Sibelius 7.1.3 ~ Direct export, not from Dolet
+; MusicXML version 3.0
+; Converted to Antescofo on Thu Oct 15 22:13:46 2015
+; Credits: Cordes à vide
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+BPM 60
+NOTE F#3 4 measure1
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+NOTE F#3 4 measure2
+
+; ----------- measure 3 --- beat 8 --- time signature 4/4
+
+NOTE F#3 4 measure3
+
+; ----------- measure 4 --- beat 12 --- time signature 4/4
+
+NOTE -F#3 1/2 measure4
+NOTE 0 3/2
+NOTE 0 2
+
+; ----------- measure 5 --- beat 16 --- time signature 4/4
+
+NOTE F#3 2 measure5
+NOTE F#3 2
+
+; ----------- measure 6 --- beat 20 --- time signature 4/4
+
+NOTE F#3 2 measure6
+NOTE F#3 1/2
+NOTE F#3 3/2
+
+; ----------- measure 7 --- beat 24 --- time signature 4/4
+
+NOTE -F#3 2 measure7
+NOTE 6250 2
+
+; ----------- measure 8 --- beat 28 --- time signature 4/4
+
+NOTE A4 3 measure8
+NOTE 6250 1/2
+NOTE 0 1/2
+
+; ----------- measure 9 --- beat 32 --- time signature 4/4
+
+NOTE E5 3 measure9
+NOTE E5 1
+
+; ----------- measure 10 --- beat 36 --- time signature 4/4
+
+NOTE -E5 2 measure10
+NOTE E5 2
+
+; ----------- measure 11 --- beat 40 --- time signature 4/4
+
+NOTE -E5 1 measure11
+NOTE E5 3
+
+; ----------- measure 12 --- beat 44 --- time signature 4/4
+
+CHORD (F#3 E5) 1 measure12
+NOTE -F#3 1
+NOTE -F#3 2
+
+; ----------- measure 13 --- beat 48 --- time signature 4/4
+
+CHORD (6250 -E5) 1 measure13
+NOTE -6250 1
+NOTE -6250 2
+
+; ----------- measure 14 --- beat 52 --- time signature 4/4
+
+CHORD (A4 -E5) 1 measure14
+NOTE -A4 1
+NOTE -A4 2
+
+; ----------- measure 15 --- beat 56 --- time signature 4/4
+
+NOTE -E5 1 measure15
+NOTE -E5 1
+NOTE -E5 2

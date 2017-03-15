@@ -17,27 +17,45 @@ namespace antescofo
     class Pitch
     {
     public:
-        Pitch( int pitch );
-        Pitch( int pitch, const EntryFeatures feature );
+        Pitch();
+        explicit Pitch( int pitch );
+        explicit Pitch( int pitch, const EntryFeatures feature );
         explicit Pitch( const Pitch& otherPitch );
         virtual ~Pitch();
         
         bool operator==( const Pitch& otherPitch ) const;
+        bool operator==( int cents ) const;
         bool operator<( const Pitch& otherPitch ) const;
         Pitch& operator=( const Pitch& otherPitch );
         
         static bool comparePitch( const Pitch& p1, const Pitch& p2 );
         
         std::string serialize() const;
-        void setFeature( const EntryFeatures bits );
+        void setFeatureBits( const EntryFeatures bits );
         bool isRest() const;
         bool isTiedBackwards() const;
         bool isFlat() const;
         bool isSharp() const;
         bool isTrillPitch() const;
+        int  midiCents() const { return midiCents_; }
+        void setMidiCents( int cents ) { midiCents_ = cents; }
+        const EntryFeatures& features() const { return features_; }
+        EntryFeatures& features() { return features_; }
+        void setFeatures( EntryFeatures features ) { features_ = features; }
+        void flagFeatures( EntryFeatures features ) { features_ |= features; }
+        void unflagFeatures( EntryFeatures features ) { features_ &= ~features; }
+        void setTied( bool status );
+        void setNoteSymbol( const char symbol ) { note_ = symbol; }
+        void setAccidendal( int accidental ) { accidental_ = accidental; }
+        void setOctave( int octave ) { octave_ = octave; }
+        void resetNote();
+        int  computeMidiCents() const;
         
     private:
-        int             pitch_;
+        int             midiCents_;
+        char            note_;
+        int             accidental_;
+        int             octave_;
         EntryFeatures   features_;
     };
 }

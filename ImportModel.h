@@ -24,6 +24,7 @@ namespace antescofo
 {
     class Event;
     class ImporterWrapper;
+    class Pitch;
     
     class ImportModel
     {
@@ -36,18 +37,19 @@ namespace antescofo
         void  setFileOrigin( const std::string& origin );
         void  setVersion( const std::string& version );
         void  setCredits( const std::string& credits );
-        void  setPitchesAsMidiCents( bool status );
         void  appendEvent( Event* event );
         void  insertOrReplaceEvent( Event* event );
         void  insertFirstEventInMeasure( Event* event );
         void  replaceEvent( Event* event );
-        float addNote( int measure, float start, float duration, int cents, EntryFeatures features = None );
-        float addRepeatedNotes( int measure, float start, float duration, float divisions, int cents );
-        Event* findMeasure( int measure ) const;
-        float getMeasureDuration( int measure ) const;
-        bool  areThereNotesInMeasure( int measure ) const;
+        float addNote( float measure, float start, float duration, Pitch& pitch );
+        float addRepeatedNotes( float measure, float start, float duration, float divisions, Pitch& pitch );
+        Event* findMeasure( float measure ) const;
+        float getMeasureDuration( float measure ) const;
+        float getMeasureAccumulutatedBeats( float measure ) const;
+        bool  areThereNotesInMeasure( float measure ) const;
         void  beautify();
         
+        std::string         displayScoreInfo() const;
         std::ostringstream& getSerialization();
         
     private:
@@ -57,14 +59,16 @@ namespace antescofo
         std::deque<Event*>::iterator splitEvent( std::deque<Event*>::iterator it, float splitTime );
         std::deque<Event*>::iterator emplaceEvent( std::deque<Event*>::iterator it, Event* event );
         void consolidateNotesAndRests();
-        void consolidateTempos();
-        bool showMidiCents() const;
+        void checkTies();
+        void consolidateTemposAndMeasures();
+        inline bool isEqual( float t1, float t2 );
+        inline bool isAfter( float t1, float t2 );
+        inline bool isBefore( float t1, float t2 );
         
     private:
         ImporterWrapper&    wrapper_;
         std::deque<Event*>  events_;
         bool                verbose_;
-        bool                displayMidiCents_;
         std::ostringstream  serialization_;
         std::string         fileOrigin_;
         std::string         version_;

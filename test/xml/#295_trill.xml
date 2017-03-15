@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding='UTF-8' standalone='no' ?>
+<!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 3.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
+<score-partwise version="3.0">
+ <work>
+  <work-title>Tesla
+ou l&apos;effet d&apos;étrangeté
+Version alto solo et électronique</work-title>
+ </work>
+ <identification>
+  <creator type="composer">Julia Blondeau
+2014</creator>
+  <rights>© Julia Blondeau</rights>
+  <encoding>
+   <encoding-date>2015-09-25</encoding-date>
+   <encoder>Julia Blondeau</encoder>
+   <software>Sibelius 7.5.0</software>
+   <software>Direct export, not from Dolet</software>
+   <encoding-description>Sibelius / MusicXML 3.0</encoding-description>
+   <supports element="print" type="yes" value="yes" attribute="new-system" />
+   <supports element="print" type="yes" value="yes" attribute="new-page" />
+   <supports element="accidental" type="yes" />
+   <supports element="beam" type="yes" />
+   <supports element="stem" type="yes" />
+  </encoding>
+ </identification>
+ <defaults>
+  <scaling>
+   <millimeters>420</millimeters>
+   <tenths>2896</tenths>
+  </scaling>
+  <page-layout>
+   <page-height>2048</page-height>
+   <page-width>2896</page-width>
+   <page-margins type="both">
+    <left-margin>103</left-margin>
+    <right-margin>103</right-margin>
+    <top-margin>103</top-margin>
+    <bottom-margin>103</bottom-margin>
+   </page-margins>
+  </page-layout>
+  <system-layout>
+   <system-margins>
+    <left-margin>43</left-margin>
+    <right-margin>0</right-margin>
+   </system-margins>
+   <system-distance>92</system-distance>
+  </system-layout>
+  <appearance>
+   <line-width type="stem">0.9375</line-width>
+   <line-width type="beam">5</line-width>
+   <line-width type="staff">0.9375</line-width>
+   <line-width type="light barline">1.5625</line-width>
+   <line-width type="heavy barline">5</line-width>
+   <line-width type="leger">1.5625</line-width>
+   <line-width type="ending">1.5625</line-width>
+   <line-width type="wedge">1.25</line-width>
+   <line-width type="enclosure">0.9375</line-width>
+   <line-width type="tuplet bracket">1.25</line-width>
+   <line-width type="bracket">5</line-width>
+   <line-width type="dashes">1.5625</line-width>
+   <line-width type="extend">0.9375</line-width>
+   <line-width type="octave shift">1.5625</line-width>
+   <line-width type="pedal">1.5625</line-width>
+   <line-width type="slur middle">1.5625</line-width>
+   <line-width type="slur tip">0.625</line-width>
+   <line-width type="tie middle">1.5625</line-width>
+   <line-width type="tie tip">0.625</line-width>
+   <note-size type="cue">75</note-size>
+   <note-size type="grace">60</note-size>
+  </appearance>
+  <music-font font-family="Helsinki Std" font-size="16.4409" />
+  <lyric-font font-family="Avenir Next" font-size="9.5049" />
+  <lyric-language xml:lang="fr" />
+ </defaults>
+ <credit page="1">
+  <credit-words default-x="1448" default-y="222" font-family="Avenir Next" font-style="normal" font-size="18.2392" font-weight="normal" justify="center" valign="middle">Tesla
+ou l&apos;effet d&apos;étrangeté
+Version alto solo et électronique</credit-words>
+ </credit>
+ <credit page="1">
+  <credit-words default-x="2793" default-y="118" font-family="Avenir Next" font-style="normal" font-size="9.1196" font-weight="normal" justify="right" valign="middle">Julia Blondeau
+2014</credit-words>
+ </credit>
+ <credit page="1">
+  <credit-words default-x="1448" default-y="70" font-family="Avenir Next" font-style="normal" font-size="8.3489" font-weight="normal" justify="center" valign="middle">© Julia Blondeau</credit-words>
+ </credit>
+ <credit page="2">
+  <credit-words default-x="103" default-y="1944" font-style="normal" font-weight="normal" justify="left" valign="middle">2</credit-words>
+ </credit>
+ <credit page="3">
+  <credit-words default-x="2793" default-y="1944" font-style="normal" font-weight="normal" justify="left" valign="middle">3</credit-words>
+ </credit>
+ <credit page="4">
+  <credit-words default-x="103" default-y="1944" font-style="normal" font-weight="normal" justify="left" valign="middle">4</credit-words>
+ </credit>
+ <credit page="5">
+  <credit-words default-x="2793" default-y="1944" font-style="normal" font-weight="normal" justify="left" valign="middle">5</credit-words>
+ </credit>
+ <credit page="6">
+  <credit-words default-x="103" default-y="1944" font-style="normal" font-weight="normal" justify="left" valign="middle">6</credit-words>
+ </credit>
+ <part-list>
+  <score-part id="P1">
+   <part-name>A</part-name>
+   <part-name-display>
+    <display-text>A</display-text>
+   </part-name-display>
+   <part-abbreviation>A.</part-abbreviation>
+   <part-abbreviation-display>
+    <display-text>A.</display-text>
+   </part-abbreviation-display>
+   <score-instrument id="P1-I1">
+    <instrument-name>Viola</instrument-name>
+    <instrument-sound>strings.viola</instrument-sound>
+    <solo />
+    <virtual-instrument>
+     <virtual-library>General MIDI</virtual-library>
+     <virtual-name>Viola</virtual-name>
+    </virtual-instrument>
+   </score-instrument>
+   <score-instrument id="P1-I2">
+    <instrument-name>  (5)</instrument-name>
+    <virtual-instrument>
+     <virtual-library>General MIDI</virtual-library>
+    </virtual-instrument>
+   </score-instrument>
+   <score-instrument id="P1-I3">
+    <instrument-name>Viola (3)</instrument-name>
+    <instrument-sound>strings.viola</instrument-sound>
+    <solo />
+    <virtual-instrument>
+     <virtual-library>General MIDI</virtual-library>
+     <virtual-name>Viola</virtual-name>
+    </virtual-instrument>
+   </score-instrument>
+  </score-part>
+ </part-list>
+ <part id="P1">
+  <!--============== Part: P1, Measure: 104 ==============-->
+  <measure number="1" width="329">
+   <note print-object="no" default-x="7">
+    <rest />
+    <duration>128</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>eighth</type>
+    <staff>1</staff>
+   </note>
+   <direction>
+    <direction-type>
+     <dynamics default-x="35" default-y="-125" color="#000000" font-family="Adobe Garamond Pro" font-style="italic" font-size="10.7894" font-weight="normal">
+      <mp />
+     </dynamics>
+    </direction-type>
+    <voice>1</voice>
+    <staff>1</staff>
+   </direction>
+   <note print-object="no" default-x="40">
+    <rest />
+    <duration>384</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>quarter</type>
+    <dot />
+    <staff>1</staff>
+    <notations>
+     <ornaments>
+      <trill-mark default-y="15" />
+      <wavy-line type="continue" default-y="15" />
+     </ornaments>
+    </notations>
+   </note>
+   <direction>
+    <direction-type>
+     <words default-x="116" default-y="23" justify="left" valign="middle" font-family="Avenir Next" font-style="normal" font-size="8.7343" font-weight="normal">SP</words>
+    </direction-type>
+    <voice>1</voice>
+    <staff>1</staff>
+   </direction>
+   <note print-object="no" default-x="108">
+    <rest />
+    <duration>256</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>quarter</type>
+    <staff>1</staff>
+   </note>
+   <note print-object="no" default-x="165">
+    <rest />
+    <duration>256</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>quarter</type>
+    <staff>1</staff>
+    <notations>
+     <ornaments>
+      <wavy-line type="continue" default-y="15" />
+     </ornaments>
+    </notations>
+   </note>
+   <direction>
+    <direction-type>
+     <words default-x="209" default-y="20" justify="left" valign="middle" font-family="Avenir Next" font-style="normal" font-size="8.7343" font-weight="normal">N</words>
+    </direction-type>
+    <voice>1</voice>
+    <staff>1</staff>
+   </direction>
+   <note print-object="no" default-x="215">
+    <rest />
+    <duration>64</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>16th</type>
+    <staff>1</staff>
+   </note>
+   <note color="#000000" default-x="252" default-y="27">
+    <pitch>
+     <step>G</step>
+     <alter>1</alter>
+     <octave>4</octave>
+    </pitch>
+    <duration>192</duration>
+    <tie type="start" />
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>eighth</type>
+    <dot />
+    <accidental>sharp</accidental>
+    <stem>up</stem>
+    <staff>1</staff>
+    <notations>
+     <tied type="start" />
+     <articulations>
+      <accent />
+     </articulations>
+    </notations>
+   </note>
+   <note color="#000000" default-x="252">
+    <chord />
+    <pitch>
+     <step>F</step>
+     <alter>1</alter>
+     <octave>5</octave>
+    </pitch>
+    <duration>128</duration>
+    <tie type="start" />
+    <instrument id="P1-I1" />
+    <type>eighth</type>
+    <dot />
+    <accidental>sharp</accidental>
+    <staff>1</staff>
+    <notations>
+     <tied type="start" />
+    </notations>
+   </note>
+   <backup>
+    <duration>1280</duration>
+   </backup>
+   <note color="#000000" default-x="7" default-y="-20">
+    <pitch>
+     <step>G</step>
+     <octave>3</octave>
+    </pitch>
+    <duration>128</duration>
+    <tie type="stop" />
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>eighth</type>
+    <stem>up</stem>
+    <staff>1</staff>
+    <notations>
+     <tied type="stop" />
+    </notations>
+   </note>
+   <note color="#000000" default-x="40">
+    <pitch>
+     <step>F</step>
+     <alter>1</alter>
+     <octave>4</octave>
+    </pitch>
+    <duration>384</duration>
+    <tie type="start" />
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>quarter</type>
+    <dot />
+    <accidental>sharp</accidental>
+    <stem>up</stem>
+    <staff>1</staff>
+    <notations>
+     <tied type="start" />
+    </notations>
+   </note>
+   <direction>
+    <direction-type>
+     <wedge default-x="11" default-y="-120" color="#000000" type="diminuendo" />
+    </direction-type>
+    <voice>2</voice>
+    <staff>1</staff>
+   </direction>
+   <note color="#000000" default-x="80" default-y="-48">
+    <grace />
+    <pitch>
+     <step>G</step>
+     <octave>4</octave>
+    </pitch>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>eighth</type>
+    <accidental>natural</accidental>
+    <stem>down</stem>
+    <staff>1</staff>
+   </note>
+   <note color="#000000" default-x="108">
+    <pitch>
+     <step>F</step>
+     <alter>1</alter>
+     <octave>4</octave>
+    </pitch>
+    <duration>256</duration>
+    <tie type="stop" />
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>quarter</type>
+    <stem>up</stem>
+    <staff>1</staff>
+    <notations>
+     <tied type="stop" />
+    </notations>
+   </note>
+   <direction>
+    <direction-type>
+     <wedge default-x="-8" default-y="-120" color="#000000" type="stop" />
+    </direction-type>
+    <voice>2</voice>
+    <staff>1</staff>
+   </direction>
+   <note default-x="165">
+    <rest />
+    <duration>256</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>quarter</type>
+    <staff>1</staff>
+   </note>
+   <note default-x="215">
+    <rest />
+    <duration>64</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>16th</type>
+    <staff>1</staff>
+   </note>
+   <note color="#000000" default-x="252" default-y="-120">
+    <pitch>
+     <step>C</step>
+     <octave>3</octave>
+    </pitch>
+    <duration>64</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>16th</type>
+    <accidental>natural</accidental>
+    <stem>down</stem>
+    <staff>1</staff>
+   </note>
+   <note color="#000000" default-x="252">
+    <chord />
+    <pitch>
+     <step>B</step>
+     <octave>3</octave>
+    </pitch>
+    <duration>64</duration>
+    <instrument id="P1-I1" />
+    <type>16th</type>
+    <accidental>natural</accidental>
+    <staff>1</staff>
+   </note>
+   <note default-x="293">
+    <rest />
+    <duration>128</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>eighth</type>
+    <staff>1</staff>
+   </note>
+  </measure>
+ </part>
+</score-partwise>

@@ -18,22 +18,24 @@
 
 using namespace antescofo;
 
-BeatPerMinute::BeatPerMinute( int measure, float value, float originalBeats, float originalBase ):
+BeatPerMinute::BeatPerMinute( float measure, float value, float originalBeats, float originalBase, bool generated ):
     Event       (),
     bpm_        ( value ),
     start_      ( 0.0 ),
     beats_      ( originalBeats ),
-    base_       ( originalBase )
+    base_       ( originalBase ),
+    generated_  ( generated )
 {
     measure_ = measure;
 }
 
-BeatPerMinute::BeatPerMinute( int measure, float start, float bmp ):
+BeatPerMinute::BeatPerMinute( float measure, float start, float bmp ):
     Event       (),
     bpm_        ( bmp ),
     start_      ( start ),
     beats_      ( 0.0 ),
-    base_       ( 0.0 )
+    base_       ( 0.0 ),
+    generated_  ( false )
 {
     measure_ = measure;
 }
@@ -55,11 +57,18 @@ float BeatPerMinute::start() const
 
 void BeatPerMinute::serialize( std::ostringstream& stream )
 {
+    //stream.precision(4);
     if ( roundf( bpm_ ) == bpm_ )
         stream << "BPM " << (int) bpm_;
     else
-        stream << "BPM " << (float) bpm_;
-    if ( beats_ && base_ )
+    {
+        char buffer [12];
+        sprintf( buffer, "%.2f", bpm_ );
+        stream << "BPM " << buffer;
+    }
+    if ( measure_ > 1 && generated_ )
+        stream << " @modulate";
+    if ( beats_ && base_ && beats_ != bpm_  )
     {
         int base = (int) ((float) base_*8 );
         stream << " ; ( ← ";

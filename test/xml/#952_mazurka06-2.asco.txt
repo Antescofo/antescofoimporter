@@ -1,0 +1,583 @@
+﻿; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: #952_mazurka06-2.xml
+; Converted to Antescofo on Sat Sep  5 03:53:46 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 3/4
+
+BPM 189 ; ( ← 𝅘𝅥 =189) 
+CHORD (G#2 D#3 C4 G#4) 1 measure1
+CHORD (G#2 D#3 A#3 G#4) 1
+CHORD (-G#2 -D#3 C4 -G#4) 1/2
+CHORD (-G#2 -D#3 C#4 -G#4) 1/2
+
+; ----------- measure 2 --- beat 3 --- time signature 3/4
+
+CHORD (G#2 D#3 D#4 G#4) 1/2 measure2
+CHORD (-G#2 -D#3 C4 -G#4) 1/2
+CHORD (G#2 D#3 C#4 G#4) 3/2
+CHORD (-G#2 -D#3 A#3 -G#4) 1/2
+
+; ----------- measure 3 --- beat 6 --- time signature 3/4
+
+CHORD (G#2 D#3 C4 G#4) 1/3 measure3
+CHORD (-G#2 -D#3 C#4 -G#4) 1/3
+CHORD (-G#2 -D#3 C4 -G#4) 1/3
+CHORD (G#2 D#3 A#3 G#4) 1
+CHORD (-G#2 -D#3 C4 -G#4) 1/2
+CHORD (-G#2 -D#3 C#4 -G#4) 1/2
+
+; ----------- measure 4 --- beat 9 --- time signature 3/4
+
+CHORD (G#2 D#3 D#4 G#4) 1/3 measure4
+CHORD (-G#2 -D#3 F#4 -G#4) 1/3
+CHORD (-G#2 -D#3 E4 -G#4) 1/3
+CHORD (G#2 D#3 D#4 G#4) 2
+
+; ----------- measure 5 --- beat 12 --- time signature 3/4
+
+CHORD (G#2 D#3 C4 G#4) 1/3 measure5
+CHORD (-G#2 -D#3 C#4 -G#4) 1/3
+CHORD (-G#2 -D#3 C4 -G#4) 1/3
+CHORD (G#2 D#3 A#3 G#4) 1
+CHORD (G#2 D#3 C4 G#4) 1/2
+CHORD (-G#2 -D#3 C#4 -G#4) 1/2
+
+; ----------- measure 6 --- beat 15 --- time signature 3/4
+
+CHORD (G#2 D#3 D#4 G#4) 1/2 measure6
+CHORD (-G#2 -D#3 C4 -G#4) 1/2
+CHORD (G#2 D#3 C#4 G#4) 1/2
+CHORD (-G#2 -D#3 C4 -G#4) 1/2
+CHORD (G#2 D#3 C#4 G#4) 1/2
+CHORD (-G#2 -D#3 A#3 -G#4) 1/2
+
+; ----------- measure 7 --- beat 18 --- time signature 3/4
+
+CHORD (G#2 D#3 C4 G#4) 1/3 measure7
+CHORD (-G#2 -D#3 C#4 -G#4) 1/3
+CHORD (-G#2 -D#3 C4 -G#4) 1/3
+CHORD (G#2 D#3 A#3 G#4) 1
+CHORD (G#2 D#3 C4 G#4) 1/2
+CHORD (-G#2 -D#3 C#4 G#4) 1/2
+
+; ----------- measure 8 --- beat 21 --- time signature 3/4
+
+CHORD (G#2 D#3 D#4 G#4) 1/3 measure8
+CHORD (-G#2 -D#3 F#4 G#4) 1/3
+CHORD (-G#2 -D#3 E4 G#4) 1/3
+CHORD (G#2 D#3 D#4 G#4) 1
+
+; ----------- pickup to measure 9 --- beat 23
+
+NOTE G#4 1
+
+; ----------- measure 9 --- beat 24 --- time signature 3/4
+
+CHORD (C3 G#5) 1/2 measure9
+NOTE -C3 1/4
+CHORD (-C3 A5) 1/4
+CHORD (G#3 D#4 F#4 F#5) 1
+CHORD (G#3 D#4 F#4 -F#5) 1/2
+CHORD (-G#3 -D#4 -F#4 G#5) 1/2
+
+; ----------- measure 10 --- beat 27 --- time signature 3/4
+
+CHORD (C#3 E5) 3/4 measure10
+CHORD (-C#3 G#5) 1/4
+CHORD (G#3 C#4 E4 C#5) 1
+CHORD (G#3 C#4 E4 E5) 1
+
+; ----------- measure 11 --- beat 30 --- time signature 3/4
+
+CHORD (C3 G#5) 3/4 measure11
+CHORD (-C3 A5) 1/4
+CHORD (G#3 D#4 F#4 F#5) 1
+CHORD (G#3 D#4 F#4 G#5) 1
+
+; ----------- measure 12 --- beat 33 --- time signature 3/4
+
+CHORD (C#3 E5) 1/3 measure12
+CHORD (-C#3 F#5) 1/3
+CHORD (-C#3 G#5) 1/3
+CHORD (G#3 C#4 E4 C#5) 1
+NOTE -C#5 1/2
+NOTE D5 1/2
+
+; ----------- measure 13 --- beat 36 --- time signature 3/4
+
+CHORD (G2 D#5) 1/2 @staccato measure13
+NOTE -G2 1/4
+CHORD (-G2 E5) 1/4
+CHORD (D#3 A#3 C#4 C#5) 1
+CHORD (D#3 A#3 C#4 -C#5) 1/2
+CHORD (-D#3 -A#3 -C#4 D#5) 1/2
+
+; ----------- measure 14 --- beat 39 --- time signature 3/4
+
+CHORD (G#2 C5) 3/4 measure14
+CHORD (-G#2 D#5) 1/4
+CHORD (D#3 F#3 C4 G#4) 1
+CHORD (D#3 F#3 C4 A4) 1
+
+; ----------- measure 15 --- beat 42 --- time signature 3/4
+
+CHORD (G#2 G#4) 1/2 @staccato measure15
+NOTE -G#2 1/4
+CHORD (-G#2 F#4) 1/4
+CHORD (D#3 F#3 C4 D#4) 1
+CHORD (D#3 F#3 C4 G#4) 1
+
+; ----------- measure 16 --- beat 45 --- time signature 3/4
+
+CHORD (C#2 C#4) 1 measure16
+CHORD (C#3 G#3 -C#4 E4) 1
+
+; ----------- pickup to measure 17 --- beat 47
+
+NOTE D4 1
+
+; ----------- measure 17 --- beat 48 --- time signature 3/4
+
+CHORD (G#2 D#4) 1/2 measure17
+NOTE -G#2 1/4
+CHORD (-G#2 G4) 1/4
+CHORD (D#3 G#3 C4 G#4) 1
+CHORD (D#3 G#3 C4 C5) 1/2
+CHORD (-D#3 -G#3 -C4 D#5) 1/2
+
+; ----------- measure 18 --- beat 51 --- time signature 3/4
+
+CHORD (G#2 D#4) 1/2 @staccato measure18
+NOTE -G#2 1/4
+CHORD (-G#2 G4) 1/4
+CHORD (D#3 G#3 C4 G#4) 1/2
+CHORD (-D#3 -G#3 -C4 C5) 1/2
+CHORD (D#3 G#3 C4 D#5) 1
+
+; ----------- measure 19 --- beat 54 --- time signature 3/4
+
+CHORD (E3 G#3 A#3 D5) 3/4 measure19
+CHORD (-E3 -G#3 -A#3 A#4) 1/4
+CHORD (D#3 G3 -A#3 C#5) 1 @staccato
+CHORD (G#2 G#3 C5) 1/2
+CHORD (-G#2 -G#3 G#4) 1/2
+
+; ----------- measure 20 --- beat 57 --- time signature 3/4
+
+CHORD (E3 G#3 A#3 D5) 1/3 measure20
+CHORD (-E3 -G#3 -A#3 A#4) 1/3
+CHORD (-E3 -G#3 -A#3 C5) 1/3
+CHORD (D#3 G3 -A#3 C#5) 1
+CHORD (G#2 G#3 C5) 1/2
+CHORD (-G#2 -G#3 G#4) 1/2
+
+; ----------- measure 21 --- beat 60 --- time signature 3/4
+
+CHORD (G#1 G#2 D#4) 1/2 measure21
+CHORD (-G#1 -G#2) 1/4
+CHORD (-G#1 -G#2 G4) 1/4
+CHORD (D#3 G#3 C4 G#4) 1
+CHORD (D#3 G#3 C4 C5) 1/2
+CHORD (-D#3 -G#3 -C4 D#5) 1/2
+
+; ----------- measure 22 --- beat 63 --- time signature 3/4
+
+CHORD (G#2 D#4) 1/2 @staccato measure22
+NOTE -G#2 1/4 @staccato
+CHORD (-G#2 G4) 1/4 @staccato
+CHORD (D#3 G#3 C4 G#4) 1/2
+CHORD (-D#3 -G#3 -C4 C5) 1/2
+CHORD (D#3 G#3 C4 D#5) 1
+
+; ----------- measure 23 --- beat 66 --- time signature 3/4
+
+CHORD (E3 G#3 A#3 D5) 1/2 measure23
+CHORD (-E3 -G#3 -A#3 A#4) 1/2
+CHORD (D#3 G3 -A#3 C#5) 1
+CHORD (G#2 G#3 C5) 1/2
+CHORD (-G#2 -G#3 G#4) 1/2
+
+; ----------- measure 24 --- beat 69 --- time signature 3/4
+
+NOTE G#5 3/4 measure24
+NOTE G#4 1/4
+NOTE G#5 3/4
+NOTE G#4 1/4
+NOTE G#5 3/4
+NOTE G#4 1/4
+
+; ----------- measure 25 --- beat 72 --- time signature 3/4
+
+CHORD (C3 G#5) 3/4 measure25
+CHORD (-C3 A5) 1/4
+CHORD (G#3 D#4 F#4 F#5) 1
+CHORD (G#3 D#4 F#4 -F#5) 1/2
+CHORD (-G#3 -D#4 -F#4 G#5) 1/2
+
+; ----------- measure 26 --- beat 75 --- time signature 3/4
+
+CHORD (C#3 E5) 3/4 measure26
+CHORD (-C#3 G#5) 1/4
+CHORD (G#3 C#4 E4 C#5) 1
+CHORD (G#3 C#4 E4 E5) 1
+
+; ----------- measure 27 --- beat 78 --- time signature 3/4
+
+CHORD (C3 G#5) 1/2 @staccato measure27
+NOTE -C3 1/4
+CHORD (-C3 A5) 1/4
+CHORD (G#3 D#4 F#4 F#5) 1
+CHORD (G#3 D#4 F#4 G#5) 1
+
+; ----------- measure 28 --- beat 81 --- time signature 3/4
+
+CHORD (C#3 E5) 1/3 measure28
+CHORD (-C#3 F#5) 1/3
+CHORD (-C#3 G#5) 1/3
+CHORD (G#3 C#4 E4 C#5) 1
+NOTE -C#5 1/2
+NOTE D5 1/2
+
+; ----------- measure 29 --- beat 84 --- time signature 3/4
+
+CHORD (G2 D#5) 1/2 measure29
+CHORD (-G2 E5) 1/2
+CHORD (-G2 D#3 A#3 C#5) 1
+CHORD (-G2 D#3 A#3 D#5) 1
+
+; ----------- measure 30 --- beat 87 --- time signature 3/4
+
+CHORD (G#2 C5) 1/2 measure30
+CHORD (-G#2 D#5) 1/2
+CHORD (D#3 F#3 C4 G#4) 1/2
+CHORD (-D#3 -F#3 -C4) 1/2
+NOTE A4 1
+
+; ----------- measure 31 --- beat 90 --- time signature 3/4
+
+CHORD (G#2 G#4) 1/2 @staccato measure31
+NOTE -G#2 1/4
+CHORD (-G#2 F#4) 1/4
+CHORD (D#3 F#3 C4 D#4) 1
+CHORD (D#3 F#3 C4 G#4) 1
+
+; ----------- measure 32 --- beat 93 --- time signature 3/4
+
+CHORD (C#2 C#4) 1 measure32
+CHORD (C#3 G#3 -C#4 E4) 1
+
+; ----------- pickup to measure 33 --- beat 95
+
+NOTE C#4 1
+
+; ----------- measure 33 --- beat 96 --- time signature 3/4
+
+CHORD (A2 C#5) 1/2 measure33
+CHORD (-A2 D#5) 1/2
+CHORD (E3 C#4 E5) 1
+CHORD (E3 C#4 -E5) 1/2
+CHORD (-E3 -C#4 C#5) 1/2
+
+; ----------- measure 34 --- beat 99 --- time signature 3/4
+
+CHORD (E2 B4) 1/2 measure34
+CHORD (-E2 G#4) 1/2
+CHORD (E3 B3 E4) 1
+CHORD (E3 B3 -E4) 1
+
+; ----------- measure 35 --- beat 102 --- time signature 3/4
+
+CHORD (A2 C#5) 1/2 measure35
+CHORD (-A2 D#5) 1/2
+CHORD (E3 C#4 E5) 1 @staccato
+CHORD (E3 C#4 E5) 1/2
+CHORD (-E3 -C#4 C#5) 1/2
+
+; ----------- measure 36 --- beat 105 --- time signature 3/4
+
+CHORD (E2 B4) 1/2 measure36
+CHORD (-E2 G#4) 1/2
+CHORD (E3 B3 E4) 1
+CHORD (E3 B3 -E4) 1
+
+; ----------- measure 37 --- beat 108 --- time signature 3/4
+
+CHORD (A2 E3 C#4 -E4) 1/2 measure37
+CHORD (-A2 -E3 -C#4 A4) 1/2
+CHORD (E2 E3 B3 G#4) 1
+CHORD (E2 E3 B3 -G#4) 1
+
+; ----------- measure 38 --- beat 111 --- time signature 3/4
+
+CHORD (A2 E3 C#4 E4) 1/2 measure38
+CHORD (-A2 -E3 -C#4 A4) 1/2
+CHORD (E2 E3 B3 G#4) 1
+CHORD (E2 E3 B3 -G#4) 1
+
+; ----------- measure 39 --- beat 114 --- time signature 3/4
+
+CHORD (A2 E3 C#4 E4) 1/2 measure39
+CHORD (-A2 -E3 -C#4 A4) 1/2
+CHORD (E2 E3 B3 G#4) 1
+CHORD (E2 E3 B3 G#4) 1
+
+; ----------- measure 40 --- beat 117 --- time signature 3/4
+
+CHORD (A2 E3 C#4 E4) 1/2 measure40
+CHORD (-A2 -E3 -C#4 A4) 1/4
+CHORD (B2 -E3 -C#4 -A4) 1/4
+CHORD (C#3 G#3 G#4) 1
+NOTE C#2 1
+
+; ----------- measure 41 --- beat 120 --- time signature 3/4
+
+NOTE F5 1/2 measure41
+NOTE G5 1/2
+CHORD (F3 G#3 C#4 F4 G#5) 1
+CHORD (F3 G#3 C#4 F4 -G#5) 1/2
+CHORD (-F3 -G#3 -C#4 -F4 F5) 1/2
+
+; ----------- measure 42 --- beat 123 --- time signature 3/4
+
+CHORD (G#2 D#5) 1/2 measure42
+CHORD (-G#2 C5) 1/2
+CHORD (D#3 G#3 C4 G#4) 1
+CHORD (D#3 G#3 C4 -G#4) 1
+
+; ----------- measure 43 --- beat 126 --- time signature 3/4
+
+CHORD (C#3 F5) 1/2 measure43
+CHORD (-C#3 G5) 1/2
+CHORD (F3 G#3 C#4 F4 G#5) 1
+CHORD (F3 G#3 C#4 F4 G#5) 1/2
+CHORD (-F3 -G#3 -C#4 -F4 F5) 1/2
+
+; ----------- measure 44 --- beat 129 --- time signature 3/4
+
+CHORD (G#2 D#5) 1/2 measure44
+CHORD (-G#2 C5) 1/2
+CHORD (D#3 G#3 C4 G#4) 1
+CHORD (D#3 G#3 C4 -G#4) 1
+
+; ----------- measure 45 --- beat 132 --- time signature 3/4
+
+CHORD (C#3 G#3 C#4 F4 -G#4) 1/2 measure45
+CHORD (-C#3 -G#3 -C#4 -F4 C#5) 1/2
+CHORD (G#2 G#3 D#4 C5) 1
+CHORD (G#2 G#3 D#4 -C5) 1
+
+; ----------- measure 46 --- beat 135 --- time signature 3/4
+
+CHORD (C#3 G#3 F4 G#4) 1/2 measure46
+CHORD (-C#3 -G#3 -F4 C#5) 1/2
+CHORD (G#2 G#3 D#4 C5) 1
+CHORD (G#2 G#3 D#4 -C5) 1 @staccato
+
+; ----------- measure 47 --- beat 138 --- time signature 3/4
+
+CHORD (C#3 G#3 F4 G#4) 1/2 measure47
+CHORD (-C#3 -G#3 -F4 C#5) 1/2
+CHORD (G#2 G#3 D#4 C5) 1 @staccato
+CHORD (G#2 G#3 D#4 C5) 1 @staccato
+
+; ----------- measure 48 --- beat 141 --- time signature 3/4
+
+CHORD (C#3 G#3 F4 G#4) 1/2 measure48
+CHORD (-C#3 -G#3 -F4 C#5) 1/2
+CHORD (G#2 G#3 D#4 C5) 1
+CHORD (G#2 G#3 D#4) 1/2
+CHORD (-G#2 -G#3 C#4) 1/2
+
+; ----------- measure 49 --- beat 144 --- time signature 3/4
+
+CHORD (G#2 D#3 C4 G#4) 1 measure49
+CHORD (G#2 D#3 A#3 G#4) 1
+CHORD (-G#2 -D#3 C4 -G#4) 1/2
+CHORD (-G#2 -D#3 C#4 -G#4) 1/2
+
+; ----------- measure 50 --- beat 147 --- time signature 3/4
+
+CHORD (G#2 D#3 D#4 G#4) 1/2 measure50
+CHORD (-G#2 -D#3 C4 -G#4) 1/2
+CHORD (G#2 D#3 C#4 G#4) 3/2
+CHORD (-G#2 -D#3 A#3 -G#4) 1/2
+
+; ----------- measure 51 --- beat 150 --- time signature 3/4
+
+CHORD (G#2 D#3 C4 G#4) 1/3 measure51
+CHORD (-G#2 -D#3 C#4 -G#4) 1/3
+CHORD (-G#2 -D#3 C4 -G#4) 1/3
+CHORD (G#2 D#3 A#3 G#4) 1
+CHORD (-G#2 -D#3 C4 -G#4) 1/2
+CHORD (-G#2 -D#3 C#4 -G#4) 1/2
+
+; ----------- measure 52 --- beat 153 --- time signature 3/4
+
+CHORD (G#2 D#3 D#4 G#4) 1/3 measure52
+CHORD (-G#2 -D#3 F#4 -G#4) 1/3
+CHORD (-G#2 -D#3 E4 -G#4) 1/3
+CHORD (G#2 D#3 D#4 G#4) 2
+
+; ----------- measure 53 --- beat 156 --- time signature 3/4
+
+CHORD (G#2 D#3 C4 G#4) 1/3 measure53
+CHORD (-G#2 -D#3 C#4 -G#4) 1/3
+CHORD (-G#2 -D#3 C4 -G#4) 1/3
+CHORD (G#2 D#3 A#3 G#4) 1
+CHORD (G#2 D#3 C4 G#4) 1/2
+CHORD (-G#2 -D#3 C#4 -G#4) 1/2
+
+; ----------- measure 54 --- beat 159 --- time signature 3/4
+
+CHORD (G#2 D#3 D#4 G#4) 1/2 measure54
+CHORD (-G#2 -D#3 C4 -G#4) 1/2
+CHORD (G#2 D#3 C#4 G#4) 1/2
+CHORD (-G#2 -D#3 C4 -G#4) 1/2
+CHORD (G#2 D#3 C#4 G#4) 1/2
+CHORD (-G#2 -D#3 A#3 -G#4) 1/2
+
+; ----------- measure 55 --- beat 162 --- time signature 3/4
+
+CHORD (G#2 D#3 C4 G#4) 1/3 measure55
+CHORD (-G#2 -D#3 C#4 -G#4) 1/3
+CHORD (-G#2 -D#3 C4 -G#4) 1/3
+CHORD (G#2 D#3 A#3 G#4) 1
+CHORD (G#2 D#3 C4 G#4) 1/2
+CHORD (-G#2 -D#3 C#4 G#4) 1/2
+
+; ----------- measure 56 --- beat 165 --- time signature 3/4
+
+CHORD (G#2 D#3 D#4 G#4) 1/3 measure56
+CHORD (-G#2 -D#3 F#4 G#4) 1/3
+CHORD (-G#2 -D#3 E4 G#4) 1/3
+CHORD (G#2 D#3 D#4 G#4) 1
+NOTE G#4 1
+
+; ----------- measure 57 --- beat 168 --- time signature 3/4
+
+CHORD (C3 G#5) 1/2 measure57
+NOTE -C3 1/4
+CHORD (-C3 A5) 1/4
+CHORD (G#3 D#4 F#4 F#5) 1
+CHORD (G#3 D#4 F#4 -F#5) 1/2
+CHORD (-G#3 -D#4 -F#4 G#5) 1/2
+
+; ----------- measure 58 --- beat 171 --- time signature 3/4
+
+CHORD (C#3 E5) 3/4 measure58
+CHORD (-C#3 G#5) 1/4
+CHORD (G#3 C#4 E4 C#5) 1
+CHORD (G#3 C#4 E4 E5) 1
+
+; ----------- measure 59 --- beat 174 --- time signature 3/4
+
+CHORD (C3 G#5) 3/4 measure59
+CHORD (-C3 A5) 1/4
+CHORD (G#3 D#4 F#4 F#5) 1
+CHORD (G#3 D#4 F#4 G#5) 1
+
+; ----------- measure 60 --- beat 177 --- time signature 3/4
+
+CHORD (C#3 E5) 1/3 measure60
+CHORD (-C#3 F#5) 1/3
+CHORD (-C#3 G#5) 1/3
+CHORD (G#3 C#4 E4 C#5) 1
+NOTE -C#5 1/2
+NOTE D5 1/2
+
+; ----------- measure 61 --- beat 180 --- time signature 3/4
+
+CHORD (G2 D#5) 1/2 @staccato measure61
+NOTE -G2 1/4
+CHORD (-G2 E5) 1/4
+CHORD (D#3 A#3 C#4 C#5) 1
+CHORD (D#3 A#3 C#4 -C#5) 1/2
+CHORD (-D#3 -A#3 -C#4 D#5) 1/2
+
+; ----------- measure 62 --- beat 183 --- time signature 3/4
+
+CHORD (G#2 C5) 3/4 measure62
+CHORD (-G#2 D#5) 1/4
+CHORD (D#3 F#3 C4 G#4) 1
+CHORD (D#3 F#3 C4 A4) 1
+
+; ----------- measure 63 --- beat 186 --- time signature 3/4
+
+CHORD (G#2 G#4) 1/2 measure63
+NOTE -G#2 1/4
+CHORD (-G#2 F#4) 1/4
+CHORD (D#3 F#3 C4 D#4) 1
+CHORD (D#3 F#3 C4 G#4) 1
+
+; ----------- measure 64 --- beat 189 --- time signature 3/4
+
+CHORD (C#2 C#4) 1 measure64
+CHORD (C#3 G#3 -C#4 E4) 1
+NOTE G#4 1
+
+; ----------- measure 65 --- beat 192 --- time signature 3/4
+
+CHORD (C3 G#5) 1/2 @staccato measure65
+CHORD (-C3 A5) 1/2 @staccato
+CHORD (G#3 D#4 F#4 F#5) 1 @staccato
+CHORD (G#3 D#4 F#4 G#5) 1 @staccato
+
+; ----------- measure 66 --- beat 195 --- time signature 3/4
+
+CHORD (C#3 E5) 1/2 @staccato measure66
+CHORD (-C#3 G#5) 1/2 @staccato
+CHORD (G#3 C#4 E4 C#5) 1 @staccato
+CHORD (G#3 C#4 E4 E5) 1 @staccato
+
+; ----------- measure 67 --- beat 198 --- time signature 3/4
+
+CHORD (C3 G#5) 1/3 measure67
+CHORD (-C3 A5) 1/3
+NOTE -C3 1/6
+CHORD (-C3 G#5) 1/6
+CHORD (G#3 D#4 F#4 D#5) 1
+CHORD (G#3 D#4 F#4 G#5) 1
+
+; ----------- measure 68 --- beat 201 --- time signature 3/4
+
+CHORD (C#3 E5) 1/3 measure68
+CHORD (-C#3 F#5) 1/3
+CHORD (-C#3 G#5) 1/3
+CHORD (G#3 C#4 E4 C#5) 1
+NOTE -C#5 1/2
+NOTE D5 1/2
+
+; ----------- measure 69 --- beat 204 --- time signature 3/4
+
+CHORD (G2 D#5) 1/2 @staccato measure69
+NOTE -G2 1/4
+CHORD (-G2 E5) 1/4 @staccato
+CHORD (D#3 A#3 C#4 C#5) 1 @staccato
+CHORD (D#3 A#3 C#4 D#5) 1 @staccato
+
+; ----------- measure 70 --- beat 207 --- time signature 3/4
+
+CHORD (G#2 C5) 1/2 @staccato measure70
+NOTE -G#2 1/4
+CHORD (-G#2 D#5) 1/4 @staccato
+CHORD (D#3 F#3 C4 G#4) 1
+NOTE A4 1
+
+; ----------- measure 71 --- beat 210 --- time signature 3/4
+
+CHORD (G#2 G#4) 1/2 measure71
+NOTE -G#2 1/4
+CHORD (-G#2 F#4) 1/4
+CHORD (D#3 F#3 C4 D#4) 1
+CHORD (D#3 F#3 C4 G#4) 1
+
+; ----------- measure 72 --- beat 213 --- time signature 3/4
+
+CHORD (C#2 C#4) 1 @fermata measure72
+CHORD (C#3 G#3 -C#4 E4) 1 @fermata
+NOTE -C#4 1 @fermata

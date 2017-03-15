@@ -6,30 +6,84 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		05A27B6C1BB4A48000CC0DE1 /* AntescofoImporter */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 05A27B6F1BB4A48000CC0DE1 /* Build configuration list for PBXAggregateTarget "AntescofoImporter" */;
+			buildPhases = (
+				05A27B741BB4A4C300CC0DE1 /* ShellScript */,
+			);
+			dependencies = (
+				05A27B711BB4A4BB00CC0DE1 /* PBXTargetDependency */,
+				05A27B731BB4A4BB00CC0DE1 /* PBXTargetDependency */,
+			);
+			name = AntescofoImporter;
+			productName = all;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		050112F41BBFD54600EB4402 /* ActionGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 050112F21BBFD54600EB4402 /* ActionGroup.cpp */; };
+		050112F51BBFD54600EB4402 /* ActionGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 050112F21BBFD54600EB4402 /* ActionGroup.cpp */; };
+		050DAF031BB1EECF008B6D4E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05D3CE061BA36DBA00EE2E38 /* Info.plist */; };
 		05323F261B2B1E420040E587 /* Repeat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05323F241B2B1E420040E587 /* Repeat.cpp */; };
 		05542C5B1B0062690035F522 /* Entry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0577FC9E1AFE7C6800D816FF /* Entry.cpp */; };
 		0554B1621AFE2D8900055EF1 /* ImporterWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0554B1601AFE2D8900055EF1 /* ImporterWrapper.cpp */; };
 		0554B1651AFE2F2000055EF1 /* ImportModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0554B1631AFE2F1F00055EF1 /* ImportModel.cpp */; };
 		0554B1681AFE35C900055EF1 /* MusicXmlImporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0554B1661AFE35C900055EF1 /* MusicXmlImporter.cpp */; };
 		0554B16B1AFE35DB00055EF1 /* MidiImporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0554B1691AFE35DB00055EF1 /* MidiImporter.cpp */; };
-		0554B1701AFE475200055EF1 /* antescofo_importer in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05EE0B301AFE083A00DD86D1 /* antescofo_importer */; };
+		0556752F1BC516FD006220AE /* SimpleRational.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0556752D1BC516FD006220AE /* SimpleRational.cpp */; };
+		055675301BC516FD006220AE /* SimpleRational.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0556752D1BC516FD006220AE /* SimpleRational.cpp */; };
+		055675311BC516FD006220AE /* SimpleRational.h in Headers */ = {isa = PBXBuildFile; fileRef = 0556752E1BC516FD006220AE /* SimpleRational.h */; };
 		05578AAD1B0E699C004AC9CC /* UnitTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05578AAB1B0E699C004AC9CC /* UnitTester.cpp */; };
 		05673F2F1B31E5E00085CF95 /* Pitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05673F2D1B31E5E00085CF95 /* Pitch.cpp */; };
 		05681AFE1B11B226009E9A48 /* extract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05681AFD1B11B1E4009E9A48 /* extract.cpp */; };
 		05681B001B11B27E009E9A48 /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05681AFF1B11B27E009E9A48 /* libz.a */; };
-		05681B031B11B387009E9A48 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 05681B021B11B387009E9A48 /* unzip.c */; };
-		05681B051B11B3AF009E9A48 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 05681B041B11B3AF009E9A48 /* ioapi.c */; };
+		05681B031B11B387009E9A48 /* unzip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05681B021B11B387009E9A48 /* unzip.cpp */; };
+		05681B051B11B3AF009E9A48 /* ioapi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05681B041B11B3AF009E9A48 /* ioapi.cpp */; };
 		0568371E1AFECA80009A646C /* Measure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0568371C1AFECA80009A646C /* Measure.cpp */; };
 		0577FC971AFE59D800D816FF /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0577FC951AFE59D800D816FF /* Event.cpp */; };
 		0577FC9A1AFE75F700D816FF /* BeatPerMinute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0577FC981AFE75F700D816FF /* BeatPerMinute.cpp */; };
 		0577FCA91AFE7D9A00D816FF /* Tempo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0577FCA71AFE7D9A00D816FF /* Tempo.cpp */; };
+		0594EC171B8678AE005B781F /* ImporterWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0554B1601AFE2D8900055EF1 /* ImporterWrapper.cpp */; };
+		0594EC181B8678AE005B781F /* ImportModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0554B1631AFE2F1F00055EF1 /* ImportModel.cpp */; };
+		0594EC191B8678AE005B781F /* UnitTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05578AAB1B0E699C004AC9CC /* UnitTester.cpp */; };
+		0594EC1A1B8678AE005B781F /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0577FC951AFE59D800D816FF /* Event.cpp */; };
+		0594EC1B1B8678AE005B781F /* Measure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0568371C1AFECA80009A646C /* Measure.cpp */; };
+		0594EC1C1B8678AE005B781F /* Entry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0577FC9E1AFE7C6800D816FF /* Entry.cpp */; };
+		0594EC1D1B8678AE005B781F /* Pitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05673F2D1B31E5E00085CF95 /* Pitch.cpp */; };
+		0594EC1E1B8678AE005B781F /* Repeat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05323F241B2B1E420040E587 /* Repeat.cpp */; };
+		0594EC1F1B8678AE005B781F /* Tempo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0577FCA71AFE7D9A00D816FF /* Tempo.cpp */; };
+		0594EC201B8678AE005B781F /* BeatPerMinute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0577FC981AFE75F700D816FF /* BeatPerMinute.cpp */; };
+		0594EC211B8678AE005B781F /* MusicXmlImporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0554B1661AFE35C900055EF1 /* MusicXmlImporter.cpp */; };
+		0594EC221B8678AE005B781F /* MidiImporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0554B1691AFE35DB00055EF1 /* MidiImporter.cpp */; };
+		0594EC231B8678AE005B781F /* ConvertUTF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 723DE56D1B25E007003AFB66 /* ConvertUTF.cpp */; };
+		0594EC241B8678AE005B781F /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05EE0B3B1AFE089800DD86D1 /* tinystr.cpp */; };
+		0594EC251B8678AE005B781F /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05EE0B3E1AFE089800DD86D1 /* tinyxml.cpp */; };
+		0594EC261B8678AE005B781F /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05EE0B411AFE089800DD86D1 /* tinyxmlerror.cpp */; };
+		0594EC271B8678AE005B781F /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05EE0B431AFE089800DD86D1 /* tinyxmlparser.cpp */; };
+		0594EC281B8678AE005B781F /* unzip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05681B021B11B387009E9A48 /* unzip.cpp */; };
+		0594EC291B8678AE005B781F /* ioapi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05681B041B11B3AF009E9A48 /* ioapi.cpp */; };
+		0594EC2A1B8678AE005B781F /* extract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05681AFD1B11B1E4009E9A48 /* extract.cpp */; };
+		0594EC2B1B8678C7005B781F /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05681AFF1B11B27E009E9A48 /* libz.a */; };
+		0594EC2C1B8678E6005B781F /* ImporterWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 0554B1611AFE2D8900055EF1 /* ImporterWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05C829231BC0439200037C4C /* MidiNoteAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C829211BC0439100037C4C /* MidiNoteAction.cpp */; };
+		05C829241BC0439200037C4C /* MidiNoteAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C829211BC0439100037C4C /* MidiNoteAction.cpp */; };
+		05C829251BC0439200037C4C /* MidiNoteAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C829221BC0439100037C4C /* MidiNoteAction.h */; };
+		05C829271BC047C900037C4C /* GeneralMIDISoundset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C829261BC047C900037C4C /* GeneralMIDISoundset.cpp */; };
+		05C829281BC047C900037C4C /* GeneralMIDISoundset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C829261BC047C900037C4C /* GeneralMIDISoundset.cpp */; };
+		05D3CE091BA36DBA00EE2E38 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05D3CE081BA36DBA00EE2E38 /* AppDelegate.mm */; };
+		05D3CE0B1BA36DBA00EE2E38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D3CE0A1BA36DBA00EE2E38 /* main.m */; };
+		05D3CE0D1BA36DBA00EE2E38 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05D3CE0C1BA36DBA00EE2E38 /* Images.xcassets */; };
+		05D3CE101BA36DBA00EE2E38 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D3CE0E1BA36DBA00EE2E38 /* MainMenu.xib */; };
+		05D3CE251BA36FDF00EE2E38 /* libLibAntescofoImporter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0594EC0C1B8676B8005B781F /* libLibAntescofoImporter.a */; };
 		05EE0B341AFE083A00DD86D1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05EE0B331AFE083A00DD86D1 /* main.cpp */; };
 		05EE0B461AFE089800DD86D1 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05EE0B3B1AFE089800DD86D1 /* tinystr.cpp */; };
 		05EE0B481AFE089800DD86D1 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05EE0B3E1AFE089800DD86D1 /* tinyxml.cpp */; };
 		05EE0B4A1AFE089800DD86D1 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05EE0B411AFE089800DD86D1 /* tinyxmlerror.cpp */; };
 		05EE0B4C1AFE089800DD86D1 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05EE0B431AFE089800DD86D1 /* tinyxmlparser.cpp */; };
 		723DE56F1B25E007003AFB66 /* ConvertUTF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 723DE56D1B25E007003AFB66 /* ConvertUTF.cpp */; };
+		CFDE2BAF1C0322DD00FC3D64 /* antescofo_importer in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05EE0B301AFE083A00DD86D1 /* antescofo_importer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,22 +94,52 @@
 			remoteGlobalIDString = 05681AF91B11B072009E9A48;
 			remoteInfo = zlib;
 		};
+		0594EC2D1B86793C005B781F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05EE0B281AFE083900DD86D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05681AF91B11B072009E9A48;
+			remoteInfo = zlib;
+		};
+		05A27B701BB4A4BB00CC0DE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05EE0B281AFE083900DD86D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05EE0B2F1AFE083A00DD86D1;
+			remoteInfo = antescofo_importer;
+		};
+		05A27B721BB4A4BB00CC0DE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05EE0B281AFE083900DD86D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05D3CE021BA36DBA00EE2E38;
+			remoteInfo = AntescofoImporterApp;
+		};
+		05D3CE231BA36FD500EE2E38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05EE0B281AFE083900DD86D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0594EC0B1B8676B8005B781F;
+			remoteInfo = AntescofoImporter;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		05EE0B2E1AFE083A00DD86D1 /* CopyFiles */ = {
+		CFDE2BAE1C0322C000FC3D64 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			dstPath = /usr/local/bin;
 			dstSubfolderSpec = 0;
 			files = (
-				0554B1701AFE475200055EF1 /* antescofo_importer in CopyFiles */,
+				CFDE2BAF1C0322DD00FC3D64 /* antescofo_importer in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		050112F21BBFD54600EB4402 /* ActionGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActionGroup.cpp; sourceTree = SOURCE_ROOT; };
+		050112F31BBFD54600EB4402 /* ActionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionGroup.h; sourceTree = SOURCE_ROOT; };
 		0506783B1B0D301300EA666E /* build_log.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = build_log.txt; sourceTree = SOURCE_ROOT; };
 		05323F241B2B1E420040E587 /* Repeat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Repeat.cpp; sourceTree = SOURCE_ROOT; };
 		05323F251B2B1E420040E587 /* Repeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repeat.h; sourceTree = SOURCE_ROOT; };
@@ -68,17 +152,20 @@
 		0554B1691AFE35DB00055EF1 /* MidiImporter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MidiImporter.cpp; sourceTree = SOURCE_ROOT; };
 		0554B16A1AFE35DB00055EF1 /* MidiImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidiImporter.h; sourceTree = SOURCE_ROOT; };
 		0554B16D1AFE380A00055EF1 /* Importer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Importer.h; sourceTree = SOURCE_ROOT; };
+		0556752D1BC516FD006220AE /* SimpleRational.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleRational.cpp; sourceTree = SOURCE_ROOT; };
+		0556752E1BC516FD006220AE /* SimpleRational.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleRational.h; sourceTree = SOURCE_ROOT; };
 		05578AAB1B0E699C004AC9CC /* UnitTester.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UnitTester.cpp; sourceTree = SOURCE_ROOT; };
 		05578AAC1B0E699C004AC9CC /* UnitTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTester.h; sourceTree = SOURCE_ROOT; };
 		05673F2D1B31E5E00085CF95 /* Pitch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pitch.cpp; sourceTree = SOURCE_ROOT; };
 		05673F2E1B31E5E00085CF95 /* Pitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pitch.h; sourceTree = SOURCE_ROOT; };
 		05681AFD1B11B1E4009E9A48 /* extract.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = extract.cpp; path = zlib/unzip/extract.cpp; sourceTree = SOURCE_ROOT; };
 		05681AFF1B11B27E009E9A48 /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libz.a; path = zlib/libz.a; sourceTree = SOURCE_ROOT; };
-		05681B021B11B387009E9A48 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = unzip.c; path = zlib/unzip/unzip.c; sourceTree = SOURCE_ROOT; };
-		05681B041B11B3AF009E9A48 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ioapi.c; path = zlib/unzip/ioapi.c; sourceTree = SOURCE_ROOT; };
+		05681B021B11B387009E9A48 /* unzip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unzip.cpp; path = zlib/unzip/unzip.cpp; sourceTree = SOURCE_ROOT; };
+		05681B041B11B3AF009E9A48 /* ioapi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ioapi.cpp; path = zlib/unzip/ioapi.cpp; sourceTree = SOURCE_ROOT; };
 		05681B061B11B8DE009E9A48 /* extract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = extract.h; path = zlib/unzip/extract.h; sourceTree = SOURCE_ROOT; };
 		0568371C1AFECA80009A646C /* Measure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Measure.cpp; sourceTree = SOURCE_ROOT; };
 		0568371D1AFECA80009A646C /* Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measure.h; sourceTree = SOURCE_ROOT; };
+		05740ACA1BBED7A700AF914A /* MIDIDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIDefines.h; sourceTree = SOURCE_ROOT; };
 		0577FC951AFE59D800D816FF /* Event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Event.cpp; sourceTree = SOURCE_ROOT; };
 		0577FC961AFE59D800D816FF /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = SOURCE_ROOT; };
 		0577FC981AFE75F700D816FF /* BeatPerMinute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BeatPerMinute.cpp; sourceTree = SOURCE_ROOT; };
@@ -87,7 +174,19 @@
 		0577FC9F1AFE7C6800D816FF /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = SOURCE_ROOT; };
 		0577FCA71AFE7D9A00D816FF /* Tempo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tempo.cpp; sourceTree = SOURCE_ROOT; };
 		0577FCA81AFE7D9A00D816FF /* Tempo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tempo.h; sourceTree = SOURCE_ROOT; };
+		0594EC0C1B8676B8005B781F /* libLibAntescofoImporter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLibAntescofoImporter.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		059CD6E31BAD3C6600D9A60C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		05AFCAE41B05F3F700DE3F5E /* version.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = version.plist; sourceTree = SOURCE_ROOT; };
+		05C829211BC0439100037C4C /* MidiNoteAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MidiNoteAction.cpp; sourceTree = SOURCE_ROOT; };
+		05C829221BC0439100037C4C /* MidiNoteAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidiNoteAction.h; sourceTree = SOURCE_ROOT; };
+		05C829261BC047C900037C4C /* GeneralMIDISoundset.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GeneralMIDISoundset.cpp; sourceTree = SOURCE_ROOT; };
+		05D3CE031BA36DBA00EE2E38 /* Antescofo Importer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Antescofo Importer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05D3CE061BA36DBA00EE2E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05D3CE071BA36DBA00EE2E38 /* AppDelegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		05D3CE081BA36DBA00EE2E38 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		05D3CE0A1BA36DBA00EE2E38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		05D3CE0C1BA36DBA00EE2E38 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		05D3CE0F1BA36DBA00EE2E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		05EE0B301AFE083A00DD86D1 /* antescofo_importer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = antescofo_importer; sourceTree = BUILT_PRODUCTS_DIR; };
 		05EE0B331AFE083A00DD86D1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
 		05EE0B3B1AFE089800DD86D1 /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
@@ -101,6 +200,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0594EC091B8676B8005B781F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0594EC2B1B8678C7005B781F /* libz.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05D3CE001BA36DBA00EE2E38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D3CE251BA36FDF00EE2E38 /* libLibAntescofoImporter.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05EE0B2D1AFE083A00DD86D1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,8 +230,8 @@
 		05681AF81B11AF64009E9A48 /* zlib */ = {
 			isa = PBXGroup;
 			children = (
-				05681B021B11B387009E9A48 /* unzip.c */,
-				05681B041B11B3AF009E9A48 /* ioapi.c */,
+				05681B021B11B387009E9A48 /* unzip.cpp */,
+				05681B041B11B3AF009E9A48 /* ioapi.cpp */,
 				05681AFD1B11B1E4009E9A48 /* extract.cpp */,
 				05681B061B11B8DE009E9A48 /* extract.h */,
 			);
@@ -149,6 +264,14 @@
 				0577FCA81AFE7D9A00D816FF /* Tempo.h */,
 				0577FC981AFE75F700D816FF /* BeatPerMinute.cpp */,
 				0577FC991AFE75F700D816FF /* BeatPerMinute.h */,
+				050112F21BBFD54600EB4402 /* ActionGroup.cpp */,
+				050112F31BBFD54600EB4402 /* ActionGroup.h */,
+				05C829211BC0439100037C4C /* MidiNoteAction.cpp */,
+				05C829221BC0439100037C4C /* MidiNoteAction.h */,
+				05C829261BC047C900037C4C /* GeneralMIDISoundset.cpp */,
+				05740ACA1BBED7A700AF914A /* MIDIDefines.h */,
+				0556752E1BC516FD006220AE /* SimpleRational.h */,
+				0556752D1BC516FD006220AE /* SimpleRational.cpp */,
 			);
 			name = Events;
 			sourceTree = "<group>";
@@ -165,10 +288,33 @@
 			name = Importers;
 			sourceTree = "<group>";
 		};
+		05D3CE041BA36DBA00EE2E38 /* AntescofoImporterApp */ = {
+			isa = PBXGroup;
+			children = (
+				05D3CE071BA36DBA00EE2E38 /* AppDelegate.h */,
+				05D3CE081BA36DBA00EE2E38 /* AppDelegate.mm */,
+				05D3CE0C1BA36DBA00EE2E38 /* Images.xcassets */,
+				05D3CE0E1BA36DBA00EE2E38 /* MainMenu.xib */,
+				05D3CE051BA36DBA00EE2E38 /* Supporting Files */,
+			);
+			name = AntescofoImporterApp;
+			path = AntescofoConverterApp;
+			sourceTree = "<group>";
+		};
+		05D3CE051BA36DBA00EE2E38 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05D3CE061BA36DBA00EE2E38 /* Info.plist */,
+				05D3CE0A1BA36DBA00EE2E38 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		05EE0B271AFE083900DD86D1 = {
 			isa = PBXGroup;
 			children = (
 				05EE0B321AFE083A00DD86D1 /* antescofo_converter */,
+				05D3CE041BA36DBA00EE2E38 /* AntescofoImporterApp */,
 				05EE0B311AFE083A00DD86D1 /* Products */,
 				05681B011B11B2C3009E9A48 /* libs */,
 			);
@@ -178,6 +324,8 @@
 			isa = PBXGroup;
 			children = (
 				05EE0B301AFE083A00DD86D1 /* antescofo_importer */,
+				0594EC0C1B8676B8005B781F /* libLibAntescofoImporter.a */,
+				05D3CE031BA36DBA00EE2E38 /* Antescofo Importer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,6 +367,19 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		0594EC0A1B8676B8005B781F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C829251BC0439200037C4C /* MidiNoteAction.h in Headers */,
+				0594EC2C1B8678E6005B781F /* ImporterWrapper.h in Headers */,
+				055675311BC516FD006220AE /* SimpleRational.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXLegacyTarget section */
 		05681AF91B11B072009E9A48 /* zlib */ = {
 			isa = PBXLegacyTarget;
@@ -226,7 +387,7 @@
 			buildConfigurationList = 05681AFA1B11B072009E9A48 /* Build configuration list for PBXLegacyTarget "zlib" */;
 			buildPhases = (
 			);
-			buildToolPath = /usr/bin/make;
+			buildToolPath = make;
 			buildWorkingDirectory = zlib;
 			dependencies = (
 			);
@@ -237,14 +398,52 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
+		0594EC0B1B8676B8005B781F /* LibAntescofoImporter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0594EC141B8676B9005B781F /* Build configuration list for PBXNativeTarget "LibAntescofoImporter" */;
+			buildPhases = (
+				0594EC081B8676B8005B781F /* Sources */,
+				0594EC091B8676B8005B781F /* Frameworks */,
+				0594EC0A1B8676B8005B781F /* Headers */,
+				0594EC311B867D1A005B781F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0594EC2E1B86793C005B781F /* PBXTargetDependency */,
+			);
+			name = LibAntescofoImporter;
+			productName = importerLib;
+			productReference = 0594EC0C1B8676B8005B781F /* libLibAntescofoImporter.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		05D3CE021BA36DBA00EE2E38 /* AntescofoImporterApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05D3CE1D1BA36DBB00EE2E38 /* Build configuration list for PBXNativeTarget "AntescofoImporterApp" */;
+			buildPhases = (
+				05D3CDFF1BA36DBA00EE2E38 /* Sources */,
+				05D3CE001BA36DBA00EE2E38 /* Frameworks */,
+				05D3CE011BA36DBA00EE2E38 /* Resources */,
+				050DAF021BB1EC36008B6D4E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05D3CE241BA36FD500EE2E38 /* PBXTargetDependency */,
+			);
+			name = AntescofoImporterApp;
+			productName = AntescofoConverterApp;
+			productReference = 05D3CE031BA36DBA00EE2E38 /* Antescofo Importer.app */;
+			productType = "com.apple.product-type.application";
+		};
 		05EE0B2F1AFE083A00DD86D1 /* antescofo_importer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05EE0B371AFE083A00DD86D1 /* Build configuration list for PBXNativeTarget "antescofo_importer" */;
 			buildPhases = (
 				05EE0B2C1AFE083A00DD86D1 /* Sources */,
 				05EE0B2D1AFE083A00DD86D1 /* Frameworks */,
-				05EE0B2E1AFE083A00DD86D1 /* CopyFiles */,
-				05CF1E8E1B040D00006250D0 /* ShellScript */,
+				CFDE2BAE1C0322C000FC3D64 /* CopyFiles */,
+				05A27B751BB4A5CD00CC0DE1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -268,6 +467,15 @@
 					05681AF91B11B072009E9A48 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
+					0594EC0B1B8676B8005B781F = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					05A27B6C1BB4A48000CC0DE1 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					05D3CE021BA36DBA00EE2E38 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
 					05EE0B2F1AFE083A00DD86D1 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
@@ -279,20 +487,37 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 05EE0B271AFE083900DD86D1;
 			productRefGroup = 05EE0B311AFE083A00DD86D1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				05A27B6C1BB4A48000CC0DE1 /* AntescofoImporter */,
 				05EE0B2F1AFE083A00DD86D1 /* antescofo_importer */,
 				05681AF91B11B072009E9A48 /* zlib */,
+				0594EC0B1B8676B8005B781F /* LibAntescofoImporter */,
+				05D3CE021BA36DBA00EE2E38 /* AntescofoImporterApp */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		05D3CE011BA36DBA00EE2E38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D3CE0D1BA36DBA00EE2E38 /* Images.xcassets in Resources */,
+				05D3CE101BA36DBA00EE2E38 /* MainMenu.xib in Resources */,
+				050DAF031BB1EECF008B6D4E /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXShellScriptBuildPhase section */
-		05CF1E8E1B040D00006250D0 /* ShellScript */ = {
+		050DAF021BB1EC36008B6D4E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -303,19 +528,99 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$CONFIGURATION\" = \"Release\" ] ; then\n    /usr/local/bin/${TARGET_NAME} -unittest=test/unit\n    RETVAL=$?\n    if [ $RETVAL -ne 0 ]; then\n        exit 1\n    fi\nfi\ncp ${TARGET_BUILD_DIR}/${TARGET_NAME} out/mac\ncp build_log.txt out/mac\nIMPORTER_VERSION=$(/usr/libexec/PlistBuddy -c \"Print :ImporterVersion\" version.plist)\ncd out/mac\nzip -y -r -X ${TARGET_NAME}_commandline_${IMPORTER_VERSION}.zip ${TARGET_NAME} build_log.txt";
+			shellScript = "cp -R \"${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/${PRODUCT_NAME}.app\" ../apps/Antescofo/Ascograph/bin\ncp -R \"${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/${PRODUCT_NAME}.app\" out/mac/";
+		};
+		0594EC311B867D1A005B781F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp ${TARGET_BUILD_DIR}/lib${TARGET_NAME}.a out/lib";
+		};
+		05A27B741BB4A4C300CC0DE1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp build_log.txt out/\nIMPORTER_VERSION=$(/usr/libexec/PlistBuddy -c \"Print :ImporterVersion\" version.plist)\ncd out/\nzip -y -r -X archive/${TARGET_NAME}_${IMPORTER_VERSION}.zip mac/ linux/ build_log.txt";
+		};
+		05A27B751BB4A5CD00CC0DE1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/plain\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/original_pitches -originalpitches\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\ncp ${TARGET_BUILD_DIR}/${TARGET_NAME} out/mac";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0594EC081B8676B8005B781F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0594EC171B8678AE005B781F /* ImporterWrapper.cpp in Sources */,
+				05C829281BC047C900037C4C /* GeneralMIDISoundset.cpp in Sources */,
+				0594EC181B8678AE005B781F /* ImportModel.cpp in Sources */,
+				05C829241BC0439200037C4C /* MidiNoteAction.cpp in Sources */,
+				0594EC191B8678AE005B781F /* UnitTester.cpp in Sources */,
+				0594EC1A1B8678AE005B781F /* Event.cpp in Sources */,
+				0594EC1B1B8678AE005B781F /* Measure.cpp in Sources */,
+				0594EC1C1B8678AE005B781F /* Entry.cpp in Sources */,
+				0594EC1D1B8678AE005B781F /* Pitch.cpp in Sources */,
+				0594EC1E1B8678AE005B781F /* Repeat.cpp in Sources */,
+				050112F51BBFD54600EB4402 /* ActionGroup.cpp in Sources */,
+				0594EC1F1B8678AE005B781F /* Tempo.cpp in Sources */,
+				0594EC201B8678AE005B781F /* BeatPerMinute.cpp in Sources */,
+				0594EC211B8678AE005B781F /* MusicXmlImporter.cpp in Sources */,
+				0594EC221B8678AE005B781F /* MidiImporter.cpp in Sources */,
+				055675301BC516FD006220AE /* SimpleRational.cpp in Sources */,
+				0594EC231B8678AE005B781F /* ConvertUTF.cpp in Sources */,
+				0594EC241B8678AE005B781F /* tinystr.cpp in Sources */,
+				0594EC251B8678AE005B781F /* tinyxml.cpp in Sources */,
+				0594EC261B8678AE005B781F /* tinyxmlerror.cpp in Sources */,
+				0594EC271B8678AE005B781F /* tinyxmlparser.cpp in Sources */,
+				0594EC281B8678AE005B781F /* unzip.cpp in Sources */,
+				0594EC291B8678AE005B781F /* ioapi.cpp in Sources */,
+				0594EC2A1B8678AE005B781F /* extract.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05D3CDFF1BA36DBA00EE2E38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D3CE0B1BA36DBA00EE2E38 /* main.m in Sources */,
+				05D3CE091BA36DBA00EE2E38 /* AppDelegate.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05EE0B2C1AFE083A00DD86D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05681B031B11B387009E9A48 /* unzip.c in Sources */,
-				05681B051B11B3AF009E9A48 /* ioapi.c in Sources */,
+				05681B031B11B387009E9A48 /* unzip.cpp in Sources */,
+				05681B051B11B3AF009E9A48 /* ioapi.cpp in Sources */,
 				05EE0B4A1AFE089800DD86D1 /* tinyxmlerror.cpp in Sources */,
 				0554B16B1AFE35DB00055EF1 /* MidiImporter.cpp in Sources */,
+				05C829271BC047C900037C4C /* GeneralMIDISoundset.cpp in Sources */,
 				0554B1681AFE35C900055EF1 /* MusicXmlImporter.cpp in Sources */,
 				0568371E1AFECA80009A646C /* Measure.cpp in Sources */,
 				05542C5B1B0062690035F522 /* Entry.cpp in Sources */,
@@ -323,7 +628,9 @@
 				05681AFE1B11B226009E9A48 /* extract.cpp in Sources */,
 				05EE0B481AFE089800DD86D1 /* tinyxml.cpp in Sources */,
 				05578AAD1B0E699C004AC9CC /* UnitTester.cpp in Sources */,
+				050112F41BBFD54600EB4402 /* ActionGroup.cpp in Sources */,
 				723DE56F1B25E007003AFB66 /* ConvertUTF.cpp in Sources */,
+				0556752F1BC516FD006220AE /* SimpleRational.cpp in Sources */,
 				05673F2F1B31E5E00085CF95 /* Pitch.cpp in Sources */,
 				05323F261B2B1E420040E587 /* Repeat.cpp in Sources */,
 				05EE0B4C1AFE089800DD86D1 /* tinyxmlparser.cpp in Sources */,
@@ -331,6 +638,7 @@
 				0554B1621AFE2D8900055EF1 /* ImporterWrapper.cpp in Sources */,
 				0577FC9A1AFE75F700D816FF /* BeatPerMinute.cpp in Sources */,
 				05EE0B461AFE089800DD86D1 /* tinystr.cpp in Sources */,
+				05C829231BC0439200037C4C /* MidiNoteAction.cpp in Sources */,
 				0577FC971AFE59D800D816FF /* Event.cpp in Sources */,
 				0577FCA91AFE7D9A00D816FF /* Tempo.cpp in Sources */,
 			);
@@ -344,7 +652,39 @@
 			target = 05681AF91B11B072009E9A48 /* zlib */;
 			targetProxy = 05681B071B11CF09009E9A48 /* PBXContainerItemProxy */;
 		};
+		0594EC2E1B86793C005B781F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05681AF91B11B072009E9A48 /* zlib */;
+			targetProxy = 0594EC2D1B86793C005B781F /* PBXContainerItemProxy */;
+		};
+		05A27B711BB4A4BB00CC0DE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05EE0B2F1AFE083A00DD86D1 /* antescofo_importer */;
+			targetProxy = 05A27B701BB4A4BB00CC0DE1 /* PBXContainerItemProxy */;
+		};
+		05A27B731BB4A4BB00CC0DE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05D3CE021BA36DBA00EE2E38 /* AntescofoImporterApp */;
+			targetProxy = 05A27B721BB4A4BB00CC0DE1 /* PBXContainerItemProxy */;
+		};
+		05D3CE241BA36FD500EE2E38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0594EC0B1B8676B8005B781F /* LibAntescofoImporter */;
+			targetProxy = 05D3CE231BA36FD500EE2E38 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05D3CE0E1BA36DBA00EE2E38 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05D3CE0F1BA36DBA00EE2E38 /* Base */,
+				059CD6E31BAD3C6600D9A60C /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		05681AFB1B11B072009E9A48 /* Debug */ = {
@@ -371,6 +711,97 @@
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0594EC151B8676B9005B781F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/zlib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
+			};
+			name = Debug;
+		};
+		0594EC161B8676B9005B781F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/zlib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
+			};
+			name = Release;
+		};
+		05A27B6D1BB4A48000CC0DE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		05A27B6E1BB4A48000CC0DE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		05D3CE1E1BA36DBB00EE2E38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AntescofoConverterApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "Antescofo Importer";
+			};
+			name = Debug;
+		};
+		05D3CE1F1BA36DBB00EE2E38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				INFOPLIST_FILE = AntescofoConverterApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "Antescofo Importer";
 			};
 			name = Release;
 		};
@@ -412,8 +843,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx10.7;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -449,7 +881,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
@@ -457,7 +890,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				LIBRARY_SEARCH_PATHS = (
@@ -465,7 +898,7 @@
 					"$(PROJECT_DIR)/zlib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -473,7 +906,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = fast;
@@ -482,7 +915,7 @@
 					"$(PROJECT_DIR)/zlib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
 		};
@@ -494,6 +927,33 @@
 			buildConfigurations = (
 				05681AFB1B11B072009E9A48 /* Debug */,
 				05681AFC1B11B072009E9A48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0594EC141B8676B9005B781F /* Build configuration list for PBXNativeTarget "LibAntescofoImporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0594EC151B8676B9005B781F /* Debug */,
+				0594EC161B8676B9005B781F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05A27B6F1BB4A48000CC0DE1 /* Build configuration list for PBXAggregateTarget "AntescofoImporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05A27B6D1BB4A48000CC0DE1 /* Debug */,
+				05A27B6E1BB4A48000CC0DE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05D3CE1D1BA36DBB00EE2E38 /* Build configuration list for PBXNativeTarget "AntescofoImporterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05D3CE1E1BA36DBB00EE2E38 /* Debug */,
+				05D3CE1F1BA36DBB00EE2E38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

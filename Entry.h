@@ -19,7 +19,10 @@
 #include <stdio.h>
 #include <sstream>
 #include <list>
+#include <utility>
 #include "Event.h"
+#include "Pitch.h"
+#include "SimpleRational.h"
 
 namespace antescofo
 {
@@ -38,35 +41,36 @@ namespace antescofo
     class Entry: public Event
     {
     public:
-        explicit Entry( int measure, float start, float duration, int centsPitch, bool displayCents, EntryFeatures features = None );
+        explicit Entry( float measure, float start, float duration, const Pitch& pitch );
         Entry( const Entry& from );
         virtual ~Entry();
         
-        virtual void          serialize( std::ostringstream& stream );
-        virtual EventType     type() const { return Event_Entry; }
-        virtual bool          hasNotes() const;
-        virtual float         start() const;
-        virtual void          changeStart( float newTime );
-        virtual void          changeDuration( float newTime );
-        virtual float         duration() const;
-        virtual bool          addPitch( int midiCents, EntryFeatures feature );
-        virtual void          addSecondaryPitch( int midiCents, EntryFeatures feature );
-        virtual EntryFeatures features() { return features_; }
-        virtual void          addFeatures( EntryFeatures feature );
-        virtual void          tiePitches();
-        virtual Event*        duplicate() const;
-        virtual bool          isRest() const;
+        void          serialize( std::ostringstream& stream ) override;
+        EventType     type() const override { return Event_Entry; }
+        bool          hasNotes() const override;
+        float         start() const override;
+        void          changeStart( float newTime );
+        void          changeDuration( float newTime );
+        float         duration() const override;
+        bool          addPitch( const Pitch& pitch ) override;
+        int           primaryPitchCount() const override { return (int) pitches_.size(); }
+        void          addSecondaryPitch( const Pitch& secondaryPitch) override;
+        EntryFeatures features() const override { return features_; }
+        void          addFeatures( EntryFeatures feature ) override;
+        void          removeFeatures( EntryFeatures feature ) override;
+        void          tiePitches() override;
+        Event*        duplicate() const override;
+        bool          isRest() const override;
         
-        const std::list<int>& pitches() const;
-        std::list<int>&       pitches();
-        const std::list<int>& secondaryPitches() const;
-        std::list<int>&       secondaryPitches();
+        const std::list<Pitch>& pitches() const;
+        std::list<Pitch>&       pitches();
+        const std::list<Pitch>& secondaryPitches() const;
+        std::list<Pitch>&       secondaryPitches();
         
         bool isTiedTo( Entry* entry );
         
     private:
         std::string formatDuration() const;
-        std::string serializePitch( int pitch ) const;
         void        serializeNote( std::ostringstream& stream );
         void        serializeChord( std::ostringstream& stream );
         void        serializeFastRepeatedTremolo( std::ostringstream& stream );
@@ -77,9 +81,9 @@ namespace antescofo
     private:
         float               start_;
         float               duration_;
-        std::list<int>      centsPitches_;
-        std::list<int>      secondaryPitches_; //for alternate tremolos & trills
-        const bool          displayCents_;
+        SimpleRational      rationalDuration_;
+        std::list<Pitch>    pitches_;
+        std::list<Pitch>    secondaryPitches_; //for alternate tremolos & trills
         EntryFeatures       features_;
     };
 }

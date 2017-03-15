@@ -1,0 +1,2627 @@
+﻿; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: capriccio-espag_simple.mid
+; MIDI file type 1 (multiple tracks)
+; Converted to Antescofo on Fri Oct  2 18:18:06 2015
+
+; start
+BPM 120
+
+; ----------- measure 1 --- beat 0 --- time signature 2/4
+
+NOTE 0 2 measure1
+
+; ----------- measure 2 --- beat 2 --- time signature 2/4
+
+CHORD (E5 A6) 1/8 measure2
+CHORD (-E5 B6) 1/8
+CHORD (-E5 A6) 1/8
+CHORD (-E5 B6) 1/8
+CHORD (-E5 A6) 1/8
+CHORD (-E5 B6) 1/8
+CHORD (-E5 A6) 1/8
+NOTE B6 1/8
+CHORD (E5 A6) 1/2
+NOTE E5 1/2
+
+; ----------- measure 3 --- beat 4 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 4 --- beat 6 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 5 --- beat 8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 6 --- beat 10 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 7 --- beat 12 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 8 --- beat 14 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 9 --- beat 16 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 10 --- beat 18 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 11 --- beat 20 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 12 --- beat 22 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 13 --- beat 24 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 14 --- beat 26 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 15 --- beat 28 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 16 --- beat 30 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 17 --- beat 32 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 18 --- beat 34 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 19 --- beat 36 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 20 --- beat 38 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 21 --- beat 40 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 22 --- beat 42 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 23 --- beat 44 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 24 --- beat 46 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 25 --- beat 48 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 26 --- beat 50 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 27 --- beat 52 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 28 --- beat 54 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 29 --- beat 56 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 30 --- beat 58 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 31 --- beat 60 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 32 --- beat 62 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 33 --- beat 64 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 34 --- beat 66 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 35 --- beat 68 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 36 --- beat 70 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 37 --- beat 72 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 38 --- beat 74 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 39 --- beat 76 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 40 --- beat 78 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 41 --- beat 80 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 42 --- beat 82 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 43 --- beat 84 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 44 --- beat 86 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 45 --- beat 88 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 46 --- beat 90 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 47 --- beat 92 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 48 --- beat 94 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 49 --- beat 96 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 50 --- beat 98 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 51 --- beat 100 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 52 --- beat 102 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 53 --- beat 104 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 54 --- beat 106 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 55 --- beat 108 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 56 --- beat 110 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 57 --- beat 112 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 58 --- beat 114 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 59 --- beat 116 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 60 --- beat 118 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 61 --- beat 120 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 62 --- beat 122 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 63 --- beat 124 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 64 --- beat 126 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 65 --- beat 128 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 66 --- beat 130 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 67 --- beat 132 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 68 --- beat 134 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 69 --- beat 136 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 70 --- beat 138 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 71 --- beat 140 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 72 --- beat 142 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 73 --- beat 144 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 74 --- beat 146 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 75 --- beat 148 --- time signature 5/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 76 --- beat 150.5 --- time signature 3/8
+
+BPM 56
+NOTE 0 0 ; empty measure
+
+; ----------- measure 77 --- beat 152 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 78 --- beat 153.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 79 --- beat 155 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 80 --- beat 156.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 81 --- beat 158 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 82 --- beat 159.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 83 --- beat 161 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 84 --- beat 162.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 85 --- beat 164 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 86 --- beat 165.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 87 --- beat 167 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 88 --- beat 168.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 89 --- beat 170 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 90 --- beat 171.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 91 --- beat 173 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 92 --- beat 174.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 93 --- beat 176 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 94 --- beat 177.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 95 --- beat 179 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 96 --- beat 180.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 97 --- beat 182 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 98 --- beat 183.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 99 --- beat 185 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 100 --- beat 186.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 101 --- beat 188 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 102 --- beat 189.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 103 --- beat 191 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 104 --- beat 192.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 105 --- beat 194 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 106 --- beat 195.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 107 --- beat 197 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 108 --- beat 198.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 109 --- beat 200 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 110 --- beat 201.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 111 --- beat 203 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 112 --- beat 204.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 113 --- beat 206 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 114 --- beat 207.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 115 --- beat 209 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 116 --- beat 210.5 --- time signature 3/8
+
+BPM 44
+NOTE 0 0 ; empty measure
+
+; ----------- measure 117 --- beat 212 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 118 --- beat 213.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 119 --- beat 215 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 120 --- beat 216.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 121 --- beat 218 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 122 --- beat 219.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 123 --- beat 221 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 124 --- beat 222.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 125 --- beat 224 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 126 --- beat 225.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 127 --- beat 227 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 128 --- beat 228.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 129 --- beat 230 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 130 --- beat 231.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 131 --- beat 233 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 132 --- beat 234.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 133 --- beat 236 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 134 --- beat 237.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 135 --- beat 239 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 136 --- beat 240.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 137 --- beat 242 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 138 --- beat 243.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 139 --- beat 245 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 140 --- beat 246.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 141 --- beat 248 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 142 --- beat 249.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 143 --- beat 251 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 144 --- beat 252.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 145 --- beat 254 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 146 --- beat 255.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 147 --- beat 257 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 148 --- beat 258.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 149 --- beat 260 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 150 --- beat 261.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 151 --- beat 263 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 152 --- beat 264.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 153 --- beat 266 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 154 --- beat 267.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 155 --- beat 269 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 156 --- beat 270.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 157 --- beat 272 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 158 --- beat 273.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 159 --- beat 275 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 160 --- beat 276.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 161 --- beat 278 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 162 --- beat 279.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 163 --- beat 281 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 164 --- beat 282.5 --- time signature 3/8
+
+BPM 56
+NOTE 0 0 ; empty measure
+
+; ----------- measure 165 --- beat 284 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 166 --- beat 285.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 167 --- beat 287 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 168 --- beat 288.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 169 --- beat 290 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 170 --- beat 291.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 171 --- beat 293 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 172 --- beat 294.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 173 --- beat 296 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 174 --- beat 297.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 175 --- beat 299 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 176 --- beat 300.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 177 --- beat 302 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 178 --- beat 303.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 179 --- beat 305 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 180 --- beat 306.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 181 --- beat 308 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 182 --- beat 309.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 183 --- beat 311 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 184 --- beat 312.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 185 --- beat 314 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 186 --- beat 315.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 187 --- beat 317 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 188 --- beat 318.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 189 --- beat 320 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 190 --- beat 321.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 191 --- beat 323 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 192 --- beat 324.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 193 --- beat 326 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 194 --- beat 327.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 195 --- beat 329 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 196 --- beat 330.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 197 --- beat 332 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 198 --- beat 333.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 199 --- beat 335 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 200 --- beat 336.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 201 --- beat 338 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 202 --- beat 339.5 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 203 --- beat 341 --- time signature 3/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 204 --- beat 342.5 --- time signature 2/4
+
+BPM 109
+NOTE 0 0 ; empty measure
+
+; ----------- measure 205 --- beat 344.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 206 --- beat 346.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 207 --- beat 348.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 208 --- beat 350.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 209 --- beat 352.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 210 --- beat 354.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 211 --- beat 356.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 212 --- beat 358.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 213 --- beat 360.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 214 --- beat 362.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 215 --- beat 364.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 216 --- beat 366.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 217 --- beat 368.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 218 --- beat 370.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 219 --- beat 372.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 220 --- beat 374.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 221 --- beat 376.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 222 --- beat 378.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 223 --- beat 380.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 224 --- beat 382.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 225 --- beat 384.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 226 --- beat 386.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 227 --- beat 388.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 228 --- beat 390.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 229 --- beat 392.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 230 --- beat 394.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 231 --- beat 396.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 232 --- beat 398.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 233 --- beat 400.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 234 --- beat 402.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 235 --- beat 404.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 236 --- beat 406.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 237 --- beat 408.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 238 --- beat 410.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 239 --- beat 412.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 240 --- beat 414.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 241 --- beat 416.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 242 --- beat 418.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 243 --- beat 420.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 244 --- beat 422.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 245 --- beat 424.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 246 --- beat 426.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 247 --- beat 428.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 248 --- beat 430.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 249 --- beat 432.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 250 --- beat 434.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 251 --- beat 436.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 252 --- beat 438.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 253 --- beat 440.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 254 --- beat 442.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 255 --- beat 444.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 256 --- beat 446.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 257 --- beat 448.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 258 --- beat 450.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 259 --- beat 452.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 260 --- beat 454.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 261 --- beat 456.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 262 --- beat 458.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 263 --- beat 460.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 264 --- beat 462.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 265 --- beat 464.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 266 --- beat 466.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 267 --- beat 468.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 268 --- beat 470.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 269 --- beat 472.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 270 --- beat 474.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 271 --- beat 476.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 272 --- beat 478.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 273 --- beat 480.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 274 --- beat 482.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 275 --- beat 484.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 276 --- beat 486.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 277 --- beat 488.5 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 278 --- beat 490.5 --- time signature 6/8
+
+BPM 73
+NOTE 0 0 ; empty measure
+
+; ----------- measure 279 --- beat 493.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 280 --- beat 496.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 281 --- beat 499.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 282 --- beat 502.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 283 --- beat 505.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 284 --- beat 508.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 285 --- beat 511.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 286 --- beat 514.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 287 --- beat 517.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 288 --- beat 520.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 289 --- beat 523.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 290 --- beat 526.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 291 --- beat 529.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 292 --- beat 532.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 293 --- beat 535.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 294 --- beat 538.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 295 --- beat 541.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 296 --- beat 544.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 297 --- beat 547.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 298 --- beat 550.5 --- time signature 7/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 299 --- beat 554 --- time signature 8/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 300 --- beat 558 --- time signature 10/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 301 --- beat 563 --- time signature 9/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 302 --- beat 567.5 --- time signature 6/8
+
+BPM 100
+NOTE 0 0 ; empty measure
+
+; ----------- measure 303 --- beat 570.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 304 --- beat 573.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 305 --- beat 576.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 306 --- beat 579.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 307 --- beat 582.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 308 --- beat 585.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 309 --- beat 588.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 310 --- beat 591.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 311 --- beat 594.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 312 --- beat 597.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 313 --- beat 600.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 314 --- beat 603.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 315 --- beat 606.5 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 316 --- beat 609.5 --- time signature 7/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 317 --- beat 613 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 318 --- beat 616 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 319 --- beat 619 --- time signature 15/16
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 320 --- beat 622.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 321 --- beat 625.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 322 --- beat 628.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 323 --- beat 631.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 324 --- beat 634.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 325 --- beat 637.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 326 --- beat 640.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 327 --- beat 643.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 328 --- beat 646.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 329 --- beat 649.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 330 --- beat 652.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 331 --- beat 655.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 332 --- beat 658.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 333 --- beat 661.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 334 --- beat 664.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 335 --- beat 667.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 336 --- beat 670.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 337 --- beat 673.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 338 --- beat 676.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 339 --- beat 679.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 340 --- beat 682.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 341 --- beat 685.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 342 --- beat 688.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 343 --- beat 691.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 344 --- beat 694.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 345 --- beat 697.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 346 --- beat 700.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 347 --- beat 703.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 348 --- beat 706.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 349 --- beat 709.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 350 --- beat 712.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 351 --- beat 715.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 352 --- beat 718.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 353 --- beat 721.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 354 --- beat 724.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 355 --- beat 727.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 356 --- beat 730.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 357 --- beat 733.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 358 --- beat 736.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 359 --- beat 739.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 360 --- beat 742.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 361 --- beat 745.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 362 --- beat 748.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 363 --- beat 751.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 364 --- beat 754.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 365 --- beat 757.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 366 --- beat 760.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 367 --- beat 763.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 368 --- beat 766.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 369 --- beat 769.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 370 --- beat 772.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 371 --- beat 775.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 372 --- beat 778.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 373 --- beat 781.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 374 --- beat 784.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 375 --- beat 787.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 376 --- beat 790.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 377 --- beat 793.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 378 --- beat 796.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 379 --- beat 799.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 380 --- beat 802.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 381 --- beat 805.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 382 --- beat 808.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 383 --- beat 811.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 384 --- beat 814.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 385 --- beat 817.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 386 --- beat 820.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 387 --- beat 823.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 388 --- beat 826.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 389 --- beat 829.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 390 --- beat 832.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 391 --- beat 835.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 392 --- beat 838.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 393 --- beat 841.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 394 --- beat 844.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 395 --- beat 847.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 396 --- beat 850.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 397 --- beat 853.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 398 --- beat 856.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 399 --- beat 859.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 400 --- beat 862.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 401 --- beat 865.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 402 --- beat 868.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 403 --- beat 871.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 404 --- beat 874.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 405 --- beat 877.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 406 --- beat 880.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 407 --- beat 883.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 408 --- beat 886.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 409 --- beat 889.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 410 --- beat 892.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 411 --- beat 895.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 412 --- beat 898.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 413 --- beat 901.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 414 --- beat 904.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 415 --- beat 907.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 416 --- beat 910.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 417 --- beat 913.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 418 --- beat 916.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 419 --- beat 919.8 --- time signature 6/8
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 420 --- beat 922.8 --- time signature 3/4
+
+BPM 195
+NOTE 0 0 ; empty measure
+
+; ----------- measure 421 --- beat 925.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 422 --- beat 928.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 423 --- beat 931.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 424 --- beat 934.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 425 --- beat 937.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 426 --- beat 940.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 427 --- beat 943.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 428 --- beat 946.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 429 --- beat 949.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 430 --- beat 952.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 431 --- beat 955.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 432 --- beat 958.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 433 --- beat 961.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 434 --- beat 964.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 435 --- beat 967.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 436 --- beat 970.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 437 --- beat 973.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 438 --- beat 976.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 439 --- beat 979.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 440 --- beat 982.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 441 --- beat 985.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 442 --- beat 988.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 443 --- beat 991.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 444 --- beat 994.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 445 --- beat 997.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 446 --- beat 1000.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 447 --- beat 1003.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 448 --- beat 1006.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 449 --- beat 1009.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 450 --- beat 1012.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 451 --- beat 1015.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 452 --- beat 1018.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 453 --- beat 1021.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 454 --- beat 1024.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 455 --- beat 1027.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 456 --- beat 1030.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 457 --- beat 1033.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 458 --- beat 1036.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 459 --- beat 1039.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 460 --- beat 1042.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 461 --- beat 1045.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 462 --- beat 1048.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 463 --- beat 1051.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 464 --- beat 1054.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 465 --- beat 1057.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 466 --- beat 1060.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 467 --- beat 1063.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 468 --- beat 1066.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 469 --- beat 1069.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 470 --- beat 1072.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 471 --- beat 1075.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 472 --- beat 1078.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 473 --- beat 1081.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 474 --- beat 1084.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 475 --- beat 1087.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 476 --- beat 1090.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 477 --- beat 1093.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 478 --- beat 1096.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 479 --- beat 1099.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 480 --- beat 1102.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 481 --- beat 1105.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 482 --- beat 1108.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 483 --- beat 1111.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 484 --- beat 1114.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 485 --- beat 1117.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 486 --- beat 1120.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 487 --- beat 1123.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 488 --- beat 1126.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 489 --- beat 1129.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 490 --- beat 1132.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 491 --- beat 1135.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 492 --- beat 1138.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 493 --- beat 1141.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 494 --- beat 1144.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 495 --- beat 1147.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 496 --- beat 1150.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 497 --- beat 1153.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 498 --- beat 1156.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 499 --- beat 1159.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 500 --- beat 1162.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 501 --- beat 1165.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 502 --- beat 1168.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 503 --- beat 1171.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 504 --- beat 1174.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 505 --- beat 1177.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 506 --- beat 1180.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 507 --- beat 1183.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 508 --- beat 1186.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 509 --- beat 1189.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 510 --- beat 1192.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 511 --- beat 1195.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 512 --- beat 1198.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 513 --- beat 1201.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 514 --- beat 1204.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 515 --- beat 1207.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 516 --- beat 1210.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 517 --- beat 1213.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 518 --- beat 1216.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 519 --- beat 1219.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 520 --- beat 1222.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 521 --- beat 1225.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 522 --- beat 1228.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 523 --- beat 1231.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 524 --- beat 1234.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 525 --- beat 1237.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 526 --- beat 1240.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 527 --- beat 1243.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 528 --- beat 1246.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 529 --- beat 1249.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 530 --- beat 1252.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 531 --- beat 1255.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 532 --- beat 1258.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 533 --- beat 1261.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 534 --- beat 1264.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 535 --- beat 1267.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 536 --- beat 1270.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 537 --- beat 1273.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 538 --- beat 1276.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 539 --- beat 1279.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 540 --- beat 1282.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 541 --- beat 1285.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 542 --- beat 1288.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 543 --- beat 1291.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 544 --- beat 1294.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 545 --- beat 1297.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 546 --- beat 1300.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 547 --- beat 1303.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 548 --- beat 1306.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 549 --- beat 1309.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 550 --- beat 1312.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 551 --- beat 1315.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 552 --- beat 1318.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 553 --- beat 1321.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 554 --- beat 1324.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 555 --- beat 1327.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 556 --- beat 1330.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 557 --- beat 1333.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 558 --- beat 1336.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 559 --- beat 1339.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 560 --- beat 1342.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 561 --- beat 1345.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 562 --- beat 1348.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 563 --- beat 1351.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 564 --- beat 1354.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 565 --- beat 1357.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 566 --- beat 1360.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 567 --- beat 1363.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 568 --- beat 1366.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 569 --- beat 1369.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 570 --- beat 1372.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 571 --- beat 1375.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 572 --- beat 1378.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 573 --- beat 1381.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 574 --- beat 1384.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 575 --- beat 1387.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 576 --- beat 1390.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 577 --- beat 1393.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 578 --- beat 1396.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 579 --- beat 1399.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 580 --- beat 1402.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 581 --- beat 1405.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 582 --- beat 1408.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 583 --- beat 1411.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 584 --- beat 1414.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 585 --- beat 1417.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 586 --- beat 1420.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 587 --- beat 1423.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 588 --- beat 1426.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 589 --- beat 1429.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 590 --- beat 1432.8 --- time signature 3/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 591 --- beat 1435.8 --- time signature 2/4
+
+BPM 118
+NOTE 0 0 ; empty measure
+
+; ----------- measure 592 --- beat 1437.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 593 --- beat 1439.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 594 --- beat 1441.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 595 --- beat 1443.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 596 --- beat 1445.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 597 --- beat 1447.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 598 --- beat 1449.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 599 --- beat 1451.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 600 --- beat 1453.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 601 --- beat 1455.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 602 --- beat 1457.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 603 --- beat 1459.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 604 --- beat 1461.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 605 --- beat 1463.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 606 --- beat 1465.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 607 --- beat 1467.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 608 --- beat 1469.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 609 --- beat 1471.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 610 --- beat 1473.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 611 --- beat 1475.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 612 --- beat 1477.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 613 --- beat 1479.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 614 --- beat 1481.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 615 --- beat 1483.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 616 --- beat 1485.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 617 --- beat 1487.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 618 --- beat 1489.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 619 --- beat 1491.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 620 --- beat 1493.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 621 --- beat 1495.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 622 --- beat 1497.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 623 --- beat 1499.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 624 --- beat 1501.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 625 --- beat 1503.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 626 --- beat 1505.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 627 --- beat 1507.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 628 --- beat 1509.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 629 --- beat 1511.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 630 --- beat 1513.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 631 --- beat 1515.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 632 --- beat 1517.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 633 --- beat 1519.8 --- time signature 2/4
+
+BPM 151
+NOTE 0 0 ; empty measure
+
+; ----------- measure 634 --- beat 1521.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 635 --- beat 1523.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 636 --- beat 1525.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 637 --- beat 1527.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 638 --- beat 1529.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 639 --- beat 1531.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 640 --- beat 1533.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 641 --- beat 1535.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 642 --- beat 1537.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 643 --- beat 1539.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 644 --- beat 1541.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 645 --- beat 1543.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 646 --- beat 1545.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 647 --- beat 1547.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 648 --- beat 1549.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 649 --- beat 1551.8 --- time signature 2/4
+
+NOTE 0 0 ; empty measure
+
+; ----------- measure 650 --- beat 1553.8 --- time signature 2/4
+

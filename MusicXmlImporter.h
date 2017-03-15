@@ -34,16 +34,18 @@ namespace antescofo
         MusicXmlImporter( ImporterWrapper& wrapper );
         virtual ~MusicXmlImporter();
         
-        virtual bool import();
-        virtual bool import( const std::vector<int>& tracks );
-        virtual void clear();
-        virtual bool queryTracks( std::vector<std::string>& tracks );
+        bool import() override;
+        bool import( const std::vector<int>& tracks ) override;
+        void clear() override;
+        bool queryTracks( std::vector<std::string>& tracks ) override;
+        bool queryScoreInfo() override;
         
     private:
+        bool  retrieveScoreInfo( TiXmlNode* node );
         bool  openDocument( TiXmlDocument& musicXML );
         void  processMeasure( TiXmlNode* node );
         void  processDirection( TiXmlNode* node );
-        void  processTempo( TiXmlNode* node );
+        bool  processTempo( TiXmlNode* node );
         float processNote( TiXmlNode* node );
         float processTimeSignature( TiXmlNode* node, std::string& timeSignature );
         int   getMidiCents( const char diatonic, int octave, float accidental ) const;
@@ -53,7 +55,7 @@ namespace antescofo
         ImportModel&     model_;
         std::vector<int> tracks_;
         bool             compressedXML_;
-        int              currentMeasure_;
+        float            currentMeasure_;       //can be fractional: 0.5 means pickup to meas 1, 14.5 is pickup to meas 15 etc.
         std::string      currentTimeSignature_;
         int              currentKeyAccidentals_; // -2 -> 2 flats, +3 -> 3 sharps etc.
         int              currentVoice_;
@@ -62,10 +64,13 @@ namespace antescofo
         float            currentMeasureDuration_;
         float            accumGlobal_;
         float            accumLocal_;
+        int              currentChromaticTransposition_;
+        int              currentDiatonicTransposition_;
         int              currentDivision_;
         int              currentRepeatNoteAmount_;
         float            currentQuarterNoteTempo_;
         float            currentMetricFactor_;
+        float            currentIntMetricFactor_;
         float            currentOriginalBeats_;
         float            currentOriginalBase_;
         float            previousDuration_;     //a safeguard for Sibelius xml export bug...

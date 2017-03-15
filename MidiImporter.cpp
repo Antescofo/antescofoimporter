@@ -19,39 +19,16 @@
 #include "Measure.h"
 #include "BeatPerMinute.h"
 #include "Event.h"
+#include "Pitch.h"
+#include "ActionGroup.h"
+#include "MidiNoteAction.h"
+#include "MIDIDefines.h"
 #include <math.h>
 #include <iostream>
+#include <algorithm>
 
 using namespace antescofo;
 using namespace std;
-
-enum
-{
-    MIDI_HEADER = 'MThd',
-    MIDI_TRACK = 'MTrk'
-};
-
-enum
-{
-    MIDI_NOTE_OFF               = 0x8,
-    MIDI_NOTE_ON                = 0x9,
-    MIDI_NOTE_AFTERTOUCH        = 0xA,
-    MIDI_NOTE_CONTROL_CHANGE    = 0xB,
-    MIDI_NOTE_PROGRAM_CHANGE    = 0xC,
-    MIDI_NOTE_PRESSURE          = 0xD,
-    MIDI_NOTE_PROGRAM_PITCHBEND = 0xE
-};
-
-enum
-{
-    MIDI_META_TRACKNAME     = 0x03,
-    MIDI_META_ENDOFTRACK    = 0x2F,
-    MIDI_META_TEMPO         = 0x51,
-    MIDI_META_TIMESIGNATURE = 0x58,
-    MIDI_META_KEYSIGNATURE  = 0x59
-};
-
-#define MIDI_MAX_SIZE 10000000
 
 MidiImporter::MidiImporter( ImporterWrapper& wrapper ) :
     wrapper_                ( wrapper ),
@@ -63,10 +40,13 @@ MidiImporter::MidiImporter( ImporterWrapper& wrapper ) :
     runningStatus_          ( 0 ),
     accumGlobal_            ( 0 ),
     lastNoteOff_            ( 0 ),
+    lastNoteOn_             ( -1 ),
+    restruckNote_           ( -1 ),
     currentMeasure_         ( 0 ),
     currentMeasureDuration_ ( 0 ),
     currentMeasureStart_    ( 0 ),
     newMeasureDuration_     ( 0 ),
+    newTimeSignatureMeasure_( 0 ),
     currentQuarterNoteTempo_( 0.0 ),
     currentMetricFactor_    ( 1.0 )
 {
@@ -89,27 +69,35 @@ bool MidiImporter::import()
         return false;
     int processedCount = 0;
     bool trackSelection = ( tracks_.size() > 0 );
-    for ( unsigned short t = 1; t <= tracksCount_; ++t )
+    for ( int t = 1; t <= tracksCount_; ++t )
     {
         if ( trackSelection && processedCount == tracks_.size() )
             break;
-        if ( !trackSelection || ( tracks_.size() && find( tracks_.begin(), tracks_.end(), t - 1 ) != tracks_.end() ) )
+        if ( !trackSelection || ( tracks_.size() && find( tracks_.begin(), tracks_.end(), t ) != tracks_.end() ) )
         {
-            if ( wrapper_.isVerbose() )
-                cout << "  processing track " << (t - 1) << endl;
+            cout << endl << "    processing track " << t << "...";
             if ( !processTrack( rawContent ) )
             {
-                cout << "  MIDI error processing track " << t << " ;-(" << endl;
+                cout << endl << "  MIDI error processing track " << t << " ;-(" << endl;
                 return false;
             }
             ++processedCount;
+        }
+        else if ( tracks_.size() && find( tracks_.begin(), tracks_.end(), -t ) != tracks_.end() )
+        {
+            cout << endl << "    processing playback track " << t << "...";
+            if ( !processTrackForActionGroup( rawContent, -t ) )
+            {
+                cout << endl << "  MIDI error processing playback track " << -t << " ;-(" << endl;
+                return false;
+            }
         }
         else    //processing the track without updating the model
         {
             string dummy;
             if ( !processTrackForName( rawContent, dummy) )
             {
-                cout << "  MIDI error skipping track " << t << " ;-(" << endl;
+                cout << endl << "  MIDI error skipping track " << t << " ;-(" << endl;
                 return false;
             }
         }
@@ -138,25 +126,37 @@ bool MidiImporter::queryTracks( std::vector<std::string>& tracks )
     string name;
     for ( unsigned short t = 1; t <= tracksCount_; ++t )
     {
-        if ( !tracks_.size() || ( tracks_.size() && find( tracks_.begin(), tracks_.end(), t - 1 ) != tracks_.end() ) )
+        if ( !processTrackForName( rawContent, name ) )
         {
-            if ( !processTrackForName( rawContent, name ) )
-            {
-                cout << "  MIDI error processing track " << t << " ;-(" << endl;
-                return false;
-            }
-            tracks.push_back( name );
-            if ( wrapper_.isVerbose() )
-            {
-                cout << "    ...track #" << ( t - 1 ) << endl;
-            }
+            cout << "  MIDI error processing track " << t << " ;-(" << endl;
+            return false;
+        }
+        tracks.push_back( name );
+        if ( wrapper_.isVerbose() )
+        {
+            cout << "    ...track #" << t << endl;
         }
     }
     return true;
 }
 
+bool MidiImporter::queryScoreInfo()
+{
+    clear();
+    ifstream rawContent;
+    rawContent.open( wrapper_.getInputPath(), ifstream::in );
+    if ( rawContent.fail() )
+        return false;
+    return processHeader( rawContent );
+}
+
 bool MidiImporter::processTrackForName( ifstream& stream, string& name )
 {
+    bool success = false;
+    bool soundFound = false;
+    bool hasTimeSignature = false;
+    bool hasTempo = false;
+    bool hasNotes = false;
     name.clear();
     unsigned int fourBytes = 0;
     if (  readFourbyte( stream, fourBytes ) && fourBytes == MIDI_TRACK )
@@ -167,30 +167,31 @@ bool MidiImporter::processTrackForName( ifstream& stream, string& name )
             while ( true )
             {
                 unsigned long delta = 0;
-                short read = readTimeStamp( stream, delta );
+                short read = readVariableLengthQuantity( stream, delta );
                 if ( read == 0 )
-                    return false;
+                    break;
                 unsigned char value = 0;
                 if ( !readOnebyte( stream, value ) )
-                    return false;
+                    break;
                 if ( value == 0xFF )    //meta event
                 {
                     unsigned char meta = 0;
                     if ( !readOnebyte( stream, meta ) )
-                        return false;
+                        break;
                     if ( meta == MIDI_META_ENDOFTRACK )
                     {
                         readOnebyte( stream, value );
-                        return true;
+                        success = true;
+                        break;
                     }
-                    unsigned char metaSize = 0;
-                    if ( !readOnebyte( stream, metaSize ) )
+                    unsigned long metaSize = 0;
+                    if ( readVariableLengthQuantity( stream, metaSize ) == 0 )
                         return false;
                     if ( meta == MIDI_META_TRACKNAME && !name.length() )
                     {
                         char tmp [2];
                         tmp[0] = tmp[1] = 0;
-                        for ( int c = 0; c < metaSize; ++c )
+                        for ( unsigned long c = 0; c < metaSize; ++c )
                         {
                             readOnebyte( stream, value );
                             tmp[0] = (char) value;
@@ -198,8 +199,16 @@ bool MidiImporter::processTrackForName( ifstream& stream, string& name )
                         }
                         continue;
                     }
+                    else if ( meta == MIDI_META_TEMPO && metaSize == 3 )
+                    {
+                        hasTempo = true;
+                    }
+                    else if ( meta == MIDI_META_TIMESIGNATURE && metaSize == 4 )
+                    {
+                        hasTimeSignature = true;
+                    }
                     
-                    for ( unsigned char j = 0; j < metaSize; ++j )
+                    for ( unsigned long j = 0; j < metaSize; ++j )
                     {
                         readOnebyte( stream, value );
                     }
@@ -207,6 +216,7 @@ bool MidiImporter::processTrackForName( ifstream& stream, string& name )
                 }
                 unsigned char status = 0;
                 unsigned char next = 0;
+                unsigned char current = value;
                 if ( value < 0x80 ) //running status
                 {
                     next = value;
@@ -216,7 +226,7 @@ bool MidiImporter::processTrackForName( ifstream& stream, string& name )
                 {
                     status = ( value & 0xF0 ) >> 4;
                     if ( !readOnebyte( stream, next ) )
-                        return false;
+                        break;
                 }
                 runningStatus_ = status;
                 
@@ -224,20 +234,52 @@ bool MidiImporter::processTrackForName( ifstream& stream, string& name )
                 {
                     unsigned char velocity = 0;
                     if ( !readOnebyte( stream, velocity ) )
-                        return false;
+                        break;
+                    hasNotes = true;
                 }
                 else if ( status == MIDI_NOTE_CONTROL_CHANGE ||
                          status == MIDI_NOTE_PROGRAM_PITCHBEND ||
                          status == MIDI_NOTE_AFTERTOUCH)
                 {
                     if ( !readOnebyte( stream, value ) )
-                        return false;
+                        break;
+                }
+                else if ( !soundFound && status == MIDI_NOTE_PROGRAM_CHANGE )
+                {
+                    int p = (int) next;
+                    int channel = (int) (current&0x0F);
+                    //cout << "  (::queryTracks) prog change: p=" << (int) p << " (" << GMSoundSet[p] << ")" << " cc=" << channel << endl;
+                    name += " [GM sound: ";
+                    name += GMSoundSet[p];
+                    name += ", channel: ";
+                    name += to_string( channel );
+                    name += "]";
+                    soundFound = true;
                 }
             }
         }
-        return true;
+        //return true;
     }
-    return false;
+    if ( success && !hasNotes )
+    {
+        if ( name.length() )
+            name += " ";
+        name += "[";
+        if ( !hasTempo && !hasTimeSignature )
+            name += "display only...";
+        if ( hasTempo )
+        {
+            name += "tempos";
+        }
+        if ( hasTimeSignature )
+        {
+            if ( hasTempo )
+                name += ", ";
+            name += "time signatures";
+        }
+        name += "]";
+    }
+    return success;
 }
 
 bool MidiImporter::processHeader( ifstream& stream )
@@ -311,8 +353,7 @@ bool MidiImporter::processTrack( ifstream& stream )
             while ( true )
             {
                 unsigned long delta = 0;
-                short read = readTimeStamp( stream, delta );
-                if ( read == 0 )
+                if ( readVariableLengthQuantity( stream, delta ) == 0 )
                     return false;
                 unsigned char value = 0;
                 if ( !readOnebyte( stream, value ) )
@@ -323,8 +364,8 @@ bool MidiImporter::processTrack( ifstream& stream )
                     if ( !readOnebyte( stream, meta ) )
                         return false;
                     
-                    unsigned char metaSize = 0;
-                    if ( !readOnebyte( stream, metaSize ) )
+                    unsigned long metaSize = 0;
+                    if ( readVariableLengthQuantity( stream, metaSize ) == 0 )
                         return false;
                     if ( meta == MIDI_META_ENDOFTRACK )
                     {
@@ -354,13 +395,13 @@ bool MidiImporter::processTrack( ifstream& stream )
                         continue;
                     }
                     
-                    for ( unsigned char j = 0; j < metaSize; ++j )
+                    for ( unsigned long j = 0; j < metaSize; ++j )
                     {
                         readOnebyte( stream, value );
                     }
                     accumGlobal_ += delta;
                     if ( wrapper_.isVerbose() )
-                        cout << "  meta-event " << (int) meta << ", size=" << (int) metaSize << endl;
+                        cout << "  meta-event " << (int) meta << ", size=" << metaSize << endl;
                     continue;
                 }
                 stampMeasure( delta );
@@ -391,11 +432,11 @@ bool MidiImporter::processTrack( ifstream& stream )
                           status == MIDI_NOTE_PROGRAM_PITCHBEND ||
                           status == MIDI_NOTE_AFTERTOUCH)
                 {
-                    unsigned char cc = next;
                     if ( !readOnebyte( stream, value ) )
                         return false;
-                    if ( wrapper_.isVerbose() )
-                        cout << "  cc: time=" << delta << " cc=" << cc << " value=" << value << endl;
+                    //unsigned char cc = next;
+                    //if ( wrapper_.isVerbose() )
+                    //    cout << "  cc: time=" << delta << " cc=" << cc << " value=" << value << endl;
                     accumGlobal_ += delta;
                 }
                 else if ( status == MIDI_NOTE_PROGRAM_CHANGE ||
@@ -413,22 +454,117 @@ bool MidiImporter::processTrack( ifstream& stream )
     return false;
 }
 
+bool MidiImporter::processTrackForActionGroup( ifstream& stream, int trackIndex )
+{
+    bool success = false;
+    int GMsound = -1;
+    unsigned int fourBytes = 0;
+    string label = "playback_track_" + to_string( abs( trackIndex ) );
+    ActionGroup* actionGroup = new ActionGroup( label );
+    MidiNoteAction noteAction;
+    if (  readFourbyte( stream, fourBytes ) && fourBytes == MIDI_TRACK )
+    {
+        unsigned int size = 0;
+        if ( readFourbyte( stream, size ) )
+        {
+            while ( true )
+            {
+                unsigned long delta = 0;
+                short read = readVariableLengthQuantity( stream, delta );
+                if ( read == 0 )
+                    break;
+                unsigned char value = 0;
+                if ( !readOnebyte( stream, value ) )
+                    break;
+                if ( value == 0xFF )    //meta event
+                {
+                    unsigned char meta = 0;
+                    if ( !readOnebyte( stream, meta ) )
+                        break;
+                    if ( meta == MIDI_META_ENDOFTRACK )
+                    {
+                        readOnebyte( stream, value );
+                        success = true;
+                        break;
+                    }
+                    unsigned long metaSize = 0;
+                    if ( readVariableLengthQuantity( stream, metaSize ) == 0 )
+                        return false;
+                    for ( unsigned long j = 0; j < metaSize; ++j )
+                    {
+                        readOnebyte( stream, value );
+                    }
+                    continue;
+                }
+                unsigned char status = 0;
+                unsigned char next = 0;
+                unsigned char current = value;
+                if ( value < 0x80 ) //running status
+                {
+                    next = value;
+                    status = runningStatus_;
+                }
+                else
+                {
+                    status = ( value & 0xF0 ) >> 4;
+                    if ( !readOnebyte( stream, next ) )
+                        break;
+                }
+                runningStatus_ = status;
+                
+                if ( status == MIDI_NOTE_ON || status == MIDI_NOTE_OFF )
+                {
+                    unsigned char velocity = 0;
+                    if ( !readOnebyte( stream, velocity ) )
+                        break;
+                    int channel = (int) (current&0x0F);
+                    noteAction.clear();
+                    noteAction.channel_ = channel;
+                    noteAction.velocity_ = velocity;
+                    noteAction.delay_ = (float) delta/quarterNoteDivision_;
+                    noteAction.note_ = (int) next;
+                    actionGroup->appendMidiNote( noteAction );
+                }
+                else if ( status == MIDI_NOTE_CONTROL_CHANGE ||
+                         status == MIDI_NOTE_PROGRAM_PITCHBEND ||
+                         status == MIDI_NOTE_AFTERTOUCH)
+                {
+                    if ( !readOnebyte( stream, value ) )
+                        break;
+                }
+                else if ( GMsound == -1 && status == MIDI_NOTE_PROGRAM_CHANGE )
+                {
+                    GMsound = (int) next;
+                }
+            }
+        }
+    }
+    if ( success )
+    {
+        actionGroup->setGMpatch( GMsound );
+        model_.insertFirstEventInMeasure( actionGroup );
+    }
+    return success;
+}
+
 long MidiImporter::handleNote( long delta, short noteIndex, bool isOn )
 {
+    long unquantified = delta;
     delta = quantify( delta );
     
-    if ( wrapper_.isVerbose() )
-        cout << "  note=" << noteIndex << " at delta time=" << accumGlobal_ << " on/off=" << (int)isOn << endl;
+    //if ( wrapper_.isVerbose() )
+    //    cout << "  note=" << noteIndex << " at delta time=" << accumGlobal_ << " on/off=" << (int)isOn << endl;
     if ( isOn )      //NOTEON
     {
         if ( midiNotes_[noteIndex] == -1 )
         {
             long forwardPoint = accumGlobal_ + delta;
-            long silence = quantify( forwardPoint - lastNoteOff_ );
+            long silence = forwardPoint - lastNoteOff_;
             int measure = currentMeasure_;
             long measureStart = currentMeasureStart_;
             long measureLength = 0;
-            while ( silence > 0 && onCount_ == 0 /*&& lastNoteOn_ != -1*/ )
+            Pitch rest ( 0, MidiNote);
+            while ( silence > 0 && onCount_ == 0 )
             {
                 const Event* specs = model_.findMeasure( measure );
                 if ( specs )
@@ -445,17 +581,19 @@ long MidiImporter::handleNote( long delta, short noteIndex, bool isOn )
                 }
                 length = quantify( length );
                 if ( length > 0 )
+                {
+                    rest.setFeatures( MidiNote );
                     model_.addNote( measure,
-                                   (float)(start - measureStart)/quarterNoteDivision_,
-                                   (float)length/quarterNoteDivision_,
-                                   0,
-                                   MidiNote ); //creating rest
+                                    (float)(start - measureStart)/quarterNoteDivision_,
+                                    (float)length/quarterNoteDivision_,
+                                    rest ); //creating rest
+                }
                 silence -= length;
                 --measure;
                 measureStart -= measureLength;
                 forwardPoint -= length;
             }
-            setMidiNote( noteIndex, accumGlobal_ + delta );
+            setMidiNote( noteIndex, accumGlobal_ + unquantified );
             if ( lastNoteOn_ != noteIndex )
             {
                 lastNoteOn_ = noteIndex;
@@ -467,40 +605,36 @@ long MidiImporter::handleNote( long delta, short noteIndex, bool isOn )
         if ( midiNotes_[noteIndex] != -1 )
         {
             float noteOn = midiNotes_[noteIndex];
-            long duration = accumGlobal_ + delta - noteOn;
+            long duration = accumGlobal_ + unquantified - noteOn;
+            duration = quantify( duration );
             int measure = currentMeasure_;
             long measureStart = currentMeasureStart_;
-            int sign = 1;
+            Pitch note ( 0, MidiNote );
             while ( duration > 0 )
             {
                 long start = noteOn;
                 long length = duration;
                 float diff = fabs( (float)(measureStart - noteOn)/quarterNoteDivision_ );
+                EntryFeatures features = MidiNote;
                 if ( noteOn < measureStart )
                 {
                     start = measureStart;
-                    if ( diff > ALPHA )
+                    if ( diff > EPSILON_MIDI )
                     {
-                        sign = -1;
+                        features |= Tiedbackwards;
                         length = noteOn + duration - start;
                     }
-                    else
-                    {
-                        sign = 1;
-                    }
-                }
-                else
-                {
-                    sign = 1;
                 }
                 
-                if ( (float) length/quarterNoteDivision_ > ALPHA )
+                if ( (float) length/quarterNoteDivision_ > EPSILON_MIDI )
                 {
-                    model_.addNote( measure,
-                                   (float)(start - measureStart)/quarterNoteDivision_,
-                                   (float)length/quarterNoteDivision_,
-                                   noteIndex * 100 * sign,
-                                   MidiNote ); //creating tied notes
+                    note.setMidiCents( noteIndex * 100 );
+                    note.setFeatures( features );
+                    if ( length > 0 )
+                        model_.addNote( measure,
+                                        (float)(start - measureStart)/quarterNoteDivision_,
+                                        (float)length/quarterNoteDivision_,
+                                        note ); //creating tied notes
                 }
                 duration -= length;
                 --measure;
@@ -513,16 +647,29 @@ long MidiImporter::handleNote( long delta, short noteIndex, bool isOn )
                 else break;
             }
             setMidiNote( noteIndex, -1 );
-            lastNoteOff_ = accumGlobal_ + delta;
+            lastNoteOff_ = accumGlobal_ + unquantified;
         }
     }
-    return delta;
+    return unquantified;
+    //return delta;
 }
 
 long MidiImporter::quantify( long time ) const
 {
+    long base2 = quarterNoteDivision_/16;
+    long base3 = quarterNoteDivision_/6;
+    long t2 = round( (float) time/base2)*base2;
+    long t3 = round( (float) time/base3)*base3;
+    if ( t2 != time || t3 != time )
+    {
+        if ( abs( t2 - time) < abs( t3 - time))
+            time = t2;
+        else
+            time = t3;
+    }
+    return time;
+    /*
     float quantified = time;
-    
     for ( int i = 1; i <= 24; ++i )
     {
         if ( fabs( round( (float)time*i/quarterNoteDivision_ ) - (float) time*i/quarterNoteDivision_ ) < EPSILON*(1+i*0.2) )
@@ -533,6 +680,7 @@ long MidiImporter::quantify( long time ) const
     }
     
     return (long) quantified;
+    */
 }
 
 
@@ -553,28 +701,10 @@ void MidiImporter::handleTempo( long time, long microseconds )
 {
     accumGlobal_ += time;
     float BPM = roundf( (float) 60000000 / microseconds );
-    if ( wrapper_.isVerbose() )
-        cout << "  tempo=" << BPM << " BPM at time=" << accumGlobal_ << endl;
+    //if ( wrapper_.isVerbose() )
+    //    cout << "  tempo=" << BPM << " BPM at time=" << accumGlobal_ << endl;
     
     model_.insertOrReplaceEvent( new BeatPerMinute( currentMeasure_, (accumGlobal_ - currentMeasureStart_)/quarterNoteDivision_, BPM * currentMetricFactor_ ) );
-    /*
-    float factor = currentMetricFactor_;
-    if ( currentQuarterNoteTempo_ != 0.0 && ( upper.size() == lower.size() == 1 ) && upper[0]%3 == 0 )
-    {
-        if ( lower[0] == 8 )
-            currentMetricFactor_ = (float) 2/3 ;
-        else if ( lower[0] == 16 )
-            currentMetricFactor_ = (float) 4/3;
-        else if ( lower[0] == 32 )
-            currentMetricFactor_ = (float) 8/3;
-    }
-    else
-        currentMetricFactor_ = 1.0;
-    if ( factor != currentMetricFactor_ )
-    {
-        model_.insertOrReplaceEvent( new BeatPerMinute( currentMeasure_, currentQuarterNoteTempo_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_ ) );
-    }
-     */
 }
 
 void MidiImporter::handleTimeSignature( long delta, short upper, short lower )
@@ -582,15 +712,18 @@ void MidiImporter::handleTimeSignature( long delta, short upper, short lower )
     string timeSignature = to_string( upper ) + "/" + to_string( lower );
     if ( wrapper_.isVerbose() )
         cout << "  time signature=" << timeSignature.c_str() << " at time=" << accumGlobal_ << endl;
-    currentTimeSignature_ = timeSignature;
+    newTimeSignature_ = timeSignature;
     newMeasureDuration_ = upper * quarterNoteDivision_ * 4 / lower;
     if ( currentMeasureDuration_ == 0 )
         currentMeasureDuration_ = newMeasureDuration_;
     
     int m = currentMeasure_;
-    if ( m > 0 && accumGlobal_ + delta >= currentMeasureStart_+currentMeasureDuration_ )
+    if ( currentMeasureDuration_ > 0 )
+        m += ((accumGlobal_+ delta) - currentMeasureStart_)/currentMeasureDuration_;
+    if ( m == 0 )
         ++m;
     Event* measure =  model_.findMeasure( m );
+    newTimeSignatureMeasure_ = m;
     if ( measure )
     {
         measure->changeDuration( newMeasureDuration_/quarterNoteDivision_ );
@@ -614,11 +747,18 @@ void MidiImporter::stampMeasure( long delta )
             const Event* measure =  model_.findMeasure( currentMeasure_ );
             if ( measure == nullptr )
             {
-                model_.insertFirstEventInMeasure( new Measure( currentMeasure_,
-                                                              (float) newMeasureDuration_/quarterNoteDivision_,
+                long measureDuration = currentMeasureDuration_;
+                string timeSignature = currentTimeSignature_;
+                if ( currentMeasure_ >= newTimeSignatureMeasure_ )
+                {
+                    measureDuration = newMeasureDuration_;
+                    timeSignature = newTimeSignature_;
+                }
+                model_.insertFirstEventInMeasure( new Measure( ( float ) currentMeasure_,
+                                                              (float) measureDuration/quarterNoteDivision_,
                                                               (float) currentMeasureStart_/quarterNoteDivision_,
                                                               1.0,
-                                                              currentTimeSignature_ ) );
+                                                              timeSignature ) );
             }
             else
             {
@@ -628,6 +768,7 @@ void MidiImporter::stampMeasure( long delta )
         }
     }
     currentMeasureDuration_ = newMeasureDuration_;
+    currentTimeSignature_ = newTimeSignature_;
 }
 
 void MidiImporter::clear()
@@ -638,7 +779,10 @@ void MidiImporter::clear()
     clearForTrack();
     currentMeasureDuration_ = 0;
     newMeasureDuration_ = 0;
+    newTimeSignatureMeasure_ = 0;
+    newTimeSignatureMeasure_ = 0;
     currentTimeSignature_ = "";
+    newTimeSignature_ = "";
 }
 
 void MidiImporter::clearForTrack()
@@ -647,8 +791,10 @@ void MidiImporter::clearForTrack()
     accumGlobal_ = 0;
     lastNoteOff_ = 0;
     lastNoteOn_ = -1;
+    restruckNote_ = -1;
     currentMeasure_ = 0;
     newMeasureDuration_ = 4*quarterNoteDivision_;
+    newTimeSignatureMeasure_ = 0;
     currentMeasureDuration_ = 0;
     currentMeasureStart_ = 0;
     for ( int i = 0; i < 128; ++i )
@@ -656,26 +802,26 @@ void MidiImporter::clearForTrack()
     onCount_ = 0;
 }
 
-short MidiImporter::readTimeStamp( ifstream& stream, unsigned long& time ) const
+short MidiImporter::readVariableLengthQuantity( ifstream& stream, unsigned long& time ) const
 {
-    short read = 0;
+    short readCount = 0;
     unsigned char byte = 0;
     if ( readOnebyte( stream, byte ) )
     {
         time = byte;
-        ++read;
+        ++readCount;
         if ( time & 0x80 )
         {
             time &= 0x7F;
             do
             {
                 time = (time << 7) + ( ( byte = stream.get() ) & 0x7F);
-                ++read;
+                ++readCount;
             }
             while ( byte & 0x80 );
         }
     }
-    return read;
+    return readCount;
 }
 
 bool MidiImporter::readFourbyte( ifstream& stream, unsigned int& value ) const

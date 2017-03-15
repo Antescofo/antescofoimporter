@@ -32,6 +32,7 @@ namespace antescofo
         virtual bool import( const std::vector<int>& tracks ) = 0;
         virtual void clear() = 0;
         virtual bool queryTracks( std::vector<std::string>& tracks ) = 0;
+        virtual bool queryScoreInfo() = 0;
     };
 }
 

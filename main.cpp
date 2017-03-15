@@ -17,11 +17,14 @@
 #include <string.h>
 #include "ImporterWrapper.h"
 #include <time.h>
+#ifdef __APPLE__
 #include <mach/clock.h>
 #include <mach/mach.h>
+#endif
 #include <sys/timeb.h>
 #include <sys/stat.h>
 #include <iostream>
+#include <memory>
 
 using namespace std;
 using namespace antescofo;
@@ -29,6 +32,7 @@ using namespace antescofo;
 static long long nanoseconds()
 {
     struct timespec now;
+#ifdef __APPLE__
     clock_serv_t cclock;
     mach_timespec_t mts;
     host_get_clock_service(mach_host_self(), CALENDAR_CLOCK, &cclock);
@@ -36,6 +40,9 @@ static long long nanoseconds()
     mach_port_deallocate(mach_task_self(), cclock);
     now.tv_sec = mts.tv_sec;
     now.tv_nsec = mts.tv_nsec;
+#elif defined __linux__
+    clock_gettime( CLOCK_REALTIME, &now );
+#endif
     return (float) now.tv_nsec + now.tv_sec*1.0e9;
 }
 
@@ -46,10 +53,17 @@ void displayHelp()
     cout << endl
          << "  Normal usage is to pass file path (MusicXML/MIDI) as parameter." << endl << "  Additional options:" << endl << endl
          << bright << "  -midicents" << normal << " displays pitches in cents (for instance C#4 -> 6100)" << endl
-        << bright << "  -quarternotetime" << normal << " sets tempos and note durations always relative to the quarter note." << endl
-        << bright << "  -querytracks" << normal << " displays the file’s available tracks/staves." << endl
-        << bright << "  -tracks=" << normal << "0,3,4,... restricts the import to some specific tracks/staves." << endl
-         << "   (even for compound times such as 6/8, etc.)" << endl
+         << bright << "  -quarternotetime" << normal << " sets tempos and note durations always relative to the quarter note" << endl
+         <<           "     (even for compound times such as 6/8, etc.)" << endl
+         << bright << "  -3/8compoundtime" << normal << " consider 3/8 time as compound" << endl
+         <<           "     (so as one-beat time, note that the 'quarternotetime' option must be off!)" << endl
+         << bright << "  -originalpitches" << normal << " shows pitches & accidentals as specified in the original score" << endl
+         <<           "     (otherwise Eb can show up as D# for instance)." << endl
+         << bright << "  -querytracks" << normal << " displays the file’s available tracks/staves." << endl
+         << bright << "  -tracks=" << normal << "1,4,5,... restricts the conversion to some specific tracks/staves." << endl
+         <<           "     (for MIDI files, negative number will mean 'playback track'," << endl
+         <<           "      thus converted as 'action group')." << endl
+         << bright << "  -outputdirectory" << normal << "=[path] for specific output directory." << endl
          << bright << "  -unittest" << normal << "=[folder path] will process unit tests (for internal use.)" << endl
          << bright << "  -verbose" << normal << " / -v for (too!) many details." << endl
          << bright << "  -help" << normal << " / -h displays these info." << endl
@@ -58,45 +72,21 @@ void displayHelp()
 
 int main( int argc, char **argv )
 {
-    char* filePath = nullptr;
-    char* unitaryTestFolderPath = nullptr;
-    string tracks;
-    bool displayMidiCents = false;
-    bool quarternotetime = false;
     int success = 0;
-    bool verbose = false;
-    bool queryTracks = false;
     
     cout << endl;
-    cout << "Antescofo musicXML and MIDI importer" << endl;
+    cout << "Antescofo musicXML and MIDI importer ~ designed by Robert Piéchaud for IRCAM" << endl;
     cout << "Command line utility" << endl;
-    cout << "Version 0.1.22" << endl;
+    cout << ImporterWrapper::getVersion() << endl;
     cout << "©2015 IRCAM" << endl;
-
-    for (int i = 1; i < argc; ++i)
+    
+    char* unitaryTestFolderPath = nullptr;
+    vector<string> arguments;
+    for ( int i = 1; i < argc; ++i )
     {
         if ( strncmp(argv[i], "-unittest=", 10 ) == 0 )
         {
             unitaryTestFolderPath = argv[i] + 10;
-            cout << "  Unit tests..." << endl;
-        }
-        else if ( strncmp(argv[i], "-midicents", 10 ) == 0 )
-        {
-            displayMidiCents = true;
-            cout << "  MIDI cents representation on..." << endl;
-        }
-        else if ( strncmp(argv[i], "-querytracks", 12 ) == 0 )
-        {
-            queryTracks = true;
-        }
-        else if ( strncmp(argv[i], "-tracks=", 8 ) == 0 )
-        {
-            tracks = argv[i] + 8;
-        }
-        else if ( strncmp(argv[i], "-quarternotetime", 16 ) == 0 )
-        {
-            quarternotetime = true;
-            cout << "  Quarter note division on..." << endl;
         }
         else if ( strncmp(argv[i], "-help", 5 ) == 0 || strncmp(argv[i], "-h", 2 ) == 0 || strncmp(argv[i], "--help", 6 ) == 0 )
         {
@@ -104,17 +94,13 @@ int main( int argc, char **argv )
             displayHelp();
             return 0;
         }
-        else if ( strncmp(argv[i], "-verbose", 8 ) == 0 || strncmp(argv[i], "-v", 2 ) == 0 )
-        {
-            verbose = true;
-        }
-        else
-        {
-            filePath = argv[i];
-        }
+        arguments.push_back( argv[i] );
     }
+    std::unique_ptr<ImporterWrapper> importer( new ImporterWrapper() );
+    int parseResult = importer->parseArguments( arguments );
+    string filePath = importer->getInputPath();
     std::string input;
-    if ( filePath == nullptr && !unitaryTestFolderPath )
+    if ( !parseResult )
     {
         displayHelp();
         std::cout << "Please enter the path (relative or absolute) to a MusicXML or MIDI file: " << std::endl << "> ";
@@ -122,26 +108,22 @@ int main( int argc, char **argv )
         if ( input.length() )
             filePath = (char *) input.c_str();
     }
-    ImporterWrapper* importer = new ImporterWrapper();
-    importer->setPitchesAsMidiCents( displayMidiCents );
-    importer->setVerbose( verbose );
+    
     char red [] = "\033[1;31m";
     char green [] = "\033[1;32m";
     char normal [] = "\033[0m";
-    if ( filePath != nullptr )
+    if ( filePath.length() )
     {
         cout << "  File passed: '" << filePath << "'" << endl;
-        string out ( filePath );
-        out = out.substr( 0, out.find_last_of( "." ) ) + ".asco.txt";
         long long t0 = nanoseconds();
-        if ( queryTracks )
+        if ( importer->trackListQuery() )
         {
-            vector<string> tracks;
-            if ( importer->queryTracks( filePath, tracks ) )
+            vector<string> trackList;
+            if ( importer->queryTracklist( trackList ) )
             {
-                cout << "There " << ( tracks.size() == 1? "is ": "are " ) << tracks.size() << " track" << ( tracks.size() == 1? "": "s" ) << " in this file:" << endl;
-                int count = 0;
-                for ( auto it = tracks.begin(); it != tracks.end(); ++it )
+                cout << "There " << ( trackList.size() == 1? "is ": "are " ) << trackList.size() << " track" << ( trackList.size() == 1? "": "s" ) << " in this file:" << endl;
+                int count = 1;
+                for ( auto it = trackList.begin(); it != trackList.end(); ++it )
                 {
                     cout << "(" << count << ")  " << *it << endl;
                     ++count;
@@ -156,15 +138,16 @@ int main( int argc, char **argv )
         else
         {
             bool imported = false;
+            string tracks = importer->rawTrackSelection();
             if ( tracks.length() )
             {
                 vector<int> trackList;
                 bool listOk = true;
                 for ( int i = 0; i < tracks.length(); ++i)
                 {
-                    if ( tracks[i] != ',' && !isdigit(tracks[i]))
+                    if ( tracks[i] != ',' && tracks[i] != '-' && !isdigit(tracks[i]))
                     {
-                        cout << "  Bad track list syntax (good example: -tracks=0,2,3)" << endl;
+                        cout << "  Bad track list syntax (good example: -tracks=1,3,4)" << endl;
                         listOk = false;
                         break;
                     }
@@ -192,10 +175,13 @@ int main( int argc, char **argv )
                 }
                 if ( trackList.size() )
                 {
-                    cout << "  Processing tracks: ";
-                    for ( int i = 0; i < trackList.size(); ++i )
-                        cout << trackList[i] << " ";
-                    cout << endl;
+                    if ( trackList.size() > 1 )
+                    {
+                        cout << "  Processing tracks: ";
+                        for ( int i = 0; i < trackList.size(); ++i )
+                            cout << abs( trackList[i] ) << " ";
+                        cout << endl;
+                    }
                     imported = importer->import( filePath, trackList );
                 }
             }
@@ -205,9 +191,9 @@ int main( int argc, char **argv )
             }
             if ( imported )
             {
-                if ( importer->save( out ) )
+                if ( importer->save() )
                 {
-                    cout << "  saved as '" << out << "'" << endl;
+                    cout << endl << "  saved as '" << importer->outputPath() << "'" << endl;
                     cout << green << "  Conversion to Antescofo successful! :-)" << normal << endl;
                 }
                 else
@@ -241,6 +227,5 @@ int main( int argc, char **argv )
         cout << red << "  Error: nothing could be processed!" << normal << endl;
     }
     cout << endl;
-    delete importer;
     return success;
 }

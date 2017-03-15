@@ -59,9 +59,10 @@ OBJS = $(OBJC) $(OBJA)
 
 all: libz.a
 
-libz.a: $(OBJS)
+libz.a: clean $(OBJS)
 	$(AR) $@ $(OBJS)
 	-@ ($(RANLIB) $@ || true) >/dev/null 2>&1
+	cp libz.a ../out/lib
 
 clean:
 	rm -f *.o *.lo *~ \

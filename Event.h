@@ -21,8 +21,10 @@
 #include <math.h>
 
 static const float EPSILON = 0.01;
-static const float THETA = 0.05;
-static const float ALPHA = 0.04;
+static const float EPSILON_MIDI = 0.0457;  //used for MIDI quantification: represents the difference between a 16th note (as part of a 6-uplet)
+                                    //and of regular 32nd note (we might add some customizable quantification precision in the future...)
+static const float THETA = 0.2;
+static const float THETA_MIDI = 0.095;
 
 namespace antescofo
 {
@@ -40,15 +42,17 @@ namespace antescofo
         Chord               = 0x00000080,
         GlissandoStart      = 0x00000100,
         GlissandoEnd        = 0x00000200,
+        MeasureRest         = 0x00000400,
         Harmonic            = 0x00001000,
         DoubleHarmonic      = 0x00002000,
         NaturalHarmonic     = 0x00004000,
         SquareNotehead      = 0x00008000,
         Fermata             = 0x00010000,
         Tiedbackwards       = 0x00100000,
-        Flat                = 0x00200000,
-        Sharp               = 0x00400000,
-        DisplayCents        = 0x00800000,
+        Transposed          = 0x00800000,
+        DisplayCents        = 0x01000000,
+        OriginalEnharmony   = 0x02000000,
+        GeneratedTempo      = 0x10000000,
         MidiNote            = 0x80000000
     };
     
@@ -60,7 +64,10 @@ namespace antescofo
         Event_BeatPerMinute,
         Event_RepeatBar,
         Event_RepeatEnding,
+        Action_ActionGroup
     };
+    
+    class Pitch;
     
     class Event
     {
@@ -80,35 +87,25 @@ namespace antescofo
         virtual void          changeStart( float newTime ) {}
         virtual void          changeDuration( float newTime ) {}
         virtual void          tiePitches() {}
-        virtual bool          addPitch( int midiCents, EntryFeatures feature ) { return false; }
-        virtual void          addSecondaryPitch( int midiCents, EntryFeatures feature ) {}
-        virtual EntryFeatures features() { return 0; }
+        virtual bool          addPitch( const Pitch& pitch ) { return false; }
+        virtual int           primaryPitchCount() const { return 0; }
+        virtual void          addSecondaryPitch( const Pitch& pitch ) {}
+        virtual EntryFeatures features() const { return 0; }
         virtual void          addFeatures( EntryFeatures feature ) {}
+        virtual void          removeFeatures( EntryFeatures feature ) {}
         virtual Event*        duplicate() const;
         
-        int  measure() const;
-        bool isFirstInMeasure() const;
-        void setFirstInMeasure( bool status );
+        float measure() const;
+        bool  isFirstInMeasure() const;
+        void  setFirstInMeasure( bool status );
         
     protected:
-        int     measure_;
+        bool isEqual( float t1, float t2 ) const;
+        
+    protected:
+        float   measure_;
         bool    isFirstInMeasure_;
     };
-}
-
-inline bool isEqual( float t1, float t2 )
-{
-    return fabs( t1 - t2 ) < EPSILON;
-}
-
-inline bool isAfter( float t1, float t2 )
-{
-    return ( t1 - t2 ) > EPSILON;
-}
-
-inline bool isBefore( float t1, float t2 )
-{
-    return ( t2 - t1 ) > EPSILON;
 }
 
 #endif // _ANTESCOFO_IMPORTER_EVENT_

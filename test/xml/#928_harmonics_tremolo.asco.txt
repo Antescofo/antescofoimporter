@@ -1,17 +1,17 @@
-; Antescofo score generated using native importer
+﻿; Antescofo score generated using native importer
 ; Copyright (c) IRCAM 2015
 ; Designed by Robert Piéchaud
 
 ; Original file: #928_harmonics_tremolo.xml
 ; exported from Sibelius 7.5.1 ~ Direct export, not from Dolet
 ; MusicXML version 3.0
-; Converted to Antescofo on Sat Jun 13 11:34:09 2015
+; Converted to Antescofo on Tue Oct  6 08:37:05 2015
 
 ; start
 
 ; ----------- measure 1 --- beat 0 --- time signature 4/4
 
-BPM 72 ; ( ← 𝅘𝅥 =72) 
+BPM 72
 NOTE 0 1 measure1
 NOTE A4 1/4
 NOTE C5 1/12
@@ -39,6 +39,6 @@ NOTE C7 1/4 ; harmonics
 NOTE G#6 1/12 ; harmonics
 TRILL (C7 G#6) 2 ; harmonics
 
-; ----------- measure 2 --- beat 4 --- time signature 4/4
+; ----------- measure 2 --- beat 7 --- time signature 4/4
 
 TRILL (C6 C#7) 4 measure2 ; harmonics

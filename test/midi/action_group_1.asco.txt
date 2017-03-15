@@ -1,0 +1,260 @@
+﻿; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: action_group.mid
+; MIDI file type 1 (multiple tracks)
+; Converted to Antescofo on Sun Oct  4 14:46:05 2015
+
+; start
+
+group playback_track_4 @tight @local {
+    ; delay msgrecvr pitch velocity channel
+    ; General MIDI sound: Acoustic Grand Piano
+    0.0214844 mnote 36 54 2
+    2.01562 mnote 36 0 2 ;noteoff
+    0.000976562 mnote 36 52 2
+    0.924805 mnote 36 0 2 ;noteoff
+    0.0664062 mnote 48 50 2
+    0.921875 mnote 48 0 2 ;noteoff
+    0.0703125 mnote 47 54 2
+    0.958984 mnote 47 0 2 ;noteoff
+    0.0664062 mnote 43 50 2
+    0.924805 mnote 43 0 2 ;noteoff
+    0.0664062 mnote 36 52 2
+    1.41797 mnote 36 0 2 ;noteoff
+    0.0664062 mnote 48 49 2
+    0.428711 mnote 48 0 2 ;noteoff
+    0.0703125 mnote 41 54 2
+    0.958984 mnote 41 0 2 ;noteoff
+    0.0664062 mnote 53 50 2
+    0.924805 mnote 53 0 2 ;noteoff
+    0.0664062 mnote 48 52 2
+    0.431641 mnote 48 0 2 ;noteoff
+    0.0664062 mnote 50 49 2
+    0.426758 mnote 50 0 2 ;noteoff
+    0.0664062 mnote 52 50 2
+    0.426758 mnote 52 0 2 ;noteoff
+    0.0664062 mnote 53 49 2
+    0.428711 mnote 53 0 2 ;noteoff
+    0.0703125 mnote 55 54 2
+    2.01562 mnote 55 0 2 ;noteoff
+    0.000976562 mnote 55 52 2
+    0.431641 mnote 55 0 2 ;noteoff
+    0.0664062 mnote 53 49 2
+    0.426758 mnote 53 0 2 ;noteoff
+    0.0664062 mnote 52 50 2
+    0.426758 mnote 52 0 2 ;noteoff
+    0.0664062 mnote 50 49 2
+    0.428711 mnote 50 0 2 ;noteoff
+    0.0703125 mnote 48 54 2
+    0.958984 mnote 48 0 2 ;noteoff
+}
+
+group playback_track_3 @tight @local {
+    ; delay msgrecvr pitch velocity channel
+    ; General MIDI sound: Acoustic Grand Piano
+    0.0566406 mnote 52 72 1
+    0 mnote 55 83 1
+    0 mnote 60 78 1
+    0 mnote 48 80 1
+    1.02441 mnote 52 0 1 ;noteoff
+    0 mnote 55 0 1 ;noteoff
+    0 mnote 60 0 1 ;noteoff
+    0.000976562 mnote 52 68 1
+    0 mnote 60 82 1
+    0.462891 mnote 52 0 1 ;noteoff
+    0.0292969 mnote 60 0 1 ;noteoff
+    0.000976562 mnote 55 67 1
+    0 mnote 62 81 1
+    0.467773 mnote 55 0 1 ;noteoff
+    0.0292969 mnote 62 0 1 ;noteoff
+    0 mnote 48 0 1 ;noteoff
+    0.000976562 mnote 60 70 1
+    0 mnote 64 84 1
+    0 mnote 48 78 1
+    0.990234 mnote 60 0 1 ;noteoff
+    0 mnote 64 0 1 ;noteoff
+    0 mnote 48 0 1 ;noteoff
+    0.000976562 mnote 60 76 1
+    0 mnote 48 76 1
+    0.987305 mnote 60 0 1 ;noteoff
+    0 mnote 48 0 1 ;noteoff
+    0.00488281 mnote 62 72 1
+    0 mnote 67 86 1
+    0 mnote 55 80 1
+    0 mnote 47 80 1
+    1.02441 mnote 55 0 1 ;noteoff
+    0 mnote 47 0 1 ;noteoff
+    0.000976562 mnote 59 76 1
+    0 mnote 43 76 1
+    0.492188 mnote 62 0 1 ;noteoff
+    0 mnote 67 0 1 ;noteoff
+    0.000976562 mnote 62 67 1
+    0 mnote 65 81 1
+    0.467773 mnote 62 0 1 ;noteoff
+    0.0292969 mnote 65 0 1 ;noteoff
+    0 mnote 59 0 1 ;noteoff
+    0 mnote 43 0 1 ;noteoff
+    0.000976562 mnote 60 70 1
+    0 mnote 64 84 1
+    0 mnote 55 78 1
+    0 mnote 48 78 1
+    1.4834 mnote 60 0 1 ;noteoff
+    0 mnote 64 0 1 ;noteoff
+    0 mnote 48 0 1 ;noteoff
+    0.000976562 mnote 60 67 1
+    0 mnote 64 81 1
+    0 mnote 48 75 1
+    0.464844 mnote 60 0 1 ;noteoff
+    0 mnote 48 0 1 ;noteoff
+    0.0292969 mnote 64 0 1 ;noteoff
+    0 mnote 55 0 1 ;noteoff
+    0.00488281 mnote 57 72 1
+    0 mnote 65 86 1
+    0 mnote 53 80 1
+    1.02441 mnote 57 0 1 ;noteoff
+    0 mnote 65 0 1 ;noteoff
+    0 mnote 53 0 1 ;noteoff
+    0.000976562 mnote 64 68 1
+    0 mnote 67 82 1
+    0 mnote 41 76 1
+    0.462891 mnote 64 0 1 ;noteoff
+    0.0292969 mnote 67 0 1 ;noteoff
+    0.000976562 mnote 62 67 1
+    0 mnote 65 81 1
+    0.467773 mnote 62 0 1 ;noteoff
+    0.0292969 mnote 65 0 1 ;noteoff
+    0 mnote 41 0 1 ;noteoff
+    0.000976562 mnote 60 70 1
+    0 mnote 64 84 1
+    0 mnote 48 78 1
+    0.467773 mnote 60 0 1 ;noteoff
+    0 mnote 48 0 1 ;noteoff
+    0.0292969 mnote 64 0 1 ;noteoff
+    0.000976562 mnote 65 75 1
+    0 mnote 50 75 1
+    0.462891 mnote 65 0 1 ;noteoff
+    0 mnote 50 0 1 ;noteoff
+    0.0302734 mnote 60 68 1
+    0 mnote 67 82 1
+    0 mnote 52 76 1
+    0.462891 mnote 52 0 1 ;noteoff
+    0.0302734 mnote 53 75 1
+    0.464844 mnote 53 0 1 ;noteoff
+    0.0292969 mnote 60 0 1 ;noteoff
+    0 mnote 67 0 1 ;noteoff
+    0.00488281 mnote 59 72 1
+    0 mnote 62 86 1
+    0 mnote 55 75 1
+    0 mnote 55 80 1
+    0.499023 mnote 59 0 1 ;noteoff
+    0.0292969 mnote 62 0 1 ;noteoff
+    0.000976562 mnote 57 67 1
+    0 mnote 60 81 1
+    0.46582 mnote 57 0 1 ;noteoff
+    0.0292969 mnote 60 0 1 ;noteoff
+    0.000976562 mnote 59 68 1
+    0 mnote 62 82 1
+    0.462891 mnote 59 0 1 ;noteoff
+    0.0292969 mnote 62 0 1 ;noteoff
+    0.000976562 mnote 60 67 1
+    0 mnote 64 81 1
+    0.467773 mnote 60 0 1 ;noteoff
+    0.0292969 mnote 64 0 1 ;noteoff
+    0 mnote 55 0 1 ;noteoff
+    0.000976562 mnote 59 70 1
+    0 mnote 62 84 1
+    0 mnote 55 78 1
+    0.467773 mnote 55 0 1 ;noteoff
+    0.0302734 mnote 53 75 1
+    0.462891 mnote 53 0 1 ;noteoff
+    0.0292969 mnote 59 0 1 ;noteoff
+    0 mnote 62 0 1 ;noteoff
+    0 mnote 55 0 1 ;noteoff
+    0.000976562 mnote 60 76 1
+    0 mnote 55 76 1
+    0 mnote 52 76 1
+    0.462891 mnote 60 0 1 ;noteoff
+    0 mnote 52 0 1 ;noteoff
+    0.0302734 mnote 62 75 1
+    0 mnote 50 75 1
+    0.464844 mnote 62 0 1 ;noteoff
+    0 mnote 50 0 1 ;noteoff
+    0.0292969 mnote 55 0 1 ;noteoff
+    0.00488281 mnote 55 72 1
+    0 mnote 60 72 1
+    0 mnote 64 86 1
+    0 mnote 48 80 1
+    1.02441 mnote 55 0 1 ;noteoff
+    0 mnote 60 0 1 ;noteoff
+    0 mnote 64 0 1 ;noteoff
+    0 mnote 48 0 1 ;noteoff
+}
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+BPM 120
+NOTE 0 3 measure1
+NOTE G4 11/12
+NOTE 0 1/14
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+NOTE C5 1 measure2
+NOTE C5 4/9
+NOTE 0 1/14
+NOTE D5 4/9
+NOTE 0 1/14
+NOTE E5 11/12
+NOTE 0 1/14
+NOTE C5 11/12
+NOTE 0 1/14
+NOTE G5 1/12
+
+; ----------- measure 3 --- beat 8 --- time signature 4/4
+
+NOTE -G5 11/8 measure3
+NOTE 0 1/14
+NOTE F5 4/9
+NOTE 0 1/14
+NOTE E5 3/2
+NOTE E5 4/9
+NOTE 0 1/14
+NOTE F5 1/12
+
+; ----------- measure 4 --- beat 12 --- time signature 4/4
+
+NOTE -F5 12/14 measure4
+NOTE 0 1/14
+NOTE G5 4/9
+NOTE 0 1/14
+NOTE F5 4/9
+NOTE 0 1/14
+NOTE E5 4/9
+NOTE 0 1/14
+NOTE F5 4/9
+NOTE 0 1/14
+NOTE G5 11/12
+NOTE 0 1/14
+NOTE D5 1/9
+
+; ----------- measure 5 --- beat 16 --- time signature 4/4
+
+NOTE -D5 1/3 measure5
+NOTE 0 1/14
+NOTE C5 4/9
+NOTE 0 1/14
+NOTE D5 4/9
+NOTE 0 1/14
+NOTE E5 4/9
+NOTE 0 1/14
+NOTE D5 11/12
+NOTE 0 1/14
+NOTE G4 11/12
+NOTE 0 1/14
+NOTE C5 1/6
+
+; ----------- measure 6 --- beat 20 --- time signature 4/4
+
+NOTE -C5 4/5 measure6

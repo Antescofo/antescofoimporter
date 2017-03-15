@@ -1,0 +1,1117 @@
+<?xml version="1.0" encoding='UTF-8' standalone='no' ?>
+<!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 3.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
+<score-partwise version="3.0">
+ <work>
+  <work-title>Maria Republica </work-title>
+ </work>
+ <identification>
+  <creator type="composer">François Paris</creator>
+  <rights>Copyright © </rights>
+  <encoding>
+   <encoding-date>2015-06-15</encoding-date>
+   <encoder>CIRM</encoder>
+   <software>Sibelius 7.5.1</software>
+   <software>Direct export, not from Dolet</software>
+   <encoding-description>Sibelius / MusicXML 3.0</encoding-description>
+   <supports element="print" type="yes" value="yes" attribute="new-system" />
+   <supports element="print" type="yes" value="yes" attribute="new-page" />
+   <supports element="accidental" type="yes" />
+   <supports element="beam" type="yes" />
+   <supports element="stem" type="yes" />
+  </encoding>
+ </identification>
+ <defaults>
+  <scaling>
+   <millimeters>210</millimeters>
+   <tenths>1200</tenths>
+  </scaling>
+  <page-layout>
+   <page-height>1697</page-height>
+   <page-width>1200</page-width>
+   <page-margins type="both">
+    <left-margin>85</left-margin>
+    <right-margin>85</right-margin>
+    <top-margin>85</top-margin>
+    <bottom-margin>85</bottom-margin>
+   </page-margins>
+  </page-layout>
+  <system-layout>
+   <system-margins>
+    <left-margin>67</left-margin>
+    <right-margin>0</right-margin>
+   </system-margins>
+   <system-distance>100</system-distance>
+  </system-layout>
+  <appearance>
+   <line-width type="stem">0.9375</line-width>
+   <line-width type="beam">5</line-width>
+   <line-width type="staff">0.9375</line-width>
+   <line-width type="light barline">1.5625</line-width>
+   <line-width type="heavy barline">5</line-width>
+   <line-width type="leger">1.5625</line-width>
+   <line-width type="ending">1.5625</line-width>
+   <line-width type="wedge">1.25</line-width>
+   <line-width type="enclosure">0.9375</line-width>
+   <line-width type="tuplet bracket">1.25</line-width>
+   <line-width type="bracket">5</line-width>
+   <line-width type="dashes">1.5625</line-width>
+   <line-width type="extend">0.9375</line-width>
+   <line-width type="octave shift">1.5625</line-width>
+   <line-width type="pedal">1.5625</line-width>
+   <line-width type="slur middle">1.5625</line-width>
+   <line-width type="slur tip">0.625</line-width>
+   <line-width type="tie middle">1.5625</line-width>
+   <line-width type="tie tip">0.625</line-width>
+   <note-size type="cue">75</note-size>
+   <note-size type="grace">60</note-size>
+  </appearance>
+  <music-font font-family="Opus Std" font-size="19.8425" />
+  <lyric-font font-family="Plantin MT Std" font-size="11.4715" />
+  <lyric-language xml:lang="fr" />
+ </defaults>
+ <credit page="1">
+  <credit-words default-x="600" default-y="236" font-family="Plantin MT Std" font-style="normal" font-size="22.0128" font-weight="normal" justify="center" valign="middle">Maria Republica </credit-words>
+ </credit>
+ <credit page="1">
+  <credit-words default-x="1114" default-y="84" font-family="Plantin MT Std" font-style="normal" font-size="11.0064" font-weight="normal" justify="right" valign="middle">François Paris</credit-words>
+ </credit>
+ <credit page="2">
+  <credit-words default-x="85" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">2</credit-words>
+ </credit>
+ <credit page="3">
+  <credit-words default-x="1114" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">3</credit-words>
+ </credit>
+ <credit page="4">
+  <credit-words default-x="85" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">4</credit-words>
+ </credit>
+ <credit page="5">
+  <credit-words default-x="1114" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">5</credit-words>
+ </credit>
+ <credit page="6">
+  <credit-words default-x="85" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">6</credit-words>
+ </credit>
+ <credit page="7">
+  <credit-words default-x="1114" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">7</credit-words>
+ </credit>
+ <credit page="8">
+  <credit-words default-x="85" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">8</credit-words>
+ </credit>
+ <credit page="9">
+  <credit-words default-x="1114" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">9</credit-words>
+ </credit>
+ <credit page="10">
+  <credit-words default-x="85" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">10</credit-words>
+ </credit>
+ <credit page="11">
+  <credit-words default-x="1114" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">11</credit-words>
+ </credit>
+ <credit page="12">
+  <credit-words default-x="85" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">12</credit-words>
+ </credit>
+ <credit page="13">
+  <credit-words default-x="1114" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">13</credit-words>
+ </credit>
+ <credit page="14">
+  <credit-words default-x="85" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">14</credit-words>
+ </credit>
+ <credit page="15">
+  <credit-words default-x="1114" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">15</credit-words>
+ </credit>
+ <credit page="16">
+  <credit-words default-x="85" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">16</credit-words>
+ </credit>
+ <credit page="17">
+  <credit-words default-x="1114" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">17</credit-words>
+ </credit>
+ <credit page="18">
+  <credit-words default-x="85" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">18</credit-words>
+ </credit>
+ <credit page="19">
+  <credit-words default-x="1114" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">19</credit-words>
+ </credit>
+ <credit page="20">
+  <credit-words default-x="85" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">20</credit-words>
+ </credit>
+ <credit page="21">
+  <credit-words default-x="1114" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">21</credit-words>
+ </credit>
+ <credit page="22">
+  <credit-words default-x="85" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">22</credit-words>
+ </credit>
+ <credit page="23">
+  <credit-words default-x="1114" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">23</credit-words>
+ </credit>
+ <credit page="24">
+  <credit-words default-x="85" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">24</credit-words>
+ </credit>
+ <credit page="25">
+  <credit-words default-x="1114" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">25</credit-words>
+ </credit>
+ <credit page="26">
+  <credit-words default-x="85" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">26</credit-words>
+ </credit>
+ <credit page="27">
+  <credit-words default-x="1114" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">27</credit-words>
+ </credit>
+ <credit page="28">
+  <credit-words default-x="85" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">28</credit-words>
+ </credit>
+ <credit page="29">
+  <credit-words default-x="1114" default-y="1611" font-style="normal" font-weight="normal" justify="left" valign="middle">29</credit-words>
+ </credit>
+ <credit page="1">
+  <credit-words default-x="85" default-y="1611" font-family="Plantin MT Std" font-style="normal" font-size="13.9518" font-weight="normal" justify="left" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="2">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="3">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="4">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="5">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="6">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="7">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="8">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="9">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="10">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="11">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="12">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="13">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="14">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="15">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="16">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="17">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="18">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="19">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="20">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="21">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="22">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="23">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="24">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="25">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="26">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="27">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="28">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <credit page="29">
+  <credit-words default-x="600" default-y="1587" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="normal" justify="center" valign="middle">Piano</credit-words>
+ </credit>
+ <part-list>
+  <part-group type="start" number="1">
+   <group-symbol>brace</group-symbol>
+  </part-group>
+  <score-part id="P1">
+   <part-name>Piano</part-name>
+   <part-name-display>
+    <display-text>Piano</display-text>
+   </part-name-display>
+   <part-abbreviation>Pno.</part-abbreviation>
+   <part-abbreviation-display>
+    <display-text>Pno.</display-text>
+   </part-abbreviation-display>
+   <score-instrument id="P1-I1">
+    <instrument-name>Vihuela (2) (235)</instrument-name>
+    <virtual-instrument>
+     <virtual-library>NI Kontakt 5 Factory Library (Fixed)</virtual-library>
+     <virtual-name>[Orchestral] Concert Grand</virtual-name>
+    </virtual-instrument>
+   </score-instrument>
+  </score-part>
+  <part-group type="stop" number="1" />
+ </part-list>
+ <part id="P1">
+  <!--============== Part: P1, Measure: 1 ==============-->
+  <measure number="1" width="306">
+   <print new-page="yes">
+    <system-layout>
+     <system-margins>
+      <left-margin>22</left-margin>
+      <right-margin>0</right-margin>
+     </system-margins>
+     <top-system-distance>160</top-system-distance>
+    </system-layout>
+    <staff-layout number="2">
+     <staff-distance>55</staff-distance>
+    </staff-layout>
+   </print>
+   <attributes>
+    <divisions>256</divisions>
+    <key color="#000000">
+     <fifths>0</fifths>
+     <mode>none</mode>
+    </key>
+    <time color="#000000">
+     <beats>9</beats>
+     <beat-type>8</beat-type>
+    </time>
+    <staves>2</staves>
+    <clef number="1" color="#000000">
+     <sign>G</sign>
+     <line>2</line>
+    </clef>
+    <clef number="2" color="#000000">
+     <sign>F</sign>
+     <line>4</line>
+    </clef>
+    <staff-details number="1" print-object="yes" />
+    <staff-details number="2" print-object="yes" />
+    <measure-style>
+     <multiple-rest>2</multiple-rest>
+    </measure-style>
+    <measure-style number="2">
+     <multiple-rest>2</multiple-rest>
+    </measure-style>
+   </attributes>
+   <direction>
+    <direction-type>
+     <metronome default-y="30" color="#000000" font-family="Plantin MT Std" font-style="normal" font-size="11.9365" font-weight="bold">
+      <beat-unit>quarter</beat-unit>
+      <per-minute>100</per-minute>
+     </metronome>
+    </direction-type>
+    <voice>1</voice>
+    <staff>1</staff>
+   </direction>
+  </measure>
+  <!--============== Part: P1, Measure: 2 ==============-->
+  <measure number="2" width="306">
+   <attributes />
+  </measure>
+  <!--============== Part: P1, Measure: 3 ==============-->
+  <measure number="3" width="172">
+   <attributes>
+    <time color="#000000">
+     <beats>6</beats>
+     <beat-type>8</beat-type>
+    </time>
+   </attributes>
+   <note default-x="17">
+    <rest />
+    <duration>768</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>whole</type>
+    <staff>1</staff>
+   </note>
+   <backup>
+    <duration>768</duration>
+   </backup>
+   <note default-x="17">
+    <rest />
+    <duration>768</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>whole</type>
+    <staff>2</staff>
+   </note>
+  </measure>
+  <!--============== Part: P1, Measure: 4 ==============-->
+  <measure number="4" width="130">
+   <attributes>
+    <time color="#000000">
+     <beats>3</beats>
+     <beat-type>8</beat-type>
+    </time>
+   </attributes>
+   <note default-x="16">
+    <rest />
+    <duration>384</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>whole</type>
+    <staff>1</staff>
+   </note>
+   <backup>
+    <duration>384</duration>
+   </backup>
+   <note default-x="16">
+    <rest />
+    <duration>384</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>whole</type>
+    <staff>2</staff>
+   </note>
+  </measure>
+  <!--============== Part: P1, Measure: 5 ==============-->
+  <measure number="5" width="198">
+   <attributes>
+    <time color="#000000">
+     <beats>9</beats>
+     <beat-type>8</beat-type>
+    </time>
+   </attributes>
+   <note default-x="17">
+    <rest />
+    <duration>1152</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>whole</type>
+    <staff>1</staff>
+   </note>
+   <backup>
+    <duration>1152</duration>
+   </backup>
+   <note default-x="17">
+    <rest />
+    <duration>1152</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>whole</type>
+    <staff>2</staff>
+   </note>
+  </measure>
+  <!--============== Part: P1, Measure: 6 ==============-->
+  <measure number="6" width="226">
+   <attributes>
+    <time color="#000000">
+     <beats>7</beats>
+     <beat-type>8</beat-type>
+    </time>
+   </attributes>
+   <note default-x="33">
+    <rest />
+    <duration>896</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>whole</type>
+    <staff>1</staff>
+   </note>
+   <backup>
+    <duration>896</duration>
+   </backup>
+   <direction>
+    <direction-type>
+     <dynamics default-x="27" default-y="-96" color="#000000" font-family="Plantin MT Std" font-style="italic" font-size="11.0064" font-weight="normal">
+      <fff />
+     </dynamics>
+    </direction-type>
+    <voice>2</voice>
+    <staff>2</staff>
+   </direction>
+   <note color="#000000" default-x="33" default-y="-15">
+    <pitch>
+     <step>B</step>
+     <octave>1</octave>
+    </pitch>
+    <duration>512</duration>
+    <tie type="start" />
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>half</type>
+    <accidental>natural</accidental>
+    <stem>up</stem>
+    <staff>2</staff>
+    <notations>
+     <tied type="start" />
+    </notations>
+   </note>
+   <note color="#000000" default-x="33">
+    <chord />
+    <pitch>
+     <step>E</step>
+     <octave>2</octave>
+    </pitch>
+    <duration>512</duration>
+    <tie type="start" />
+    <instrument id="P1-I1" />
+    <type>half</type>
+    <staff>2</staff>
+    <notations>
+     <tied type="start" />
+    </notations>
+   </note>
+   <note color="#000000" default-x="140" default-y="-15">
+    <pitch>
+     <step>B</step>
+     <octave>1</octave>
+    </pitch>
+    <duration>384</duration>
+    <tie type="stop" />
+    <tie type="start" />
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>quarter</type>
+    <dot />
+    <stem>up</stem>
+    <staff>2</staff>
+    <notations>
+     <tied type="stop" />
+     <tied type="start" />
+    </notations>
+   </note>
+   <note color="#000000" default-x="140">
+    <chord />
+    <pitch>
+     <step>E</step>
+     <octave>2</octave>
+    </pitch>
+    <duration>256</duration>
+    <tie type="stop" />
+    <tie type="start" />
+    <instrument id="P1-I1" />
+    <type>quarter</type>
+    <dot />
+    <staff>2</staff>
+    <notations>
+     <tied type="stop" />
+     <tied type="start" />
+    </notations>
+   </note>
+  </measure>
+  <!--============== Part: P1, Measure: 7 ==============-->
+  <measure number="7" width="668">
+   <print new-system="yes">
+    <system-layout>
+     <system-margins>
+      <left-margin>22</left-margin>
+      <right-margin>0</right-margin>
+     </system-margins>
+     <system-distance>102</system-distance>
+    </system-layout>
+    <staff-layout number="2">
+     <staff-distance>55</staff-distance>
+    </staff-layout>
+   </print>
+   <attributes>
+    <time color="#000000">
+     <beats>9</beats>
+     <beat-type>8</beat-type>
+    </time>
+    <staff-details number="1" print-object="yes" />
+    <staff-details number="2" print-object="yes" />
+   </attributes>
+   <note default-x="75">
+    <rest />
+    <duration>384</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>quarter</type>
+    <dot />
+    <staff>1</staff>
+   </note>
+   <note default-x="170">
+    <rest />
+    <duration>384</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>quarter</type>
+    <dot />
+    <staff>1</staff>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-y="-30" print-object="no">Quarter sharp 4</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>1</voice>
+    <staff>1</staff>
+   </direction>
+   <note color="#000000" default-x="265" default-y="-64">
+    <pitch>
+     <step>G</step>
+     <alter>1</alter>
+     <octave>4</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>32nd</type>
+    <stem>down</stem>
+    <staff>1</staff>
+    <beam number="1">begin</beam>
+    <beam number="2">begin</beam>
+    <beam number="3">begin</beam>
+   </note>
+   <note color="#000000" default-x="299" default-y="-64">
+    <pitch>
+     <step>A</step>
+     <octave>4</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>32nd</type>
+    <accidental>natural</accidental>
+    <stem>down</stem>
+    <staff>1</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">continue</beam>
+    <beam number="3">continue</beam>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-x="-2" default-y="-25" print-object="no">Three-quarter sharp 2</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>1</voice>
+    <staff>1</staff>
+   </direction>
+   <note color="#000000" default-x="333" default-y="-64">
+    <pitch>
+     <step>A</step>
+     <alter>1</alter>
+     <octave>4</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>32nd</type>
+    <stem>down</stem>
+    <staff>1</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">continue</beam>
+    <beam number="3">continue</beam>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-x="-2" default-y="-20" print-object="no">Quarter sharp</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>1</voice>
+    <staff>1</staff>
+   </direction>
+   <note color="#000000" default-x="366" default-y="-64">
+    <pitch>
+     <step>B</step>
+     <octave>4</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>32nd</type>
+    <stem>down</stem>
+    <staff>1</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">end</beam>
+    <beam number="3">end</beam>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-x="-2" default-y="-15" print-object="no">Quarter sharp 4</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>1</voice>
+    <staff>1</staff>
+   </direction>
+   <note color="#000000" default-x="400" default-y="-64">
+    <pitch>
+     <step>C</step>
+     <alter>1</alter>
+     <octave>5</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>32nd</type>
+    <stem>down</stem>
+    <staff>1</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">begin</beam>
+    <beam number="3">begin</beam>
+   </note>
+   <note color="#000000" default-x="433" default-y="-64">
+    <pitch>
+     <step>D</step>
+     <octave>5</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>32nd</type>
+    <accidental>natural</accidental>
+    <stem>down</stem>
+    <staff>1</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">continue</beam>
+    <beam number="3">continue</beam>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-x="-2" default-y="-10" print-object="no">Three-quarter sharp 2</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>1</voice>
+    <staff>1</staff>
+   </direction>
+   <note color="#000000" default-x="467" default-y="-64">
+    <pitch>
+     <step>D</step>
+     <alter>1</alter>
+     <octave>5</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>32nd</type>
+    <stem>down</stem>
+    <staff>1</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">continue</beam>
+    <beam number="3">continue</beam>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-x="-2" default-y="-5" print-object="no">Quarter sharp</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>1</voice>
+    <staff>1</staff>
+   </direction>
+   <note color="#000000" default-x="500" default-y="-64">
+    <pitch>
+     <step>E</step>
+     <octave>5</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>32nd</type>
+    <stem>down</stem>
+    <staff>1</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">end</beam>
+    <beam number="3">end</beam>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-x="-2" print-object="no">Quarter sharp 4</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>1</voice>
+    <staff>1</staff>
+   </direction>
+   <note color="#000000" default-x="534" default-y="-64">
+    <pitch>
+     <step>F</step>
+     <alter>1</alter>
+     <octave>5</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>32nd</type>
+    <stem>down</stem>
+    <staff>1</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">begin</beam>
+    <beam number="3">begin</beam>
+   </note>
+   <note color="#000000" default-x="567" default-y="-64">
+    <pitch>
+     <step>G</step>
+     <octave>5</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>32nd</type>
+    <accidental>natural</accidental>
+    <stem>down</stem>
+    <staff>1</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">continue</beam>
+    <beam number="3">continue</beam>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-x="-2" default-y="5" print-object="no">Three-quarter sharp 2</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>1</voice>
+    <staff>1</staff>
+   </direction>
+   <note color="#000000" default-x="601" default-y="-64">
+    <pitch>
+     <step>G</step>
+     <alter>1</alter>
+     <octave>5</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>32nd</type>
+    <stem>down</stem>
+    <staff>1</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">continue</beam>
+    <beam number="3">continue</beam>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-x="-2" default-y="10" print-object="no">Quarter sharp 4</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>1</voice>
+    <staff>1</staff>
+   </direction>
+   <note color="#000000" default-x="635" default-y="-64">
+    <pitch>
+     <step>A</step>
+     <alter>1</alter>
+     <octave>5</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>1</voice>
+    <type>32nd</type>
+    <stem>down</stem>
+    <staff>1</staff>
+    <beam number="1">end</beam>
+    <beam number="2">end</beam>
+    <beam number="3">end</beam>
+   </note>
+   <backup>
+    <duration>384</duration>
+   </backup>
+   <direction>
+    <direction-type>
+     <wedge default-x="13" default-y="-113" color="#000000" type="crescendo" />
+    </direction-type>
+    <voice>1</voice>
+    <staff>2</staff>
+   </direction>
+   <backup>
+    <duration>768</duration>
+   </backup>
+   <note default-x="75">
+    <rest />
+    <duration>384</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>quarter</type>
+    <dot />
+    <staff>2</staff>
+   </note>
+   <note default-x="170">
+    <rest />
+    <duration>384</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>quarter</type>
+    <dot />
+    <staff>2</staff>
+   </note>
+   <direction>
+    <direction-type>
+     <dynamics default-x="260" default-y="-118" color="#000000" font-family="Plantin MT Std" font-style="italic" font-size="11.0064" font-weight="normal">
+      <ff />
+     </dynamics>
+    </direction-type>
+    <voice>2</voice>
+    <staff>2</staff>
+   </direction>
+   <note color="#000000" default-x="265" default-y="-9">
+    <pitch>
+     <step>E</step>
+     <octave>2</octave>
+    </pitch>
+    <duration>32</duration>
+    <tie type="stop" />
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>32nd</type>
+    <stem>up</stem>
+    <staff>2</staff>
+    <beam number="1">begin</beam>
+    <beam number="2">begin</beam>
+    <beam number="3">begin</beam>
+    <notations>
+     <tied type="stop" />
+    </notations>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-x="-2" default-y="-67" print-object="no">Quarter sharp 4</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>2</voice>
+    <staff>2</staff>
+   </direction>
+   <note color="#000000" default-x="299" default-y="-9">
+    <pitch>
+     <step>D</step>
+     <alter>1</alter>
+     <octave>2</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>32nd</type>
+    <stem>up</stem>
+    <staff>2</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">continue</beam>
+    <beam number="3">continue</beam>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-x="-2" default-y="-82" print-object="no">Three-quarter sharp</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>2</voice>
+    <staff>2</staff>
+   </direction>
+   <note color="#000000" default-x="333" default-y="-9">
+    <pitch>
+     <step>C</step>
+     <alter>1</alter>
+     <octave>2</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>32nd</type>
+    <stem>up</stem>
+    <staff>2</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">continue</beam>
+    <beam number="3">continue</beam>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-x="-2" default-y="-82" print-object="no">Quarter sharp 2</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>2</voice>
+    <staff>2</staff>
+   </direction>
+   <note color="#000000" default-x="366" default-y="-9">
+    <pitch>
+     <step>C</step>
+     <octave>2</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>32nd</type>
+    <stem>up</stem>
+    <staff>2</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">end</beam>
+    <beam number="3">end</beam>
+   </note>
+   <note color="#000000" default-x="400" default-y="-9">
+    <pitch>
+     <step>B</step>
+     <octave>1</octave>
+    </pitch>
+    <duration>32</duration>
+    <tie type="stop" />
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>32nd</type>
+    <accidental>natural</accidental>
+    <stem>up</stem>
+    <staff>2</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">begin</beam>
+    <beam number="3">begin</beam>
+    <notations>
+     <tied type="stop" />
+    </notations>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-x="-2" default-y="-81" print-object="no">Quarter sharp 4</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>2</voice>
+    <staff>2</staff>
+   </direction>
+   <note color="#000000" default-x="433" default-y="-9">
+    <pitch>
+     <step>A</step>
+     <alter>1</alter>
+     <octave>1</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>32nd</type>
+    <stem>up</stem>
+    <staff>2</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">continue</beam>
+    <beam number="3">continue</beam>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-x="-2" default-y="-81" print-object="no">Three-quarter sharp 2</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>2</voice>
+    <staff>2</staff>
+   </direction>
+   <note color="#000000" default-x="467" default-y="-9">
+    <pitch>
+     <step>G</step>
+     <alter>1</alter>
+     <octave>1</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>32nd</type>
+    <stem>up</stem>
+    <staff>2</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">continue</beam>
+    <beam number="3">continue</beam>
+   </note>
+   <note color="#000000" default-x="500" default-y="-9">
+    <pitch>
+     <step>G</step>
+     <octave>1</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>32nd</type>
+    <accidental>natural</accidental>
+    <stem>up</stem>
+    <staff>2</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">end</beam>
+    <beam number="3">end</beam>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-x="-2" default-y="-137" print-object="no">Quarter sharp 4</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>2</voice>
+    <staff>2</staff>
+   </direction>
+   <note color="#000000" default-x="534" default-y="-9">
+    <pitch>
+     <step>F</step>
+     <alter>1</alter>
+     <octave>1</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>32nd</type>
+    <stem>up</stem>
+    <staff>2</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">begin</beam>
+    <beam number="3">begin</beam>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-x="-2" default-y="-85" print-object="no">Quarter sharp</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>2</voice>
+    <staff>2</staff>
+   </direction>
+   <note color="#000000" default-x="567" default-y="-9">
+    <pitch>
+     <step>E</step>
+     <octave>1</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>32nd</type>
+    <stem>up</stem>
+    <staff>2</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">continue</beam>
+    <beam number="3">continue</beam>
+   </note>
+   <direction>
+    <direction-type>
+     <other-direction default-x="-2" default-y="-143" print-object="no">Three-quarter sharp 2</other-direction>
+    </direction-type>
+    <offset sound="no">-2</offset>
+    <voice>2</voice>
+    <staff>2</staff>
+   </direction>
+   <note color="#000000" default-x="601" default-y="-9">
+    <pitch>
+     <step>D</step>
+     <alter>1</alter>
+     <octave>1</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>32nd</type>
+    <stem>up</stem>
+    <staff>2</staff>
+    <beam number="1">continue</beam>
+    <beam number="2">continue</beam>
+    <beam number="3">continue</beam>
+   </note>
+   <note color="#000000" default-x="635" default-y="-9">
+    <pitch>
+     <step>D</step>
+     <octave>1</octave>
+    </pitch>
+    <duration>32</duration>
+    <instrument id="P1-I1" />
+    <voice>2</voice>
+    <type>32nd</type>
+    <accidental>natural</accidental>
+    <stem>up</stem>
+    <staff>2</staff>
+    <beam number="1">end</beam>
+    <beam number="2">end</beam>
+    <beam number="3">end</beam>
+   </note>
+  </measure>
+ </part>
+</score-partwise>

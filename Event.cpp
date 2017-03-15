@@ -36,7 +36,7 @@ Event::~Event()
     //NOTHING
 }
 
-int Event::measure() const
+float Event::measure() const
 {
     return measure_;
 }
@@ -71,3 +71,9 @@ bool Event::isFirstInMeasure() const
     return isFirstInMeasure_;
 }
 
+bool Event::isEqual( float t1, float t2 ) const
+{
+    if ( features() & MidiNote )
+        return fabs( t1 - t2 ) < EPSILON_MIDI;
+    return fabs( t1 - t2 ) < EPSILON;
+}

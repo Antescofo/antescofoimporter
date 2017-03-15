@@ -1,0 +1,46 @@
+﻿; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: #949_instr_transp.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0
+; Converted to Antescofo on Wed Sep  2 09:42:22 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+NOTE D4 1 measure1
+NOTE F4 1
+TRILL (A4 B4) 1
+NOTE 0 1
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+TRILL (E4 F4) 1 measure2
+NOTE 0 3
+
+; ----------- measure 3 --- beat 8 --- time signature 4/4
+
+NOTE D4 1 measure3
+NOTE F4 1
+NOTE A4 1
+NOTE 0 1
+
+; ----------- measure 4 --- beat 12 --- time signature 4/4
+
+NOTE A4 1 measure4
+TRILL (F4 G4) 1
+TRILL (E4 F4) 1
+NOTE 0 1
+
+; ----------- measure 5 --- beat 16 --- time signature 4/4
+
+NOTE D4 1 measure5
+NOTE F4 1
+TRILL (A4 B4) 1
+NOTE 0 1
+
+; ----------- measure 6 --- beat 20 --- time signature 4/4
+

@@ -28,9 +28,9 @@ namespace antescofo
         explicit Tempo( bool status );
         virtual ~Tempo();
         
-        virtual void        serialize( std::ostringstream& stream );
-        virtual EventType   type() const { return Event_Tempo; }
-        virtual bool        hasNotes() const;
+        void        serialize( std::ostringstream& stream ) override;
+        EventType   type() const override { return Event_Tempo; }
+        bool        hasNotes() const override;
         
     private:
         bool    status_;

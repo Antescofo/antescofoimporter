@@ -91,6 +91,7 @@
 #define LLVM_SUPPORT_CONVERTUTF_H
 
 #include <vector>
+#include <string>
 
 /* ---------------------------------------------------------------------
     The following 4 definitions are compiler-specific.

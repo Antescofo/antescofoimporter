@@ -1,0 +1,21 @@
+﻿; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: #938_mazurka_simple.mid
+; MIDI file type 1 (multiple tracks)
+; Converted to Antescofo on Sat Oct  3 01:25:38 2015
+
+; start
+BPM 144
+
+; ----------- measure 1 --- beat 0 --- time signature 3/4
+
+CHORD (F4 F5) 1 measure1
+CHORD (-F4 E5 -F5) 1/2
+CHORD (-F4 C5 -F5) 1/2
+CHORD (-F4 D#5 -F5) 1/2
+CHORD (-F4 C#5 -F5) 1/2
+
+; ----------- measure 2 --- beat 3 --- time signature 3/4
+

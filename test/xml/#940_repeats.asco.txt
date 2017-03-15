@@ -1,11 +1,11 @@
-; Antescofo score generated using native importer
+﻿; Antescofo score generated using native importer
 ; Copyright (c) IRCAM 2015
 ; Designed by Robert Piéchaud
 
 ; Original file: #940_repeats.xml
 ; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
 ; MusicXML version 3.0
-; Converted to Antescofo on Fri Jun 12 16:37:08 2015
+; Converted to Antescofo on Sun Sep 13 21:32:04 2015
 
 ; start
 

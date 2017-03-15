@@ -1,0 +1,1351 @@
+﻿; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: handel_gavotte.mid
+; MIDI file type 1 (multiple tracks)
+; Converted to Antescofo on Mon Oct  5 10:10:42 2015
+
+; start
+BPM 138
+
+; ----------- measure 1 --- beat 0
+
+CHORD (A#1 A#2) 2 measure1
+CHORD (D3 F4 A#4) 1
+CHORD (F3 A4 C5) 1
+
+; ----------- measure 2 --- beat 4
+
+CHORD (A#3 A#4 D5) 3/2 measure2
+CHORD (-A#3 -A#4 D#5) 1/2
+CHORD (A3 F4 C5) 1
+CHORD (G3 G4 A#4) 1
+
+; ----------- measure 3 --- beat 8
+
+CHORD (F3 A4 F5) 2 measure3
+CHORD (D2 D3 F4 A#4 F5) 1
+CHORD (A#1 A#2 F4 D5 A#5) 1
+
+; ----------- measure 4 --- beat 12
+
+CHORD (D#2 D#3 G4 A#4 G5) 1 measure4
+CHORD (F2 F3 C4 A4 F5) 1
+CHORD (G2 G3 A#3 A#4 D#5) 1
+CHORD (A2 A3 F4 C5 -D#5) 1/2
+CHORD (-A2 -A3 -F4 -C5 F5) 1/2
+
+; ----------- measure 5 --- beat 16
+
+CHORD (A#2 A#3 F4 D5) 1 measure5
+CHORD (A#1 -A#3 -F4 A#4) 1
+CHORD (A3 F4 C5) 1
+CHORD (F3 A4 F5) 1
+
+; ----------- measure 6 --- beat 20
+
+CHORD (A#2 A#4 D5) 1 measure6
+CHORD (C3 A4 C5) 1/2
+CHORD (-C3 G4 -C5) 1/2
+CHORD (D3 F4 A#4) 1
+CHORD (E3 G4 -A#4) 1/2
+CHORD (-E3 -G4 C5) 1/2
+
+; ----------- measure 7 --- beat 24
+
+CHORD (F3 F4 A4) 1/2 measure7
+CHORD (-F3 -F4 A#4) 1/2
+CHORD (E3 G4 C5) 1
+CHORD (D2 D3 D4 F4 -C5) 3/4
+CHORD (-D2 -D3 -D4 -F4 -C5) 1/4
+CHORD (G2 G3 A#4) 3/4
+CHORD (-G2 -G3 D4 -A#4 D5) 1/4
+
+; ----------- measure 8 --- beat 28
+
+CHORD (C2 C3 C4 -A#4 E5) 3/4 measure8
+CHORD (-C2 -C3 G4 C5) 1/4
+CHORD (A#1 A#2 A4 F5) 3/4
+CHORD (-A#1 -A#2 F4 A#4) 1/4
+CHORD (C2 C3 C4 F4 G4) 1
+CHORD (C1 C2 C4 E4 -G4) 1/2
+CHORD (-C1 -C2 -C4 -E4 F4) 1/2
+
+; ----------- measure 9 --- beat 32
+
+CHORD (F1 F3 A3 F4) 3/4 measure9
+CHORD (-F1 D#3 -A3 -F4) 1/4
+CHORD (-F1 D3 -A3 -F4) 3/4
+CHORD (-F1 C3 -A3 -F4) 1/4
+CHORD (D3 F4 A#4) 1
+CHORD (F3 A4 C5) 1
+
+; ----------- measure 10 --- beat 36
+
+CHORD (A#3 A#4 D5) 3/2 measure10
+CHORD (-A#3 -A#4 D#5) 1/2
+CHORD (A3 F4 C5) 1
+CHORD (G3 G4 A#4) 1
+
+; ----------- measure 11 --- beat 40
+
+CHORD (F3 A4 F5) 2 measure11
+CHORD (D2 D3 F4 A#4 F5) 1
+CHORD (A#1 A#2 F4 D5 A#5) 1
+
+; ----------- measure 12 --- beat 44
+
+CHORD (D#2 D#3 G4 A#4 G5) 1 measure12
+CHORD (F2 F3 C4 A4 F5) 1
+CHORD (G2 G3 A#3 A#4 D#5) 1
+CHORD (A2 A3 F4 C5 -D#5) 1/2
+CHORD (-A2 -A3 -F4 -C5 F5) 1/2
+
+; ----------- measure 13 --- beat 48
+
+CHORD (A#2 A#3 F4 D5) 1 measure13
+CHORD (A#1 -A#3 -F4 A#4) 1
+CHORD (A3 F4 C5) 1
+CHORD (F3 A4 F5) 1
+
+; ----------- measure 14 --- beat 52
+
+CHORD (A#2 A#4 D5) 1 measure14
+CHORD (C3 A4 C5) 1/2
+CHORD (-C3 G4 -C5) 1/2
+CHORD (D3 F4 A#4) 1
+CHORD (E3 G4 -A#4) 1/2
+CHORD (-E3 -G4 C5) 1/2
+
+; ----------- measure 15 --- beat 56
+
+CHORD (F3 F4 A4) 1/2 measure15
+CHORD (-F3 -F4 A#4) 1/2
+CHORD (E3 G4 C5) 1
+CHORD (D2 D3 D4 F4 -C5) 3/4
+CHORD (-D2 -D3 -D4 -F4 -C5) 1/4
+CHORD (G2 G3 A#4) 3/4
+CHORD (-G2 -G3 D4 -A#4 D5) 1/4
+
+; ----------- measure 16 --- beat 60
+
+CHORD (C2 C3 C4 -A#4 E5) 3/4 measure16
+CHORD (-C2 -C3 G4 C5) 1/4
+CHORD (A#1 A#2 A4 F5) 3/4
+CHORD (-A#1 -A#2 F4 A#4) 1/4
+CHORD (C2 C3 C4 F4 G4) 1
+CHORD (C1 C2 C4 E4 -G4) 1/2
+CHORD (-C1 -C2 -C4 -E4 F4) 1/2
+
+; ----------- measure 17 --- beat 64
+
+CHORD (F1 F3 A3 F4) 3/4 measure17
+CHORD (-F1 D#3 -A3 -F4) 1/4
+CHORD (-F1 D3 -A3 -F4) 3/4
+CHORD (-F1 C3 -A3 -F4) 1/4
+CHORD (D3 F4) 1
+CHORD (A#2 D4 A#4) 3/4
+CHORD (-A#2 -D4 A4) 1/4
+
+; ----------- measure 18 --- beat 68
+
+CHORD (D#2 D#3 G3 A#3 G4) 1 measure18
+CHORD (C2 C3 G3 D#4 C5) 1
+CHORD (F3 A4) 1
+CHORD (D3 F4 D5) 3/4
+CHORD (-D3 -F4 C5) 1/4
+
+; ----------- measure 19 --- beat 72
+
+CHORD (G2 G3 D4 G4 B4) 1 measure19
+CHORD (D#2 D#3 D#4 G4 D#5 G5) 3/4
+CHORD (-D#2 -D#3 -D#4 -G4 D5 -G5) 1/4
+CHORD (G#2 G#3 G#4 C5 -G5) 3/4
+CHORD (-G#2 -G#3 -G#4 C5 D#5) 1/4
+CHORD (F2 F3 G#4 D5 F5) 3/4
+CHORD (-F2 -F3 -G#4 C5 F5) 1/4
+
+; ----------- measure 20 --- beat 76
+
+CHORD (G2 G3 D4 B4 F5) 3/4 measure20
+CHORD (-G2 -G3 G4 -B4 D5) 1/4
+CHORD (C2 C3 G4 C5 D#5) 3/4
+CHORD (-C2 -C3 G#4 -C5 F5) 1/4
+CHORD (G2 G3 G4 -C5 D#5) 1
+CHORD (G1 G2 F4 B4 D5) 3/4
+CHORD (-G1 -G2 -F4 -B4 C5) 1/4
+
+; ----------- measure 21 --- beat 80
+
+CHORD (C2 C3 D#4 C5) 1/2 measure21
+CHORD (-C2 F2 -D#4 -C5) 1/2
+CHORD (-C2 G2 -D#4 -C5) 1/2
+CHORD (-C2 A2 -D#4 -C5) 1/2
+CHORD (A#2 D5 F5) 1/2
+CHORD (C3 -D5 -F5) 1/2
+CHORD (D3 C5 D#5) 1/2
+CHORD (D#3 -C5 -D#5) 1/4
+CHORD (-D#3 A#4 D5) 1/4
+
+; ----------- measure 22 --- beat 84
+
+CHORD (F3 A4 C5) 1/2 measure22
+CHORD (G3 -A4 -C5) 1/2
+CHORD (A3 -A4 -C5) 1/2
+CHORD (F3 -A4 -C5) 1/2
+CHORD (A#3 F4 D5) 1/2
+CHORD (C4 -F4 -D5) 1/4
+CHORD (-C4 -F4 D#5) 1/4
+CHORD (D4 -F4 C5) 1/2
+CHORD (D#4 G4 -C5) 1/4
+CHORD (-D#4 -G4 A#4) 1/4
+
+; ----------- measure 23 --- beat 88
+
+CHORD (F4 A4) 1 measure23
+CHORD (F4 -A4) 1
+CHORD (A#2 A#3 F4 D5 A#5) 1
+CHORD (C3 C4 D#4 D#5 A5) 3/4
+CHORD (-C3 -C4 -D#4 -D#5 G5) 1/4
+
+; ----------- measure 24 --- beat 92
+
+CHORD (D3 D4 A#4 F5) 1 measure24
+CHORD (D#2 D#3 A#3 A#4 D#5) 3/4
+CHORD (-D#2 -D#3 -A#3 -A#4 D5) 1/4
+CHORD (F2 F3 F4 -A#4 C5) 1
+CHORD (F1 F2 F4 A4 D5) 3/4
+CHORD (-F1 -F2 -F4 C5 D#5) 1/4
+
+; ----------- measure 25 --- beat 96
+
+CHORD (A#1 A#2 F4 A#4 D5) 1 measure25
+CHORD (D2 D3 A#3 F4 D#5) 3/4
+CHORD (-D2 -D3 -A#3 -F4 F5) 1/4
+CHORD (D#2 D#3 C4 G4 C5) 1
+CHORD (F2 F3 F4 A4 -C5) 1/2
+CHORD (-F2 -F3 -F4 -A4 D5) 1/2
+
+; ----------- measure 26 --- beat 100
+
+CHORD (G2 G3 A#3 A#4 D#5) 3/4 measure26
+CHORD (A2 A3 -A#3 C5) 1/4
+CHORD (A#2 A#3 F4 A#4 D5) 3/4
+CHORD (D#2 D#3 G4 -A#4 D#5) 1/4
+CHORD (F2 F3 F4 -A#4 D5) 1
+CHORD (F1 F2 D#4 A4 C5) 1/2
+CHORD (-F1 -F2 D4 -A4 -C5) 1/4
+CHORD (-F1 -F2 -D4 -A4 A#4) 1/4
+
+; ----------- measure 27 --- beat 104
+
+CHORD (A#1 A#2 D4 A#4) 2 measure27
+CHORD (D3 F4) 1
+CHORD (A#2 D4 A#4) 3/4
+CHORD (-A#2 -D4 A4) 1/4
+
+; ----------- measure 28 --- beat 108
+
+CHORD (D#2 D#3 G3 A#3 G4) 1 measure28
+CHORD (C2 C3 G3 D#4 C5) 1
+CHORD (F3 A4) 1
+CHORD (D3 F4 D5) 3/4
+CHORD (-D3 -F4 C5) 1/4
+
+; ----------- measure 29 --- beat 112
+
+CHORD (G2 G3 D4 G4 B4) 1 measure29
+CHORD (D#2 D#3 D#4 G4 D#5 G5) 3/4
+CHORD (-D#2 -D#3 -D#4 -G4 D5 -G5) 1/4
+CHORD (G#2 G#3 G#4 C5 -G5) 3/4
+CHORD (-G#2 -G#3 -G#4 C5 D#5) 1/4
+CHORD (F2 F3 G#4 D5 F5) 3/4
+CHORD (-F2 -F3 -G#4 C5 F5) 1/4
+
+; ----------- measure 30 --- beat 116
+
+CHORD (G2 G3 D4 B4 F5) 3/4 measure30
+CHORD (-G2 -G3 G4 -B4 D5) 1/4
+CHORD (C2 C3 G4 C5 D#5) 3/4
+CHORD (-C2 -C3 G#4 -C5 F5) 1/4
+CHORD (G2 G3 G4 -C5 D#5) 1
+CHORD (G1 G2 F4 B4 D5) 3/4
+CHORD (-G1 -G2 -F4 -B4 C5) 1/4
+
+; ----------- measure 31 --- beat 120
+
+CHORD (C2 C3 D#4 C5) 1/2 measure31
+CHORD (-C2 F2 -D#4 -C5) 1/2
+CHORD (-C2 G2 -D#4 -C5) 1/2
+CHORD (-C2 A2 -D#4 -C5) 1/2
+CHORD (A#2 D5 F5) 1/2
+CHORD (C3 -D5 -F5) 1/2
+CHORD (D3 C5 D#5) 1/2
+CHORD (D#3 -C5 -D#5) 1/4
+CHORD (-D#3 A#4 D5) 1/4
+
+; ----------- measure 32 --- beat 124
+
+CHORD (F3 A4 C5) 1/2 measure32
+CHORD (G3 -A4 -C5) 1/2
+CHORD (A3 -A4 -C5) 1/2
+CHORD (F3 -A4 -C5) 1/2
+CHORD (A#3 F4 D5) 1/2
+CHORD (C4 -F4 -D5) 1/4
+CHORD (-C4 -F4 D#5) 1/4
+CHORD (D4 -F4 C5) 1/2
+CHORD (D#4 G4 -C5) 1/4
+CHORD (-D#4 -G4 A#4) 1/4
+
+; ----------- measure 33 --- beat 128
+
+CHORD (F4 A4) 1 measure33
+CHORD (F4 -A4) 1
+CHORD (A#2 A#3 F4 D5 A#5) 1
+CHORD (C3 C4 D#4 D#5 A5) 3/4
+CHORD (-C3 -C4 -D#4 -D#5 G5) 1/4
+
+; ----------- measure 34 --- beat 132
+
+CHORD (D3 D4 A#4 F5) 1 measure34
+CHORD (D#2 D#3 A#3 A#4 D#5) 3/4
+CHORD (-D#2 -D#3 -A#3 -A#4 D5) 1/4
+CHORD (F2 F3 F4 -A#4 C5) 1
+CHORD (F1 F2 F4 A4 D5) 3/4
+CHORD (-F1 -F2 -F4 C5 D#5) 1/4
+
+; ----------- measure 35 --- beat 136
+
+CHORD (A#1 A#2 F4 A#4 D5) 1 measure35
+CHORD (D2 D3 A#3 F4 D#5) 3/4
+CHORD (-D2 -D3 -A#3 -F4 F5) 1/4
+CHORD (D#2 D#3 C4 G4 C5) 1
+CHORD (F2 F3 F4 A4 -C5) 1/2
+CHORD (-F2 -F3 -F4 -A4 D5) 1/2
+
+; ----------- measure 36 --- beat 140
+
+CHORD (G2 G3 A#3 A#4 D#5) 3/4 measure36
+CHORD (A2 A3 -A#3 C5) 1/4
+CHORD (A#2 A#3 F4 A#4 D5) 3/4
+CHORD (D#2 D#3 G4 -A#4 D#5) 1/4
+CHORD (F2 F3 F4 -A#4 D5) 1
+CHORD (F1 F2 D#4 A4 C5) 1/2
+CHORD (-F1 -F2 D4 -A4 -C5) 1/4
+CHORD (-F1 -F2 -D4 -A4 A#4) 1/4
+
+; ----------- measure 37 --- beat 144
+
+CHORD (A#1 A#2 D4 A#4) 2 measure37
+CHORD (A#1 A#2 D4 F4 A#4) 1/2
+CHORD (D2 D3 -D4 -F4 -A#4) 1/2
+CHORD (D#2 D#3 C4 G4 C5) 1/2
+CHORD (F2 F3 -C4 A4 -C5) 1/2
+
+; ----------- measure 38 --- beat 148
+
+CHORD (A#2 A#3 A#4 D5) 1/2 measure38
+CHORD (A#1 A#2 -A#3 -A#4 -D5) 1/2
+CHORD (D2 D3 F4 -A#4 -D5) 1/2
+CHORD (A#1 A#2 -F4 -A#4 D#5) 1/2
+CHORD (D#2 D#3 D#4 G4 C5) 1/2
+CHORD (F2 F3 -D#4 -G4 -C5) 1/2
+CHORD (G2 G3 D#4 A#4) 1/2
+CHORD (D#2 D#3 -D#4 -A#4) 1/2
+
+; ----------- measure 39 --- beat 152
+
+CHORD (F2 F3 C4 A4 F5) 1/2 measure39
+CHORD (C2 C3 -C4 -A4 -F5) 1/2
+CHORD (F2 F3 -C4 -A4 -F5) 1/2
+CHORD (D#2 D#3 -C4 -A4 -F5) 1/2
+CHORD (D2 D3 D4 F4 F5) 1/2
+CHORD (C3 C4 -D4 -F4 -F5) 1/2
+CHORD (D3 D4 D5 F5 A#5) 1/2
+CHORD (A#2 A#3 -D5 -F5 -A#5) 1/2
+
+; ----------- measure 40 --- beat 156
+
+CHORD (D#3 D#4 G4 A#4 G5) 1/2 measure40
+CHORD (C3 C4 -G4 A4 -G5) 1/2
+CHORD (D3 D4 A#4 F5) 1/2
+CHORD (A#2 A#3 -D4 -A#4 -F5) 1/2
+CHORD (C3 C4 D#4 -A#4 D#5) 1/2
+CHORD (A#2 A#3 -D#4 G4 -D#5) 1/2
+CHORD (A2 A3 F4 C5 -D#5) 1/2
+CHORD (F2 F3 -F4 A4 F5) 1/2
+
+; ----------- measure 41 --- beat 160
+
+CHORD (A#2 A#3 F4 D5) 1/2 measure41
+CHORD (A#1 A#2 -F4 -D5) 1/2
+CHORD (D2 D3 F4 A#4) 1/2
+CHORD (A#1 A#2 -F4 -A#4) 1/2
+CHORD (F2 F3 F4 -A#4 C5) 1/2
+CHORD (G2 G3 -F4 -A#4 -C5) 1/2
+CHORD (A2 A3 C4 A4 F5) 1/2
+CHORD (F2 F3 -C4 G4 -F5) 1/2
+
+; ----------- measure 42 --- beat 164
+
+CHORD (A#2 A#3 D4 F4 D5) 1/2 measure42
+CHORD (G2 G3 -D4 E4 -D5) 1/2
+CHORD (A2 A3 F4 C5) 1/2
+CHORD (F2 F3 -A3 -F4 -C5) 1/2
+CHORD (G2 G3 A#3 -F4 A#4) 1/2
+CHORD (F2 F3 -A#3 D4 -A#4) 1/2
+CHORD (E2 E3 C4 G4 -A#4) 1/2
+CHORD (C2 C3 -C4 E4 C5) 1/2
+
+; ----------- measure 43 --- beat 168
+
+CHORD (F2 F3 C4 F4 A4) 1/2 measure43
+CHORD (G2 G3 -C4 -F4 -A4) 1/4
+CHORD (-G2 -G3 -C4 -F4 A#4) 1/4
+CHORD (A2 A3 F4 C5) 1/2
+CHORD (A1 A2 F4 -C5) 1/2
+CHORD (A#1 A#2 F4 -C5 D5) 1/2
+CHORD (C2 C3 -F4 -C5 -D5) 1/4
+CHORD (-C2 -C3 F4 -D5) 1/4
+CHORD (D2 D3 -F4 A#4 -D5) 1/2
+CHORD (A#1 A#2 D4 -A#4 G5) 1/2
+
+; ----------- measure 44 --- beat 172
+
+CHORD (C2 C3 G4 -A#4 E5) 1/2 measure44
+CHORD (C3 C4 -G4 -A#4 C5) 1/2
+CHORD (D3 D4 A4 F5) 1/2
+CHORD (A2 A3 -D4 F4 -A4) 1/2
+CHORD (A#2 A#3 D4 F4 G4) 1/2
+CHORD (G2 G3 -D4 -F4 -G4) 1/2
+CHORD (C3 C4 E4 -G4) 1/2
+CHORD (C2 C3 -C4 -E4 F4) 1/2
+
+; ----------- measure 45 --- beat 176
+
+CHORD (F2 F3 A3 F4) 1/2 measure45
+CHORD (D#2 D#3 -A3 -F4) 1/2
+CHORD (D2 D3 -A3 -F4) 1/2
+CHORD (C2 C3 -A3 -F4) 1/2
+CHORD (A#1 A#2 D4 F4 A#4) 1/2
+CHORD (D2 D3 -D4 -F4 -A#4) 1/2
+CHORD (D#2 D#3 C4 G4 C5) 1/2
+CHORD (F2 F3 -C4 A4 -C5) 1/2
+
+; ----------- measure 46 --- beat 180
+
+CHORD (A#2 A#3 A#4 D5) 1/2 measure46
+CHORD (A#1 A#2 -A#3 -A#4 -D5) 1/2
+CHORD (D2 D3 F4 -A#4 -D5) 1/2
+CHORD (A#1 A#2 -F4 -A#4 D#5) 1/2
+CHORD (D#2 D#3 D#4 G4 C5) 1/2
+CHORD (F2 F3 -D#4 -G4 -C5) 1/2
+CHORD (G2 G3 D#4 A#4) 1/2
+CHORD (D#2 D#3 -D#4 -A#4) 1/2
+
+; ----------- measure 47 --- beat 184
+
+CHORD (F2 F3 C4 A4 F5) 1/2 measure47
+CHORD (C2 C3 -C4 -A4 -F5) 1/2
+CHORD (F2 F3 -C4 -A4 -F5) 1/2
+CHORD (D#2 D#3 -C4 -A4 -F5) 1/2
+CHORD (D2 D3 D4 F4 F5) 1/2
+CHORD (C3 C4 -D4 -F4 -F5) 1/2
+CHORD (D3 D4 D5 F5 A#5) 1/2
+CHORD (A#2 A#3 -D5 -F5 -A#5) 1/2
+
+; ----------- measure 48 --- beat 188
+
+CHORD (D#3 D#4 G4 A#4 G5) 1/2 measure48
+CHORD (C3 C4 -G4 A4 -G5) 1/2
+CHORD (D3 D4 A#4 F5) 1/2
+CHORD (A#2 A#3 -D4 -A#4 -F5) 1/2
+CHORD (C3 C4 D#4 -A#4 D#5) 1/2
+CHORD (A#2 A#3 -D#4 G4 -D#5) 1/2
+CHORD (A2 A3 F4 C5 -D#5) 1/2
+CHORD (F2 F3 -F4 A4 F5) 1/2
+
+; ----------- measure 49 --- beat 192
+
+CHORD (A#2 A#3 F4 D5) 1/2 measure49
+CHORD (A#1 A#2 -F4 -D5) 1/2
+CHORD (D2 D3 F4 A#4) 1/2
+CHORD (A#1 A#2 -F4 -A#4) 1/2
+CHORD (F2 F3 F4 -A#4 C5) 1/2
+CHORD (G2 G3 -F4 -A#4 -C5) 1/2
+CHORD (A2 A3 C4 A4 F5) 1/2
+CHORD (F2 F3 -C4 G4 -F5) 1/2
+
+; ----------- measure 50 --- beat 196
+
+CHORD (A#2 A#3 D4 F4 D5) 1/2 measure50
+CHORD (G2 G3 -D4 E4 -D5) 1/2
+CHORD (A2 A3 F4 C5) 1/2
+CHORD (F2 F3 -A3 -F4 -C5) 1/2
+CHORD (G2 G3 A#3 -F4 A#4) 1/2
+CHORD (F2 F3 -A#3 D4 -A#4) 1/2
+CHORD (E2 E3 C4 G4 -A#4) 1/2
+CHORD (C2 C3 -C4 E4 C5) 1/2
+
+; ----------- measure 51 --- beat 200
+
+CHORD (F2 F3 C4 F4 A4) 1/2 measure51
+CHORD (G2 G3 -C4 -F4 -A4) 1/4
+CHORD (-G2 -G3 -C4 -F4 A#4) 1/4
+CHORD (A2 A3 F4 C5) 1/2
+CHORD (A1 A2 F4 -C5) 1/2
+CHORD (A#1 A#2 F4 -C5 D5) 1/2
+CHORD (C2 C3 -F4 -C5 -D5) 1/4
+CHORD (-C2 -C3 F4 -D5) 1/4
+CHORD (D2 D3 -F4 A#4 -D5) 1/2
+CHORD (A#1 A#2 D4 -A#4 G5) 1/2
+
+; ----------- measure 52 --- beat 204
+
+CHORD (C2 C3 G4 -A#4 E5) 1/2 measure52
+CHORD (C3 C4 -G4 -A#4 C5) 1/2
+CHORD (D3 D4 A4 F5) 1/2
+CHORD (A2 A3 -D4 F4 -A4) 1/2
+CHORD (A#2 A#3 D4 F4 G4) 1/2
+CHORD (G2 G3 -D4 -F4 -G4) 1/2
+CHORD (C3 C4 E4 -G4) 1/2
+CHORD (C2 C3 -C4 -E4 F4) 1/2
+
+; ----------- measure 53 --- beat 208
+
+CHORD (F2 F3 A3 F4) 1/2 measure53
+CHORD (D#2 D#3 -A3 -F4) 1/2
+CHORD (D2 D3 -A3 -F4) 1/2
+CHORD (C2 C3 -A3 -F4) 1/2
+CHORD (A#1 A#2 F3 D4 F4) 1/2
+CHORD (C2 C3 -F3 -D4 -F4) 1/2
+CHORD (D2 D3 D4 F4 A#4) 1/2
+CHORD (A#1 A#2 -D4 -F4 -A#4) 1/2
+
+; ----------- measure 54 --- beat 212
+
+CHORD (D#2 D#3 A#3 D#4 G4) 1/2 measure54
+CHORD (D2 D3 -A#3 -D#4 -G4) 1/2
+CHORD (D#2 D#3 D#4 G4 C5) 1/2
+CHORD (C2 C3 -D#4 -G4 -C5) 1/2
+CHORD (F2 F3 C4 F4 A4) 1/2
+CHORD (D#2 D#3 -C4 -F4 -A4) 1/2
+CHORD (F2 F3 F4 A4 D5) 1/2
+CHORD (D2 D3 -F4 -A4 -D5) 1/2
+
+; ----------- measure 55 --- beat 216
+
+CHORD (G2 G3 D4 G4 B4) 1/2 measure55
+CHORD (F2 F3 -D4 -G4 -B4) 1/2
+CHORD (G2 G3 D#4 D#5 G5) 1/2
+CHORD (D#2 D#3 -D#4 D5 -G5) 1/2
+CHORD (G#2 G#3 -D#4 C5 -G5) 1/2
+CHORD (G2 G3 -D#4 B4 -G5) 1/2
+CHORD (G#2 G#3 G#4 C5 F5) 1/2
+CHORD (F2 F3 -G#4 D5 -F5) 1/2
+
+; ----------- measure 56 --- beat 220
+
+CHORD (B2 B3 D4 G4 -F5) 1/2 measure56
+CHORD (G2 G3 -G4 -F5) 1/4
+CHORD (-G2 -G3 -G4 B4 G5) 1/4
+CHORD (C2 C3 G4 C5 D#5) 1/2
+CHORD (F2 F3 G#4 -C5 -D#5) 1/4
+CHORD (-F2 -F3 -G#4 -C5 D5) 1/4
+CHORD (G2 G3 G4 -C5 D5) 1/2
+CHORD (F2 F3 -G4 -C5 -D5) 1/2
+CHORD (G2 G3 G4 B4 -D5) 1/2
+CHORD (G1 G2 -G4 -B4 C5) 1/2
+
+; ----------- measure 57 --- beat 224
+
+CHORD (C2 C3 D#4 C5) 1/2 measure57
+CHORD (D2 D3 -D#4 -C5) 1/2
+CHORD (D#2 D#3 -D#4 -C5) 1/2
+CHORD (C2 C3 -D#4 -C5) 1/2
+CHORD (D2 D3 F4 D5 F5) 1/2
+CHORD (A#1 A#2 -F4 -D5 -F5) 1/2
+CHORD (D2 D3 F4 C5 D#5) 1/2
+CHORD (D#2 D#3 -F4 -C5 -D#5) 1/4
+CHORD (-D#2 -D#3 -F4 A#4 D5) 1/4
+
+; ----------- measure 58 --- beat 228
+
+CHORD (F2 F3 F4 A4 C5) 1/2 measure58
+CHORD (G2 G3 -F4 -A4 -C5) 1/2
+CHORD (A2 A3 -F4 -A4 -C5) 1/2
+CHORD (F2 F3 -F4 -A4 -C5) 1/2
+CHORD (A#2 A#3 F4 D5) 1/2
+CHORD (A#1 A#2 -F4 -D5) 1/2
+CHORD (D2 D3 D#4 F4 C5) 1/2
+CHORD (D#2 D#3 -D#4 -F4 -C5) 1/4
+CHORD (-D#2 -D#3 D4 -F4 A#4) 1/4
+
+; ----------- measure 59 --- beat 232
+
+CHORD (F2 F3 C4 F4 A4) 1/2 measure59
+CHORD (G2 G3 -C4 -F4 -A4) 1/2
+CHORD (A2 A3 -C4 -F4 -A4) 1/2
+CHORD (F2 F3 -C4 -F4 -A4) 1/2
+CHORD (G2 G3 A#3 G5 A#5) 1/2
+CHORD (D#2 D#3 -A#3 -G5 -A#5) 1/2
+CHORD (G2 G3 -A#3 F5 A5) 1/2
+CHORD (A2 A3 C4 -F5 -A5) 1/4
+CHORD (-A2 -A3 -C4 D#5 G5) 1/4
+
+; ----------- measure 60 --- beat 236
+
+CHORD (A#2 A#3 D4 D5 F5) 1/2 measure60
+CHORD (A#1 A#2 -D4 -D5 -F5) 1/2
+CHORD (D2 D3 F4 C5 D#5) 1/2
+CHORD (D#2 D#3 G4 -C5 -D#5) 1/4
+CHORD (-D#2 -D#3 -G4 A#4 D5) 1/4
+CHORD (F2 F3 A4 C5) 1/2
+CHORD (D#2 D#3 -A4 -C5) 1/2
+CHORD (D2 D3 F4 A#4 D5) 1/2
+CHORD (C2 C3 -F4 -A#4 -D5) 1/4
+CHORD (-C2 -C3 -F4 C5 D#5) 1/4
+
+; ----------- measure 61 --- beat 240
+
+CHORD (A#2 A#3 F4 D5) 1/2 measure61
+CHORD (A2 A3 -A#3 -F4 -D5) 1/2
+CHORD (G2 G3 F4 A#4 D#5) 1/2
+CHORD (F2 F3 -F4 -A#4 -D#5) 1/4
+CHORD (-F2 -F3 -F4 -A#4 F5) 1/4
+CHORD (D#2 D#3 G4 -A#4 C5) 1/2
+CHORD (D2 D3 F4 G4 -C5) 1/2
+CHORD (C2 C3 D#4 A4 -C5) 1/2
+CHORD (A#1 A#2 D4 A#4 D5) 1/2
+
+; ----------- measure 62 --- beat 244
+
+CHORD (A2 A3 C4 C5 D#5) 1/2 measure62
+CHORD (F2 F3 -C4 A4 F5) 1/2
+CHORD (A#2 A#3 A#4 D5) 1/2
+CHORD (D#2 D#3 -A#3 -A#4 C5) 1/2
+CHORD (F2 F3 F4 -A#4 D5) 1/2
+CHORD (D#2 D#3 -F4 -A#4 -D5) 1/2
+CHORD (F2 F3 F4 A4 C5) 1/2
+CHORD (F1 F2 -F4 -A4 A#4) 1/2
+
+; ----------- measure 63 --- beat 248
+
+CHORD (A#2 A#3 D4 A#4) 1/2 measure63
+CHORD (D2 D3 -D4 -A#4) 1/2
+CHORD (D#2 D#3 -D4 -A#4) 1/2
+CHORD (F2 F3 -D4 -A#4) 1/2
+CHORD (A#1 A#2 F3 D4 F4) 1/2
+CHORD (C2 C3 -F3 -D4 -F4) 1/2
+CHORD (D2 D3 D4 F4 A#4) 1/2
+CHORD (A#1 A#2 -D4 -F4 -A#4) 1/2
+
+; ----------- measure 64 --- beat 252
+
+CHORD (D#2 D#3 A#3 D#4 G4) 1/2 measure64
+CHORD (D2 D3 -A#3 -D#4 -G4) 1/2
+CHORD (D#2 D#3 D#4 G4 C5) 1/2
+CHORD (C2 C3 -D#4 -G4 -C5) 1/2
+CHORD (F2 F3 C4 F4 A4) 1/2
+CHORD (D#2 D#3 -C4 -F4 -A4) 1/2
+CHORD (F2 F3 F4 A4 D5) 1/2
+CHORD (D2 D3 -F4 -A4 -D5) 1/2
+
+; ----------- measure 65 --- beat 256
+
+CHORD (G2 G3 D4 G4 B4) 1/2 measure65
+CHORD (F2 F3 -D4 -G4 -B4) 1/2
+CHORD (G2 G3 D#4 D#5 G5) 1/2
+CHORD (D#2 D#3 -D#4 D5 -G5) 1/2
+CHORD (G#2 G#3 -D#4 C5 -G5) 1/2
+CHORD (G2 G3 -D#4 B4 -G5) 1/2
+CHORD (G#2 G#3 G#4 C5 F5) 1/2
+CHORD (F2 F3 -G#4 D5 -F5) 1/2
+
+; ----------- measure 66 --- beat 260
+
+CHORD (B2 B3 D4 G4 -F5) 1/2 measure66
+CHORD (G2 G3 -G4 -F5) 1/4
+CHORD (-G2 -G3 -G4 B4 G5) 1/4
+CHORD (C2 C3 G4 C5 D#5) 1/2
+CHORD (F2 F3 G#4 -C5 -D#5) 1/4
+CHORD (-F2 -F3 -G#4 -C5 D5) 1/4
+CHORD (G2 G3 G4 -C5 D5) 1/2
+CHORD (F2 F3 -G4 -C5 -D5) 1/2
+CHORD (G2 G3 G4 B4 -D5) 1/2
+CHORD (G1 G2 -G4 -B4 C5) 1/2
+
+; ----------- measure 67 --- beat 264
+
+CHORD (C2 C3 D#4 C5) 1/2 measure67
+CHORD (D2 D3 -D#4 -C5) 1/2
+CHORD (D#2 D#3 -D#4 -C5) 1/2
+CHORD (C2 C3 -D#4 -C5) 1/2
+CHORD (D2 D3 F4 D5 F5) 1/2
+CHORD (A#1 A#2 -F4 -D5 -F5) 1/2
+CHORD (D2 D3 F4 C5 D#5) 1/2
+CHORD (D#2 D#3 -F4 -C5 -D#5) 1/4
+CHORD (-D#2 -D#3 -F4 A#4 D5) 1/4
+
+; ----------- measure 68 --- beat 268
+
+CHORD (F2 F3 F4 A4 C5) 1/2 measure68
+CHORD (G2 G3 -F4 -A4 -C5) 1/2
+CHORD (A2 A3 -F4 -A4 -C5) 1/2
+CHORD (F2 F3 -F4 -A4 -C5) 1/2
+CHORD (A#2 A#3 F4 D5) 1/2
+CHORD (A#1 A#2 -F4 -D5) 1/2
+CHORD (D2 D3 D#4 F4 C5) 1/2
+CHORD (D#2 D#3 -D#4 -F4 -C5) 1/4
+CHORD (-D#2 -D#3 D4 -F4 A#4) 1/4
+
+; ----------- measure 69 --- beat 272
+
+CHORD (F2 F3 C4 F4 A4) 1/2 measure69
+CHORD (G2 G3 -C4 -F4 -A4) 1/2
+CHORD (A2 A3 -C4 -F4 -A4) 1/2
+CHORD (F2 F3 -C4 -F4 -A4) 1/2
+CHORD (G2 G3 A#3 G5 A#5) 1/2
+CHORD (D#2 D#3 -A#3 -G5 -A#5) 1/2
+CHORD (G2 G3 -A#3 F5 A5) 1/2
+CHORD (A2 A3 C4 -F5 -A5) 1/4
+CHORD (-A2 -A3 -C4 D#5 G5) 1/4
+
+; ----------- measure 70 --- beat 276
+
+CHORD (A#2 A#3 D4 D5 F5) 1/2 measure70
+CHORD (A#1 A#2 -D4 -D5 -F5) 1/2
+CHORD (D2 D3 F4 C5 D#5) 1/2
+CHORD (D#2 D#3 G4 -C5 -D#5) 1/4
+CHORD (-D#2 -D#3 -G4 A#4 D5) 1/4
+CHORD (F2 F3 A4 C5) 1/2
+CHORD (D#2 D#3 -A4 -C5) 1/2
+CHORD (D2 D3 F4 A#4 D5) 1/2
+CHORD (C2 C3 -F4 -A#4 -D5) 1/4
+CHORD (-C2 -C3 -F4 C5 D#5) 1/4
+
+; ----------- measure 71 --- beat 280
+
+CHORD (A#2 A#3 F4 D5) 1/2 measure71
+CHORD (A2 A3 -A#3 -F4 -D5) 1/2
+CHORD (G2 G3 F4 A#4 D#5) 1/2
+CHORD (F2 F3 -F4 -A#4 -D#5) 1/4
+CHORD (-F2 -F3 -F4 -A#4 F5) 1/4
+CHORD (D#2 D#3 G4 -A#4 C5) 1/2
+CHORD (D2 D3 F4 G4 -C5) 1/2
+CHORD (C2 C3 D#4 A4 -C5) 1/2
+CHORD (A#1 A#2 D4 A#4 D5) 1/2
+
+; ----------- measure 72 --- beat 284
+
+CHORD (A2 A3 C4 C5 D#5) 1/2 measure72
+CHORD (F2 F3 -C4 A4 F5) 1/2
+CHORD (A#2 A#3 A#4 D5) 1/2
+CHORD (D#2 D#3 -A#3 -A#4 C5) 1/2
+CHORD (F2 F3 F4 -A#4 D5) 1/2
+CHORD (D#2 D#3 -F4 -A#4 -D5) 1/2
+CHORD (F2 F3 F4 A4 C5) 1/2
+CHORD (F1 F2 -F4 -A4 A#4) 1/2
+
+; ----------- measure 73 --- beat 288
+
+CHORD (A#2 A#3 D4 A#4) 1/2 measure73
+CHORD (D2 D3 -D4 -A#4) 1/2
+CHORD (D#2 D#3 -D4 -A#4) 1/2
+CHORD (F2 F3 -D4 -A#4) 1/2
+CHORD (A#2 A#3 D4 F4 A#4) 1/3
+CHORD (-A#2 -A#3 -D4 F4 -A#4) 1/3
+CHORD (-A#2 -A#3 -D4 -F4 -A#4) 1/3
+CHORD (A2 A3 F4 C5) 1/3
+CHORD (-A2 -A3 -F4 -C5) 1/3
+CHORD (-A2 -A3 -F4 -C5) 1/3
+
+; ----------- measure 74 --- beat 292
+
+CHORD (A#2 A#3 F4 A#4 D5) 1/3 measure74
+CHORD (-A#2 -A#3 -F4 -A#4 -D5) 1/3
+CHORD (-A#2 -A#3 F4 -A#4 -D5) 1/3
+CHORD (-A#2 -A#3 D4 -F4 -A#4 -D5) 1/3
+CHORD (-A#2 -A#3 F4 -A#4 -D5) 1/6
+CHORD (-A#2 -A#3 -F4 -A#4 D#5) 1/6
+CHORD (-A#2 -A#3 -F4 -A#4 -D#5) 1/3
+CHORD (D#2 D#3 D#4 G4 C5) 1/3
+CHORD (-D#2 -D#3 -D#4 -G4 -C5 D5) 1/3
+CHORD (-D#2 -D#3 -D#4 -G4 -C5 D#5) 1/3
+CHORD (G2 G3 A#3 A#4 D5) 1/3
+CHORD (-G2 -G3 -A#3 -A#4 C5) 1/6
+CHORD (-G2 -G3 -A#3 G4 -C5) 1/6
+CHORD (-G2 -G3 -A#3 -G4 A#4) 1/3
+
+; ----------- measure 75 --- beat 296
+
+CHORD (F2 F3 C4 A4 F5) 1/3 measure75
+CHORD (-F2 -F3 -C4 -A4 C5 -F5) 1/3
+CHORD (-F2 -F3 -C4 -A4 -F5) 1/3
+CHORD (-F2 -F3 -C4 -A4 C5 -F5) 1/3
+CHORD (-F2 -F3 -C4 -A4 D5 -F5) 1/3
+CHORD (-F2 -F3 -C4 -A4 D#5 -F5) 1/3
+CHORD (A#2 A#3 F4 D5 F5) 1/3
+CHORD (-A#2 -A#3 -F4 A#4 -D5 -F5) 1/3
+CHORD (-A#2 -A#3 -F4 -D5 -F5) 1/3
+CHORD (D2 D3 F4 F5 A#5) 1/3
+CHORD (-D2 -D3 -F4 -F5 -A#5) 1/3
+CHORD (-D2 -D3 -F4 -F5 -A#5) 1/3
+
+; ----------- measure 76 --- beat 300
+
+CHORD (D#2 D#3 D#4 A#4 G5) 1/3 measure76
+CHORD (-D#2 -D#3 -D#4 -A#4 -G5 A#5) 1/3
+CHORD (-D#2 -D#3 -D#4 -A#4 -G5) 1/3
+CHORD (C2 C3 -D#4 D#5 -G5) 1/3
+CHORD (-C2 -C3 -D#4 -D#5 -G5) 1/6
+CHORD (-C2 -C3 -D#4 -D#5 F5 -G5) 1/6
+CHORD (-C2 -C3 -D#4 -D#5 -F5) 1/3
+CHORD (F2 F3 F4 A4 C5 D#5) 1/3
+CHORD (-F2 -F3 -F4 -A4 -D#5) 1/3
+CHORD (-F2 -F3 -F4 -A4 C5 -D#5) 1/3
+CHORD (F1 F2 F4 A4 -D#5) 1/3
+CHORD (-F1 -F2 -F4 -A4 -D#5 F5) 1/6
+CHORD (-F1 -F2 -F4 -A4 F5) 1/6
+CHORD (-F1 -F2 -F4 -A4 C5 -F5) 1/3
+
+; ----------- measure 77 --- beat 304
+
+CHORD (A#1 A#2 F4 A#4 D5) 1/3 measure77
+CHORD (-A#1 -A#2 -F4 -A#4 -D5 F5) 1/3
+CHORD (-A#1 -A#2 -F4 -A#4 -D5) 1/3
+CHORD (-A#1 -A#2 -F4 A#4) 1/3
+CHORD (-A#1 -A#2 -F4 -A#4 D5) 1/3
+CHORD (-A#1 -A#2 -F4 -A#4) 1/3
+CHORD (A2 A3 F4 C5) 1/3
+CHORD (-A2 -A3 -F4 -C5 F5) 1/3
+CHORD (-A2 -A3 -F4 -C5) 1/3
+CHORD (F2 F3 C4 A4 F5) 1/3
+CHORD (-F2 -F3 -C4 -A4 C5 -F5) 1/3
+CHORD (-F2 -F3 -C4 -A4 -F5) 1/3
+
+; ----------- measure 78 --- beat 308
+
+CHORD (G2 G3 A#3 D4 A#4 D5) 1/3 measure78
+CHORD (-G2 -G3 -A#3 -D4 -D5) 1/3
+CHORD (-G2 -G3 -A#3 -D4 A#4 -D5) 1/3
+CHORD (A#2 A#3 D4 G4 -D5) 1/3
+CHORD (-A#2 -A#3 -D4 -G4 A#4 -D5) 1/6
+CHORD (-A#2 -A#3 -D4 -G4 -A#4 C5) 1/6
+CHORD (-A#2 -A#3 -D4 -G4 -C5) 1/3
+CHORD (C3 C4 E4 A#4) 1/3
+CHORD (-C3 -C4 -E4 G4 -A#4) 1/3
+CHORD (-C3 -C4 -E4 -A#4) 1/3
+CHORD (E2 E3 C4 G4 -A#4) 1/3
+CHORD (-E2 -E3 -C4 -G4 -A#4 C5) 1/6
+CHORD (-E2 -E3 -C4 -G4 C5) 1/6
+CHORD (-E2 -E3 -C4 -G4 -C5) 1/3
+
+; ----------- measure 79 --- beat 312
+
+CHORD (F2 F3 -C4 F4 A4) 1/3 measure79
+CHORD (-F2 -F3 -C4 -F4 -A4 C5) 1/6
+CHORD (-F2 -F3 -C4 -F4 A#4 -C5) 1/6
+CHORD (-F2 -F3 -C4 -F4 A4 -A#4) 1/3
+CHORD (A1 A2 F4 C5) 1/3
+CHORD (-A1 -A2 -F4 -C5 F5) 1/3
+CHORD (-A1 -A2 -F4 -C5) 1/12
+CHORD (-A1 -A2 F4 -C5) 1/4
+CHORD (A#1 A#2 D4 -F4 -C5 D5) 1/3
+CHORD (-A#1 -A#2 -F4 A#4 -C5 -D5) 1/3
+CHORD (-A#1 -A#2 -F4 -C5 -D5) 1/3
+CHORD (A#2 A#3 G4 A#4 G5) 1/3
+CHORD (-A#2 -A#3 -G4 -A#4 A#5) 1/3
+CHORD (-A#2 -A#3 -G4 -A#4 G5) 1/12
+CHORD (-A#2 -A#3 -G4 -A#4 G5) 1/4
+
+; ----------- measure 80 --- beat 316
+
+CHORD (C3 C4 -G4 -A#4 E5) 1/3 measure80
+CHORD (-C3 -C4 -G4 -A#4 C5 -E5) 1/3
+CHORD (-C3 -C4 -G4 -A#4 -E5) 1/12
+CHORD (-C3 -C4 G4 C5 -E5) 1/4
+CHORD (A2 A3 C4 A4 F5) 1/3
+CHORD (-A2 -A3 -C4 -A4 C5 -F5) 1/3
+CHORD (-A2 -A3 -C4 -A4 -F5) 1/12
+CHORD (-A2 -A3 -C4 F4 A#4 -F5) 1/4
+CHORD (A#2 A#3 D4 F4 G4 D5) 1/3
+CHORD (-A#2 -A#3 -D4 -F4 -G4 E5) 1/3
+CHORD (-A#2 -A#3 -D4 -F4 -G4 F5) 1/3
+CHORD (C3 C4 E4 -G4 C5) 1/3
+CHORD (-C3 -C4 -E4 -G4 F5) 1/6
+CHORD (-C3 A#3 -C4 -E4 F4 -F5) 1/6
+CHORD (-C3 -A#3 -C4 -E4 -F4 E5) 1/3
+
+; ----------- measure 81 --- beat 320
+
+CHORD (F2 F3 A3 F4 F5) 1/3 measure81
+CHORD (-F2 -F3 -A3 -F4) 1/3
+CHORD (-F2 -F3 -A3 -F4 G4) 1/3
+CHORD (-F2 -F3 -A3 -F4 A4) 1/3
+CHORD (-F2 -F3 -A3 -F4 A#4) 1/3
+CHORD (-F2 -F3 -A3 -F4 C5) 1/3
+CHORD (A#2 A#3 D4 F4 A#4) 1/3
+CHORD (-A#2 -A#3 -D4 F4 -A#4) 1/3
+CHORD (-A#2 -A#3 -D4 -F4 -A#4) 1/3
+CHORD (A2 A3 F4 C5) 1/3
+CHORD (-A2 -A3 -F4 -C5) 1/3
+CHORD (-A2 -A3 -F4 -C5) 1/3
+
+; ----------- measure 82 --- beat 324
+
+CHORD (A#2 A#3 F4 A#4 D5) 1/3 measure82
+CHORD (-A#2 -A#3 -F4 -A#4 -D5) 1/3
+CHORD (-A#2 -A#3 F4 -A#4 -D5) 1/3
+CHORD (-A#2 -A#3 D4 -F4 -A#4 -D5) 1/3
+CHORD (-A#2 -A#3 F4 -A#4 -D5) 1/6
+CHORD (-A#2 -A#3 -F4 -A#4 D#5) 1/6
+CHORD (-A#2 -A#3 -F4 -A#4 -D#5) 1/3
+CHORD (D#2 D#3 D#4 G4 C5) 1/3
+CHORD (-D#2 -D#3 -D#4 -G4 -C5 D5) 1/3
+CHORD (-D#2 -D#3 -D#4 -G4 -C5 D#5) 1/3
+CHORD (G2 G3 A#3 A#4 D5) 1/3
+CHORD (-G2 -G3 -A#3 -A#4 C5) 1/6
+CHORD (-G2 -G3 -A#3 G4 -C5) 1/6
+CHORD (-G2 -G3 -A#3 -G4 A#4) 1/3
+
+; ----------- measure 83 --- beat 328
+
+CHORD (F2 F3 C4 A4 F5) 1/3 measure83
+CHORD (-F2 -F3 -C4 -A4 C5 -F5) 1/3
+CHORD (-F2 -F3 -C4 -A4 -F5) 1/3
+CHORD (-F2 -F3 -C4 -A4 C5 -F5) 1/3
+CHORD (-F2 -F3 -C4 -A4 D5 -F5) 1/3
+CHORD (-F2 -F3 -C4 -A4 D#5 -F5) 1/3
+CHORD (A#2 A#3 F4 D5 F5) 1/3
+CHORD (-A#2 -A#3 -F4 A#4 -D5 -F5) 1/3
+CHORD (-A#2 -A#3 -F4 -D5 -F5) 1/3
+CHORD (D2 D3 F4 F5 A#5) 1/3
+CHORD (-D2 -D3 -F4 -F5 -A#5) 1/3
+CHORD (-D2 -D3 -F4 -F5 -A#5) 1/3
+
+; ----------- measure 84 --- beat 332
+
+CHORD (D#2 D#3 D#4 A#4 G5) 1/3 measure84
+CHORD (-D#2 -D#3 -D#4 -A#4 -G5 A#5) 1/3
+CHORD (-D#2 -D#3 -D#4 -A#4 -G5) 1/3
+CHORD (C2 C3 -D#4 D#5 -G5) 1/3
+CHORD (-C2 -C3 -D#4 -D#5 -G5) 1/6
+CHORD (-C2 -C3 -D#4 -D#5 F5 -G5) 1/6
+CHORD (-C2 -C3 -D#4 -D#5 -F5) 1/3
+CHORD (F2 F3 F4 A4 C5 D#5) 1/3
+CHORD (-F2 -F3 -F4 -A4 -D#5) 1/3
+CHORD (-F2 -F3 -F4 -A4 C5 -D#5) 1/3
+CHORD (F1 F2 F4 A4 -D#5) 1/3
+CHORD (-F1 -F2 -F4 -A4 -D#5 F5) 1/6
+CHORD (-F1 -F2 -F4 -A4 F5) 1/6
+CHORD (-F1 -F2 -F4 -A4 C5 -F5) 1/3
+
+; ----------- measure 85 --- beat 336
+
+CHORD (A#1 A#2 F4 A#4 D5) 1/3 measure85
+CHORD (-A#1 -A#2 -F4 -A#4 -D5 F5) 1/3
+CHORD (-A#1 -A#2 -F4 -A#4 -D5) 1/3
+CHORD (-A#1 -A#2 -F4 A#4) 1/3
+CHORD (-A#1 -A#2 -F4 -A#4 D5) 1/3
+CHORD (-A#1 -A#2 -F4 -A#4) 1/3
+CHORD (A2 A3 F4 C5) 1/3
+CHORD (-A2 -A3 -F4 -C5 F5) 1/3
+CHORD (-A2 -A3 -F4 -C5) 1/3
+CHORD (F2 F3 C4 A4 F5) 1/3
+CHORD (-F2 -F3 -C4 -A4 C5 -F5) 1/3
+CHORD (-F2 -F3 -C4 -A4 -F5) 1/3
+
+; ----------- measure 86 --- beat 340
+
+CHORD (G2 G3 A#3 D4 A#4 D5) 1/3 measure86
+CHORD (-G2 -G3 -A#3 -D4 -D5) 1/3
+CHORD (-G2 -G3 -A#3 -D4 A#4 -D5) 1/3
+CHORD (A#2 A#3 D4 G4 -D5) 1/3
+CHORD (-A#2 -A#3 -D4 -G4 A#4 -D5) 1/6
+CHORD (-A#2 -A#3 -D4 -G4 -A#4 C5) 1/6
+CHORD (-A#2 -A#3 -D4 -G4 -C5) 1/3
+CHORD (C3 C4 E4 A#4) 1/3
+CHORD (-C3 -C4 -E4 G4 -A#4) 1/3
+CHORD (-C3 -C4 -E4 -A#4) 1/3
+CHORD (E2 E3 C4 G4 -A#4) 1/3
+CHORD (-E2 -E3 -C4 -G4 -A#4 C5) 1/6
+CHORD (-E2 -E3 -C4 -G4 C5) 1/6
+CHORD (-E2 -E3 -C4 -G4 -C5) 1/3
+
+; ----------- measure 87 --- beat 344
+
+CHORD (F2 F3 -C4 F4 A4) 1/3 measure87
+CHORD (-F2 -F3 -C4 -F4 -A4 C5) 1/6
+CHORD (-F2 -F3 -C4 -F4 A#4 -C5) 1/6
+CHORD (-F2 -F3 -C4 -F4 A4 -A#4) 1/3
+CHORD (A1 A2 F4 C5) 1/3
+CHORD (-A1 -A2 -F4 -C5 F5) 1/3
+CHORD (-A1 -A2 -F4 -C5) 1/12
+CHORD (-A1 -A2 F4 -C5) 1/4
+CHORD (A#1 A#2 D4 -F4 -C5 D5) 1/3
+CHORD (-A#1 -A#2 -F4 A#4 -C5 -D5) 1/3
+CHORD (-A#1 -A#2 -F4 -C5 -D5) 1/3
+CHORD (A#2 A#3 G4 A#4 G5) 1/3
+CHORD (-A#2 -A#3 -G4 -A#4 A#5) 1/3
+CHORD (-A#2 -A#3 -G4 -A#4 G5) 1/12
+CHORD (-A#2 -A#3 -G4 -A#4 G5) 1/4
+
+; ----------- measure 88 --- beat 348
+
+CHORD (C3 C4 -G4 -A#4 E5) 1/3 measure88
+CHORD (-C3 -C4 -G4 -A#4 C5 -E5) 1/3
+CHORD (-C3 -C4 -G4 -A#4 -E5) 1/12
+CHORD (-C3 -C4 G4 C5 -E5) 1/4
+CHORD (A2 A3 C4 A4 F5) 1/3
+CHORD (-A2 -A3 -C4 -A4 C5 -F5) 1/3
+CHORD (-A2 -A3 -C4 -A4 -F5) 1/12
+CHORD (-A2 -A3 -C4 F4 A#4 -F5) 1/4
+CHORD (A#2 A#3 D4 F4 G4 D5) 1/3
+CHORD (-A#2 -A#3 -D4 -F4 -G4 E5) 1/3
+CHORD (-A#2 -A#3 -D4 -F4 -G4 F5) 1/3
+CHORD (C3 C4 E4 -G4 C5) 1/3
+CHORD (-C3 -C4 -E4 -G4 F5) 1/6
+CHORD (-C3 A#3 -C4 -E4 F4 -F5) 1/6
+CHORD (-C3 -A#3 -C4 -E4 -F4 E5) 1/3
+
+; ----------- measure 89 --- beat 352
+
+CHORD (F2 F3 A3 F4 F5) 1/3 measure89
+CHORD (-F2 -F3 -A3 -F4) 1/3
+CHORD (-F2 -F3 -A3 -F4 G4) 1/3
+CHORD (-F2 -F3 -A3 -F4 A4) 1/3
+CHORD (-F2 -F3 -A3 -F4 A#4) 1/3
+CHORD (-F2 -F3 -A3 -F4 C5) 1/3
+CHORD (D2 D3 A#3 F4) 1/3
+CHORD (-D2 -D3 -A#3 -F4 G4) 1/3
+CHORD (-D2 -D3 -A#3 -F4 A4) 1/3
+CHORD (A#1 A#2 D4 F4 A#4) 1/3
+CHORD (-A#1 -A#2 -D4 -F4 -A#4 C5) 1/3
+CHORD (-A#1 -A#2 -D4 -F4 -A#4 D5) 1/3
+
+; ----------- measure 90 --- beat 356
+
+CHORD (D#2 D#3 D#4 G4) 1/3 measure90
+CHORD (-D#2 -D#3 -D#4 -G4 A4) 1/3
+CHORD (-D#2 -D#3 -D#4 -G4 A#4) 1/3
+CHORD (C2 C3 D#4 G4 C5) 1/3
+CHORD (-C2 -C3 -D#4 -G4 -C5 D5) 1/3
+CHORD (-C2 -C3 -D#4 -G4 -C5 D#5) 1/3
+CHORD (F2 F3 C4 F4 A4) 1/3
+CHORD (-F2 -F3 -C4 -F4 -A4 A#4) 1/3
+CHORD (-F2 -F3 -C4 -F4 -A4 C5) 1/3
+CHORD (D2 D3 F4 A4 D5) 1/3
+CHORD (-D2 -D3 -F4 -A4 -D5 D#5) 1/3
+CHORD (-D2 -D3 -F4 -A4 -D5 F5) 1/3
+
+; ----------- measure 91 --- beat 360
+
+CHORD (G2 G3 D4 G4 B4) 1/3 measure91
+CHORD (-G2 -G3 -D4 -G4 -B4 C5) 1/3
+CHORD (-G2 -G3 -D4 -G4 -B4 D5) 1/3
+CHORD (D#2 D#3 -G4 D#5 G5) 1/3
+CHORD (-D#2 -D#3 -G4 F5 -G5) 1/6
+CHORD (-D#2 -D#3 G4 -F5 -G5) 1/6
+CHORD (-D#2 -D#3 -G4 -G5) 1/3
+CHORD (G#2 G#3 D#4 C5 -G5) 1/3
+CHORD (-G#2 -G#3 -D#4 -C5 D5 -G5) 1/3
+CHORD (-G#2 -G#3 -D#4 -C5 D#5 -G5) 1/12
+CHORD (-G#2 -G#3 -D#4 C5 -D#5) 1/4
+CHORD (F2 F3 G#4 -C5 F5) 1/3
+CHORD (-F2 -F3 -G#4 -C5 -F5 G5) 1/6
+CHORD (-F2 -F3 -G#4 D5 -F5 -G5) 1/6
+CHORD (-F2 -F3 -G#4 -D5 -F5 G#5) 1/12
+CHORD (-F2 -F3 -G#4 -D5 F5 -G#5) 1/4
+
+; ----------- measure 92 --- beat 364
+
+CHORD (G2 G3 G4 B4 F5) 1/3 measure92
+CHORD (-G2 -G3 -G4 A4 -B4 -F5) 1/3
+CHORD (-G2 -G3 G4 -B4 -F5) 1/12
+CHORD (B2 B3 -G4 -B4 D5) 1/4
+CHORD (C3 C4 G4 C5 D#5) 1/3
+CHORD (-C3 -C4 -G4 A#4 -D#5) 1/3
+CHORD (-C3 -C4 -G4 G#4 -D#5) 1/12
+CHORD (F2 F3 -C4 G#4 C5) 1/4
+CHORD (G2 G3 G4 B4) 1/3
+CHORD (-G2 -G3 F4 -G4 -B4) 1/3
+CHORD (-G2 -G3 D#4 -G4 -B4) 1/3
+CHORD (G1 G2 -G3 D4 -G4 -B4) 1/3
+CHORD (-G1 -G2 -G3 -G4 -B4 C5) 1/6
+CHORD (-G1 -G2 G3 F4 C5) 1/6
+CHORD (-G1 -G2 -G3 -F4 B4 -C5) 1/3
+
+; ----------- measure 93 --- beat 368
+
+CHORD (C2 C3 G3 D#4 C5) 1/3 measure93
+CHORD (-C2 -C3 -G3 -D#4 G4 -C5) 1/3
+CHORD (-C2 -C3 -G3 -D#4 F4 -C5) 1/3
+CHORD (-C2 -C3 -G3 -D#4 -C5) 1/3
+CHORD (-C2 -C3 -G3 D4 -D#4 -C5) 1/3
+CHORD (-C2 -C3 -G3 C4 -D#4 -C5) 1/3
+CHORD (D2 D3 F4 A#4 D5 F5) 1/3
+CHORD (-D2 -D3 -A#4 -D5 -F5) 1/3
+CHORD (-D2 -D3 -A#4 -D5 -F5) 1/3
+CHORD (D#2 D#3 G4 C5 D#5) 1/3
+CHORD (-D#2 -D#3 -G4 -C5 -D#5 F5) 1/3
+CHORD (-D#2 -D#3 -G4 -C5 D5 -D#5) 1/12
+CHORD (-D#2 -D#3 -G4 A#4 D5) 1/4
+
+; ----------- measure 94 --- beat 372
+
+CHORD (F2 F3 C4 A4 C5) 1/3 measure94
+CHORD (-F2 -F3 -C4 F4 -A4 -C5) 1/3
+CHORD (-F2 -F3 -C4 G4 -A4 -C5) 1/3
+CHORD (-F2 -F3 -C4 -A4 -C5) 1/3
+CHORD (-F2 -F3 -C4 G4 -A4 -C5) 1/3
+CHORD (-F2 -F3 -C4 F4 -A4 -C5) 1/3
+CHORD (D2 D3 F4 A#4 D5) 1/3
+CHORD (-D2 -D3 -F4 -A#4 C5 -D5) 1/3
+CHORD (-D2 -D3 -F4 -A#4 -D5) 1/3
+CHORD (D#2 D#3 D#4 G4 C5) 1/3
+CHORD (-D#2 -D#3 -D#4 -G4 -C5 D5) 1/3
+CHORD (-D#2 -D#3 -D#4 -G4 A#4 -C5) 1/12
+CHORD (-D#2 -D#3 D4 -G4 A#4) 1/4
+
+; ----------- measure 95 --- beat 376
+
+CHORD (F2 F3 C4 F4 A4) 1/3 measure95
+CHORD (-F2 -F3 -C4 -F4 -A4) 1/3
+CHORD (-F2 -F3 -C4 -F4 G4 -A4) 1/3
+CHORD (-F2 -F3 -C4 -F4 -A4) 1/3
+CHORD (-F2 -F3 -C4 -F4 G4 -A4) 1/3
+CHORD (-F2 -F3 -C4 -F4 -A4) 1/3
+CHORD (A#1 A#2 A#3 D5 A#5) 1/3
+CHORD (-A#1 -A#2 -A#3 -D5 F5 -A#5) 1/3
+CHORD (-A#1 -A#2 -A#3 -D5 -A#5) 1/3
+CHORD (C2 C3 D#4 D#5 A5) 1/3
+CHORD (-C2 -C3 -D#4 -D#5 -A5 A#5) 1/3
+CHORD (-C2 -C3 -D#4 -D#5 G5 -A5) 1/12
+CHORD (-C2 -C3 -D#4 -D#5 G5) 1/4
+
+; ----------- measure 96 --- beat 380
+
+CHORD (D2 D3 A#4 D5 F5) 1/3 measure96
+CHORD (-D2 -D3 -A#4 -D5 -F5 G5) 1/3
+CHORD (-D2 -D3 -A#4 -D5 -F5) 1/3
+CHORD (D#2 D#3 G4 C5 D#5) 1/3
+CHORD (-D#2 -D#3 -G4 -C5 -D#5 F5) 1/3
+CHORD (-D#2 -D#3 -G4 -C5 D5 -D#5) 1/12
+CHORD (-D#2 -D#3 -G4 A#4 D5) 1/4
+CHORD (F2 F3 C4 A4 C5) 1/3
+CHORD (-F2 -F3 -C4 -A4 -C5) 1/3
+CHORD (-F2 -F3 -C4 -A4 -C5) 1/3
+CHORD (A2 A3 C4 F4 -C5 F5) 1/3
+CHORD (-A2 -A3 -C4 -F4 -C5) 1/6
+CHORD (-A2 -A3 -C4 -F4 -C5 D5) 1/6
+CHORD (-A2 -A3 -C4 -F4 -D5 F5) 1/12
+CHORD (-A2 -A3 -C4 -F4 D#5 -F5) 1/4
+
+; ----------- measure 97 --- beat 384
+
+CHORD (A#2 A#3 F4 D5) 1/3 measure97
+CHORD (-A#2 -A#3 -F4 -D5 F5) 1/3
+CHORD (-A#2 -A#3 -F4 -D5) 1/3
+CHORD (D2 D3 F4 A#4 D#5) 1/3
+CHORD (-D2 -D3 -F4 -A#4 D5 -D#5) 1/3
+CHORD (-D2 -D3 -F4 -A#4 -D#5) 1/12
+CHORD (-D2 -D3 -F4 -A#4 F5) 1/4
+CHORD (D#2 D#3 D#4 G4 C5) 1/3
+CHORD (-D#2 -D#3 D#4 -G4 -C5) 1/3
+CHORD (-D#2 -D#3 -D#4 -G4 -C5) 1/3
+CHORD (C2 C3 D#4 -C5) 1/3
+CHORD (-C2 -C3 -D#4 -C5 D#5) 1/6
+CHORD (-C2 -C3 -D#4 -C5 D5 -D#5) 1/6
+CHORD (-C2 -C3 -D#4 -C5 -D5) 1/3
+
+; ----------- measure 98 --- beat 388
+
+CHORD (F2 F3 F4 A4 D#5) 1/3 measure98
+CHORD (-F2 -F3 -F4 -A4 -D#5 F5) 1/3
+CHORD (-F2 -F3 -F4 -A4 -D#5) 1/12
+CHORD (-F2 -F3 -F4 -A4 C5 -D#5) 1/4
+CHORD (A#1 A#2 F4 A#4 D5) 1/3
+CHORD (-A#1 -A#2 -F4 -A#4 -D5 A#5) 1/3
+CHORD (-A#1 -A#2 -F4 -A#4 -D5) 1/12
+CHORD (-A#1 -A#2 -F4 -A#4 -D5 D#5) 1/4
+CHORD (F2 F3 F4 -A#4 C5) 1/3
+CHORD (-F2 -F3 -F4 -A#4 -C5 D5) 1/3
+CHORD (-F2 -F3 -F4 -A#4 -C5) 1/3
+CHORD (F1 F2 C4 F4 A4 -C5) 1/3
+CHORD (-F1 -F2 -C4 -A4 A#4 -C5) 1/6
+CHORD (-F1 -F2 -C4 -A4 A#4) 1/6
+CHORD (-F1 -F2 -C4 -A4 -A#4) 1/3
+
+; ----------- measure 99 --- beat 392
+
+CHORD (A#1 A#2 D4 A#4) 1/3 measure99
+CHORD (-A#1 -A#2 -D4 F4 -A#4) 1/3
+CHORD (-A#1 -A#2 -D4 D#4 -A#4) 1/3
+CHORD (-A#1 -A#2 D4 -A#4) 1/3
+CHORD (-A#1 -A#2 C4 -D4 -A#4) 1/3
+CHORD (-A#1 -A#2 A#3 -D4 -A#4) 1/3
+CHORD (D2 D3 A#3 F4) 1/3
+CHORD (-D2 -D3 -A#3 -F4 G4) 1/3
+CHORD (-D2 -D3 -A#3 -F4 A4) 1/3
+CHORD (A#1 A#2 D4 F4 A#4) 1/3
+CHORD (-A#1 -A#2 -D4 -F4 -A#4 C5) 1/3
+CHORD (-A#1 -A#2 -D4 -F4 -A#4 D5) 1/3
+
+; ----------- measure 100 --- beat 396
+
+CHORD (D#2 D#3 D#4 G4) 1/3 measure100
+CHORD (-D#2 -D#3 -D#4 -G4 A4) 1/3
+CHORD (-D#2 -D#3 -D#4 -G4 A#4) 1/3
+CHORD (C2 C3 D#4 G4 C5) 1/3
+CHORD (-C2 -C3 -D#4 -G4 -C5 D5) 1/3
+CHORD (-C2 -C3 -D#4 -G4 -C5 D#5) 1/3
+CHORD (F2 F3 C4 F4 A4) 1/3
+CHORD (-F2 -F3 -C4 -F4 -A4 A#4) 1/3
+CHORD (-F2 -F3 -C4 -F4 -A4 C5) 1/3
+CHORD (D2 D3 F4 A4 D5) 1/3
+CHORD (-D2 -D3 -F4 -A4 -D5 D#5) 1/3
+CHORD (-D2 -D3 -F4 -A4 -D5 F5) 1/3
+
+; ----------- measure 101 --- beat 400
+
+CHORD (G2 G3 D4 G4 B4) 1/3 measure101
+CHORD (-G2 -G3 -D4 -G4 -B4 C5) 1/3
+CHORD (-G2 -G3 -D4 -G4 -B4 D5) 1/3
+CHORD (D#2 D#3 -G4 D#5 G5) 1/3
+CHORD (-D#2 -D#3 -G4 F5 -G5) 1/6
+CHORD (-D#2 -D#3 G4 -F5 -G5) 1/6
+CHORD (-D#2 -D#3 -G4 -G5) 1/3
+CHORD (G#2 G#3 D#4 C5 -G5) 1/3
+CHORD (-G#2 -G#3 -D#4 -C5 D5 -G5) 1/3
+CHORD (-G#2 -G#3 -D#4 -C5 D#5 -G5) 1/12
+CHORD (-G#2 -G#3 -D#4 C5 -D#5) 1/4
+CHORD (F2 F3 G#4 -C5 F5) 1/3
+CHORD (-F2 -F3 -G#4 -C5 -F5 G5) 1/6
+CHORD (-F2 -F3 -G#4 D5 -F5 -G5) 1/6
+CHORD (-F2 -F3 -G#4 -D5 -F5 G#5) 1/12
+CHORD (-F2 -F3 -G#4 -D5 F5 -G#5) 1/4
+
+; ----------- measure 102 --- beat 404
+
+CHORD (G2 G3 G4 B4 F5) 1/3 measure102
+CHORD (-G2 -G3 -G4 A4 -B4 -F5) 1/3
+CHORD (-G2 -G3 G4 -B4 -F5) 1/12
+CHORD (B2 B3 -G4 -B4 D5) 1/4
+CHORD (C3 C4 G4 C5 D#5) 1/3
+CHORD (-C3 -C4 -G4 A#4 -D#5) 1/3
+CHORD (-C3 -C4 -G4 G#4 -D#5) 1/12
+CHORD (F2 F3 -C4 G#4 C5) 1/4
+CHORD (G2 G3 G4 B4) 1/3
+CHORD (-G2 -G3 F4 -G4 -B4) 1/3
+CHORD (-G2 -G3 D#4 -G4 -B4) 1/3
+CHORD (G1 G2 -G3 D4 -G4 -B4) 1/3
+CHORD (-G1 -G2 -G3 -G4 -B4 C5) 1/6
+CHORD (-G1 -G2 G3 F4 C5) 1/6
+CHORD (-G1 -G2 -G3 -F4 B4 -C5) 1/3
+
+; ----------- measure 103 --- beat 408
+
+CHORD (C2 C3 G3 D#4 C5) 1/3 measure103
+CHORD (-C2 -C3 -G3 -D#4 G4 -C5) 1/3
+CHORD (-C2 -C3 -G3 -D#4 F4 -C5) 1/3
+CHORD (-C2 -C3 -G3 -D#4 -C5) 1/3
+CHORD (-C2 -C3 -G3 D4 -D#4 -C5) 1/3
+CHORD (-C2 -C3 -G3 C4 -D#4 -C5) 1/3
+CHORD (D2 D3 F4 A#4 D5 F5) 1/3
+CHORD (-D2 -D3 -A#4 -D5 -F5) 1/3
+CHORD (-D2 -D3 -A#4 -D5 -F5) 1/3
+CHORD (D#2 D#3 G4 C5 D#5) 1/3
+CHORD (-D#2 -D#3 -G4 -C5 -D#5 F5) 1/3
+CHORD (-D#2 -D#3 -G4 -C5 D5 -D#5) 1/12
+CHORD (-D#2 -D#3 -G4 A#4 D5) 1/4
+
+; ----------- measure 104 --- beat 412
+
+CHORD (F2 F3 C4 A4 C5) 1/3 measure104
+CHORD (-F2 -F3 -C4 F4 -A4 -C5) 1/3
+CHORD (-F2 -F3 -C4 G4 -A4 -C5) 1/3
+CHORD (-F2 -F3 -C4 -A4 -C5) 1/3
+CHORD (-F2 -F3 -C4 G4 -A4 -C5) 1/3
+CHORD (-F2 -F3 -C4 F4 -A4 -C5) 1/3
+CHORD (D2 D3 F4 A#4 D5) 1/3
+CHORD (-D2 -D3 -F4 -A#4 C5 -D5) 1/3
+CHORD (-D2 -D3 -F4 -A#4 -D5) 1/3
+CHORD (D#2 D#3 D#4 G4 C5) 1/3
+CHORD (-D#2 -D#3 -D#4 -G4 -C5 D5) 1/3
+CHORD (-D#2 -D#3 -D#4 -G4 A#4 -C5) 1/12
+CHORD (-D#2 -D#3 D4 -G4 A#4) 1/4
+
+; ----------- measure 105 --- beat 416
+
+CHORD (F2 F3 C4 F4 A4) 1/3 measure105
+CHORD (-F2 -F3 -C4 -F4 -A4) 1/3
+CHORD (-F2 -F3 -C4 -F4 G4 -A4) 1/3
+CHORD (-F2 -F3 -C4 -F4 -A4) 1/3
+CHORD (-F2 -F3 -C4 -F4 G4 -A4) 1/3
+CHORD (-F2 -F3 -C4 -F4 -A4) 1/3
+CHORD (A#1 A#2 A#3 D5 A#5) 1/3
+CHORD (-A#1 -A#2 -A#3 -D5 F5 -A#5) 1/3
+CHORD (-A#1 -A#2 -A#3 -D5 -A#5) 1/3
+CHORD (C2 C3 D#4 D#5 A5) 1/3
+CHORD (-C2 -C3 -D#4 -D#5 -A5 A#5) 1/3
+CHORD (-C2 -C3 -D#4 -D#5 G5 -A5) 1/12
+CHORD (-C2 -C3 -D#4 -D#5 G5) 1/4
+
+; ----------- measure 106 --- beat 420
+
+CHORD (D2 D3 A#4 D5 F5) 1/3 measure106
+CHORD (-D2 -D3 -A#4 -D5 -F5 G5) 1/3
+CHORD (-D2 -D3 -A#4 -D5 -F5) 1/3
+CHORD (D#2 D#3 G4 C5 D#5) 1/3
+CHORD (-D#2 -D#3 -G4 -C5 -D#5 F5) 1/3
+CHORD (-D#2 -D#3 -G4 -C5 D5 -D#5) 1/12
+CHORD (-D#2 -D#3 -G4 A#4 D5) 1/4
+CHORD (F2 F3 C4 A4 C5) 1/3
+CHORD (-F2 -F3 -C4 -A4 -C5) 1/3
+CHORD (-F2 -F3 -C4 -A4 -C5) 1/3
+CHORD (A2 A3 C4 F4 -C5 F5) 1/3
+CHORD (-A2 -A3 -C4 -F4 -C5) 1/6
+CHORD (-A2 -A3 -C4 -F4 -C5 D5) 1/6
+CHORD (-A2 -A3 -C4 -F4 -D5 F5) 1/12
+CHORD (-A2 -A3 -C4 -F4 D#5 -F5) 1/4
+
+; ----------- measure 107 --- beat 424
+
+CHORD (A#2 A#3 F4 D5) 1/3 measure107
+CHORD (-A#2 -A#3 -F4 -D5 F5) 1/3
+CHORD (-A#2 -A#3 -F4 -D5) 1/3
+CHORD (D2 D3 F4 A#4 D#5) 1/3
+CHORD (-D2 -D3 -F4 -A#4 D5 -D#5) 1/3
+CHORD (-D2 -D3 -F4 -A#4 -D#5) 1/12
+CHORD (-D2 -D3 -F4 -A#4 F5) 1/4
+CHORD (D#2 D#3 D#4 G4 C5) 1/3
+CHORD (-D#2 -D#3 D#4 -G4 -C5) 1/3
+CHORD (-D#2 -D#3 -D#4 -G4 -C5) 1/3
+CHORD (C2 C3 D#4 -C5) 1/3
+CHORD (-C2 -C3 -D#4 -C5 D#5) 1/6
+CHORD (-C2 -C3 -D#4 -C5 D5 -D#5) 1/6
+CHORD (-C2 -C3 -D#4 -C5 -D5) 1/3
+
+; ----------- measure 108 --- beat 428
+
+CHORD (F2 F3 F4 A4 D#5) 1/3 measure108
+CHORD (-F2 -F3 -F4 -A4 -D#5 F5) 1/3
+CHORD (-F2 -F3 -F4 -A4 -D#5) 1/12
+CHORD (-F2 -F3 -F4 -A4 C5 -D#5) 1/4
+CHORD (A#1 A#2 F4 A#4 D5) 1/3
+CHORD (-A#1 -A#2 -F4 -A#4 -D5 A#5) 1/3
+CHORD (-A#1 -A#2 -F4 -A#4 -D5) 1/12
+CHORD (-A#1 -A#2 -F4 -A#4 -D5 D#5) 1/4
+CHORD (F2 F3 F4 -A#4 C5) 1/3
+CHORD (-F2 -F3 -F4 -A#4 -C5 D5) 1/3
+CHORD (-F2 -F3 -F4 -A#4 -C5) 1/3
+CHORD (F1 F2 C4 F4 A4 -C5) 1/3
+CHORD (-F1 -F2 -C4 -A4 A#4 -C5) 1/6
+CHORD (-F1 -F2 -C4 -A4 A#4) 1/6
+CHORD (-F1 -F2 -C4 -A4 -A#4) 1/3
+
+; ----------- measure 109 --- beat 432
+
+CHORD (A#1 A#2 D4 A#4) 2 measure109

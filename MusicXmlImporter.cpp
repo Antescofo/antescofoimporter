@@ -20,20 +20,63 @@
 #include "BeatPerMinute.h"
 #include "Measure.h"
 #include "Repeat.h"
+#include "Pitch.h"
+#include "SimpleRational.h"
 #include "extract.h"
 #include <math.h>
 #include <sstream>
 #include <fstream>
+#include <algorithm>
 #include "ConvertUTF.h"
 
 using namespace antescofo;
 using namespace std;
 
+struct MusicXMLaccidental { const char* s; float a;};
+static const MusicXMLaccidental MusicXMLaccidentals [] =
+{
+    { "sharp", 1. },
+    { "natural", 0. },
+    { "flat", -1. },
+    { "double-sharp", 2. },
+    { "sharp-sharp", 2. },
+    { "flat-flat", -2. },
+    { "natural-sharp", 1. },
+    { "natural-flat", -1. },
+    { "quarter-flat", -0.5 },
+    { "quarter-sharp", 0.5 },
+    { "three-quarters-flat", -1.5 },
+    { "three-quarters-sharp", -1.5 },
+    { "sharp-down", 0.8 },
+    { "sharp-up", 1.2 },
+    { "natural-down", -0.2 },
+    { "natural-up", 0.2 },
+    { "flat-down", -1.2 },
+    { "flat-up", -0.8 },
+    { "triple-sharp", 3. },
+    { "triple-flat", -3. },
+    { "slash-quarter-sharp", 0.3 },
+    { "slash-sharp", 0.3 },
+    { "slash-flat", -0.3 },
+    { "double-slash-flat", -0.3 },
+    { "sharp-1", 1. },
+    { "sharp-2", 1. },
+    { "sharp-3", 1. },
+    { "sharp-5", 1. },
+    { "flat-1", -1. },
+    { "flat-2", -1. },
+    { "flat-3", -1. },
+    { "flat-4", -1. },
+    { "sori", 0.5 },
+    { "koron", -0.5 },
+    { nullptr, 0.}
+};
+
 MusicXmlImporter::MusicXmlImporter( ImporterWrapper& wrapper ) :
     wrapper_                ( wrapper ),
     model_                  ( wrapper_.getModel() ),
     compressedXML_          ( false ),
-    currentMeasure_         ( 0 ),
+    currentMeasure_         ( 0. ),
     currentKeyAccidentals_  ( 0 ),
     currentVoice_           ( 0 ),
     currentTrillVoice_      ( 0 ),
@@ -41,9 +84,12 @@ MusicXmlImporter::MusicXmlImporter( ImporterWrapper& wrapper ) :
     currentMeasureDuration_ ( 0.0 ),
     accumGlobal_            ( 0.0 ),
     accumLocal_             ( 0.0 ),
+    currentChromaticTransposition_  ( 0 ),
+    currentDiatonicTransposition_   ( 0 ),
     currentDivision_        ( 1 ),
     currentRepeatNoteAmount_( 0 ),
     currentMetricFactor_    ( 1.0 ),
+    currentIntMetricFactor_ ( 3 ),
     currentQuarterNoteTempo_( 0.0 ),
     currentOriginalBeats_   ( 0.0 ),
     currentOriginalBase_    ( 0.0 ),
@@ -60,17 +106,20 @@ MusicXmlImporter::~MusicXmlImporter()
 void MusicXmlImporter::clear()
 {
     compressedXML_ = false;
-    currentMeasure_ = 0;
+    currentMeasure_ = 0.;
     currentKeyAccidentals_ = 0;
     currentVoice_ = 0;
     currentTrillVoice_ = 0;
     currentNoteFeatures_ = None;
     currentMeasureDuration_  = 0.0;
+    currentChromaticTransposition_ = 0;
+    currentDiatonicTransposition_ = 0;
     accumGlobal_ = 0.0;
     accumLocal_ = 0.0;
     currentDivision_ = 1;
     currentRepeatNoteAmount_ = 0;
     currentMetricFactor_ = 1.0;
+    currentIntMetricFactor_ = 3;
     currentQuarterNoteTempo_ = 0.0;
     currentOriginalBeats_ = 0.0;
     currentOriginalBase_ = 0.0;
@@ -156,6 +205,63 @@ bool MusicXmlImporter::openDocument( TiXmlDocument& musicXML )
     return loaded;
 }
 
+bool MusicXmlImporter::retrieveScoreInfo( TiXmlNode* root )
+{
+    if ( !root )
+        return false;
+    if ( const char* versionAttribute = root->ToElement()->Attribute( "version" ) )
+    {
+        string version ( versionAttribute );
+        version = "MusicXML version " + version;
+        if ( compressedXML_ )
+            version += " (compressed file)";
+        model_.setVersion( version );
+    }
+    TiXmlNode* identification = root->FirstChildElement( "identification" );
+    if ( identification )
+    {
+        TiXmlNode* encoding = identification->FirstChildElement( "encoding" );
+        
+        if ( encoding )
+        {
+            TiXmlNode* software = encoding->FirstChildElement( "software" );
+            if ( software )
+            {
+                string content;
+                while ( software )
+                {
+                    if ( content.size() )
+                        content += " ~ ";
+                    content += software->ToElement()->GetText();
+                    software = encoding->IterateChildren( "software", software );
+                }
+                if ( content.size() )
+                    content = "exported from " + content;
+                model_.setFileOrigin( content );
+            }
+        }
+    }
+    
+    TiXmlNode* credit = root->FirstChildElement( "credit" );
+    if ( credit )
+    {
+        TiXmlNode* creditWords = credit->FirstChildElement( "credit-words" );
+        if ( creditWords )
+        {
+            string content;
+            while ( creditWords )
+            {
+                if ( content.size() )
+                    content += " ~ ";
+                content += creditWords->ToElement()->GetText();
+                creditWords = credit->IterateChildren( "software", creditWords );
+            }
+            model_.setCredits( content );
+        }
+    }
+    return true;
+}
+
 bool MusicXmlImporter::import()
 {
     TiXmlDocument musicXML ( wrapper_.getInputPath() );
@@ -168,65 +274,18 @@ bool MusicXmlImporter::import()
             return false;
         else
         {
-            if ( const char* versionAttribute = root->ToElement()->Attribute( "version" ) )
-            {
-                string version ( versionAttribute );
-                version = "MusicXML version " + version;
-                if ( compressedXML_ )
-                    version += " (compressed file)";
-                model_.setVersion( version );
-            }
-            TiXmlNode* identification = root->FirstChildElement( "identification" );
-            if ( identification )
-            {
-                TiXmlNode* encoding = identification->FirstChildElement( "encoding" );
-                
-                if ( encoding )
-                {
-                    TiXmlNode* software = encoding->FirstChildElement( "software" );
-                    if ( software )
-                    {
-                        string content;
-                        while ( software )
-                        {
-                            if ( content.size() )
-                            content += " ~ ";
-                            content += software->ToElement()->GetText();
-                            software = encoding->IterateChildren( "software", software );
-                        }
-                        if ( content.size() )
-                            content = "exported from " + content;
-                        model_.setFileOrigin( content );
-                    }
-                }
-            }
-            
-            TiXmlNode* credit = root->FirstChildElement( "credit" );
-            if ( credit )
-            {
-                TiXmlNode* creditWords = credit->FirstChildElement( "credit-words" );
-                if ( creditWords )
-                {
-                    string content;
-                    while ( creditWords )
-                    {
-                        if ( content.size() )
-                            content += " ~ ";
-                        content += creditWords->ToElement()->GetText();
-                        creditWords = credit->IterateChildren( "software", creditWords );
-                    }
-                    model_.setCredits( content );
-                }
-            }
+            retrieveScoreInfo( root );
             TiXmlNode* part = root->FirstChildElement( "part" );
             int count = 0;
             while ( part )
             {
-                if ( !tracks_.size() || ( tracks_.size() && find( tracks_.begin(), tracks_.end(), count ) != tracks_.end() ) )
+                if ( !tracks_.size() || ( tracks_.size() && find( tracks_.begin(), tracks_.end(), count + 1 ) != tracks_.end() ) )
                 {
                     if ( wrapper_.isVerbose() )
                         cout << "    ...staff #" << count << endl;
                     currentTrillVoice_ = 0;
+                    currentChromaticTransposition_ = 0;
+                    currentDiatonicTransposition_ = 0;
                     accumLocal_ = 0.0;
                     TiXmlNode* measure = part->FirstChildElement( "measure" );
                     while ( measure )
@@ -235,9 +294,9 @@ bool MusicXmlImporter::import()
                         currentNoteFeatures_ = None;
                         previousDuration_ = 0.0;
                         processMeasure( measure );
-                        //accumLocal_ = 0.0;
                         measure = part->IterateChildren( "measure", measure );
                     }
+                    currentMeasure_ = 0.;
                 }
                 ++count;
                 part = root->IterateChildren( "part", part );
@@ -281,10 +340,16 @@ bool MusicXmlImporter::queryTracks( vector<string>& tracks )
                     string name;
                     if ( partName )
                     {
-                        name = partName->ToElement()->GetText();
+                        const char* content = partName->ToElement()->GetText();
+                        if ( content )
+                            name = content;
                     }
-                    if ( !name.size() )
-                        name = "[staff " + to_string( count ) + "]";
+                    if ( name.size() <= 1 )
+                    {
+                        if ( name.size() == 1 )
+                            name += " ";
+                        name += "[staff " + to_string( count ) + "]";
+                    }
                     tracks.push_back( name );
                     scorePart = partList->IterateChildren( "score-part", scorePart );
                     ++count;
@@ -296,15 +361,49 @@ bool MusicXmlImporter::queryTracks( vector<string>& tracks )
     return false;
 }
 
+bool MusicXmlImporter::queryScoreInfo()
+{
+    TiXmlDocument musicXML ( wrapper_.getInputPath() );
+    bool good = openDocument( musicXML );
+    if ( good )
+    {
+        TiXmlHandle hDocument ( &musicXML );
+        TiXmlElement* root = hDocument.FirstChildElement( "score-partwise" ).Element();
+        if ( !root )
+            return false;
+        else
+        {
+            retrieveScoreInfo( root );
+        }
+    }
+    return good;
+}
+
 void MusicXmlImporter::processMeasure( TiXmlNode* measure )
 {
-    measure->ToElement()->QueryValueAttribute( "number", &currentMeasure_ );
+    float measNumber = 0;
+    float previousMeasureBeats = model_.getMeasureDuration( currentMeasure_ );
+    measure->ToElement()->QueryValueAttribute( "number", &measNumber );
+    if ( measNumber == 0 )
+        currentMeasure_ += 0.5; //convention for pickup measure
+    else
+        currentMeasure_ = measNumber;
     TiXmlNode* attributes = measure->FirstChildElement( "attributes" );
     if ( attributes )
     {
         TiXmlNode* divisions = attributes->FirstChildElement( "divisions" );
         if ( divisions )
             currentDivision_ = atoi( divisions->ToElement()->GetText() );
+        TiXmlNode* transpose = attributes->FirstChildElement( "transpose" );
+        if ( transpose )
+        {
+            TiXmlNode* chromatic = transpose->FirstChildElement( "chromatic" );
+            if ( chromatic )
+                currentChromaticTransposition_ = atoi( chromatic->ToElement()->GetText() );
+            TiXmlNode* diatonic = transpose->FirstChildElement( "diatonic" );
+            if ( diatonic )
+                currentDiatonicTransposition_ = atoi( chromatic->ToElement()->GetText() );
+        }
     }
     TiXmlNode* barline = measure->FirstChildElement( "barline" );
     while ( barline )
@@ -358,13 +457,14 @@ void MusicXmlImporter::processMeasure( TiXmlNode* measure )
         {
             currentTimeSignature_ = signature;
         }
+        accumGlobal_ += previousMeasureBeats; // * currentMetricFactor_; //currentMeasureDuration_
         model_.insertFirstEventInMeasure( new Measure(  currentMeasure_,
                                                       currentMeasureDuration_,
                                                       accumGlobal_,
                                                       currentMetricFactor_,
                                                       currentKeyAccidentals_,
                                                       currentTimeSignature_ ) );
-        accumGlobal_ += currentMeasureDuration_ * currentMetricFactor_;
+        
         TiXmlNode* direction = measure->FirstChildElement( "direction" );
         while ( direction )
         {
@@ -381,13 +481,20 @@ void MusicXmlImporter::processMeasure( TiXmlNode* measure )
     }
     accumLocal_ = 0.0;
     TiXmlNode* item = measure->FirstChild();
+    bool hasNotes = false;
     while ( item )
     {
         if ( !strcmp( item->Value(), "note") || !strcmp( item->Value(), "forward") || !strcmp( item->Value(), "backup") )
         {
             accumLocal_ += processNote( item );
+            hasNotes = true;
         }
         item = measure->IterateChildren( item );
+    }
+    if ( !hasNotes ) //This to take Sibelius' dialect for multimeasure rests into account...
+    {
+        Pitch measureRest ( 0, MeasureRest );
+        model_.addNote( currentMeasure_, accumLocal_, currentMeasureDuration_*currentMetricFactor_, measureRest );
     }
 }
 
@@ -421,23 +528,31 @@ float MusicXmlImporter::processTimeSignature( TiXmlNode* time, string& timeSigna
     }
     float factor = currentMetricFactor_;
     currentMetricFactor_ = 1.0;
-    if ( upper.size() == lower.size() == 1 && upper[0] > 3 && lower[0] >= 8 )
+    currentIntMetricFactor_ = 3;
+    if ( !wrapper_.hasQuarterNoteTempo() && upper.size() == lower.size() == 1 && ( ( upper[0] == 3 && wrapper_.is3_8_compound() ) || upper[0] > 3 ) && lower[0] >= 8 )
     {
         if ( upper[0]%3 == 0 )
         {
             if ( lower[0] == 8 )
+            {
                 currentMetricFactor_ = (float) 2/3 ;
+                currentIntMetricFactor_ = 2;
+            }
             else if ( lower[0] == 16 )
+            {
                 currentMetricFactor_ = (float) 4/3;
+                currentIntMetricFactor_ = 4;
+            }
             else if ( lower[0] == 32 )
+            {
                 currentMetricFactor_ = (float) 8/3;
-            if ( upper[0] == 3 )
-                currentMetricFactor_ = currentMetricFactor_*3;  // NB: 3/8, 3/16, 3/32 times are *not* seen as compound.
+                currentIntMetricFactor_ = 3;
+            }
         }
     }
     if ( currentQuarterNoteTempo_ != 0.0 && factor != currentMetricFactor_ )
     {
-        model_.appendEvent( new BeatPerMinute( currentMeasure_, currentQuarterNoteTempo_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_ ) );
+        model_.appendEvent( new BeatPerMinute( currentMeasure_, currentQuarterNoteTempo_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_, true ) );
     }
     if ( duration == 0.0 )
         duration = currentMeasureDuration_;
@@ -452,8 +567,8 @@ void MusicXmlImporter::processDirection( TiXmlNode* direction )
         TiXmlNode* metronome = directionType->FirstChildElement( "metronome" );
         if ( metronome )
         {
-            processTempo( metronome );
-            return;
+            if ( processTempo( metronome ) )
+                return;
         }
         directionType = direction->IterateChildren( "direction-type", directionType );
     }
@@ -463,49 +578,56 @@ void MusicXmlImporter::processDirection( TiXmlNode* direction )
     }
 }
 
-void MusicXmlImporter::processTempo( TiXmlNode* item )
+bool MusicXmlImporter::processTempo( TiXmlNode* item )
 {
     float quarterNoteValue = 0.0;
     float quarterBase = 1.0;
-    float beats = 0.0;
+    float beats = -1.0;
     TiXmlNode* beatUnit = item->FirstChildElement( "beat-unit" );
     TiXmlNode* perMinute = item->FirstChildElement( "per-minute" );
     if ( beatUnit && perMinute )
     {
         const char* unit = beatUnit->ToElement()->GetText();
-        if ( strcmp(unit, "whole") == 0 )
+        if ( unit )
         {
-            quarterBase = 4.0;
-        }
-        else if ( strcmp(unit, "half") == 0 )
-        {
-            quarterBase = 2;
-        }
-        else if ( strcmp(unit, "eighth") == 0 )
-        {
-            quarterBase = 0.5;
-        }
-        else if ( strcmp(unit, "16th") == 0 )
-        {
-            quarterBase = 0.25;
+            if ( strcmp(unit, "whole") == 0 )
+            {
+                quarterBase = 4.0;
+            }
+            else if ( strcmp(unit, "half") == 0 )
+            {
+                quarterBase = 2;
+            }
+            else if ( strcmp(unit, "eighth") == 0 )
+            {
+                quarterBase = 0.5;
+            }
+            else if ( strcmp(unit, "16th") == 0 )
+            {
+                quarterBase = 0.25;
+            }
         }
         if ( item->FirstChildElement( "beat-unit-dot" ) != nullptr )
             quarterBase *= 1.5;
         beats = atof( perMinute->ToElement()->GetText() );
+        if ( beats <= 0.0 )
+            return false;
         quarterNoteValue = beats * quarterBase;
     }
     else
     {
-        item->ToElement()->QueryFloatAttribute( "tempo", &quarterNoteValue );
-        beats = quarterNoteValue;
+        if ( item->ToElement()->QueryFloatAttribute( "tempo", &quarterNoteValue ) == TIXML_SUCCESS )
+            beats = quarterNoteValue;
     }
-    if ( quarterNoteValue )
+    if ( quarterNoteValue > 0.0 )
     {
         currentQuarterNoteTempo_ = quarterNoteValue;
         model_.appendEvent( new BeatPerMinute( currentMeasure_, quarterNoteValue * currentMetricFactor_, beats, quarterBase ) );
         currentOriginalBeats_ = beats;
         currentOriginalBase_ = quarterBase;
+        return true;
     }
+    return false;
 }
 
 float MusicXmlImporter::processNote( TiXmlNode* note )
@@ -520,12 +642,14 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
         }
     }
     float duration = 0.0;
+    int intDuration = 0;
     if ( !strcmp( note->Value(), "backup") )
     {
         TiXmlNode* durationNode = note->FirstChildElement( "duration" );
         if ( !durationNode )    //should not happen, but better safe than sorry!
             return 0.0;
-        duration = (float) currentMetricFactor_ * atoi( durationNode->ToElement()->GetText() ) / currentDivision_;
+        intDuration = atoi( durationNode->ToElement()->GetText() );
+        duration = (float) currentMetricFactor_ * intDuration / currentDivision_;
         return -duration;
     }
     EntryFeatures features = None;
@@ -535,43 +659,70 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
         TiXmlNode* durationNode = note->FirstChildElement( "duration" );
         if ( !durationNode )    //should not happen, but better safe than sorry!
             return 0.0;
-        duration = (float) currentMetricFactor_ * atoi( durationNode->ToElement()->GetText() ) / currentDivision_;
+        intDuration = atoi( durationNode->ToElement()->GetText() );
+        duration = (float) currentMetricFactor_ * intDuration / currentDivision_;
     }
     else
-         features |= GraceNote;
+        features |= GraceNote;
+    
+    SimpleRational rationalDuration( intDuration, currentDivision_ );
+    SimpleRational rationalMetricFactor ( currentIntMetricFactor_, 3 );
+    rationalDuration *= rationalMetricFactor;   //so the duration is relative to the current "beat" definition
     TiXmlNode* rest = note->FirstChildElement( "rest" );
     if ( rest )
     {
-        const char* attr = rest->ToElement()->Attribute( "measure" );
-        if ( attr != nullptr && strlen( attr ) > 0)
-            return 0.0;
+        if ( rest->ToElement()->Attribute( "measure" ) != nullptr )
+        {
+            features |= MeasureRest;
+        }
     }
+
     TiXmlNode* pitch = note->FirstChildElement( "pitch" );
     float midiCents = 0.0;
     int diatonicStep = -1;
-    float accidental = 0.0;
+    float displayedAccidental = 0.0;
+    Pitch newNote( 0, features );
     if ( pitch )
     {
         TiXmlNode* tie = note->FirstChildElement( "tie" );
+        TiXmlNode* accidental = note->FirstChildElement( "accidental" );
         TiXmlNode* step = pitch->FirstChildElement( "step" );
         TiXmlNode* octave = pitch->FirstChildElement( "octave" );
         TiXmlNode* alter = pitch->FirstChildElement( "alter" );
         if ( step && octave )
         {
             const char diatonic = step->ToElement()->GetText()[0];
+            newNote.setNoteSymbol( diatonic );
             diatonicStep = diatonic - 'A';
             int oct = atoi( octave->ToElement()->GetText() );
+            newNote.setOctave( oct );
             if ( alter )
             {
-                accidental = atof( alter->ToElement()->GetText() );
+                displayedAccidental = atof( alter->ToElement()->GetText() );
+                newNote.setAccidendal( displayedAccidental );
             }
-            midiCents = getMidiCents( diatonic, oct, accidental );
+            if ( displayedAccidental == 0. && accidental )
+            {
+                const char* textAcc = accidental->ToElement()->GetText();
+                int index = 0;
+                while ( MusicXMLaccidentals[index].s != nullptr )
+                {
+                    if ( strcmp(textAcc, MusicXMLaccidentals[index].s) == 0 )
+                    {
+                        displayedAccidental = MusicXMLaccidentals[index].a;
+                        newNote.resetNote();
+                        break;
+                    }
+                    ++index;
+                }
+            }
+            midiCents = getMidiCents( diatonic, oct, displayedAccidental );
             if ( tie )
             {
               const char* tieType = tie->ToElement()->Attribute( "type" );
               if ( tieType && strcmp( tieType, "stop" ) == 0 )
               {
-                  midiCents = -midiCents;
+                  features |= Tiedbackwards;
               }
             }
         }
@@ -583,7 +734,19 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
         baseDegree -= 4*currentKeyAccidentals_; // same for key with flats
     baseDegree = baseDegree%7;
     int semitoneAfter = 2;
+    bool hasTrueAccidental = false;
+    for ( int i = 1; i <= currentKeyAccidentals_; ++i )
+    {
+        int degree = (diatonicStep - 4*i)%7;
+        if ( degree == 1 )
+        {
+            hasTrueAccidental = true;
+            break;
+        }
+    }
     if ( baseDegree == 1 || baseDegree == 4 )
+        semitoneAfter = 1;
+    else if ( displayedAccidental == 1 && !hasTrueAccidental )
         semitoneAfter = 1;
     TiXmlNode* timeModification = note->FirstChildElement( "time-modification" );
     int actualNotes = 1;
@@ -597,15 +760,12 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
         if ( normal_notes )
             normalNotes = atoi( normal_notes->ToElement()->GetText() );
     }
-    if ( midiCents != 0 && currentTrillVoice_ > 0 && currentTrillVoice_ == currentVoice_ && duration > 0.5 )
+    if ( midiCents > 0 && currentTrillVoice_ > 0 && currentTrillVoice_ == currentVoice_ && duration > 0.5 )
     {
         features |= Trill;
         if ( semitoneAfter == 2 )
             features |= WholeToneTrill;
-        if ( midiCents > 0 )
-            ++midiCents;
-        else
-            --midiCents;
+        ++midiCents;
     }
     TiXmlNode* chord = note->FirstChildElement( "chord" );
     TiXmlNode* notations = note->FirstChildElement( "notations" );
@@ -641,6 +801,7 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
         {
             TiXmlNode* tremolo = ornaments->FirstChildElement( "tremolo" );
             TiXmlNode* trill = ornaments->FirstChildElement( "trill-mark" );
+            TiXmlNode* wavy = ornaments->FirstChildElement( "wavy-line" );
             if ( tremolo )
             {
                 if ( const char* tremoloType = tremolo->ToElement()->Attribute( "type" ) )
@@ -652,13 +813,15 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
                     int strokes = atoi( tremolo->ToElement()->GetText() );
                     if ( ( duration > 0.5 && strokes <= 2 ) || ( duration >= 0.33 && strokes == 1 ))
                     {
-                      int noteDivision = 2;
-                      if ( duration > 0.5 )
-                        noteDivision = duration * strokes * 2;
-                      if ( actualNotes != 1 )
-                        noteDivision = actualNotes;
-                      currentRepeatNoteAmount_ = noteDivision;
-                      return model_.addRepeatedNotes( currentMeasure_, accumLocal_, duration, noteDivision, midiCents );
+                        int noteDivision = 2;
+                        if ( duration > 0.5 )
+                            noteDivision = duration * strokes * 2;
+                        if ( actualNotes != 1 )
+                            noteDivision = actualNotes;
+                        currentRepeatNoteAmount_ = noteDivision;
+                        newNote.setFeatures( features );
+                        newNote.setMidiCents( midiCents );
+                        return model_.addRepeatedNotes( currentMeasure_, accumLocal_, duration, noteDivision, newNote );
                     }
                     features |= FastRepeatedTremolo;
                   }
@@ -667,11 +830,11 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
                     int strokes = atoi( tremolo->ToElement()->GetText() );
                     if ( ( duration*2 > 0.5 && strokes <= 2 ) || ( duration*2 <= 0.5 && strokes == 1 ))
                     {
-                      int noteDivision = 2;
-                      if ( duration > 0.5 )
-                        noteDivision = duration * strokes * 2;
-                      if ( actualNotes != 1 )
-                        noteDivision = actualNotes;
+                      //int noteDivision = 2;
+                      //if ( duration > 0.5 )
+                      //  noteDivision = duration * strokes * 2;
+                      //if ( actualNotes != 1 )
+                      //  noteDivision = actualNotes;
                       //currentRepeatNoteAmount_ = noteDivision;
                       //TODO: measured repeated notes...
                     }
@@ -703,46 +866,54 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
                   }
                 }
             }
-            else if ( trill && midiCents > 0 )
+            else
             {
-                if ( !(features & Trill) )
-                    ++midiCents;    //by this trick, we mark the primary pitch as a trill (ex: 6200 -> 6201)
-                TiXmlNode* accidentalMark = ornaments->FirstChildElement( "accidental-mark" );
-                if ( accidentalMark )
+                bool start = false;
+                bool stop = false;
+                if ( wavy )
                 {
-                    int displayAccidental = 0;
-                    string content = accidentalMark->ToElement()->GetText();
-                    if ( content == "sharp" )
-                        displayAccidental = 1;
-                    else if ( content == "double-sharp" )
-                        displayAccidental = 2;
-                    else if ( content == "natural" )
-                        displayAccidental = 0;
-                    else if ( content == "flat" )
-                        displayAccidental = -1;
-                    else if ( content == "double-flat" )
-                        displayAccidental = -2;
-                    if ( ( accidental - displayAccidental == -1 ) || ( accidental == -1 && displayAccidental == -1 ))
-                        semitoneAfter = 2;
-                    else if ( ( accidental - displayAccidental == 1 ) ||
-                         ( semitoneAfter == 2 && displayAccidental == -1 ) )
-                        semitoneAfter = 1;
+                    string type = wavy->ToElement()->Attribute( "type" );
+                    start = ( type == "start" /*|| type == "continue"*/ );
+                    stop = ( type == "stop" );
+                    if ( start )
+                        currentTrillVoice_ = currentVoice_;
+                    if ( stop && !start)
+                        currentTrillVoice_ = 0;
                 }
-                features |= Trill;
-                if ( semitoneAfter == 2 )
-                    features |= WholeToneTrill;
-            }
-            
-            TiXmlNode* wavy = ornaments->FirstChildElement( "wavy-line" );
-            if ( wavy )
-            {
-                string type = wavy->ToElement()->Attribute( "type" );
-                bool start = ( type == "start" || type == "continue" );
-                bool stop = ( type == "stop" );
-                if ( start )
-                    currentTrillVoice_ = currentVoice_;
-                if ( stop && !start)
-                    currentTrillVoice_ = 0;
+                
+                if ( trill || (wavy && !stop && !start && !trill) )
+                {
+                    if ( !(features & Trill) && midiCents > 0 )
+                        ++midiCents;    //by this trick, we mark the primary pitch as a trill (ex: 6200 -> 6201)
+                    
+                    TiXmlNode* accidentalMark = ornaments->FirstChildElement( "accidental-mark" );
+                    if ( accidentalMark )
+                    {
+                        int displayedTrillAccidental = 0;
+                        string content = accidentalMark->ToElement()->GetText();
+                        if ( content == "sharp" )
+                            displayedTrillAccidental = 1;
+                        else if ( content == "double-sharp" )
+                            displayedTrillAccidental = 2;
+                        else if ( content == "natural" )
+                            displayedTrillAccidental = 0;
+                        else if ( content == "flat" )
+                            displayedTrillAccidental = -1;
+                        else if ( content == "double-flat" )
+                            displayedTrillAccidental = -2;
+                        if ( ( displayedAccidental - displayedTrillAccidental == -1 ) ||
+                            ( displayedAccidental == -1 && displayedTrillAccidental == -1 && baseDegree != 1 && baseDegree != 4 )  ||
+                            ( displayedAccidental == 1 && displayedTrillAccidental == 1 && baseDegree != 1 && baseDegree != 4 ) )
+                            semitoneAfter = 2;
+                        else if ( ( displayedAccidental - displayedTrillAccidental == 1 ) ||
+                                 ( semitoneAfter == 2 && displayedTrillAccidental == -1 ) ||
+                                 ( displayedAccidental == -1 && displayedTrillAccidental == -1 && ( baseDegree == 1 || baseDegree == 4 ) ) )
+                            semitoneAfter = 1;
+                    }
+                    features |= Trill;
+                    if ( semitoneAfter == 2 )
+                        features |= WholeToneTrill;
+                }
             }
         }
     }
@@ -782,10 +953,12 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
         {
             features |= TremoloEnd;
         }
+        newNote.setFeatures( features );
+        newNote.setMidiCents( midiCents );
         if ( currentRepeatNoteAmount_ > 0 )
-            model_.addRepeatedNotes( currentMeasure_, accumLocal_ - duration, duration, currentRepeatNoteAmount_, midiCents );
+            model_.addRepeatedNotes( currentMeasure_, accumLocal_ - duration, duration, currentRepeatNoteAmount_, newNote );
         else
-            model_.addNote( currentMeasure_, accumLocal_ - duration, duration, midiCents, features );
+            model_.addNote( currentMeasure_, accumLocal_ - duration, duration, newNote );
         return 0.0;
     }
     else
@@ -795,13 +968,15 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
         if ( features == None )
             currentNoteFeatures_ &= ~(TremoloEnd|AlternateTremolo);
     }
-    duration = model_.addNote( currentMeasure_, accumLocal_, duration, midiCents, features );
+    newNote.setFeatures( features );
+    newNote.setMidiCents( midiCents );
+    duration = model_.addNote( currentMeasure_, accumLocal_, duration, newNote );
     return duration;
 }
 
 int MusicXmlImporter::getMidiCents( const char diatonic, int octave, float accidental ) const
 {
-    int midiCents = midiCents = ( octave + 1 )*12;
+    int midiCents = currentChromaticTransposition_ + ( octave + 1 )*12;
     switch ( diatonic )
     {
         case 'D':

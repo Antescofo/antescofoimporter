@@ -1,0 +1,2403 @@
+; Antescofo score generated using libmusicxml and embedded xml2antescofo converter.
+; Copyright (c) Thomas Coffy - IRCAM 2013
+BPM 120
+
+; ----------- measure 1 --- beat 1
+NOTE 0 3 measure1
+NOTE C5 1/2
+NOTE D5 1/2
+
+; ----------- measure 2 --- beat 5
+NOTE E5 1 measure2
+
+group Cello @tight @local 
+{
+	mnote2 48 75 
+            0.875 mnote2 48 0 
+            0.125 mnote2 36 75 
+            0.875 mnote2 36 0 
+            0.125 mnote2 48 75 
+            0.875 mnote2 48 0 
+            0.125 mnote2 47 75 
+            0.875 mnote2 47 0 
+            0.125 mnote2 45 75 
+            0.875 mnote2 45 0 
+            0.125 mnote2 52 75 
+            0.875 mnote2 52 0 
+            0.125 mnote2 45 75 
+            0.875 mnote2 45 0 
+            0.125 mnote2 52 75 
+            0.875 mnote2 52 0 
+            0.125 mnote2 53 75 
+            0.875 mnote2 53 0 
+            0.125 mnote2 52 75 
+            0.875 mnote2 52 0 
+            0.125 mnote2 50 75 
+            0.875 mnote2 50 0 
+            0.125 mnote2 48 75 
+            0.875 mnote2 48 0 
+            0.125 mnote2 43 72 
+            0.875 mnote2 43 0 
+            0.125 mnote2 38 72 
+            0.875 mnote2 38 0 
+            0.125 mnote2 43 72 
+            1.3125 mnote2 43 0 
+            0.6875 mnote2 48 72 
+            0.875 mnote2 48 0 
+            0.125 mnote2 36 72 
+            0.875 mnote2 36 0 
+            0.125 mnote2 48 72 
+            0.875 mnote2 48 0 
+            0.125 mnote2 47 74 
+            0.875 mnote2 47 0 
+            0.125 mnote2 45 74 
+            0.875 mnote2 45 0 
+            0.125 mnote2 52 74 
+            0.875 mnote2 52 0 
+            0.125 mnote2 45 74 
+            0.875 mnote2 45 0 
+            0.125 mnote2 42 74 
+            0.875 mnote2 42 0 
+            0.125 mnote2 43 74 
+            0.875 mnote2 43 0 
+            0.125 mnote2 48 70 
+            0.875 mnote2 48 0 
+            0.125 mnote2 50 70 
+            0.875 mnote2 50 0 
+            0.125 mnote2 38 70 
+            0.875 mnote2 38 0 
+            0.125 mnote2 43 68 
+            0.875 mnote2 43 0 
+            0.125 mnote2 38 70 
+            0.875 mnote2 38 0 
+            0.125 mnote2 43 64 
+            0.6563 mnote2 43 0 
+            1.3438 mnote2 48 48 
+            0.875 mnote2 48 0 
+            0.125 mnote2 36 46 
+            0.875 mnote2 36 0 
+            0.125 mnote2 48 48 
+            0.875 mnote2 48 0 
+            0.125 mnote2 47 46 
+            0.875 mnote2 47 0 
+            0.125 mnote2 45 45 
+            0.875 mnote2 45 0 
+            0.125 mnote2 52 45 
+            0.875 mnote2 52 0 
+            0.125 mnote2 45 45 
+            0.875 mnote2 45 0 
+            0.125 mnote2 52 46 
+            0.875 mnote2 52 0 
+            0.125 mnote2 53 46 
+            0.875 mnote2 53 0 
+            0.125 mnote2 52 48 
+            0.875 mnote2 52 0 
+            0.125 mnote2 50 46 
+            0.875 mnote2 50 0 
+            0.125 mnote2 48 45 
+            0.875 mnote2 48 0 
+            0.125 mnote2 43 45 
+            0.875 mnote2 43 0 
+            0.125 mnote2 38 46 
+            0.875 mnote2 38 0 
+            0.125 mnote2 43 48 
+            1.166 mnote2 43 0 
+            0.834 mnote2 48 45 
+            0.875 mnote2 48 0 
+            0.125 mnote2 36 45 
+            0.875 mnote2 36 0 
+            0.125 mnote2 48 49 
+            0.875 mnote2 48 0 
+            0.125 mnote2 47 48 
+            0.875 mnote2 47 0 
+            0.125 mnote2 45 46 
+            0.875 mnote2 45 0 
+            0.125 mnote2 52 43 
+            0.875 mnote2 52 0 
+            0.125 mnote2 45 45 
+            0.875 mnote2 45 0 
+            0.125 mnote2 42 46 
+            0.875 mnote2 42 0 
+            0.125 mnote2 43 45 
+            0.875 mnote2 43 0 
+            0.125 mnote2 48 46 
+            0.875 mnote2 48 0 
+            0.125 mnote2 50 45 
+            0.875 mnote2 50 0 
+            0.125 mnote2 38 46 
+            0.875 mnote2 38 0 
+            0.125 mnote2 43 46 
+            0.875 mnote2 43 0 
+            0.125 mnote2 38 46 
+            0.875 mnote2 38 0 
+            0.125 mnote2 43 46 
+            0.583 mnote2 43 0 
+            0.417 mnote2 43 46 
+            0.875 mnote2 43 0 
+            0.125 mnote2 47 44 
+            0.875 mnote2 47 0 
+            0.125 mnote2 43 44 
+            0.875 mnote2 43 0 
+            0.125 mnote2 45 42 
+            0.875 mnote2 45 0 
+            0.125 mnote2 47 42 
+            0.875 mnote2 47 0 
+            0.125 mnote2 48 40 
+            0.875 mnote2 48 0 
+            0.125 mnote2 36 40 
+            0.875 mnote2 36 0 
+            0.125 mnote2 48 42 
+            0.875 mnote2 48 0 
+            0.125 mnote2 52 38 
+            0.875 mnote2 52 0 
+            0.125 mnote2 53 44 
+            0.875 mnote2 53 0 
+            0.125 mnote2 50 47 
+            0.875 mnote2 50 0 
+            0.125 mnote2 52 47 
+            0.875 mnote2 52 0 
+            0.125 mnote2 40 50 
+            0.875 mnote2 40 0 
+            0.125 mnote2 45 48 
+            0.875 mnote2 45 0 
+            0.125 mnote2 52 57 
+            0.875 mnote2 52 0 
+            0.125 mnote2 45 62 
+            0.875 mnote2 45 0 
+            0.125 mnote2 40 88 
+            0.875 mnote2 40 0 
+            0.125 mnote2 41 88 
+            0.875 mnote2 41 0 
+            0.125 mnote2 40 88 
+            0.875 mnote2 40 0 
+            0.125 mnote2 38 93 
+            0.875 mnote2 38 0 
+            0.125 mnote2 36 93 
+            0.875 mnote2 36 0 
+            0.125 mnote2 38 92 
+            0.875 mnote2 38 0 
+            0.125 mnote2 45 86 
+            0.875 mnote2 45 0 
+            0.125 mnote2 50 86 
+            0.875 mnote2 50 0 
+            0.125 mnote2 48 82 
+            0.875 mnote2 48 0 
+            0.125 mnote2 50 75 
+            0.875 mnote2 50 0 
+            0.125 mnote2 48 71 
+            0.875 mnote2 48 0 
+            0.125 mnote2 47 66 
+            0.875 mnote2 47 0 
+            0.125 mnote2 45 61 
+            0.875 mnote2 45 0 
+            0.125 mnote2 43 57 
+            0.875 mnote2 43 0 
+            0.125 mnote2 50 52 
+            0.875 mnote2 50 0 
+            0.125 mnote2 55 47 
+            0.875 mnote2 55 0 
+            0.125 mnote2 52 43 
+            0.875 mnote2 52 0 
+            0.125 mnote2 53 52 
+            0.7285 mnote2 53 0 
+            0.2715 mnote2 41 56 
+            0.875 mnote2 41 0 
+            0.125 mnote2 55 58 
+            0.875 mnote2 55 0 
+            0.125 mnote2 43 60 
+            0.875 mnote2 43 0 
+            0.125 mnote2 57 62 
+            0.875 mnote2 57 0 
+            0.125 mnote2 45 64 
+            0.875 mnote2 45 0 
+            0.125 mnote2 59 65 
+            0.875 mnote2 59 0 
+            0.125 mnote2 47 67 
+            0.875 mnote2 47 0 
+            0.125 mnote2 60 78 
+            0.875 mnote2 60 0 
+            0.125 mnote2 53 82 
+            0.875 mnote2 53 0 
+            0.125 mnote2 55 86 
+            0.875 mnote2 55 0 
+            0.125 mnote2 43 87 
+            0.875 mnote2 43 0 
+            0.125 mnote2 60 80 
+            0.875 mnote2 60 0 
+            0.125 mnote2 55 67 
+            0.875 mnote2 55 0 
+            0.125 mnote2 48 63 
+            0.875 mnote2 48 0 
+            0.125 mnote2 43 47 
+            0.875 mnote2 43 0 
+            0.125 mnote2 47 47 
+            0.875 mnote2 47 0 
+            0.125 mnote2 43 47 
+            0.875 mnote2 43 0 
+            0.125 mnote2 45 43 
+            0.875 mnote2 45 0 
+            0.125 mnote2 47 40 
+            0.875 mnote2 47 0 
+            0.125 mnote2 48 42 
+            0.875 mnote2 48 0 
+            0.125 mnote2 36 40 
+            0.875 mnote2 36 0 
+            0.125 mnote2 48 38 
+            0.875 mnote2 48 0 
+            0.125 mnote2 52 36 
+            0.875 mnote2 52 0 
+            0.125 mnote2 53 39 
+            0.875 mnote2 53 0 
+            0.125 mnote2 50 36 
+            0.875 mnote2 50 0 
+            0.125 mnote2 52 51 
+            0.875 mnote2 52 0 
+            0.125 mnote2 40 48 
+            0.875 mnote2 40 0 
+            0.125 mnote2 45 43 
+            0.875 mnote2 45 0 
+            0.125 mnote2 52 48 
+            0.875 mnote2 52 0 
+            0.125 mnote2 45 48 
+            0.875 mnote2 45 0 
+            0.125 mnote2 40 58 
+            0.875 mnote2 40 0 
+            0.125 mnote2 41 66 
+            0.875 mnote2 41 0 
+            0.125 mnote2 40 66 
+            0.875 mnote2 40 0 
+            0.125 mnote2 38 68 
+            0.875 mnote2 38 0 
+            0.125 mnote2 36 77 
+            0.875 mnote2 36 0 
+            0.125 mnote2 38 82 
+            0.875 mnote2 38 0 
+            0.125 mnote2 45 84 
+            0.875 mnote2 45 0 
+            0.125 mnote2 50 86 
+            0.875 mnote2 50 0 
+            0.125 mnote2 48 74 
+            0.875 mnote2 48 0 
+            0.125 mnote2 50 72 
+            0.875 mnote2 50 0 
+            0.125 mnote2 48 71 
+            0.875 mnote2 48 0 
+            0.125 mnote2 47 67 
+            0.875 mnote2 47 0 
+            0.125 mnote2 45 62 
+            0.875 mnote2 45 0 
+            0.125 mnote2 43 58 
+            0.875 mnote2 43 0 
+            0.125 mnote2 50 56 
+            0.875 mnote2 50 0 
+            0.125 mnote2 55 58 
+            0.875 mnote2 55 0 
+            0.125 mnote2 52 58 
+            0.875 mnote2 52 0 
+            0.125 mnote2 53 58 
+            0.875 mnote2 53 0 
+            0.125 mnote2 41 68 
+            0.875 mnote2 41 0 
+            0.125 mnote2 55 72 
+            0.875 mnote2 55 0 
+            0.125 mnote2 43 78 
+            0.875 mnote2 43 0 
+            0.125 mnote2 57 82 
+            0.875 mnote2 57 0 
+            0.125 mnote2 45 83 
+            0.875 mnote2 45 0 
+            0.125 mnote2 59 86 
+            0.875 mnote2 59 0 
+            0.125 mnote2 47 91 
+            0.875 mnote2 47 0 
+            0.125 mnote2 60 92 
+            0.875 mnote2 60 0 
+            0.125 mnote2 53 98 
+            0.875 mnote2 53 0 
+            0.125 mnote2 55 98 
+            0.875 mnote2 55 0 
+            0.125 mnote2 43 98 
+            0.875 mnote2 43 0 
+            0.125 mnote2 48 98 
+            0.9785 mnote2 48 0 
+            0.0215 mnote2 43 98 
+            0.9785 mnote2 43 0 
+            0.0215 mnote2 36 98 
+            1.4473 mnote2 36 0 
+ }
+
+group Piano @tight @local 
+{
+		; delay msgrecvr pitch velocity
+	mnote2 64 65 
+            mnote2 67 65 
+            mnote2 48 65 
+            1.0 mnote2 64 0 
+            mnote2 67 0 
+            mnote2 48 0 
+            mnote2 36 65 
+            1.0 mnote2 64 65 
+            mnote2 36 0 
+            mnote2 48 65 
+            1.0 mnote2 64 0 
+            mnote2 62 65 
+            mnote2 48 0 
+            mnote2 47 65 
+            1.0 mnote2 60 65 
+            mnote2 62 0 
+            mnote2 64 65 
+            mnote2 45 65 
+            mnote2 47 0 
+            1.0 mnote2 45 0 
+            mnote2 33 64 
+            1.0 mnote2 33 0 
+            mnote2 45 64 
+            1.0 mnote2 60 0 
+            mnote2 64 0 
+            mnote2 60 64 
+            mnote2 67 64 
+            mnote2 45 0 
+            mnote2 52 64 
+            0.9258 mnote2 60 64 
+            0.0742 mnote2 53 64 
+            mnote2 60 0 
+            mnote2 67 0 
+            mnote2 69 64 
+            mnote2 52 0 
+            1.0 mnote2 53 0 
+            mnote2 60 0 
+            mnote2 69 0 
+            mnote2 60 63 
+            mnote2 67 63 
+            mnote2 52 63 
+            1.0 mnote2 60 0 
+            mnote2 67 0 
+            mnote2 59 63 
+            mnote2 65 63 
+            mnote2 52 0 
+            mnote2 50 63 
+            1.0 mnote2 59 0 
+            mnote2 65 0 
+            mnote2 60 63 
+            mnote2 64 63 
+            mnote2 50 0 
+            mnote2 48 63 
+            1.0 mnote2 59 61 
+            mnote2 60 0 
+            mnote2 64 0 
+            mnote2 67 61 
+            mnote2 43 61 
+            mnote2 48 0 
+            1.0 mnote2 43 0 
+            mnote2 38 61 
+            1.0 mnote2 38 0 
+            mnote2 31 60 
+            1.0 mnote2 59 0 
+            mnote2 67 0 
+            mnote2 31 0 
+            1.0 mnote2 64 60 
+            mnote2 67 60 
+            mnote2 48 60 
+            1.0 mnote2 64 0 
+            mnote2 67 0 
+            mnote2 48 0 
+            mnote2 36 60 
+            1.0 mnote2 64 59 
+            mnote2 67 59 
+            mnote2 36 0 
+            mnote2 48 59 
+            1.0 mnote2 64 0 
+            mnote2 67 0 
+            mnote2 62 61 
+            mnote2 67 61 
+            mnote2 48 0 
+            mnote2 47 61 
+            1.0 mnote2 60 61 
+            mnote2 62 0 
+            mnote2 64 61 
+            mnote2 67 0 
+            mnote2 45 61 
+            mnote2 47 0 
+            1.0 mnote2 45 0 
+            mnote2 33 61 
+            1.0 mnote2 33 0 
+            mnote2 45 60 
+            1.0 mnote2 60 0 
+            mnote2 64 0 
+            mnote2 57 60 
+            mnote2 62 60 
+            mnote2 69 60 
+            mnote2 45 0 
+            mnote2 42 60 
+            0.9258 mnote2 62 60 
+            0.0742 mnote2 57 0 
+            mnote2 59 60 
+            mnote2 62 0 
+            mnote2 67 60 
+            mnote2 69 0 
+            mnote2 42 0 
+            mnote2 43 60 
+            1.0 mnote2 59 0 
+            mnote2 62 0 
+            mnote2 67 0 
+            mnote2 57 57 
+            mnote2 64 57 
+            mnote2 43 0 
+            mnote2 48 57 
+            0.5 mnote2 57 0 
+            mnote2 64 0 
+            mnote2 69 57 
+            0.5 mnote2 69 0 
+            mnote2 59 57 
+            mnote2 62 57 
+            mnote2 67 57 
+            mnote2 48 0 
+            mnote2 50 57 
+            1.0 mnote2 59 0 
+            mnote2 62 0 
+            mnote2 67 0 
+            mnote2 57 56 
+            mnote2 62 56 
+            mnote2 66 56 
+            mnote2 50 0 
+            mnote2 38 56 
+            0.9258 mnote2 62 56 
+            0.0742 mnote2 57 0 
+            mnote2 59 55 
+            mnote2 62 0 
+            mnote2 66 0 
+            mnote2 67 55 
+            mnote2 38 0 
+            mnote2 43 55 
+            1.0 mnote2 43 0 
+            mnote2 38 56 
+            1.0 mnote2 38 0 
+            mnote2 31 51 
+            1.0 mnote2 59 0 
+            mnote2 62 0 
+            mnote2 67 0 
+            mnote2 31 0 
+            1.0 mnote2 64 49 
+            mnote2 67 49 
+            mnote2 48 49 
+            1.0 mnote2 64 0 
+            mnote2 67 0 
+            mnote2 48 0 
+            mnote2 36 46 
+            1.0 mnote2 64 46 
+            mnote2 36 0 
+            mnote2 48 46 
+            1.0 mnote2 64 0 
+            mnote2 62 42 
+            mnote2 48 0 
+            mnote2 47 42 
+            1.0 mnote2 60 42 
+            mnote2 62 0 
+            mnote2 64 42 
+            mnote2 45 42 
+            mnote2 47 0 
+            1.0 mnote2 45 0 
+            mnote2 33 42 
+            1.0 mnote2 33 0 
+            mnote2 45 42 
+            1.0 mnote2 60 0 
+            mnote2 64 0 
+            mnote2 60 42 
+            mnote2 67 42 
+            mnote2 45 0 
+            mnote2 52 42 
+            0.9258 mnote2 60 42 
+            0.0742 mnote2 53 42 
+            mnote2 60 0 
+            mnote2 67 0 
+            mnote2 69 42 
+            mnote2 52 0 
+            1.0 mnote2 53 0 
+            mnote2 60 0 
+            mnote2 69 0 
+            mnote2 60 42 
+            mnote2 67 42 
+            mnote2 52 42 
+            1.0 mnote2 60 0 
+            mnote2 67 0 
+            mnote2 59 40 
+            mnote2 65 40 
+            mnote2 52 0 
+            mnote2 50 40 
+            1.0 mnote2 59 0 
+            mnote2 65 0 
+            mnote2 60 40 
+            mnote2 64 40 
+            mnote2 50 0 
+            mnote2 48 40 
+            1.0 mnote2 59 40 
+            mnote2 60 0 
+            mnote2 64 0 
+            mnote2 67 40 
+            mnote2 43 40 
+            mnote2 48 0 
+            1.0 mnote2 43 0 
+            mnote2 38 40 
+            1.0 mnote2 38 0 
+            mnote2 31 40 
+            1.0 mnote2 59 0 
+            mnote2 67 0 
+            mnote2 31 0 
+            1.0 mnote2 64 40 
+            mnote2 67 40 
+            mnote2 48 40 
+            1.0 mnote2 64 0 
+            mnote2 67 0 
+            mnote2 48 0 
+            mnote2 36 38 
+            1.0 mnote2 64 38 
+            mnote2 67 38 
+            mnote2 36 0 
+            mnote2 48 38 
+            1.0 mnote2 64 0 
+            mnote2 67 0 
+            mnote2 62 38 
+            mnote2 67 38 
+            mnote2 48 0 
+            mnote2 47 38 
+            1.0 mnote2 60 38 
+            mnote2 62 0 
+            mnote2 64 38 
+            mnote2 67 0 
+            mnote2 45 38 
+            mnote2 47 0 
+            1.0 mnote2 45 0 
+            mnote2 33 38 
+            1.0 mnote2 33 0 
+            mnote2 45 38 
+            1.0 mnote2 60 0 
+            mnote2 64 0 
+            mnote2 57 38 
+            mnote2 62 38 
+            mnote2 69 38 
+            mnote2 45 0 
+            mnote2 42 38 
+            0.9258 mnote2 62 38 
+            0.0742 mnote2 57 0 
+            mnote2 59 40 
+            mnote2 62 0 
+            mnote2 67 40 
+            mnote2 69 0 
+            mnote2 42 0 
+            mnote2 43 40 
+            1.0 mnote2 59 0 
+            mnote2 62 0 
+            mnote2 67 0 
+            mnote2 57 42 
+            mnote2 64 42 
+            mnote2 43 0 
+            mnote2 48 42 
+            0.5 mnote2 57 0 
+            mnote2 64 0 
+            mnote2 69 42 
+            0.5 mnote2 69 0 
+            mnote2 59 42 
+            mnote2 62 42 
+            mnote2 67 42 
+            mnote2 48 0 
+            mnote2 50 42 
+            1.0 mnote2 59 0 
+            mnote2 62 0 
+            mnote2 67 0 
+            mnote2 57 40 
+            mnote2 62 40 
+            mnote2 66 40 
+            mnote2 50 0 
+            mnote2 38 40 
+            0.9258 mnote2 62 40 
+            0.0742 mnote2 57 0 
+            mnote2 59 40 
+            mnote2 62 0 
+            mnote2 66 0 
+            mnote2 67 40 
+            mnote2 38 0 
+            mnote2 43 40 
+            1.0 mnote2 43 0 
+            mnote2 38 40 
+            1.0 mnote2 38 0 
+            mnote2 31 42 
+            1.0 mnote2 59 0 
+            mnote2 62 0 
+            mnote2 67 0 
+            mnote2 59 42 
+            mnote2 67 42 
+            mnote2 31 0 
+            mnote2 43 42 
+            0.9258 mnote2 67 42 
+            0.0742 mnote2 59 0 
+            mnote2 62 44 
+            mnote2 67 0 
+            mnote2 43 0 
+            mnote2 47 44 
+            1.0 mnote2 47 0 
+            mnote2 43 44 
+            1.0 mnote2 43 0 
+            mnote2 45 44 
+            1.0 mnote2 45 0 
+            mnote2 47 44 
+            0.9258 mnote2 67 44 
+            0.0742 mnote2 62 0 
+            mnote2 64 46 
+            mnote2 67 0 
+            mnote2 47 0 
+            mnote2 48 46 
+            1.0 mnote2 48 0 
+            mnote2 36 46 
+            1.0 mnote2 36 0 
+            mnote2 48 48 
+            1.0 mnote2 64 0 
+            mnote2 67 0 
+            mnote2 64 48 
+            mnote2 64 48 
+            mnote2 48 0 
+            mnote2 52 48 
+            0.5 mnote2 64 0 
+            mnote2 64 0 
+            mnote2 56 48 
+            0.4258 mnote2 56 0 
+            mnote2 56 48 
+            0.0742 mnote2 53 48 
+            mnote2 56 0 
+            mnote2 57 48 
+            mnote2 52 0 
+            0.5 mnote2 57 0 
+            mnote2 56 48 
+            0.5 mnote2 53 0 
+            mnote2 56 0 
+            mnote2 57 46 
+            mnote2 65 46 
+            mnote2 50 46 
+            0.5 mnote2 57 0 
+            mnote2 59 46 
+            0.5 mnote2 65 0 
+            mnote2 59 0 
+            mnote2 60 46 
+            mnote2 64 46 
+            mnote2 69 46 
+            mnote2 50 0 
+            mnote2 52 46 
+            1.0 mnote2 60 0 
+            mnote2 64 0 
+            mnote2 69 0 
+            mnote2 59 48 
+            mnote2 64 48 
+            mnote2 68 48 
+            mnote2 52 0 
+            mnote2 40 48 
+            0.9258 mnote2 68 0 
+            mnote2 64 48 
+            mnote2 68 48 
+            0.0742 mnote2 59 0 
+            mnote2 60 48 
+            mnote2 64 0 
+            mnote2 68 0 
+            mnote2 69 48 
+            mnote2 40 0 
+            mnote2 45 48 
+            1.0 mnote2 45 0 
+            mnote2 33 59 
+            1.0 mnote2 33 0 
+            mnote2 45 65 
+            1.0 mnote2 60 0 
+            mnote2 64 0 
+            mnote2 69 0 
+            mnote2 60 65 
+            mnote2 67 65 
+            mnote2 45 0 
+            mnote2 40 65 
+            0.9258 mnote2 60 65 
+            0.0742 mnote2 60 0 
+            mnote2 67 0 
+            mnote2 69 65 
+            mnote2 40 0 
+            mnote2 41 65 
+            1.0 mnote2 60 0 
+            mnote2 69 0 
+            mnote2 60 65 
+            mnote2 67 65 
+            mnote2 41 0 
+            mnote2 40 65 
+            1.0 mnote2 60 0 
+            mnote2 67 0 
+            mnote2 59 68 
+            mnote2 65 68 
+            mnote2 40 0 
+            mnote2 38 68 
+            1.0 mnote2 59 0 
+            mnote2 65 0 
+            mnote2 60 68 
+            mnote2 64 68 
+            mnote2 38 0 
+            mnote2 36 68 
+            1.0 mnote2 57 67 
+            mnote2 60 0 
+            mnote2 64 0 
+            mnote2 65 67 
+            mnote2 36 0 
+            mnote2 38 67 
+            1.0 mnote2 38 0 
+            mnote2 45 63 
+            1.0 mnote2 45 0 
+            mnote2 50 63 
+            1.0 mnote2 57 0 
+            mnote2 65 0 
+            mnote2 64 60 
+            mnote2 50 0 
+            mnote2 48 60 
+            1.0 mnote2 59 56 
+            mnote2 64 0 
+            mnote2 65 56 
+            mnote2 48 0 
+            mnote2 50 56 
+            1.0 mnote2 59 0 
+            mnote2 65 0 
+            mnote2 60 52 
+            mnote2 64 52 
+            mnote2 50 0 
+            mnote2 48 52 
+            1.0 mnote2 60 0 
+            mnote2 64 0 
+            mnote2 55 49 
+            mnote2 62 49 
+            mnote2 48 0 
+            mnote2 47 49 
+            1.0 mnote2 55 0 
+            mnote2 62 0 
+            mnote2 54 50 
+            mnote2 60 50 
+            mnote2 47 0 
+            mnote2 45 50 
+            1.0 mnote2 54 0 
+            mnote2 55 42 
+            mnote2 59 42 
+            mnote2 60 0 
+            mnote2 43 42 
+            mnote2 45 0 
+            1.0 mnote2 43 0 
+            mnote2 31 42 
+            1.0 mnote2 31 0 
+            mnote2 43 42 
+            1.0 mnote2 55 0 
+            mnote2 59 0 
+            mnote2 55 42 
+            mnote2 60 42 
+            mnote2 43 0 
+            mnote2 40 42 
+            0.9258 mnote2 60 42 
+            0.0742 mnote2 55 0 
+            mnote2 57 42 
+            mnote2 60 0 
+            mnote2 40 0 
+            mnote2 41 42 
+            1.0 mnote2 57 0 
+            mnote2 60 0 
+            mnote2 53 37 
+            mnote2 57 37 
+            mnote2 62 37 
+            mnote2 41 0 
+            mnote2 29 37 
+            1.0 mnote2 53 0 
+            mnote2 57 0 
+            mnote2 62 0 
+            mnote2 59 40 
+            mnote2 62 40 
+            mnote2 29 0 
+            mnote2 43 40 
+            1.0 mnote2 59 0 
+            mnote2 62 0 
+            mnote2 55 45 
+            mnote2 59 45 
+            mnote2 64 45 
+            mnote2 43 0 
+            mnote2 31 45 
+            0.9258 mnote2 64 45 
+            0.0742 mnote2 55 0 
+            mnote2 59 0 
+            mnote2 60 46 
+            mnote2 64 0 
+            mnote2 31 0 
+            mnote2 45 46 
+            1.0 mnote2 60 0 
+            mnote2 64 0 
+            mnote2 57 46 
+            mnote2 60 46 
+            mnote2 65 46 
+            mnote2 45 0 
+            mnote2 33 46 
+            1.0 mnote2 57 0 
+            mnote2 60 0 
+            mnote2 65 0 
+            mnote2 55 48 
+            mnote2 62 48 
+            mnote2 33 0 
+            mnote2 47 48 
+            1.0 mnote2 55 0 
+            mnote2 62 0 
+            mnote2 55 52 
+            mnote2 67 52 
+            mnote2 47 0 
+            mnote2 35 52 
+            1.0 mnote2 55 0 
+            mnote2 60 54 
+            mnote2 64 54 
+            mnote2 67 0 
+            mnote2 35 0 
+            mnote2 48 54 
+            0.5 mnote2 60 0 
+            mnote2 59 56 
+            0.5 mnote2 64 0 
+            mnote2 59 0 
+            mnote2 57 59 
+            mnote2 65 59 
+            mnote2 48 0 
+            mnote2 41 59 
+            1.0 mnote2 57 0 
+            mnote2 65 0 
+            mnote2 60 63 
+            mnote2 64 63 
+            mnote2 41 0 
+            mnote2 43 63 
+            1.0 mnote2 60 0 
+            mnote2 64 0 
+            mnote2 59 71 
+            mnote2 67 71 
+            mnote2 43 0 
+            mnote2 31 71 
+            0.9258 mnote2 67 71 
+            0.0742 mnote2 59 0 
+            mnote2 60 73 
+            mnote2 64 73 
+            mnote2 67 0 
+            mnote2 72 73 
+            mnote2 31 0 
+            mnote2 48 73 
+            1.0 mnote2 48 0 
+            mnote2 43 72 
+            1.0 mnote2 43 0 
+            mnote2 36 70 
+            1.0 mnote2 60 0 
+            mnote2 64 0 
+            mnote2 67 0 
+            mnote2 72 0 
+            mnote2 59 42 
+            mnote2 67 42 
+            mnote2 36 0 
+            mnote2 43 42 
+            0.9258 mnote2 67 42 
+            0.0742 mnote2 59 0 
+            mnote2 62 42 
+            mnote2 67 0 
+            mnote2 43 0 
+            mnote2 47 42 
+            1.0 mnote2 47 0 
+            mnote2 43 42 
+            1.0 mnote2 43 0 
+            mnote2 45 42 
+            1.0 mnote2 45 0 
+            mnote2 47 42 
+            0.9258 mnote2 67 42 
+            0.0742 mnote2 62 0 
+            mnote2 64 42 
+            mnote2 67 0 
+            mnote2 47 0 
+            mnote2 48 42 
+            1.0 mnote2 48 0 
+            mnote2 36 42 
+            1.0 mnote2 36 0 
+            mnote2 48 42 
+            1.0 mnote2 64 0 
+            mnote2 67 0 
+            mnote2 64 42 
+            mnote2 64 42 
+            mnote2 48 0 
+            mnote2 52 42 
+            0.5 mnote2 64 0 
+            mnote2 64 0 
+            mnote2 56 42 
+            0.4258 mnote2 56 0 
+            mnote2 56 42 
+            0.0742 mnote2 53 42 
+            mnote2 56 0 
+            mnote2 57 42 
+            mnote2 52 0 
+            0.5 mnote2 57 0 
+            mnote2 56 42 
+            0.5 mnote2 53 0 
+            mnote2 56 0 
+            mnote2 57 42 
+            mnote2 65 42 
+            mnote2 50 42 
+            0.5 mnote2 57 0 
+            mnote2 59 42 
+            0.5 mnote2 65 0 
+            mnote2 59 0 
+            mnote2 60 42 
+            mnote2 64 42 
+            mnote2 69 42 
+            mnote2 50 0 
+            mnote2 52 42 
+            1.0 mnote2 60 0 
+            mnote2 64 0 
+            mnote2 69 0 
+            mnote2 59 42 
+            mnote2 64 42 
+            mnote2 68 42 
+            mnote2 52 0 
+            mnote2 40 42 
+            0.9258 mnote2 68 0 
+            mnote2 64 42 
+            mnote2 68 42 
+            0.0742 mnote2 59 0 
+            mnote2 60 40 
+            mnote2 64 0 
+            mnote2 68 0 
+            mnote2 69 40 
+            mnote2 40 0 
+            mnote2 45 40 
+            1.0 mnote2 45 0 
+            mnote2 33 30 
+            1.0 mnote2 33 0 
+            mnote2 45 30 
+            1.0 mnote2 60 0 
+            mnote2 64 0 
+            mnote2 69 0 
+            mnote2 60 59 
+            mnote2 67 59 
+            mnote2 45 0 
+            mnote2 40 59 
+            0.9258 mnote2 60 59 
+            0.0742 mnote2 60 0 
+            mnote2 67 0 
+            mnote2 69 59 
+            mnote2 40 0 
+            mnote2 41 59 
+            1.0 mnote2 60 0 
+            mnote2 69 0 
+            mnote2 60 61 
+            mnote2 67 61 
+            mnote2 41 0 
+            mnote2 40 61 
+            1.0 mnote2 60 0 
+            mnote2 67 0 
+            mnote2 59 56 
+            mnote2 65 56 
+            mnote2 40 0 
+            mnote2 38 56 
+            1.0 mnote2 59 0 
+            mnote2 65 0 
+            mnote2 60 68 
+            mnote2 64 68 
+            mnote2 38 0 
+            mnote2 36 68 
+            1.0 mnote2 57 72 
+            mnote2 60 0 
+            mnote2 64 0 
+            mnote2 65 72 
+            mnote2 36 0 
+            mnote2 38 72 
+            1.0 mnote2 38 0 
+            mnote2 45 73 
+            1.0 mnote2 45 0 
+            mnote2 50 77 
+            1.0 mnote2 57 0 
+            mnote2 65 0 
+            mnote2 64 73 
+            mnote2 50 0 
+            mnote2 48 73 
+            1.0 mnote2 59 70 
+            mnote2 64 0 
+            mnote2 65 70 
+            mnote2 48 0 
+            mnote2 50 70 
+            1.0 mnote2 59 0 
+            mnote2 65 0 
+            mnote2 60 65 
+            mnote2 64 65 
+            mnote2 50 0 
+            mnote2 48 65 
+            1.0 mnote2 60 0 
+            mnote2 64 0 
+            mnote2 55 61 
+            mnote2 62 61 
+            mnote2 48 0 
+            mnote2 47 61 
+            1.0 mnote2 55 0 
+            mnote2 62 0 
+            mnote2 54 56 
+            mnote2 60 56 
+            mnote2 47 0 
+            mnote2 45 56 
+            1.0 mnote2 54 0 
+            mnote2 55 42 
+            mnote2 59 42 
+            mnote2 60 0 
+            mnote2 43 42 
+            mnote2 45 0 
+            1.0 mnote2 43 0 
+            mnote2 31 42 
+            1.0 mnote2 31 0 
+            mnote2 43 42 
+            1.0 mnote2 55 0 
+            mnote2 59 0 
+            mnote2 55 51 
+            mnote2 60 51 
+            mnote2 43 0 
+            mnote2 40 51 
+            0.9258 mnote2 60 51 
+            0.0742 mnote2 55 0 
+            mnote2 57 51 
+            mnote2 60 0 
+            mnote2 40 0 
+            mnote2 41 51 
+            1.0 mnote2 57 0 
+            mnote2 60 0 
+            mnote2 53 51 
+            mnote2 57 51 
+            mnote2 62 51 
+            mnote2 41 0 
+            mnote2 29 51 
+            1.0 mnote2 53 0 
+            mnote2 57 0 
+            mnote2 62 0 
+            mnote2 59 55 
+            mnote2 62 55 
+            mnote2 29 0 
+            mnote2 43 55 
+            1.0 mnote2 59 0 
+            mnote2 62 0 
+            mnote2 55 59 
+            mnote2 59 59 
+            mnote2 64 59 
+            mnote2 43 0 
+            mnote2 31 59 
+            0.9258 mnote2 64 59 
+            0.0742 mnote2 55 0 
+            mnote2 59 0 
+            mnote2 60 63 
+            mnote2 64 0 
+            mnote2 31 0 
+            mnote2 45 63 
+            1.0 mnote2 60 0 
+            mnote2 64 0 
+            mnote2 57 64 
+            mnote2 60 64 
+            mnote2 65 64 
+            mnote2 45 0 
+            mnote2 33 64 
+            1.0 mnote2 57 0 
+            mnote2 60 0 
+            mnote2 65 0 
+            mnote2 55 66 
+            mnote2 62 66 
+            mnote2 33 0 
+            mnote2 47 66 
+            1.0 mnote2 55 0 
+            mnote2 62 0 
+            mnote2 55 70 
+            mnote2 67 70 
+            mnote2 47 0 
+            mnote2 35 70 
+            0.9902 mnote2 60 70 
+            mnote2 64 70 
+            mnote2 48 70 
+            0.0098 mnote2 55 0 
+            mnote2 67 0 
+            mnote2 35 0 
+            0.4902 mnote2 60 0 
+            mnote2 59 70 
+            0.5 mnote2 64 0 
+            mnote2 59 0 
+            mnote2 57 75 
+            mnote2 65 75 
+            mnote2 48 0 
+            mnote2 41 75 
+            0.9785 mnote2 60 75 
+            mnote2 64 75 
+            mnote2 43 75 
+            0.0215 mnote2 57 0 
+            mnote2 65 0 
+            mnote2 41 0 
+            0.9785 mnote2 60 0 
+            mnote2 64 0 
+            mnote2 59 75 
+            mnote2 67 75 
+            mnote2 43 0 
+            mnote2 31 75 
+            0.957 mnote2 59 0 
+            mnote2 67 0 
+            mnote2 31 0 
+            0.0117 mnote2 60 75 
+            mnote2 64 75 
+            mnote2 67 75 
+            mnote2 72 75 
+            mnote2 48 75 
+            0.0313 mnote2 67 0 
+            0.9688 mnote2 48 0 
+            mnote2 43 75 
+            1.0 mnote2 43 0 
+            mnote2 36 75 
+            1.4063 mnote2 60 0 
+            mnote2 64 0 
+            mnote2 72 0 
+            mnote2 36 0 
+}
+
+
+
+group Harpsichord @tight @local 
+{
+mnote2 55 57 
+            mnote2 60 41 
+            mnote2 64 63 
+            mnote2 67 64 
+            1.2041 mnote2 64 0 
+            0.0791 mnote2 67 0 
+            0.7129 mnote2 60 0 
+            0.002 mnote2 52 58 
+            mnote2 64 56 
+            mnote2 72 67 
+            0.8584 mnote2 52 0 
+            0.0605 mnote2 55 0 
+            0.0352 mnote2 72 0 
+            0.0166 mnote2 64 0 
+            0.0195 mnote2 67 64 
+            0.002 mnote2 62 56 
+            0.002 mnote2 59 51 
+            0.752 mnote2 62 0 
+            0.1729 mnote2 67 0 
+            0.0732 mnote2 60 64 
+            0.002 mnote2 57 51 
+            0.0791 mnote2 59 0 
+            0.9248 mnote2 69 63 
+            0.002 mnote2 64 55 
+            0.4561 mnote2 69 0 
+            0.0361 mnote2 71 51 
+            0.4561 mnote2 57 0 
+            0.0459 mnote2 72 64 
+            0.2744 mnote2 72 0 
+            0.2168 mnote2 74 71 
+            0.0811 mnote2 71 0 
+            0.2607 mnote2 74 0 
+            0.1631 mnote2 67 62 
+            0.002 mnote2 76 69 
+            0.0059 mnote2 55 55 
+            0.54 mnote2 64 0 
+            0.1934 mnote2 55 0 
+            0.0664 mnote2 67 0 
+            0.1299 mnote2 60 0 
+            mnote2 60 64 
+            0.0576 mnote2 57 53 
+            0.002 mnote2 53 57 
+            0.0029 mnote2 65 61 
+            0.002 mnote2 69 64 
+            0.0332 mnote2 60 0 
+            0.0459 mnote2 76 0 
+            0.4102 mnote2 77 71 
+            0.1289 mnote2 65 0 
+            0.1152 mnote2 69 0 
+            0.0557 mnote2 77 0 
+            0.1543 mnote2 57 0 
+            0.0479 mnote2 67 64 
+            mnote2 76 64 
+            0.0039 mnote2 60 37 
+            0.0166 mnote2 53 0 
+            0.4736 mnote2 72 62 
+            0.5098 mnote2 65 67 
+            0.0049 mnote2 62 66 
+            0.0703 mnote2 76 0 
+            0.0039 mnote2 60 0 
+            0.0605 mnote2 72 0 
+            0.3545 mnote2 74 71 
+            0.2188 mnote2 65 0 
+            0.2939 mnote2 64 62 
+            0.002 mnote2 60 63 
+            0.042 mnote2 62 0 
+            0.0391 mnote2 74 0 
+            0.4131 mnote2 72 64 
+            0.1201 mnote2 64 0 
+            0.2861 mnote2 67 0 
+            0.0313 mnote2 60 0 
+            mnote2 60 63 
+            0.0664 mnote2 62 61 
+            mnote2 67 61 
+            0.0039 mnote2 55 60 
+            0.0107 mnote2 60 0 
+            0.7939 mnote2 62 0 
+            0.1934 mnote2 71 64 
+            0.0059 mnote2 67 0 
+            0.0049 mnote2 67 66 
+            0.0205 mnote2 72 0 
+            0.4688 mnote2 69 67 
+            0.0039 mnote2 72 62 
+            0.1006 mnote2 71 0 
+            0.3994 mnote2 74 67 
+            0.0068 mnote2 71 61 
+            0.0059 mnote2 69 0 
+            0.0752 mnote2 72 0 
+            0.9189 mnote2 71 0 
+            0.0244 mnote2 67 0 
+            0.0352 mnote2 74 0 
+            0.0566 mnote2 55 0 
+            0.8877 mnote2 64 57 
+            0.002 mnote2 60 56 
+            0.4941 mnote2 62 57 
+            mnote2 65 56 
+            0.0244 mnote2 64 0 
+            0.3672 mnote2 62 0 
+            0.0039 mnote2 65 0 
+            0.0996 mnote2 67 47 
+            0.0068 mnote2 64 45 
+            0.5537 mnote2 60 0 
+            0.2129 mnote2 64 0 
+            0.0898 mnote2 67 0 
+            0.1387 mnote2 60 60 
+            0.4961 mnote2 64 66 
+            0.4541 mnote2 64 0 
+            0.0166 mnote2 60 0 
+            0.0293 mnote2 62 55 
+            0.002 mnote2 74 60 
+            1.0107 mnote2 72 64 
+            mnote2 76 64 
+            0.0039 mnote2 64 57 
+            0.0898 mnote2 74 0 
+            0.0479 mnote2 62 0 
+            0.2871 mnote2 72 0 
+            0.0674 mnote2 74 57 
+            0.0039 mnote2 71 45 
+            0.083 mnote2 76 0 
+            0.3418 mnote2 74 0 
+            0.0664 mnote2 69 58 
+            mnote2 72 63 
+            0.0293 mnote2 71 0 
+            0.4297 mnote2 69 0 
+            0.0166 mnote2 72 0 
+            0.0166 mnote2 71 64 
+            0.5 mnote2 69 55 
+            mnote2 72 62 
+            0.0625 mnote2 71 0 
+            0.417 mnote2 69 0 
+            0.2207 mnote2 64 0 
+            0.2959 mnote2 57 57 
+            0.0039 mnote2 62 64 
+            0.4893 mnote2 69 64 
+            0.4063 mnote2 72 0 
+            0.0186 mnote2 69 0 
+            0.0176 mnote2 57 0 
+            mnote2 62 0 
+            mnote2 62 64 
+            0.0625 mnote2 59 52 
+            mnote2 67 58 
+            0.4912 mnote2 71 56 
+            0.0107 mnote2 62 0 
+            0.4307 mnote2 71 0 
+            0.0215 mnote2 59 0 
+            0.043 mnote2 69 64 
+            0.0029 mnote2 64 67 
+            0.002 mnote2 60 36 
+            0.0352 mnote2 67 0 
+            0.4521 mnote2 72 64 
+            0.0752 mnote2 69 0 
+            0.1396 mnote2 64 0 
+            0.2725 mnote2 60 0 
+            0.0186 mnote2 62 52 
+            mnote2 71 60 
+            mnote2 74 62 
+            0.0049 mnote2 67 55 
+            0.127 mnote2 72 0 
+            0.2227 mnote2 71 0 
+            0.042 mnote2 67 0 
+            0.0742 mnote2 74 0 
+            0.5313 mnote2 72 64 
+            0.0049 mnote2 66 55 
+            mnote2 69 66 
+            0.0039 mnote2 60 53 
+            0.1396 mnote2 62 0 
+            0.127 mnote2 69 0 
+            0.083 mnote2 72 0 
+            0.042 mnote2 66 0 
+            0.6064 mnote2 71 62 
+            0.0039 mnote2 67 53 
+            0.002 mnote2 59 56 
+            0.0664 mnote2 60 0 
+            0.4297 mnote2 69 64 
+            0.1104 mnote2 71 0 
+            0.042 mnote2 67 0 
+            0.3389 mnote2 71 62 
+            0.0068 mnote2 67 62 
+            0.002 mnote2 62 56 
+            0.0166 mnote2 69 0 
+            0.25 mnote2 71 0 
+            0.2207 mnote2 69 57 
+            0.0039 mnote2 72 64 
+            0.0146 mnote2 67 0 
+            0.2275 mnote2 69 0 
+            0.0244 mnote2 72 0 
+            0.2129 mnote2 59 0 
+            0.0293 mnote2 71 45 
+            mnote2 74 55 
+            0.8711 mnote2 62 0 
+            0.0537 mnote2 71 0 
+            0.0752 mnote2 74 0 
+            1.0127 mnote2 79 60 
+            0.002 mnote2 64 56 
+            1.4961 mnote2 77 62 
+            0.0977 mnote2 79 0 
+            0.4023 mnote2 76 63 
+            0.002 mnote2 60 53 
+            0.0557 mnote2 77 0 
+            0.9375 mnote2 74 64 
+            0.0088 mnote2 62 26 
+            0.0244 mnote2 76 0 
+            0.0107 mnote2 60 0 
+            0.0771 mnote2 64 0 
+            0.8838 mnote2 72 63 
+            mnote2 74 0 
+            0.0059 mnote2 60 53 
+            0.0225 mnote2 62 0 
+            0.4668 mnote2 71 67 
+            0.042 mnote2 72 0 
+            0.4629 mnote2 69 56 
+            mnote2 72 60 
+            0.0869 mnote2 71 0 
+            0.4063 mnote2 74 64 
+            0.0039 mnote2 71 60 
+            0.0361 mnote2 69 0 
+            0.041 mnote2 72 0 
+            0.3525 mnote2 71 0 
+            0.0459 mnote2 74 0 
+            0.0244 mnote2 76 64 
+            0.0029 mnote2 72 66 
+            0.2813 mnote2 76 0 
+            0.1436 mnote2 72 0 
+            0.0605 mnote2 77 76 
+            0.3076 mnote2 77 0 
+            0.1924 mnote2 60 0 
+            0.002 mnote2 79 69 
+            0.002 mnote2 55 56 
+            mnote2 72 57 
+            0.0059 mnote2 67 57 
+            0.6338 mnote2 67 0 
+            0.2725 mnote2 55 0 
+            0.0938 mnote2 69 52 
+            0.0068 mnote2 53 30 
+            0.4873 mnote2 77 67 
+            0.1064 mnote2 79 0 
+            0.0869 mnote2 69 0 
+            0.252 mnote2 53 0 
+            0.0586 mnote2 67 56 
+            0.0039 mnote2 60 58 
+            0.3008 mnote2 77 0 
+            0.1914 mnote2 76 56 
+            0.25 mnote2 67 0 
+            0.1328 mnote2 72 0 
+            0.1191 mnote2 62 64 
+            0.002 mnote2 65 57 
+            0.0625 mnote2 60 0 
+            0.4414 mnote2 74 67 
+            0.0068 mnote2 71 53 
+            0.1602 mnote2 76 0 
+            0.1709 mnote2 65 0 
+            0.1602 mnote2 71 0 
+            0.0049 mnote2 64 62 
+            0.002 mnote2 60 56 
+            0.0518 mnote2 62 0 
+            0.4395 mnote2 72 63 
+            0.1025 mnote2 64 0 
+            0.0938 mnote2 74 0 
+            0.2314 mnote2 60 0 
+            0.0723 mnote2 71 64 
+            0.002 mnote2 62 55 
+            0.002 mnote2 67 57 
+            0.0508 mnote2 72 0 
+            0.4492 mnote2 69 64 
+            0.1045 mnote2 71 0 
+            0.0381 mnote2 67 0 
+            0.3574 mnote2 71 63 
+            0.0029 mnote2 67 51 
+            0.0723 mnote2 69 0 
+            0.4209 mnote2 69 56 
+            mnote2 72 60 
+            0.0918 mnote2 71 0 
+            0.3545 mnote2 69 0 
+            0.0605 mnote2 74 62 
+            0.0039 mnote2 71 48 
+            0.0352 mnote2 72 0 
+            0.0186 mnote2 62 0 
+            0.9463 mnote2 67 0 
+            0.0039 mnote2 74 0 
+            0.0039 mnote2 71 0 
+            0.9834 mnote2 67 63 
+            0.0068 mnote2 55 57 
+            mnote2 60 47 
+            1.498 mnote2 65 55 
+            0.4658 mnote2 65 0 
+            0.0293 mnote2 52 61 
+            0.002 mnote2 64 66 
+            0.0068 mnote2 67 0 
+            0.0479 mnote2 60 0 
+            0.4434 mnote2 60 55 
+            0.4375 mnote2 52 0 
+            0.0166 mnote2 60 0 
+            0.0029 mnote2 55 0 
+            0.041 mnote2 59 48 
+            0.0088 mnote2 62 63 
+            0.0205 mnote2 64 0 
+            0.8984 mnote2 62 0 
+            0.0742 mnote2 60 62 
+            0.127 mnote2 59 0 
+            0.3779 mnote2 64 63 
+            0.5039 mnote2 69 79 
+            0.498 mnote2 71 79 
+            0.127 mnote2 69 0 
+            0.3711 mnote2 57 48 
+            0.002 mnote2 72 68 
+            0.0391 mnote2 60 0 
+            0.0527 mnote2 71 0 
+            0.3994 mnote2 71 68 
+            0.0791 mnote2 72 0 
+            0.0313 mnote2 64 0 
+            0.3604 mnote2 71 0 
+            0.0146 mnote2 57 0 
+            0.0166 mnote2 69 68 
+            0.0068 mnote2 54 53 
+            mnote2 62 57 
+            0.4873 mnote2 57 56 
+            0.3955 mnote2 54 0 
+            0.0361 mnote2 62 0 
+            mnote2 69 0 
+            mnote2 57 0 
+            mnote2 62 57 
+            mnote2 69 68 
+            0.0723 mnote2 55 55 
+            mnote2 59 60 
+            0.0439 mnote2 69 0 
+            0.4502 mnote2 67 62 
+            0.1641 mnote2 62 0 
+            0.2627 mnote2 55 0 
+            0.0713 mnote2 60 55 
+            0.0039 mnote2 69 68 
+            0.002 mnote2 64 62 
+            0.0371 mnote2 67 0 
+            0.0195 mnote2 59 0 
+            0.4326 mnote2 72 68 
+            0.3213 mnote2 72 0 
+            0.1143 mnote2 64 0 
+            0.0674 mnote2 71 63 
+            mnote2 74 67 
+            0.002 mnote2 62 53 
+            mnote2 67 57 
+            0.0166 mnote2 60 0 
+            0.0039 mnote2 69 0 
+            0.2939 mnote2 74 0 
+            0.002 mnote2 67 0 
+            0.0439 mnote2 71 0 
+            0.6396 mnote2 60 55 
+            0.002 mnote2 66 76 
+            0.3457 mnote2 66 0 
+            0.5879 mnote2 62 0 
+            mnote2 62 53 
+            0.0703 mnote2 67 63 
+            0.002 mnote2 59 58 
+            0.0547 mnote2 60 0 
+            0.8896 mnote2 67 0 
+            0.0645 mnote2 71 57 
+            0.002 mnote2 67 58 
+            0.4141 mnote2 71 0 
+            0.082 mnote2 69 52 
+            0.002 mnote2 72 47 
+            0.2432 mnote2 67 0 
+            0.1797 mnote2 69 0 
+            0.0605 mnote2 72 0 
+            0.0166 mnote2 71 55 
+            mnote2 74 57 
+            0.291 mnote2 71 0 
+            0.0049 mnote2 74 0 
+            0.0537 mnote2 59 0 
+            0.0459 mnote2 62 0 
+            0.6084 mnote2 67 44 
+            0.002 mnote2 59 38 
+            0.9961 mnote2 74 56 
+            0.0078 mnote2 62 46 
+            0.4814 mnote2 72 53 
+            0.0107 mnote2 74 0 
+            0.4961 mnote2 74 48 
+            0.002 mnote2 71 45 
+            0.0791 mnote2 72 0 
+            0.9268 mnote2 57 44 
+            mnote2 60 51 
+            0.0039 mnote2 62 0 
+            0.0166 mnote2 59 0 
+            0.2607 mnote2 71 0 
+            0.0977 mnote2 74 0 
+            0.0439 mnote2 67 0 
+            0.5693 mnote2 60 0 
+            0.0059 mnote2 67 54 
+            0.002 mnote2 59 44 
+            0.002 mnote2 62 40 
+            0.0234 mnote2 57 0 
+            0.4639 mnote2 65 65 
+            0.0508 mnote2 67 0 
+            0.1455 mnote2 62 0 
+            0.0996 mnote2 65 0 
+            0.0146 mnote2 59 0 
+            0.1943 mnote2 60 51 
+            0.002 mnote2 64 56 
+            0.4893 mnote2 62 52 
+            0.002 mnote2 65 48 
+            0.0459 mnote2 64 0 
+            0.4209 mnote2 65 0 
+            0.0186 mnote2 62 0 
+            0.0195 mnote2 67 44 
+            0.002 mnote2 64 44 
+            1.2393 mnote2 67 0 
+            0.0977 mnote2 60 0 
+            0.0508 mnote2 64 0 
+            0.6104 mnote2 64 46 
+            0.002 mnote2 56 42 
+            0.002 mnote2 68 51 
+            0.4912 mnote2 62 49 
+            0.3506 mnote2 68 0 
+            0.0752 mnote2 56 0 
+            mnote2 64 0 
+            0.0791 mnote2 57 48 
+            0.002 mnote2 69 54 
+            0.002 mnote2 60 50 
+            0.0703 mnote2 62 0 
+            0.4189 mnote2 68 50 
+            0.0791 mnote2 69 0 
+            0.4297 mnote2 69 46 
+            0.0371 mnote2 68 0 
+            1.4648 mnote2 65 51 
+            0.1328 mnote2 60 0 
+            0.2295 mnote2 65 0 
+            0.0254 mnote2 57 0 
+            0.1084 mnote2 64 50 
+            0.0039 mnote2 59 37 
+            0.002 mnote2 52 45 
+            0.0537 mnote2 69 0 
+            0.4375 mnote2 68 48 
+            0.1025 mnote2 59 0 
+            0.3213 mnote2 52 0 
+            mnote2 64 0 
+            mnote2 52 45 
+            0.0684 mnote2 52 0 
+            0.0107 mnote2 60 54 
+            0.0039 mnote2 57 45 
+            0.0186 mnote2 68 0 
+            0.4648 mnote2 59 53 
+            0.0537 mnote2 60 0 
+            0.4521 mnote2 60 65 
+            0.0352 mnote2 59 0 
+            1.4736 mnote2 62 64 
+            0.1582 mnote2 60 0 
+            0.3311 mnote2 57 0 
+            0.0088 mnote2 55 56 
+            0.002 mnote2 60 63 
+            mnote2 64 63 
+            0.0078 mnote2 62 0 
+            0.4834 mnote2 67 69 
+            0.417 mnote2 60 0 
+            0.0107 mnote2 55 0 
+            mnote2 64 0 
+            mnote2 55 56 
+            0.0811 mnote2 53 47 
+            mnote2 65 66 
+            0.0039 mnote2 57 41 
+            mnote2 60 61 
+            0.0313 mnote2 55 0 
+            0.0225 mnote2 67 0 
+            0.4355 mnote2 62 62 
+            0.0195 mnote2 60 0 
+            0.4121 mnote2 65 0 
+            0.0586 mnote2 53 0 
+            0.0059 mnote2 64 63 
+            0.0039 mnote2 60 57 
+            0.002 mnote2 57 0 
+            mnote2 55 56 
+            0.0439 mnote2 62 0 
+            0.7256 mnote2 60 0 
+            0.2334 mnote2 53 52 
+            0.002 mnote2 59 63 
+            0.0791 mnote2 55 0 
+            0.4102 mnote2 64 0 
+            0.0039 mnote2 62 56 
+            0.4189 mnote2 59 0 
+            0.0605 mnote2 53 0 
+            mnote2 62 0 
+            0.0186 mnote2 52 56 
+            0.0088 mnote2 64 52 
+            0.002 mnote2 60 53 
+            0.9043 mnote2 60 0 
+            0.0127 mnote2 64 0 
+            0.0791 mnote2 53 56 
+            0.002 mnote2 62 51 
+            0.0957 mnote2 52 0 
+            0.7959 mnote2 62 0 
+            0.1064 mnote2 65 58 
+            0.002 mnote2 62 67 
+            0.4814 mnote2 65 0 
+            0.0098 mnote2 64 57 
+            0.002 mnote2 67 56 
+            0.3965 mnote2 53 0 
+            0.083 mnote2 67 0 
+            0.0059 mnote2 64 0 
+            0.0195 mnote2 69 58 
+            0.0039 mnote2 65 43 
+            0.8936 mnote2 62 0 
+            0.0439 mnote2 65 0 
+            0.0537 mnote2 60 57 
+            0.0068 mnote2 64 42 
+            0.9189 mnote2 69 0 
+            mnote2 69 58 
+            0.0889 mnote2 62 61 
+            0.0605 mnote2 60 0 
+            0.0127 mnote2 69 0 
+            0.0771 mnote2 64 0 
+            0.3369 mnote2 65 63 
+            0.3379 mnote2 62 0 
+            0.1709 mnote2 64 64 
+            0.0039 mnote2 60 63 
+            0.125 mnote2 65 0 
+            0.3652 mnote2 67 63 
+            0.1729 mnote2 60 0 
+            0.3311 mnote2 62 56 
+            0.002 mnote2 59 60 
+            0.042 mnote2 64 0 
+            0.4492 mnote2 71 64 
+            0.2813 mnote2 67 0 
+            0.2188 mnote2 57 55 
+            mnote2 60 61 
+            0.0029 mnote2 66 56 
+            0.0264 mnote2 59 0 
+            0.0381 mnote2 71 0 
+            0.3477 mnote2 62 0 
+            0.0791 mnote2 72 64 
+            0.2373 mnote2 66 0 
+            0.1924 mnote2 57 0 
+            mnote2 60 0 
+            mnote2 57 55 
+            mnote2 60 61 
+            0.0791 mnote2 67 61 
+            0.002 mnote2 55 60 
+            mnote2 59 61 
+            0.0479 mnote2 72 0 
+            0.002 mnote2 57 0 
+            0.0127 mnote2 60 0 
+            0.4326 mnote2 69 56 
+            0.1445 mnote2 67 0 
+            0.3555 mnote2 71 58 
+            0.0049 mnote2 67 55 
+            0.0918 mnote2 69 0 
+            0.2783 mnote2 71 0 
+            0.1045 mnote2 67 0 
+            0.0166 mnote2 69 43 
+            mnote2 72 41 
+            0.4414 mnote2 72 0 
+            0.0459 mnote2 69 0 
+            0.0146 mnote2 74 58 
+            0.0049 mnote2 71 47 
+            0.0264 mnote2 55 0 
+            0.8438 mnote2 74 0 
+            0.0049 mnote2 71 0 
+            0.002 mnote2 59 0 
+            0.123 mnote2 55 57 
+            mnote2 60 55 
+            0.7539 mnote2 60 0 
+            0.25 mnote2 57 55 
+            mnote2 62 51 
+            0.0498 mnote2 55 0 
+            0.1982 mnote2 64 58 
+            0.25 mnote2 65 56 
+            0.1201 mnote2 64 0 
+            0.1211 mnote2 67 58 
+            0.2607 mnote2 69 42 
+            0.0605 mnote2 67 0 
+            0.5977 mnote2 62 0 
+            0.335 mnote2 65 0 
+            0.0049 mnote2 64 58 
+            0.0059 mnote2 59 58 
+            0.0957 mnote2 57 0 
+            0.0918 mnote2 69 0 
+            0.0547 mnote2 65 67 
+            0.2539 mnote2 67 64 
+            0.208 mnote2 65 0 
+            0.042 mnote2 69 55 
+            0.2559 mnote2 71 52 
+            0.0811 mnote2 69 0 
+            0.7236 mnote2 64 0 
+            0.1064 mnote2 59 0 
+            mnote2 67 0 
+            mnote2 59 58 
+            mnote2 67 64 
+            0.0791 mnote2 67 0 
+            0.0078 mnote2 57 53 
+            mnote2 65 64 
+            0.002 mnote2 60 51 
+            0.123 mnote2 59 0 
+            0.0146 mnote2 71 0 
+            0.1104 mnote2 67 66 
+            0.25 mnote2 69 64 
+            0.167 mnote2 67 0 
+            0.0771 mnote2 71 64 
+            0.2021 mnote2 69 0 
+            0.0576 mnote2 72 67 
+            0.207 mnote2 71 0 
+            0.4854 mnote2 65 0 
+            0.3037 mnote2 59 56 
+            mnote2 67 67 
+            0.0039 mnote2 62 53 
+            0.0381 mnote2 72 0 
+            0.0127 mnote2 57 0 
+            0.0518 mnote2 60 0 
+            0.1357 mnote2 69 67 
+            0.2432 mnote2 71 52 
+            0.2441 mnote2 69 0 
+            mnote2 72 61 
+            0.1914 mnote2 67 0 
+            0.0518 mnote2 71 0 
+            0.0127 mnote2 74 67 
+            0.0186 mnote2 55 62 
+            0.1133 mnote2 72 0 
+            0.3662 mnote2 67 52 
+            mnote2 71 57 
+            0.1064 mnote2 74 0 
+            0.2773 mnote2 62 0 
+            0.0459 mnote2 59 0 
+            mnote2 55 0 
+            mnote2 55 62 
+            mnote2 59 56 
+            0.0791 mnote2 55 0 
+            0.002 mnote2 72 76 
+            0.002 mnote2 60 63 
+            mnote2 64 79 
+            0.042 mnote2 67 0 
+            0.0117 mnote2 59 0 
+            0.0381 mnote2 71 0 
+            0.8369 mnote2 64 0 
+            0.0693 mnote2 53 58 
+            0.002 mnote2 69 63 
+            0.3057 mnote2 72 0 
+            0.1816 mnote2 65 66 
+            0.002 mnote2 57 53 
+            0.373 mnote2 65 0 
+            0.0459 mnote2 60 0 
+            0.0811 mnote2 55 57 
+            mnote2 67 64 
+            0.0088 mnote2 53 0 
+            mnote2 64 61 
+            0.0391 mnote2 69 0 
+            0.0313 mnote2 57 0 
+            0.2715 mnote2 64 0 
+            mnote2 67 0 
+            0.6475 mnote2 65 58 
+            0.002 mnote2 62 64 
+            0.3506 mnote2 62 0 
+            0.0391 mnote2 65 0 
+            0.5381 mnote2 55 0 
+            mnote2 55 57 
+            0.0645 mnote2 55 0 
+            0.0146 mnote2 64 61 
+            0.002 mnote2 52 56 
+            0.002 mnote2 60 56 
+            0.4854 mnote2 62 64 
+            0.0391 mnote2 64 0 
+            0.0381 mnote2 60 0 
+            0.4336 mnote2 60 52 
+            0.002 mnote2 64 56 
+            0.1377 mnote2 62 0 
+            0.2324 mnote2 64 0 
+            0.1191 mnote2 62 52 
+            0.002 mnote2 65 53 
+            0.0938 mnote2 60 0 
+            0.0479 mnote2 52 0 
+            0.3125 mnote2 65 0 
+            0.0527 mnote2 64 46 
+            0.002 mnote2 67 56 
+            0.0645 mnote2 62 0 
+            0.9082 mnote2 64 0 
+            0.0273 mnote2 67 0 
+            0.0059 mnote2 59 67 
+            0.0039 mnote2 55 68 
+            0.4795 mnote2 59 0 
+            0.0059 mnote2 60 63 
+            0.4238 mnote2 55 0 
+            mnote2 55 68 
+            0.0869 mnote2 67 67 
+            0.0039 mnote2 62 67 
+            0.0029 mnote2 59 56 
+            0.0869 mnote2 60 0 
+            1.9463 mnote2 59 0 
+            0.0186 mnote2 67 0 
+            0.0586 mnote2 62 0 
+            0.875 mnote2 59 48 
+            0.002 mnote2 67 55 
+            0.4912 mnote2 67 0 
+            mnote2 65 50 
+            0.2402 mnote2 59 0 
+            0.0938 mnote2 65 0 
+            0.0938 mnote2 55 0 
+            mnote2 55 68 
+            0.0684 mnote2 64 52 
+            0.0127 mnote2 52 55 
+            0.4893 mnote2 62 62 
+            0.0273 mnote2 64 0 
+            0.4746 mnote2 60 57 
+            0.0811 mnote2 62 0 
+            0.4131 mnote2 62 58 
+            0.3662 mnote2 55 0 
+            0.0381 mnote2 62 0 
+            0.0977 mnote2 64 56 
+            0.8418 mnote2 64 0 
+            0.083 mnote2 52 0 
+            0.0791 mnote2 56 58 
+            mnote2 64 63 
+            0.8623 mnote2 64 0 
+            0.0654 mnote2 60 0 
+            mnote2 56 0 
+            mnote2 56 58 
+            mnote2 60 57 
+            0.0791 mnote2 57 38 
+            0.002 mnote2 69 63 
+            0.002 mnote2 64 56 
+            0.0811 mnote2 56 0 
+            1.3525 mnote2 64 0 
+            0.0938 mnote2 60 0 
+            0.4707 mnote2 65 64 
+            0.002 mnote2 62 61 
+            0.7559 mnote2 69 0 
+            0.248 mnote2 64 66 
+            0.002 mnote2 60 82 
+            0.0215 mnote2 65 0 
+            0.043 mnote2 62 0 
+            0.2148 mnote2 60 0 
+            0.123 mnote2 64 0 
+            0.0586 mnote2 57 0 
+            0.0244 mnote2 62 64 
+            0.0068 mnote2 59 68 
+            0.375 mnote2 59 0 
+            0.0059 mnote2 62 0 
+            0.1211 mnote2 57 57 
+            mnote2 60 66 
+            0.8662 mnote2 60 0 
+            0.0459 mnote2 57 0 
+            0.0918 mnote2 60 66 
+            0.002 mnote2 57 60 
+            0.4941 mnote2 59 57 
+            mnote2 62 63 
+            0.0518 mnote2 57 0 
+            0.0273 mnote2 60 0 
+            0.3496 mnote2 62 0 
+            0.0605 mnote2 64 68 
+            0.0107 mnote2 60 63 
+            0.0332 mnote2 59 0 
+            0.2607 mnote2 64 0 
+            0.1914 mnote2 62 66 
+            0.002 mnote2 65 69 
+            0.0752 mnote2 60 0 
+            0.2705 mnote2 65 0 
+            0.0566 mnote2 62 0 
+            0.0996 mnote2 55 61 
+            0.0039 mnote2 60 58 
+            mnote2 67 69 
+            0.9238 mnote2 55 0 
+            0.0703 mnote2 65 63 
+            0.002 mnote2 57 46 
+            0.0166 mnote2 67 0 
+            0.8291 mnote2 60 0 
+            0.1484 mnote2 60 67 
+            0.0059 mnote2 55 56 
+            0.0586 mnote2 57 0 
+            0.4336 mnote2 64 64 
+            0.0518 mnote2 65 0 
+            0.2412 mnote2 60 0 
+            0.2129 mnote2 59 67 
+            0.002 mnote2 53 53 
+            0.0879 mnote2 55 0 
+            0.2959 mnote2 64 0 
+            0.623 mnote2 60 68 
+            0.002 mnote2 55 56 
+            0.0039 mnote2 53 0 
+            0.0977 mnote2 59 0 
+            0.3896 mnote2 64 61 
+            0.2686 mnote2 60 0 
+            0.0898 mnote2 64 0 
+            0.0693 mnote2 55 0 
+            0.0723 mnote2 53 56 
+            mnote2 57 47 
+            mnote2 62 60 
+            0.9336 mnote2 62 0 
+            0.0732 mnote2 65 64 
+            0.002 mnote2 62 66 
+            0.4893 mnote2 65 0 
+            0.002 mnote2 67 61 
+            0.002 mnote2 64 55 
+            0.4814 mnote2 67 0 
+            0.0088 mnote2 53 0 
+            0.0078 mnote2 69 62 
+            0.0068 mnote2 65 56 
+            0.0244 mnote2 64 0 
+            0.0186 mnote2 57 0 
+            0.9131 mnote2 62 0 
+            0.0479 mnote2 64 63 
+            0.0127 mnote2 65 0 
+            0.5605 mnote2 69 0 
+            0.4229 mnote2 53 51 
+            0.0039 mnote2 59 60 
+            0.0332 mnote2 64 0 
+            0.4648 mnote2 62 58 
+            0.4893 mnote2 59 0 
+            0.0127 mnote2 52 52 
+            0.002 mnote2 60 53 
+            0.083 mnote2 62 0 
+            0.002 mnote2 53 0 
+            0.4092 mnote2 64 66 
+            0.3389 mnote2 60 0 
+            0.1104 mnote2 64 0 
+            0.0293 mnote2 52 0 
+            0.0234 mnote2 62 67 
+            0.002 mnote2 55 55 
+            mnote2 59 46 
+            0.498 mnote2 67 52 
+            0.2725 mnote2 59 0 
+            0.2295 mnote2 55 0 
+            mnote2 60 45 
+            mnote2 66 62 
+            0.0039 mnote2 57 46 
+            0.04 mnote2 67 0 
+            0.0371 mnote2 62 0 
+            0.4102 mnote2 69 62 
+            0.4004 mnote2 66 0 
+            0.0254 mnote2 57 0 
+            mnote2 60 0 
+            mnote2 69 0 
+            mnote2 60 45 
+            0.0791 mnote2 67 66 
+            0.0039 mnote2 55 52 
+            0.0039 mnote2 59 57 
+            0.0039 mnote2 60 0 
+            0.4814 mnote2 69 61 
+            0.127 mnote2 67 0 
+            0.3799 mnote2 67 53 
+            mnote2 71 53 
+            0.1221 mnote2 69 0 
+            0.2363 mnote2 71 0 
+            0.1328 mnote2 69 46 
+            mnote2 72 52 
+            0.083 mnote2 67 0 
+            0.3838 mnote2 72 0 
+            0.0439 mnote2 74 63 
+            0.002 mnote2 71 56 
+            0.0498 mnote2 69 0 
+            0.6309 mnote2 74 0 
+            0.0029 mnote2 71 0 
+            0.2412 mnote2 59 0 
+            0.0811 mnote2 72 64 
+            0.002 mnote2 60 51 
+            0.2441 mnote2 71 55 
+            0.248 mnote2 69 52 
+            0.1064 mnote2 71 0 
+            0.1055 mnote2 69 0 
+            0.0361 mnote2 67 48 
+            0.1689 mnote2 55 0 
+            mnote2 60 0 
+            mnote2 72 0 
+            mnote2 55 52 
+            mnote2 60 51 
+            mnote2 72 64 
+            0.0908 mnote2 57 48 
+            mnote2 69 43 
+            0.0107 mnote2 67 0 
+            0.002 mnote2 55 0 
+            0.2813 mnote2 72 0 
+            0.1152 mnote2 69 0 
+            0.0791 mnote2 67 82 
+            0.5059 mnote2 65 64 
+            0.0439 mnote2 67 0 
+            0.9268 mnote2 65 0 
+            0.0146 mnote2 57 0 
+            0.0107 mnote2 71 66 
+            0.002 mnote2 59 62 
+            0.0371 mnote2 60 0 
+            0.209 mnote2 69 61 
+            0.252 mnote2 67 52 
+            0.1641 mnote2 69 0 
+            0.0732 mnote2 65 61 
+            0.0039 mnote2 67 0 
+            0.2627 mnote2 67 52 
+            0.002 mnote2 62 53 
+            0.0107 mnote2 65 0 
+            0.8164 mnote2 71 0 
+            0.0605 mnote2 59 0 
+            0.0898 mnote2 67 0 
+            0.0205 mnote2 72 68 
+            0.002 mnote2 57 43 
+            0.0039 mnote2 60 68 
+            0.0127 mnote2 62 0 
+            0.2334 mnote2 71 42 
+            0.25 mnote2 69 51 
+            0.0518 mnote2 72 0 
+            0.0986 mnote2 71 0 
+            0.0957 mnote2 67 64 
+            0.0293 mnote2 69 0 
+            0.2285 mnote2 65 53 
+            mnote2 69 67 
+            0.0791 mnote2 67 0 
+            0.917 mnote2 60 0 
+            0.0039 mnote2 74 68 
+            0.0029 mnote2 62 52 
+            0.002 mnote2 69 0 
+            0.0293 mnote2 65 0 
+            0.0283 mnote2 57 0 
+            0.1523 mnote2 59 56 
+            0.0293 mnote2 72 56 
+            0.165 mnote2 74 0 
+            0.085 mnote2 71 63 
+            0.1543 mnote2 72 0 
+            0.0898 mnote2 69 58 
+            0.1846 mnote2 71 0 
+            0.0547 mnote2 62 0 
+            0.0186 mnote2 67 68 
+            0.0068 mnote2 55 64 
+            0.0889 mnote2 69 0 
+            0.1504 mnote2 67 0 
+            0.0039 mnote2 65 62 
+            0.2539 mnote2 64 69 
+            0.1084 mnote2 65 0 
+            0.1172 mnote2 64 0 
+            0.0166 mnote2 62 66 
+            0.167 mnote2 59 0 
+            mnote2 55 0 
+            mnote2 59 56 
+            0.0684 mnote2 60 72 
+            0.0332 mnote2 64 79 
+            0.0186 mnote2 62 0 
+            0.0381 mnote2 59 0 
+            0.4229 mnote2 67 67 
+            0.1104 mnote2 64 0 
+            0.2266 mnote2 60 0 
+            0.1582 mnote2 60 23 
+            0.0029 mnote2 53 53 
+            0.002 mnote2 69 64 
+            0.0498 mnote2 67 0 
+            0.4316 mnote2 69 0 
+            0.0039 mnote2 57 56 
+            mnote2 65 73 
+            0.002 mnote2 53 0 
+            0.4727 mnote2 64 63 
+            mnote2 67 60 
+            0.0068 mnote2 55 58 
+            0.0625 mnote2 65 0 
+            0.0742 mnote2 57 0 
+            0.0713 mnote2 60 0 
+            0.0938 mnote2 67 0 
+            0.0205 mnote2 64 0 
+            0.6582 mnote2 62 62 
+            0.0029 mnote2 59 55 
+            0.002 mnote2 53 55 
+            0.3105 mnote2 59 0 
+            0.0059 mnote2 62 0 
+            0.6504 mnote2 55 0 
+            mnote2 53 0 
+            mnote2 52 55 
+            mnote2 55 58 
+            mnote2 60 62 
+            mnote2 64 63 
+            0.6729 mnote2 55 0 
+            0.2412 mnote2 52 0 
+            0.083 mnote2 55 58 
+            0.6045 mnote2 60 0 
+            0.0371 mnote2 64 0 
+            0.0313 mnote2 55 0 
+            0.2109 mnote2 48 55 
+            0.0664 mnote2 52 58 
+            0.1104 mnote2 55 56 
+            0.1338 mnote2 60 52 
+            1.2334 mnote2 55 0 
+            0.002 mnote2 52 0 
+            0.0146 mnote2 48 0 
+            0.0059 mnote2 60 0 
+        }
+	
+
+
+NOTE D5 1/2
+NOTE C5 1/2
+NOTE G5 1
+NOTE A5 1/2
+NOTE B5 1/2
+
+; ----------- measure 3 --- beat 9
+NOTE C6 3 measure3
+NOTE C6 1/2
+NOTE B5 1/2
+
+; ----------- measure 4 --- beat 13
+NOTE B5 1/2 measure4
+NOTE A5 1/2
+NOTE A5 1/2
+NOTE G5 1/2
+NOTE G5 1/2
+NOTE F5 1/2
+NOTE F5 1/2
+NOTE E5 1/2
+
+; ----------- measure 5 --- beat 17
+NOTE D5 3 measure5
+NOTE C5 1/2
+NOTE D5 1/2
+
+; ----------- measure 6 --- beat 21
+NOTE E5 1 measure6
+NOTE D5 1/2
+NOTE C5 1/2
+NOTE G5 1
+NOTE A5 1/2
+NOTE B5 1/2
+
+; ----------- measure 7 --- beat 25
+NOTE C6 3 measure7
+NOTE D6 1/2
+NOTE C6 1/2
+
+; ----------- measure 8 --- beat 29
+NOTE B5 1 measure8
+NOTE A5 1/2
+NOTE G5 1/2
+NOTE B5 1
+NOTE A5 1/2
+NOTE G5 1/2
+
+; ----------- measure 9 --- beat 33
+NOTE G5 3 measure9
+NOTE C5 1/2
+NOTE D5 1/2
+
+; ----------- measure 10 --- beat 37
+NOTE E5 1 measure10
+NOTE D5 1/2
+NOTE C5 1/2
+NOTE G5 1
+NOTE A5 1/2
+NOTE B5 1/2
+
+; ----------- measure 11 --- beat 41
+NOTE C6 3 measure11
+NOTE C6 1/2
+NOTE B5 1/2
+
+; ----------- measure 12 --- beat 45
+NOTE B5 1/2 measure12
+NOTE A5 1/2
+NOTE A5 1/2
+NOTE G5 1/2
+NOTE G5 1/2
+NOTE F5 1/2
+NOTE F5 1/2
+NOTE E5 1/2
+
+; ----------- measure 13 --- beat 49
+NOTE D5 3 measure13
+NOTE C5 1/2
+NOTE D5 1/2
+
+; ----------- measure 14 --- beat 53
+NOTE E5 1 measure14
+NOTE D5 1/2
+NOTE C5 1/2
+NOTE G5 1
+NOTE A5 1/2
+NOTE B5 1/2
+
+; ----------- measure 15 --- beat 57
+NOTE C6 3 measure15
+NOTE D6 1/2
+NOTE C6 1/2
+
+; ----------- measure 16 --- beat 61
+NOTE B5 1 measure16
+NOTE A5 1/2
+NOTE G5 1/2
+NOTE B5 1
+NOTE A5 1/2
+NOTE G5 1/2
+
+; ----------- measure 17 --- beat 65
+NOTE G5 3 measure17
+NOTE B5 1/2
+NOTE C6 1/2
+
+; ----------- measure 18 --- beat 69
+NOTE D6 1 measure18
+NOTE C6 1/2
+NOTE B5 1/2
+NOTE C6 1/2
+NOTE B5 1/2
+NOTE C6 1/2
+NOTE D6 1/2
+
+; ----------- measure 19 --- beat 73
+NOTE G5 3 measure19
+NOTE E5 1
+
+; ----------- measure 20 --- beat 77
+NOTE A5 1 measure20
+NOTE A5 1/2
+NOTE B5 1/2
+NOTE C6 1
+NOTE B5 1/2
+NOTE A5 1/2
+
+; ----------- measure 21 --- beat 81
+NOTE A5 3 measure21
+NOTE C6 1/2
+NOTE B5 1/2
+
+; ----------- measure 22 --- beat 85
+NOTE B5 1/2 measure22
+NOTE A5 1/2
+NOTE A5 1/2
+NOTE G5 1/2
+NOTE G5 1/2
+NOTE F5 1/2
+NOTE F5 1/2
+NOTE E5 1/2
+
+; ----------- measure 23 --- beat 89
+NOTE F5 3 measure23
+NOTE A5 1/2
+NOTE G5 1/2
+
+; ----------- measure 24 --- beat 93
+NOTE G5 1/2 measure24
+NOTE F5 1/2
+NOTE F5 1/2
+NOTE E5 1/2
+NOTE E5 1/2
+NOTE D5 1/2
+NOTE D5 1/2
+NOTE C5 1/2
+
+; ----------- measure 25 --- beat 97
+NOTE B4 3 measure25
+NOTE C5 1/2
+NOTE G4 1/2
+
+; ----------- measure 26 --- beat 101
+NOTE A4 1 measure26
+NOTE D5 1/2
+NOTE A4 1/2
+NOTE B4 1
+NOTE E5 1/2
+NOTE B4 1/2
+
+; ----------- measure 27 --- beat 105
+NOTE C5 1 measure27
+NOTE F5 1/2
+NOTE C5 1/2
+NOTE D5 1
+NOTE G5 1/2
+NOTE D5 1/2
+
+; ----------- measure 28 --- beat 109
+NOTE E5 1 measure28
+NOTE D5 1/2
+NOTE C5 1/2
+NOTE E5 1
+NOTE D5 1/2
+NOTE C5 1/2
+
+; ----------- measure 29 --- beat 113
+NOTE C5 3 measure29
+NOTE B5 1/2
+NOTE C6 1/2
+
+; ----------- measure 30 --- beat 117
+NOTE D6 1 measure30
+NOTE C6 1/2
+NOTE B5 1/2
+NOTE C6 1/2
+NOTE B5 1/2
+NOTE C6 1/2
+NOTE D6 1/2
+
+; ----------- measure 31 --- beat 121
+NOTE G5 3 measure31
+NOTE E5 1
+
+; ----------- measure 32 --- beat 125
+NOTE A5 1 measure32
+NOTE A5 1/2
+NOTE B5 1/2
+NOTE C6 1
+NOTE B5 1/2
+NOTE A5 1/2
+
+; ----------- measure 33 --- beat 129
+NOTE A5 3 measure33
+NOTE C6 1/2
+NOTE B5 1/2
+
+; ----------- measure 34 --- beat 133
+NOTE B5 1/2 measure34
+NOTE A5 1/2
+NOTE A5 1/2
+NOTE G5 1/2
+NOTE G5 1/2
+NOTE F5 1/2
+NOTE F5 1/2
+NOTE E5 1/2
+
+; ----------- measure 35 --- beat 137
+NOTE F5 3 measure35
+NOTE A5 1/2
+NOTE G5 1/2
+
+; ----------- measure 36 --- beat 141
+NOTE G5 1/2 measure36
+NOTE F5 1/2
+NOTE F5 1/2
+NOTE E5 1/2
+NOTE E5 1/2
+NOTE D5 1/2
+NOTE D5 1/2
+NOTE C5 1/2
+
+; ----------- measure 37 --- beat 145
+NOTE B4 3 measure37
+NOTE C5 1/2
+NOTE G4 1/2
+
+; ----------- measure 38 --- beat 149
+NOTE A4 1 measure38
+NOTE D5 1/2
+NOTE A4 1/2
+NOTE B4 1
+NOTE E5 1/2
+NOTE B4 1/2
+
+; ----------- measure 39 --- beat 153
+NOTE C5 1 measure39
+NOTE F5 1/2
+NOTE C5 1/2
+NOTE D5 1
+NOTE G5 1/2
+NOTE D5 1/2
+
+; ----------- measure 40 --- beat 157
+NOTE E5 1 measure40
+NOTE D5 1/2
+NOTE C5 1/2
+NOTE E5 1
+NOTE D5 1/2
+NOTE C5 1/2
+
+; ----------- measure 41 --- beat 161
+NOTE C5 4 measure41
+
+; ----------- measure 42 --- beat 165
+NOTE 0 4 measure42

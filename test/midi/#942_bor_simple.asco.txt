@@ -1,0 +1,22 @@
+﻿; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: #942_bor_simple.mid
+; MIDI file type 1 (multiple tracks)
+; Converted to Antescofo on Thu Oct  8 09:33:44 2015
+
+; start
+BPM 70
+
+; ----------- measure 1 --- beat 0 --- time signature 6/8
+
+BPM 70
+CHORD (5400 5800) 1/4 measure1
+NOTE 0 1/4
+CHORD (5400 5800) 1/2
+CHORD (-5400 -5800 6000) 1/2
+CHORD (-5400 -5800 6300) 1/4
+CHORD (-5400 -5800) 1/4
+CHORD (5400 5800 6300) 1/2
+CHORD (-5400 -5800 6000) 1/2

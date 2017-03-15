@@ -1,10 +1,10 @@
-; Antescofo score generated using native importer
+﻿; Antescofo score generated using native importer
 ; Copyright (c) IRCAM 2015
 ; Designed by Robert Piéchaud
 
 ; Original file: #937_mazurka63-3.mid
 ; MIDI file type 0 (single track)
-; Converted to Antescofo on Sun Jun 14 21:40:22 2015
+; Converted to Antescofo on Thu Oct  8 08:20:50 2015
 
 ; start
 
@@ -131,8 +131,8 @@ CHORD (-G#3 -C#4 -E4 D#5) 1/2
 NOTE C#5 1/2
 NOTE B4 1/2
 CHORD (C#2 A4) 1/2
-NOTE -C#2 1/4
-CHORD (-C#2 A4) 1/4
+NOTE -C#2 0.233333
+CHORD (-C#2 A4) 0.266667
 
 ; ----------- measure 15 --- beat 56
 
@@ -192,8 +192,8 @@ CHORD (-G#3 -C#4 -E4 D#5) 1/2
 NOTE C#5 1/2
 NOTE B4 1/2
 CHORD (C#2 A4) 1/2
-NOTE -C#2 1/4
-CHORD (-C#2 A4) 1/4
+NOTE -C#2 0.233333
+CHORD (-C#2 A4) 0.266667
 
 ; ----------- measure 21 --- beat 80
 
@@ -241,7 +241,7 @@ CHORD (B3 -C#5) 1/2 measure25
 CHORD (A3 -C#5) 1/2
 CHORD (G#3 D#4) 1/2
 CHORD (G3 -D#4) 1/4
-CHORD (-G3 D#4) 1/4
+CHORD (-G3 D#4) 0.233333
 CHORD (F#3 C4 D#4) 1
 CHORD (F3 G#3 C#4 F4) 1
 
@@ -291,15 +291,15 @@ CHORD (C3 G#3 D#4) 1
 
 CHORD (C#3 F3 C#4) 1 measure31
 CHORD (C#2 G#4) 1/2
-NOTE -C#2 1/4
-CHORD (-C#2 G#4) 1/4
+NOTE -C#2 0.233333
+CHORD (-C#2 G#4) 0.266667
 CHORD (B3 D#4 F4 G#4) 1
 CHORD (A#3 C#4 F#4 A#4) 1
 
 ; ----------- measure 32 --- beat 124
 
 CHORD (C#3 C#5) 3/4 measure32
-CHORD (-C#3 B4) 1/4
+CHORD (-C#3 B4) 0.233333
 CHORD (-C#3 G#3 D#4 F4 B4) 1
 CHORD (-C#3 A#3 C#4 F#4 A#4) 1
 CHORD (C#3 F#4 G#4) 3/4
@@ -317,14 +317,14 @@ CHORD (-C#3 -F3 G4) 1/4
 
 CHORD (F#2 F#3 B3 C#4 G#4) 1 measure34
 NOTE C#2 3/4
-CHORD (-C#2 G#4) 1/4
+CHORD (-C#2 G#4) 0.233333
 CHORD (B3 D#4 F4 G#4) 1
 CHORD (A#3 C#4 F#4 A#4) 1
 
 ; ----------- measure 35 --- beat 136
 
 CHORD (C#3 C#5) 3/4 measure35
-CHORD (-C#3 B4) 1/4
+CHORD (-C#3 B4) 0.233333
 CHORD (G#3 C#4 F4 B4) 1
 CHORD (F#3 F#4 A#4) 1
 CHORD (D#3 -F#4 D#5) 3/4
@@ -349,7 +349,7 @@ CHORD (-A3 -D#4 -G4 D#5) 1/2
 ; ----------- measure 38 --- beat 148
 
 CHORD (G#2 C#5) 3/4 measure38
-CHORD (-G#2 C5) 1/4
+CHORD (-G#2 C5) 0.233333
 CHORD (G#3 D#4 F#4 D#5) 1
 CHORD (G#3 C#4 F#4 B4) 1/2
 CHORD (-G#3 -C#4 -F#4 A4) 1/2
@@ -415,7 +415,7 @@ CHORD (G#3 D#4 F#4 D#5) 1 measure45
 CHORD (G#3 D#4 F#4 -D#5) 1/2
 CHORD (-G#3 -D#4 -F#4 E5) 1/2
 CHORD (B2 D#5) 3/4
-CHORD (-B2 C#5) 1/4
+CHORD (-B2 C#5) 0.233333
 CHORD (G#3 C#4 G#4 F5) 1
 
 ; ----------- measure 46 --- beat 180
@@ -533,7 +533,7 @@ CHORD (-E3 G3 -C#4) 1/2
 CHORD (F#3 G#3 C4) 1/2
 CHORD (-F#3 -C4 E4) 1/2
 CHORD (C#2 C#4) 3/4
-CHORD (-C#2 C#3) 1/4
+CHORD (-C#2 C#3) 0.233333
 CHORD (C#4 E4 C#5) 1
 
 ; ----------- measure 58 --- beat 228

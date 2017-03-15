@@ -1,0 +1,41 @@
+﻿; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: 2_voice_with_rests.mid
+; MIDI file type 1 (multiple tracks)
+; Converted to Antescofo on Mon Sep 14 20:28:30 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+BPM 96
+NOTE 0 1 measure1
+NOTE A4 1/2
+NOTE 0 1/2
+NOTE E4 1/2
+NOTE 0 1
+NOTE G4 1/2
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+NOTE F4 1/2 measure2
+NOTE 0 1/2
+NOTE G4 1/2
+NOTE 0 1/2
+NOTE E4 1/2
+NOTE 0 1/2
+NOTE F4 1/2
+NOTE 0 1/2
+
+; ----------- measure 3 --- beat 8 --- time signature 4/4
+
+NOTE C4 1 measure3
+NOTE D4 1
+NOTE E4 1
+NOTE F4 1
+
+; ----------- measure 4 --- beat 12 --- time signature 4/4
+
+NOTE G4 1 measure4

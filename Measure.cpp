@@ -18,10 +18,10 @@
 
 using namespace antescofo;
 
-Measure::Measure( int num, float duration, float accum, float metricFactor, const std::string& timeSignature ):
+Measure::Measure( float num, float duration, float accum, float metricFactor, const std::string& timeSignature ):
     Event           (),
-    duration_       ( duration ),
-    accumDuration_  ( accum ),
+    beatDuration_   ( duration ),
+    accumBeats_     ( accum ),
     metricFactor_   ( metricFactor ),
     timeSignature_  ( timeSignature ),
     keyAccidentals_ ( 0 )
@@ -29,10 +29,10 @@ Measure::Measure( int num, float duration, float accum, float metricFactor, cons
     measure_ = num;
 }
 
-Measure::Measure( int num, float duration, float accum, float metricFactor, int keyAccidentals, const std::string& timeSignature ):
+Measure::Measure( float num, float duration, float accum, float metricFactor, int keyAccidentals, const std::string& timeSignature ):
     Event           (),
-    duration_       ( duration ),
-    accumDuration_  ( accum ),
+    beatDuration_   ( duration ),
+    accumBeats_     ( accum ),
     metricFactor_   ( metricFactor ),
     timeSignature_  ( timeSignature ),
     keyAccidentals_ ( keyAccidentals )
@@ -48,14 +48,19 @@ Measure::~Measure()
 void Measure::serialize( std::ostringstream& stream )
 {
     char buffer [32];
-    if ( round(accumDuration_) == accumDuration_ )
-        sprintf(buffer, "%ld", (long) accumDuration_ );
+    float duration = accumBeats_;///metricFactor_;
+    if ( fabs( round(duration) - duration ) < 0.05 )
+        sprintf(buffer, "%ld", (long) duration );
     else
-        sprintf(buffer, "%5.1f", accumDuration_ );
-    stream << std::endl
-           << "; ----------- measure " << measure()
-           << " --- beat " << buffer;
-    if ( timeSignature().size() > 0 )
+        sprintf(buffer, "%5.1f", duration );
+    stream << std::endl;
+    bool isPickup = ceilf( measure() ) != measure();
+    if ( isPickup )
+        stream << "; ----------- pickup to measure " << (int) ceilf( measure() );
+    else
+        stream << "; ----------- measure " << (int) measure();
+    stream << " --- beat " << buffer;
+    if ( timeSignature().size() > 0 && !isPickup )
         stream << " --- time signature " << timeSignature();
     stream << std::endl << std::endl;
 }
@@ -82,12 +87,12 @@ bool Measure::isMeasure() const
 
 float Measure::duration() const
 {
-    return duration_;
+    return beatDuration_;
 }
 
 void Measure::changeDuration( float newTime )
 {
-    duration_ = newTime;
+    beatDuration_ = newTime;
 }
 
 int Measure::keyAccidentals() const
