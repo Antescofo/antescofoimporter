@@ -1,0 +1,182 @@
+                     ___                                                .-.              
+                    (   )                                              /    \            
+  .---.   ___ .-.    | |_       .--.       .--.      .--.      .--.    | .`. ;    .--.   
+ / .-, \ (   )   \  (   __)    /    \    /  _  \    /    \    /    \   | |(___)  /    \  
+(__) ; |  |  .-. .   | |      |  .-. ;  . .' `. ;  |  .-. ;  |  .-. ;  | |_     |  .-. ; 
+  .'`  |  | |  | |   | | ___  |  | | |  | '   | |  |  |(___) | |  | | (   __)   | |  | | 
+ / .'| |  | |  | |   | |(   ) |  |/  |  _\_`.(___) |  |      | |  | |  | |      | |  | | 
+| /  | |  | |  | |   | | | |  |  ' _.' (   ). '.   |  | ___  | |  | |  | |      | |  | | 
+; |  ; |  | |  | |   | ' | |  |  .'.-.  | |  `\ |  |  '(   ) | '  | |  | |      | '  | | 
+' `-'  |  | |  | |   ' `-' ;  '  `-' /  ; '._,' '  '  `-' |  '  `-' /  | |      '  `-' / 
+`.__.'_. (___)(___)   `.__.    `.__.'    '.___.'    `.__,'    `.__.'  (___)      `.__.'  
+                                                                                         
+                                                                                         
+.-. .  . .-. .-. .-. .-. .-. .-. 
+ |  |\/| |-' | | |(   |  |-  |(  
+`-' '  ` '   `-' ' '  '  `-' ' ' 
+                                 
+For MusicXML and MIDI files.
+©IRCAM 2015
+Developped by Robert Piéchaud
+
+* * Using the Mac antescofo_importer command line * *
+  Copy the antescofo_importer executable wherever you want (best in usr/local/bin)
+  Open the Terminal and pass a file as parameter (with partial or full path). Example:
+      > antescofo_importer my_folder/koko.xml
+  The antescofo score file koko.asco.txt will then be saved beside the original file.
+  If you want pitches to be represented as MIDI cents, pass the option -midicents:
+      > antescofo_importer my_folder/koko.xml -midicents
+  Run...
+      > antescofo_importer -help
+  ...for more options!
+
+     
+* * Build log * *
+
+* * * v. 0.1.22 ~ June XX 2015 * * *
+- [improvement] more user-friendly command line...
+
+
+* * * v. 0.1.21 ~ June 14 2015 * * *
+-[fix] issue #934, #942 (...): some more work on MIDI...
+
+
+* * * v. 0.1.20 ~ June 14 2015 * * *
+
+-[fix] issue #934, #795: some more MIDI improvements.
+
+
+* * * v. 0.1.19 ~ June 13 2015 * * *
+
+- [fix] issue 929: "clean" "unit test added for this case (glissando in Sibelius context).
+- [fix] issue 928: tricky tremolo with harmonics.
+- [improvement/fix] Many MIDI improvements and fixes (#944, #938, #942, #937)
+
+
+* * * v. 0.1.18 ~ June 12 2015 * * *
+
+- [improvement] issue 932: better natural harmonics handling.
+- [fix] issue 900: yet some remaining issue with compound time.
+- [feature] issue 940: basic support for repeat bars (backwards, forwards), and repeat endings (1st, 2nd), written as comments.
+
+
+* * * v. 0.1.17 ~ June 10 2015 * * *
+
+- [fix] issue 937 (and 941): weird artefacts in MIDI import.
+
+
+* * * v. 0.1.16 ~ June 10 2015 * * *
+
+- [crash] issue 941: high notes could crash (or abort) the MIDI import.
+- [fix] issue 937: minor MIDI problem.
+- [improvement] issue 899: grace note should take held notes from other voices into account.
+- [improvement] better handling of MIDI tempos.
+
+
+* * * v. 0.1.15 ~ June 9 2015 * * *
+
+- [crash] issue: 933: some musicXMl files would crash the importer. Some safeguards have been added when querying attributes that don't necessarily exist.
+- [improvement] issue 934: huge MIDI file conversion forward step!
+- [fix] issue 931: tremolo with polyphony didn't work well in certain situations.
+- [feature] the @fermata attribute is now added beside the event.
+
+
+* * * v. 0.1.14 ~ June 7 2015 * * *
+
+- [fix] issue 931: weird alternate tremolo with polyphony when converting from Sibelius ('native' musicxml, not 'Dolet').
+- [improvement] MusicXML file encoded as UTF16 are now supported (but what the heck would someone use UTF16 instead of UTF8?!)
+- [fix] issue 930: tremolo not converted.
+
+
+* * * v. 0.1.13 ~ June 7 2015 * * *
+
+- [feature] support for string harmonics (issue 920)
+- [improvement] fine-tuning of note symbolic duration.
+- [fix] better handling string tremolos.
+- [fix] misc. conversion weirdness (issue 912)
+- [design] tied notes (or chords) are no longer "consolidated" (but rests are). That means that tied notes in the symbolic score are kept tied in the antescofo score.
+
+
+* * * v. 0.1.12 ~ May 26 2015 * * *
+
+- [feature] new API items for querying tracks/staves from a MusicXML or file, and the importing only those specified.
+            To illustrate it, these command line options have been added:
+            > antescofo_importer -querytracks machin.xml
+            > antescofo_importer -tracks=4,7,8 machin.xml
+
+
+* * * v. 0.1.11 ~ May 24 2015 * * *
+- [improvement] better handling of MULTI in the delicate context of polyphony...
+
+* * * v. 0.1.10 ~ May 24 2015 * * *
+- [feature] support for MULTI (with a slightly new interpretation...)
+- [improvement] better support for compressed xml (mxl) in the case the mxl file has been renamed manually (the embedded container.xml file is now parsed properly).
+
+
+* * * v. 0.1.9 ~ May 24 2015 * * *
+- [feature] support for compressed MusicXML files (.mxl), which is Sibelius output by default.
+- [feature] support for alternate unmeasured tremolos (simple or with chords)
+- [improvement] speaking Sibelius & Finale MusicXML dialects more fluently... #!$%!!
+- [fix] incorrect tempos & extra trilled notes in Jarell's Congruences.
+
+
+* * * v. 0.1.8 ~ May 21 2015 * * *
+- [feature] trills (notated as tr ~~~) should be working well now (alternate tremolo will follow shortly...)
+- [feature] -quarternotetime option added to force tempos and note duration to be always relative to the quarter note (off by default).
+- [feature] -verbose option added.
+- [feature] MIDI tempo hooked up (with a system to limit the amount of generated BPM...)
+- [improvement] 3/8, 3/16 or 3/32 time signatures are no longer considered as single beat timing.
+- [feature] added new unit test infrastructure (up & running)
+- [environment] using gnu11++ as compiler basis, and 32-64bit universal binary.
+- [fix] temporarily commenting the BOM feature until it is fixed in a new Ascograph build.
+
+
+* * * v. 0.1.7 ~ May 20 2015 * * *
+- [bug fix] important fix in muti-staff and frequent metric changes context.
+- [feature] first TRILL experiment (with unmeasured repeated tremolos)
+- added BOM bytes at beginning of serialized score file (to be sure we're UTF8 compliant.)
+- added '; start' before score events.
+
+
+* * * v. 0.1.6 ~ May 20 2015 * * *
+- [bug fix] tempo (BPM) consolidation problem.
+- [feature] issue 914: measure numbers are now displayed as label on first event { ex: NOTE 0 2/3 ms57 }
+- [feature] original tempos are now displayed as comment {ex: BPM 33 ; ( 𝅘𝅥𝅮 = 66 ) }. NB: this only makes sense for MusixXML conversion.
+- [bug fix] tied notes were badly displayed with new 'symbolic pitch' feature (issue 911).
+
+
+* * * v. 0.1.5 ~ May 20 2015 * * *
+- [bug fix] Certain tempos do not get imported (#910)
+- [new feature] Pitch representation should be MIDI (A4, C2 etc.) by default (#911). Simply pass the new option -midicents in the command line.
+- [new feature] When importing from MusicXML, it would be nice to parse staccatos some way (#912 ('@staccato' is now added to the entry in that case.)
+
+* * * v. 0.1.4 ~ May 19 2015 * * *
+- [new feature] MIDI import is hooked up! (including multi-tracks). (issue #796, #798, #795)
+
+
+* * * v. 0.1.3 ~ May 16 2015 * * *
+- [improvement] "Handle Compound Time Gracefully": compound times (3/8, 6/8... 9/16) are now more expressive in the antescofo score, and BPM is adjusted accordingly (issues #900 & #896.5)
+- [bug fix] grace notes are messed up under certain circumstances (issue #901, #896.2 & #898.2)
+
+
+* * * v. 0.1.2 ~ May 15 2015 * * *
+- [bug fix] erratic rational quantification for small values (issue #896.1, #898.1)
+- [bug fix] wrong BMP with dotted tempo markings (issue #896.3)
+- [improvement] 3x speed boost...
+
+
+* * * v. 0.1.1 ~ May 15 2015 * * *
+- [new feature] measured repeated notes and chords notated as tremolo (strokes) are ready for testing.
+- [bug fix] hold pitch restruck by another voice meanwhile should not be seen as tied (antescofo issue 894)
+- [improvement] full path of original file should not appear in antescofo score header. 
+
+
+* * * v. 0.1.0 ~ May 14 2015 * * *
+
+First beta, ready for testing the following MusicXML features:
+- any type of time signatures (included complex compound time such as 7/8+10/16+1/4)
+- any kind of tempo marking
+- any kind of rhythms, including nested t-uplets (for instance a 5-uplet of 16th notes inside a 3-uplet of quarters)
+- polyphony, including unlimited number of layers/voices/staves
+- tied notes and chords, possibly across measures
+- grace notes (including grace note chords)

@@ -1,0 +1,327 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud.
+
+; Original file: My Heart will go on_90bpm.mid
+; Converted to Antescofo on Tue May 19 00:46:36 2015
+
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+NOTE 0 3
+NOTE 6500 1/2
+NOTE 6700 1/2
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+CHORD (5000 6900) 1
+CHORD (-5000 5700 -6900) 1
+CHORD (-5000 6200 -6900) 1
+CHORD (-5000 -6200 6700) 1/2
+CHORD (-5000 -6200 6500) 1/2
+
+; ----------- measure 3 --- beat 8 --- time signature 4/4
+
+CHORD (4800 6700) 1/2
+CHORD (-4800 7200) 1/2
+CHORD (-4800 5500 -7200) 1
+CHORD (-4800 6000 -7200) 1
+CHORD (-4800 -6000 7000) 1/2
+CHORD (-4800 -6000 6900) 1/2
+
+; ----------- measure 4 --- beat 12 --- time signature 4/4
+
+CHORD (4600 6500) 1
+CHORD (-4600 5300 6200) 1
+CHORD (-4600 5800 -6200) 2
+
+; ----------- measure 5 --- beat 16 --- time signature 4/4
+
+NOTE 6000 1
+CHORD (5500 -6000) 1
+CHORD (4800 -6000) 1/2
+CHORD (-4800 -6000 6400) 1/2
+CHORD (-4800 -6000 6500) 1/2
+CHORD (-4800 -6000 6700) 1/2
+
+; ----------- measure 6 --- beat 20 --- time signature 4/4
+
+CHORD (5000 6900) 1
+CHORD (-5000 5700 -6900) 1
+CHORD (-5000 6200 -6900) 1
+CHORD (-5000 -6200 6700) 1/2
+CHORD (-5000 -6200 6500) 1/2
+
+; ----------- measure 7 --- beat 24 --- time signature 4/4
+
+CHORD (4800 6700) 1/2
+CHORD (-4800 7200) 1/2
+CHORD (-4800 5500) 1
+CHORD (-4800 6000) 1
+CHORD (-4800 -6000 6900) 1/2
+CHORD (-4800 -6000 7200) 1/2
+
+; ----------- measure 8 --- beat 28 --- time signature 4/4
+
+CHORD (4600 6500 7400) 1
+CHORD (-4600 5300 -6500 -7400) 1
+CHORD (-4600 5800 -6500 7200) 2
+
+; ----------- measure 9 --- beat 32 --- time signature 4/4
+
+CHORD (4800 6700) 1
+CHORD (-4800 5500 -6700) 1
+CHORD (-4800 6000 -6700) 1
+CHORD (-4800 -6000 6400) 1
+
+; ----------- measure 10 --- beat 36 --- time signature 4/4
+
+CHORD (5300 6500) 1
+CHORD (-5300 5700) 1/2
+CHORD (-5300 6000) 1
+CHORD (-5300 -6000) 1
+CHORD (5500 6400) 1/2
+
+; ----------- measure 11 --- beat 40 --- time signature 4/4
+
+CHORD (-5500 -6400) 1/2
+NOTE 0 1
+CHORD (5300 5800 6400) 1
+NOTE 6500 1
+NOTE 6700 1/2
+
+; ----------- measure 12 --- beat 44 --- time signature 4/4
+
+NOTE -6700 1/2
+CHORD (6000 6500 6900) 2
+CHORD (4800 6400 6700) 3/2
+
+; ----------- measure 13 --- beat 48 --- time signature 4/4
+
+CHORD (-4800 -6400 -6700) 1/2
+CHORD (5300 6500) 1
+CHORD (-5300 5700) 1/2
+CHORD (-5300 6000) 1
+CHORD (-5300 -6000) 1
+
+; ----------- measure 14 --- beat 52 --- time signature 4/4
+
+CHORD (5500 6400) 1
+NOTE 0 1
+NOTE 4600 1
+CHORD (-4600 5300) 1
+
+; ----------- measure 15 --- beat 56 --- time signature 4/4
+
+NOTE 0 1
+NOTE 5300 1
+NOTE 5800 1/2
+CHORD (-5800 6000) 1/2
+CHORD (-5800 6200) 1/2
+CHORD (-5800 6400) 1/2
+
+; ----------- measure 16 --- beat 60 --- time signature 4/4
+
+CHORD (4100 5700 6500) 1
+CHORD (-4100 4800 -5700) 1/2
+CHORD (-4100 5300 -5700) 3/2
+CHORD (-4100 -5300 -5700) 1/2
+CHORD (4800 6400) 1/2
+
+; ----------- measure 17 --- beat 64 --- time signature 4/4
+
+CHORD (-4800 -6400) 1/2
+CHORD (-4800 5500 6500) 1
+CHORD (-4800 6000) 1
+CHORD (4600 6400) 1
+CHORD (-4600 5300 6500) 1/2
+
+; ----------- measure 18 --- beat 68 --- time signature 4/4
+
+CHORD (-4600 -5300 -6500) 1/2
+CHORD (-4600 5800 -6500) 1
+CHORD (-4600 -5800 6700) 1
+CHORD (4800 6900) 1
+CHORD (-4800 5300 -6900) 1/2
+
+; ----------- measure 19 --- beat 72 --- time signature 4/4
+
+CHORD (-4800 -5300 -6900) 1/2
+CHORD (-4800 5200 6700) 2
+CHORD (5300 6500) 1
+CHORD (-5300 5700 -6500) 1/2
+
+; ----------- measure 20 --- beat 76 --- time signature 4/4
+
+CHORD (-5300 6000) 1
+CHORD (-5300 -6000) 1
+CHORD (4800 6400) 1
+CHORD (-4800 5500 6500) 1
+
+; ----------- measure 21 --- beat 80 --- time signature 4/4
+
+CHORD (-4800 6000) 1
+NOTE 4600 1
+CHORD (-4600 5300) 1
+NOTE -4600 1
+
+; ----------- measure 22 --- beat 84 --- time signature 4/4
+
+NOTE 5300 1
+NOTE 5800 1/2
+CHORD (-5800 6000) 1/2
+CHORD (-5800 6200) 1/2
+CHORD (-5800 6400) 1/2
+CHORD (5000 6500) 1
+
+; ----------- measure 23 --- beat 88 --- time signature 4/4
+
+CHORD (5700 -6500) 1
+CHORD (5300 -6500) 1
+CHORD (5000 -6500) 1
+CHORD (4800 6400 6700) 1
+
+; ----------- measure 24 --- beat 92 --- time signature 4/4
+
+CHORD (5200 -6400 -6700) 1
+CHORD (5500 -6400 -6700) 1
+CHORD (-5500 6000) 1
+CHORD (4600 7200) 1
+
+; ----------- measure 25 --- beat 96 --- time signature 4/4
+
+CHORD (-4600 5300 -7200) 1
+CHORD (-4600 5800 7000) 1
+CHORD (-4600 5300 6900) 1/2
+CHORD (-4600 -5300 6700) 1/2
+NOTE 4800 1
+
+; ----------- measure 26 --- beat 100 --- time signature 4/4
+
+NOTE -4800 1
+CHORD (-4800 6900) 3/2
+CHORD (-4800 7000) 1/2
+CHORD (5000 6900) 1
+
+; ----------- measure 27 --- beat 104 --- time signature 4/4
+
+CHORD (-5000 5700 -6900) 1
+CHORD (-5000 6200 6700) 1
+CHORD (-5000 5700 -6700) 1/2
+CHORD (-5000 -5700 6500) 1/2
+CHORD (4800 6400) 1
+
+; ----------- measure 28 --- beat 108 --- time signature 4/4
+
+CHORD (-4800 6500) 2
+CHORD (-4800 6400) 1
+CHORD (4600 6200) 1
+
+; ----------- measure 29 --- beat 112 --- time signature 4/4
+
+CHORD (-4600 5300 -6200) 1
+CHORD (-4600 5800 -6200) 1
+CHORD (-4600 5300 6400) 1/2
+NOTE 6000 1
+CHORD (5300 -6000) 1/2
+
+; ----------- measure 30 --- beat 116 --- time signature 4/4
+
+CHORD (-5300 -6000) 1/2
+NOTE 5800 1/2
+NOTE -5800 1/2
+CHORD (4800 6200) 1/2
+CHORD (-4800 6400) 1/2
+CHORD (5000 6500) 1
+CHORD (5700 -6500) 1/2
+
+; ----------- measure 31 --- beat 120 --- time signature 4/4
+
+CHORD (-5700 -6500) 1/2
+CHORD (5300 -6500) 1
+CHORD (5000 -6500) 1
+CHORD (4800 6400 6700) 1
+CHORD (5200 -6400 -6700) 1/2
+
+; ----------- measure 32 --- beat 124 --- time signature 4/4
+
+CHORD (-5200 -6400 -6700) 1/2
+CHORD (5500 -6400 -6700) 1
+CHORD (-5500 6000) 1
+CHORD (4600 7200) 1
+CHORD (-4600 5300 -7200) 1/2
+
+; ----------- measure 33 --- beat 128 --- time signature 4/4
+
+CHORD (-4600 -5300 -7200) 1/2
+CHORD (-4600 5800 7000) 1
+CHORD (-4600 5300 6900) 1/2
+CHORD (-4600 -5300 6700) 1/2
+CHORD (4800 -6700) 1
+CHORD (-4800 5500 -6700) 1/2
+
+; ----------- measure 34 --- beat 132 --- time signature 4/4
+
+CHORD (-4800 -5500 -6700) 1/2
+CHORD (-4800 6000 6900) 1
+CHORD (-4800 5500 7000) 1
+CHORD (5000 6900) 1
+CHORD (-5000 5700 -6900) 1/2
+
+; ----------- measure 35 --- beat 136 --- time signature 4/4
+
+CHORD (-5000 -5700 -6900) 1/2
+CHORD (-5000 6200 6700) 1
+CHORD (-5000 5700 6500) 1
+CHORD (4800 6400) 1
+CHORD (-4800 6500) 1/2
+
+; ----------- measure 36 --- beat 140 --- time signature 4/4
+
+CHORD (-4800 -6500) 3/2
+CHORD (-4800 6400) 1
+NOTE 4600 1
+CHORD (-4600 5300 6500) 1/2
+
+; ----------- measure 37 --- beat 144 --- time signature 4/4
+
+CHORD (-4600 -5300 -6500) 1/2
+CHORD (-4600 5800 -6500) 1
+CHORD (-4600 -5800 6700) 1
+CHORD (4800 5300 6900) 3/2
+
+; ----------- measure 38 --- beat 148 --- time signature 4/4
+
+CHORD (-4800 -5300 -6900) 1/2
+CHORD (-4800 5200 6700) 2
+CHORD (5000 6500 6900) 1
+CHORD (-5000 5700 -6500 -6900) 1/2
+
+; ----------- measure 39 --- beat 152 --- time signature 4/4
+
+CHORD (-5000 -5700 -6500 -6900) 1/2
+CHORD (-5000 6200 -6500 -6900) 1
+CHORD (-5000 -6200 6700) 1/2
+CHORD (-5000 -6200 6500) 1/2
+CHORD (4800 6700) 1/2
+CHORD (-4800 7200) 1/2
+CHORD (-4800 5500 -7200) 1/2
+
+; ----------- measure 40 --- beat 156 --- time signature 4/4
+
+CHORD (-4800 -5500 -7200) 1/2
+CHORD (-4800 6000 -7200) 1
+CHORD (-4800 -6000 6900) 1/2
+CHORD (-4800 -6000 7200) 1/2
+CHORD (4600 6500 7400) 1
+CHORD (-4600 5300 -6500 -7400) 1/2
+
+; ----------- measure 41 --- beat 160 --- time signature 4/4
+
+CHORD (-4600 -5300 -6500 -7400) 1/2
+CHORD (-4600 5800 -6500 7200) 2
+CHORD (4800 6700) 3/2
+
+; ----------- measure 42 --- beat 164 --- time signature 4/4
+
+CHORD (-4800 -6700) 5/2

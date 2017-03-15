@@ -1,0 +1,19 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: tremolo_with_polyphony.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0
+; Converted to Antescofo on Tue Jun  9 09:47:11 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+TRILL ((C#5 C6) (C#5 G5)) 3 measure2
+NOTE 0 1

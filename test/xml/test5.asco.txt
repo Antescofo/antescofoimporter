@@ -1,0 +1,21 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: test5.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0
+; Converted to Antescofo on Mon Jun 29 21:43:52 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+CHORD (D4 A4 F5) 1 measure1
+CHORD (E4 G4 C#5) 1
+CHORD (F4 A4 D5) 1
+CHORD (F#4 A4 D5) 0 @staccato
+CHORD (G4 A#4 D#5) 0 @staccato
+CHORD (A4 D5 F#5) 0 @staccato
+CHORD (A#4 D#5 G5) 0 @staccato
+CHORD (D#5 G5 A#5 D#6) 1

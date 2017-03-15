@@ -1,0 +1,19 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: SIB_tremolo_poly_utf16.xml
+; exported from Sibelius 7.5.1 ~ Dolet 6.4 for Sibelius
+; MusicXML version 3.0
+; Converted to Antescofo on Mon Jun  8 18:20:43 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+NOTE G5 3
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+TRILL ((C#5 C6) (C#5)) 3 measure2

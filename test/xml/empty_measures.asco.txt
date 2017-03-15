@@ -1,0 +1,97 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: empty_measures.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0
+; Converted to Antescofo on Sun Jun 21 12:13:32 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 3 --- beat 8 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 4 --- beat 12 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 5 --- beat 16 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 6 --- beat 20 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 7 --- beat 24 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 8 --- beat 28 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 9 --- beat 32 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 10 --- beat 36 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 11 --- beat 40 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 12 --- beat 44 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 13 --- beat 48 --- time signature 4/4
+
+NOTE 0 1 measure13
+NOTE C5 1
+NOTE 0 2
+
+; ----------- measure 14 --- beat 52 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 15 --- beat 56 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 16 --- beat 60 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 17 --- beat 64 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 18 --- beat 68 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 19 --- beat 72 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 20 --- beat 76 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 21 --- beat 80 --- time signature 4/4
+
+NOTE B4 1 measure21
+NOTE 0 3

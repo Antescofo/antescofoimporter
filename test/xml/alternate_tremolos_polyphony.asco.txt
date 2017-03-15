@@ -1,0 +1,46 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: alternate_tremolos_polyphony.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0
+; Converted to Antescofo on Mon Jun  8 15:28:44 2015
+; Credits: Fast Alternate Tremolos + Polyphony
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+BPM 56 ; ( ← 𝅘𝅥 =56) 
+TRILL ((A4 C5) (C5 E5)) 1 measure1
+TRILL ((G#4 A#4) (C5 E5)) 1
+TRILL ((A4 B4) (D5 F5 G#5)) 2
+
+; ----------- measure 2 --- beat 4 --- time signature 2/2
+
+TRILL (G3 D4) 2 measure2
+TRILL (B3 F4) 2
+TRILL (D4 G#4) 2
+
+; ----------- measure 3 --- beat 8 --- time signature 4/2
+
+TRILL (C4 G4) 4 measure3
+TRILL (E4 A#4) 2
+TRILL ((C3 E4) (C3 A#4)) 2
+
+; ----------- measure 4 --- beat 16 --- time signature 4/2
+
+TRILL ((C3 G4) (C3 C#5)) 3/2 measure4
+TRILL (G4 C#5) 5/2
+TRILL (F4 C5) 3
+NOTE 0 1
+
+; ----------- measure 5 --- beat 24 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 6 --- beat 28 --- time signature 4/4
+
+TRILL ((C#5 C6) (C#5 G5)) 3 measure6
+NOTE 0 1

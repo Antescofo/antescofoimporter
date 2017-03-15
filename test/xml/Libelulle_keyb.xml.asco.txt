@@ -1,0 +1,3161 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud.
+
+; Original file: Libelulle_keyb.xml
+; exported from Sibelius 7.1.0 ~ Direct export, not from Dolet
+; MusicXML version 2.0.
+; Converted to Antescofo on Sat May 16 00:06:23 2015
+
+
+; ----------- measure 1 --- beat 0 --- time signature 7/16
+
+BPM 48
+NOTE 0 8/49
+NOTE 7200 41/49
+NOTE -7200 1/2
+NOTE 0 3/4
+NOTE 4100 3/4
+NOTE 3900 1/4
+NOTE 0 1/4
+
+; ----------- measure 2 --- beat 1.75 --- time signature 2/4
+
+NOTE 3700 8/49
+NOTE 4800 1/2
+NOTE 3700 1/6
+NOTE 4800 1/2
+NOTE 3700 1/6
+NOTE 4800 1/2
+
+; ----------- measure 3 --- beat 3.75
+
+NOTE 3800 8/49
+NOTE 5700 1/3
+NOTE 7200 1
+NOTE 7800 8/49
+NOTE 0 1/3
+
+; ----------- measure 4 --- beat 5.75
+
+NOTE 3600 8/49
+NOTE 5000 1/3
+NOTE 3600 8/49
+NOTE 5000 1/3
+NOTE 3600 8/49
+NOTE 5900 1/3
+NOTE 6500 8/49
+NOTE 4300 1/3
+
+; ----------- measure 5 --- beat 7.75 --- time signature 3/16
+
+BPM 64
+NOTE 4100 1
+
+; ----------- measure 6 --- beat 8.75 --- time signature 5/8
+
+BPM 48
+NOTE 6900 5/2
+NOTE 3600 106/49
+NOTE 3700 1/6
+NOTE 7600 1/6
+
+; ----------- measure 7 --- beat 11.25 --- time signature 7/16
+
+NOTE 0 8/49
+NOTE 7000 1/6
+NOTE 4100 2/3
+NOTE -4100 1/3
+NOTE 3900 1/6
+NOTE 0 1/4
+
+; ----------- measure 8 --- beat 13 --- time signature 2/4
+
+NOTE 3700 8/49
+NOTE 5000 1/2
+NOTE 3700 1/6
+NOTE 5000 1/2
+NOTE 3700 1/6
+NOTE 5000 1/2
+
+; ----------- measure 9 --- beat 15
+
+NOTE 3800 8/49
+NOTE 5900 1/3
+NOTE 3900 8/49
+NOTE 7400 2/3
+NOTE 6900 1/6
+NOTE 7800 1/2
+
+; ----------- measure 10 --- beat 17
+
+NOTE 4100 1/2
+NOTE 4000 2/3
+NOTE 3700 1/3
+NOTE 6500 8/49
+NOTE 4300 1/3
+
+; ----------- measure 11 --- beat 19 --- time signature 3/16
+
+BPM 64
+NOTE 7600 1
+NOTE 0 1
+
+; ----------- measure 12 --- beat 20 --- time signature 2/4
+
+BPM 48
+NOTE 3600 1/2
+CHORD (-3600 6900) 1
+NOTE 3700 1/4
+NOTE 3800 1/4
+
+; ----------- measure 13 --- beat 22 --- time signature 5/16
+
+NOTE 7200 1
+NOTE 0 1/4
+NOTE 3900 3/8
+NOTE 3900 3/8
+NOTE 3900 1/8
+NOTE 3900 1/8
+NOTE 0 1/4
+
+; ----------- measure 14 --- beat 23.25 --- time signature 2/4
+
+NOTE 8700 9/20
+CHORD (7800 -8700) 1/20
+BPM 60
+NOTE 8500 2/5
+CHORD (7600 -7800) 1/5
+NOTE 0 87/62
+NOTE 0 2/5
+NOTE 3600 4/39
+CHORD (-3600 4100) 1/2
+NOTE 4900 8/49
+NOTE 6900 1/6
+NOTE 7600 1/3
+NOTE 7000 1/6
+NOTE 0 1/6
+
+; ----------- measure 15 --- beat 25.25 --- time signature 5/8
+
+NOTE 7800 8/49
+NOTE 3800 1/6
+NOTE 4100 5/12
+NOTE 7800 1/8
+NOTE 3800 1/8
+NOTE 4500 3/2
+
+; ----------- measure 16 --- beat 27.75 --- time signature 3/8
+
+BPM 40
+NOTE 0 2/15
+NOTE 6700 2/15
+NOTE 7300 2/15
+NOTE 3800 7/26
+NOTE 4300 5/46
+NOTE 7000 1/9
+NOTE -3800 1/9
+
+; ----------- measure 17 --- beat 28.75 --- time signature 3/16
+
+BPM 80
+NOTE 8500 1
+NOTE 0 1
+
+; ----------- measure 18 --- beat 29.75
+
+CHORD (3600 5700 5900) 1/6
+CHORD (5700 5900) 1/6
+NOTE 0 1/3
+CHORD (4400 5000) 1/3
+
+; ----------- measure 19 --- beat 30.75 --- time signature 3/8
+
+NOTE 4000 2/3
+BPM 40
+BPM 32
+NOTE 4700 3/32
+NOTE 3600 8/21
+NOTE 3700 2/21
+NOTE 3700 6/29
+NOTE 5000 1/9
+NOTE 5900 1/9
+
+; ----------- measure 20 --- beat 31.75 --- time signature 5/16
+
+CHORD (5000 5700 5900) 1/4
+BPM 48
+NOTE 4800 8/49
+NOTE 0 41/49
+NOTE 0 1/4
+
+; ----------- measure 21 --- beat 33 --- time signature 3/4
+
+NOTE 5900 1/5
+NOTE 3600 2/15
+CHORD (-3600 5000 5700) 1/15
+CHORD (4100 -5000 -5700) 1/5
+CHORD (-5000 -5700) 25/62
+CHORD (4800 -5000 -5700) 1
+CHORD (-4800 5000 5700) 1/3
+CHORD (4800 -5000 -5700) 2/3
+
+; ----------- measure 22 --- beat 36 --- time signature 3/8
+
+BPM 32
+NOTE 4800 1/3
+CHORD (-4800 5000 5700) 2/3
+
+; ----------- measure 23 --- beat 37 --- time signature 7/16
+
+NOTE 6700 1/4
+BPM 48
+BPM 60
+NOTE 6000 8/49
+CHORD (5000 5700) 5/12
+CHORD (-5000 5700) 1/12
+CHORD (5000 -5700) 1/6
+NOTE 0 1/4
+NOTE 6700 1/12
+CHORD (6000 -6700) 1/6
+NOTE 0 1/6
+NOTE 5100 1/4
+
+; ----------- measure 24 --- beat 38.75 --- time signature 3/4
+
+NOTE 4800 1/4
+NOTE 3900 8/49
+NOTE 4800 1/6
+NOTE 0 1/12
+NOTE 4800 2/23
+CHORD (3800 -4800) 8/49
+NOTE 4800 1/6
+NOTE 4900 1/6
+CHORD (3600 -4900) 1/3
+NOTE 7400 1/6
+NOTE 0 1/4
+NOTE 3700 1/4
+NOTE 4700 1/2
+NOTE 5200 1/4
+NOTE 0 1/4
+
+; ----------- measure 25 --- beat 41.75 --- time signature 6/16
+
+BPM 80
+NOTE 5900 1/6
+NOTE 5000 1/6
+NOTE 7600 4/3
+NOTE 8400 1/3
+
+; ----------- measure 26 --- beat 43.75 --- time signature 7/16
+
+NOTE 6700 1/4
+BPM 60
+NOTE 4400 8/49
+CHORD (5000 5700) 5/12
+CHORD (-5000 5700) 1/12
+CHORD (5000 -5700) 1/6
+NOTE 0 1/4
+NOTE 6700 1/12
+CHORD (6000 -6700) 1/6
+NOTE 0 1/6
+NOTE 5100 1/4
+
+; ----------- measure 27 --- beat 45.5 --- time signature 3/4
+
+NOTE 4800 1/4
+NOTE 3900 8/49
+NOTE 4800 1/6
+NOTE 0 1/12
+NOTE 4800 2/23
+CHORD (3800 -4800) 8/49
+NOTE 4800 1/6
+NOTE 4900 1/6
+CHORD (3600 -4900) 1/3
+NOTE 7400 1/6
+NOTE 0 1/4
+NOTE 3700 1/4
+NOTE 4700 1/2
+NOTE 5200 1/4
+NOTE 0 1/4
+
+; ----------- measure 28 --- beat 48.5 --- time signature 6/16
+
+BPM 80
+NOTE 5900 1/6
+NOTE 5000 1/6
+NOTE 7600 4/3
+NOTE 8400 1/3
+
+; ----------- measure 29 --- beat 50.5
+
+NOTE 5900 1/6
+NOTE 5000 1/6
+NOTE 7600 4/3
+NOTE 8400 1/3
+
+; ----------- measure 30 --- beat 52.5
+
+NOTE 5900 1/6
+NOTE 5000 1/6
+NOTE 7600 4/3
+NOTE 8400 1/3
+
+; ----------- measure 31 --- beat 54.5 --- time signature 7/16
+
+BPM 60
+NOTE 0 3/2
+NOTE 7800 8/49
+CHORD (6700 -7800) 2/23
+CHORD (4400 -6700) 8/49
+CHORD (5000 5700) 5/12
+CHORD (-5000 5700) 1/12
+CHORD (5000 -5700) 1/6
+NOTE 0 1/4
+NOTE 6700 1/12
+CHORD (6000 -6700) 1/6
+NOTE 0 1/6
+NOTE 5100 1/4
+
+; ----------- measure 32 --- beat 56.25 --- time signature 3/8
+
+BPM 40
+NOTE 0 2/3
+NOTE 7800 1/3
+NOTE 5900 5/46
+NOTE 4900 1/9
+NOTE 0 4/9
+NOTE 4000 1/3
+
+; ----------- measure 33 --- beat 57.25 --- time signature 5/16
+
+BPM 60
+BPM 48
+NOTE 0 5/4
+NOTE 0 1/2
+NOTE 4500 3/4
+
+; ----------- measure 34 --- beat 58.5 --- time signature 5/8
+
+CHORD (8500 8700) 1/4
+NOTE 0 7/4
+NOTE 0 3/2
+NOTE 0 8/49
+NOTE 3600 1/6
+NOTE 3600 1/6
+NOTE 3600 3/31
+NOTE 3600 4/39
+NOTE 3600 3/31
+NOTE 3600 4/39
+NOTE 3600 4/39
+CHORD (3600 4900) 1/4
+NOTE 0 1/4
+
+; ----------- measure 35 --- beat 61 --- time signature 2/4
+
+CHORD (4900 5900) 1/2
+CHORD (4900 5900) 1/2
+CHORD (4900 5900) 1/2
+NOTE 5100 1/4
+NOTE 0 1/4
+
+; ----------- measure 36 --- beat 63 --- time signature 3/16
+
+BPM 64
+NOTE 5900 1/6
+NOTE 3600 1/6
+NOTE 3600 1/3
+NOTE 3600 1/3
+
+; ----------- measure 37 --- beat 64 --- time signature 2/4
+
+NOTE 5900 1/4
+BPM 48
+NOTE 5700 8/49
+NOTE 3700 1/3
+NOTE 3700 1/3
+NOTE 4200 1/6
+CHORD (-4200 4800) 8/49
+CHORD (3700 -4800) 1/6
+CHORD (-3700 4800) 1/6
+CHORD (3700 -4800) 1/4
+CHORD (-3700 -4800 5100) 1/12
+CHORD (3700 -5100) 1/6
+
+; ----------- measure 38 --- beat 66 --- time signature 7/8
+
+BPM 60
+NOTE 8200 1/3
+CHORD (8000 -8200) 2/3
+NOTE 0 2
+CHORD (7900 8500) 1/2
+CHORD (4500 4700) 1
+NOTE 5300 8/49
+NOTE 4800 1/3
+NOTE 5300 8/49
+NOTE 4800 1/3
+NOTE 5300 1/5
+NOTE 4800 2/5
+NOTE 5300 1/5
+NOTE 4800 10/49
+NOTE 0 1/2
+
+; ----------- measure 39 --- beat 69.5 --- time signature 3/8
+
+BPM 40
+BPM 26.6667
+NOTE 0 14/23
+NOTE 8500 2/35
+CHORD (7900 -8500) 5/46
+NOTE 0 9/40
+NOTE 5100 5/46
+NOTE 4800 9/40
+NOTE 5100 5/46
+NOTE 4800 9/40
+NOTE 5100 5/46
+NOTE 0 9/40
+
+; ----------- measure 40 --- beat 70.5 --- time signature 7/16
+
+BPM 40
+NOTE 0 8/49
+NOTE 6900 41/49
+NOTE -6900 1/2
+NOTE 0 3/4
+NOTE 4100 3/4
+NOTE 3900 1/4
+NOTE 0 1/4
+
+; ----------- measure 41 --- beat 72.25 --- time signature 2/4
+
+NOTE 3700 8/49
+NOTE 4800 1/2
+NOTE 3700 1/6
+NOTE 4800 1/2
+NOTE 3700 1/6
+NOTE 4800 1/2
+
+; ----------- measure 42 --- beat 74.25
+
+NOTE 3800 6/43
+NOTE 5700 2/7
+NOTE 7200 1
+NOTE 7800 2/7
+NOTE 0 11/38
+
+; ----------- measure 43 --- beat 76.25 --- time signature 3/8
+
+BPM 26.6667
+NOTE 3600 3/32
+NOTE 5000 2/7
+NOTE 3600 3/32
+NOTE 5000 5/26
+NOTE 3600 5/46
+NOTE 5100 9/40
+
+; ----------- measure 44 --- beat 77.25 --- time signature 5/16
+
+BPM 40
+BPM 56
+NOTE 6500 8/49
+NOTE 4300 17/29
+NOTE 4400 1/4
+NOTE 4100 1/4
+
+; ----------- measure 45 --- beat 78.5 --- time signature 2/4
+
+NOTE 3600 3/8
+NOTE 5000 1/8
+NOTE 0 1/4
+NOTE 5000 1/4
+CHORD (4800 5000) 1/4
+NOTE 0 1/4
+CHORD (4800 5000 5700) 1/4
+NOTE 0 1/4
+
+; ----------- measure 46 --- beat 80.5
+
+NOTE 5100 1/8
+NOTE 0 3/8
+NOTE 6200 1/8
+NOTE 6200 1/8
+NOTE 6200 1/8
+NOTE 6200 1/8
+NOTE 4900 3/4
+NOTE 6800 1/8
+NOTE 6800 1/8
+
+; ----------- measure 47 --- beat 82.5
+
+BPM 40
+CHORD (6700 7300) 2
+NOTE 0 5/4
+NOTE 3800 1/12
+CHORD (3600 -3800) 1/6
+NOTE 0 1/2
+
+; ----------- measure 48 --- beat 84.5
+
+NOTE 3800 41/49
+CHORD (-3800 4300) 8/49
+NOTE 3600 2/3
+CHORD (4100 -4300) 41/49
+NOTE 0 5/32
+NOTE 0 29/57
+
+; ----------- measure 49 --- beat 86.5 --- time signature 3/8
+
+BPM 26.6667
+BPM 40
+NOTE 4800 1/12
+NOTE 5800 1/4
+NOTE 4800 1/12
+NOTE 5800 1/4
+NOTE 5800 1/6
+NOTE 4900 1/6
+
+; ----------- measure 50 --- beat 87.5 --- time signature 5/16
+
+BPM 60
+NOTE 6500 8/49
+NOTE 4300 17/29
+NOTE 4400 1/4
+NOTE 4100 1/4
+
+; ----------- measure 51 --- beat 88.75 --- time signature 1/4
+
+NOTE 8100 3/4
+NOTE 8300 1/4
+NOTE 0 1
+
+; ----------- measure 52 --- beat 89.75 --- time signature 3/8
+
+BPM 40
+BPM 32
+NOTE 4400 1/3
+NOTE 5800 5/46
+NOTE 0 1/9
+NOTE 5600 1/9
+NOTE 5500 5/46
+NOTE 0 1/9
+NOTE 5300 1/9
+
+; ----------- measure 53 --- beat 90.75 --- time signature 5/16
+
+BPM 48
+NOTE 4700 5/4
+
+; ----------- measure 54 --- beat 92 --- time signature 7/8
+
+NOTE 5900 1/3
+NOTE 5800 1/2
+NOTE 5600 1/2
+NOTE 5600 1/2
+NOTE 5500 1/2
+NOTE 0 5/17
+NOTE 0 1/25
+NOTE 0 1/4
+NOTE 0 1/16
+NOTE 0 1/60
+NOTE 4300 1/4
+NOTE 0 13/51
+
+; ----------- measure 55 --- beat 95.5 --- time signature 5/16
+
+NOTE 5800 1/3
+NOTE 5600 1/6
+NOTE 4300 3/4
+
+; ----------- measure 56 --- beat 96.75 --- time signature 3/4
+
+NOTE 5800 2/5
+NOTE 5600 3/5
+NOTE 5900 2/5
+NOTE 5500 1/5
+NOTE 5300 1/5
+NOTE 4000 15/28
+NOTE 0 2/3
+
+; ----------- measure 57 --- beat 99.75 --- time signature 3/16
+
+BPM 64
+NOTE 4300 1
+
+; ----------- measure 58 --- beat 100.75 --- time signature 7/16
+
+BPM 48
+NOTE 5800 1/4
+NOTE 5900 1/4
+NOTE 5900 1/4
+NOTE 5600 1/4
+NOTE 0 3/4
+
+; ----------- measure 59 --- beat 102.5
+
+BPM 40
+NOTE 7800 3/4
+CHORD (-7800 8700) 1
+NOTE 0 3/2
+NOTE 5200 1/4
+
+; ----------- measure 60 --- beat 104.25 --- time signature 5/8
+
+NOTE 5900 2/3
+NOTE 5900 1/3
+NOTE 4800 2/3
+CHORD (4800 -5900) 1/3
+CHORD (-4800 5900) 1/3
+CHORD (4800 -5900) 2/3
+NOTE 0 1/2
+
+; ----------- measure 61 --- beat 106.75 --- time signature 2/4
+
+NOTE 0 4
+
+; ----------- measure 62 --- beat 108.75 --- time signature 3/4
+
+NOTE 0 2
+NOTE 0 1
+
+; ----------- measure 63 --- beat 111.75 --- time signature 2/4
+
+BPM 60
+CHORD (6700 7000) 1/2
+NOTE 6700 1/8
+CHORD (-6700 7000) 1/4
+CHORD (6700 7000) 1/8
+NOTE 0 1/4
+CHORD (6700 7000) 1/2
+CHORD (6700 7000) 1/8
+CHORD (6700 7000) 1/8
+CHORD (4800 5700) 1/2
+NOTE 4800 1/8
+CHORD (-4800 5700) 1/4
+CHORD (4800 5700) 1/8
+NOTE 0 1/4
+CHORD (4800 5700) 1/2
+CHORD (4800 5700) 1/8
+CHORD (4800 5700) 1/8
+
+; ----------- measure 64 --- beat 113.75 --- time signature 5/16
+
+NOTE 0 1/4
+NOTE 6700 1/4
+CHORD (-6700 7000) 1/2
+NOTE 7500 1/4
+NOTE 0 1/4
+NOTE 4800 1/4
+CHORD (-4800 5700) 1/2
+NOTE 4900 1/4
+
+; ----------- measure 65 --- beat 115 --- time signature 3/16
+
+BPM 80
+NOTE 0 2/3
+CHORD (6700 7000) 1/3
+NOTE 0 2/3
+CHORD (4800 5700) 1/3
+
+; ----------- measure 66 --- beat 116 --- time signature 1/4
+
+BPM 60
+BPM 45
+NOTE 4800 1/12
+CHORD (-4800 5100) 1/12
+CHORD (4900 -5100) 1/6
+NOTE 0 1/3
+NOTE 4600 1/3
+
+; ----------- measure 67 --- beat 117 --- time signature 3/4
+
+NOTE 7500 3/8
+NOTE 7600 1/8
+NOTE 0 1/2
+CHORD (6700 7300) 1/3
+CHORD (-6700 7300) 1/6
+CHORD (6700 -7300) 1/4
+CHORD (-6700 7300) 1/12
+CHORD (6700 -7300) 1/6
+CHORD (-6700 -7300) 4/27
+CHORD (-6700 7300) 1/20
+CHORD (6700 -7300) 4/27
+CHORD (-6700 7300) 1/20
+CHORD (6700 -7300) 4/27
+CHORD (-6700 7300) 1/20
+CHORD (6700 -7300) 5/33
+CHORD (-6700 7300) 1/21
+CHORD (6700 -7300) 10/49
+NOTE 0 1
+NOTE 4000 1/2
+NOTE 4000 1/3
+NOTE 4000 7/19
+NOTE 4000 4/5
+
+; ----------- measure 68 --- beat 120 --- time signature 3/16
+
+BPM 60
+NOTE 0 2/3
+NOTE 8100 1/3
+NOTE 0 1
+
+; ----------- measure 69 --- beat 121 --- time signature 2/4
+
+BPM 45
+BPM 60
+NOTE 0 1/12
+NOTE 5000 1/12
+CHORD (3600 -5000) 1/6
+NOTE 0 5/12
+NOTE 5000 1/12
+CHORD (3600 -5000) 1/6
+NOTE 0 1/4
+NOTE 5000 1/12
+CHORD (3600 -5000) 1/6
+NOTE 0 1/2
+
+; ----------- measure 70 --- beat 123
+
+NOTE 0 5/3
+NOTE 4300 1/3
+
+; ----------- measure 71 --- beat 125 --- time signature 3/8
+
+BPM 40
+NOTE 4900 1/12
+NOTE 3600 1/4
+NOTE 4900 1/12
+NOTE 3600 1/4
+NOTE 4900 1/6
+NOTE 5100 1/12
+NOTE 5100 1/12
+
+; ----------- measure 72 --- beat 126 --- time signature 5/16
+
+BPM 60
+BPM 48
+NOTE 3600 8/49
+NOTE 3600 1/6
+NOTE 3600 1/6
+NOTE 3600 1/4
+NOTE 4500 1/2
+
+; ----------- measure 73 --- beat 127.25 --- time signature 1/8
+
+NOTE 4500 1/4
+CHORD (3800 -4500) 1/12
+CHORD (3600 -3800) 1/6
+
+; ----------- measure 74 --- beat 127.75 --- time signature 5/8
+
+NOTE 7000 1/8
+CHORD (-7000 7300) 1/4
+NOTE 7000 1/8
+CHORD (-7000 7300) 1/2
+CHORD (-7000 -7300) 1/4
+CHORD (7000 7300) 1/2
+CHORD (7000 7300) 1/4
+CHORD (-7000 -7300) 1/12
+CHORD (-7000 7300) 1/12
+CHORD (7000 -7300) 1/6
+NOTE 8700 1/6
+NOTE 0 5/2
+
+; ----------- measure 75 --- beat 130.25 --- time signature 3/8
+
+BPM 32
+CHORD (7000 7300) 1/12
+NOTE 7600 1/4
+CHORD (7000 7300) 1/12
+NOTE 7600 1/4
+CHORD (7000 7300) 1/6
+NOTE 0 7/6
+
+; ----------- measure 76 --- beat 131.25 --- time signature 1/4
+
+BPM 48
+NOTE 7600 3/8
+NOTE 7800 3/8
+NOTE 8500 1/8
+NOTE 8700 1/8
+NOTE 0 1
+
+; ----------- measure 77 --- beat 132.25 --- time signature 3/4
+
+NOTE 5200 1/2
+NOTE 5200 1/2
+NOTE 5200 1/2
+NOTE 5200 1/2
+NOTE 5200 1/2
+NOTE 5200 1/2
+
+; ----------- measure 78 --- beat 135.25 --- time signature 2/4
+
+CHORD (4900 5200) 1/2
+NOTE 5200 1/2
+NOTE 5200 4/7
+NOTE 5200 6/43
+NOTE 5200 1/7
+NOTE 5200 1/7
+
+; ----------- measure 79 --- beat 137.25 --- time signature 5/16
+
+NOTE 5200 1/2
+CHORD (4900 5200) 1/2
+NOTE 5200 1/4
+
+; ----------- measure 80 --- beat 138.5 --- time signature 2/4
+
+NOTE 5200 37/62
+NOTE 5200 5/33
+NOTE 5200 1/21
+CHORD (4900 -5200) 10/49
+NOTE 5200 17/40
+NOTE 5200 3/7
+NOTE 5200 1/7
+
+; ----------- measure 81 --- beat 140.5 --- time signature 3/8
+
+BPM 32
+NOTE 5200 5/46
+NOTE 4300 9/40
+NOTE 5200 5/46
+NOTE 4300 9/40
+NOTE 5200 5/46
+NOTE 4300 9/40
+
+; ----------- measure 82 --- beat 141.5 --- time signature 7/16
+
+BPM 48
+BPM 40
+NOTE 4800 8/49
+NOTE 5100 1/6
+NOTE 0 1/6
+NOTE 5300 1/3
+NOTE 5300 1/3
+NOTE 5100 1/6
+NOTE 0 1/6
+NOTE 6700 1/4
+
+; ----------- measure 83 --- beat 143.25 --- time signature 4/8
+
+NOTE 6700 1/3
+CHORD (3800 -6700) 1/6
+CHORD (3600 -3800) 1/3
+NOTE 3600 1/3
+NOTE 3600 2/23
+CHORD (-3600 3800) 1/12
+CHORD (3600 -3800) 1/6
+NOTE 5100 1/8
+NOTE 4800 1/8
+NOTE 0 1/4
+
+; ----------- measure 84 --- beat 145.25
+
+NOTE 5200 8/49
+NOTE 5000 1/6
+NOTE 0 1/6
+NOTE 5100 1/4
+NOTE 4800 1/4
+NOTE 0 1/4
+NOTE 5700 1/4
+NOTE 5100 8/49
+NOTE 4900 1/6
+NOTE 0 1/6
+
+; ----------- measure 85 --- beat 147.25 --- time signature 3/8
+
+BPM 26.6667
+NOTE 4800 1/12
+CHORD (-4800 5700) 1/6
+NOTE 4900 1/4
+NOTE 5700 1/6
+NOTE 5700 5/46
+NOTE 0 1/9
+NOTE 5200 1/9
+
+; ----------- measure 86 --- beat 148.25 --- time signature 5/16
+
+BPM 40
+NOTE 4900 1/4
+NOTE 4900 1/4
+NOTE 5100 8/49
+NOTE 0 2/23
+NOTE 5700 1/12
+CHORD (3600 -5700) 1/6
+NOTE -5700 1/8
+NOTE 5100 1/8
+
+; ----------- measure 87 --- beat 149.5 --- time signature 2/8
+
+NOTE 5000 1/6
+NOTE 5000 1/12
+NOTE 3600 8/49
+CHORD (3600 -5000) 2/23
+CHORD (-3600 5000) 1/12
+CHORD (3600 -5000) 1/6
+CHORD (3600 5000) 1/4
+CHORD (3600 5000) 1/4
+
+; ----------- measure 88 --- beat 150.5 --- time signature 3/16
+
+BPM 53.3333
+NOTE 5100 2/3
+NOTE 4500 1/3
+
+; ----------- measure 89 --- beat 151.5 --- time signature 7/16
+
+BPM 40
+NOTE 4500 1/2
+NOTE 4500 5/8
+NOTE 0 3/8
+NOTE 5100 1/4
+
+; ----------- measure 90 --- beat 153.25 --- time signature 4/8
+
+BPM 60
+NOTE 6800 1/12
+CHORD (-6800 7500) 1/12
+CHORD (6800 -7500) 1/6
+NOTE 0 1/6
+NOTE 6800 1/12
+CHORD (-6800 7500) 1/12
+CHORD (6800 -7500) 1/6
+NOTE 0 2/3
+NOTE 7100 8/49
+NOTE 7400 1/6
+NOTE 0 1/6
+NOTE 3700 1/2
+NOTE 3700 1/2
+NOTE 0 1/2
+NOTE 3700 8/49
+NOTE 3900 1/6
+NOTE 0 1/6
+
+; ----------- measure 91 --- beat 155.25
+
+NOTE 6800 1/12
+CHORD (-6800 7500) 1/12
+CHORD (6800 -7500) 1/6
+NOTE 0 1/6
+NOTE 6800 1/12
+CHORD (-6800 7500) 1/12
+CHORD (6800 -7500) 1/6
+NOTE 0 2/3
+NOTE 7100 8/49
+NOTE 7400 1/6
+NOTE 0 1/6
+NOTE 3700 1/2
+NOTE 3700 1/2
+NOTE 0 1/2
+NOTE 3700 8/49
+NOTE 3900 1/6
+NOTE 0 1/6
+
+; ----------- measure 92 --- beat 157.25
+
+NOTE 6800 1/12
+CHORD (-6800 7500) 1/12
+CHORD (6800 -7500) 1/6
+NOTE 0 1/6
+NOTE 6800 1/12
+CHORD (-6800 7500) 1/12
+CHORD (6800 -7500) 1/6
+NOTE 0 2/3
+NOTE 7100 8/49
+NOTE 7400 1/6
+NOTE 0 1/6
+NOTE 3700 1/2
+NOTE 3700 1/2
+NOTE 0 1/2
+NOTE 3700 8/49
+NOTE 3900 1/6
+NOTE 0 1/6
+
+; ----------- measure 93 --- beat 159.25 --- time signature 5/8
+
+NOTE 7500 1/4
+NOTE 6800 8/49
+NOTE 0 41/49
+NOTE 0 1/4
+NOTE 6200 1/8
+NOTE 6500 1/8
+NOTE 6800 1/8
+NOTE 7500 1/8
+NOTE 0 3/4
+NOTE 3700 1/2
+NOTE 0 3/2
+NOTE 0 1/2
+
+; ----------- measure 94 --- beat 161.75 --- time signature 3/16
+
+BPM 80
+NOTE 0 1/3
+CHORD (6200 6500 7500) 1/3
+NOTE 0 4/3
+
+; ----------- measure 95 --- beat 162.75 --- time signature 3/8
+
+BPM 40
+NOTE 0 1/3
+CHORD (6200 6500 6800) 1/6
+NOTE 0 1/2
+NOTE 0 1
+
+; ----------- measure 96 --- beat 163.75
+
+NOTE 0 2/3
+NOTE 8700 1/3
+NOTE 0 1
+
+; ----------- measure 97 --- beat 164.75 --- time signature 5/8
+
+BPM 60
+NOTE 9600 1/4
+NOTE 0 3/4
+NOTE 0 3/2
+NOTE 0 5/2
+
+; ----------- measure 98 --- beat 167.25 --- time signature 3/8
+
+BPM 40
+NOTE 0 2/3
+NOTE 7600 1/3
+NOTE 0 1
+
+; ----------- measure 99 --- beat 168.25 --- time signature 5/16
+
+BPM 60
+NOTE 0 5/2
+
+; ----------- measure 100 --- beat 169.5 --- time signature 3/4
+
+NOTE 9600 1
+NOTE 0 2
+NOTE 0 28/19
+NOTE 5800 1/36
+CHORD (4800 -5800) 3/31
+NOTE 5700 23/18
+NOTE -5700 1/8
+
+; ----------- measure 101 --- beat 172.5 --- time signature 3/8
+
+BPM 40
+NOTE 9600 1/12
+NOTE 9500 11/12
+NOTE 0 1/3
+NOTE 5100 2/3
+
+; ----------- measure 102 --- beat 173.5 --- time signature 7/16
+
+BPM 60
+BPM 42
+NOTE 9400 7/4
+NOTE 5100 6/43
+NOTE 5100 1/7
+NOTE 5100 6/43
+NOTE 0 29/27
+CHORD (4900 5100) 1/4
+
+; ----------- measure 103 --- beat 175.25 --- time signature 5/16
+
+NOTE 9400 5/4
+NOTE 0 8/23
+NOTE 5200 1/20
+CHORD (4900 -5200) 1/5
+NOTE 0 15/23
+
+; ----------- measure 104 --- beat 176.5 --- time signature 2/4
+
+BPM 64
+NOTE 0 4
+
+; ----------- measure 105 --- beat 178.5
+
+NOTE 6100 6/43
+NOTE 6400 1/7
+NOTE 7100 6/43
+NOTE 7400 1/7
+NOTE 0 10/7
+NOTE 0 2
+
+; ----------- measure 106 --- beat 180.5
+
+NOTE 0 4
+
+; ----------- measure 107 --- beat 182.5 --- time signature 7/16
+
+NOTE 0 7/2
+
+; ----------- measure 108 --- beat 184.25 --- time signature 3/4
+
+NOTE 0 3/2
+CHORD (4800 5000 5700) 8/49
+CHORD (3900 -4800 -5000 -5700) 4/3
+
+; ----------- measure 109 --- beat 187.25 --- time signature 2/4
+
+CHORD (3900 4800 5000 5700) 2
+
+; ----------- measure 110 --- beat 189.25
+
+CHORD (3900 4800 5000 5700) 2
+
+; ----------- measure 111 --- beat 191.25 --- time signature 3/8
+
+BPM 42.6667
+BPM 26.6667
+NOTE 3900 1/3
+CHORD (-3900 4800 5000 5700) 2/3
+
+; ----------- measure 112 --- beat 192.25 --- time signature 7/16
+
+CHORD (5000 5700) 1/4
+BPM 40
+NOTE 4800 8/49
+NOTE 5500 1/6
+NOTE 5700 1/6
+NOTE 5700 8/49
+NOTE 5700 1/6
+NOTE 5700 1/6
+NOTE 5700 1/4
+NOTE 5900 1/4
+CHORD (-5000 5600) 1/4
+
+; ----------- measure 113 --- beat 194 --- time signature 2/4
+
+BPM 48
+CHORD (5000 5600) 1/4
+NOTE 0 7/10
+NOTE 5600 1/20
+CHORD (5000 -5600) 1/5
+NOTE 0 11/20
+NOTE 5600 1/21
+CHORD (5000 -5600) 10/49
+
+; ----------- measure 114 --- beat 196
+
+CHORD (5000 5600) 1/4
+NOTE 0 1/4
+CHORD (5000 5600) 1/4
+NOTE 0 1/4
+CHORD (4900 5100) 1/4
+NOTE 0 3/4
+
+; ----------- measure 115 --- beat 198
+
+CHORD (4800 5000 5700 5900) 1/2
+NOTE 0 25/27
+NOTE 6000 23/40
+
+; ----------- measure 116 --- beat 200
+
+NOTE 0 1
+NOTE 7800 1
+NOTE 0 2
+
+; ----------- measure 117 --- beat 202 --- time signature 3/16
+
+BPM 64
+NOTE 0 2
+
+; ----------- measure 118 --- beat 203 --- time signature 2/4
+
+BPM 48
+BPM 60
+NOTE 8500 2
+NOTE 0 2
+
+; ----------- measure 119 --- beat 205 --- time signature 3/8
+
+BPM 40
+NOTE 9500 1
+NOTE 0 2/3
+NOTE 5200 1/6
+NOTE 0 1/6
+
+; ----------- measure 120 --- beat 206 --- time signature 5/16
+
+BPM 60
+BPM 72
+NOTE 6100 1/4
+NOTE 6400 1/4
+NOTE 7100 1/4
+NOTE 7400 1/4
+NOTE 0 3/2
+
+; ----------- measure 121 --- beat 207.25 --- time signature 3/16
+
+BPM 96
+NOTE 0 2
+
+; ----------- measure 122 --- beat 208.25 --- time signature 5/8
+
+BPM 72
+NOTE 0 1
+CHORD (5300 5500) 1/2
+CHORD (5300 5500) 12/29
+CHORD (-5300 5500) 2/23
+CHORD (5300 5500) 8/49
+CHORD (5300 -5500) 1/3
+
+; ----------- measure 123 --- beat 210.75 --- time signature 1/4
+
+CHORD (5300 5500) 1
+
+; ----------- measure 124 --- beat 211.75 --- time signature 3/8
+
+BPM 48
+BPM 40
+NOTE 9600 1
+NOTE 0 1
+
+; ----------- measure 125 --- beat 212.75 --- time signature 5/8
+
+BPM 60
+NOTE 4500 3/8
+NOTE 4500 3/8
+NOTE 4500 1/2
+NOTE 5800 1/2
+NOTE -4500 12/29
+NOTE 5800 1/6
+NOTE 5800 1/6
+
+; ----------- measure 126 --- beat 215.25 --- time signature 4/8
+
+BPM 48
+NOTE 4100 2
+
+; ----------- measure 127 --- beat 217.25 --- time signature 3/8
+
+BPM 32
+NOTE 7600 2/3
+NOTE 9600 1/3
+NOTE 0 1
+
+; ----------- measure 128 --- beat 218.25 --- time signature 5/16
+
+BPM 48
+BPM 60
+NOTE 0 5/4
+CHORD (4900 5100) 1/4
+NOTE 4900 1/4
+NOTE 0 1/4
+NOTE 4900 8/49
+NOTE 4900 1/6
+NOTE 0 1/6
+
+; ----------- measure 129 --- beat 219.5 --- time signature 7/8
+
+NOTE 0 7
+
+; ----------- measure 130 --- beat 223 --- time signature 4/8
+
+BPM 36
+NOTE 8100 2
+CHORD (4800 5000) 1/2
+NOTE 0 3/2
+
+; ----------- measure 131 --- beat 225 --- time signature 6/8
+
+BPM 24
+NOTE 8300 4/3
+NOTE 0 2/3
+NOTE 0 5/3
+NOTE 5000 5/46
+CHORD (-4800 -5000) 9/40
+
+; ----------- measure 132 --- beat 227 --- time signature 3/16
+
+BPM 48
+NOTE 0 2
+
+; ----------- measure 133 --- beat 228 --- time signature 4/8
+
+BPM 36
+NOTE 8300 1
+NOTE 8100 19/20
+CHORD (5000 -8100) 1/20
+CHORD (4800 -5000) 1/5
+NOTE 4800 2/5
+NOTE 4800 25/62
+NOTE 4800 6/13
+CHORD (-4800 5000) 5/46
+CHORD (4800 -5000) 6/43
+NOTE 0 11/38
+
+; ----------- measure 134 --- beat 230 --- time signature 3/4
+
+NOTE 0 2
+NOTE 8100 1
+CHORD (4800 5000) 1
+CHORD (4800 5000) 1
+CHORD (4800 5000) 1
+
+; ----------- measure 135 --- beat 233 --- time signature 7/8
+
+NOTE 0 2
+NOTE 8300 3/2
+NOTE 5000 1/2
+CHORD (-5000 5600) 5/4
+NOTE 0 5/4
+NOTE 0 1/2
+
+; ----------- measure 136 --- beat 236.5 --- time signature 5/8
+
+NOTE 0 5/4
+NOTE 9600 3/4
+NOTE -9600 1/2
+NOTE 0 5/2
+
+; ----------- measure 137 --- beat 239 --- time signature 6/8
+
+BPM 24
+NOTE 8100 2
+NOTE 0 2
+
+; ----------- measure 138 --- beat 241 --- time signature 4/8
+
+BPM 36
+CHORD (5000 5600) 2
+
+; ----------- measure 139 --- beat 243 --- time signature 7/16
+
+NOTE 8300 7/4
+NOTE 0 11/8
+NOTE 5200 3/8
+
+; ----------- measure 140 --- beat 244.75 --- time signature 2/4
+
+BPM 48
+NOTE 5200 6/43
+NOTE 5800 1/7
+NOTE 0 2/19
+NOTE 0 1/36
+NOTE 0 1/12
+NOTE 0 3/8
+NOTE 0 3/32
+NOTE 0 1/41
+NOTE 0 1
+
+; ----------- measure 141 --- beat 246.75 --- time signature 5/8
+
+NOTE 9600 106/49
+NOTE 0 7/3
+NOTE 0 1/2
+
+; ----------- measure 142 --- beat 249.25 --- time signature 3/16
+
+BPM 64
+NOTE 0 2
+
+; ----------- measure 143 --- beat 250.25 --- time signature 4/8
+
+BPM 48
+BPM 42
+NOTE 8100 2
+CHORD (4800 5000) 1/2
+NOTE 0 3/2
+
+; ----------- measure 144 --- beat 252.25 --- time signature 6/8
+
+BPM 28
+NOTE 8300 4/3
+NOTE 0 2/3
+NOTE 0 5/3
+NOTE 5000 5/46
+CHORD (4800 -5000) 9/40
+
+; ----------- measure 145 --- beat 254.25 --- time signature 4/8
+
+BPM 42
+NOTE 0 1
+NOTE 8100 1
+CHORD (5000 5600) 1
+CHORD (-5000 -5600) 1/2
+CHORD (-5000 5600) 1/14
+CHORD (5000 -5600) 3/7
+
+; ----------- measure 146 --- beat 256.25 --- time signature 4/4
+
+NOTE 0 1
+NOTE 8300 3
+CHORD (5000 5600) 1
+CHORD (5000 5600) 1
+CHORD (5000 5600) 1
+CHORD (-5000 5600) 1
+
+; ----------- measure 147 --- beat 260.25 --- time signature 3/16
+
+BPM 56
+NOTE 8100 1
+NOTE 0 1
+
+; ----------- measure 148 --- beat 261.25 --- time signature 4/8
+
+NOTE 5900 1/7
+NOTE 5900 2/19
+BPM 42
+NOTE 5000 6/43
+CHORD (5000 -5900) 1/28
+CHORD (-5000 5900) 5/46
+CHORD (5000 -5900) 1/28
+CHORD (-5000 5900) 2/19
+CHORD (5000 -5900) 1/28
+CHORD (-5000 5900) 5/46
+CHORD (5000 -5900) 1/28
+CHORD (-5000 5900) 2/19
+CHORD (5000 -5900) 1/25
+CHORD (-5000 5900) 2/19
+CHORD (5000 -5900) 1/28
+CHORD (5000 5900) 5/46
+CHORD (4800 -5000 -5900) 6/43
+NOTE 0 37/43
+
+; ----------- measure 149 --- beat 263.25 --- time signature 3/8
+
+BPM 28
+BPM 36
+NOTE 8100 2/3
+NOTE 0 1/3
+CHORD (5600 5800) 2/3
+NOTE 4900 1/6
+NOTE 0 1/6
+
+; ----------- measure 150 --- beat 264.25 --- time signature 5/8
+
+BPM 54
+BPM 42
+NOTE 0 1/2
+NOTE 7800 5/3
+NOTE 7800 1/6
+NOTE 0 1/3
+NOTE 4500 90/49
+NOTE -4500 8/49
+NOTE 4400 1/6
+NOTE 0 1/6
+
+; ----------- measure 151 --- beat 266.75 --- time signature 5/16
+
+CHORD (4800 5000 5700 5900) 5/4
+
+; ----------- measure 152 --- beat 268 --- time signature 7/8
+
+NOTE 0 1/2
+NOTE 4100 1/2
+NOTE 0 2
+NOTE 0 1/2
+
+; ----------- measure 153 --- beat 271.5 --- time signature 3/8
+
+BPM 28
+NOTE 0 2/3
+CHORD (6100 6400 7100 7400) 1/6
+NOTE 0 7/6
+
+; ----------- measure 154 --- beat 272.5 --- time signature 7/16
+
+BPM 42
+NOTE 9600 7/4
+NOTE 0 7/4
+
+; ----------- measure 155 --- beat 274.25 --- time signature 4/8
+
+NOTE 9400 1
+NOTE 0 41/46
+NOTE 6700 5/46
+CHORD (6000 -6700) 1/28
+CHORD (-6000 6700) 2/19
+CHORD (6000 -6700) 1/28
+CHORD (-6000 6700) 5/46
+CHORD (6000 -6700) 1/28
+CHORD (-6000 6700) 2/19
+CHORD (6000 -6700) 1/28
+CHORD (-6000 6700) 5/46
+CHORD (6000 -6700) 1/28
+CHORD (-6000 6700) 2/19
+CHORD (6000 -6700) 1/25
+CHORD (-6000 6700) 2/19
+CHORD (6000 -6700) 1/7
+CHORD (6000 6700) 1/4
+NOTE 0 3/4
+
+; ----------- measure 156 --- beat 276.25 --- time signature 3/16
+
+BPM 56
+BPM 72
+NOTE 8100 1
+NOTE 0 1
+
+; ----------- measure 157 --- beat 277.25 --- time signature 5/16
+
+BPM 54
+NOTE 5100 1/4
+NOTE 0 1
+
+; ----------- measure 158 --- beat 278.5 --- time signature 2/4
+
+NOTE 8700 9/20
+CHORD (7800 -8700) 1/20
+BPM 60
+NOTE 8500 2/5
+CHORD (7600 -7800) 1/5
+NOTE 0 87/62
+NOTE 0 2/5
+NOTE 3600 4/39
+CHORD (-3600 4100) 1/2
+NOTE 4900 8/49
+NOTE 6900 1/6
+NOTE 7600 1/3
+NOTE 7000 1/6
+NOTE 0 1/6
+
+; ----------- measure 159 --- beat 280.5 --- time signature 5/8
+
+NOTE 7800 8/49
+NOTE 3800 1/6
+NOTE 4100 5/12
+NOTE 7800 1/8
+NOTE 3800 1/8
+NOTE 4500 3/2
+
+; ----------- measure 160 --- beat 283 --- time signature 3/8
+
+BPM 40
+NOTE 0 2/15
+NOTE 6700 2/15
+NOTE 7300 2/15
+NOTE 3800 7/26
+NOTE 4300 5/46
+NOTE 7000 1/9
+NOTE -3800 1/9
+
+; ----------- measure 161 --- beat 284 --- time signature 3/16
+
+BPM 80
+NOTE 8500 1
+NOTE 0 1
+
+; ----------- measure 162 --- beat 285 --- time signature 7/16
+
+BPM 60
+CHORD (3600 5700 5900) 1/8
+CHORD (5700 5900) 1/8
+NOTE 0 5/4
+CHORD (4400 5000) 1/4
+
+; ----------- measure 163 --- beat 286.75 --- time signature 3/8
+
+NOTE 4000 2/3
+BPM 40
+NOTE 4700 3/32
+NOTE 3600 8/21
+NOTE 3700 2/21
+NOTE 3700 6/29
+NOTE 5000 1/9
+NOTE 5900 1/9
+
+; ----------- measure 164 --- beat 287.75 --- time signature 5/16
+
+CHORD (5000 5700 5900) 1/4
+BPM 60
+NOTE 4800 8/49
+NOTE 0 41/49
+NOTE 0 1/4
+
+; ----------- measure 165 --- beat 289 --- time signature 3/4
+
+NOTE 5900 1/5
+NOTE 3600 2/15
+CHORD (-3600 5000 5700) 1/15
+CHORD (4100 -5000 -5700) 1/5
+CHORD (-5000 -5700) 25/62
+CHORD (4800 -5000 -5700) 1
+CHORD (-4800 5000 -5700) 1/3
+CHORD (4800 -5000 -5700) 2/3
+
+; ----------- measure 166 --- beat 292 --- time signature 3/8
+
+BPM 40
+BPM 28
+NOTE 8300 1
+NOTE 4800 1/3
+CHORD (-4800 5000 5700) 2/3
+
+; ----------- measure 167 --- beat 293
+
+NOTE 8300 1/6
+NOTE 0 5/6
+NOTE 0 1
+
+; ----------- measure 168 --- beat 294 --- time signature 7/8
+
+BPM 42
+NOTE 8100 2
+NOTE -8300 3/2
+NOTE 4400 3
+NOTE 0 1/2
+
+; ----------- measure 169 --- beat 297.5 --- time signature 7/16
+
+BPM 63
+CHORD (3600 3800 5700 5900) 1
+CHORD (-3600 -3800 -5700 -5900) 1/12
+CHORD (-3600 -3800 5100 -5700 -5900) 1/12
+CHORD (4900 -5100) 1/6
+NOTE 0 1/6
+NOTE 6000 1/8
+NOTE 7000 1/8
+
+; ----------- measure 170 --- beat 299.25 --- time signature 3/4
+
+NOTE 0 1/12
+CHORD (3800 5300 5500) 1/12
+CHORD (3600 -3800 -5300 -5500) 1/6
+NOTE 0 1/4
+CHORD (3900 5200 5400) 1/12
+CHORD (3700 -3900 -5200 -5400) 1/6
+NOTE 0 5/12
+NOTE 6700 1/12
+CHORD (4900 -6700) 1/6
+NOTE 0 1/2
+CHORD (3600 3800 5700 5900) 1/2
+CHORD (-5200 5400) 1/4
+NOTE 0 1/4
+
+; ----------- measure 171 --- beat 302.25 --- time signature 6/16
+
+BPM 84
+NOTE 4900 1/6
+NOTE 5900 1/6
+NOTE 4400 4/3
+NOTE 7800 1/3
+
+; ----------- measure 172 --- beat 304.25 --- time signature 7/16
+
+BPM 63
+CHORD (3600 3800 5700 5900) 1
+CHORD (-3600 -3800 -5700 -5900) 1/12
+CHORD (-3600 -3800 5100 -5700 -5900) 1/12
+CHORD (4900 -5100) 1/6
+NOTE 0 1/6
+NOTE 6000 1/8
+NOTE 7000 1/8
+
+; ----------- measure 173 --- beat 306 --- time signature 3/4
+
+NOTE 0 1/12
+CHORD (3800 5300 5500) 1/12
+CHORD (3600 -3800 -5300 -5500) 1/6
+NOTE 0 1/4
+CHORD (3900 5200 5400) 1/12
+CHORD (3700 -3900 -5200 -5400) 1/6
+NOTE 0 5/12
+NOTE 6700 1/12
+CHORD (4900 -6700) 1/6
+NOTE 0 1/2
+CHORD (3600 3800 5700 5900) 1/2
+CHORD (5200 5400) 1/4
+NOTE 0 1/4
+
+; ----------- measure 174 --- beat 309 --- time signature 6/16
+
+BPM 84
+NOTE 4900 1/6
+NOTE 5900 1/6
+NOTE 4400 4/3
+NOTE 7800 1/3
+
+; ----------- measure 175 --- beat 311
+
+NOTE 5700 1/6
+NOTE 5900 1/6
+NOTE 4400 4/3
+NOTE 7000 1/3
+
+; ----------- measure 176 --- beat 313
+
+NOTE 4900 1/6
+NOTE 5900 1/6
+NOTE 4400 4/3
+NOTE 7800 1/3
+
+; ----------- measure 177 --- beat 315
+
+NOTE 5700 1/6
+NOTE 5900 1/6
+NOTE 4400 4/3
+NOTE 7000 1/3
+
+; ----------- measure 178 --- beat 317 --- time signature 7/16
+
+BPM 63
+CHORD (3600 3800 5700 6700) 1
+CHORD (-3600 -3800 -5700 -6700) 1/12
+CHORD (-3600 -3800 5100 -5700 -6700) 1/12
+CHORD (4900 -5100) 1/6
+NOTE 0 1/6
+NOTE 6000 1/8
+NOTE 7000 1/8
+
+; ----------- measure 179 --- beat 318.75 --- time signature 2/4
+
+NOTE 5100 1/12
+CHORD (-5100 7000) 1/12
+CHORD (4900 -7000) 2/23
+CHORD (-4900 5000 -7000) 1/12
+CHORD (4800 -5000) 1/12
+CHORD (-4800 5000) 2/23
+CHORD (4800 -5000) 1/12
+CHORD (-4800 5000) 1/12
+CHORD (4800 -5000) 2/23
+CHORD (-4800 5000) 1/12
+CHORD (4800 -5000) 1/6
+CHORD (3700 3900) 1/4
+NOTE 0 3/4
+
+; ----------- measure 180 --- beat 320.75 --- time signature 3/16
+
+BPM 84
+NOTE 5400 1/3
+NOTE 5400 1/3
+NOTE 0 1/3
+
+; ----------- measure 181 --- beat 321.75 --- time signature 3/8
+
+BPM 42
+NOTE 5200 5/12
+NOTE 4500 1/12
+NOTE 0 1/2
+
+; ----------- measure 182 --- beat 322.75 --- time signature 5/16
+
+BPM 63
+BPM 54
+NOTE 4500 1/4
+NOTE 5400 1/2
+NOTE 4500 8/49
+NOTE 5400 1/3
+
+; ----------- measure 183 --- beat 324 --- time signature 2/4
+
+NOTE 4500 8/49
+NOTE 5400 41/49
+NOTE 0 1/2
+CHORD (4800 5000 5700 5900) 1/2
+
+; ----------- measure 184 --- beat 326 --- time signature 7/8
+
+NOTE 0 2
+NOTE 0 1/2
+CHORD (8400 8600) 1/2
+CHORD (8400 8600) 1/4
+NOTE 0 1/4
+NOTE 3600 1/2
+CHORD (-3600 3800) 1
+CHORD (5700 5900) 1/2
+CHORD (4900 5100) 1
+CHORD (4900 5100) 1/4
+NOTE 0 1/4
+
+; ----------- measure 185 --- beat 329.5 --- time signature 3/16
+
+BPM 72
+NOTE 0 2
+
+; ----------- measure 186 --- beat 330.5 --- time signature 4/8
+
+BPM 54
+CHORD (6000 6700 7000 7300) 1/2
+CHORD (6000 6700 7000 7300) 1/2
+CHORD (6000 6700 7000 7300) 1/2
+CHORD (6200 6500) 1/2
+NOTE 0 2
+
+; ----------- measure 187 --- beat 332.5 --- time signature 3/8
+
+BPM 36
+CHORD (6000 6700 7000 7300) 1/3
+CHORD (6000 6700 7000 7300) 1/3
+CHORD (6200 6500) 1/3
+NOTE 0 1
+
+; ----------- measure 188 --- beat 333.5 --- time signature 5/8
+
+BPM 54
+BPM 45
+CHORD (6000 6700 7000 7300) 1/2
+CHORD (6000 6700 7000 7300) 1/2
+CHORD (6000 6700 7000 7300) 1/2
+NOTE 0 7/2
+
+; ----------- measure 189 --- beat 336 --- time signature 7/8
+
+NOTE 0 7/2
+NOTE 0 7/2
+
+; ----------- measure 190 --- beat 339.5 --- time signature 5/4
+
+BPM 64
+CHORD (6700 8100) 1
+CHORD (6700 8100) 1
+CHORD (6700 8100) 1
+CHORD (6700 8100) 1
+CHORD (6700 8100) 1
+NOTE 0 5
+
+; ----------- measure 191 --- beat 344.5 --- time signature 3/16
+
+BPM 85.3333
+NOTE 0 2
+
+; ----------- measure 192 --- beat 345.5 --- time signature 7/16
+
+BPM 64
+BPM 32
+NOTE 0 1
+NOTE 3600 3/4
+
+; ----------- measure 193 --- beat 347.25 --- time signature 4/8
+
+NOTE 3600 1
+NOTE 0 1
+
+; ----------- measure 194 --- beat 349.25
+
+NOTE 3600 3/2
+NOTE 4100 1/3
+NOTE 3800 1/6
+
+; ----------- measure 195 --- beat 351.25 --- time signature 7/8
+
+NOTE 3800 7/2
+
+; ----------- measure 196 --- beat 354.75 --- time signature 5/8
+
+NOTE 3800 9/4
+NOTE 0 1/4
+
+; ----------- measure 197 --- beat 357.25
+
+NOTE 6100 1/4
+NOTE 6400 1/4
+NOTE 7100 1/4
+NOTE 7400 1/4
+NOTE 0 3/2
+NOTE 0 5/2
+
+; ----------- measure 198 --- beat 359.75 --- time signature 3/8
+
+BPM 21.3333
+NOTE 0 2
+
+; ----------- measure 199 --- beat 360.75 --- time signature 7/16
+
+BPM 32
+NOTE 0 5/4
+NOTE 8100 1/8
+NOTE 8300 1/8
+NOTE 0 2
+
+; ----------- measure 200 --- beat 362.5 --- time signature 5/8
+
+NOTE 4000 1/2
+NOTE 4200 1/2
+NOTE 3900 1/2
+NOTE -3900 1/4
+NOTE 3900 12/29
+NOTE 4800 2/23
+CHORD (-4800 5000 5700 5900) 1/12
+CHORD (4800 -5000 -5700 -5900) 1/6
+
+; ----------- measure 201 --- beat 365 --- time signature 3/8
+
+BPM 21.3333
+NOTE 4800 1/3
+CHORD (-4800 5000 5700 5900) 2/3
+
+; ----------- measure 202 --- beat 366
+
+CHORD (4800 5000 5700 5900) 1/6
+NOTE 0 5/6
+
+; ----------- measure 203 --- beat 367 --- time signature 7/16
+
+BPM 32
+BPM 48
+NOTE 0 7/2
+
+; ----------- measure 204 --- beat 368.75 --- time signature 4/8
+
+NOTE 0 4
+
+; ----------- measure 205 --- beat 370.75 --- time signature 7/8
+
+NOTE 0 3
+NOTE 0 1/4
+CHORD (5200 5400) 1/4
+
+; ----------- measure 206 --- beat 374.25 --- time signature 4/8
+
+BPM 40
+NOTE 4500 1/2
+CHORD (4800 5000 5900) 3/2
+
+; ----------- measure 207 --- beat 376.25
+
+CHORD (4800 5000 5900) 2
+
+; ----------- measure 208 --- beat 378.25 --- time signature 6/8
+
+BPM 26.6667
+CHORD (4800 5000 5900) 2/3
+CHORD (4900 5300 5600 5800) 4/3
+
+; ----------- measure 209 --- beat 380.25 --- time signature 4/8
+
+BPM 40
+NOTE 4900 1/2
+CHORD (-4900 5300 5600 5900) 1
+CHORD (4900 5300 5600 5800) 1/4
+NOTE 0 1/4
+
+; ----------- measure 210 --- beat 382.25 --- time signature 3/16
+
+BPM 53.3333
+NOTE 6100 1/3
+NOTE 6400 1/3
+NOTE 7100 1/3
+NOTE 0 1
+
+; ----------- measure 211 --- beat 383.25 --- time signature 5/16
+
+BPM 40
+NOTE 7400 1
+NOTE 0 3/2
+
+; ----------- measure 212 --- beat 384.5 --- time signature 5/8
+
+NOTE 0 1
+CHORD (8200 8300) 1
+NOTE 0 3/2
+NOTE 0 1/2
+CHORD (-4800 -5000) 1
+
+; ----------- measure 213 --- beat 387 --- time signature 3/8
+
+BPM 26.6667
+BPM 21.3333
+CHORD (4800 5000) 1/3
+CHORD (5700 5900) 1/3
+CHORD (5700 5900) 1/3
+
+; ----------- measure 214 --- beat 388 --- time signature 5/8
+
+NOTE 5900 1/20
+CHORD (5400 -5900) 1/5
+BPM 32
+NOTE 5700 1/5
+CHORD (5200 -5400) 9/5
+CHORD (-5200 -5400) 1/2
+
+; ----------- measure 215 --- beat 390.5 --- time signature 7/8
+
+NOTE 4100 3/2
+CHORD (-4100 4300) 2
+
+; ----------- measure 216 --- beat 394 --- time signature 3/8
+
+BPM 21.3333
+CHORD (4100 4300) 1/6
+NOTE 0 1/2
+NOTE 0 1/3
+
+; ----------- measure 217 --- beat 395 --- time signature 7/8
+
+BPM 32
+NOTE 6100 1/8
+NOTE 6400 1/8
+NOTE 7100 1/8
+NOTE 7400 1/8
+NOTE 0 5/2
+NOTE 0 5/2
+NOTE 0 3/2
+
+; ----------- measure 218 --- beat 398.5 --- time signature 3/8
+
+BPM 21.3333
+BPM 26.6667
+NOTE 0 1
+
+; ----------- measure 219 --- beat 399.5
+
+NOTE 0 1
+
+; ----------- measure 220 --- beat 400.5 --- time signature 5/16
+
+BPM 40
+NOTE 0 5/4
+
+; ----------- measure 221 --- beat 401.75 --- time signature 7/8
+
+NOTE 0 3/2
+NOTE 0 2
+
+; ----------- measure 222 --- beat 405.25 --- time signature 3/8
+
+BPM 26.6667
+NOTE 5700 1/3
+CHORD (-5700 5900) 2/3
+
+; ----------- measure 223 --- beat 406.25 --- time signature 4/8
+
+BPM 40
+CHORD (5700 5900) 1/4
+NOTE 0 3/4
+NOTE 0 1
+
+; ----------- measure 224 --- beat 408.25 --- time signature 3/16
+
+BPM 53.3333
+NOTE 7600 1/3
+CHORD (-7600 7800) 2/3
+NOTE 0 1
+
+; ----------- measure 225 --- beat 409.25 --- time signature 7/8
+
+BPM 40
+NOTE 4900 3/2
+CHORD (-4900 5800) 2
+
+; ----------- measure 226 --- beat 412.75 --- time signature 3/8
+
+BPM 26.6667
+NOTE 0 2/3
+NOTE 6000 2/9
+NOTE 6000 1/9
+CHORD (4900 5800) 1/6
+NOTE 0 1/2
+NOTE 0 1/3
+
+; ----------- measure 227 --- beat 413.75 --- time signature 4/8
+
+BPM 40
+BPM 48
+NOTE 4500 1/2
+NOTE 4800 1/2
+CHORD (-4800 5000 5700 5900) 1
+
+; ----------- measure 228 --- beat 415.75
+
+CHORD (4800 5000 5700 5900) 1/2
+NOTE 4800 1/2
+CHORD (-4800 5000 5700 5900) 1
+
+; ----------- measure 229 --- beat 417.75 --- time signature 5/8
+
+CHORD (4800 5000 5700 5900) 2
+NOTE 5300 1/2
+
+; ----------- measure 230 --- beat 420.25 --- time signature 3/8
+
+BPM 32
+NOTE 5300 2/9
+NOTE 5500 1/9
+NOTE 5300 2/9
+NOTE 5500 1/9
+NOTE 5300 2/9
+NOTE 5500 1/9
+
+; ----------- measure 231 --- beat 421.25 --- time signature 4/8
+
+BPM 48
+BPM 40
+NOTE 5200 1/4
+NOTE 0 3/4
+NOTE 5200 2/3
+NOTE 5200 1/6
+NOTE 0 1/6
+
+; ----------- measure 232 --- beat 423.25
+
+NOTE 6100 1/3
+NOTE 6400 1/3
+NOTE 7100 1/3
+NOTE 7400 1
+NOTE 0 2
+
+; ----------- measure 233 --- beat 425.25 --- time signature 7/8
+
+NOTE 0 7
+
+; ----------- measure 234 --- beat 428.75 --- time signature 4/8
+
+NOTE 4900 2
+
+; ----------- measure 235 --- beat 430.75
+
+NOTE 4900 2/3
+NOTE 5100 2/3
+NOTE -5900 2/3
+
+; ----------- measure 236 --- beat 432.75 --- time signature 3/16
+
+BPM 53.3333
+NOTE 4500 1/3
+NOTE 4500 1/3
+NOTE 4500 1/3
+
+; ----------- measure 237 --- beat 433.75 --- time signature 4/8
+
+BPM 40
+BPM 32
+CHORD (3600 4500) 2
+
+; ----------- measure 238 --- beat 435.75 --- time signature 7/8
+
+NOTE 4200 9/8
+NOTE 0 15/8
+NOTE 0 1/2
+
+; ----------- measure 239 --- beat 439.25 --- time signature 4/8
+
+NOTE 8700 1
+NOTE 8500 1
+NOTE 0 2
+
+; ----------- measure 240 --- beat 441.25 --- time signature 7/16
+
+NOTE 5200 1/8
+NOTE 3800 9/8
+NOTE 3900 1/2
+
+; ----------- measure 241 --- beat 443 --- time signature 7/8
+
+NOTE 3900 2/3
+NOTE 3900 2/3
+NOTE 3900 19/15
+NOTE 3900 28/31
+
+; ----------- measure 242 --- beat 446.5 --- time signature 4/8
+
+NOTE 3800 4/3
+NOTE 3700 2/3
+
+; ----------- measure 243 --- beat 448.5 --- time signature 5/8
+
+NOTE 3600 3/2
+NOTE 0 1
+
+; ----------- measure 244 --- beat 451 --- time signature 3/8
+
+BPM 21.3333
+NOTE 7600 1/3
+CHORD (-7600 7800) 2/3
+CHORD (4500 4700) 2/3
+NOTE 0 1/3
+
+; ----------- measure 245 --- beat 452 --- time signature 5/8
+
+BPM 32
+NOTE 0 5
+
+; ----------- measure 246 --- beat 454.5 --- time signature 7/8
+
+NOTE 0 10/3
+NOTE -4900 1/6
+
+; ----------- measure 247 --- beat 458 --- time signature 4/8
+
+BPM 48
+NOTE 5600 1/8
+NOTE 0 7/8
+NOTE 0 5/6
+NOTE 5100 1/6
+
+; ----------- measure 248 --- beat 460
+
+NOTE 5800 1/8
+NOTE 0 7/8
+NOTE 0 5/6
+NOTE 5200 1/6
+
+; ----------- measure 249 --- beat 462
+
+NOTE 5300 1/8
+NOTE 0 7/8
+NOTE 0 5/6
+NOTE 5400 1/6
+
+; ----------- measure 250 --- beat 464 --- time signature 7/16
+
+BPM 32
+NOTE 5200 1/4
+NOTE 5900 1/4
+NOTE 0 3/4
+CHORD (4900 5100) 1/4
+NOTE 0 1/4
+
+; ----------- measure 251 --- beat 465.75 --- time signature 5/8
+
+BPM 42
+CHORD (7800 8500 8700) 1/4
+NOTE 0 5/4
+NOTE 0 1
+NOTE 4400 1/4
+NOTE 0 5/4
+NOTE 0 1
+
+; ----------- measure 252 --- beat 468.25 --- time signature 4/8
+
+NOTE 7600 1/4
+NOTE 0 7/4
+NOTE 0 2
+
+; ----------- measure 253 --- beat 470.25
+
+NOTE 4000 1/4
+NOTE 0 7/4
+
+; ----------- measure 254 --- beat 472.25 --- time signature 3/8
+
+BPM 28
+BPM 18.6667
+NOTE 4200 1/6
+NOTE 0 14/23
+NOTE 4400 1/9
+NOTE 4600 1/9
+
+; ----------- measure 255 --- beat 473.25 --- time signature 6/8
+
+BPM 23.3333
+CHORD (7300 8300) 1/6
+NOTE 0 7/6
+NOTE 0 1/3
+CHORD (7600 7800) 1/3
+NOTE 0 2
+
+; ----------- measure 256 --- beat 475.25 --- time signature 4/8
+
+BPM 35
+CHORD (8500 8700) 1/4
+NOTE 0 7/4
+NOTE 0 3/2
+NOTE 4400 8/49
+NOTE 4600 1/6
+NOTE 0 1/6
+
+; ----------- measure 257 --- beat 477.25
+
+NOTE 0 3/2
+NOTE 0 1/12
+NOTE 5100 1/12
+CHORD (4900 -5100) 1/6
+NOTE 0 1/6
+
+; ----------- measure 258 --- beat 479.25 --- time signature 5/8
+
+NOTE 0 2
+NOTE 0 1/4
+NOTE 0 1/16
+NOTE 0 1/60
+NOTE 0 1/21
+NOTE 0 1/8
+NOTE 4000 1
+NOTE 4200 1
+NOTE 0 1/2
+
+; ----------- measure 259 --- beat 481.75
+
+NOTE 8100 1
+NOTE 8300 1
+NOTE 0 3
+
+; ----------- measure 260 --- beat 484.25 --- time signature 7/8
+
+NOTE 8400 1
+NOTE 8600 1
+NOTE 0 3/2
+NOTE 0 155/49
+NOTE 4500 1/6
+NOTE 4700 1/6
+
+; ----------- measure 261 --- beat 487.75 --- time signature 6/8
+
+BPM 23.3333
+BPM 14
+CHORD (7600 7800) 2/3
+NOTE 0 2/3
+NOTE 0 2/3
+NOTE 0 4/3
+NOTE 0 1/3
+CHORD (-5700 -5900) 1/6
+NOTE 0 1/6
+
+; ----------- measure 262 --- beat 489.75 --- time signature 7/16
+
+BPM 21
+BPM 31.5
+NOTE 0 7/2
+
+; ----------- measure 263 --- beat 491.5 --- time signature 4/8
+
+NOTE 0 4
+
+; ----------- measure 264 --- beat 493.5
+
+NOTE 0 4
+
+; ----------- measure 265 --- beat 495.5
+
+NOTE 0 7/4
+CHORD (5100 5200 5400) 2/19
+CHORD (4900 -5100 -5200 -5400) 1/7
+
+; ----------- measure 266 --- beat 497.5 --- time signature 7/8
+
+NOTE 8100 3
+NOTE 8300 1/2
+NOTE 0 7/2
+
+; ----------- measure 267 --- beat 501 --- time signature 3/8
+
+BPM 21
+NOTE 0 2/3
+NOTE 0 1/6
+CHORD (3600 3800 4900 5100) 1/6
+
+; ----------- measure 268 --- beat 502 --- time signature 5/8
+
+BPM 31.5
+BPM 32
+NOTE 0 1
+NOTE 4500 1/2
+CHORD (-4500 4700) 1
+
+; ----------- measure 269 --- beat 504.5 --- time signature 7/16
+
+NOTE 0 3/2
+CHORD (4400 4600) 1/4
+
+; ----------- measure 270 --- beat 506.25 --- time signature 5/16
+
+NOTE 0 5/4
+
+; ----------- measure 271 --- beat 507.5 --- time signature 5/8
+
+CHORD (4400 4600) 1/2
+NOTE 0 3/2
+NOTE 0 1/2
+
+; ----------- measure 272 --- beat 510 --- time signature 7/16
+
+CHORD (4800 4900 5100 5800) 1
+NOTE 0 3/4
+
+; ----------- measure 273 --- beat 511.75 --- time signature 4/8
+
+NOTE 0 1/2
+CHORD (5000 5700 5900) 8/49
+CHORD (4800 -5000 -5700 -5900) 1/3
+NOTE 0 1
+
+; ----------- measure 274 --- beat 513.75 --- time signature 5/8
+
+NOTE 0 7/3
+NOTE -3600 1/6
+
+; ----------- measure 275 --- beat 516.25
+
+BPM 40
+NOTE 0 3/2
+CHORD (6200 6500) 1
+NOTE 3800 1/8
+NOTE 0 3/8
+NOTE 0 1
+NOTE 0 1
+
+; ----------- measure 276 --- beat 518.75 --- time signature 3/8
+
+BPM 26.6667
+CHORD (6800 7500) 2/3
+CHORD (6500 -6800 -7500) 5/46
+CHORD (6200 -6500) 9/40
+NOTE 0 1
+
+; ----------- measure 277 --- beat 519.75 --- time signature 5/16
+
+BPM 40
+CHORD (6700 7300) 1
+CHORD (6200 6500) 1/4
+NOTE 0 3/4
+NOTE 5200 1/4
+NOTE 0 1/4
+
+; ----------- measure 278 --- beat 521 --- time signature 1/4
+
+NOTE 4800 3/4
+NOTE 5000 1/4
+
+; ----------- measure 279 --- beat 522 --- time signature 3/8
+
+BPM 26.6667
+BPM 32
+NOTE 5700 1/3
+NOTE 3600 2/9
+NOTE 3600 1/9
+NOTE 3800 2/9
+NOTE 3800 1/9
+
+; ----------- measure 280 --- beat 523 --- time signature 5/16
+
+BPM 48
+NOTE 0 1
+NOTE 7800 1/4
+CHORD (4900 5100) 1
+NOTE 0 1/4
+
+; ----------- measure 281 --- beat 524.25 --- time signature 2/4
+
+NOTE 6700 41/49
+NOTE 6700 8/49
+NOTE 5700 2/3
+CHORD (5700 -6700) 1/3
+CHORD (-5700 -6700) 8/49
+CHORD (-5700 6700) 1/6
+CHORD (5700 -6700) 1/3
+NOTE 0 1/3
+NOTE 3600 2/3
+NOTE 3600 2/3
+NOTE 3600 1/3
+NOTE 0 1/3
+
+; ----------- measure 282 --- beat 526.25 --- time signature 7/8
+
+BPM 60
+CHORD (6000 6700 7000 7300) 1/4
+NOTE 0 3/4
+NOTE 0 2
+CHORD (7600 7800) 1/2
+NOTE 0 7/2
+
+; ----------- measure 283 --- beat 529.75 --- time signature 5/16
+
+CHORD (6700 7000 7300) 1/4
+NOTE 6000 8/49
+NOTE 0 1/3
+CHORD (8500 8700) 1/4
+NOTE 0 7/4
+
+; ----------- measure 284 --- beat 531 --- time signature 3/4
+
+NOTE 0 11/6
+NOTE 8700 1/6
+CHORD (7000 8500 -8700) 1/3
+CHORD (6000 -7000) 2/3
+NOTE 5200 1/2
+CHORD (-5200 6700 7000 7300) 3/31
+CHORD (6000 -6700 -7000 -7300) 25/62
+NOTE 0 2
+
+; ----------- measure 285 --- beat 534
+
+NOTE 6000 1/2
+CHORD (-6000 6700 7000 7300) 1
+CHORD (8500 8700) 17/40
+CHORD (7800 -8500 -8700) 2/27
+CHORD (7600 -7800) 11/31
+CHORD (5500 -7600 -7800) 1/14
+CHORD (5300 -5500) 11/34
+CHORD (-5300 -5500 5800) 2/19
+CHORD (5600 -5800) 1/7
+NOTE 0 3
+
+; ----------- measure 286 --- beat 537 --- time signature 2/4
+
+NOTE 7300 1
+NOTE 6700 39/49
+NOTE 7600 10/49
+NOTE 7800 8/49
+NOTE 8500 1/6
+NOTE 6000 1/6
+NOTE 0 5/2
+
+; ----------- measure 287 --- beat 539 --- time signature 9/16
+
+BPM 80
+NOTE 0 2
+NOTE 0 2
+NOTE 0 1
+NOTE 5200 1/3
+CHORD (-5200 5400) 2/3
+
+; ----------- measure 288 --- beat 542 --- time signature 7/16
+
+BPM 60
+BPM 40
+NOTE 4500 1/2
+CHORD (-4500 4700 4800 5000) 1
+CHORD (3700 3900) 1/4
+
+; ----------- measure 289 --- beat 543.75 --- time signature 5/8
+
+NOTE 0 25/12
+NOTE 3800 1/12
+CHORD (3600 -3800) 1/6
+NOTE 0 1/6
+
+; ----------- measure 290 --- beat 546.25 --- time signature 3/8
+
+CHORD (5700 5900 6000) 1/6
+BPM 26.6667
+NOTE 4900 5/46
+NOTE 0 24/43
+NOTE 0 1/6
+NOTE 5100 1/18
+CHORD (4900 -5100) 1/9
+
+; ----------- measure 291 --- beat 547.25 --- time signature 7/8
+
+BPM 40
+NOTE 0 1/2
+CHORD (4000 4300) 1
+CHORD (3800 4100) 1/4
+NOTE 0 3/4
+NOTE 3600 3/8
+NOTE -5000 3/8
+NOTE -5700 1/4
+
+; ----------- measure 292 --- beat 550.75 --- time signature 3/8
+
+BPM 26.6667
+NOTE 3900 4/21
+NOTE 4900 8/21
+NOTE 4900 6/29
+NOTE 5900 2/35
+NOTE 5900 1/18
+CHORD (4800 -5900) 1/9
+
+; ----------- measure 293 --- beat 551.75 --- time signature 5/16
+
+BPM 40
+NOTE 3700 1/4
+NOTE 3700 1/4
+NOTE 3800 1/4
+CHORD (-3800 5100) 1/12
+CHORD (3600 -5100) 1/6
+NOTE 0 1/4
+
+; ----------- measure 294 --- beat 553
+
+CHORD (6000 6700 7800 8500) 1
+NOTE 0 3/2
+
+; ----------- measure 295 --- beat 554.25 --- time signature 7/16
+
+BPM 48
+CHORD (3600 3800 5700 5900) 1
+CHORD (-3600 -3800 -5700 -5900) 1/12
+CHORD (-3600 -3800 5100 -5700 -5900) 1/12
+CHORD (4900 -5100) 1/6
+NOTE 0 1/6
+NOTE 5000 1/8
+NOTE -4800 1/8
+
+; ----------- measure 296 --- beat 556 --- time signature 3/8
+
+CHORD (5700 5900 6000) 1/6
+BPM 32
+NOTE 4900 5/46
+NOTE 0 24/43
+NOTE 0 1/6
+NOTE 5100 1/18
+CHORD (4900 -5100) 1/9
+
+; ----------- measure 297 --- beat 557 --- time signature 7/8
+
+BPM 48
+BPM 40
+NOTE 0 1/2
+CHORD (8500 8700) 1/2
+CHORD (8500 8700) 1/2
+CHORD (8500 8700) 1/2
+CHORD (6700 7000) 1/8
+NOTE 0 7/8
+NOTE 0 1
+CHORD (4000 4200) 1/2
+CHORD (4000 4200) 1/2
+CHORD (4000 4200) 1/2
+CHORD (-4800 5000) 1/8
+NOTE 0 7/8
+NOTE 0 1/2
+
+; ----------- measure 298 --- beat 560.5 --- time signature 3/8
+
+BPM 26.6667
+NOTE 0 2
+
+; ----------- measure 299 --- beat 561.5 --- time signature 7/16
+
+BPM 40
+BPM 60
+CHORD (3600 3800 5700 5900) 1
+CHORD (-3600 -3800 -5700 -5900) 1/12
+CHORD (-3600 -3800 5100 -5700 -5900) 1/12
+CHORD (4900 -5100) 1/6
+NOTE 0 1/6
+NOTE 5000 1/8
+NOTE 4800 1/8
+
+; ----------- measure 300 --- beat 563.25 --- time signature 3/4
+
+NOTE 0 1/12
+CHORD (3800 4900 5100) 1/12
+CHORD (3600 -3800 -4900 -5100) 1/6
+NOTE 0 1/4
+CHORD (3900 5200 5400) 1/12
+CHORD (3700 -3900 -5200 -5400) 1/6
+NOTE 0 5/12
+NOTE 5100 1/12
+CHORD (4900 -5100) 1/6
+NOTE 0 1/2
+CHORD (3600 3800 4500 4700) 1/2
+CHORD (5200 5400) 1/4
+NOTE 0 1/4
+
+; ----------- measure 301 --- beat 566.25 --- time signature 6/16
+
+BPM 80
+NOTE 5700 1/6
+NOTE 5900 1/6
+NOTE 4400 4/3
+NOTE 7000 1/3
+
+; ----------- measure 302 --- beat 568.25
+
+NOTE 5700 1/6
+NOTE 5900 1/6
+NOTE 4400 4/3
+NOTE 7000 1/3
+
+; ----------- measure 303 --- beat 570.25
+
+NOTE 5700 1/6
+NOTE 5900 1/6
+NOTE 4400 4/3
+NOTE 7000 1/3
+
+; ----------- measure 304 --- beat 572.25
+
+NOTE 5700 1/6
+NOTE 5900 1/6
+NOTE 4400 4/3
+NOTE 7000 1/3
+
+; ----------- measure 305 --- beat 574.25
+
+NOTE 5700 1/6
+NOTE 5900 1/6
+NOTE 4400 4/3
+CHORD (7000 7600) 1/3
+
+; ----------- measure 306 --- beat 576.25 --- time signature 7/16
+
+BPM 60
+BPM 48
+CHORD (3800 4400 5700 5900) 1
+CHORD (-3800 -4400 -5700 -5900) 1/12
+CHORD (-3800 -4400 5100 -5700 -5900) 1/12
+CHORD (4900 -5100) 1/6
+NOTE 0 1/6
+CHORD (5000 5100) 1/8
+NOTE 4800 1/8
+
+; ----------- measure 307 --- beat 578 --- time signature 3/8
+
+BPM 32
+BPM 48
+CHORD (5100 5900) 5/46
+CHORD (4900 -5100) 24/43
+CHORD (-4900 -5100) 1/12
+NOTE 7600 1/4
+
+; ----------- measure 308 --- beat 579
+
+CHORD (5100 5900) 5/46
+CHORD (4900 -5100) 24/43
+CHORD (-4900 -5100) 1/12
+NOTE 7600 1/4
+
+; ----------- measure 309 --- beat 580 --- time signature 3/16
+
+BPM 96
+NOTE 7800 1
+NOTE 0 1
+
+; ----------- measure 310 --- beat 581 --- time signature 5/8
+
+BPM 72
+BPM 60
+CHORD (5200 5400 5700 5900) 1/2
+CHORD (5200 5400 5700 5900) 1/2
+CHORD (5200 5400 5700 5900) 1/2
+CHORD (5200 5400 5700 5900) 1/2
+CHORD (5200 5400 5700 5900) 1/2
+
+; ----------- measure 311 --- beat 583.5 --- time signature 7/8
+
+CHORD (5400 5700 5900) 41/49
+CHORD (5400 5700 5900) 8/49
+NOTE 5200 2/3
+CHORD (5200 -5400 -5700 -5900) 1/3
+CHORD (-5200 -5400 -5700 -5900) 8/23
+CHORD (5100 -5200 -5400 -5700 -5900) 1/20
+CHORD (4900 -5100) 4/39
+CHORD (-4900 5000 -5100) 3/31
+CHORD (4800 -5000) 15/23
+CHORD (4900 5100) 1/4
+CHORD (3600 4100 5100) 1
+
+; ----------- measure 312 --- beat 587 --- time signature 3/8
+
+BPM 40
+NOTE 7800 1/3
+CHORD (-7800 8700) 2/3
+NOTE 3600 1/3
+CHORD (-3600 4100) 2/3
+
+; ----------- measure 313 --- beat 588
+
+NOTE 0 2
+
+; ----------- measure 314 --- beat 589 --- time signature 5/8
+
+BPM 60
+BPM 40
+CHORD (4000 4100) 1
+NOTE 0 3/2
+
+; ----------- measure 315 --- beat 591.5 --- time signature 2/4
+
+NOTE 0 4
+
+; ----------- measure 316 --- beat 593.5 --- time signature 3/8
+
+BPM 26.6667
+NOTE 0 2
+
+; ----------- measure 317 --- beat 594.5 --- time signature 7/8
+
+BPM 40
+NOTE 0 7
+
+; ----------- measure 318 --- beat 598 --- time signature 5/8
+
+NOTE 0 5
+
+; ----------- measure 319 --- beat 600.5
+
+NOTE 0 5
+
+; ----------- measure 320 --- beat 603 --- time signature 3/16
+
+BPM 53.3333
+NOTE 0 2
+
+; ----------- measure 321 --- beat 604 --- time signature 2/4
+
+BPM 40
+BPM 72
+NOTE 4800 2/3
+NOTE 5000 17/29
+NOTE 5900 3/4
+
+; ----------- measure 322 --- beat 606
+
+NOTE 5900 1/5
+NOTE 0 37/62
+NOTE 5700 10/49
+NOTE 5900 4/27
+NOTE 5900 1/20
+CHORD (5700 -5900) 4/27
+CHORD (5000 5700 5900) 1/20
+CHORD (4800 -5000 -5700 -5900) 4/27
+CHORD (-4800 5000 5700 5900) 1/20
+CHORD (4800 -5000 -5700 -5900) 1/5
+NOTE 4900 10/49
+
+; ----------- measure 323 --- beat 608 --- time signature 3/8
+
+BPM 48
+CHORD (4500 6000 6700 7000) 1/6
+NOTE 0 1/2
+NOTE 0 1/3
+
+; ----------- measure 324 --- beat 609 --- time signature 5/16
+
+BPM 72
+NOTE 7300 1/4
+NOTE 0 1
+NOTE 0 5/4
+
+; ----------- measure 325 --- beat 610.25 --- time signature 2/4
+
+BPM 54
+NOTE 0 1/4
+NOTE 4900 1/2
+NOTE 5100 21/23
+NOTE 5800 1/3
+
+; ----------- measure 326 --- beat 612.25 --- time signature 5/8
+
+NOTE 5800 3/4
+NOTE 5600 1/4
+NOTE 5900 1/12
+NOTE 5900 1/12
+CHORD (5700 -5900) 2/23
+CHORD (5700 5900) 1/12
+CHORD (5000 -5700 -5900) 1/12
+CHORD (5000 5700 5900) 2/23
+CHORD (4800 -5000 -5700 -5900) 8/49
+NOTE 4900 1/3
+NOTE 0 1/2
+
+; ----------- measure 327 --- beat 614.75 --- time signature 3/8
+
+BPM 36
+BPM 48
+CHORD (4400 4500 6700 7000) 1/6
+NOTE 0 1/2
+NOTE 0 1/3
+
+; ----------- measure 328 --- beat 615.75 --- time signature 2/4
+
+BPM 72
+NOTE 4600 3/4
+NOTE 4700 1/4
+NOTE 0 1
+
+; ----------- measure 329 --- beat 617.75 --- time signature 5/8
+
+CHORD (3900 4800 5000) 41/49
+CHORD (3900 4800 5000) 8/49
+BPM 42
+NOTE 3700 2/3
+CHORD (3700 -3900 -4800 -5000) 1/3
+CHORD (-3700 3900 4800 5000) 1/3
+CHORD (3700 -3900 -4800 -5000) 23/29
+NOTE 0 3/8
+
+; ----------- measure 330 --- beat 620.25 --- time signature 2/4
+
+BPM 72
+NOTE 4800 2/3
+NOTE 5000 17/29
+NOTE 5900 3/4
+
+; ----------- measure 331 --- beat 622.25
+
+NOTE 5900 1/5
+NOTE 0 37/62
+NOTE 5700 10/49
+NOTE 5900 4/27
+NOTE 5900 1/20
+CHORD (5700 -5900) 4/27
+CHORD (5000 5700 5900) 1/20
+CHORD (4800 -5000 -5700 -5900) 4/27
+CHORD (-4800 5000 5700 5900) 1/20
+CHORD (4800 -5000 -5700 -5900) 1/5
+NOTE 4900 10/49
+
+; ----------- measure 332 --- beat 624.25 --- time signature 3/8
+
+BPM 48
+CHORD (4500 6000 6700 7000) 1/6
+NOTE 0 1/2
+NOTE 0 1/3
+
+; ----------- measure 333 --- beat 625.25 --- time signature 5/16
+
+BPM 72
+NOTE 7300 1/4
+NOTE 0 1
+NOTE 0 5/4
+
+; ----------- measure 334 --- beat 626.5 --- time signature 2/4
+
+BPM 54
+NOTE 0 1/4
+NOTE 4900 1/2
+NOTE 5100 21/23
+NOTE 5800 1/3
+
+; ----------- measure 335 --- beat 628.5 --- time signature 5/8
+
+NOTE 5800 3/4
+NOTE 5600 1/4
+NOTE 5900 1/12
+NOTE 5900 1/12
+CHORD (5700 -5900) 2/23
+CHORD (5700 5900) 1/12
+CHORD (5000 -5700 -5900) 1/12
+CHORD (5000 5700 5900) 2/23
+CHORD (4800 -5000 -5700 -5900) 8/49
+NOTE 4900 1/3
+NOTE 0 1/2
+
+; ----------- measure 336 --- beat 631 --- time signature 3/8
+
+BPM 36
+BPM 48
+CHORD (4400 4500 6700 7000) 1/6
+NOTE 0 1/2
+NOTE 0 1/3
+
+; ----------- measure 337 --- beat 632 --- time signature 2/4
+
+BPM 72
+NOTE 4600 3/4
+NOTE 4700 1/4
+NOTE 0 1
+
+; ----------- measure 338 --- beat 634
+
+BPM 45
+CHORD (4800 5000 5700 5900) 1
+CHORD (4800 5000 5300 5500) 1
+
+; ----------- measure 339 --- beat 636 --- time signature 3/16
+
+BPM 60
+NOTE 3600 1/3
+CHORD (-3600 3800 5300 5500) 2/3
+
+; ----------- measure 340 --- beat 637 --- time signature 5/16
+
+BPM 45
+CHORD (3600 3800 5700 5900) 1
+CHORD (4900 5100) 1/4
+
+; ----------- measure 341 --- beat 638.25 --- time signature 2/4
+
+BPM 72
+NOTE 4800 2/3
+NOTE 5000 17/29
+NOTE 5900 3/4
+
+; ----------- measure 342 --- beat 640.25
+
+NOTE 5900 1/5
+NOTE 0 37/62
+NOTE 5700 10/49
+NOTE 5900 4/27
+NOTE 5900 1/20
+CHORD (5700 -5900) 4/27
+CHORD (5000 5700 5900) 1/20
+CHORD (4800 -5000 -5700 -5900) 4/27
+CHORD (-4800 5000 5700 5900) 1/20
+CHORD (4800 -5000 -5700 -5900) 1/5
+NOTE 4900 10/49
+
+; ----------- measure 343 --- beat 642.25 --- time signature 3/8
+
+BPM 48
+CHORD (4500 6000 6700 7000) 1/6
+NOTE 0 1/2
+NOTE 0 1/3
+
+; ----------- measure 344 --- beat 643.25 --- time signature 5/16
+
+BPM 72
+NOTE 7300 1/4
+NOTE 0 1
+NOTE 0 5/4
+
+; ----------- measure 345 --- beat 644.5 --- time signature 2/4
+
+BPM 54
+NOTE 0 1/4
+NOTE 4900 1/2
+NOTE 5100 21/23
+NOTE 5800 1/3
+
+; ----------- measure 346 --- beat 646.5 --- time signature 5/8
+
+NOTE 5800 3/4
+NOTE 5600 1/4
+NOTE 5900 1/12
+NOTE 5900 1/12
+CHORD (5700 -5900) 2/23
+CHORD (5700 5900) 1/12
+CHORD (5000 -5700 -5900) 1/12
+CHORD (5000 5700 5900) 2/23
+CHORD (4800 -5000 -5700 -5900) 8/49
+NOTE 4900 1/3
+NOTE 0 1/2
+
+; ----------- measure 347 --- beat 649 --- time signature 3/8
+
+BPM 36
+BPM 48
+CHORD (4400 4500 6700 7000) 1/6
+NOTE 0 1/2
+NOTE 0 1/3
+
+; ----------- measure 348 --- beat 650 --- time signature 5/16
+
+BPM 72
+NOTE 6900 3/4
+NOTE 6000 1/4
+NOTE 0 3/2
+
+; ----------- measure 349 --- beat 651.25 --- time signature 3/8
+
+BPM 48
+CHORD (4400 4500 6700 7000) 1/6
+NOTE 0 1/2
+NOTE 0 1/3
+
+; ----------- measure 350 --- beat 652.25 --- time signature 5/16
+
+BPM 72
+NOTE 6900 3/4
+NOTE 6000 1/4
+NOTE 0 3/2
+
+; ----------- measure 351 --- beat 653.5 --- time signature 3/8
+
+BPM 48
+CHORD (4400 4500 6700 7000) 1/6
+NOTE 0 1/2
+NOTE 0 1/3
+
+; ----------- measure 352 --- beat 654.5 --- time signature 5/16
+
+BPM 72
+NOTE 6900 3/4
+NOTE 6000 1/4
+NOTE 0 3/2
+
+; ----------- measure 353 --- beat 655.75 --- time signature 3/8
+
+BPM 48
+CHORD (4400 4500 6700 7000) 1/6
+NOTE 0 1/2
+NOTE 0 1/3
+
+; ----------- measure 354 --- beat 656.75 --- time signature 5/16
+
+BPM 72
+NOTE 6900 3/4
+NOTE 6000 1/4
+NOTE 0 3/2
+
+; ----------- measure 355 --- beat 658 --- time signature 3/8
+
+BPM 48
+CHORD (4400 4500 6700 7000) 1/6
+NOTE 0 1/2
+NOTE 0 1/3
+
+; ----------- measure 356 --- beat 659 --- time signature 5/16
+
+BPM 72
+NOTE 6900 3/4
+NOTE 7500 1/4
+NOTE 0 3/2
+
+; ----------- measure 357 --- beat 660.25 --- time signature 3/8
+
+BPM 48
+CHORD (4400 4500 6700 7000) 1/3
+CHORD (4300 4500 7500) 1/3
+CHORD (4300 4500 7500) 1/3
+
+; ----------- measure 358 --- beat 661.25 --- time signature 5/8
+
+BPM 72
+NOTE 4900 6/43
+NOTE 4800 1/28
+CHORD (-4800 5000) 5/46
+CHORD (4800 -5000) 1/28
+CHORD (-4800 5000 5900) 2/19
+CHORD (4800 -5000 -5900) 1/28
+CHORD (-4800 5000 5700 5900) 5/46
+CHORD (4800 -5000 -5700 -5900) 1/28
+CHORD (-4800 5000 5700 5900) 2/19
+CHORD (4800 -5000 -5700 -5900) 1/25
+CHORD (-4800 5000 5700 5900) 2/19
+CHORD (4800 -5000 -5700 -5900) 3/32
+CHORD (-4800 -5000 -5700 5900) 1/20
+CHORD (5700 -5900) 4/27
+CHORD (5700 5900) 1/20
+CHORD (4900 -5700 -5900) 4/27
+CHORD (-4900 5700 5900) 1/20
+CHORD (4900 -5700 -5900) 4/27
+CHORD (-4900 5700 5900) 1/20
+CHORD (4900 -5700 -5900) 5/33
+CHORD (-4900 5700 5900) 1/21
+CHORD (4900 -5700 -5900) 10/49
+CHORD (4900 5100) 1/4
+NOTE 0 1/4
+
+; ----------- measure 359 --- beat 663.75 --- time signature 5/16
+
+NOTE 6900 3/4
+NOTE 7500 1/4
+NOTE 0 3/2
+
+; ----------- measure 360 --- beat 665 --- time signature 3/8
+
+BPM 48
+CHORD (4400 4500 6700 7000) 1/3
+CHORD (4300 4500 7500) 1/3
+CHORD (4300 4500 7500) 1/3
+
+; ----------- measure 361 --- beat 666 --- time signature 5/16
+
+BPM 72
+CHORD (7600 7800) 1/2
+CHORD (8500 8700) 1/2
+NOTE 0 3/2
+
+; ----------- measure 362 --- beat 667.25 --- time signature 1/4
+
+CHORD (5500 5600 5800) 1/3
+CHORD (5500 5600 5800) 1/6
+NOTE 4900 1/3
+CHORD (4900 -5500 -5600 -5800) 1/6
+CHORD (-4900 5500 5600 5800) 8/49
+CHORD (4900 -5500 -5600 -5800) 1/3
+
+; ----------- measure 363 --- beat 668.25 --- time signature 2/4
+
+BPM 60
+CHORD (4900 5100 7600 7800) 1/4
+NOTE 0 3/4
+CHORD (3600 3800 5700 5900) 1/4
+NOTE 0 3/4
+
+; ----------- measure 364 --- beat 670.25 --- time signature 3/4
+
+NOTE 0 6
+
+; ----------- measure 365 --- beat 673.25 --- time signature 7/8
+
+NOTE 0 37/12
+CHORD (3900 -4800 5000) 1/12
+CHORD (3700 -3900 -4800 -5000) 1/6
+NOTE 0 1/6
+
+; ----------- measure 366 --- beat 676.75 --- time signature 2/4
+
+NOTE 0 6/43
+NOTE 3600 5/7
+NOTE 4000 10/29
+NOTE 4200 37/62
+NOTE 4500 10/49
+
+; ----------- measure 367 --- beat 678.75 --- time signature 5/8
+
+NOTE 8500 9/4
+NOTE 0 11/4

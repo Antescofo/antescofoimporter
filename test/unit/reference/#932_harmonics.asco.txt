@@ -1,0 +1,29 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: #932_harmonics.xml
+; exported from Sibelius 7.5.1 ~ Direct export, not from Dolet
+; MusicXML version 3.0
+; Converted to Antescofo on Fri Jun 12 15:13:22 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+NOTE 0 7/6 measure1
+NOTE A3 1/6
+NOTE C5 1/6 ; harmonics
+NOTE C#4 1/6
+NOTE A5 1/6 ; harmonics
+CHORD (A5 E6) 1/6 ; harmonics
+CHORD (-A5 -E6) 1 @fermata ; harmonics
+NOTE 0 1
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+NOTE 0 4 measure2
+
+; ----------- measure 3 --- beat 8 --- time signature 4/4
+
+NOTE 0 4 measure3

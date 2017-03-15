@@ -1,0 +1,1432 @@
+﻿; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud.
+
+; Original file: acco.xml
+; exported from Sibelius 7.1.3 ~ Direct export, not from Dolet
+; MusicXML version 3.0.
+; Converted to Antescofo on Thu May 21 04:18:38 2015
+; Credits: Dioptrie
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+BPM 52 ; ( 𝅘𝅥 = 52 ) 
+NOTE A#5 1 ms1
+NOTE -A#5 3
+
+; ----------- measure 2 --- beat 4
+
+NOTE -A#5 4 ms2
+
+; ----------- measure 3 --- beat 8
+
+CHORD (G#4 A#4 C#5 D#5 -A#5) 1 ms3
+CHORD (-G#4 -A#4 -C#5 -D#5 -A#5) 3
+
+; ----------- measure 4 --- beat 12 --- time signature 9/16
+
+BPM 80 ; ( 𝅘𝅥𝅮. = 80 ) 
+CHORD (-G#4 -A#4 -A#5) 1/3 ms4
+CHORD (-G#4 -A#4 C#5 D#5 -A#5) 2/3
+CHORD (-G#4 -A#4 -A#5) 1/3
+CHORD (-G#4 -A#4 C#5 D#5 -A#5) 2/3
+CHORD (-G#4 -A#4 -A#5) 1/3
+CHORD (-G#4 -A#4 C#5 D#5 -A#5) 2/3
+
+; ----------- measure 5 --- beat 15
+
+CHORD (F2 C4 A#4 E5 A#5) 1/6 ms5
+CHORD (-F2 C4 -A#4 -E5 -A#5) 1/31
+CHORD (-F2 -C4 -A#4 E5 -A#5) 1/19 @staccato
+CHORD (-F2 B3 -C4 -A#4 -E5 -A#5) 1/12 @staccato
+CHORD (-F2 -B3 C4 -A#4 -E5 A5) 1/16 @staccato
+CHORD (-F2 -B3 -C4 -A#4 E5 -A5) 2/19 @staccato
+CHORD (-F2 G3 C4 -A#4 -E5 -A5) 1/10 @staccato
+CHORD (-F2 -G3 -C4 -A#4 E5 -A5) 1/15 @staccato
+CHORD (-F2 -G3 B3 C4 -A#4 -E5 G#5) 1/12 @staccato
+CHORD (-F2 G#3 -B3 -C4 -A#4 -E5 -G#5) 1/21 @staccato
+CHORD (-F2 -G#3 -B3 -C4 -A#4 E5 -G#5) 1/27 @staccato
+CHORD (-F2 -G#3 -B3 C4 -A#4 -E5 A#5) 1/6 @staccato
+CHORD (F2 E3 G3 -B3 E5 -A#5) 1/6 @staccato
+CHORD (-F2 -E3 -G3 -B3 -E5 A5) 1/31 @staccato
+CHORD (-F2 -E3 -G3 -B3 E5 -A5) 1/19 @staccato
+CHORD (-F2 F3 -G3 -B3 -E5 -A5) 1/12 @staccato
+CHORD (-F2 -F3 G3 -E5 F5 F#5 -A5) 1/16 @staccato
+CHORD (-F2 -F3 -G3 D#5 E5 -F5 -F#5 -A5) 2/19 @staccato
+CHORD (-F2 D3 D#3 -G3 -D#5 -E5 -F5 -F#5 A#5) 1/10 @staccato
+CHORD (-F2 -D3 -D#3 -G3 -D#5 -F5 -F#5 -A#5) 1/15
+TRILL ((-F2 -D3 -D#3 G#3 -D#5 -F5 -F#5 -A#5)) 1/12
+TRILL ((-F2 C#3 -D#3 -G#3 -D#5 -F5 -F#5 -A#5)) 1/12
+TRILL ((-F2 -C#3 -D#3 -G#3 -D#5 -F5 -F#5 C6)) 1/6
+TRILL ((-F2 -C#3 -D#3 E3 -G#3 -D#5 A#5)) 0.197917
+TRILL ((-F2 -C#3 -D#3 -E3 -G#3 -D#5 E5 -A#5)) 3/22 @staccato
+TRILL ((-F2 C3 -C#3 -D#3 -G#3 -D#5 E5 -F5 -F#5 -A#5)) 1/16 @staccato
+TRILL ((-F2 -C3 -C#3 -D#3 -G#3 -D#5 E5 -F5 -F#5 -A#5)) 10/49 @staccato
+TRILL ((-F2 -C3 -C#3 -D#3 -G#3 -D#5 E5 -F5 -F#5 -A#5)) 1/15 @staccato
+TRILL ((-F2 B2 -C#3 -D#3 -G#3 -D#5 -E5 -F5 -F#5 A5)) 3/23 @staccato
+TRILL ((-F2 -B2 -C#3 -D#3 -G#3 -D#5 -F5 -F#5 -A5)) 10/49
+
+; ----------- measure 6 --- beat 18
+
+TRILL ((G2 -B2 D#3 -G#3 E5)) 0 @staccato ms6
+TRILL ((-F2 -B2 C#3 -D#3 -G#3 -E5 A#5)) 1/6 @staccato
+TRILL ((-F2 -B2 -C#3 -D#3 -G#3 -E5 A5)) 1/31 @staccato
+TRILL ((-F2 -B2 -C#3 -D#3 -G#3 E5 -A5)) 3/22 @staccato
+TRILL ((-F2 -B2 -C#3 -D#3 -G#3 D5 -E5 F5 -A5)) 1/16 @staccato
+TRILL ((-F2 -B2 -C#3 -D#3 -G#3 -D5 E5 -F5 -A5)) 2/19 @staccato
+TRILL ((-F2 -B2 -C#3 -D#3 -G#3 -D5 -E5 -F5 G#5)) 1/10 @staccato
+TRILL ((-F2 -B2 -C#3 -D#3 -G#3 C#5 -D5 F5 -G#5)) 1/15
+TRILL ((-F2 -B2 -C#3 -D#3 -G#3 -C#5 -D5 F5 -G#5)) 1/6
+TRILL ((-F2 -B2 -C#3 -D#3 -G#3 -C#5 -D5 -F5 A5)) 1/6
+CHORD (-F2 -B2 -C#3 -D#3 -C#5 -A5) 1/6
+CHORD (-F2 -B2 -C#3 -D#3 -C#5 -D5 -F5 G#5) 1/6
+CHORD (G2 -B2 -D#3 -C#5 -D5 -F5) 0
+CHORD (-F2 -B2 C#3 -D#3 -C#5 -D5 -F5 A5) 1/6
+CHORD (-F2 -B2 -C#3 -D#3 C4 A4 D5 E5 -A5) 1/6 @staccato
+CHORD (-F2 -B2 -C#3 -D#3 -C4 -A4 -D5 E5 B5) 1/6 @staccato
+CHORD (-F2 -B2 -C#3 -D#3 -C4 -A4 -D5 E5 -B5) 1/6 @staccato
+CHORD (-F2 -C#3 -D#3 -D5 E5 A5) 0.197917 @staccato
+CHORD (-F2 -C#3 -D#3 -D5 E5 -A5) 0.197917 @staccato
+CHORD (-F2 -C#3 -D#3 -D5 E5 -A5) 10/49 @staccato
+CHORD (-F2 -C#3 -D#3 -D5 E5 -A5) 1/15 @staccato
+CHORD (-F2 -C#3 -D#3 -D5 -E5 G#5) 3/23 @staccato
+CHORD (-F2 -C#3 -D#3 -D5 E5 -G#5) 10/49 @staccato
+
+; ----------- measure 7 --- beat 21
+
+NOTE A#2 1/6 ms7
+CHORD (F2 -C#3 A4 -D5 E5) 0 @staccato
+CHORD (-F2 -C#3 -A4 D5 -E5 -G#5) 1/6 @staccato
+CHORD (-F2 -C#3 -A4 -D5 -E5 A#5) 1/31 @staccato
+CHORD (-F2 -C#3 -A4 -D5 E5 -A#5) 0.197917 @staccato
+CHORD (-F2 -C#3 -A4 -D5 E5 -A#5) 2/19 @staccato
+CHORD (-F2 -C#3 -A4 -D5 -E5 G#5) 1/10 @staccato
+CHORD (-F2 -C#3 -A4 -D5 E5 -G#5) 1/15 @staccato
+CHORD (-F2 -C#3 -A4 -D5 -E5 A5) 3/23 @staccato
+CHORD (-F2 -C#3 -A4 -D5 E5 -A5) 10/49 @staccato
+CHORD (-F2 -A4 C#5 -D5 F5 G#5) 1/3
+CHORD (-F2 -A4 -C#5 D5 F5 G5) 1/3
+CHORD (-F2 -A4 -C#5 -D5 -F5 A#5) 1/6
+CHORD (-F2 -A4 -C#5 -D5 -F5 A5) 1/6
+CHORD (-F2 -A4 -C#5 -A5) 1/6
+CHORD (-F2 -A4 -C#5 A#5) 1/6
+CHORD (-F2 -A4 -C#5 -D5 F5 -A#5) 1/6
+CHORD (-F2 -A4 -C#5 -D5 -F5 C6) 1/3
+CHORD (-F2 -A4 -C#5 -D5 -F5 A#5) 1/6
+
+; ----------- measure 8 --- beat 24
+
+NOTE A#2 1/6 ms8
+CHORD (F2 D4 -A4 -C#5) 0
+CHORD (-F2 -D4 -A4 -C#5 -A#5) 1/6
+CHORD (-F2 -D4 -A4 -C#5 -D5 -F5 -A#5) 1/6
+CHORD (-F2 -D4 -A4 -C#5 -D5 -F5 A5) 1/6
+CHORD (-F2 D4 -A4 A#4 D#5 -A5) 1/6 @staccato
+CHORD (-F2 -D4 -A#4 D#5 -A5) 1/6 @staccato
+CHORD (-F2 A#2 -D4 -A#4 D#5 -A5) 1/6 @staccato
+CHORD (F2 D#5) 0 @staccato
+CHORD (-F2 -D#5 B5) 1/6 @staccato
+CHORD (-F2 -D#5 A5) 1/31 @staccato
+CHORD (-F2 D#5 -A5) 0.197917 @staccato
+CHORD (-F2 -A5) 2/19
+CHORD (-F2 A#5) 1/10
+CHORD (-F2 D#5 -A#5) 1/15 @staccato
+CHORD (-F2 -D#5 F5 F#5 -A#5) 3/23 @staccato
+CHORD (-F2 D#5 -F5 F#5 -A#5) 1/27
+CHORD (-F2 A#2 -D#5 -F5 -F#5 A5) 1/6
+CHORD (F2 -D#5) 0
+CHORD (-F2 -D#5 -A5) 1/6
+CHORD (-F2 -D#5 -F5 -F#5 G#5) 1/6
+CHORD (-F2 -D#5 -F5 -F#5 A#5) 1/6
+CHORD (-F2 C#5 -A#5) 1/6
+CHORD (-F2 -C#5 D5 F5 C6) 1/3
+
+; ----------- measure 9 --- beat 27
+
+NOTE A#2 1/6 ms9
+CHORD (F2 -C#5) 0
+CHORD (-F2 -C#5 A#5) 1/3
+CHORD (-F2 -C#5 -D5 -F5 B5) 1/6
+CHORD (-F2 -C#5 -D5 -F5 A#5) 1/3
+CHORD (-F2 A#2 -C#5 -D5 -F5 A5) 1/6
+CHORD (F2 D#5) 0
+CHORD (-F2 -D#5 F#5 -A5) 1/6
+CHORD (-F2 -D#5 -F#5 C6) 1/6
+CHORD (-F2 -D#5 F5 F#5 -C6) 1/6
+CHORD (-F2 -D#5 -F5 -F#5 B5) 1/6
+CHORD (-F2 -D#5 -F5 -F#5 A#5) 1/6
+CHORD (-F2 A#2 -D#5 -F5 -F#5 -A#5) 1/6
+CHORD (F2 -D#5 G#5) 0
+CHORD (-F2 -D#5 -G#5 C6) 1/3
+CHORD (-F2 D5 -D#5 -F5 -F#5 G#5 B5) 1/3
+CHORD (-F2 -D#5 -F5 -F#5 -G#5 C6) 1/6
+CHORD (-F2 -D#5 -F5 -F#5 -G#5 D6) 1/6
+
+; ----------- measure 10 --- beat 30
+
+CHORD (-D#5 -G#5 -D6) 1/6 ms10
+CHORD (-D#5 -G#5 C6) 1/6
+CHORD (-D#5 -F5 -F#5 -G#5 A#5 -C6) 1/16
+CHORD (-D#5 -F5 -F#5 A#5 -C6) 10/49 @staccato
+CHORD (-D#5 -F5 -F#5 A#5 -C6) 0.197917 @staccato
+CHORD (-D#5 -F5 -F#5 A#5 -C6) 1/27 @staccato
+CHORD (-D#5 -F5 -F#5 -A#5 B5) 1/6 @staccato
+CHORD (-D#5 C6) 1/3
+CHORD (-D#5 -F5 -F#5 B5) 1/16
+CHORD (-D#5 -F5 -F#5 A#5 -B5) 10/49 @staccato
+CHORD (-D#5 -F5 -F#5 A#5 -B5) 1/15 @staccato
+CHORD (-D#5 -F5 -F#5 A#5) 1/3 @staccato
+NOTE A#5 1/6 @staccato
+CHORD (-A#5 C6) 1/31 @staccato
+CHORD (A#5 -C6) 0.197917 @staccato
+CHORD (A#5 -C6) 2/19 @staccato
+NOTE A#5 1/6 @staccato
+CHORD (D#5 F5 F#5 A5 -A#5) 3/23
+CHORD (C5 -D#5 -F5 -F#5 -A5 A#5) 1/27 @staccato
+CHORD (-C5 -D#5 -F5 -F#5 -A5 -A#5 B5) 1/6 @staccato
+
+; ----------- measure 11 --- beat 33
+
+CHORD (-C5 A#5 -B5) 1/6 @staccato ms11
+CHORD (-C5 -D#5 -F5 -F#5 A#5) 1/6 @staccato
+CHORD (-C5 -D#5 -F5 -F#5 A5 A#5) 1/6 @staccato
+CHORD (C5 -A5 A#5) 1/6 @staccato
+CHORD (-C5 A#5) 1/6 @staccato
+CHORD (-C5 A#5) 1/6 @staccato
+CHORD (C4 A5 A#5) 1/3 @staccato
+CHORD (-C4 A#5) 1/6
+CHORD (-C4 C6) 1/3
+CHORD (-C4 A#5) 1/6
+CHORD (D5 G5 -A#5) 1/3
+CHORD (-D5 D#5 F#5 -G5 A5) 2/3
+
+; ----------- measure 12 --- beat 36
+
+CHORD (-D5 B5) 1/3 ms12
+CHORD (-D5 -D#5 F#5 A5) 1/16
+CHORD (-D5 -D#5 F#5 -A5) 10/49 @staccato
+CHORD (-D5 -D#5 F#5 -A5) 1/15 @staccato
+CHORD (-D5 -D#5 -F#5 A#5) 3/23 @staccato
+CHORD (-D5 -D#5 F#5 -A#5) 1/27 @staccato
+CHORD (-D5 -D#5 -F#5 A5) 1/6 @staccato
+CHORD (-D5 F#5 -A5) 1/6 @staccato
+CHORD (-D5 -F#5 G#5) 1/31 @staccato
+CHORD (-D5 F#5 -G#5) 3/22 @staccato
+CHORD (-D5 -D#5 -F#5 -G#5) 1/6 @staccato
+CHORD (-D5 -D#5 -F#5 A#5) 8/27
+CHORD (-D5 -D#5 F#5 -A#5) 1/27 @staccato
+CHORD (-D5 -D#5 -F#5 A5) 1/6 @staccato
+CHORD (F5 F#5 G#5) 0.197917 @staccato
+CHORD (-F5 F#5 -G#5) 3/22 @staccato
+CHORD (-F5 -F#5 G#5 A#5) 1/16 @staccato
+CHORD (-F5 F#5 -G#5 -A#5) 10/49 @staccato
+CHORD (-F5 -G#5 -A#5) 1/15
+CHORD (-F5 -G#5 A5) 3/23
+CHORD (-F5 F#5 -G#5 -A5) 10/49 @staccato
+
+; ----------- measure 13 --- beat 39
+
+CHORD (-F5 F#5 A#5) 1/6 @staccato ms13
+CHORD (-F5 -F#5 C6) 1/6 @staccato
+CHORD (-F5 -G#5 -C6) 1/6
+CHORD (-F5 -G#5 A#5) 1/6
+CHORD (-F5 F#5 -G#5 -A#5) 1/6 @staccato
+CHORD (-F5 F#5 -G#5 -A#5) 1/6 @staccato
+CHORD (F#5 -A#5) 1/6 @staccato
+CHORD (F#5 A5) 1/6 @staccato
+CHORD (F#5 A#5) 1/6 @staccato
+CHORD (D5 -A#5) 1/6
+CHORD (-D5 F5 G5 A5) 1/3
+CHORD (-D5 G#5) 1/3
+CHORD (-D5 -F5 -G5 A5) 1/6
+CHORD (-D5 -F5 -G5 G#5) 1/3
+CHORD (-D5 -F5 -G5 A5) 1/6
+
+; ----------- measure 14 --- beat 42
+
+CHORD (F#5 -A5) 1/6 ms14
+CHORD (F#5 B5) 1/6
+CHORD (F#5 -B5) 1/6
+CHORD (F#5 A5) 1/6
+CHORD (F#5 -A5) 1/6
+CHORD (F#5 -A5) 1/6
+CHORD (F#5 G#5) 1/6
+CHORD (F#5 -G#5) 1/6
+CHORD (F#5 -G#5) 1/6
+CHORD (C4 C#4 A4 F5 -G#5) 1/6
+CHORD (-C4 -C#4 -A4 -F5 A#5) 1/6
+CHORD (-C4 -C#4 -A4 -F5 G#5) 1/6
+CHORD (E5 -G#5) 1/6
+CHORD (-E5 A5) 1/6
+CHORD (E5 -A5) 1/6
+CHORD (-E5 G#5) 1/3
+CHORD (-E5 G5) 1/6
+
+; ----------- measure 15 --- beat 45
+
+CHORD (-E5 A5) 1/3 ms15
+CHORD (C5 D5 D#5 -E5 G#5) 1/3
+CHORD (-C5 -D5 -D#5 -E5 A5) 1/3
+CHORD (-C5 -D5 -D#5 -E5 B5) 1/6
+CHORD (-C5 -D5 -D#5 -E5 A5) 1/2
+CHORD (A4 A#4 D5 -E5 -A5) 1/6
+CHORD (-A4 -A#4 -D5 -E5 G#5) 1/6
+CHORD (-A4 -E5 -G#5) 1/3
+CHORD (-A4 -A#4 -D5 -E5 A#5) 1/3
+CHORD (-A4 -A#4 -D5 E5 G#5) 1/3
+
+; ----------- measure 16 --- beat 48
+
+CHORD (-A4 -A#4 -D5 -E5 A5) 1/3 ms16
+CHORD (-A4 -A#4 -D5 -E5 G#5) 1/6
+CHORD (-A4 -A#4 -D5 -E5 G5) 1/6
+NOTE -G5 1/6
+NOTE A5 1/6
+CHORD (E2 F4 B4 C5 D#5 -A5) 1/6
+CHORD (-E2 -F4 -B4 -C5 -D#5 B5) 1/6
+CHORD (-E2 -D#5 -B5) 1/6
+CHORD (-E2 -D#5 A5) 1/6
+CHORD (-E2 -D#5 A#5) 1/3
+CHORD (-D#5 A5) 1/3
+CHORD (-D#5 E5 G#5) 1/3
+CHORD (-D#5 B5) 1/6
+CHORD (-D#5 A#5) 1/6
+
+; ----------- measure 17 --- beat 51
+
+CHORD (-D#5 -A#5) 1/6 ms17
+CHORD (-D#5 A5) 1/6
+CHORD (-D#5 F#5 -A5) 1/16
+CHORD (-D#5 F#5 -A5) 2/19 @staccato
+CHORD (-D#5 -F#5 B5) 1/10 @staccato
+CHORD (-D#5 F#5 -B5) 0.197917 @staccato
+CHORD (-D#5 F#5 -B5) 1/27 @staccato
+CHORD (-D#5 -F#5 A#5) 1/6 @staccato
+CHORD (F#5 -A#5) 1/6 @staccato
+CHORD (F#5 B5) 1/6 @staccato
+CHORD (F#5 C#6) 1/6 @staccato
+CHORD (C5 E5 -C#6) 1/6
+CHORD (-C5 E5 B5) 1/6
+CHORD (-C5 E5 -B5) 1/6
+CHORD (B3 -B5) 1/3
+CHORD (-B3 A#5) 1/6
+CHORD (-B3 B5) 1/3
+CHORD (-B3 A#5) 1/6
+
+; ----------- measure 18 --- beat 54
+
+NOTE -A#5 1/6 ms18
+NOTE A5 1/6
+NOTE -A5 4/15
+CHORD (F#5 -A5) 1/15 @staccato
+CHORD (F#5 B5) 3/23 @staccato
+CHORD (F#5 -B5) 10/49 @staccato
+CHORD (F#5 A5) 0.197917 @staccato
+CHORD (F#5 -A5) 3/22 @staccato
+CHORD (-F#5 A#5) 1/16 @staccato
+NOTE -A#5 10/49
+CHORD (F#5 -A#5) 1/15 @staccato
+CHORD (-F#5 A5) 3/23 @staccato
+CHORD (F#5 -A5) 1/27 @staccato
+CHORD (-F#5 G#5) 1/6 @staccato
+CHORD (C#5 G5 -G#5) 1/6
+CHORD (-C#5 -G5) 1/6
+CHORD (-C#5 D#5 G5) 1/6
+CHORD (-C#5 -D#5 -G5 G#5) 1/3
+CHORD (-C#5 -D#5 -G5 A5) 1/6
+
+; ----------- measure 19 --- beat 57
+
+CHORD (-C#5 B5) 1/6 ms19
+CHORD (-C#5 -D#5 -G5 -B5) 1/6
+CHORD (G#4 -C#5 -D#5 F#5 -G5 A5) 1/6
+CHORD (-G#4 -F#5 G5 -A5) 1/6
+CHORD (-G#4 -F#5 G5 -A5) 1/6
+CHORD (-G#4 -F#5 G5 -A5) 1/6
+CHORD (G5 G#5) 1/6
+CHORD (G5 -G#5) 1/6
+CHORD (C#5 G5 -G#5) 1/6
+CHORD (C#5 A#5) 1/6
+CHORD (-C#5 D#5 G5 -A#5) 1/6
+CHORD (-C#5 -D#5 -G5 G#5) 1/6
+CHORD (C#5 -G#5) 1/6
+CHORD (-C#5 A5) 1/6
+CHORD (-C#5 D5 -D#5 -G5 G#5) 1/16
+CHORD (-C#5 D5 -D#5 -G5 -G#5) 10/49 @staccato
+CHORD (-C#5 D5 -D#5 -G5 -G#5) 1/15 @staccato
+CHORD (-C#5 -D5 -D#5 G5) 3/23 @staccato
+CHORD (-C#5 D5 -D#5 -G5) 10/49 @staccato
+NOTE 0 26/23
+NOTE 0 0.802083
+
+; ----------- measure 20 --- beat 60
+
+CHORD (D5 G#5) 1/6 ms20
+CHORD (D5 -G#5) 1/6
+CHORD (D5 A#5) 1/6
+CHORD (C#5 G#5) 1/3
+CHORD (-C#5 A5) 1/3
+CHORD (-C#5 G#5) 1/3
+CHORD (-C#5 G5) 1/6
+CHORD (D5 A#5) 1/6
+CHORD (D5 -A#5) 1/6
+CHORD (D5 A5) 1/6
+CHORD (D5 -A5) 1/6
+CHORD (D5 G#5) 1/6
+CHORD (C4 A4 D5 -G#5) 1/6
+CHORD (-C4 -A4 D5 A#5) 1/6
+CHORD (-C4 -A4 D5 A5) 1/6
+NOTE 0 1/3
+
+; ----------- measure 21 --- beat 63
+
+CHORD (A#3 F5 -A5) 1/6 ms21
+CHORD (-A#3 E5 -F5 A#5) 1/6
+CHORD (-A#3 E5 -F5 -A#5) 1/6
+CHORD (-A#3 C5 -F5 C6) 1/6
+CHORD (-A#3 A4 -F5 -C6) 1/6
+CHORD (A#3 -F5 A#5) 1/6
+CHORD (-A#3 -A#5) 1/3
+CHORD (-A#3 D#5 A5) 1/3
+CHORD (-A#3 A#5) 1/3
+CHORD (-A#3 A5) 1/6
+CHORD (-A#3 G#5) 1/2
+CHORD (-A#3 -G#5) 1/6
+CHORD (-A#3 A#5) 1/6
+
+; ----------- measure 22 --- beat 66
+
+CHORD (-A#3 -A#5) 1/6 ms22
+CHORD (-A#3 G#5) 1/6
+CHORD (-A#3 A5) 1/3
+CHORD (-A#3 G4 D5 G#5) 1/3
+CHORD (-A#3 C4 D5 G5) 0.197917 @staccato
+CHORD (-A#3 -C4 D5 -G5) 3/22 @staccato
+CHORD (-A#3 -D5 A5) 1/16 @staccato
+CHORD (-A#3 D5 -A5) 2/19 @staccato
+CHORD (-A#3 -D5 G#5) 1/10 @staccato
+CHORD (-A#3 D5 -G#5) 0.197917 @staccato
+CHORD (-A#3 -G#5) 1/27
+CHORD (-A#3 G5) 1/3
+CHORD (-A#3 A5) 8/35
+CHORD (-A#3 -A5) 2/19
+CHORD (-A#3 G#5) 1/6
+CHORD (-A#3 A5) 3/23
+CHORD (A3 -A#3) 0
+CHORD (-A#3 C4 -A5) 10/49
+
+; ----------- measure 23 --- beat 69
+
+CHORD (-A#3 G#4 D5 B5) 1/3 ms23
+CHORD (-A#3 -G#4 -D5 A5) 4/15
+CHORD (-A#3 -G#4 -D5 -A5) 4/17
+CHORD (-A#3 -G#4 -D5 G#5) 1/6
+CHORD (-G#4 C5 -G#5) 1/6
+CHORD (-G#4 -C5 A5) 1/31
+CHORD (A3 -G#4 -C5) 0
+CHORD (C4 -G#4 -C5 -A5) 0.197917
+CHORD (-G#4 -C5 -A5) 2/19
+CHORD (-G#4 -C5 G#5) 1/10
+CHORD (C4 -G#4 -C5 -G#5) 0.197917
+CHORD (-G#4 -C5 -G#5) 1/27
+CHORD (-G#4 -C5 G5) 1/6
+CHORD (C4 -G#4 G#5) 1/3
+CHORD (G#3 A3 E4 G4 -G#4 C#5) 0
+CHORD (-G#3 -E4 F#4 -G4 -G#4 C#5 G5 D6) 1/3
+CHORD (-G#3 -E4 -F#4 -G4 -G#4 -C#5 G#5) 1/3
+NOTE 0 7/5
+
+; ----------- measure 24 --- beat 72
+
+CHORD (-G#3 C#4 -E4 -G#4 A#5) 1/6 ms24
+CHORD (-G#3 -C#4 -E4 -G4 -G#4 -C#5 G#5) 1/3
+CHORD (C#4 -G#4 B4 -G#5) 1/6
+CHORD (-C#4 -B4 -G#5) 1/6
+CHORD (-C#4 -B4 G5) 1/6
+CHORD (C#4 -G5) 1/3
+CHORD (-C#4 A5) 1/3
+CHORD (-C#4 A#4 G5) 1/3
+CHORD (-C#4 G#5) 1/3
+CHORD (-C#4 G5) 1/6
+CHORD (-C#4 F#5) 1/6
+CHORD (-C#4 D5 -F#5) 1/6
+CHORD (-C#4 -D5 A#5) 1/6
+
+; ----------- measure 25 --- beat 75
+
+CHORD (-C#4 -A#5) 1/6 ms25
+CHORD (-C#4 A5) 1/3
+CHORD (-C#4 A#5) 1/6
+CHORD (-C#4 C6) 1/3
+CHORD (A3 -C#4 B4 C#5 A#5) 1/3
+CHORD (-C#4 -B4 -C#5 -A#5) 1/3
+CHORD (-C#4 -B4 -C#5 A5) 1/3
+CHORD (-C#4 C5 -A5) 1/6
+CHORD (-C#4 -C5 B5) 1/6
+CHORD (-C#4 -C5 D5 F5 -B5) 1/6
+CHORD (-C#4 -C5 -D5 -F5 A5) 1/3
+CHORD (-C#4 -C5 -D5 -F5 A#5) 1/6
+NOTE 0 1
+
+; ----------- measure 26 --- beat 78
+
+CHORD (-C5 A5) 0.197917 ms26
+CHORD (-C5 G5 -A5) 3/22 @staccato
+CHORD (-C5 -D5 -F5 G5 G#5) 1/16 @staccato
+CHORD (-C5 -D5 -F5 G5 -G#5) 10/37 @staccato
+CHORD (-C5 -D5 -F5 -G5 A#5) 3/23
+CHORD (-C5 -D5 -F5 G5 -A#5) 10/49 @staccato
+CHORD (-C5 -D5 -F5 G5 C6) 1/6 @staccato
+CHORD (-C5 -D5 -F5 -G5 A#5) 1/31 @staccato
+CHORD (G5 -A#5) 3/22 @staccato
+CHORD (D#5 F#5 -G5 -A#5) 1/16 @staccato
+CHORD (D5 -D#5 -F#5 G5 -A#5) 2/19 @staccato
+CHORD (-D5 -D#5 -F#5 -G5 B5) 1/10 @staccato
+CHORD (-D5 -D#5 -F#5 -B5) 4/17
+CHORD (-D5 -D#5 -F#5 A#5) 1/6
+CHORD (-D5 -A#5) 1/6
+CHORD (-D5 A5) 1/6
+CHORD (-D5 -D#5 -F#5 C6) 1/16
+CHORD (-D5 -D#5 -F#5 G5 -C6) 2/19 @staccato
+CHORD (-D5 -D#5 -F#5 G5 -C6) 1/10 @staccato
+CHORD (-D5 -D#5 -F#5 G5 -C6) 1/15 @staccato
+CHORD (-D5 -D#5 -F#5 -G5 B5) 3/23 @staccato
+CHORD (-D5 -D#5 -F#5 G5 -B5) 10/49 @staccato
+
+; ----------- measure 27 --- beat 81
+
+CHORD (-D#5 -F#5) 3/22 ms27
+CHORD (A3 C#5 -D#5 -F#5 A#5) 0.197917
+CHORD (-D5 G5) 0.197917 @staccato
+CHORD (-A3 -C#5 -G5 -A#5) 3/22 @staccato
+CHORD (-C#5 F5 B5 C6) 1/6
+CHORD (-C#5 -F5 B5) 1/10
+CHORD (-C#5 E5 -F5 -B5) 1/15
+CHORD (-C#5 -E5 -F5 B5) 1/6
+CHORD (-C#5 -E5 -F5 -B5 C6) 1/6
+CHORD (-E5 -C6) 1/6
+CHORD (-E5 D6) 1/31
+CHORD (-E5 G5 -D6) 3/22 @staccato
+CHORD (C4 -E5 -F5 -G5 -B5 -D6) 1/16 @staccato
+CHORD (-C4 -E5 -F5 G5 -B5 -D6) 2/19 @staccato
+CHORD (-C4 -E5 -F5 -G5 -B5 C6) 1/10 @staccato
+CHORD (-C4 -E5 -F5 -B5 -C6) 1/15
+CHORD (-E5 -F5 -B5 -C6) 1/3
+CHORD (A#4 -E5 A5 B5) 1/3
+CHORD (-A#4 -E5 -F5 A5 -B5 C6) 1/3
+CHORD (-A#4 -E5 -F5 -A5 B5) 1/6
+CHORD (-A#4 -E5 -F5 -A5 A#5 -B5) 1/6
+
+; ----------- measure 28 --- beat 84
+
+CHORD (F2 -A#4 -E5 -A#5) 1/3 ms28
+CHORD (-F2 -A#4 -E5 -F5 -A5 -A#5 -B5) 1/6
+CHORD (-F2 -A#4 -E5 -F5 -A5 -B5 C6) 1/3
+CHORD (-F2 -A#4 -E5 -F5 -A5 A#5 -B5) 1/6
+CHORD (-A#4 -E5 B5) 1/6
+CHORD (-A#4 -E5 -F5 -A5 -B5) 1/6
+CHORD (-A#4 -E5 -F5 -A5 A#5 -B5) 1/6
+NOTE A3 0
+CHORD (A#4 G#5 -A#5 D6) 1/6
+CHORD (-A#4 -G#5 A5 -D6) 1/6
+CHORD (-A#4 -G#5 -A5) 1/6
+NOTE A#5 1/6
+NOTE A5 1/6
+CHORD (F#5 -A5) 1/6
+CHORD (-F#5 A#5) 1/3
+CHORD (-F#5 C6) 1/6
+NOTE 0 5/6
+
+; ----------- measure 29 --- beat 87
+
+NOTE -C6 1/6 ms29
+NOTE A#5 1/2
+CHORD (F5 A5) 1/3
+NOTE -A5 1/3
+NOTE B5 1/3
+CHORD (E5 A5) 1/6
+CHORD (-E5 A#5) 1/6
+CHORD (F5 -A#5) 1/6
+CHORD (-F5 A5) 1/3
+CHORD (-F5 G#5) 1/3
+CHORD (-F5 A5) 1/6
+
+; ----------- measure 30 --- beat 90
+
+CHORD (C4 B4 F5 B5) 0.197917 ms30
+CHORD (-C4 -B4 F5 -B5) 3/22 @staccato
+CHORD (-B4 -F5 A5) 1/16 @staccato
+CHORD (-B4 F5 -A5) 10/49 @staccato
+CHORD (-B4 F5 -A5) 1/15 @staccato
+CHORD (-B4 -F5 A#5) 1/3 @staccato
+NOTE A5 1/6
+NOTE G#5 1/31
+CHORD (F5 -G#5) 0.197917 @staccato
+NOTE -G#5 2/19
+NOTE B5 8/27
+CHORD (F5 -B5) 1/27 @staccato
+CHORD (-F5 A#5) 1/6 @staccato
+CHORD (E5 F5 -A#5) 1/6 @staccato
+CHORD (-E5 -F5 A5) 1/31 @staccato
+CHORD (A3 -E5 -F5) 0 @staccato
+CHORD (C4 -E5 -F5 -A5) 3/22 @staccato
+CHORD (-C4 -E5 F#5 B5) 1/16
+CHORD (-E5 -F#5 -B5) 10/37
+CHORD (-E5 -F#5 A#5) 1/3
+NOTE 0 1.197917
+
+; ----------- measure 31 --- beat 93
+
+CHORD (-E5 B5) 1/3 ms31
+CHORD (-E5 -F#5 C#6) 1/16
+CHORD (A3 -E5 -F#5 G#5) 0 @staccato
+CHORD (C4 -E5 -F#5 -G#5 -C#6) 2/19 @staccato
+CHORD (-C4 -E5 -F#5 G#5 B5) 1/10 @staccato
+CHORD (-E5 -F#5 G#5 -B5) 2/5 @staccato
+CHORD (-E5 G#5 -B5) 1/6 @staccato
+CHORD (-E5 -G#5 A#5) 1/31 @staccato
+CHORD (-E5 G#5 -A#5) 3/22 @staccato
+CHORD (-E5 -F#5 -G#5 -A#5) 1/16 @staccato
+CHORD (-E5 -F#5 G#5 -A#5) 2/19 @staccato
+CHORD (-E5 -F#5 -G#5 B5) 1/10 @staccato
+CHORD (A3 -E5 -F#5) 0
+CHORD (C4 -E5 -F#5 -B5) 1/15
+CHORD (-C4 -E5 -F#5 A#5) 3/23
+CHORD (-E5 -F#5 -A#5) 10/49
+CHORD (A#4 -E5 F#5 A5) 0.197917
+CHORD (-A#4 -E5 -F#5 -A5) 0.197917
+CHORD (-A#4 -E5 -F#5 -A5) 10/49
+CHORD (-A#4 -E5 F#5 -A5) 1/15 @staccato
+CHORD (-A#4 -E5 -F#5 B5) 1/6 @staccato
+CHORD (-A#4 -E5 -F#5 A5) 1/6
+NOTE 0 2/5
+
+; ----------- measure 32 --- beat 96
+
+CHORD (-E5 F#5 -A5) 1/6 @staccato ms32
+CHORD (-E5 -F#5 A#5) 1/31 @staccato
+CHORD (-E5 F#5 -A#5) 0.197917 @staccato
+CHORD (-E5 -F#5 -A#5) 2/19
+CHORD (-E5 -F#5 A5) 1/6
+CHORD (-E5 -F#5 -A5) 3/23
+CHORD (-E5 F#5 -A5) 1/27 @staccato
+CHORD (-E5 -F#5 G#5) 1/6 @staccato
+CHORD (E5 A#5) 1/3 @staccato
+CHORD (-E5 A5) 1/16
+CHORD (E5 -A5) 10/49 @staccato
+CHORD (E5 -A5) 1/15 @staccato
+CHORD (-E5 G#5) 3/23 @staccato
+CHORD (E5 -G#5) 10/49 @staccato
+NOTE A#5 1/6
+NOTE A5 8/35
+CHORD (E5 -A5) 2/19 @staccato
+CHORD (-E5 A#5) 1/10 @staccato
+CHORD (E5 -A#5) 0.197917 @staccato
+CHORD (E5 -A#5) 1/27 @staccato
+CHORD (-E5 C6) 1/6 @staccato
+
+; ----------- measure 33 --- beat 99
+
+CHORD (E5 -C6) 1/6 ms33
+CHORD (E5 A#5) 1/6
+CHORD (E5 -A#5) 1/6
+CHORD (A3 A4 F#5 -A#5) 1/6
+CHORD (-A3 -A4 -F#5 A5) 1/3
+CHORD (A3 D4 A#5) 1/3
+CHORD (-A3 -D4 D#5 A5) 1/6
+CHORD (-D4 -D#5 G#5) 1/6
+CHORD (-D4 -G#5) 1/6
+CHORD (-D4 A5) 1/3
+CHORD (-D4 G#5) 1/3
+CHORD (D4 E5 A5) 1/6
+CHORD (-D4 -E5 B5) 1/3
+NOTE 0 2/3
+
+; ----------- measure 34 --- beat 102
+
+CHORD (D4 A5) 2/3 ms34
+CHORD (-D4 D#5 G#5) 1/3
+CHORD (-D4 -G#5) 1/6
+CHORD (-D4 A#5) 1/3
+CHORD (-D4 G#5) 1/3
+CHORD (-D4 A5) 1/6
+CHORD (A3 -D4) 0
+CHORD (-D4 D5 G#5 D6) 1/3
+CHORD (-D4 -D5 G5) 4/15
+CHORD (-D4 -D5 -G5) 1/15
+CHORD (-D4 -D5 A#5) 1/3
+
+; ----------- measure 35 --- beat 105
+
+CHORD (-D4 C6) 1/6 ms35
+CHORD (-D4 A#5) 1/6
+CHORD (-D4 A#5) 1/6 @staccato
+CHORD (A#5 B5) 1/6 @staccato
+CHORD (A#5 -B5) 1/6 @staccato
+CHORD (A#5 B5) 1/6 @staccato
+NOTE A#5 1/6 @staccato
+CHORD (A5 -A#5) 1/31 @staccato
+CHORD (A3 -A#5) 0 @staccato
+CHORD (-A5 -A#5 D6) 3/22 @staccato
+CHORD (D5 A5 C6 -D6) 1/16
+CHORD (-D5 -A5 -C6) 10/37
+CHORD (-D5 -A5 B5) 1/3
+CHORD (-D5 -A5 A#5) 1/3
+CHORD (A#5 C6) 1/6 @staccato
+CHORD (A#5 B5) 1/6 @staccato
+CHORD (A#5 -B5) 1/6 @staccato
+CHORD (A#5 C6) 1/6 @staccato
+NOTE A3 0
+
+; ----------- measure 36 --- beat 108
+
+CHORD (A#5 -C6) 1/6 @staccato ms36
+CHORD (-A#5 D6) 1/6 @staccato
+CHORD (A#5 -D6) 1/6 @staccato
+CHORD (-A#5 C6) 1/6 @staccato
+CHORD (G5 C6) 1/3
+CHORD (-G5 B5) 1/6
+CHORD (-G5 -B5 -C6) 1/6
+CHORD (-G5 C6) 1/6
+CHORD (C4 C#5 A5 -C6) 1/6 @staccato
+CHORD (-C4 -C#5 A5 B5) 1/6 @staccato
+CHORD (-C4 -C#5 A5 A#5) 1/6 @staccato
+CHORD (A5 -A#5) 1/6 @staccato
+CHORD (C4 A5 -A#5) 1/6 @staccato
+CHORD (A5 -A#5) 1/6 @staccato
+CHORD (A5 C6) 1/6 @staccato
+NOTE -C6 1/6
+NOTE A#5 1/6
+NOTE 0 1/3
+
+; ----------- measure 37 --- beat 111
+
+CHORD (C#4 B5) 1/3 ms37
+CHORD (-C#4 A#5) 1/3
+CHORD (-C#4 A5) 1/3
+CHORD (C#5 B5) 1/6
+CHORD (-C#5 A#5) 1/6
+NOTE 0 0
+CHORD (-C#5 G#5 -A#5) 1/6
+CHORD (-C#5 -G#5 A5) 1/3
+CHORD (-C#5 -G#5 B5) 1/6
+CHORD (-C#5 -B5) 1/6
+CHORD (-C#5 A#5) 1/6
+CHORD (-C#5 -G#5 B5) 1/3
+CHORD (B4 -C#5 -G#5 C#6) 1/3
+NOTE 0 1/3
+
+; ----------- measure 38 --- beat 114
+
+CHORD (-C#5 B5) 1/3 ms38
+CHORD (-C#5 -G#5 -B5) 1/6
+CHORD (-C#5 -G#5 A#5) 1/3
+CHORD (-C#5 -G#5 B5) 1/6
+CHORD (-C#5 -B5) 1/6
+CHORD (-C#5 A#5) 1/6
+CHORD (-C#5 -G#5 -A#5) 1/16
+CHORD (-C#5 F#5 -G#5 -A#5) 2/19 @staccato
+CHORD (-C#5 -F#5 -G#5 A5) 1/10 @staccato
+CHORD (-C#5 F#5 -G#5 -A5) 1/15 @staccato
+CHORD (-C#5 F#5 -G#5 A#5) 1/3 @staccato
+CHORD (-C#5 A5) 1/3
+CHORD (-C#5 -G#5 A#5) 1/16
+CHORD (-C#5 F#5 -G#5 -A#5) 10/49 @staccato
+CHORD (-C#5 F#5 -G#5 -A#5) 1/15 @staccato
+CHORD (-C#5 -F#5 -G#5 C6) 3/23 @staccato
+CHORD (-C#5 F#5 -G#5 -C6) 1/27 @staccato
+CHORD (-C#5 -F#5 -G#5 A#5) 1/6 @staccato
+
+; ----------- measure 39 --- beat 117
+
+CHORD (G5 -A#5) 1/3 ms39
+CHORD (-G5 A5) 2/3
+CHORD (G2 F#5 B5) 1/6
+CHORD (-G2 -F#5 -B5) 1/6
+CHORD (-G2 -F#5 A5) 1/3
+CHORD (-G2 A3 C#5 -F#5 A#5) 1/3
+NOTE A5 1/6
+NOTE G#5 1/6
+CHORD (G5 -G#5) 1/6
+CHORD (-G5 C6) 1/3
+CHORD (-G5 B5) 1/6
+
+; ----------- measure 40 --- beat 120
+
+CHORD (A3 -B5) 1/6 ms40
+CHORD (-A3 A#5) 1/6
+NOTE C6 1/6
+CHORD (A5 -C6) 1/6
+CHORD (-A5 B5) 1/3
+CHORD (E4 C6) 1/3
+CHORD (-E4 D6) 1/6
+CHORD (A3 -E4 C6) 1/6
+CHORD (-A3 -E4 B5 -C6) 1/3
+NOTE -C6 1/6
+NOTE B5 1/3
+NOTE C6 1/6
+CHORD (A5 B5) 1/3
+
+; ----------- measure 41 --- beat 123
+
+NOTE A#5 0.197917 ms41
+CHORD (C4 -A#5) 3/22
+CHORD (-C4 D#5 B5) 1/16
+CHORD (-D#5 -B5) 10/37
+CHORD (-D#5 A#5) 1/6
+CHORD (-D#5 B5) 1/6
+CHORD (-B5 C6) 1/6
+CHORD (-C6 C#6) 1/3
+CHORD (B5 -C6) 1/10
+CHORD (C4 -B5 -C6) 2/5
+NOTE B5 1/6
+CHORD (A#5 -B5) 8/35
+CHORD (-A#5 -B5) 10/37
+CHORD (-B5 C6) 1/3
+
+; ----------- measure 42 --- beat 126
+
+CHORD (C4 A#5) 1/6 ms42
+CHORD (A3 -C4 -A#5) 1/6
+CHORD (A#5 B5 D6) 1/6
+CHORD (A#5 D8) 1/6
+NOTE -A#5 1/6
+CHORD (A5 -A#5) 1/6
+NOTE -A5 1/6
+NOTE C6 1/6
+CHORD (-C6 C#6) 1/16
+CHORD (C4 -C6 -C#6) 2/19
+CHORD (-C4 B5 -C#6) 1/10
+CHORD (-B5 -C#6) 1/15
+CHORD (C6 -C#6) 1/3
+CHORD (E5 D6) 1/3
+CHORD (-E5 C6) 1/3
+CHORD (-E5 -C6) 1/6
+CHORD (-E5 B5) 1/6
+
+; ----------- measure 43 --- beat 129
+
+NOTE -B5 1/2 ms43
+NOTE C#6 1/3
+NOTE B5 1/6
+CHORD (F#4 C6) 1/3
+CHORD (-F#4 B5 -C6) 1/3
+CHORD (-F#4 A#5 -C6) 1/3
+CHORD (C6 D6) 1/6
+NOTE D6 1/3
+CHORD (C6 -D6) 1/3
+CHORD (C#6 -D6) 1/6
+
+; ----------- measure 44 --- beat 132
+
+NOTE -C#6 1/6 ms44
+NOTE C6 1/6
+NOTE B5 1/6
+CHORD (G#5 -B5 C#6) 1/6
+CHORD (-G#5 -C#6 D6) 1/3
+NOTE C#6 1/3
+CHORD (C6 F#6) 1/6
+CHORD (D6 -F#6) 1/3
+CHORD (C#6 -F#6) 1/6
+NOTE -C#6 1/6
+NOTE D6 1/6
+CHORD (-D6 G#6) 1/6
+CHORD (E6 -G#6) 1/6
+CHORD (D6 -G#6) 1/3
+
+; ----------- measure 45 --- beat 135
+
+NOTE -D6 1/3 ms45
+NOTE C#6 1/3
+CHORD (D6 F#6) 1/6
+CHORD (C#6 -F#6) 1/6
+NOTE -C#6 1/6
+NOTE C6 2/3
+NOTE D6 1/6
+NOTE C6 1/3
+CHORD (F#5 C#6) 1/3
+CHORD (-F#5 C6) 1/3
+
+; ----------- measure 46 --- beat 138
+
+CHORD (B5 D#6) 1/6 ms46
+CHORD (C6 -D#6) 1/3
+CHORD (B5 -D#6) 1/3
+CHORD (C6 -D#6) 1/6
+NOTE -C6 1/6
+NOTE D6 1/6
+CHORD (C6 E6) 2/3
+CHORD (E4 B5 D#6) 1/2
+CHORD (-E4 C#6 -D#6) 1/3
+CHORD (-E4 B5 -D#6) 1/6
+
+; ----------- measure 47 --- beat 141
+
+NOTE -B5 1/6 ms47
+NOTE C6 1/6
+CHORD (-C6 D6) 1/6
+CHORD (B5 -D6) 1/6
+CHORD (A#5 -D6) 1/3
+NOTE C6 1/3
+NOTE B5 1/3
+NOTE A#5 1/6
+NOTE C6 1/3
+NOTE B5 1/3
+NOTE C6 1/6
+CHORD (-C6 E6) 1/6
+CHORD (D6 -E6) 1/6
+
+; ----------- measure 48 --- beat 144
+
+NOTE C6 2/3 ms48
+NOTE B5 1/3
+CHORD (C6 D6) 1/6
+CHORD (B5 -D6) 1/3
+CHORD (A#5 -D6) 1/3
+CHORD (B5 -D6) 1/6
+NOTE -B5 1/6
+NOTE A#5 1/6
+NOTE B5 1/6
+NOTE A3 0
+CHORD (E1 D#5 -B5 D#6) 1/6
+CHORD (-E1 -D#5 C#6 -D#6) 1/6
+CHORD (-D#5 -C#6 -D#6) 1/6
+
+; ----------- measure 49 --- beat 147
+
+NOTE B5 1/3 ms49
+NOTE B5 1/3
+CHORD (A#5 -B5) 1/3
+NOTE -A#5 1/6
+NOTE C6 1/6
+CHORD (A#5 -C6) 1/6
+NOTE A#5 1/6
+CHORD (-A#5 B5) 1/3
+NOTE A#5 1/3
+NOTE A5 1/3
+CHORD (A#5 B5) 1/6
+CHORD (-B5 C6) 1/6
+
+; ----------- measure 50 --- beat 150
+
+NOTE -C6 1/6 ms50
+NOTE A#5 1/3
+NOTE B5 1/6
+CHORD (A#5 -B5) 1/6
+NOTE A#5 1/6
+NOTE A5 1/3
+CHORD (E5 C6) 1/3
+CHORD (-E5 B5) 1/3
+CHORD (A#5 C6) 1/6
+NOTE C6 1/3
+CHORD (B5 -C6) 1/3
+NOTE C6 1/6
+
+; ----------- measure 51 --- beat 153
+
+CHORD (F2 -C6 D6) 1/6 ms51
+CHORD (-F2 D6) 1/6
+CHORD (-F2 C6 -D6) 1/3
+CHORD (-F2 -C6 -D6) 1/3
+NOTE B5 1/4
+NOTE -B5 1/12
+NOTE C6 1/6
+CHORD (B5 -C6) 1/3
+CHORD (A#5 -C6) 1/6
+NOTE -A#5 1/2
+NOTE C6 1/6
+NOTE A#5 1/3
+
+; ----------- measure 52 --- beat 156
+
+NOTE B5 1/3 ms52
+NOTE A#5 1/6
+NOTE A3 0
+CHORD (E1 D#5 A#5) 1/6
+CHORD (-E1 -D#5 A5 -A#5) 1/6
+CHORD (-D#5 -A#5 B5) 1/6
+NOTE -B5 1/6
+NOTE A#5 1/3
+NOTE A5 1/3
+NOTE B5 1/6
+NOTE A#5 1/3
+NOTE B5 4/15
+NOTE -B5 1/15
+NOTE C#6 1/3
+
+; ----------- measure 53 --- beat 159
+
+CHORD (C#4 B5 C6) 1/2 ms53
+CHORD (-C#4 A#5 -C6) 1/3
+CHORD (-C#4 B5 -C6) 1/6
+NOTE -B5 1/6
+NOTE A#5 1/6
+CHORD (A5 A#5) 1/3
+NOTE A#5 1/3
+CHORD (B4 G5 A5) 1/3
+CHORD (-B4 -G5 A#5) 1/3
+CHORD (-B4 -G5 C6) 1/6
+CHORD (-B4 -G5 A#5) 1/6
+
+; ----------- measure 54 --- beat 162
+
+NOTE -A#5 1/3 ms54
+NOTE A5 1/3
+CHORD (F#5 -A5) 1/3
+NOTE B5 1/3
+NOTE A5 1/3
+CHORD (F5 A#5) 1/3
+NOTE A5 1/6
+NOTE G#5 1/3
+NOTE A#5 1/3
+NOTE A5 1/6
+
+; ----------- measure 55 --- beat 165
+
+CHORD (G5 -A5) 1/6 ms55
+CHORD (-G5 A#5) 1/6
+CHORD (-G5 C6) 1/3
+CHORD (-G5 A#5) 1/3
+CHORD (F#5 -A#5) 1/3
+CHORD (-F#5 A5) 1/2
+CHORD (-F#5 B5) 1/6
+NOTE -B5 1/6
+NOTE A5 1/6
+CHORD (F5 -A5) 1/6
+CHORD (-F5 A#5) 1/6
+CHORD (-F5 A5) 1/3
+
+; ----------- measure 56 --- beat 168
+
+NOTE G#5 1/3 ms56
+CHORD (G5 A#5) 1/3
+CHORD (-G5 C6) 1/6
+CHORD (-G5 A#5) 1/6
+CHORD (D4 -A#5) 1/6
+CHORD (-D4 B5) 1/3
+CHORD (-D4 A#5) 1/6
+CHORD (-D4 F#5 -A#5) 1/6
+CHORD (-D4 -F#5 A5) 1/6
+NOTE C6 1/3
+NOTE B5 1/6
+CHORD (D5 A#5 -B5) 1/6
+CHORD (-D5 A#5) 1/3
+
+; ----------- measure 57 --- beat 171
+
+NOTE C6 1/6 ms57
+NOTE B5 1/3
+NOTE C6 1/3
+NOTE D6 1/6
+CHORD (C6 -D6) 1/6
+NOTE C6 1/3
+NOTE -C6 1/6
+CHORD (B5 -C6) 1/3
+CHORD (A#5 C6) 1/3
+CHORD (-A#5 B5) 1/6
+NOTE A#5 1/2
+
+; ----------- measure 58 --- beat 174
+
+NOTE -A#5 1/6 ms58
+NOTE C6 1/3
+NOTE A#5 1/6
+NOTE B5 1/3
+CHORD (C5 G5 A#5) 1/3
+CHORD (-C5 -G5 A5) 1/3
+CHORD (-C5 -G5 A#5) 1/6
+CHORD (-C5 -G5 A5) 1/6
+NOTE -A5 1/6
+NOTE A#5 1/3
+NOTE C6 1/6
+CHORD (G#5 -C6) 1/6
+CHORD (-G#5 A#5) 1/6
+NOTE 0 1
+
+; ----------- measure 59 --- beat 177
+
+NOTE -A#5 1/3 ms59
+NOTE A5 2/3
+CHORD (C#4 G5 B5) 1/6
+CHORD (-C#4 -G5 A5) 1/3
+CHORD (-C#4 -G5 A#5) 1/3
+CHORD (-C#4 -G5 A5) 1/6
+CHORD (F#5 -A5) 1/6
+CHORD (-F#5 G#5) 1/6
+CHORD (-F#5 A5) 1/3
+CHORD (-F#5 B5) 1/3
+
+; ----------- measure 60 --- beat 180
+
+NOTE A5 1/3 ms60
+CHORD (G5 A#5) 1/6
+CHORD (-G5 A5) 1/3
+CHORD (-G5 G#5) 1/6
+NOTE -G#5 1/6
+NOTE B5 1/6
+CHORD (F#5 -B5) 1/6
+CHORD (-F#5 A#5) 1/6
+CHORD (-F#5 A5) 1/3
+NOTE B5 1/3
+CHORD (G5 A#5) 1/3
+CHORD (-G5 B5) 1/6
+CHORD (-G5 C#6) 1/6
+
+; ----------- measure 61 --- beat 183
+
+NOTE -C#6 1/6 ms61
+NOTE B5 1/2
+CHORD (A5 -B5) 1/6
+CHORD (-A5 A#5) 1/6
+NOTE B5 1/3
+NOTE A#5 1/6
+CHORD (B4 F#5 -A#5) 1/6
+CHORD (-B4 -F#5 A5) 1/3
+NOTE -A5 1/6
+NOTE B5 8/35
+NOTE -B5 2/19
+NOTE A5 1/3
+NOTE A#5 1/6
+
+; ----------- measure 62 --- beat 186
+
+NOTE -A#5 1/6 ms62
+NOTE A5 1/6
+NOTE G#5 4/15
+NOTE -G#5 1/15
+NOTE A#5 1/3
+NOTE A5 1/3
+NOTE G#5 1/6
+CHORD (C4 F5 A#5) 1/3
+CHORD (-C4 -F5 A5) 1/6
+NOTE -A5 1/6
+NOTE A#5 8/35
+NOTE -A#5 2/19
+NOTE C6 1/6
+NOTE A#5 1/3
+
+; ----------- measure 63 --- beat 189
+
+NOTE -A#5 1/3 ms63
+CHORD (A4 A5) 4/15
+CHORD (-A4 -A5) 1/15
+CHORD (-A4 A#5) 1/6
+CHORD (-A4 A5) 1/6
+NOTE -A5 1/6
+NOTE G#5 8/35
+NOTE -G#5 2/19
+NOTE A5 1/6
+CHORD (D#5 -A5) 1/6
+CHORD (-D#5 G#5) 1/6
+NOTE A5 1/3
+NOTE B5 1/3
+CHORD (E5 A5) 1/3
+
+; ----------- measure 64 --- beat 192
+
+NOTE -A5 1/6 ms64
+NOTE G#5 8/35
+NOTE -G#5 7/16
+NOTE A#5 1/6
+CHORD (D#5 -A#5) 1/6
+CHORD (-D#5 G#5) 1/6
+CHORD (-D#5 A5) 1/3
+CHORD (A#4 -D#5 G#5) 1/3
+NOTE G5 1/3
+NOTE A#5 1/6
+NOTE A5 1/3
+NOTE G#5 1/6
+
+; ----------- measure 65 --- beat 195
+
+NOTE -G#5 1/6 ms65
+NOTE A#5 1/6
+CHORD (E5 -A#5) 1/6
+CHORD (-E5 A5) 1/6
+CHORD (-E5 A#5) 1/3
+NOTE C6 1/3
+CHORD (F#5 A#5) 1/2
+CHORD (-F#5 A5) 1/6
+NOTE -A5 1/6
+NOTE A#5 1/3
+NOTE A5 1/6
+CHORD (E5 -A5) 1/6
+CHORD (-E5 G#5) 1/6
+
+; ----------- measure 66 --- beat 198
+
+NOTE -G#5 1/6 ms66
+NOTE A5 1/6
+NOTE G#5 1/3
+CHORD (A4 F5 A5) 1/3
+NOTE B5 1/3
+NOTE A5 1/2
+NOTE G#5 1/6
+CHORD (D#5 -G#5) 1/2
+CHORD (-D#5 A#5) 1/6
+CHORD (-D#5 G#5) 1/3
+
+; ----------- measure 67 --- beat 201
+
+NOTE A5 1/3 ms67
+CHORD (D5 G#5) 1/3
+CHORD (-D5 G5) 1/6
+CHORD (-D5 A#5) 1/6
+NOTE -A#5 1/6
+NOTE A5 1/6
+CHORD (F5 -A5) 1/6
+CHORD (-F5 A#5) 1/3
+CHORD (-F5 C6) 1/6
+NOTE A#5 1/3
+CHORD (A#4 E5 -A#5) 1/3
+CHORD (-A#4 -E5 A5) 1/3
+
+; ----------- measure 68 --- beat 204
+
+NOTE -A5 1/6 ms68
+NOTE B5 1/3
+NOTE A5 1/3
+NOTE A#5 1/3
+NOTE A5 1/6
+NOTE G#5 1/3
+CHORD (F#5 A#5) 1/3
+NOTE C6 1/3
+NOTE A#5 1/6
+NOTE B5 1/3
+NOTE A#5 1/6
+
+; ----------- measure 69 --- beat 207
+
+CHORD (D4 F5 -A#5) 1/6 ms69
+CHORD (-D4 -F5 A5) 1/3
+CHORD (-D4 -F5 C6) 1/6
+CHORD (-D4 -F5 B5) 1/3
+CHORD (D5 A#5) 1/3
+CHORD (-D5 -A#5 C6) 1/3
+CHORD (-D5 -A#5 B5) 1/6
+CHORD (-D5 -A#5 C6) 1/6
+NOTE -C6 1/6
+NOTE D6 1/6
+CHORD (C#6 -D6) 1/6
+CHORD (C6 -C#6) 1/2
+
+; ----------- measure 70 --- beat 210
+
+NOTE B5 1/3 ms70
+NOTE C6 1/3
+NOTE B5 1/3
+NOTE A#5 1/2
+NOTE C6 1/3
+NOTE A#5 1/3
+NOTE B5 1/6
+NOTE A#5 1/3
+NOTE A5 1/3
+
+; ----------- measure 71 --- beat 213
+
+CHORD (C5 G5 A#5) 1/3 ms71
+CHORD (-C5 -G5 A5) 1/6
+CHORD (-C5 -G5 A#5) 1/3
+CHORD (-C5 -G5 C6) 1/6
+CHORD (G#5 -C6) 1/6
+CHORD (-G#5 A#5) 1/2
+CHORD (-G#5 A5) 1/3
+NOTE -A5 1/3
+CHORD (G5 B5) 1/3
+CHORD (-G5 A5) 1/6
+CHORD (-G5 A#5) 1/6
+
+; ----------- measure 72 --- beat 216
+
+NOTE -A#5 1/6 ms72
+NOTE A5 1/6
+CHORD (F#5 -A5) 1/6
+CHORD (-F#5 G#5) 1/3
+CHORD (-F#5 A#5) 1/6
+CHORD (C4 A5) 1/3
+CHORD (-C4 G#5) 1/3
+CHORD (-C4 A#5) 1/3
+NOTE A5 1/6
+NOTE A#5 1/3
+NOTE C6 1/6
+CHORD (G#5 -C6) 1/6
+CHORD (-G#5 A#5) 1/6
+
+; ----------- measure 73 --- beat 219
+
+NOTE -A#5 1/3 ms73
+NOTE A5 1/3
+NOTE A#5 1/3
+CHORD (F#5 A5) 1/3
+CHORD (-F#5 G#5) 1/6
+CHORD (-F#5 A5) 1/3
+CHORD (-F#5 G#5) 1/6
+CHORD (E2 G5 -G#5) 1/6
+CHORD (-E2 -G5 A5) 1/3
+CHORD (-E2 -G5 B5) 1/6
+CHORD (-E2 -G5 A5) 1/3
+
+; ----------- measure 74 --- beat 222
+
+CHORD (A4 D#5 -A5) 1/3 ms74
+CHORD (-A4 -D#5 G#5) 1/2
+CHORD (-A4 -D#5 A#5) 1/6
+NOTE -A#5 1/6
+NOTE G#5 1/6
+CHORD (D5 -G#5) 1/6
+CHORD (-D5 A5) 1/3
+CHORD (-D5 G#5) 1/6
+NOTE G5 1/3
+NOTE A5 1/6
+CHORD (E5 -A5) 1/6
+CHORD (-E5 G#5) 1/3
+
+; ----------- measure 75 --- beat 225
+
+NOTE A5 1/6 ms75
+NOTE B5 1/3
+NOTE A5 1/6
+CHORD (D#5 -A5) 1/3
+NOTE -A5 1/6
+NOTE G#5 1/2
+NOTE A#5 1/3
+CHORD (D5 G#5) 1/3
+CHORD (-D5 A5) 1/6
+CHORD (-D5 G#5) 1/3
+CHORD (-D5 G5) 1/6
+
+; ----------- measure 76 --- beat 228
+
+NOTE -G5 1/6 ms76
+NOTE A5 1/6
+CHORD (E5 -A5) 1/6
+CHORD (-E5 B5) 1/6
+CHORD (-E5 A5) 1/3
+NOTE A#5 1/3
+CHORD (D#5 A5) 1/3
+CHORD (-D#5 G#5) 1/6
+CHORD (-D#5 B5) 1/6
+NOTE -B5 1/6
+NOTE A#5 1/6
+CHORD (E5 -A#5) 1/6
+CHORD (-E5 A5) 1/3
+CHORD (-E5 B5) 1/6
+
+; ----------- measure 77 --- beat 231
+
+NOTE A#5 1/3 ms77
+NOTE B5 1/6
+CHORD (B4 G#5 -B5) 1/6
+CHORD (-B4 -G#5 C#6) 1/3
+NOTE B5 1/2
+NOTE A#5 1/6
+CHORD (F#5 -A#5) 1/6
+CHORD (-F#5 B5) 1/6
+NOTE -B5 1/6
+NOTE A#5 1/6
+NOTE A5 2/3
+
+; ----------- measure 78 --- beat 234
+
+NOTE B5 1/3 ms78
+NOTE A5 1/3
+NOTE A#5 1/6
+NOTE A5 1/3
+NOTE G#5 1/6
+CHORD (F5 -G#5) 1/6
+CHORD (-F5 A5) 1/3
+CHORD (-F5 G#5) 1/6
+CHORD (B3 G#4 F#5 A5) 1/3
+CHORD (-B3 -G#4 -F#5 B5) 1/3
+CHORD (-B3 -G#4 -F#5 A5) 1/3
+
+; ----------- measure 79 --- beat 237
+
+NOTE -A5 1/6 ms79
+NOTE G#5 1/6
+CHORD (D5 -G#5) 1/2
+CHORD (-D5 A#5) 1/6
+NOTE -A#5 1/6
+NOTE G#5 1/6
+NOTE A5 1/3
+CHORD (C#5 G#5) 1/3
+NOTE G5 1/3
+NOTE G#5 1/6
+NOTE A#5 1/6
+CHORD (D5 -A#5) 1/6
+CHORD (-D5 G#5) 1/6
+
+; ----------- measure 80 --- beat 240
+
+NOTE -G#5 1/6 ms80
+NOTE A5 1/3
+NOTE G#5 1/6
+NOTE G5 1/3
+CHORD (A4 C#5 A#5) 1/3
+CHORD (-A4 -C#5 A5) 1/3
+CHORD (-A4 -C#5 G#5) 1/6
+CHORD (-A4 -C#5 A#5) 1/6
+NOTE -A#5 1/6
+NOTE A5 1/6
+CHORD (D#5 -A5) 1/6
+CHORD (-D#5 A#5) 1/3
+CHORD (-D#5 C6) 1/6
+
+; ----------- measure 81 --- beat 243
+
+NOTE A#5 1/3 ms81
+CHORD (F5 -A#5) 1/3
+CHORD (-F5 A5) 1/3
+NOTE A#5 1/6
+NOTE A5 1/6
+CHORD (D#5 -A5) 1/6
+CHORD (-D#5 G#5) 1/2
+NOTE -G#5 1/6
+NOTE A#5 1/6
+NOTE G#5 1/6
+CHORD (A#3 G4 -G#5) 1/6
+CHORD (-A#3 -G4 A5) 1/3
+
+; ----------- measure 82 --- beat 246
+
+NOTE G#5 1/3 ms82
+NOTE G5 1/6
+NOTE A5 1/6
+CHORD (C5 -A5) 1/6
+CHORD (-C5 G#5) 1/6
+NOTE -G#5 1/6
+NOTE G5 1/3
+NOTE A5 1/6
+NOTE G#5 1/3
+NOTE A5 1/3
+NOTE B5 1/3
+NOTE A5 1/3
+
+; ----------- measure 83 --- beat 249
+
+NOTE -A5 1/6 ms83
+NOTE G#5 1/6
+CHORD (D5 -G#5) 1/6
+CHORD (-D5 A5) 1/3
+CHORD (-D5 G#5) 1/6
+NOTE G5 1/3
+CHORD (F#4 C5 G#5) 1/3
+CHORD (-F#4 -C5 G5) 1/3
+NOTE G#5 1/6
+NOTE A#5 1/3
+NOTE G#5 1/2
+
+; ----------- measure 84 --- beat 252
+
+NOTE -G#5 1/6 ms84
+NOTE G5 1/2
+CHORD (B4 A5) 1/3
+NOTE G5 1/3
+NOTE G#5 1/6
+NOTE G5 1/6
+CHORD (A#4 -G5) 1/6
+CHORD (-A#4 F#5) 1/6
+NOTE -F#5 1/3
+NOTE 0 2/3

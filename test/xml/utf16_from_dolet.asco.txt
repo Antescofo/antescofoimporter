@@ -1,0 +1,29 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: utf16_from_dolet.xml
+; exported from Sibelius 7.5.1 ~ Dolet 6.4 for Sibelius
+; MusicXML version 3.0
+; Converted to Antescofo on Mon Jun  8 18:24:09 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+NOTE C4 1 measure1
+NOTE D4 1
+NOTE E4 1
+NOTE F4 1
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+NOTE G4 1 measure2
+NOTE A4 1
+NOTE B4 1
+NOTE G4 1
+
+; ----------- measure 3 --- beat 8 --- time signature 4/4
+
+NOTE C5 1 measure3
+NOTE 0 3

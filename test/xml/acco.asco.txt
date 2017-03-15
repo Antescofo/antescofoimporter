@@ -1,0 +1,386 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: acco.xml
+; exported from Sibelius 7.1.3 ~ Direct export, not from Dolet
+; MusicXML version 3.0
+; Converted to Antescofo on Thu May 28 09:10:01 2015
+; Credits: Dioptrie
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+BPM 52 ; ( ← 𝅘𝅥 =52) 
+NOTE 0 4 measure1
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+NOTE 0 4 measure2
+
+; ----------- measure 3 --- beat 8 --- time signature 4/4
+
+CHORD (A#4 D#5) 4 measure3
+
+; ----------- measure 4 --- beat 12 --- time signature 9/16
+
+BPM 80 ; ( ← 𝅘𝅥𝅮. =80) 
+NOTE -A#4 1/3 measure4
+CHORD (-A#4 D#5) 2/3
+NOTE -A#4 1/3
+CHORD (-A#4 D#5) 2/3
+NOTE -A#4 1/3
+CHORD (-A#4 D#5) 2/3
+
+; ----------- measure 5 --- beat 15 --- time signature 9/16
+
+NOTE C4 1/6 measure5
+NOTE C4 1/6
+NOTE C4 1/6
+NOTE C4 1/6
+NOTE C4 1/6
+NOTE C4 1/6
+NOTE 0 2/3
+TRILL (G#3) 4/3
+
+; ----------- measure 6 --- beat 18 --- time signature 9/16
+
+TRILL (-G#3) 1 measure6
+NOTE 0 1/2
+NOTE D5 3/2
+
+; ----------- measure 7 --- beat 21 --- time signature 9/16
+
+NOTE -D5 2 measure7
+NOTE 0 1
+
+; ----------- measure 8 --- beat 24 --- time signature 9/16
+
+NOTE 0 3 measure8
+
+; ----------- measure 9 --- beat 27 --- time signature 9/16
+
+NOTE 0 3 measure9
+
+; ----------- measure 10 --- beat 30 --- time signature 9/16
+
+NOTE 0 3 measure10
+
+; ----------- measure 11 --- beat 33 --- time signature 9/16
+
+NOTE 0 3 measure11
+
+; ----------- measure 12 --- beat 36 --- time signature 9/16
+
+NOTE 0 3 measure12
+
+; ----------- measure 13 --- beat 39 --- time signature 9/16
+
+NOTE 0 3 measure13
+
+; ----------- measure 14 --- beat 42 --- time signature 9/16
+
+NOTE 0 3 measure14
+
+; ----------- measure 15 --- beat 45 --- time signature 9/16
+
+NOTE 0 3 measure15
+
+; ----------- measure 16 --- beat 48 --- time signature 9/16
+
+NOTE 0 3 measure16
+
+; ----------- measure 17 --- beat 51 --- time signature 9/16
+
+NOTE 0 3 measure17
+
+; ----------- measure 18 --- beat 54 --- time signature 9/16
+
+NOTE 0 3 measure18
+
+; ----------- measure 19 --- beat 57 --- time signature 9/16
+
+NOTE 0 3 measure19
+
+; ----------- measure 20 --- beat 60 --- time signature 9/16
+
+NOTE 0 3 measure20
+
+; ----------- measure 21 --- beat 63 --- time signature 9/16
+
+NOTE 0 3 measure21
+
+; ----------- measure 22 --- beat 66 --- time signature 9/16
+
+NOTE 0 3 measure22
+
+; ----------- measure 23 --- beat 69 --- time signature 9/16
+
+NOTE 0 3 measure23
+
+; ----------- measure 24 --- beat 72 --- time signature 9/16
+
+NOTE 0 1/2 measure24
+NOTE B4 1/2
+NOTE 0 2/3
+NOTE A#4 1/3
+NOTE 0 2/3
+NOTE D5 1/3
+
+; ----------- measure 25 --- beat 75 --- time signature 9/16
+
+NOTE 0 1 measure25
+NOTE C#5 1
+NOTE 0 1
+
+; ----------- measure 26 --- beat 78 --- time signature 9/16
+
+NOTE 0 3 measure26
+
+; ----------- measure 27 --- beat 81 --- time signature 9/16
+
+NOTE 0 3 measure27
+
+; ----------- measure 28 --- beat 84 --- time signature 9/16
+
+NOTE 0 3/2 measure28
+NOTE G#5 1/2
+NOTE 0 1/3
+NOTE F#5 2/3
+
+; ----------- measure 29 --- beat 87 --- time signature 9/16
+
+NOTE 0 2/3 measure29
+NOTE F5 1/3
+NOTE 0 2/3
+NOTE E5 1/3
+NOTE 0 1
+
+; ----------- measure 30 --- beat 90 --- time signature 9/16
+
+NOTE 0 3 measure30
+
+; ----------- measure 31 --- beat 93 --- time signature 9/16
+
+NOTE 0 3 measure31
+
+; ----------- measure 32 --- beat 96 --- time signature 9/16
+
+NOTE 0 3 measure32
+
+; ----------- measure 33 --- beat 99 --- time signature 9/16
+
+NOTE 0 1/2 measure33
+NOTE F#5 1/2
+NOTE 0 1/3
+NOTE D#5 1/3
+NOTE 0 5/6
+NOTE E5 1/2
+
+; ----------- measure 34 --- beat 102 --- time signature 9/16
+
+NOTE 0 2/3 measure34
+NOTE D#5 1/3
+NOTE 0 1
+NOTE D5 1
+
+; ----------- measure 35 --- beat 105 --- time signature 9/16
+
+NOTE 0 3 measure35
+
+; ----------- measure 36 --- beat 108 --- time signature 9/16
+
+NOTE 0 3 measure36
+
+; ----------- measure 37 --- beat 111 --- time signature 9/16
+
+NOTE 0 3 measure37
+
+; ----------- measure 38 --- beat 114 --- time signature 9/16
+
+NOTE 0 3 measure38
+
+; ----------- measure 39 --- beat 117 --- time signature 9/16
+
+NOTE 0 3 measure39
+
+; ----------- measure 40 --- beat 120 --- time signature 9/16
+
+NOTE 0 3 measure40
+
+; ----------- measure 41 --- beat 123 --- time signature 9/16
+
+NOTE 0 3 measure41
+
+; ----------- measure 42 --- beat 126 --- time signature 9/16
+
+NOTE 0 3 measure42
+
+; ----------- measure 43 --- beat 129 --- time signature 9/16
+
+NOTE 0 3 measure43
+
+; ----------- measure 44 --- beat 132 --- time signature 9/16
+
+NOTE 0 3 measure44
+
+; ----------- measure 45 --- beat 135 --- time signature 9/16
+
+NOTE 0 3 measure45
+
+; ----------- measure 46 --- beat 138 --- time signature 9/16
+
+NOTE 0 3 measure46
+
+; ----------- measure 47 --- beat 141 --- time signature 9/16
+
+NOTE 0 3 measure47
+
+; ----------- measure 48 --- beat 144 --- time signature 9/16
+
+NOTE 0 3 measure48
+
+; ----------- measure 49 --- beat 147 --- time signature 9/16
+
+NOTE 0 3 measure49
+
+; ----------- measure 50 --- beat 150 --- time signature 9/16
+
+NOTE 0 3 measure50
+
+; ----------- measure 51 --- beat 153 --- time signature 9/16
+
+NOTE 0 3 measure51
+
+; ----------- measure 52 --- beat 156 --- time signature 9/16
+
+NOTE 0 3 measure52
+
+; ----------- measure 53 --- beat 159 --- time signature 9/16
+
+NOTE 0 3 measure53
+
+; ----------- measure 54 --- beat 162 --- time signature 9/16
+
+NOTE 0 3 measure54
+
+; ----------- measure 55 --- beat 165 --- time signature 9/16
+
+NOTE 0 3 measure55
+
+; ----------- measure 56 --- beat 168 --- time signature 9/16
+
+NOTE 0 3 measure56
+
+; ----------- measure 57 --- beat 171 --- time signature 9/16
+
+NOTE 0 3 measure57
+
+; ----------- measure 58 --- beat 174 --- time signature 9/16
+
+NOTE 0 3 measure58
+
+; ----------- measure 59 --- beat 177 --- time signature 9/16
+
+NOTE 0 3 measure59
+
+; ----------- measure 60 --- beat 180 --- time signature 9/16
+
+NOTE 0 3 measure60
+
+; ----------- measure 61 --- beat 183 --- time signature 9/16
+
+NOTE 0 3 measure61
+
+; ----------- measure 62 --- beat 186 --- time signature 9/16
+
+NOTE 0 3 measure62
+
+; ----------- measure 63 --- beat 189 --- time signature 9/16
+
+NOTE 0 3 measure63
+
+; ----------- measure 64 --- beat 192 --- time signature 9/16
+
+NOTE 0 3 measure64
+
+; ----------- measure 65 --- beat 195 --- time signature 9/16
+
+NOTE 0 3 measure65
+
+; ----------- measure 66 --- beat 198 --- time signature 9/16
+
+NOTE 0 3 measure66
+
+; ----------- measure 67 --- beat 201 --- time signature 9/16
+
+NOTE 0 3 measure67
+
+; ----------- measure 68 --- beat 204 --- time signature 9/16
+
+NOTE 0 3 measure68
+
+; ----------- measure 69 --- beat 207 --- time signature 9/16
+
+NOTE 0 3 measure69
+
+; ----------- measure 70 --- beat 210 --- time signature 9/16
+
+NOTE 0 3 measure70
+
+; ----------- measure 71 --- beat 213 --- time signature 9/16
+
+NOTE 0 3 measure71
+
+; ----------- measure 72 --- beat 216 --- time signature 9/16
+
+NOTE 0 3 measure72
+
+; ----------- measure 73 --- beat 219 --- time signature 9/16
+
+NOTE 0 3 measure73
+
+; ----------- measure 74 --- beat 222 --- time signature 9/16
+
+NOTE 0 3 measure74
+
+; ----------- measure 75 --- beat 225 --- time signature 9/16
+
+NOTE 0 3 measure75
+
+; ----------- measure 76 --- beat 228 --- time signature 9/16
+
+NOTE 0 3 measure76
+
+; ----------- measure 77 --- beat 231 --- time signature 9/16
+
+NOTE 0 3 measure77
+
+; ----------- measure 78 --- beat 234 --- time signature 9/16
+
+NOTE 0 3 measure78
+
+; ----------- measure 79 --- beat 237 --- time signature 9/16
+
+NOTE 0 3 measure79
+
+; ----------- measure 80 --- beat 240 --- time signature 9/16
+
+NOTE 0 3 measure80
+
+; ----------- measure 81 --- beat 243 --- time signature 9/16
+
+NOTE 0 3 measure81
+
+; ----------- measure 82 --- beat 246 --- time signature 9/16
+
+NOTE 0 3 measure82
+
+; ----------- measure 83 --- beat 249 --- time signature 9/16
+
+NOTE 0 3 measure83
+
+; ----------- measure 84 --- beat 252 --- time signature 9/16
+
+NOTE 0 3 measure84

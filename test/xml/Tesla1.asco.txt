@@ -1,0 +1,25 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: Tesla1.xml
+; exported from Sibelius 7.5.1 ~ Direct export, not from Dolet
+; MusicXML version 3.0
+; Converted to Antescofo on Sun Jun  7 12:37:36 2015
+; Credits: Tesla
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+BPM 48 ; ( ← 𝅘𝅥 =48) 
+NOTE G3 0 measure1
+NOTE C#4 0
+NOTE D3 0
+NOTE A#3 0
+CHORD (E4 A4) 3
+NOTE 0 1
+NOTE A#3 2/3
+CHORD (C#4 F#4) 41/49
+CHORD (D4 A4) 3/4
+CHORD (G#4 C#5) 3/4

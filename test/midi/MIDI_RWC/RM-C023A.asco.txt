@@ -1,0 +1,381 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: RM-C023A.MID
+; MIDI file type 1 (multiple tracks)
+; Converted to Antescofo on Thu Jun 11 22:43:42 2015
+
+; start
+BPM 60
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+NOTE 0 5/4 measure1
+CHORD (A3 A4) 1/2
+CHORD (-A3 -A4 C5) 0
+CHORD (-A3 -C5) 2/5
+NOTE -C5 1/12
+CHORD (G4 -C5 E5) 0
+CHORD (-G4 -E5) 0
+CHORD (F4 -E5) 1/5
+NOTE -F4 0
+CHORD (E4 -F4 G4) 0
+CHORD (-E4 -G4) 0
+NOTE -E4 1/10
+NOTE F4 0
+NOTE 0 0
+CHORD (A3 A4) 1/11
+CHORD (-A3 C5) 1/2
+CHORD (-C5 E5) 0
+CHORD (G4 -E5) 0
+CHORD (F4 -E5) 4/9
+NOTE -F4 0
+CHORD (E4 -F4 G4) 1/8
+CHORD (-E4 F4 -G4) 1/12
+CHORD (A3 -E4 -F4 -G4 A4) 0
+CHORD (-A3 B3 -E4 -F4 -G4 -A4) 0
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+BPM 67
+CHORD (-A3 -B3 -A4) 0 measure2
+CHORD (-B3 -A4) 0
+NOTE -B3 2/9
+CHORD (-B3 A4) 0
+CHORD (C4 -A4 B4) 0
+CHORD (-C4 -B4) 1/5
+CHORD (-C4 -B4 C5) 0
+CHORD (-C4 -C5) 0
+CHORD (-C4 G4) 0
+CHORD (-C4 D4 -G4) 0
+CHORD (-D4 -G4) 0
+CHORD (-D4 A4) 0
+NOTE -A4 0
+CHORD (E2 E3 E4) 0
+CHORD (-E2 -E4) 4/5
+BPM 65
+NOTE -E4 0
+CHORD (E3 -E4) 1/10
+NOTE 0 0
+CHORD (E2 F4) 0
+CHORD (-E2 -F4 D5 E6) 0
+CHORD (-E2 -F4 -E6) 0
+CHORD (-E2 -F4 D6 -E6) 0
+CHORD (-E2 -F4 F#4 -D6) 0
+CHORD (-E2 -F#4 D5 A5) 1/14
+CHORD (-E2 -F#4 -A5) 1/2
+CHORD (-E2 -F#4 G4 -A5) 0
+CHORD (-E2 -G4 D5 -A5) 0
+CHORD (-E2 -G4 -A5) 0
+CHORD (-E2 -G4 -A5 B5) 1/12
+CHORD (-E2 -G4 -B5) 0
+CHORD (-E2 -G4 -B5 E6) 0
+CHORD (-E2 F#4 D5 -E6) 0
+CHORD (-E2 -F#4 -E6) 0
+CHORD (-E2 -E6) 0
+CHORD (D6 -E6) 1/14
+NOTE -D6 1/4
+NOTE 0 0
+CHORD (F4 E6) 0
+CHORD (E2 -F4 D5 D6 -E6) 0
+BPM 66
+CHORD (-E2 -F4 -D6 -E6) 0
+CHORD (-E2 -F4 F#4 -D6) 0
+CHORD (-E2 -F#4 A5 -D6) 0
+CHORD (-E2 -F#4 D5 -A5 -D6) 0
+CHORD (-E2 -F#4 -A5) 3/7
+CHORD (-E2 -F#4 D5 -A5) 0
+CHORD (-E2 G4 -D5 -A5) 0
+CHORD (-E2 -G4 -A5) 1/10
+CHORD (-E2 -G4 -A5 B5) 0
+CHORD (-E2 -G4 -B5) 2/7
+
+; ----------- measure 3 --- beat 8 --- time signature 4/4
+
+BPM 65
+CHORD (-E2 -G4 -B5) 1/9 measure3
+CHORD (-E2 F#4 -G4 D5 -B5 E6) 0
+CHORD (-E2 -F#4 -G4 -D5 -E6) 0
+CHORD (-E2 -F#4 -E6) 0
+CHORD (-E2 -E6) 0
+NOTE -E6 0
+CHORD (D6 -E6) 0
+NOTE -D6 1/5
+NOTE 0 1/4
+NOTE F4 0
+CHORD (E2 -F4 E6) 0
+CHORD (-E2 -F4 D5 -E6) 0
+CHORD (-E2 -F4 -D5 D6 -E6) 0
+CHORD (-E2 -F4 -D6 -E6) 1/12
+CHORD (-E2 -F4 -D6) 2/5
+BPM 66
+CHORD (-E2 -F4 F#4 -D6) 0
+CHORD (-E2 -F#4 D5 A5) 0
+CHORD (-E2 -F#4 -A5) 1/8
+CHORD (-E2 G4 C6) 5/9
+CHORD (-E2 -G4 B5 -C6) 0
+CHORD (-E2 -G4 -B5) 0
+BPM 67
+CHORD (-E2 F#4 D5 -B5) 0
+CHORD (-E2 -F#4 -B5) 0
+CHORD (-E2 -B5) 0
+CHORD (-E2 C6) 0
+CHORD (E2 F4 B4 G5) 1/2
+CHORD (-E2 A2 E4 -F4 C5 -G5 A5) 0
+CHORD (-E2 -A2 -E4 -F4 -C5 -A5) 0
+CHORD (-E2 -A2 -E4 -C5 -A5) 0
+CHORD (-A2 -E4 -C5 -A5) 5/11
+BPM 63
+CHORD (-E4 -C5 -A5) 1/12
+CHORD (-C5 -A5) 0
+CHORD (A1 -C5 -A5) 0
+NOTE -A1 2/7
+NOTE 0 0
+NOTE E5 0
+CHORD (D5 -E5) 0
+CHORD (-D5 E5) 1/11
+CHORD (-D5 -E5 F5) 0
+CHORD (-D5 -E5 -F5 G5) 0
+CHORD (D5 -E5 -F5 -G5) 0
+CHORD (-D5 -E5 -F5 -G5 A5) 1/7
+CHORD (C5 -D5 E5 -F5 -G5 -A5) 0
+CHORD (-C5 D5 -E5 -F5 -G5 -A5) 0
+
+; ----------- measure 4 --- beat 12 --- time signature 4/4
+
+BPM 67
+CHORD (-C5 -D5 -E5) 0 measure4
+CHORD (B4 -C5 -D5 E5) 0
+CHORD (-B4 -D5 -E5) 0
+CHORD (-B4 -E5) 0
+CHORD (-B4 -E5 F5) 0
+CHORD (C4 -B4 G5) 0
+CHORD (F3 A4 -G5) 1/9
+CHORD (-F3 -A4 -G5 A5) 1/10
+CHORD (-F3 -A4 -A5) 3/8
+CHORD (-F3 -A4 E5 -A5) 0
+CHORD (-F3 B4 -E5) 0
+CHORD (G3 -B4 -E5) 1/10
+CHORD (-G3 -E5) 0
+CHORD (-G3 D5 -E5) 0
+CHORD (-G3 -D5) 0
+NOTE -D5 1/2
+CHORD (B4 -D5 E5) 0
+CHORD (C3 -B4 -E5) 1/7
+CHORD (-C3 -B4 -E5 F5) 0
+CHORD (-C3 -B4 -F5) 0
+CHORD (-C3 F3 A4 -F5) 0
+CHORD (-C3 -F3 -A4 D5 -F5) 0
+CHORD (-F3 -A4 -D5) 1/9
+CHORD (-A4 -D5) 3/8
+BPM 68
+CHORD (B2 G4 -D5) 1/12
+CHORD (-B2 -G4 -D5 E5) 0
+CHORD (-B2 E3 D4 B4) 0
+CHORD (-E3 -D4 -B4) 0
+CHORD (-E3 -D4 G4 -B4) 0
+CHORD (-E3 -G4 -B4) 0
+CHORD (-E3 -B4) 0
+CHORD (A2 D4 -B4) 1/8
+CHORD (-A2 -D4) 5/11
+CHORD (-A2 -D4 E4) 0
+CHORD (-A2 C#4 -E4) 0
+CHORD (-A2 -C#4 -E4 F#4) 1/9
+BPM 65
+CHORD (-A2 -C#4 -F#4 G4) 0
+CHORD (-A2 -C#4 -G4) 3/5
+CHORD (C4 A4) 0
+NOTE -A4 1/12
+NOTE 0 0
+NOTE B4 1/6
+
+; ----------- measure 5 --- beat 16 --- time signature 4/4
+
+BPM 64
+NOTE -B4 1/12 measure5
+CHORD (C4 A4) 0
+CHORD (D3 -C4 F4 -A4) 0
+CHORD (-D3 -C4 -A4 C5) 0
+CHORD (-D3 -C4 -C5) 0
+CHORD (-D3 B3 F4 E5) 0
+CHORD (-D3 A3 -B3 -E5) 0
+CHORD (-D3 -A3 -E5) 0
+CHORD (-D3 -A3 F4 -E5) 0
+CHORD (-D3 -A3 -F4 D5 -E5) 0
+CHORD (-D3 -A3 -D5 -E5) 0
+CHORD (-D3 -A3 -D5) 0
+CHORD (-D3 -A3 G4 -D5) 0
+CHORD (-D3 -A3 F4 -G4) 0
+CHORD (-D3 -A3 -G4) 1/5
+NOTE B3 1/2
+CHORD (D3 C4 F4 A4) 1/7
+CHORD (-D3 -C4 -A4 C5) 1/14
+CHORD (-D3 B3 F4 E5) 0
+CHORD (-D3 A3 F4 -E5) 0
+CHORD (-D3 -A3 -E5) 0
+CHORD (-D3 -A3 D5 -E5) 0
+CHORD (-D3 -A3 -D5) 0
+CHORD (-D3 -A3 G4) 0
+CHORD (-D3 -A3 F4 -G4) 0
+CHORD (-D3 -A3 -G4) 1/7
+CHORD (-D3 B3 -G4) 0
+CHORD (-B3 -G4) 0
+NOTE -B3 4/9
+BPM 61
+CHORD (D3 C4 F4 A4) 0
+CHORD (-D3 -C4 -A4) 0
+CHORD (-D3 B3 -C4 -A4) 0
+CHORD (-D3 -B3 F4 -A4) 1/11
+CHORD (-D3 -B3 -F4) 0
+CHORD (-D3 -B3 -F4 A4) 0
+CHORD (-D3 A3 F4 -A4 B4) 0
+CHORD (-D3 -A3 -F4 -B4) 0
+CHORD (-D3 -A3 -B4) 0
+CHORD (-D3 -A3 -B4 C5) 0
+CHORD (-D3 -A3 F4 G4 -C5) 0
+CHORD (-D3 -A3 -F4 -G4) 0
+CHORD (-D3 -A3 -G4) 1/10
+CHORD (-D3 B3 -G4) 0
+CHORD (-D3 -B3 -G4 A4) 0
+CHORD (-D3 -B3 -A4) 1/13
+CHORD (-D3 -A4) 1/11
+CHORD (B3 E4) 0
+CHORD (E3 -B3 -E4) 1/2
+BPM 62
+CHORD (E2 -B3 -E4) 0
+CHORD (-E2 -B3) 0
+CHORD (-E2 E3 -B3) 3/7
+CHORD (-E2 -E3 -B3 F4) 0
+CHORD (E2 -E3 -B3 -F4 E6) 0
+
+; ----------- measure 6 --- beat 20 --- time signature 4/4
+
+BPM 67
+CHORD (-E2 -F4 D5 -E6) 0 measure6
+CHORD (-E2 -F4 -D5 -E6) 0
+CHORD (-E2 -F4 -E6) 0
+CHORD (-E2 -F4 -E6) 0
+CHORD (-E2 -F4 D6 -E6) 0
+CHORD (-E2 -F4 -D6) 3/7
+CHORD (-E2 G4 D5 A5) 1/12
+CHORD (-E2 -G4 -A5) 1/10
+CHORD (-E2 -G4 -A5 B5) 1/12
+CHORD (-E2 -G4 -B5) 0
+CHORD (-E2 F#4 E6) 0
+CHORD (-E2 -E6) 0
+NOTE -E6 1/8
+CHORD (D6 -E6) 0
+BPM 66
+NOTE -D6 1/6
+CHORD (E2 F4 D5 E6) 1/10
+CHORD (-E2 -F4 D6 -E6) 1/14
+CHORD (-E2 -F4 -D6) 4/9
+CHORD (-E2 F#4 D5 A5) 0
+CHORD (-E2 -F#4 -A5) 0
+CHORD (-E2 G4 D5 -A5) 0
+CHORD (-E2 -G4 -A5) 1/6
+BPM 64
+CHORD (-E2 -G4 -A5 B5) 1/13
+CHORD (-E2 -G4 -B5) 2/5
+CHORD (-E2 -G4 D5 -B5) 0
+CHORD (-E2 F#4 -D5 -B5 E6) 0
+CHORD (-E2 -F#4 -D5 -E6) 0
+CHORD (-E2 -F#4 -E6) 0
+CHORD (-E2 -E6) 0
+CHORD (D6 -E6) 0
+NOTE -D6 1/5
+NOTE 0 0
+CHORD (F4 D5 E6) 0
+CHORD (E2 -F4 -D5 -E6) 0
+CHORD (-E2 -F4 -E6) 0
+CHORD (-E2 -F4 D6 -E6) 1/10
+BPM 68
+CHORD (-E2 -F4 -D6) 0
+CHORD (-E2 F#4 D5 A5) 0
+CHORD (-E2 -F#4 -A5) 0
+CHORD (-E2 -F#4 -A5 B5) 1/9
+CHORD (-E2 -F#4 G4 -B5 C6) 0
+CHORD (-E2 -G4 D5 -C6) 0
+CHORD (-E2 F#4 D5 B5) 0
+CHORD (-E2 -B5) 1/9
+NOTE 0 0
+CHORD (F4 B4 G5) 3/5
+CHORD (E2 -F4 -B4 -G5) 0
+
+; ----------- measure 7 --- beat 24 --- time signature 4/4
+
+CHORD (-E2 -F4 -B4 -G5) 9/10 measure7
+CHORD (A1 E4 C5 -G5 A5) 0
+CHORD (-A1 -E4 -C5 -A5) 0
+CHORD (-A1 -A5) 0
+BPM 67
+
+; ----------- measure 8 --- beat 28 --- time signature 4/4
+
+BPM 68
+NOTE 0 4 ; empty measure
+
+; ----------- measure 9 --- beat 32 --- time signature 4/4
+
+BPM 63
+NOTE 0 4 ; empty measure
+
+; ----------- measure 10 --- beat 36 --- time signature 4/4
+
+BPM 70
+NOTE 0 4 ; empty measure
+
+; ----------- measure 11 --- beat 40 --- time signature 4/4
+
+BPM 71
+NOTE 0 4 ; empty measure
+
+; ----------- measure 12 --- beat 44 --- time signature 4/4
+
+BPM 69
+NOTE 0 4 ; empty measure
+
+; ----------- measure 13 --- beat 48 --- time signature 4/4
+
+BPM 68
+NOTE 0 4 ; empty measure
+
+; ----------- measure 14 --- beat 52 --- time signature 4/4
+
+BPM 68
+NOTE 0 4 ; empty measure
+
+; ----------- measure 15 --- beat 56 --- time signature 4/4
+
+BPM 66
+NOTE 0 4 ; empty measure
+
+; ----------- measure 16 --- beat 60 --- time signature 4/4
+
+BPM 67
+NOTE 0 4 ; empty measure
+
+; ----------- measure 17 --- beat 64 --- time signature 4/4
+
+BPM 67
+NOTE 0 4 ; empty measure
+
+; ----------- measure 18 --- beat 68 --- time signature 4/4
+
+BPM 66
+NOTE 0 4 ; empty measure
+
+; ----------- measure 19 --- beat 72 --- time signature 4/4
+
+BPM 68
+NOTE 0 4 ; empty measure
+
+; ----------- measure 20 --- beat 76 --- time signature 4/4
+
+BPM 65
+NOTE 0 4 ; empty measure
+
+; ----------- measure 21 --- beat 80 --- time signature 4/4
+
+BPM 54

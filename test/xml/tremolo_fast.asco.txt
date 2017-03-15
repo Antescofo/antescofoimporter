@@ -1,0 +1,56 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: tremolo_fast.xml
+; exported from Sibelius 7.5.1 ~ Direct export, not from Dolet
+; MusicXML version 3.0
+; Converted to Antescofo on Sun Jun  7 20:00:15 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+NOTE 0 1 measure1
+TRILL (F#4) 1/6
+TRILL (A4) 1/6
+TRILL (A#4) 1/6
+TRILL (G4) 1/6
+TRILL (F#5) 1/6
+TRILL (G4) 1/6
+NOTE D5 1/8
+NOTE C#5 1/8
+NOTE D5 1/8
+NOTE G#5 1/8
+NOTE F5 1/8
+NOTE G4 1/8
+NOTE F#4 1/8
+NOTE C#4 1/8
+NOTE G3 1/8
+NOTE A#3 1/8
+NOTE D#4 1/8
+NOTE B4 1/8
+NOTE D4 1/8
+NOTE G#3 1/8
+NOTE F3 1/8
+NOTE G3 1/8
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+TRILL ((C4 G4)) 1 measure2
+NOTE B4 1/8
+NOTE G4 1/8
+NOTE D#4 1/8
+NOTE F4 1/8
+NOTE F4 1/8
+NOTE G3 1/8
+NOTE C#3 1/8
+NOTE C3 1/8
+NOTE F#3 1/8
+NOTE D4 1/8
+NOTE G#4 1/8
+NOTE G5 1/8
+NOTE D6 1/8
+NOTE A5 1/8
+NOTE C#5 1/8
+NOTE G#4 1/8

@@ -1,0 +1,39 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: Sib_HarmoTremolo.xml
+; exported from Sibelius 7.5.0 ~ Direct export, not from Dolet
+; MusicXML version 3.0
+; Converted to Antescofo on Tue Jun 16 10:22:07 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 7/4
+
+NOTE 0 1 measure1
+NOTE A4 1/4
+NOTE C5 1/12
+NOTE A4 1/4
+NOTE C5 1/12
+NOTE A4 1/4
+NOTE C5 1/12
+NOTE A4 1/4
+NOTE C5 1/12
+NOTE A4 1/4
+NOTE C5 1/12
+NOTE A4 1/4
+NOTE C5 1/12
+NOTE C7 1/4 ; harmonics
+NOTE G#6 1/12 ; harmonics
+NOTE C7 1/4 ; harmonics
+NOTE G#6 1/12 ; harmonics
+NOTE C7 1/4 ; harmonics
+NOTE G#6 1/12 ; harmonics
+NOTE C7 1/4 ; harmonics
+NOTE G#6 1/12 ; harmonics
+NOTE C7 1/4 ; harmonics
+NOTE G#6 1/12 ; harmonics
+NOTE C7 1/4 ; harmonics
+NOTE G#6 1/12 ; harmonics
+TRILL (C7 G#6) 2 ; harmonics

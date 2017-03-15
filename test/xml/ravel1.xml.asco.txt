@@ -1,0 +1,20 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud.
+
+; Original file: ravel1.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0.
+; Converted to Antescofo on Sat May 16 01:42:51 2015
+
+
+; ----------- measure 1 --- beat 0 --- time signature 3/4
+
+CHORD (3300 4500) 0
+CHORD (-3300 -4500 5700) 3/2
+CHORD (4300 4500) 0
+CHORD (-4300 -4500 5500 5700) 1/2
+CHORD (4000 4300 4500 5200) 0
+CHORD (-4000 -4300 -4500 -5200 5500 5700) 1/2
+CHORD (3800 4000 4300 4500 5000 5200) 0
+CHORD (-3800 -4000 -4300 -4500 -5000 -5200 5500 5700) 1/2

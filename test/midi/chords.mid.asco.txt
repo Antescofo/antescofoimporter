@@ -1,0 +1,41 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud.
+
+; Original file: chords.mid
+; Converted to Antescofo on Tue May 19 00:34:58 2015
+
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+CHORD (6000 7200) 2
+CHORD (6300 7500) 2
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+CHORD (6700 7900) 3/2
+CHORD (6500 7700) 1/2
+CHORD (6300 7500) 1
+CHORD (6200 7400) 1
+
+; ----------- measure 3 --- beat 8 --- time signature 4/4
+
+CHORD (6000 7200) 1
+NOTE 0 1/2
+CHORD (5500 6700) 1/2
+CHORD (6000 7200) 1
+NOTE 0 1/2
+CHORD (5500 6700) 1/2
+
+; ----------- measure 4 --- beat 12 --- time signature 4/4
+
+CHORD (6000 7200) 1
+NOTE 0 3
+
+; ----------- measure 5 --- beat 16 --- time signature 4/4
+
+NOTE 6200 2
+NOTE 6500 2
+
+; ----------- measure 6 --- beat 20 --- time signature 4/4
+

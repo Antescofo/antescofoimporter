@@ -1,0 +1,32 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: layers1.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0
+; Converted to Antescofo on Sun Jun  7 17:52:35 2015
+; Credits: Grace Notes with Chords
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+NOTE 0 1/2 measure1
+NOTE C3 1/2
+CHORD (-C3 E3) 1/2
+CHORD (-C3 -E3 G3) 1/2
+CHORD (-C3 -E3 -G3 C4) 1/2
+CHORD (-C3 -E3 -G3 -C4 E4) 1/2
+CHORD (-C3 -E3 -G3 -C4 -E4 G4) 1/2
+CHORD (-C3 -E3 -G3 -C4 -E4 -G4 C5) 1/2
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+CHORD (-C3 -E3 -G3 -C4 -E4 -G4 -C5 E5) 1/2 measure2
+CHORD (-E3 -G3 -C4 -E4 -G4 -C5 -E5) 1/2
+CHORD (-G3 -C4 -E4 -G4 -C5 -E5) 1/2
+CHORD (-C4 -E4 -G4 -C5 -E5) 1
+CHORD (-E4 -G4 -C5 -E5) 1/2
+CHORD (-C5 -E5) 1/2
+NOTE -E5 1/2

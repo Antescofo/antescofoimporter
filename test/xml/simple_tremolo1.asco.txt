@@ -1,0 +1,26 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: simple_tremolo1.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0
+; Converted to Antescofo on Sun Jun  7 19:03:08 2015
+; Credits: Simple Tremolos
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 6/4
+
+BPM 60 ; ( ← 𝅘𝅥 =60) 
+TRILL (A4 B4) 1 measure1
+NOTE 0 1
+TRILL ((C5 E5) (D5 E5 F5)) 2
+NOTE C5 1
+NOTE E5 1
+
+; ----------- measure 2 --- beat 6 --- time signature 6/4
+
+NOTE C5 1 measure2
+NOTE A4 1
+NOTE 0 4

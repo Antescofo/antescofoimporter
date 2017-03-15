@@ -1,0 +1,15 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: #950_sib_multigliss.xml
+; exported from Sibelius 7.5.1 ~ Dolet 6.4 for Sibelius
+; MusicXML version 3.0
+; Converted to Antescofo on Wed Jun 17 18:20:14 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 6/4
+
+MULTI ((A#3 F#4 F5)' -> (F#4 F5 C3 F4 C#5 C6)') 4 measure1
+TRILL ((C3 F4 C#5 C6)) 2

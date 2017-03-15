@@ -1,0 +1,56 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud.
+
+; Original file: long_changing_trill.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0.
+; Converted to Antescofo on Sat May 23 19:29:29 2015
+; Credits: Long Changing Trill
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+NOTE 0 1 measure1
+TRILL (A4 B4) 3
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+TRILL (A4 B4) 1 measure2
+TRILL (B4 C#5) 3
+
+; ----------- measure 3 --- beat 8 --- time signature 3/4
+
+TRILL (C#5 D5) 3 measure3
+
+; ----------- measure 4 --- beat 11 --- time signature 4/4
+
+TRILL (C#5 D5) 1 measure4
+TRILL (D5 E5) 1
+TRILL (E5 F#5) 2
+
+; ----------- measure 5 --- beat 15 --- time signature 4/4
+
+TRILL (F#5 G5) 2 measure5
+TRILL (G5 A5) 2
+
+; ----------- measure 6 --- beat 19 --- time signature 4/4
+
+TRILL (A5 B5) 3 measure6
+TRILL (G5 A5) 1
+
+; ----------- measure 7 --- beat 23 --- time signature 4/4
+
+TRILL (F#5 G5) 1 measure7
+TRILL (E5 F#5) 1
+TRILL (D5 E5) 2
+
+; ----------- measure 8 --- beat 27 --- time signature 4/4
+
+TRILL (C5 D5) 2 measure8
+TRILL (A#4 C5) 2
+
+; ----------- measure 9 --- beat 31 --- time signature 4/4
+
+TRILL (A4 A#4) 4 measure9

@@ -1,0 +1,105 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud.
+
+; Original file: chromatic.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0.
+; Converted to Antescofo on Tue May 19 22:37:28 2015
+
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+NOTE A0 1/8
+NOTE A#0 1/8
+NOTE B0 1/8
+NOTE C1 1/8
+NOTE C#1 1/8
+NOTE D1 1/8
+NOTE D#1 1/8
+NOTE E1 1/8
+NOTE F1 1/8
+NOTE F#1 1/8
+NOTE G1 1/8
+NOTE G#1 1/8
+NOTE A1 1/8
+NOTE A#1 1/8
+NOTE B1 1/8
+NOTE C2 1/8
+NOTE C#2 1/8
+NOTE D2 1/8
+NOTE D#2 1/8
+NOTE E2 1/8
+NOTE F2 1/8
+NOTE F#2 1/8
+NOTE G2 1/8
+NOTE G#2 1/8
+NOTE A2 1/8
+NOTE A#2 1/8
+NOTE B2 1/8
+NOTE C3 1/8
+NOTE C#3 1/8
+NOTE D3 1/8
+NOTE D#3 1/8
+NOTE E3 1/8
+
+; ----------- measure 2 --- beat 4
+
+NOTE F3 1/8
+NOTE F#3 1/8
+NOTE G3 1/8
+NOTE G#3 1/8
+NOTE A3 1/8
+NOTE A#3 1/8
+NOTE B3 1/8
+NOTE C4 1/8
+NOTE C#4 1/8
+NOTE D4 1/8
+NOTE D#4 1/8
+NOTE E4 1/8
+NOTE F4 1/8
+NOTE F#4 1/8
+NOTE G4 1/8
+NOTE G#4 1/8
+NOTE A4 1/8
+NOTE A#4 1/8
+NOTE B4 1/8
+NOTE C5 1/8
+NOTE C#5 1/8
+NOTE D5 1/8
+NOTE D#5 1/8
+NOTE E5 1/8
+NOTE F5 1/8
+NOTE F#5 1/8
+NOTE G5 1/8
+NOTE G#5 1/8
+NOTE A5 1/8
+NOTE A#5 1/8
+NOTE B5 1/8
+NOTE C6 1/8
+
+; ----------- measure 3 --- beat 8
+
+NOTE C#6 1/8
+NOTE D6 1/8
+NOTE D#6 1/8
+NOTE E6 1/8
+NOTE F6 1/8
+NOTE F#6 1/8
+NOTE G6 1/8
+NOTE G#6 1/8
+NOTE A6 1/8
+NOTE A#6 1/8
+NOTE B6 1/8
+NOTE C7 1/8
+NOTE C#7 1/8
+NOTE D7 1/8
+NOTE D#7 1/8
+NOTE E7 1/8
+NOTE F7 1/8
+NOTE F#7 1/8
+NOTE G7 1/8
+NOTE G#7 1/8
+NOTE A7 1/8
+NOTE C-1 3/8
+NOTE C-1 1

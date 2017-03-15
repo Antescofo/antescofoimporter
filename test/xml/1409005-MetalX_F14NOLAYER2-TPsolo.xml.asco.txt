@@ -1,0 +1,2013 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud.
+
+; Original file: 1409005-MetalX_F14NOLAYER2-TPsolo.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0.
+; Converted to Antescofo on Wed May 13 09:38:07 2015
+
+
+; ----------- measure 3 --- beat 0
+
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 0 2
+NOTE 0 1/4
+NOTE 6900 1/4
+NOTE 0 1/2
+
+; ----------- measure 4 --- beat 4
+
+NOTE 0 1/2
+NOTE 6900 7/2
+
+; ----------- measure 5 --- beat 8
+
+NOTE -6900 3
+NOTE 6700 1/4
+NOTE 0 3/4
+
+; ----------- measure 6 --- beat 12
+
+NOTE 0 2
+NOTE 0 1
+
+; ----------- measure 7 --- beat 15
+
+NOTE 0 1/9
+NOTE 6900 1/9
+NOTE 6900 1/9
+NOTE 6900 1/9
+NOTE 6900 1/9
+NOTE 6900 1/9
+NOTE 6900 1/9
+NOTE 6900 1/9
+NOTE 6900 1/9
+NOTE 0 1/2
+NOTE 6900 1/4
+NOTE 0 3/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+
+; ----------- measure 8 --- beat 19
+
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 3/2
+
+; ----------- measure 9 --- beat 23
+
+NOTE -6900 1
+NOTE -6900 2
+NOTE 0 1/4
+NOTE 6900 1/4
+NOTE 0 1/4
+NOTE 7900 1/4
+
+; ----------- measure 10 --- beat 27
+
+NOTE 0 1/2
+NOTE 6900 1/4
+NOTE 0 11/12
+NOTE 6600 0
+NOTE 6900 7/9
+NOTE -6900 0.148438
+NOTE 6900 0.148438
+NOTE 6900 0.147461
+NOTE 6900 0.361328
+NOTE 6900 3/4
+
+; ----------- measure 11 --- beat 31
+
+NOTE -6900 1/4
+NOTE 6600 0
+NOTE 6900 1/4
+NOTE 0 1/4
+NOTE 6900 1
+NOTE 6500 0
+NOTE 6600 0
+NOTE 6900 5/4
+NOTE 0 1/2
+NOTE 6900 1/2
+
+; ----------- measure 12 --- beat 35
+
+NOTE -6900 17/8
+NOTE 6600 1/8
+NOTE 0 3/4
+NOTE 7900 1/6
+NOTE 0 1/6
+NOTE 8300 1/6
+NOTE 0 1/2
+
+; ----------- measure 13 --- beat 39
+
+NOTE 0 1/2
+NOTE 6900 1/4
+NOTE 0 5/4
+NOTE 0 1/4
+NOTE 6900 1/4
+NOTE 0 1/2
+NOTE 7900 1/6
+NOTE 7300 1/6
+NOTE 7200 1/6
+NOTE 6600 1/2
+
+; ----------- measure 14 --- beat 43
+
+NOTE 0 1/4
+NOTE 6900 1/4
+NOTE 0 3/4
+NOTE 5600 1/4
+NOTE 0 1/2
+NOTE 6600 1/6
+NOTE 6900 1/6
+NOTE 0 2/3
+NOTE 6900 1
+NOTE 6600 0
+
+; ----------- measure 15 --- beat 47
+
+NOTE 6900 1/4
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/4
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/4
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/8
+NOTE 6900 1/4
+NOTE 6900 1/10
+NOTE 6900 1/10
+NOTE 6900 1/10
+NOTE 6900 1/10
+NOTE 6900 11/10
+
+; ----------- measure 16 --- beat 51
+
+NOTE -6900 2/3
+NOTE 6600 1/6
+NOTE 6900 1/6
+NOTE 7600 1/6
+NOTE 7900 1/6
+NOTE 7500 1/6
+NOTE 0 1
+NOTE 7900 1/6
+NOTE 6600 1/6
+NOTE 7600 7/6
+
+; ----------- measure 17 --- beat 55
+
+NOTE -7600 1
+NOTE 7600 1/6
+NOTE 7900 1/6
+NOTE 7500 1/6
+NOTE 0 3/5
+NOTE 6600 1/10
+NOTE 6600 1/10
+NOTE 6600 1/10
+NOTE 6600 1/10
+NOTE 6900 1/2
+NOTE 0 1/4
+NOTE 6600 1/4
+NOTE 0 1/2
+
+; ----------- measure 18 --- beat 59
+
+NOTE 0 1/4
+NOTE 6600 0
+NOTE 6900 1/4
+NOTE 0 3/8
+NOTE 6900 1/8
+NOTE 0 1
+NOTE 7900 1/8
+NOTE 7600 1/8
+NOTE 0 1/8
+NOTE 6900 1/8
+NOTE 0 1/8
+NOTE 6600 1/8
+NOTE 0 1/4
+NOTE 7500 1/8
+NOTE 7700 1/8
+NOTE 8300 1/8
+NOTE 0 1/8
+
+; ----------- measure 19 --- beat 62.5
+
+NOTE 0 1/2
+NOTE 6900 1/4
+NOTE 0 1/4
+NOTE 7500 1/8
+NOTE 7700 1/8
+NOTE 8300 1/8
+NOTE 0 5/8
+NOTE 6900 0
+NOTE 0 1/2
+NOTE 6900 1/8
+NOTE 8300 11/8
+
+; ----------- measure 20 --- beat 66.5
+
+NOTE -8300 3/8
+NOTE 6900 1/8
+NOTE 8300 1
+NOTE 6600 1/4
+NOTE 0 1/4
+NOTE 7700 1/8
+NOTE 8300 1
+NOTE 7700 1/8
+NOTE 0 3/4
+
+; ----------- measure 21 --- beat 70.5
+
+NOTE 7700 2/5
+NOTE 7600 1/5
+NOTE 0 1/5
+NOTE 6900 1/5
+NOTE 0 1/5
+NOTE 6600 1/5
+NOTE 0 1/5
+NOTE 5600 1/5
+NOTE 0 7/10
+NOTE 6900 1/4
+NOTE 0 5/4
+
+; ----------- measure 22 --- beat 74.5
+
+NOTE 0 1/4
+NOTE 6900 1/4
+NOTE 0 5/8
+NOTE 7600 1/8
+NOTE 7900 1/8
+NOTE 0 1/8
+NOTE 6600 1/4
+NOTE 7500 1/8
+NOTE 7700 1/8
+NOTE 8300 1/4
+NOTE 0 0.349609
+NOTE 6600 1/10
+NOTE 6600 1/10
+NOTE 6600 1/10
+NOTE 6600 1/10
+NOTE 6900 1/4
+NOTE 0 1/4
+
+; ----------- measure 23 --- beat 78
+
+NOTE 0 1/2
+NOTE 6900 1/4
+NOTE 0 5/4
+NOTE 0 1/2
+NOTE 6900 3/2
+
+; ----------- measure 24 --- beat 82
+
+NOTE -6900 4
+
+; ----------- measure 25 --- beat 86
+
+NOTE -6900 4
+
+; ----------- measure 26 --- beat 90
+
+NOTE -6900 4
+
+; ----------- measure 27 --- beat 94
+
+NOTE -6900 1
+NOTE 0 7/4
+NOTE 6900 1/8
+NOTE 7500 1/8
+NOTE 0 1/2
+NOTE 5800 0
+NOTE 6100 1/2
+
+; ----------- measure 28 --- beat 98
+
+NOTE -6100 1/4
+NOTE 6900 1/4
+NOTE 0 1/4
+NOTE 7500 1/4
+NOTE 0 1/4
+NOTE 7600 1/8
+NOTE 7600 1/8
+NOTE 7600 1/8
+NOTE 7600 1/8
+NOTE 7900 1/8
+NOTE 0 3/8
+NOTE 7500 1/4
+NOTE 0 1/4
+NOTE 6600 1/4
+NOTE 0 1/2
+NOTE 6900 1/4
+NOTE 0 1/4
+
+; ----------- measure 29 --- beat 102
+
+NOTE 0 1/3
+NOTE 6600 1/3
+NOTE 6900 1/3
+NOTE 0 1/3
+NOTE 6600 1/3
+NOTE 0 7/12
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7600 1/8
+NOTE 7600 1/8
+NOTE 7600 1/8
+NOTE 7900 1/8
+NOTE 7900 1/8
+NOTE 8000 1/8
+NOTE 0 1/2
+
+; ----------- measure 30 --- beat 106
+
+NOTE 7900 1/3
+NOTE 6600 1/6
+NOTE 7600 1/6
+NOTE 0 1/3
+NOTE 8000 1/9
+NOTE 7900 1/9
+NOTE 7600 1/9
+NOTE 7400 1/9
+NOTE 7100 1/9
+NOTE 7000 1/9
+NOTE 6900 1/9
+NOTE 7500 1/9
+NOTE 7500 1/9
+NOTE 0 1/3
+NOTE 7600 1/3
+NOTE 7900 1/3
+
+; ----------- measure 31 --- beat 109
+
+NOTE 0 1/3
+NOTE 8000 1/9
+NOTE 7900 1/9
+NOTE 7600 1/9
+NOTE 7400 1/9
+NOTE 7100 1/9
+NOTE 7000 1/9
+NOTE 6900 1/3
+NOTE 8000 1/9
+NOTE 7900 1/9
+NOTE 7600 1/9
+NOTE 7400 1/9
+NOTE 7100 1/9
+NOTE 7000 1/9
+NOTE 6900 1/9
+NOTE 6800 1/9
+NOTE 6500 1/9
+NOTE 0 1/3
+NOTE 7600 1/6
+NOTE 8000 1/6
+
+; ----------- measure 32 --- beat 112
+
+NOTE 0 1/3
+NOTE 8000 1/9
+NOTE 7900 1/9
+NOTE 7600 1/9
+NOTE 7400 1/9
+NOTE 7100 1/9
+NOTE 7000 1/9
+NOTE 6900 1/8
+NOTE 6800 1/8
+NOTE 6500 5/4
+NOTE 7600 1/2
+
+; ----------- measure 33 --- beat 115
+
+NOTE -7600 2/3
+NOTE 8000 4/3
+NOTE -8000 2/5
+NOTE 7800 1/5
+NOTE 7500 1/5
+NOTE 7400 6/5
+
+; ----------- measure 34 --- beat 119
+
+NOTE -7400 1
+NOTE -7400 3
+
+; ----------- measure 35 --- beat 123
+
+NOTE -7400 13/4
+NOTE 7400 3/4
+
+; ----------- measure 36 --- beat 127
+
+NOTE 7500 3/8
+NOTE 6900 1/8
+NOTE 7500 1/4
+NOTE 0 3/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 0 1/4
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/4
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/4
+NOTE 0 1/4
+NOTE 6900 1/4
+
+; ----------- measure 37 --- beat 131
+
+NOTE 0 1/4
+NOTE 7600 1/8
+NOTE 7600 1/8
+NOTE 7600 1/8
+NOTE 7600 1/8
+NOTE 7500 1/4
+NOTE 0 1/4
+NOTE 7900 1/4
+NOTE 0 1/2
+NOTE 6600 1/4
+NOTE 7900 1/8
+NOTE 7600 1/8
+NOTE 8000 1/8
+NOTE 7900 1/8
+NOTE 7600 1/8
+NOTE 7400 1/8
+NOTE 7600 1/8
+NOTE 7900 1/8
+NOTE 8000 1/4
+NOTE 6600 1/4
+NOTE 7600 1/8
+NOTE 7900 1/8
+
+; ----------- measure 38 --- beat 135
+
+NOTE 8000 1/4
+NOTE 0 3/4
+NOTE 0 1/8
+NOTE 6100 1/8
+NOTE 6200 1/8
+NOTE 6100 1/8
+NOTE 6200 1/8
+NOTE 5800 1/8
+NOTE 6100 1/8
+NOTE 6200 1/8
+NOTE 6400 1/8
+NOTE 6200 1/8
+NOTE 6400 1/8
+NOTE 7100 1/8
+NOTE 7500 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+
+; ----------- measure 39 --- beat 138
+
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/2
+NOTE 0 1
+
+; ----------- measure 40 --- beat 141
+
+NOTE 5800 1/2
+NOTE 6400 1/2
+NOTE 7100 1/2
+NOTE 7700 1/4
+NOTE 0 3/8
+NOTE 7100 1/8
+NOTE 7500 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+
+; ----------- measure 41 --- beat 144
+
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+NOTE 7100 1/8
+NOTE 7200 1/8
+
+; ----------- measure 42 --- beat 147
+
+NOTE 7100 1/8
+NOTE 0 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+
+; ----------- measure 43 --- beat 150
+
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1/8
+NOTE 7100 1
+
+; ----------- measure 44 --- beat 153
+
+NOTE -7100 3
+
+; ----------- measure 45 --- beat 156
+
+NOTE 0 10/9
+NOTE 7200 1/9
+NOTE 7400 1/9
+NOTE 7200 1/9
+NOTE 7400 1/9
+NOTE 7500 1/9
+NOTE 7100 1/9
+NOTE 7300 1/9
+NOTE 7600 1/9
+NOTE 7400 1/10
+NOTE 7500 1/10
+NOTE 7700 1/10
+NOTE 7600 1/10
+NOTE 7900 1/10
+NOTE 7600 1/10
+NOTE 7900 1/10
+NOTE 8000 1/10
+NOTE 7800 1/10
+NOTE 7700 1/10
+
+; ----------- measure 46 --- beat 159
+
+NOTE 0 2/3
+NOTE 7400 1/9
+NOTE 7600 1/9
+NOTE 7800 1/9
+NOTE 7900 1/9
+NOTE 7700 1/9
+NOTE 7600 1/9
+NOTE 7400 1/9
+NOTE 7300 1/9
+NOTE 7500 1/9
+NOTE 7600 1/9
+NOTE 7400 1/9
+NOTE 7600 1/9
+NOTE 7400 1/9
+NOTE 7300 1/9
+NOTE 7100 1/9
+NOTE 6900 1/9
+NOTE 6800 1/9
+NOTE 6600 1/9
+NOTE 7200 1/9
+NOTE 7000 1/9
+NOTE 6800 1/9
+
+; ----------- measure 47 --- beat 162
+
+NOTE 6700 1/4
+NOTE 0 3/8
+NOTE 6600 1/8
+NOTE 6600 1/8
+NOTE 6600 1/8
+NOTE 6600 1/8
+NOTE 6500 1/8
+NOTE 6400 1/8
+NOTE 6500 1/8
+NOTE 6600 1/8
+NOTE 6400 1/8
+NOTE 6700 1/8
+NOTE 6600 1/8
+NOTE 7400 1/8
+NOTE 0 1/8
+NOTE 7100 1/8
+NOTE 7400 1/8
+
+; ----------- measure 48 --- beat 164.5
+
+NOTE 8200 1/6
+NOTE 0 1/2
+NOTE 7900 1/6
+NOTE 0 1/2
+NOTE 8200 1/6
+NOTE 0 1/2
+
+; ----------- measure 49 --- beat 166.5
+
+NOTE 7900 1/3
+NOTE 0 1/3
+NOTE 7700 1/9
+NOTE 7100 1/9
+NOTE 7700 1/9
+NOTE 7000 1/4
+NOTE 0 1/4
+NOTE 7900 1/4
+NOTE 0 1/4
+
+; ----------- measure 50 --- beat 168.5
+
+NOTE 7100 2/3
+NOTE 5600 2/3
+NOTE 6900 2/3
+
+; ----------- measure 51 --- beat 170.5
+
+NOTE 6600 1/2
+NOTE 7700 1/2
+NOTE 7100 2/5
+NOTE 7600 2/5
+NOTE 7700 2/5
+NOTE 7100 2/5
+NOTE 8400 2/5
+
+; ----------- measure 52 --- beat 173.5
+
+NOTE 0 1/3
+NOTE 7100 1/3
+NOTE 0 1/3
+NOTE 8400 1/3
+NOTE 0 1/3
+NOTE 7100 1/3
+NOTE 0 1/3
+NOTE 8400 1/3
+NOTE 0 1/3
+
+; ----------- measure 53 --- beat 176.5
+
+NOTE 0 2
+NOTE 6900 1/10
+NOTE 7100 1/10
+NOTE 7400 1/10
+NOTE 7500 1/10
+NOTE 7700 1/10
+NOTE 7800 1/10
+NOTE 8000 1/10
+NOTE 8100 1/10
+NOTE 8300 1/10
+NOTE 8400 1/10
+
+; ----------- measure 54 --- beat 179.5
+
+NOTE 8500 1/4
+NOTE 0 3/4
+NOTE 0 3
+
+; ----------- measure 55 --- beat 183.5
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 56 --- beat 187.5
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 57 --- beat 191.5
+
+NOTE 0 2
+NOTE 7100 2
+
+; ----------- measure 58 --- beat 195.5
+
+NOTE -7100 4
+
+; ----------- measure 59 --- beat 199.5
+
+NOTE -7100 11/3
+NOTE 7200 1/3
+
+; ----------- measure 60 --- beat 203.5
+
+NOTE -7200 4
+
+; ----------- measure 61 --- beat 207.5
+
+NOTE -7200 1
+NOTE 0 1/5
+NOTE 7100 1/5
+NOTE 7200 1/5
+NOTE 7400 1/5
+NOTE 7500 11/5
+
+; ----------- measure 62 --- beat 211.5
+
+NOTE -7500 3/2
+NOTE -7500 3/2
+NOTE 0 1/6
+NOTE 7500 1/6
+NOTE 7400 1/6
+NOTE 7200 1/6
+NOTE 7100 1/3
+
+; ----------- measure 63 --- beat 215.5
+
+NOTE -7100 3/2
+NOTE 7400 3/2
+NOTE 7000 1/5
+NOTE 7400 1/5
+NOTE 7000 1/5
+NOTE 7400 1/5
+NOTE 7000 1/5
+
+; ----------- measure 64 --- beat 219.5
+
+NOTE 7400 1/6
+NOTE 7000 1/6
+NOTE 7400 1/6
+NOTE 7000 1/6
+NOTE 7400 1/6
+NOTE 7000 1/6
+NOTE 7400 1/5
+NOTE 7000 1/5
+NOTE 7400 1/5
+NOTE 7000 1/5
+NOTE 7400 1/5
+NOTE 7000 1/3
+NOTE 7400 1/3
+NOTE 7000 1/3
+NOTE 7400 2/3
+NOTE 7000 1/3
+
+; ----------- measure 65 --- beat 223.5
+
+NOTE -7000 1/4
+NOTE 0 1/4
+NOTE 7400 1/6
+NOTE 7200 1/6
+NOTE 7000 1/6
+NOTE 6900 3
+
+; ----------- measure 66 --- beat 227.5
+
+NOTE -6900 1
+NOTE -6900 2
+NOTE 0 1/6
+NOTE 6900 1/6
+NOTE 7000 1/6
+NOTE 7200 1/6
+NOTE 7300 1/6
+NOTE 7900 1/6
+
+; ----------- measure 67 --- beat 231.5
+
+NOTE -7900 5/2
+NOTE 7600 1/6
+NOTE 6600 4/3
+
+; ----------- measure 68 --- beat 235.5
+
+NOTE -6600 1/2
+NOTE 7600 1/2
+NOTE 7900 3/4
+NOTE 7600 5/4
+NOTE -7600 1
+
+; ----------- measure 69 --- beat 239.5
+
+NOTE 0 1/2
+NOTE 7600 3/2
+NOTE -7600 1/4
+NOTE 0 1/4
+NOTE 6600 1/2
+
+; ----------- measure 70 --- beat 242.5
+
+NOTE 7900 2/5
+NOTE 7600 2/5
+NOTE 6900 2/5
+NOTE 6600 2/5
+NOTE 7500 7/5
+NOTE -7500 3/4
+NOTE 7700 1/4
+
+; ----------- measure 71 --- beat 246.5
+
+NOTE -7700 2
+NOTE 0 1
+
+; ----------- measure 72 --- beat 249.5
+
+NOTE 0 1/5
+NOTE 7200 3/5
+NOTE 0 1/5
+NOTE 6600 3/5
+NOTE 0 1/5
+NOTE 5800 3/5
+NOTE 5900 0
+NOTE 0 1/5
+NOTE 7600 3/5
+NOTE 0 1/5
+NOTE 6800 3/5
+
+; ----------- measure 73 --- beat 253.5
+
+NOTE -6800 1
+NOTE 6900 1/6
+NOTE 6800 1/6
+NOTE 6900 1/6
+NOTE 6800 1/6
+NOTE 6900 1/6
+NOTE 6800 1/6
+NOTE 6900 1/6
+NOTE 6800 1/6
+NOTE 6900 1/6
+NOTE 6800 1/6
+NOTE 6900 1/6
+NOTE 6800 1/6
+NOTE 6900 1
+
+; ----------- measure 74 --- beat 257.5
+
+NOTE -6900 1
+NOTE 0 1/4
+NOTE 6600 7/4
+NOTE -6600 1/4
+NOTE 0 1/4
+NOTE 5800 1/2
+
+; ----------- measure 75 --- beat 261.5
+
+NOTE 6600 3/4
+NOTE 6900 5/4
+NOTE -6900 1/2
+NOTE 5800 1/2
+NOTE 6600 1/2
+NOTE 6900 1/4
+NOTE 7100 1/4
+
+; ----------- measure 76 --- beat 265.5
+
+NOTE -7100 3/4
+NOTE 7700 5/4
+NOTE -7700 3/4
+NOTE 7900 3/4
+NOTE -7900 1/2
+
+; ----------- measure 77 --- beat 269.5
+
+NOTE 7100 1
+NOTE 0 1/2
+NOTE 6900 1
+NOTE -6900 1
+NOTE 5800 1/2
+
+; ----------- measure 78 --- beat 273.5
+
+NOTE 6600 1/3
+NOTE 6900 1/3
+NOTE 7100 1/3
+NOTE 7700 1/2
+NOTE 8400 5/2
+
+; ----------- measure 79 --- beat 277.5
+
+NOTE -8400 4
+
+; ----------- measure 80 --- beat 281.5
+
+NOTE 0 4
+
+; ----------- measure 81 --- beat 285.5
+
+NOTE 0 3/2
+NOTE 7400 1/2
+NOTE 7500 1/5
+NOTE 7400 1/5
+NOTE 7500 1/5
+NOTE 7400 1/5
+NOTE 7500 1/5
+NOTE 7400 1/5
+NOTE 7500 1/5
+NOTE 7400 1/5
+NOTE 7500 1/5
+NOTE 7400 1/5
+
+; ----------- measure 82 --- beat 289.5
+
+NOTE 7500 1/6
+NOTE 7400 1/6
+NOTE 7500 1/6
+NOTE 7400 1/6
+NOTE 7500 1/6
+NOTE 7400 1/6
+NOTE 7500 1/2
+NOTE 7400 3/2
+NOTE 0 1/5
+NOTE 7500 1/5
+NOTE 7400 1/5
+NOTE 7300 1/5
+NOTE 7100 1/5
+
+; ----------- measure 83 --- beat 293.5
+
+NOTE 7300 2
+NOTE 7100 0
+NOTE 7300 0
+NOTE 7400 2
+
+; ----------- measure 84 --- beat 297.5
+
+NOTE -7400 1
+NOTE 7600 0
+NOTE 7400 0
+NOTE 7300 3/2
+NOTE 7600 3/2
+NOTE 7300 0
+
+; ----------- measure 85 --- beat 301.5
+
+NOTE -7300 3/2
+NOTE 7900 5/2
+
+; ----------- measure 86 --- beat 305.5
+
+NOTE 7700 1/8
+NOTE 7600 1/8
+NOTE 7300 1/8
+NOTE 7100 1/8
+NOTE 6800 1/8
+NOTE 6700 1/8
+NOTE 6600 1/8
+NOTE 6300 9/8
+NOTE -6300 2/3
+NOTE 7300 2/3
+NOTE 7600 2/3
+
+; ----------- measure 87 --- beat 309.5
+
+NOTE 7700 1/10
+NOTE 7600 1/10
+NOTE 7300 1/10
+NOTE 7100 1/10
+NOTE 7000 1/10
+NOTE 6800 1/10
+NOTE 6700 1/10
+NOTE 6600 1/10
+NOTE 6300 1/10
+NOTE 6200 0.349609
+NOTE -6200 3/2
+NOTE 0 1/2
+NOTE 6200 3/4
+
+; ----------- measure 88 --- beat 313.5
+
+NOTE -6200 1/3
+NOTE 7300 1/2
+NOTE 7700 2/3
+NOTE -7700 1/8
+NOTE 7500 1/8
+NOTE 7200 1/8
+NOTE 7100 9/8
+NOTE -7100 1/6
+NOTE 7200 1/6
+NOTE 7100 1/6
+NOTE 7200 1/6
+NOTE 7100 1/6
+NOTE 7200 1/6
+
+; ----------- measure 89 --- beat 317.5
+
+NOTE 7100 7/4
+NOTE -7100 5/4
+NOTE 0 1/2
+NOTE 7100 1/4
+NOTE 0 1/4
+
+; ----------- measure 90 --- beat 321.5
+
+NOTE 0 5/2
+NOTE 7100 1/4
+NOTE 0 5/4
+
+; ----------- measure 91 --- beat 325.5
+
+NOTE 0 1
+NOTE 7100 1/4
+NOTE 0 3/4
+NOTE 0 4/3
+NOTE 0 1/3
+NOTE 7900 1/9
+NOTE 8000 1/9
+NOTE 8100 1/9
+
+; ----------- measure 92 --- beat 329.5
+
+NOTE 8200 1
+NOTE 8100 0
+NOTE -8200 1/4
+NOTE 8100 1
+NOTE 8000 3/4
+NOTE 7800 1/3
+NOTE 7100 1/3
+NOTE 0 1/3
+
+; ----------- measure 93 --- beat 333.5
+
+NOTE 0 1/2
+NOTE 7100 1/4
+NOTE 0 3/4
+NOTE 6200 1/4
+NOTE 0 1/4
+NOTE 7100 1/3
+NOTE 7500 1/3
+NOTE 7200 1/3
+NOTE 0 1/2
+NOTE 6500 1/2
+
+; ----------- measure 94 --- beat 337.5
+
+NOTE -6500 1
+NOTE 0 1/4
+NOTE 5800 1/4
+NOTE 0 1/4
+NOTE 7100 1/4
+NOTE 0 3/2
+NOTE 7200 1/2
+
+; ----------- measure 95 --- beat 341.5
+
+NOTE -7200 4
+
+; ----------- measure 96 --- beat 345.5
+
+NOTE -7200 15/4
+NOTE -7200 1/4
+
+; ----------- measure 97 --- beat 349.5
+
+NOTE -7200 3
+NOTE -7200 1
+
+; ----------- measure 98 --- beat 353.5
+
+NOTE -7200 2
+NOTE 7600 2
+
+; ----------- measure 99 --- beat 357.5
+
+NOTE -7600 4
+
+; ----------- measure 100 --- beat 361.5
+
+NOTE 0 5/2
+NOTE 7600 3/2
+
+; ----------- measure 101 --- beat 365.5
+
+NOTE -7600 3/4
+NOTE 7800 13/4
+
+; ----------- measure 102 --- beat 369.5
+
+NOTE 0 3/2
+NOTE 6300 5/2
+
+; ----------- measure 103 --- beat 373.5
+
+NOTE 0 1/2
+NOTE 5300 5/2
+NOTE 0 1/2
+NOTE 7400 1/2
+
+; ----------- measure 104 --- beat 377.5
+
+NOTE -7400 5/2
+NOTE 7800 3/2
+
+; ----------- measure 105 --- beat 381.5
+
+NOTE -7800 1
+NOTE 7800 1/8
+NOTE 7700 1/8
+NOTE 7600 1/8
+NOTE 7400 5/8
+NOTE -7400 2
+
+; ----------- measure 106 --- beat 385.5
+
+NOTE 0 4
+
+; ----------- measure 107 --- beat 389.5
+
+NOTE 0 3/2
+NOTE 6000 3/2
+NOTE -6000 1/4
+NOTE 7100 3/4
+
+; ----------- measure 108 --- beat 393.5
+
+NOTE -7100 3/4
+NOTE 7500 5/4
+NOTE -7500 1/4
+NOTE 6900 1/4
+NOTE 0 3/2
+
+; ----------- measure 109 --- beat 397.5
+
+NOTE 6900 1/6
+NOTE 0 1/6
+NOTE 7200 1/6
+NOTE 0 3/4
+NOTE 6900 1/4
+NOTE 0 1
+NOTE 6600 1/4
+NOTE 6700 1/4
+NOTE 7200 1/4
+NOTE 0 3/4
+
+; ----------- measure 110 --- beat 401.5
+
+NOTE 0 1/2
+NOTE 5900 7/6
+NOTE 6900 2/3
+NOTE 7200 17/12
+NOTE 6900 1/4
+
+; ----------- measure 111 --- beat 405.5
+
+NOTE -6900 4
+
+; ----------- measure 112 --- beat 409.5
+
+NOTE -6900 2
+NOTE 6600 1/8
+NOTE 7200 1/4
+NOTE 6800 1/4
+NOTE 7000 1/4
+NOTE 7200 1/8
+NOTE 0 1/8
+NOTE 6600 1/4
+NOTE 7200 1/4
+NOTE 7900 1/4
+NOTE 7900 1/8
+
+; ----------- measure 113 --- beat 413.5
+
+NOTE 8300 1/4
+NOTE 0 1/4
+NOTE 6900 1/4
+NOTE 0 5/4
+NOTE 0 2
+
+; ----------- measure 114 --- beat 417.5
+
+NOTE 0 2
+NOTE 0 10/9
+NOTE 5600 1/9
+NOTE 6000 1/9
+NOTE 6400 1/9
+NOTE 6600 1/9
+NOTE 6900 1/9
+NOTE 7100 1/9
+NOTE 7300 1/9
+NOTE 7500 1/9
+
+; ----------- measure 115 --- beat 421.5
+
+NOTE 7900 1/4
+NOTE 0 3/4
+NOTE 7900 1/8
+NOTE 0 3/8
+NOTE 7900 5/2
+NOTE 7900 0
+
+; ----------- measure 116 --- beat 425.5
+
+NOTE -7900 1/4
+NOTE 0 3/4
+NOTE 7900 1/3
+NOTE -7900 2/3
+NOTE 0 1/8
+NOTE 7800 1.208008
+NOTE 0 1/3
+NOTE 7300 1/3
+
+; ----------- measure 117 --- beat 429.5
+
+NOTE 0 3/2
+NOTE 6200 5/2
+
+; ----------- measure 118 --- beat 433.5
+
+NOTE -6200 3/2
+NOTE 6000 3/2
+NOTE -6000 1/2
+NOTE 6200 1/2
+
+; ----------- measure 119 --- beat 437.5
+
+NOTE -6200 2
+NOTE 0 1/2
+NOTE 7300 1/4
+NOTE 7900 1/4
+NOTE 0 1
+
+; ----------- measure 120 --- beat 441.5
+
+NOTE 0 1/2
+NOTE 6000 1/6
+NOTE 6400 1/6
+NOTE 6600 1/6
+NOTE 6900 1/8
+NOTE 7100 1/8
+NOTE 7300 1/8
+NOTE 7500 1/8
+NOTE 7900 7/6
+NOTE -7900 4/3
+
+; ----------- measure 121 --- beat 445.5
+
+NOTE -7900 1/2
+NOTE 7300 1/4
+NOTE 7900 7/12
+NOTE -7900 1/3
+NOTE 7900 1/3
+NOTE 0 1/2
+NOTE 7900 2/3
+NOTE -7900 1/3
+NOTE -7900 1/3
+NOTE -7900 1/6
+
+; ----------- measure 122 --- beat 449.5
+
+NOTE -7900 2/3
+NOTE -7900 2/3
+NOTE -7900 2/3
+NOTE -7900 2/3
+NOTE -7900 2/3
+NOTE -7900 2/3
+
+; ----------- measure 123 --- beat 453.5
+
+NOTE -7900 1/4
+NOTE 0 1/4
+NOTE 7900 3/4
+NOTE -7900 1/2
+NOTE -7900 1/2
+NOTE -7900 1/2
+NOTE -7900 7/12
+NOTE -7900 2/3
+
+; ----------- measure 124 --- beat 457.5
+
+NOTE -7900 1/2
+NOTE 7300 1/4
+NOTE 0 1/2
+NOTE 7900 1/2
+NOTE 7300 5/4
+NOTE 7700 1
+
+; ----------- measure 125 --- beat 461.5
+
+NOTE -7700 1
+NOTE 0 1/2
+NOTE 7900 1/4
+NOTE 0 5/4
+NOTE 7900 1/6
+NOTE 8100 1/6
+NOTE 8200 1/6
+NOTE 8300 1/4
+NOTE 0 1/4
+
+; ----------- measure 126 --- beat 465.5
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 127 --- beat 469.5
+
+NOTE 0 5/2
+NOTE 5600 3/2
+
+; ----------- measure 128 --- beat 473.5
+
+NOTE -5600 9/8
+NOTE 5900 1/8
+NOTE 5600 1/8
+NOTE 5900 1/8
+NOTE 6000 1/8
+NOTE 6200 1/8
+NOTE 6100 1/8
+NOTE 6200 1/8
+NOTE 6300 1/8
+NOTE 6400 1/8
+NOTE 6700 1/8
+NOTE 6900 1/8
+NOTE 6700 1/8
+NOTE 6900 1/8
+NOTE 7000 1/8
+NOTE 6900 1/8
+NOTE 7000 1/8
+NOTE 7200 1/8
+NOTE 7000 1/8
+NOTE 7200 1/8
+NOTE 7800 1/8
+NOTE 7200 1/8
+NOTE 7800 1/8
+NOTE 0 1/8
+
+; ----------- measure 129 --- beat 477.5
+
+NOTE 0 1/4
+NOTE 5600 1/4
+NOTE 0 1/2
+NOTE 6600 1/8
+NOTE 7100 1/8
+NOTE 7700 1/8
+NOTE 7900 5/8
+NOTE -7900 1/8
+NOTE 7700 1/8
+NOTE 0 1
+NOTE 7200 1/4
+NOTE 7700 1/4
+NOTE 8500 1/4
+
+; ----------- measure 130 --- beat 481.5
+
+NOTE -8500 5/4
+NOTE 7900 3/4
+NOTE 0 3/2
+NOTE 5600 1/2
+NOTE 5700 0
+
+; ----------- measure 131 --- beat 485.5
+
+NOTE 5600 4
+
+; ----------- measure 132 --- beat 489.5
+
+NOTE -5600 7/4
+NOTE 5900 1/4
+NOTE 6000 0
+NOTE -5900 3/2
+NOTE 6600 1/2
+
+; ----------- measure 133 --- beat 493.5
+
+NOTE -6600 3/4
+NOTE 6500 5/4
+NOTE 0 1/8
+NOTE 6000 1/8
+NOTE 6000 1/8
+NOTE 6500 1/8
+NOTE 6500 1/8
+NOTE 6600 1/8
+NOTE 6600 1/8
+NOTE 7300 1/8
+NOTE 0 1/2
+NOTE 6600 1/8
+NOTE 6600 1/8
+NOTE 6700 1/8
+NOTE 6700 1/8
+
+; ----------- measure 134 --- beat 497.5
+
+NOTE 7300 1/4
+NOTE 0 1/4
+NOTE 6000 5/8
+NOTE 6200 1/8
+NOTE 6700 1/8
+NOTE 6900 1/8
+NOTE 7300 1/8
+NOTE 7500 1/8
+NOTE 7600 1/8
+NOTE 7700 1/8
+NOTE 7500 1/4
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/4
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/4
+
+; ----------- measure 135 --- beat 501.5
+
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/4
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7700 1/8
+NOTE 7700 1/8
+NOTE 7700 1/8
+NOTE 7700 1/8
+NOTE 7700 1/8
+NOTE 7700 1/8
+NOTE 7700 1/8
+NOTE 7700 1/8
+
+; ----------- measure 136 --- beat 505.5
+
+NOTE 7700 1/8
+NOTE 7700 1/8
+NOTE 7700 1/8
+NOTE 7700 1/8
+NOTE 7700 1/4
+NOTE 0 3/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7700 1/2
+
+; ----------- measure 137 --- beat 509.5
+
+NOTE -7700 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 1/8
+NOTE 7500 7/6
+NOTE -7500 1
+NOTE -7500 2/3
+NOTE -7500 2/3
+
+; ----------- measure 138 --- beat 513.5
+
+NOTE -7500 6/5
+NOTE -7500 6/5
+NOTE -7500 8/5
+
+; ----------- measure 139 --- beat 517.5
+
+NOTE 0 4
+
+; ----------- measure 140 --- beat 521.5
+
+NOTE 0 4
+
+; ----------- measure 141 --- beat 525.5
+
+NOTE 0 9/4
+NOTE 6000 1/4
+NOTE 0 1/2
+NOTE 7100 1/6
+NOTE 0 1/6
+NOTE 7800 1/6
+NOTE 0 1/2
+
+; ----------- measure 142 --- beat 529.5
+
+NOTE 0 1/2
+NOTE 7800 3/2
+NOTE -7800 1/4
+NOTE 6000 1/4
+NOTE 0 1/2
+NOTE 7800 1/8
+NOTE 7800 1/8
+NOTE 7800 1/8
+NOTE 7800 1/8
+NOTE 0 1/2
+
+; ----------- measure 143 --- beat 533.5
+
+NOTE 0 1/2
+NOTE 6500 0
+NOTE 7400 0
+NOTE 7800 0
+NOTE 7500 1/2
+NOTE 7400 5/4
+NOTE 6000 1/4
+NOTE 0 5/8
+NOTE 7800 7/8
+
+; ----------- measure 144 --- beat 537.5
+
+NOTE 0 1/2
+NOTE 6000 5/8
+NOTE 6500 1/8
+NOTE 6800 1/8
+NOTE 7500 1/8
+NOTE 7800 1/8
+NOTE 7400 1/8
+NOTE 0 3/4
+NOTE 7800 3/2
+
+; ----------- measure 145 --- beat 541.5
+
+NOTE -7800 1
+NOTE 0 1/6
+NOTE 7400 1/6
+NOTE 7500 1/6
+NOTE 7800 1
+NOTE -7800 1
+NOTE -7800 1/2
+
+; ----------- measure 146 --- beat 545.5
+
+NOTE -7800 9/8
+NOTE 7800 1/8
+NOTE 7800 1/8
+NOTE 7800 1/8
+NOTE 7800 3/2
+NOTE 7800 1/12
+NOTE 7800 0.083984
+NOTE 7800 1/12
+NOTE 7800 3/4
+
+; ----------- measure 147 --- beat 549.5
+
+NOTE -7800 3/4
+NOTE 7800 1/4
+NOTE 0 4/9
+NOTE 7800 1/9
+NOTE 7800 1/9
+NOTE 7800 1/9
+NOTE 7800 1/9
+NOTE 7800 1/9
+NOTE 7800 1/4
+NOTE 0 1
+NOTE 7800 1/4
+NOTE 0 1/2
+
+; ----------- measure 148 --- beat 553.5
+
+NOTE 6000 1/4
+NOTE 0 1/4
+NOTE 7800 1/4
+NOTE 0 1
+NOTE 7800 1/4
+NOTE 0 1
+NOTE 7800 1/5
+NOTE 0 1/5
+NOTE 8200 1/5
+NOTE 0 2/5
+
+; ----------- measure 149 --- beat 557.5
+
+NOTE 7800 1/4
+NOTE 0 1/4
+NOTE 7800 1/4
+NOTE 0 1/2
+NOTE 7800 3/4
+NOTE 0 1
+NOTE 7800 1/4
+NOTE 0 3/4
+
+; ----------- measure 150 --- beat 561.5
+
+NOTE 0 1/4
+NOTE 7800 1/4
+NOTE 0 1
+NOTE 7800 1/4
+NOTE 0 1
+NOTE 7800 1/4
+NOTE 0 1/4
+NOTE 6000 1/4
+NOTE 0 1/2
+
+; ----------- measure 151 --- beat 565.5
+
+NOTE 7800 1/4
+NOTE 0 1
+NOTE 7800 1/4
+NOTE 0 1
+NOTE 7800 1/4
+NOTE 0 5/4
+NOTE 7800 0
+
+; ----------- measure 152 --- beat 569.5
+
+NOTE -7800 7/2
+NOTE 7400 1/2
+
+; ----------- measure 153 --- beat 573.5
+
+NOTE -7400 4
+
+; ----------- measure 154 --- beat 577.5
+
+NOTE 0 4
+
+; ----------- measure 155 --- beat 581.5
+
+NOTE 0 4
+
+; ----------- measure 156 --- beat 585.5
+
+NOTE 0 4
+
+; ----------- measure 157 --- beat 589.5
+
+NOTE 0 1/2
+NOTE 6100 5/2
+NOTE -6100 1/2
+NOTE 5800 1/2
+
+; ----------- measure 158 --- beat 593.5
+
+NOTE -5800 7/2
+NOTE 5700 1/2
+
+; ----------- measure 159 --- beat 597.5
+
+NOTE -5700 7/4
+NOTE 5900 5/4
+NOTE -5900 1/4
+NOTE 5900 3/4
+
+; ----------- measure 160 --- beat 601.5
+
+NOTE 0 9/4
+NOTE 6000 1/8
+NOTE 7900 1/8
+NOTE 7900 1/8
+NOTE 7900 1/8
+
+; ----------- measure 161 --- beat 605.5
+
+NOTE 0 8/3
+NOTE 6000 2/3
+NOTE 5400 2/3
+
+; ----------- measure 162 --- beat 609.5
+
+NOTE 0 1/4
+NOTE 6200 1/4
+NOTE 0 1/4
+NOTE 6000 1/4
+NOTE 0 1/3
+NOTE 6200 1/3
+NOTE 6000 1/3
+NOTE 6200 1/3
+NOTE 6300 1/3
+NOTE 6500 1/3
+NOTE 0 1/2
+NOTE 7100 1/4
+NOTE 0 1/4
+
+; ----------- measure 163 --- beat 613.5
+
+NOTE 0 1/4
+NOTE 5500 3/4
+NOTE 5000 1/2
+NOTE 5000 1/4
+NOTE 0 3/4
+NOTE 6000 1/8
+NOTE 7900 1/8
+NOTE 7900 1/8
+NOTE 7900 1/8
+
+; ----------- measure 164 --- beat 617.5
+
+NOTE 0 1
+NOTE 5400 3/2
+NOTE 6000 5/4
+NOTE 6200 1/4
+
+; ----------- measure 165 --- beat 621.5
+
+NOTE 0 5/4
+NOTE 5500 3/4
+NOTE 5000 1/4
+NOTE 0 1/4
+NOTE 5000 1/4
+NOTE 0 5/4
+
+; ----------- measure 166 --- beat 625.5
+
+NOTE 0 1/4
+NOTE 6200 1/4
+NOTE 0 1/4
+NOTE 6000 1/4
+NOTE 0 1/3
+NOTE 6200 1/3
+NOTE 6000 1/3
+NOTE 6100 1/4
+NOTE 0 1/2
+NOTE 6300 1/4
+NOTE 0 1/2
+NOTE 5400 1/4
+NOTE 0 1/4
+
+; ----------- measure 167 --- beat 629.5
+
+NOTE 6300 1/3
+NOTE 6700 1/3
+NOTE 6200 1/3
+NOTE 0 1/4
+NOTE 6400 1/4
+NOTE 0 1
+NOTE 5400 1/4
+NOTE 0 5/4
+
+; ----------- measure 168 --- beat 633.5
+
+NOTE 5500 3/2
+NOTE 5000 1/4
+NOTE 0 1
+NOTE 5700 0
+NOTE 5000 1/4
+NOTE 0 1
+
+; ----------- measure 169 --- beat 637.5
+
+NOTE 0 1/2
+NOTE 5500 3/2
+NOTE -5500 1/2
+NOTE 5400 3/2
+
+; ----------- measure 170 --- beat 641.5
+
+NOTE 0 1
+NOTE 6000 1/8
+NOTE 7900 1/8
+NOTE 7900 1/8
+NOTE 7900 1/8
+
+; ----------- measure 171 --- beat 645.5
+
+NOTE 5500 1/2
+NOTE 5000 1/4
+NOTE 0 1
+NOTE 5700 0
+NOTE 5000 1/4
+NOTE 0 1/2
+NOTE 5700 0
+NOTE 5000 1/4
+NOTE 0 5/4
+
+; ----------- measure 172 --- beat 649.5
+
+NOTE 5400 1/4
+NOTE 0 1/2
+NOTE 6700 1/4
+NOTE 0 1/2
+NOTE 5400 1/4
+NOTE 0 1/2
+NOTE 6700 1/4
+NOTE 0 5/6
+NOTE 5400 1/3
+NOTE 6000 1/3
+
+; ----------- measure 173 --- beat 653.5
+
+NOTE 6200 1/4
+NOTE 0 1/2
+NOTE 6400 1/4
+NOTE 0 1/3
+NOTE 6200 1/3
+NOTE 6100 1/3
+NOTE 0 1/4
+NOTE 6300 1/4
+NOTE 0 3/4
+NOTE 6700 1/4
+NOTE 0 1/4
+NOTE 5400 1/4
+
+; ----------- measure 174 --- beat 657.5
+
+NOTE 0 1
+NOTE 6000 1/8
+NOTE 7700 1/8
+NOTE 7700 1/8
+NOTE 7700 1/8
+NOTE 0 5/2
+
+; ----------- measure 175 --- beat 661.5
+
+NOTE 5400 3
+NOTE 5000 1/2
+NOTE 5300 1/2
+
+; ----------- measure 176 --- beat 665.5
+
+NOTE -5300 3/2
+NOTE 5200 5/2
+
+; ----------- measure 177 --- beat 669.5
+
+NOTE 4900 5/2
+NOTE 4800 3/2
+
+; ----------- measure 178 --- beat 673.5
+
+NOTE -4800 1
+NOTE 4500 3
+
+; ----------- measure 179 --- beat 677.5
+
+NOTE -4500 1
+NOTE 4400 3
+
+; ----------- measure 180 --- beat 681.5
+
+NOTE -4400 2
+NOTE 4100 2
+
+; ----------- measure 181 --- beat 685.5
+
+NOTE -4100 2
+NOTE 4000 2
+
+; ----------- measure 182 --- beat 689.5
+
+NOTE -4000 3
+NOTE 3400 1
+
+; ----------- measure 183 --- beat 693.5
+
+NOTE -3400 4
+
+; ----------- measure 184 --- beat 697.5
+
+NOTE -3400 2
+NOTE 0 2
+
+; ----------- measure 185 --- beat 701.5
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 186 --- beat 705.5
+
+NOTE 0 5/2
+NOTE 6000 0
+NOTE 7100 3/2
+
+; ----------- measure 187 --- beat 709.5
+
+NOTE -7100 3/4
+NOTE 7700 1/8
+NOTE 7000 9/8
+NOTE -7000 1/8
+NOTE 6800 1/8
+NOTE 6900 1/8
+NOTE 6700 1/8
+NOTE 0 3/2
+
+; ----------- measure 188 --- beat 713.5
+
+NOTE 0 3/2
+NOTE 7700 1/4
+NOTE 7100 1/4
+NOTE 0 1
+NOTE 7100 1/4
+NOTE 0 3/4
+
+; ----------- measure 189 --- beat 717.5
+
+NOTE 0 4/3
+NOTE 7100 1/3
+NOTE 6000 1/3
+NOTE 7700 1/4
+NOTE 0 3/4
+NOTE 0 1
+
+; ----------- measure 190 --- beat 721.5
+
+NOTE 0 3
+NOTE 6000 1
+
+; ----------- measure 191 --- beat 725.5
+
+NOTE -6000 5/2
+NOTE -6000 3/2
+
+; ----------- measure 192 --- beat 729.5
+
+NOTE -6000 1/2
+NOTE 7100 1/4
+NOTE 7500 1/4
+NOTE 0 3

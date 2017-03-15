@@ -1,0 +1,139 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud.
+
+; Original file: anthemes6.2_b.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0.
+; Converted to Antescofo on Wed May 20 08:05:06 2015
+; Credits: Calme, regulier
+
+
+; ----------- measure 54 --- beat 0 --- time signature 3/4
+
+BPM 50
+NOTE D5 1/10 @staccato
+NOTE 0 1/47
+NOTE D5 1/10 @staccato
+NOTE D5 1/10 @staccato
+NOTE D5 1/10 @staccato
+NOTE D5 2/25 @staccato
+NOTE D5 1/10 @staccato
+NOTE D5 1/10 @staccato
+NOTE D5 1/10
+NOTE D5 1/10 @staccato
+NOTE D5 1/10 @staccato
+NOTE D5 1/10 @staccato
+NOTE D5 1/10 @staccato
+NOTE D5 1/10 @staccato
+NOTE D5 1/10 @staccato
+NOTE D5 1/10 @staccato
+NOTE 0 9/16
+NOTE 0 3/8
+NOTE 0 1/2
+
+; ----------- measure 55 --- beat 3
+
+BPM 63
+CHORD (A#4 G5) 1/6
+NOTE C#5 1/6
+NOTE D#6 1/6
+NOTE F#5 1/6
+CHORD (C#5 G5) 1/6
+NOTE G#4 1/6
+NOTE B5 1/6
+NOTE A#4 1/6
+CHORD (G#4 G5) 1/6
+NOTE 0 1/6
+CHORD (A#4 G5) 1/6
+NOTE A5 1/6
+NOTE C5 1/6
+CHORD (F5 G5) 1/6
+NOTE D6 1/6
+NOTE F5 1/6
+NOTE E5 1/6
+NOTE C#6 1/6
+
+; ----------- measure 56 --- beat 6 --- time signature 3/8
+
+BPM 42
+NOTE 0 2/9
+CHORD (C5 G5) 1/9
+NOTE A#4 1/9
+NOTE F5 1/9
+NOTE C5 1/9
+NOTE D#5 1/9
+NOTE D6 1/9
+NOTE B5 1/9
+
+; ----------- measure 57 --- beat 7 --- time signature 3/4
+
+NOTE 0 2/3
+CHORD (C#5 G5) 1/9
+NOTE G#5 1/9
+NOTE A4 1/9
+NOTE C#5 1/9
+NOTE C5 1/9
+NOTE G#5 1/9
+CHORD (B4 G5) 1/9
+NOTE A#4 1/9
+NOTE B4 1/9
+NOTE G#5 1/9
+NOTE G5 1/9
+CHORD (E5 G5) 1/9
+
+; ----------- measure 58 --- beat 9 --- time signature 2/4
+
+BPM 63
+NOTE A#4 1/6
+NOTE A5 1/6
+NOTE F#5 1/6
+CHORD (B4 G5) 1/6
+NOTE F#5 1/6
+NOTE D#6 1/6
+CHORD (A#4 G5) 1/6
+NOTE E5 1/6
+CHORD (G#4 G5) 1/6
+NOTE 0 1/2
+
+; ----------- measure 59 --- beat 11 --- time signature 3/8
+
+BPM 46.6667
+CHORD (F#4 A#4 G5) 1/12
+NOTE G#5 1/12
+NOTE 0 1/2
+CHORD (A#4 G5 C#6) 1/12
+NOTE C6 1/12
+NOTE 0 1/6
+
+; ----------- measure 60 --- beat 12 --- time signature 5/8
+
+BPM 70
+CHORD (D#4 C5 A5) 1/8
+NOTE A#5 1/8
+NOTE 0 3/4
+CHORD (A4 G5 E6) 1/8
+NOTE B5 1/8
+NOTE 0 5/4
+
+; ----------- measure 61 --- beat  14.5 --- time signature 2/4
+
+BPM 63
+NOTE 0 1/2
+CHORD (B4 A5) 1/6
+NOTE C6 1/6
+NOTE B4 1/6
+NOTE G5 1/6
+NOTE A4 1/6
+CHORD (D5 G#5) 1/6
+NOTE D5 1/6
+CHORD (A4 G#5) 1/6
+NOTE E6 1/6
+
+; ----------- measure 62 --- beat  16.5 --- time signature 3/8
+
+BPM 42
+NOTE 0 2/3
+NOTE A5 1/12
+NOTE F6 1/12
+NOTE D#5 1/6

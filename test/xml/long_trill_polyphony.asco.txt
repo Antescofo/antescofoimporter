@@ -1,0 +1,45 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud.
+
+; Original file: long_trill_polyphony.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0.
+; Converted to Antescofo on Sat May 23 19:03:41 2015
+; Credits: Long Trill with Polyphony
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+NOTE 0 1 measure1
+TRILL (B4 C#5) 3
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+TRILL ((B2 B4) (B2 C#5)) 1/2 measure2
+TRILL ((E3 B4) (E3 C#5)) 1/2
+TRILL ((D3 F#3 B4) (D3 F#3 C#5)) 1/2
+TRILL ((E3 B4) (E3 C#5)) 1/2
+TRILL (B4 C#5) 2
+
+; ----------- measure 3 --- beat 8 --- time signature 3/4
+
+TRILL (B4 C#5) 3/2 measure3
+TRILL ((F#3 B4) (F#3 C#5)) 1/2
+TRILL (B4 C#5) 1/2
+TRILL ((B2 B4) (B2 C#5)) 1/2
+
+; ----------- measure 4 --- beat 11 --- time signature 4/4
+
+TRILL ((-B2 B4) (-B2 C#5)) 1/2 measure4
+TRILL (B4 C#5) 1
+TRILL (B4 C#5) 1/2
+NOTE B4 1/2
+NOTE B4 1/2
+NOTE B4 1
+
+; ----------- measure 5 --- beat 15 --- time signature 4/4
+
+NOTE B4 3 measure5
+NOTE 0 1

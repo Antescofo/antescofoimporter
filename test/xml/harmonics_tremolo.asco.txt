@@ -1,0 +1,15 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: harmonics_tremolo.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0
+; Converted to Antescofo on Sat Jun 13 09:38:16 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+TRILL ((G#4 C5) (G#4 C#5)) 2 measure1
+NOTE 0 2

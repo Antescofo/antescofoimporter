@@ -1,0 +1,7 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud.
+
+; Original file: mazurka30-2.krn.mid
+; Converted to Antescofo on Sun May 17 02:51:11 2015
+

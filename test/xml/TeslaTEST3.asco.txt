@@ -1,0 +1,33 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: TeslaTEST3.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0
+; Converted to Antescofo on Sat Jun  6 11:33:56 2015
+; Credits: Tesla ou l'effet d'étrangeté Version alto solo et électronique
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+BPM 48 ; ( ← 𝅘𝅥 =48) 
+CHORD (D3 G3 A#3 C#4) 0 measure1
+CHORD (E4 A4) 3
+NOTE 0 1
+NOTE A#3 2/3
+CHORD (C#4 F#4) 5/6
+CHORD (D4 A4) 3/4
+CHORD (G#4 C#5) 3/4
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 3 --- beat 8 --- time signature 4/4
+
+NOTE 0 4 ; empty measure
+
+; ----------- measure 4 --- beat 12 --- time signature 4/4
+

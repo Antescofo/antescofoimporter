@@ -1,0 +1,18 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: basic_compressed.mxl
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0 (compressed file)
+; Converted to Antescofo on Mon May 25 15:10:38 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+BPM 40 ; ( ← 𝅘𝅥 =40) 
+NOTE C4 1 measure1
+NOTE D4 1
+NOTE E4 1
+NOTE F4 1

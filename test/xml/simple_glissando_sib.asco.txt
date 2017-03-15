@@ -1,0 +1,35 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: simple_glissando_sib.mxl
+; exported from Sibelius 7.5.1 ~ Direct export, not from Dolet
+; MusicXML version 3.0 (compressed file)
+; Converted to Antescofo on Mon May 25 15:13:08 2015
+; Credits: Simple glissando
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+MULTI ((F4 C5) -> (D4 A4)) 2 measure1
+CHORD (-D4 -A4) 2
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+NOTE 0 4 measure2
+
+; ----------- measure 3 --- beat 8 --- time signature 4/4
+
+MULTI ((F4 C5) -> (D4 A4)) 2 measure3
+CHORD (-D4 A4) 2
+
+; ----------- measure 4 --- beat 12 --- time signature 4/4
+
+NOTE 0 2 measure4
+MULTI ((F4 C5) -> (D4 A4)) 2
+
+; ----------- measure 5 --- beat 16 --- time signature 4/4
+
+CHORD (-D4 -A4) 2 measure5
+NOTE 0 2

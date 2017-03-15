@@ -1,0 +1,20 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: tremolo_gliss_asym.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0
+; Converted to Antescofo on Mon Jun  8 15:46:12 2015
+; Credits: Score
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+MULTI ((A#3 F#4 F5)' -> (C3 F4 C#5 C6)') 4 measure1
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+TRILL ((C3 F4 C#5 C6)) 2 measure2
+NOTE 0 2

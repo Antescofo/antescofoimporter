@@ -1,0 +1,15 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: Sib_glissversApp.xml
+; exported from Sibelius 7.5.0 ~ Direct export, not from Dolet
+; MusicXML version 3.0
+; Converted to Antescofo on Tue Jun 16 10:21:30 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 1/4
+
+NOTE G#4 1 measure1
+NOTE B4 0

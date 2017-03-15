@@ -1,0 +1,20 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud.
+
+; Original file: layers1e.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0.
+; Converted to Antescofo on Wed May 13 08:29:02 2015
+
+
+; ----------- measure 1 --- beat 0
+
+NOTE 0 1/2 ; start: 0
+NOTE 4800 1/2 ; start: 0.5
+CHORD (-4800 5200) 1/2 ; start: 1
+CHORD (-4800 5200 5500) 1/2 ; start: 1.5
+CHORD (-4800 5200 -5500 6000) 1/2 ; start: 2
+CHORD (-4800 5200 -5500 6000 6400) 1/2 ; start: 2.5
+CHORD (-4800 5200 -5500 6000 -6400 6700) 1/2 ; start: 3
+CHORD (-4800 5200 -5500 6000 -6400 6700 7200) 1/2 ; start: 3.5

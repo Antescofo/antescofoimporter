@@ -1,0 +1,30 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud.
+
+; Original file: clair_1.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0.
+; Converted to Antescofo on Thu May 14 22:30:46 2015
+
+
+; ----------- measure 1 --- beat 0 --- time signature 9/8
+
+CHORD (3700 6500 6800) 1/4
+CHORD (-3700 4400 -6500 -6800) 1/4
+CHORD (-3700 4900 -6500 -6800) 1/4
+CHORD (-3700 5300 -6500 -6800) 1/4
+CHORD (-3700 5600 -6500 -6800) 1/4
+CHORD (-3700 6100 -6500 -6800) 1/4
+CHORD (4100 -6500 -6800) 1/4
+CHORD (-4100 4800 -6500 -6800) 1/4
+CHORD (-4100 5300 -6500 -6800) 1/4
+CHORD (-4100 5600 -6500 -6800) 1/4
+CHORD (-4100 6000 -6500 -6800) 1/4
+CHORD (-4100 6500 -6800) 1/4
+CHORD (4400 6800 7100) 1/4
+CHORD (-4400 5200 -6800 -7100) 1/4
+CHORD (-4400 5600 -6800 -7100) 1/4
+CHORD (-4400 5900 -6800 -7100) 1/4
+CHORD (-4400 6800) 1/4
+CHORD (-4400 6400 -6800) 1/4

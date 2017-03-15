@@ -1,0 +1,32 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud.
+
+; Original file: tie.mid
+; Converted to Antescofo on Tue May 19 00:27:06 2015
+
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+NOTE 0 1
+CHORD (6900 7200) 2
+NOTE 0 1
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+NOTE 0 2
+CHORD (7200 7600) 1
+NOTE 0 1/2
+CHORD (6700 7100) 1/2
+
+; ----------- measure 3 --- beat 8 --- time signature 3/4
+
+CHORD (-6700 -7100) 3
+
+; ----------- measure 4 --- beat 11 --- time signature 4/4
+
+CHORD (-6700 -7100) 4
+
+; ----------- measure 5 --- beat 15 --- time signature 4/4
+
+CHORD (-6700 -7100) 3

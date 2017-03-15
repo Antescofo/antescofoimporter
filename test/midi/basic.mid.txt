@@ -1,0 +1,146 @@
+MFile 0 1 1024
+MTrk
+0 SMPTE 96 0 0 0 0
+0 TimeSig 4/4 24 8
+0 KeySig 0 major
+0 Tempo 625001
+0 Par ch=1 c=0 v=121
+0 Par ch=1 c=32 v=0
+0 PrCh ch=1 p=0
+0 PrCh ch=2 p=0
+0 PrCh ch=3 p=0
+0 PrCh ch=4 p=0
+0 PrCh ch=5 p=0
+0 PrCh ch=6 p=0
+0 PrCh ch=7 p=0
+0 PrCh ch=8 p=0
+0 PrCh ch=9 p=0
+0 PrCh ch=10 p=0
+0 PrCh ch=11 p=0
+0 PrCh ch=12 p=0
+0 PrCh ch=13 p=0
+0 PrCh ch=14 p=0
+0 PrCh ch=15 p=0
+0 PrCh ch=16 p=0
+0 PrCh ch=1 p=0
+0 PrCh ch=2 p=0
+0 PrCh ch=3 p=0
+0 PrCh ch=4 p=0
+0 PrCh ch=5 p=0
+0 PrCh ch=6 p=0
+0 PrCh ch=7 p=0
+0 PrCh ch=8 p=0
+0 PrCh ch=9 p=0
+0 PrCh ch=10 p=0
+0 PrCh ch=11 p=0
+0 PrCh ch=12 p=0
+0 PrCh ch=13 p=0
+0 PrCh ch=14 p=0
+0 PrCh ch=15 p=0
+0 PrCh ch=16 p=0
+0 PrCh ch=1 p=0
+0 PrCh ch=2 p=0
+0 PrCh ch=3 p=0
+0 PrCh ch=4 p=0
+0 PrCh ch=5 p=0
+0 PrCh ch=6 p=0
+0 PrCh ch=7 p=0
+0 PrCh ch=8 p=0
+0 PrCh ch=9 p=0
+0 PrCh ch=10 p=0
+0 PrCh ch=11 p=0
+0 PrCh ch=12 p=0
+0 PrCh ch=13 p=0
+0 PrCh ch=14 p=0
+0 PrCh ch=15 p=0
+0 PrCh ch=16 p=0
+0 PrCh ch=1 p=0
+0 PrCh ch=2 p=0
+0 PrCh ch=3 p=0
+0 PrCh ch=4 p=0
+0 PrCh ch=5 p=0
+0 PrCh ch=6 p=0
+0 PrCh ch=7 p=0
+0 PrCh ch=8 p=0
+0 PrCh ch=9 p=0
+0 PrCh ch=10 p=0
+0 PrCh ch=11 p=0
+0 PrCh ch=12 p=0
+0 PrCh ch=13 p=0
+0 PrCh ch=14 p=0
+0 PrCh ch=15 p=0
+0 PrCh ch=16 p=0
+0 PrCh ch=1 p=0
+0 PrCh ch=2 p=0
+0 PrCh ch=3 p=0
+0 PrCh ch=4 p=0
+0 PrCh ch=5 p=0
+0 PrCh ch=6 p=0
+0 PrCh ch=7 p=0
+0 PrCh ch=8 p=0
+0 PrCh ch=9 p=0
+0 PrCh ch=10 p=0
+0 PrCh ch=11 p=0
+0 PrCh ch=12 p=0
+0 PrCh ch=13 p=0
+0 PrCh ch=14 p=0
+0 PrCh ch=15 p=0
+0 PrCh ch=16 p=0
+0 PrCh ch=1 p=0
+0 PrCh ch=2 p=0
+0 PrCh ch=3 p=0
+0 PrCh ch=4 p=0
+0 PrCh ch=5 p=0
+0 PrCh ch=6 p=0
+0 PrCh ch=7 p=0
+0 PrCh ch=8 p=0
+0 PrCh ch=9 p=0
+0 PrCh ch=10 p=0
+0 PrCh ch=11 p=0
+0 PrCh ch=12 p=0
+0 PrCh ch=13 p=0
+0 PrCh ch=14 p=0
+0 PrCh ch=15 p=0
+0 PrCh ch=16 p=0
+0 PrCh ch=1 p=0
+0 PrCh ch=2 p=0
+0 PrCh ch=3 p=0
+0 PrCh ch=4 p=0
+0 PrCh ch=5 p=0
+0 PrCh ch=6 p=0
+0 PrCh ch=7 p=0
+0 PrCh ch=8 p=0
+0 PrCh ch=9 p=0
+0 PrCh ch=10 p=0
+0 PrCh ch=11 p=0
+0 PrCh ch=12 p=0
+0 PrCh ch=13 p=0
+0 PrCh ch=14 p=0
+0 PrCh ch=15 p=0
+0 PrCh ch=16 p=0
+0 PrCh ch=1 p=0
+0 PrCh ch=2 p=0
+0 PrCh ch=3 p=0
+0 PrCh ch=4 p=0
+0 PrCh ch=5 p=0
+0 PrCh ch=6 p=0
+0 PrCh ch=7 p=0
+0 PrCh ch=8 p=0
+0 PrCh ch=9 p=0
+0 PrCh ch=10 p=0
+0 PrCh ch=11 p=0
+0 PrCh ch=12 p=0
+0 PrCh ch=13 p=0
+0 PrCh ch=14 p=0
+0 PrCh ch=15 p=0
+0 PrCh ch=16 p=0
+0 On ch=1 n=60 v=64
+1024 Off ch=1 n=60 v=0
+1024 On ch=1 n=62 v=64
+2048 Off ch=1 n=62 v=0
+2048 On ch=1 n=64 v=64
+3072 Off ch=1 n=64 v=0
+3072 On ch=1 n=65 v=64
+4096 Off ch=1 n=65 v=0
+4097 Meta TrkEnd
+TrkEnd

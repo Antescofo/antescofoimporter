@@ -1,0 +1,990 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud.
+
+; Original file: Elise_70bpm.mid
+; MIDI file type 1 (multiple tracks)
+; Converted to Antescofo on Sat May 23 01:17:08 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 3/8
+
+BPM 70
+NOTE 0 1 measure1
+BPM 70
+NOTE E5 1/4
+NOTE D#5 1/4
+
+; ----------- measure 2 --- beat   1.5 --- time signature 3/8
+
+BPM 70
+NOTE E5 1/4 measure2
+NOTE D#5 1/4
+NOTE E5 1/4
+NOTE B4 1/4
+BPM 63
+NOTE D5 1/4
+NOTE C5 1/4
+
+; ----------- measure 3 --- beat 3 --- time signature 3/8
+
+BPM 69
+CHORD (A2 A4) 4/23 measure3
+CHORD (E3 -A4) 1/4
+CHORD (A3 -A4) 1/13
+NOTE -A3 4/23
+NOTE 0 1/13
+NOTE C4 1/4
+BPM 65
+NOTE E4 1/4
+NOTE A4 4/23
+CHORD (E2 -A4) 1/13
+
+; ----------- measure 4 --- beat   4.5 --- time signature 3/8
+
+BPM 71
+CHORD (-E2 B4) 1/19 measure4
+CHORD (E3 -B4) 1/4
+CHORD (G#3 -B4) 0.197917
+NOTE -G#3 1/19
+NOTE 0 0.197917
+NOTE E4 1/4
+BPM 63
+NOTE G#4 1/4
+NOTE B4 1/19
+CHORD (A2 -B4) 1/7
+CHORD (E3 -B4) 1/18
+
+; ----------- measure 5 --- beat 6 --- time signature 3/8
+
+BPM 69
+CHORD (-E3 C5) 6/31 measure5
+CHORD (A3 -C5) 1/4
+NOTE -C5 1/18
+NOTE 0 1/4
+NOTE E4 1/4
+BPM 71
+NOTE E5 1/4
+NOTE D#5 1/4
+
+; ----------- measure 6 --- beat   7.5 --- time signature 3/8
+
+BPM 69
+NOTE E5 1/4 measure6
+NOTE D#5 1/4
+NOTE E5 1/4
+NOTE B4 1/4
+BPM 66
+NOTE D5 5/41
+CHORD (A2 -D5) 5/39
+CHORD (-A2 C5) 1/51
+CHORD (E3 -C5) 3/13
+
+; ----------- measure 7 --- beat 9 --- time signature 3/8
+
+BPM 69
+CHORD (-E3 A4) 1/51 measure7
+CHORD (A3 -A4) 1/4
+NOTE -A4 3/13
+NOTE 0 1/4
+NOTE C4 1/4
+BPM 65
+NOTE E4 1/51
+CHORD (E2 -E4) 2/19
+CHORD (E3 -E4) 5/39
+CHORD (-E3 A4) 5/41
+CHORD (G#3 -A4) 5/39
+
+; ----------- measure 8 --- beat  10.5 --- time signature 3/8
+
+BPM 70
+CHORD (-G#3 B4) 5/41 measure8
+NOTE -B4 17/45
+NOTE 0 1/4
+NOTE E4 5/41
+CHORD (A2 -E4) 5/39
+BPM 67
+CHORD (-A2 C5) 0.006250
+CHORD (E3 -C5) 9/37
+CHORD (-E3 B4) 0.006250
+CHORD (A3 -B4) 9/37
+
+; ----------- measure 9 --- beat 12 --- time signature 3/8
+
+BPM 65
+CHORD (-A3 A4) 0.006250 measure9
+NOTE -A4 0.493750
+NOTE 0 1/2
+BPM 70
+NOTE E5 1/4
+NOTE D#5 1/4
+
+; ----------- measure 10 --- beat  13.5 --- time signature 3/8
+
+BPM 70
+NOTE E5 1/4 measure10
+NOTE D#5 1/4
+NOTE E5 5/24
+CHORD (A2 -E5) 1/24
+CHORD (-A2 B4) 2/17
+CHORD (E3 -B4) 3/23
+BPM 63
+CHORD (-E3 D5) 2/17
+CHORD (A3 -D5) 3/23
+CHORD (-A3 C5) 2/17
+NOTE -C5 3/23
+
+; ----------- measure 11 --- beat 15 --- time signature 3/8
+
+BPM 69
+NOTE A4 1/2 measure11
+NOTE 0 2/17
+NOTE E2 3/23
+CHORD (E3 C4) 1/4
+BPM 65
+CHORD (G#3 E4) 1/4
+NOTE A4 1/4
+
+; ----------- measure 12 --- beat  16.5 --- time signature 3/8
+
+BPM 71
+NOTE B4 1/2 measure12
+NOTE A2 1/7
+NOTE E3 4/37
+CHORD (-E3 E4) 1/7
+CHORD (A3 -E4) 4/37
+BPM 63
+CHORD (-A3 G#4) 1/7
+NOTE -G#4 4/37
+NOTE B4 1/4
+
+; ----------- measure 13 --- beat 18 --- time signature 3/8
+
+BPM 69
+NOTE C5 1/2 measure13
+NOTE 0 1/4
+NOTE E4 1/4
+BPM 71
+NOTE E5 1/4
+NOTE D#5 1/4
+NOTE 0 7/22
+
+; ----------- measure 14 --- beat  19.5 --- time signature 3/8
+
+BPM 69
+NOTE E5 1/4 measure14
+NOTE D#5 2/29
+CHORD (A2 -D#5) 2/17
+CHORD (E3 -D#5) 2/31
+CHORD (-E3 E5) 5/27
+CHORD (A3 -E5) 2/31
+CHORD (-A3 B4) 5/27
+NOTE -B4 2/31
+BPM 66
+NOTE D5 1/4
+NOTE C5 1/4
+
+; ----------- measure 15 --- beat 21 --- time signature 3/8
+
+BPM 69
+NOTE A4 5/27 measure15
+CHORD (E2 -A4) 2/19
+CHORD (E3 -A4) 4/19
+NOTE -E3 1/25
+NOTE G#3 4/19
+CHORD (-G#3 C4) 1/25
+NOTE -C4 4/19
+BPM 65
+NOTE E4 1/4
+NOTE A4 1/4
+
+; ----------- measure 16 --- beat  22.5 --- time signature 3/8
+
+BPM 69
+NOTE B4 1/25 measure16
+CHORD (A2 -B4) 2/15
+CHORD (E3 -B4) 1/4
+CHORD (A3 -B4) 1/13
+NOTE -A3 3/35
+NOTE 0 9/55
+NOTE E4 1/4
+BPM 65
+NOTE C5 1/4
+NOTE B4 3/35
+CHORD (C3 -B4) 2/19
+CHORD (G3 -B4) 2/33
+
+; ----------- measure 17 --- beat 24 --- time signature 3/8
+
+BPM 69
+CHORD (-G3 A4) 4/21 measure17
+CHORD (C4 -A4) 1/4
+NOTE -A4 2/33
+NOTE 0 1/4
+NOTE B4 1/4
+BPM 66
+NOTE C5 4/21
+CHORD (G2 -C5) 2/33
+CHORD (-G2 D5) 1/23
+CHORD (G3 -D5) 6/29
+
+; ----------- measure 18 --- beat  25.5 --- time signature 3/8
+
+BPM 68
+CHORD (-G3 E5) 1/23 measure18
+CHORD (B3 -E5) 1/4
+NOTE -E5 16/35
+NOTE G4 1/4
+BPM 69
+NOTE F5 1/23
+CHORD (A2 -F5) 2/19
+CHORD (E3 -F5) 4/39
+CHORD (-E3 E5) 4/27
+CHORD (A3 -E5) 4/39
+
+; ----------- measure 19 --- beat 27 --- time signature 3/8
+
+BPM 70
+CHORD (-A3 D5) 4/27 measure19
+NOTE -D5 0.602083
+NOTE F4 4/27
+CHORD (E2 -F4) 4/39
+BPM 68
+CHORD (E3 E5) 1/4
+CHORD (E4 D5) 3/16
+NOTE -D5 1/16
+
+; ----------- measure 20 --- beat  28.5 --- time signature 3/8
+
+BPM 70
+NOTE C5 1/2 measure20
+CHORD (E4 -C5) 1/4
+CHORD (E4 E5) 3/16
+NOTE -E4 1/16
+BPM 69
+NOTE D5 1/39
+CHORD (-D5 D#5) 7/31
+CHORD (C5 -D#5) 1/39
+CHORD (-C5 E5) 3/16
+NOTE -C5 1/26
+BPM 69
+
+; ----------- measure 21 --- beat 30 --- time signature 3/8
+
+BPM 66
+NOTE B4 1/2 measure21
+NOTE 0 1/39
+NOTE D#5 7/31
+CHORD (E4 -D#5) 1/39
+CHORD (-E4 E5) 3/16
+NOTE -E4 1/26
+BPM 70
+NOTE E5 3/16
+NOTE 0 5/16
+
+; ----------- measure 22 --- beat  31.5 --- time signature 3/8
+
+BPM 67
+NOTE 0 1/4 measure22
+NOTE E5 1/4
+NOTE E6 3/16
+NOTE 0 9/16
+BPM 71
+NOTE D#5 1/4
+NOTE 0 8/29
+
+; ----------- measure 23 --- beat 33 --- time signature 3/8
+
+BPM 68
+NOTE E5 3/16 measure23
+NOTE 0 2/23
+NOTE A2 6/41
+NOTE E3 1/4
+NOTE A3 2/25
+CHORD (-A3 D#5) 6/35
+NOTE -D#5 2/25
+BPM 67
+NOTE E5 1/4
+NOTE D#5 1/4
+
+; ----------- measure 24 --- beat  34.5 --- time signature 3/8
+
+BPM 65
+NOTE E5 6/35 measure24
+CHORD (E2 -E5) 2/25
+CHORD (-E2 D#5) 1/20
+CHORD (E3 -D#5) 1/5
+CHORD (-E3 E5) 1/20
+CHORD (G#3 -E5) 1/5
+CHORD (-G#3 B4) 1/20
+NOTE -B4 1/5
+BPM 63
+NOTE D5 1/4
+NOTE C5 1/4
+
+; ----------- measure 25 --- beat 36 --- time signature 3/8
+
+BPM 69
+NOTE A4 1/20 measure25
+CHORD (A2 -A4) 1/7
+CHORD (E3 -A4) 1/4
+CHORD (A3 -A4) 1/17
+NOTE -A3 4/21
+NOTE 0 1/17
+NOTE C4 1/4
+BPM 65
+NOTE E4 1/4
+NOTE A4 1/4
+
+; ----------- measure 26 --- beat  37.5 --- time signature 3/8
+
+BPM 71
+NOTE B4 1/2 measure26
+NOTE 0 1/4
+NOTE E4 1/4
+BPM 63
+NOTE G#4 1/4
+NOTE B4 3/25
+CHORD (A2 -B4) 4/31
+
+; ----------- measure 27 --- beat 39 --- time signature 3/8
+
+BPM 69
+CHORD (E3 C5) 1/4 measure27
+CHORD (A3 -C5) 1/4
+NOTE 0 1/4
+NOTE E4 1/4
+BPM 70
+NOTE E5 1/4
+CHORD (E2 D#5) 2/19
+CHORD (E3 -D#5) 6/41
+
+; ----------- measure 28 --- beat  40.5 --- time signature 3/8
+
+BPM 70
+CHORD (-E3 E5) 2/19 measure28
+CHORD (G#3 -E5) 6/41
+CHORD (-G#3 D#5) 2/19
+NOTE -D#5 6/41
+NOTE E5 1/4
+NOTE B4 1/4
+BPM 67
+NOTE D5 2/19
+CHORD (A2 -D5) 2/15
+CHORD (E3 -D5) 0.012500
+CHORD (-E3 C5) 5/21
+CHORD (A3 -C5) 0.012500
+
+; ----------- measure 29 --- beat 42 --- time signature 3/8
+
+BPM 69
+CHORD (-A3 A4) 5/21 measure29
+NOTE -A4 5/19
+NOTE 0 1/4
+NOTE C4 4/21
+CHORD (C3 -C4) 2/33
+BPM 65
+CHORD (-C3 E4) 1/23
+CHORD (G3 -E4) 6/29
+CHORD (-G3 A4) 1/23
+CHORD (C4 -A4) 6/29
+
+; ----------- measure 30 --- beat  43.5 --- time signature 3/8
+
+BPM 69
+CHORD (-C4 B4) 1/23 measure30
+NOTE -B4 16/35
+NOTE 0 1/4
+NOTE E4 1/23
+CHORD (G2 -E4) 2/19
+CHORD (G3 -E4) 4/39
+BPM 67
+CHORD (-G3 C5) 4/27
+CHORD (B3 -C5) 4/39
+CHORD (-B3 B4) 4/27
+NOTE -B4 4/39
+
+; ----------- measure 31 --- beat 45 --- time signature 3/8
+
+BPM 67
+NOTE A4 1/2 measure31
+NOTE 0 4/27
+NOTE A2 4/39
+CHORD (E3 B4) 1/4
+BPM 66
+CHORD (A3 C5) 1/4
+NOTE D5 1/4
+
+; ----------- measure 32 --- beat  46.5 --- time signature 3/8
+
+BPM 68
+NOTE E5 1/2 measure32
+CHORD (E2 -E5) 2/19
+CHORD (E3 -E5) 1/7
+CHORD (-E3 G4) 2/19
+CHORD (E4 -G4) 1/7
+BPM 69
+CHORD (-E4 F5) 1/23
+NOTE -F5 6/29
+NOTE E5 1/4
+
+; ----------- measure 33 --- beat 48 --- time signature 3/8
+
+BPM 70
+NOTE D5 2/19 measure33
+CHORD (E4 -D5) 1/4
+CHORD (-D5 E5) 3/16
+NOTE -D5 3/35
+CHORD (-D5 D#5) 3/25
+CHORD (F4 -D#5) 4/31
+CHORD (-F4 E5) 3/25
+BPM 68
+NOTE E5 1/4
+NOTE D5 1/4
+
+; ----------- measure 34 --- beat  49.5 --- time signature 3/8
+
+BPM 70
+NOTE C5 4/31 measure34
+CHORD (-C5 D#5) 1/4
+CHORD (-C5 E5) 3/16
+NOTE -C5 7/38
+NOTE E4 1/4
+BPM 69
+NOTE D5 1/4
+NOTE C5 1/4
+
+; ----------- measure 35 --- beat 51 --- time signature 3/8
+
+BPM 69
+NOTE B4 1/2 measure35
+NOTE 0 1/4
+NOTE E4 1/4
+BPM 70
+NOTE E5 3/16
+NOTE 0 4/21
+NOTE A2 3/25
+
+; ----------- measure 36 --- beat  52.5 --- time signature 3/8
+
+BPM 67
+NOTE -A2 1/39 measure36
+NOTE E3 7/31
+CHORD (-E3 E5) 1/39
+CHORD (A3 -E5) 7/31
+CHORD (-A3 E6) 1/39
+NOTE -E6 6/37
+NOTE 0 9/16
+BPM 71
+NOTE D#5 1/39
+CHORD (E2 -D#5) 4/31
+CHORD (E3 -D#5) 2/21
+
+; ----------- measure 37 --- beat 54 --- time signature 3/8
+
+BPM 68
+CHORD (-E3 E5) 2/13 measure37
+CHORD (G#3 -E5) 1/29
+NOTE -G#3 5/23
+NOTE 0 9/26
+NOTE D#5 1/4
+BPM 67
+NOTE E5 2/13
+CHORD (A2 -E5) 2/21
+CHORD (-A2 D#5) 1/22
+CHORD (E3 -D#5) 8/39
+
+; ----------- measure 38 --- beat  55.5 --- time signature 3/8
+
+BPM 67
+CHORD (-E3 E5) 1/22 measure38
+CHORD (A3 -E5) 8/39
+CHORD (-A3 D#5) 1/22
+NOTE -D#5 8/39
+NOTE E5 1/4
+NOTE B4 1/4
+BPM 63
+NOTE D5 1/4
+NOTE C5 1/4
+
+; ----------- measure 39 --- beat 57 --- time signature 3/8
+
+BPM 69
+NOTE A4 1/2 measure39
+NOTE 0 1/4
+NOTE C4 7/31
+CHORD (A2 -C4) 1/39
+BPM 65
+CHORD (-A2 E4) 2/19
+CHORD (E3 -E4) 6/41
+CHORD (-E3 A4) 2/19
+CHORD (A3 -A4) 6/41
+
+; ----------- measure 40 --- beat  58.5 --- time signature 3/8
+
+BPM 71
+CHORD (-A3 B4) 2/19 measure40
+NOTE -B4 15/38
+NOTE 0 1/4
+NOTE E4 2/19
+CHORD (E2 -E4) 2/19
+CHORD (E3 -E4) 1/24
+BPM 63
+CHORD (-E3 G#4) 5/24
+CHORD (G#3 -G#4) 1/24
+CHORD (-G#3 B4) 5/24
+NOTE -B4 1/24
+
+; ----------- measure 41 --- beat 60 --- time signature 3/8
+
+BPM 69
+NOTE C5 1/2 measure41
+NOTE 0 5/24
+NOTE A2 1/24
+CHORD (-A2 E4) 1/11
+CHORD (E3 -E4) 3/19
+BPM 71
+CHORD (-E3 E5) 1/11
+NOTE -E5 3/19
+NOTE D#5 1/4
+
+; ----------- measure 42 --- beat  61.5 --- time signature 3/8
+
+BPM 69
+NOTE E5 1/4 measure42
+NOTE D#5 1/4
+NOTE E5 1/4
+NOTE B4 1/4
+BPM 63
+NOTE D5 1/4
+NOTE C5 1/4
+
+; ----------- measure 43 --- beat 63 --- time signature 3/8
+
+BPM 69
+NOTE A4 1/2 measure43
+NOTE 0 1/4
+NOTE C4 1/4
+BPM 65
+NOTE E4 1/4
+NOTE A4 1/4
+
+; ----------- measure 44 --- beat  64.5 --- time signature 3/8
+
+BPM 67
+NOTE B4 1/2 measure44
+NOTE 0 1/4
+NOTE E4 1/4
+BPM 61
+NOTE C5 1/4
+NOTE B4 1/4
+
+; ----------- measure 45 --- beat 66 --- time signature 3/8
+
+BPM 66
+NOTE A4 1/2 measure45
+BPM 44
+
+; ----------- measure 46 --- beat  67.5 --- time signature 3/8
+
+BPM 68
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 47 --- beat 69 --- time signature 3/8
+
+BPM 65
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 48 --- beat  70.5 --- time signature 3/8
+
+BPM 67
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 49 --- beat 72 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 50 --- beat  73.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 51 --- beat 75 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 52 --- beat  76.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 53 --- beat 78 --- time signature 3/8
+
+BPM 70
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 54 --- beat  79.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 55 --- beat 81 --- time signature 3/8
+
+BPM 70
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 56 --- beat  82.5 --- time signature 3/8
+
+BPM 70
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 57 --- beat 84 --- time signature 3/8
+
+BPM 64
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 58 --- beat  85.5 --- time signature 3/8
+
+BPM 67
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 59 --- beat 87 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 60 --- beat  88.5 --- time signature 3/8
+
+BPM 68
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 61 --- beat 90 --- time signature 3/8
+
+BPM 68
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 62 --- beat  91.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 63 --- beat 93 --- time signature 3/8
+
+BPM 71
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 64 --- beat  94.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 65 --- beat 96 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 66 --- beat  97.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 67 --- beat 99 --- time signature 3/8
+
+BPM 70
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 68 --- beat 100.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 69 --- beat 102 --- time signature 3/8
+
+BPM 68
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 70 --- beat 103.5 --- time signature 3/8
+
+BPM 70
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 71 --- beat 105 --- time signature 3/8
+
+BPM 70
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 72 --- beat 106.5 --- time signature 3/8
+
+BPM 66
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 73 --- beat 108 --- time signature 3/8
+
+BPM 67
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 74 --- beat 109.5 --- time signature 3/8
+
+BPM 68
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 75 --- beat 111 --- time signature 3/8
+
+BPM 67
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 76 --- beat 112.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 77 --- beat 114 --- time signature 3/8
+
+BPM 71
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 78 --- beat 115.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 79 --- beat 117 --- time signature 3/8
+
+BPM 68
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 80 --- beat 118.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 81 --- beat 120 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 82 --- beat 121.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 83 --- beat 123 --- time signature 3/8
+
+BPM 71
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 84 --- beat 124.5 --- time signature 3/8
+
+BPM 71
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 85 --- beat 126 --- time signature 3/8
+
+BPM 71
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 86 --- beat 127.5 --- time signature 3/8
+
+BPM 72
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 87 --- beat 129 --- time signature 3/8
+
+BPM 72
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 88 --- beat 130.5 --- time signature 3/8
+
+BPM 70
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 89 --- beat 132 --- time signature 3/8
+
+BPM 70
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 90 --- beat 133.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 91 --- beat 135 --- time signature 3/8
+
+BPM 70
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 92 --- beat 136.5 --- time signature 3/8
+
+BPM 71
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 93 --- beat 138 --- time signature 3/8
+
+BPM 74
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 94 --- beat 139.5 --- time signature 3/8
+
+BPM 72
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 95 --- beat 141 --- time signature 3/8
+
+BPM 72
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 96 --- beat 142.5 --- time signature 3/8
+
+BPM 70
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 97 --- beat 144 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 98 --- beat 145.5 --- time signature 3/8
+
+BPM 67
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 99 --- beat 147 --- time signature 3/8
+
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 100 --- beat 148.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 101 --- beat 150 --- time signature 3/8
+
+BPM 70
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 102 --- beat 151.5 --- time signature 3/8
+
+BPM 71
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 103 --- beat 153 --- time signature 3/8
+
+BPM 73
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 104 --- beat 154.5 --- time signature 3/8
+
+BPM 72
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 105 --- beat 156 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 106 --- beat 157.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 107 --- beat 159 --- time signature 3/8
+
+BPM 71
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 108 --- beat 160.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 109 --- beat 162 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 110 --- beat 163.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 111 --- beat 165 --- time signature 3/8
+
+BPM 70
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 112 --- beat 166.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 113 --- beat 168 --- time signature 3/8
+
+BPM 68
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 114 --- beat 169.5 --- time signature 3/8
+
+BPM 70
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 115 --- beat 171 --- time signature 3/8
+
+BPM 70
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 116 --- beat 172.5 --- time signature 3/8
+
+BPM 66
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 117 --- beat 174 --- time signature 3/8
+
+BPM 67
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 118 --- beat 175.5 --- time signature 3/8
+
+BPM 68
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 119 --- beat 177 --- time signature 3/8
+
+BPM 68
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 120 --- beat 178.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 121 --- beat 180 --- time signature 3/8
+
+BPM 71
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 122 --- beat 181.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 123 --- beat 183 --- time signature 3/8
+
+BPM 71
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 124 --- beat 184.5 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 125 --- beat 186 --- time signature 3/8
+
+BPM 69
+NOTE 0 1.5 ; empty measure
+
+; ----------- measure 126 --- beat 187.5 --- time signature 3/8
+
+BPM 50

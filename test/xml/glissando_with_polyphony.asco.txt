@@ -1,0 +1,47 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: glissando_with_polyphony.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0
+; Converted to Antescofo on Wed May 27 07:59:07 2015
+; Credits: Simple glissando
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+MULTI ((F4 C5) -> (D4 A4)) 2 measure1
+CHORD (D4 A4) 2
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+NOTE 0 3 measure2
+NOTE C3 1
+
+; ----------- measure 3 --- beat 8 --- time signature 4/4
+
+MULTI ((C3 F4 C5) -> (C3 E4 B4)) 1 measure3
+MULTI ((E4 B4) -> (D4 A4)) 1
+CHORD (D4 A4) 2
+
+; ----------- measure 4 --- beat 12 --- time signature 4/4
+
+NOTE 0 2 measure4
+MULTI ((F4 C5)' -> (D4 A4)') 2
+
+; ----------- measure 5 --- beat 16 --- time signature 4/4
+
+TRILL ((D4 A4)) 2 measure5
+NOTE 0 2
+
+; ----------- measure 6 --- beat 20 --- time signature 4/4
+
+NOTE 0 2 measure6
+MULTI ((F4 C5)' -> (D4 A4)') 2
+
+; ----------- measure 7 --- beat 24 --- time signature 4/4
+
+TRILL ((D4 A4)) 2 measure7
+NOTE 0 2

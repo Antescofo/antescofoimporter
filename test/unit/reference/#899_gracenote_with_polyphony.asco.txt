@@ -1,0 +1,26 @@
+; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: gracenote_with_polyphony.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0
+; Converted to Antescofo on Thu Jun 11 23:55:43 2015
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+CHORD (D4 A4) 1 measure1
+CHORD (-D4 C5) 0
+CHORD (-D4 A#4) 1
+CHORD (-D4 A4) 1/2
+NOTE 0 3/2
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+CHORD (A3 E4 G4) 1 measure2
+CHORD (-A3 -E4 A4) 0
+CHORD (-A3 -E4 B4) 0
+CHORD (-A3 -E4 C5) 1
+NOTE 0 2
