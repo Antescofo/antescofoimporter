@@ -27,6 +27,7 @@
 #include <sstream>
 #include <fstream>
 #include <algorithm>
+#include <stdio.h>
 #include "ConvertUTF.h"
 
 using namespace antescofo;
@@ -578,53 +579,170 @@ void MusicXmlImporter::processDirection( TiXmlNode* direction )
     }
 }
 
+float MusicXmlImporter::getBeatDurationFromNoteType(const char* unit)
+{
+    if ( unit )
+    {
+        if ( strcmp(unit, "maxima") == 0 )
+        {
+            return 32.;
+        }
+        else if ( strcmp(unit, "long") == 0 )
+        {
+            return 16.;
+        }
+        else if ( strcmp(unit, "breve") == 0 )
+        {
+            return 8.;
+        }
+        else if ( strcmp(unit, "whole") == 0 )
+        {
+            return 4.;
+        }
+        else if ( strcmp(unit, "half") == 0 )
+        {
+            return 2;
+        }
+        else if ( strcmp(unit, "eighth") == 0 )
+        {
+            return 0.5;
+        }
+        else if ( strcmp(unit, "16th") == 0 )
+        {
+            return 0.25;
+        }
+        else if ( strcmp(unit, "32nd") == 0 )
+        {
+            return (float)1/8;
+        }
+        else if ( strcmp(unit, "64th") == 0 )
+        {
+            return (float)1/16;
+        }
+        else if ( strcmp(unit, "128th") == 0 )
+        {
+            return (float)1/32;
+        }
+        else if ( strcmp(unit, "256th") == 0 )
+        {
+            return (float)1/64;
+        }
+        else if ( strcmp(unit, "512th") == 0 )
+        {
+            return (float)1/128;
+        }
+        else if ( strcmp(unit, "1024th") == 0 )
+        {
+            return (float)1/256;
+        }
+        else
+            return 1.;
+    }
+    
+    return 1.;
+}
+
+/* Handle 3 cases:
+ * - 1.     tempo Mark : quarter = 90 BPM
+ * - 2.     tempo modulation : quarter = eighth
+ * - 1 bis. tempo Mark using "tempo" attribute
+ */
 bool MusicXmlImporter::processTempo( TiXmlNode* item )
 {
     float quarterNoteValue = 0.0;
     float quarterBase = 1.0;
     float beats = -1.0;
     TiXmlNode* beatUnit = item->FirstChildElement( "beat-unit" );
-    TiXmlNode* perMinute = item->FirstChildElement( "per-minute" );
-    if ( beatUnit && perMinute )
+    //TiXmlNode* perMinute = item->FirstChildElement( "per-minute" );
+    bool tempoMark = false, tempoModulation = false;    // indicate
+    float quarterBaseBeforeModulation = 1.0;
+    unsigned short dotCount = 0.;
+    
+    if (beatUnit)
     {
+        // Read quarter time duration of beat unit
         const char* unit = beatUnit->ToElement()->GetText();
         if ( unit )
+            quarterBase = getBeatDurationFromNoteType(unit);
+        
+        // Process other children
+        TiXmlNode* child = item->IterateChildren(beatUnit);
+        while ( child )
         {
-            if ( strcmp(unit, "whole") == 0 )
+            // Case 1 : tempo MARK
+            if (!strcmp( child->Value(), "per-minute"))
             {
-                quarterBase = 4.0;
+                tempoMark = true;
+                // Read tempo value
+                //// First try: convert string as float
+                beats = atof( child->ToElement()->GetText() );
+                //// Second try: extract first float in string
+                if (beats <= 0.0)
+                {
+                    std::sscanf(child->ToElement()->GetText(), "%*[^0123456789]%f", &beats);
+                }
+                //std::cerr << "BPM " << beats << std::endl;
+                if ( beats <= 0.0 )
+                    return false;
+                quarterNoteValue = beats * quarterBase;
+                break;  // parsing of Tempo Mark is over, so we can exit loop
             }
-            else if ( strcmp(unit, "half") == 0 )
+            // Case 2 : tempo MODULATION
+            else if (!strcmp( child->Value(), "beat-unit"))
             {
-                quarterBase = 2;
+                tempoModulation = true;
+                // Apply dots on beat unit
+                if (dotCount)
+                    quarterBase *= 2. - powf(2.,-dotCount);
+                dotCount = 0;
+                // Store PREVIOUS beat unit
+                quarterBaseBeforeModulation = quarterBase;
+                // Reinit dot counter;
+                // Read quarter time duration of SECOND beat unit
+                const char* unit2 = child->ToElement()->GetText();
+                if ( unit2 )
+                    quarterBase = getBeatDurationFromNoteType(unit2);
             }
-            else if ( strcmp(unit, "eighth") == 0 )
+            else if (!strcmp( child->Value(), "beat-unit-dot"))
             {
-                quarterBase = 0.5;
+                ++dotCount;
             }
-            else if ( strcmp(unit, "16th") == 0 )
-            {
-                quarterBase = 0.25;
-            }
+            
+            child = item->IterateChildren(child);
         }
-        if ( item->FirstChildElement( "beat-unit-dot" ) != nullptr )
-            quarterBase *= 1.5;
-        beats = atof( perMinute->ToElement()->GetText() );
-        if ( beats <= 0.0 )
-            return false;
-        quarterNoteValue = beats * quarterBase;
+        
+        // Apply dots on beat unit
+        if (dotCount)
+            quarterBase *= 2. - powf(2.,-dotCount);
+        dotCount = 0;
     }
-    else
+    if (!tempoMark && !tempoModulation) // Case 1 bis. simple tempo indication
     {
         if ( item->ToElement()->QueryFloatAttribute( "tempo", &quarterNoteValue ) == TIXML_SUCCESS )
             beats = quarterNoteValue;
     }
+    // Case of metric modulation
+    else if ( tempoModulation )
+    {
+        if (quarterBase != quarterBaseBeforeModulation) // do nothing if this is not really a modulation
+        {
+            currentOriginalBase_ = quarterBase;
+            // Compute new tempo using règle de trois
+            currentQuarterNoteTempo_ *= (quarterBase / quarterBaseBeforeModulation);
+            currentOriginalBeats_ *= (quarterBase / quarterBaseBeforeModulation);
+            // Insert tempo mark as a "generated" one (@modulate)
+            model_.appendEvent( new BeatPerMinute( currentMeasure_, currentQuarterNoteTempo_ * currentOriginalBase_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_, true ) );
+        }
+        return true;
+    }
+    
+    // Case of tempo mark
     if ( quarterNoteValue > 0.0 )
     {
-        currentQuarterNoteTempo_ = quarterNoteValue;
-        model_.appendEvent( new BeatPerMinute( currentMeasure_, quarterNoteValue * currentMetricFactor_, beats, quarterBase ) );
-        currentOriginalBeats_ = beats;
         currentOriginalBase_ = quarterBase;
+        currentQuarterNoteTempo_ = quarterNoteValue;
+        currentOriginalBeats_ = beats;
+        model_.appendEvent( new BeatPerMinute( currentMeasure_, currentQuarterNoteTempo_ * currentOriginalBase_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_ ) );
         return true;
     }
     return false;
