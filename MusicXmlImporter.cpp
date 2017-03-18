@@ -684,6 +684,11 @@ bool MusicXmlImporter::processTempo( TiXmlNode* item )
                 //std::cerr << "BPM " << beats << std::endl;
                 if ( beats <= 0.0 )
                     return false;
+                // Apply dots on beat unit
+                if (dotCount)
+                    quarterBase *= 2. - powf(2.,-dotCount);
+                dotCount = 0;
+                // Convert tempo Mark to quarter note
                 quarterNoteValue = beats * quarterBase;
                 break;  // parsing of Tempo Mark is over, so we can exit loop
             }
@@ -731,7 +736,7 @@ bool MusicXmlImporter::processTempo( TiXmlNode* item )
             currentQuarterNoteTempo_ *= (quarterBase / quarterBaseBeforeModulation);
             currentOriginalBeats_ *= (quarterBase / quarterBaseBeforeModulation);
             // Insert tempo mark as a "generated" one (@modulate)
-            model_.appendEvent( new BeatPerMinute( currentMeasure_, currentQuarterNoteTempo_ * currentOriginalBase_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_, true ) );
+            model_.appendEvent( new BeatPerMinute( currentMeasure_, currentQuarterNoteTempo_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_, true ) );
         }
         return true;
     }
@@ -742,7 +747,7 @@ bool MusicXmlImporter::processTempo( TiXmlNode* item )
         currentOriginalBase_ = quarterBase;
         currentQuarterNoteTempo_ = quarterNoteValue;
         currentOriginalBeats_ = beats;
-        model_.appendEvent( new BeatPerMinute( currentMeasure_, currentQuarterNoteTempo_ * currentOriginalBase_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_ ) );
+        model_.appendEvent( new BeatPerMinute( currentMeasure_, currentQuarterNoteTempo_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_ ) );
         return true;
     }
     return false;
