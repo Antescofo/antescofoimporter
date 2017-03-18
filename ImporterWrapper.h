@@ -69,6 +69,7 @@ namespace antescofo
         bool                hasOriginalPitches() const;
         void                set3_8_compound( bool status );
         bool                is3_8_compound() const;
+        bool                displayMetadata() const;
         
     private:
         void addImporter( Importer* importer );
@@ -86,6 +87,7 @@ namespace antescofo
         bool                    quarterNoteTempo_;
         bool                    treat_3_8_as_compound_;
         bool                    originalAccidentals_;
+        bool                    displayMetadata_;
     };
 }
 

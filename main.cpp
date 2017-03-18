@@ -67,6 +67,7 @@ void displayHelp()
          << bright << "  -unittest" << normal << "=[folder path] will process unit tests (for internal use.)" << endl
          << bright << "  -verbose" << normal << " / -v for (too!) many details." << endl
          << bright << "  -help" << normal << " / -h displays these info." << endl
+         << bright << "  -metadata" << normal << " prepend score with metadata" << endl
          << endl;
 }
 

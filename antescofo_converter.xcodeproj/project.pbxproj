@@ -82,6 +82,10 @@
 		05EE0B481AFE089800DD86D1 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05EE0B3E1AFE089800DD86D1 /* tinyxml.cpp */; };
 		05EE0B4A1AFE089800DD86D1 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05EE0B411AFE089800DD86D1 /* tinyxmlerror.cpp */; };
 		05EE0B4C1AFE089800DD86D1 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05EE0B431AFE089800DD86D1 /* tinyxmlparser.cpp */; };
+		457949FA1E7C86B200B7C101 /* rational.h in Headers */ = {isa = PBXBuildFile; fileRef = 457949F81E7C86B200B7C101 /* rational.h */; };
+		457949FB1E7C86B200B7C101 /* rational.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457949F91E7C86B200B7C101 /* rational.cpp */; };
+		457949FC1E7C86B200B7C101 /* rational.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457949F91E7C86B200B7C101 /* rational.cpp */; };
+		457949FD1E7C86B200B7C101 /* rational.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457949F91E7C86B200B7C101 /* rational.cpp */; };
 		723DE56F1B25E007003AFB66 /* ConvertUTF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 723DE56D1B25E007003AFB66 /* ConvertUTF.cpp */; };
 		CFDE2BAF1C0322DD00FC3D64 /* antescofo_importer in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05EE0B301AFE083A00DD86D1 /* antescofo_importer */; };
 /* End PBXBuildFile section */
@@ -195,6 +199,8 @@
 		05EE0B3F1AFE089800DD86D1 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
 		05EE0B411AFE089800DD86D1 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
 		05EE0B431AFE089800DD86D1 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
+		457949F81E7C86B200B7C101 /* rational.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rational.h; sourceTree = SOURCE_ROOT; };
+		457949F91E7C86B200B7C101 /* rational.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rational.cpp; sourceTree = SOURCE_ROOT; };
 		723DE56D1B25E007003AFB66 /* ConvertUTF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConvertUTF.cpp; sourceTree = "<group>"; };
 		723DE56E1B25E007003AFB66 /* ConvertUTF.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = ConvertUTF.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -342,6 +348,8 @@
 				0554B1641AFE2F2000055EF1 /* ImportModel.h */,
 				05578AAB1B0E699C004AC9CC /* UnitTester.cpp */,
 				05578AAC1B0E699C004AC9CC /* UnitTester.h */,
+				457949F81E7C86B200B7C101 /* rational.h */,
+				457949F91E7C86B200B7C101 /* rational.cpp */,
 				0577FCAA1AFE7DA500D816FF /* Events */,
 				0577FCAB1AFE816100D816FF /* Importers */,
 				05EE0B3A1AFE089800DD86D1 /* xml */,
@@ -374,6 +382,7 @@
 			files = (
 				05C829251BC0439200037C4C /* MidiNoteAction.h in Headers */,
 				0594EC2C1B8678E6005B781F /* ImporterWrapper.h in Headers */,
+				457949FA1E7C86B200B7C101 /* rational.h in Headers */,
 				055675311BC516FD006220AE /* SimpleRational.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,6 +609,7 @@
 				0594EC281B8678AE005B781F /* unzip.cpp in Sources */,
 				0594EC291B8678AE005B781F /* ioapi.cpp in Sources */,
 				0594EC2A1B8678AE005B781F /* extract.cpp in Sources */,
+				457949FC1E7C86B200B7C101 /* rational.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +619,7 @@
 			files = (
 				05D3CE0B1BA36DBA00EE2E38 /* main.m in Sources */,
 				05D3CE091BA36DBA00EE2E38 /* AppDelegate.mm in Sources */,
+				457949FD1E7C86B200B7C101 /* rational.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05681B031B11B387009E9A48 /* unzip.cpp in Sources */,
+				457949FB1E7C86B200B7C101 /* rational.cpp in Sources */,
 				05681B051B11B3AF009E9A48 /* ioapi.cpp in Sources */,
 				05EE0B4A1AFE089800DD86D1 /* tinyxmlerror.cpp in Sources */,
 				0554B16B1AFE35DB00055EF1 /* MidiImporter.cpp in Sources */,

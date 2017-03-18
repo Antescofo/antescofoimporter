@@ -19,6 +19,7 @@
 #include "Event.h"
 #include <string>
 #include <deque>
+#import <vector>
 
 namespace antescofo
 {
@@ -49,12 +50,20 @@ namespace antescofo
         bool  areThereNotesInMeasure( float measure ) const;
         void  beautify();
         
+        void  queryTempi( std::vector<std::string>& tempi );
+        float queryFirstMeasureDuration();
+        std::deque<std::pair<float, std::string> > queryPulseChanges(); //TODO: const;  // retrieve the list of pulse changes
+        void showPulseChangesAsNim( std::ostringstream& stream ); //TODO: const;    // retrieve the list of pulse changes as
+    
+        static float fractionToFloat(std::string& str);
+        
         std::string         displayScoreInfo() const;
         std::ostringstream& getSerialization();
         
     private:
         void serialize();
         void setHeader();
+        void displayMetadata();
         void setDate( std::ostringstream& stream ) const;
         std::deque<Event*>::iterator splitEvent( std::deque<Event*>::iterator it, float splitTime );
         std::deque<Event*>::iterator emplaceEvent( std::deque<Event*>::iterator it, Event* event );

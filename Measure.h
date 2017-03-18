@@ -17,7 +17,9 @@
 #define _ANTESCOFO_IMPORTER_MEASURE_
 
 #include "Event.h"
+#include "rational.h"
 #include <vector>
+#include <deque>
 #include <string>
 
 namespace antescofo
@@ -42,6 +44,10 @@ namespace antescofo
         void                setTimeSignature( const std::string time ) { timeSignature_ = time; }
         float               accumBeats() const { return accumBeats_; }
         
+        rational         getPulseSignature() const; //<! infère et retourne la pulse correspondante à la timeSignature
+        static rational  inferePulseSignature(std::string const& timeSignature);
+        
+        virtual void queryPulseChange(std::deque<std::pair<float, std::string> >& pulseChangePositions) override; // by default, do nothing
         
     private:
         float               beatDuration_;

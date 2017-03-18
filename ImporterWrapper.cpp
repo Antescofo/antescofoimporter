@@ -31,7 +31,8 @@ ImporterWrapper::ImporterWrapper() :
     quarterNoteTempo_       ( false ),
     displayMidiCents_       ( false ),
     treat_3_8_as_compound_  ( false ),
-    originalAccidentals_    ( false )
+    originalAccidentals_    ( false ),
+    displayMetadata_        ( false )
 {
     addImporter( new MusicXmlImporter( *this ) );
     addImporter( new MidiImporter( *this ) );
@@ -107,6 +108,11 @@ bool ImporterWrapper::parseArguments( vector<string>& args )
         else if ( args[i] == "-verbose" || args[i] == "-v" )
         {
             verbose_ = true;
+        }
+        else if ( args[i] == "-metadata" )
+        {
+            displayMetadata_ = true;
+            cout << "  ✔︎ Add metadata in score" << endl;
         }
         else
         {
@@ -374,3 +380,9 @@ bool ImporterWrapper::is3_8_compound() const
 {
     return treat_3_8_as_compound_;
 }
+
+bool ImporterWrapper::displayMetadata() const
+{
+    return displayMetadata_;
+}
+

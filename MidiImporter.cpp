@@ -426,7 +426,8 @@ bool MidiImporter::processTrack( ifstream& stream )
                     unsigned char velocity = 0;
                     if ( !readOnebyte( stream, velocity ) )
                         return false;
-                    accumGlobal_ += handleNote( delta, next, !( status == MIDI_NOTE_OFF || velocity == 0 ) );
+                    handleNote( delta, next, !( status == MIDI_NOTE_OFF || velocity == 0 ) );
+                    accumGlobal_ += delta;
                 }
                 else if ( status == MIDI_NOTE_CONTROL_CHANGE ||
                           status == MIDI_NOTE_PROGRAM_PITCHBEND ||

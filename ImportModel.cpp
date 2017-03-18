@@ -16,6 +16,7 @@
 #include "ImportModel.h"
 #include "ImporterWrapper.h"
 #include "Event.h"
+#include "Measure.h"
 #include "Entry.h"
 #include "Pitch.h"
 #include "BeatPerMinute.h"
@@ -75,6 +76,12 @@ string ImportModel::displayScoreInfo() const
     return scoreInfo;
 }
 
+void ImportModel::displayMetadata()
+{
+    showPulseChangesAsNim(serialization_);
+
+}
+
 void ImportModel::setHeader()
 {
     string path = wrapper_.getInputPath();
@@ -103,6 +110,10 @@ void ImportModel::setHeader()
 void ImportModel::serialize()
 {
     serialization_.str( "" );
+    // rajout begin
+    if (wrapper_.displayMetadata())
+        displayMetadata();
+    // rajout end
     setHeader();
     serialization_ << "; start" << endl;
     auto it = events_.begin();
@@ -563,6 +574,134 @@ void ImportModel::replaceEvent( Event* event )
         ++it;
     }
 }
+
+
+void ImportModel::queryTempi( std::vector<std::string>& tempi )
+{
+    auto it = events_.begin();
+    while ( it != events_.end() )
+    {
+        Event* event = *it;
+        if ( event->type() != Event_BeatPerMinute )
+        {
+            ++it;
+            continue;
+        }
+        ++it;
+    }
+}
+
+float ImportModel::fractionToFloat(std::string& str)
+{
+    std::stringstream sstr (str);
+    int n = 0, d = 1; char c;
+    sstr >> n >> c >> d;
+    return (d ? ((float(n))/d) : 0.f);
+}
+
+/*! @brief  returns duration of first measure (0.0 if no measure)
+ *
+ *  Look for the first measure and returns its beat position
+ *
+ */
+float ImportModel::queryFirstMeasureDuration()
+{
+    for (auto event : events_)
+    {
+        if (event->type() == Event_Measure) // if event is a measure...
+        {
+            Measure* measure = dynamic_cast<Measure*>(event);
+            if (measure->accumBeats())  // accumBeats == 0 means we are on the first measure bar line
+                return (measure->accumBeats() / measure->metricFactor()) ;
+        }
+    }
+    return 0.f;
+}
+
+
+std::deque<std::pair<float, std::string> > ImportModel::queryPulseChanges()
+{
+    // Create an empty deque
+    std::deque<std::pair<float, std::string> > pulseChangePositions;
+    // Pass it to events
+    for ( auto const& event : events_ )
+    {
+        event->queryPulseChange(pulseChangePositions);  // so far, only MEASURES append something
+    }
+    
+    return pulseChangePositions;
+}
+
+
+void ImportModel::showPulseChangesAsNim( std::ostringstream& stream ) //TODO: const;
+{
+    // STEP 1. Pulse changes
+    // Get pulses
+    std::deque<std::pair<float, std::string> > pulseChanges = queryPulseChanges();
+    // Handle empty
+    if (pulseChanges.empty())
+    {
+        pulseChanges.emplace_back(0.f, "1");
+        cerr << "Warning, score has no pulses (no measures?)" << endl;
+    }
+    // Write them as NIM
+    stream << "$pulses_nim := NIM {"; // open NIM
+    bool firstItemWritten = false;
+    float lastPosition = 0.0;
+    std::string lastPulse = "";
+    for (auto const& pair : pulseChanges)
+    {
+        float const currentPosition = pair.first;
+        std::string const currentPulse = pair.second;
+        if (!firstItemWritten || (currentPosition > lastPosition))
+        {
+            if (currentPulse == "")     // security
+            {
+                std::cerr << "Warning! empty pulse at beat position " << currentPosition << endl;
+                continue;
+            }
+            
+            if (!firstItemWritten)  // case of first element
+            {
+                // Write content
+                stream << " " << currentPosition << " " << currentPulse;
+                // Set flag
+                firstItemWritten = true;
+            }
+            else    // case of further elements
+            {
+                // Write separator + content
+                stream << ", " << (currentPosition - lastPosition) << " " << lastPulse << ", 0 " << currentPulse;
+            }
+            // Update Position
+            lastPosition = currentPosition;
+            lastPulse = currentPulse;
+        }
+    }
+    // Case of NIM with one element: re-write last value with non-zero delay
+    if (pulseChanges.size() == 1)
+        stream << ", 1 " << pulseChanges.back().second;
+    // Close Nim
+    stream << " }" << endl;
+    
+    // STEP 2. Initial pulse phase
+    float const initialPulse = rational(pulseChanges.front().second).toFloat();
+    float const pickupDuration = queryFirstMeasureDuration();
+    //std::cerr << "pickup duration is " << pickupDuration << ", initial pulse is " << initialPulse << std::endl;
+    if (pickupDuration > 0.f)
+    {
+        float const phase = fmod(pickupDuration, initialPulse);
+        if (phase)
+        {
+            float const delta = (pickupDuration-initialPulse);
+            stream << "$pulse_pos := " <<  delta << endl;
+        }
+    }
+    
+    stream << endl;
+}
+
+
 
 void ImportModel::beautify()
 {
