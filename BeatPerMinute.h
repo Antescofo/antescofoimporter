@@ -35,6 +35,7 @@ namespace antescofo
         float       start() const override;
         
         float   tempo() const { return bpm_; }
+        rational beatunit() const;
         
     private:
         float   bpm_;

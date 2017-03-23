@@ -16,6 +16,7 @@
 #ifndef _ANTESCOFO_IMPORTER_EVENT_
 #define _ANTESCOFO_IMPORTER_EVENT_
 
+#include "rational.h"
 #include <stdio.h>
 #include <sstream>
 #include <math.h>
@@ -100,7 +101,8 @@ namespace antescofo
         bool  isFirstInMeasure() const;
         void  setFirstInMeasure( bool status );
         
-        virtual void queryPulseChange(std::deque<std::pair<float, std::string> >& pulseChangePositions) { } // by default, do nothing
+        //virtual void queryPulseChange(std::deque<std::pair<float, std::string> >& pulseChangePositions) { } // by default, do nothing
+        //virtual void queryTempoBeatUnitChanges(std::deque<std::pair<float, rational> >&) const { } // by default, do nothing
         
     protected:
         bool isEqual( float t1, float t2 ) const;

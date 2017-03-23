@@ -83,6 +83,11 @@ rational::operator float() const
 	return toFloat(); 
 }
 
+rational::operator bool () const
+{
+    return (fNumerator);
+}
+
 /*rational::operator int() const
 { 
 	const double x = toDouble();

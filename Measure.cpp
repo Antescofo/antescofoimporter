@@ -102,11 +102,13 @@ int Measure::keyAccidentals() const
     return keyAccidentals_;
 }
 
+/*
 rational Measure::getPulseSignature() const
 {
     return inferePulseSignature(timeSignature());
 }
-
+*/
+/*
 rational Measure::inferePulseSignature(std::string const& timeSignature)
 {
     // if there is an error, returns 1 = 1/1
@@ -138,7 +140,7 @@ rational Measure::inferePulseSignature(std::string const& timeSignature)
     }
     else if (denom == 16)    // cas particulier: 3/16, 6/16, 9/16, 12/16, etc. --> pulse = 3/4 // sinon, pulse = 1/4
     {
-        if ((num % 3 == 0) /*&& (num > 3)*/)
+        if ((num % 3 == 0)) //&& (num > 3)
             pulse.set(3,4);     // doted eight note
         else
             pulse.set(1,4);           // sixteenth note
@@ -152,9 +154,9 @@ rational Measure::inferePulseSignature(std::string const& timeSignature)
     }
     
     return pulse;
-}
+}*/
 
-
+/*
 void Measure::queryPulseChange(std::deque<std::pair<float, std::string> > & pulseChangePositions) // by default, do nothing
 {
     std::string const& lastPulse = (pulseChangePositions.empty() ? "" : pulseChangePositions.back().second);
@@ -182,4 +184,13 @@ void Measure::queryPulseChange(std::deque<std::pair<float, std::string> > & puls
         // get current position
         pulseChangePositions.emplace_back(currentPosition, currentPulse);
     }
-}
+}*/
+
+/*
+void Measure::queryTempoBeatUnitChanges(std::deque<std::pair<float, rational> >& beatUnitChanges) const
+{
+    // Get last beat unit
+    rational const& lastBeatUnit = (beatUnitChanges.empty() ? rational(0, 1) : beatUnitChanges.back().second);
+    // Get beat unit of current measure
+    rational const& currentBeatUnit = this->getPulseSignature();
+}*/

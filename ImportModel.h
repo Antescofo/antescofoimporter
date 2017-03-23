@@ -17,6 +17,7 @@
 #define _ANTESCOFO_IMPORT_MODEL_
 
 #include "Event.h"
+#include "rational.h"
 #include <string>
 #include <deque>
 #import <vector>
@@ -26,6 +27,8 @@ namespace antescofo
     class Event;
     class ImporterWrapper;
     class Pitch;
+    class QueryHandler;
+    
     
     class ImportModel
     {
@@ -51,10 +54,15 @@ namespace antescofo
         void  beautify();
         
         void  queryTempi( std::vector<std::string>& tempi );
-        float queryFirstMeasureDuration();
-        std::deque<std::pair<float, std::string> > queryPulseChanges(); //TODO: const;  // retrieve the list of pulse changes
-        void showPulseChangesAsNim( std::ostringstream& stream ); //TODO: const;    // retrieve the list of pulse changes as
-    
+        //float queryFirstMeasureDuration();
+        //std::deque<std::pair<float, std::string> > queryPulseChanges(); //TODO: const;  //<! retrieve the list of pulse changes
+        //void showPulseChangesAsNim( std::ostringstream& stream ); //TODO: const;    //<! print the list of pulse changes in ostream
+        
+        //std::deque<std::pair<float, rational> > queryTempoBeatUnitChanges() const;  // retrieve the list of beat units given in tempo marks
+        //void showTempoBeatUnitChangesAsNim( std::ostringstream& stream ) const;  // print the list of beat units in ostream
+
+        QueryHandler performQueries();
+        
         static float fractionToFloat(std::string& str);
         
         std::string         displayScoreInfo() const;
@@ -82,6 +90,44 @@ namespace antescofo
         std::string         fileOrigin_;
         std::string         version_;
         std::string         credits_;
+    };
+    
+    class Measure;
+    class BeatPerMinute;
+    
+    class QueryHandler
+    {
+    public:
+        QueryHandler( ImporterWrapper& );
+        
+        void showQueries(std::ostringstream&) const; //<! show all queries requested by the wrapper_
+        
+        void performQueries(Event const*);
+        void performQueries(Measure const*);
+        void performQueries(BeatPerMinute const*);
+
+    protected:
+        ImporterWrapper&    wrapper_;   //<! the wrapper option will say which queries are performed in performQueries and printed in showQueries
+        
+        // individual queries
+        // Pulse
+        void showPulseChangesAsNim( std::ostringstream& ) const;
+        void queryPulseChange(Measure const*);
+        rational inferePulseSignature(std::string const& timeSignature) const; //<! infère et retourne la pulse correspondante à la timeSignature
+        std::deque<std::pair<float, std::string> > pulseChangePositions;
+        
+        // First measure duration
+        bool queryFirstMeasureDuration(Measure const* measure);
+        float firstMeasureDuration;
+        
+        // Beat unit of tempo indication
+        bool queryTempoBeatUnitChanges(Measure const*);  // retrieve the list of beat units given in tempo marks
+        bool queryTempoBeatUnitChanges(BeatPerMinute const*);
+        void showTempoBeatUnitChangesAsNim( std::ostringstream& ) const;  // print the list of beat units in ostream
+        std::deque<std::pair<float, rational> > tempoBeatUnitChanges;
+        rational currentTimeSignature;  //<! last time signature
+        rational currentTempoMarkBeatUnit;  //<! beat unit of last tempo mark
+        rational currentTempoMarkTimeSignature; //<! time signature of last tempo mark
     };
 }
 

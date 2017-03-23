@@ -44,11 +44,12 @@ namespace antescofo
         void                setTimeSignature( const std::string time ) { timeSignature_ = time; }
         float               accumBeats() const { return accumBeats_; }
         
-        rational         getPulseSignature() const; //<! infère et retourne la pulse correspondante à la timeSignature
-        static rational  inferePulseSignature(std::string const& timeSignature);
+        //rational         getPulseSignature() const; //<! infère et retourne la pulse correspondante à la timeSignature
+        //static rational  inferePulseSignature(std::string const& timeSignature);
         
-        virtual void queryPulseChange(std::deque<std::pair<float, std::string> >& pulseChangePositions) override; // by default, do nothing
-        
+        //virtual void queryPulseChange(std::deque<std::pair<float, std::string> >& pulseChangePositions) override;
+        //virtual void queryTempoBeatUnitChanges(std::deque<std::pair<float, rational> >&) const override;
+
     private:
         float               beatDuration_;
         const float         accumBeats_;

@@ -85,6 +85,7 @@ class rational {
         operator std::string () const;
 		operator double () const;
 		operator float () const;
+        operator bool () const;
 		//operator int () const;
 
         std::string toString() const;

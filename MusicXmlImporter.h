@@ -40,7 +40,7 @@ namespace antescofo
         bool queryTracks( std::vector<std::string>& tracks ) override;
         bool queryScoreInfo() override;
         
-        static float getBeatDurationFromNoteType(const char*);
+        static rational getBeatDurationFromNoteType(const char*);
         
     private:
         bool  retrieveScoreInfo( TiXmlNode* node );

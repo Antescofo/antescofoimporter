@@ -579,25 +579,25 @@ void MusicXmlImporter::processDirection( TiXmlNode* direction )
     }
 }
 
-float MusicXmlImporter::getBeatDurationFromNoteType(const char* unit)
+rational MusicXmlImporter::getBeatDurationFromNoteType(const char* unit)
 {
     if ( unit )
     {
         if ( strcmp(unit, "maxima") == 0 )
         {
-            return 32.;
+            return 32;
         }
         else if ( strcmp(unit, "long") == 0 )
         {
-            return 16.;
+            return 16;
         }
         else if ( strcmp(unit, "breve") == 0 )
         {
-            return 8.;
+            return 8;
         }
         else if ( strcmp(unit, "whole") == 0 )
         {
-            return 4.;
+            return 4;
         }
         else if ( strcmp(unit, "half") == 0 )
         {
@@ -605,41 +605,41 @@ float MusicXmlImporter::getBeatDurationFromNoteType(const char* unit)
         }
         else if ( strcmp(unit, "eighth") == 0 )
         {
-            return 0.5;
+            return rational(1,2);
         }
         else if ( strcmp(unit, "16th") == 0 )
         {
-            return 0.25;
+            return rational(1,4);
         }
         else if ( strcmp(unit, "32nd") == 0 )
         {
-            return (float)1/8;
+            return rational(1,8);
         }
         else if ( strcmp(unit, "64th") == 0 )
         {
-            return (float)1/16;
+            return rational(1,16);
         }
         else if ( strcmp(unit, "128th") == 0 )
         {
-            return (float)1/32;
+            return rational(1,32);
         }
         else if ( strcmp(unit, "256th") == 0 )
         {
-            return (float)1/64;
+            return rational(1,64);
         }
         else if ( strcmp(unit, "512th") == 0 )
         {
-            return (float)1/128;
+            return rational(1,128);
         }
         else if ( strcmp(unit, "1024th") == 0 )
         {
-            return (float)1/256;
+            return rational(1,256);
         }
         else
-            return 1.;
+            return 1;
     }
     
-    return 1.;
+    return 1;
 }
 
 /* Handle 3 cases:

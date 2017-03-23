@@ -78,8 +78,8 @@ string ImportModel::displayScoreInfo() const
 
 void ImportModel::displayMetadata()
 {
-    showPulseChangesAsNim(serialization_);
-
+    QueryHandler queries = performQueries();
+    queries.showQueries(serialization_);
 }
 
 void ImportModel::setHeader()
@@ -599,11 +599,7 @@ float ImportModel::fractionToFloat(std::string& str)
     return (d ? ((float(n))/d) : 0.f);
 }
 
-/*! @brief  returns duration of first measure (0.0 if no measure)
- *
- *  Look for the first measure and returns its beat position
- *
- */
+/*
 float ImportModel::queryFirstMeasureDuration()
 {
     for (auto event : events_)
@@ -617,76 +613,70 @@ float ImportModel::queryFirstMeasureDuration()
     }
     return 0.f;
 }
+*/
 
-
-std::deque<std::pair<float, std::string> > ImportModel::queryPulseChanges()
+void QueryHandler::showPulseChangesAsNim( std::ostringstream& stream ) const
 {
-    // Create an empty deque
-    std::deque<std::pair<float, std::string> > pulseChangePositions;
-    // Pass it to events
-    for ( auto const& event : events_ )
-    {
-        event->queryPulseChange(pulseChangePositions);  // so far, only MEASURES append something
-    }
-    
-    return pulseChangePositions;
-}
+    /// STEP 1. Pulse changes
+    //// Get pulse changes
+    auto const& pulseChanges = pulseChangePositions;
 
-
-void ImportModel::showPulseChangesAsNim( std::ostringstream& stream ) //TODO: const;
-{
-    // STEP 1. Pulse changes
-    // Get pulses
-    std::deque<std::pair<float, std::string> > pulseChanges = queryPulseChanges();
+    //// Write pulse changes them as NIM
+    // 1. (initialization) open NIM
+    stream << "$pulses_nim := NIM {";
+    // 2. (recursion) fill NIM
     // Handle empty
     if (pulseChanges.empty())
     {
-        pulseChanges.emplace_back(0.f, "1");
+        stream << " 0 1, 1 1";
         cerr << "Warning, score has no pulses (no measures?)" << endl;
     }
-    // Write them as NIM
-    stream << "$pulses_nim := NIM {"; // open NIM
-    bool firstItemWritten = false;
-    float lastPosition = 0.0;
-    std::string lastPulse = "";
-    for (auto const& pair : pulseChanges)
+    else
     {
-        float const currentPosition = pair.first;
-        std::string const currentPulse = pair.second;
-        if (!firstItemWritten || (currentPosition > lastPosition))
+        bool firstItemWritten = false;
+        float lastPosition = 0.0;
+        std::string lastPulse = "";
+        for (auto const& pair : pulseChanges)
         {
-            if (currentPulse == "")     // security
+            float const currentPosition = pair.first;
+            std::string const currentPulse = pair.second;
+            if (!firstItemWritten || (currentPosition > lastPosition))
             {
-                std::cerr << "Warning! empty pulse at beat position " << currentPosition << endl;
-                continue;
+                if (currentPulse == "")     // security
+                {
+                    std::cerr << "Warning! empty pulse at beat position " << currentPosition << endl;
+                    continue;
+                }
+                
+                if (!firstItemWritten)  // case of first element
+                {
+                    // Write content
+                    stream << " (" << currentPosition << ") (" << currentPulse << ")";
+                    // Set flag
+                    firstItemWritten = true;
+                }
+                else    // case of further elements
+                {
+                    // Write separator + content
+                    stream << ", (" << (currentPosition - lastPosition) << ") (" << lastPulse << "), (0) (" << currentPulse << ")";
+                }
+                // Update Position
+                lastPosition = currentPosition;
+                lastPulse = currentPulse;
             }
-            
-            if (!firstItemWritten)  // case of first element
-            {
-                // Write content
-                stream << " " << currentPosition << " " << currentPulse;
-                // Set flag
-                firstItemWritten = true;
-            }
-            else    // case of further elements
-            {
-                // Write separator + content
-                stream << ", " << (currentPosition - lastPosition) << " " << lastPulse << ", 0 " << currentPulse;
-            }
-            // Update Position
-            lastPosition = currentPosition;
-            lastPulse = currentPulse;
         }
+        // Case of NIM with one element: re-write last value with non-zero delay
+        if (pulseChanges.size() == 1)
+            stream << ", (1) (" << pulseChanges.back().second << ")";
     }
-    // Case of NIM with one element: re-write last value with non-zero delay
-    if (pulseChanges.size() == 1)
-        stream << ", 1 " << pulseChanges.back().second;
-    // Close Nim
+    // 3. (finalization) close NIM
     stream << " }" << endl;
     
-    // STEP 2. Initial pulse phase
-    float const initialPulse = rational(pulseChanges.front().second).toFloat();
-    float const pickupDuration = queryFirstMeasureDuration();
+    
+    /// STEP 2. initial pulse phase
+    //TODO: store default pulse value elsewhere
+    float const initialPulse = (pulseChanges.empty() ? 1. : rational(pulseChanges.front().second).toFloat());
+    float const pickupDuration = firstMeasureDuration;
     //std::cerr << "pickup duration is " << pickupDuration << ", initial pulse is " << initialPulse << std::endl;
     if (pickupDuration > 0.f)
     {
@@ -701,7 +691,22 @@ void ImportModel::showPulseChangesAsNim( std::ostringstream& stream ) //TODO: co
     stream << endl;
 }
 
-
+QueryHandler ImportModel::performQueries()
+{
+    /// Step 1. (initialization) Create a query handler
+    QueryHandler queries(wrapper_);
+    
+    /// Step 2. (recursion) Pass successive every Events to the queryHandler
+    for ( auto event : events_ )
+    {
+        queries.performQueries(event);
+    }
+    
+    /// Step 3. (finalization)
+    // Handle empty pulse ?
+    
+    return queries;
+}
 
 void ImportModel::beautify()
 {
@@ -799,3 +804,210 @@ bool ImportModel::isBefore( float t1, float t2 )
         return ( t2 - t1 ) > EPSILON_MIDI;
     return ( t2 - t1 ) > EPSILON;
 }
+
+QueryHandler::QueryHandler( ImporterWrapper& wrapper ) : wrapper_(wrapper), firstMeasureDuration(0.)
+{
+}
+
+void QueryHandler::showQueries(std::ostringstream& o) const
+{
+    showPulseChangesAsNim(o);
+}
+
+void QueryHandler::performQueries(Event const* event)
+{
+    if (!event)
+        return;
+    
+    if (event->type() == Event_Measure) // if event is a measure...
+        performQueries(dynamic_cast<Measure const*>(event));
+    //TODO: handle
+}
+
+void QueryHandler::performQueries(Measure const* measure)
+{
+    if (!measure)
+        return;
+    
+    queryPulseChange(measure);
+    queryFirstMeasureDuration(measure);
+    queryTempoBeatUnitChanges(measure);
+}
+
+void QueryHandler::queryPulseChange(Measure const* measure)
+{
+    // Get last pulse unit
+    std::string const& lastPulse = (pulseChangePositions.empty() ? "" : pulseChangePositions.back().second);
+    // Get pulse unit of current measure
+    std::string const& currentPulse = inferePulseSignature(measure->timeSignature()).toString();
+    // Insert current pulse but ONLY on changes
+    if (currentPulse != lastPulse)
+    {
+        // get beat position of last change
+        float const lastPosition = (pulseChangePositions.empty() ? 0.f : pulseChangePositions.back().first);
+        // get current position
+        float const currentPosition = measure->accumBeats();
+        // should not happen!
+        if (currentPosition == lastPosition)
+        {
+            if (!pulseChangePositions.empty())
+            {
+                std::cerr << "Warning, simultaneous pulse changes at position " << currentPosition << ", current pulse=" << currentPulse << " and last pulse=" << lastPulse << std::endl;
+                pulseChangePositions.pop_back();
+            }
+        }
+        else if (currentPosition < lastPosition) // should NOT happen at all !
+            return;
+        // get current position
+        pulseChangePositions.emplace_back(currentPosition, currentPulse);
+    }
+}
+
+/*! @brief  returns duration of first measure (0.0 if no measure)
+ *
+ *  Look for the first measure and returns its beat position
+ *
+ */
+bool QueryHandler::queryFirstMeasureDuration(Measure const* measure)
+{
+    // Do nothing if query is over
+    if (this->firstMeasureDuration > 0.0)
+        return true;
+    
+    if (measure->accumBeats() > 0.0)
+    {
+        this->firstMeasureDuration = measure->accumBeats();
+        return true;
+    }
+    else
+        return false;
+}
+
+
+rational QueryHandler::inferePulseSignature(std::string const& timeSignature) const
+{
+    // if there is an error, returns 1 = 1/1
+    rational pulse(1, 1);
+    // Parse timeSignature as rational number
+    rational r(timeSignature);
+    if (r.getNumerator() == 0)    // parsing error
+        return pulse;
+    long int const denom = r.getDenominator();
+    long int const num = r.getNumerator();
+    
+    // Inférence de la pulse à partir de la time-signature
+    // see: http://www2.siba.fi/muste1/index.php?id=98&la=en
+    
+    if (denom == 4)
+        pulse.set(1, 1);        // TODO: traiter le cas de la pulsation à la blanche pointée
+    else if (denom == 3)
+        pulse.set(4, 3);
+    else if (denom == 2)
+        pulse.set(2, 1);
+    else if (denom == 1)
+        pulse.set(4, 1);
+    else if (denom == 8)    // cas particulier: 6/8, 9/8, 12/8, etc. --> pulse = 1.5 (3/2)  // sinon, pulse = 0.5
+    {
+        if ((num % 3 == 0) && (num > 3))
+            pulse.set(3,2);     // doted quarter note
+        else
+            pulse.set(1,2);           // eight note
+    }
+    else if (denom == 16)    // cas particulier: 3/16, 6/16, 9/16, 12/16, etc. --> pulse = 3/4 // sinon, pulse = 1/4
+    {
+        if ((num % 3 == 0) /*&& (num > 3)*/)
+            pulse.set(3,4);     // doted eight note
+        else
+            pulse.set(1,4);           // sixteenth note
+    }
+    else    // normalement, on ne devrait pas tomber sur ce cas
+    {
+        // Change numerator to quarter note
+        pulse.setNumerator(4);
+        // (optional) Reduce
+        pulse.rationalise();
+    }
+    
+    return pulse;
+}
+
+
+bool QueryHandler::queryTempoBeatUnitChanges(Measure const* measure)  // retrieve the list of beat units given in tempo marks
+{//TODO: finir cette fonction
+    /*
+   auto const& tempoBeatUnitChanges = this->tempoBeatUnitChanges;
+
+    // Get new time signature
+    rational const& newTimeSignature = measure->timeSignature();
+    // Insert current pulse but ONLY on changes
+    if ((currentTimeSignature != newTimeSignature)  // if there is a time signature change
+        && (newTimeSignature))  // if new time signature is valid
+    {
+        // get beat position of last change
+        float const lastPosition = (tempoBeatUnitChanges.empty() ? 0.f : tempoBeatUnitChanges.back().first);
+        // get current position
+        float const currentPosition = measure->accumBeats();
+        // should not happen!
+        if (currentPosition == lastPosition)
+        {
+            if (!pulseChangePositions.empty())
+            {
+                //std::cerr << "Warning, simultaneous pulse changes at position " << currentPosition << ", current pulse=" << currentBeatUnit << " and last pulse=" << lastBeatUnit << std::endl;
+                pulseChangePositions.pop_back();
+            }
+        }
+        else if (currentPosition < lastPosition) // should NOT happen at all !
+            return false;
+        // get current position
+        tempoBeatUnitChanges.emplace_back(currentPosition, currentBeatUnit);
+    }
+    
+    // update currentTimeSignature
+     = newTimeSignature;
+    //currentTempoMarkBeatUnit;
+    */
+    
+    return false;
+}
+
+bool QueryHandler::queryTempoBeatUnitChanges(BeatPerMinute const* bpm)
+{
+    //TODO: finir
+    /*
+    auto const& changes = this->tempoBeatUnitChanges;
+    // Get
+    auto const& beatUnit = bpm->beatunit();
+    
+    // Filter for change
+    if (currentTempoMarkBeatUnit != beatUnit)
+    {
+        
+    }
+    
+    // update current attributs
+    currentTempoMarkTimeSignature = currentTimeSignature;    // we assume that time signature was ALREADY changed BEFORE this BPM
+    currentTempoMarkBeatUnit = beatUnit;
+    */
+    return false;
+}
+
+void QueryHandler::showTempoBeatUnitChangesAsNim( std::ostringstream& stream ) const  // print the list of beat units in ostream
+{
+    //TODO: écrire cette fonction
+}
+
+
+//TODO: SUPPRIMER cette fonction
+/*
+std::deque<std::pair<float, std::string> > ImportModel::queryPulseChanges()
+{
+    // Create an empty deque
+    std::deque<std::pair<float, std::string> > pulseChangePositions;
+    // Pass it to events
+    for ( auto const& event : events_ )
+    {
+        event->queryPulseChange(pulseChangePositions);  // so far, only MEASURES append something
+    }
+    
+    return pulseChangePositions;
+}*/
