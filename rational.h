@@ -54,7 +54,7 @@ class rational {
         rational operator /(int num) const;
   
         rational& operator +=(const rational &dur);
-        //rational& operator -=(const rational &dur);
+        rational& operator -=(const rational &dur);
         //! Useful for notes with dots.
         rational& operator *=(const rational &dur); 
         rational& operator /=(const rational &dur);
@@ -78,6 +78,14 @@ class rational {
         bool operator <	(double num) const;
         bool operator <=(double num) const;    
         bool operator ==(double) const;
+    
+        bool operator >	(float) const;
+        bool operator >=(float) const;
+        bool operator <	(float) const;
+        bool operator <=(float) const;
+        bool operator ==(float) const;
+
+
     
         virtual void show(std::ostream&) const;
         virtual void load(std::istream&);

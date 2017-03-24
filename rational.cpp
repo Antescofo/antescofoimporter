@@ -183,17 +183,37 @@ rational& rational::operator +=(const rational &dur)
     return (*this);
 }
 
-/*
 rational& rational::operator -=(const rational &dur)
 {
-	if(fDenominator == dur.fDenominator) {
-		fNumerator -= dur.fNumerator;
-	} else {
-		fNumerator = fNumerator * dur.fDenominator - dur.fNumerator * fDenominator;
-		fDenominator *= dur.fDenominator;
+    if(fDenominator == dur.fDenominator) {
+        fNumerator -= dur.fNumerator;
     }
-	return (*this);
-}*/
+    else
+    {
+        // Si un dénominateur est un multiple de l'autre, alors on prend le plus petit
+        if (fDenominator % dur.fDenominator == 0)
+        {
+            // Subtract other fraction
+            fNumerator -= dur.fNumerator * (fDenominator / dur.fDenominator);
+        }
+        else if (dur.fDenominator % fDenominator == 0)
+        {
+            // Change fraction denominator
+            fDenominator = dur.fDenominator;
+            fNumerator *= (dur.fDenominator / fDenominator);
+            // Substract other numerator
+            fNumerator -= dur.fNumerator;
+        }
+        else
+        {
+            fNumerator = fNumerator * dur.fDenominator + dur.fNumerator * fDenominator;
+            fDenominator *= dur.fDenominator;
+            rationalise();      // so far, we only rationale in this case
+        }
+    }
+    /*rationalise();*/
+    return (*this);
+}
 
 rational& rational::operator *=(const rational &dur)
 {
@@ -259,6 +279,29 @@ bool rational::operator ==(double num) const
 {
 	return (toDouble() == num);
 }
+
+bool rational::operator> (float num) const
+{
+    return (toFloat() < num);
+}
+
+bool rational::operator>= (float num) const
+{
+    return (toFloat() >= num);
+}
+bool rational::operator<	(float num) const
+{
+    return (toFloat() < num);
+}
+bool rational::operator<= (float num) const
+{
+    return (toFloat() <= num);
+}
+bool rational::operator== (float num) const
+{
+    return (toFloat() == num);
+}
+
 
 // gcd(a, b) calculates the gcd of a and b using Euclid's algorithm.
 long int rational::gcd(long int a1, long int b1)
