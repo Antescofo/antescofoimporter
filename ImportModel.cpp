@@ -78,8 +78,7 @@ string ImportModel::displayScoreInfo() const
 
 void ImportModel::displayMetadata()
 {
-    QueryHandler queries = performQueries();
-    queries.showQueries(serialization_);
+    QueryHandler::showQueries(serialization_, events_, &wrapper_);
 }
 
 void ImportModel::setHeader()
@@ -684,28 +683,11 @@ void QueryHandler::showPulseChangesAsNim( std::ostringstream& stream ) const
         if (phase)
         {
             float const delta = (pickupDuration-initialPulse);
-            stream << "@eval_when_load { $pulse_pos := " <<  delta << " }" << endl;
+            stream << "@eval_when_load {\n$pulse_pos := " <<  delta << "\n}" << endl;
         }
     }
     
     stream << endl;
-}
-
-QueryHandler ImportModel::performQueries()
-{
-    /// Step 1. (initialization) Create a query handler
-    QueryHandler queries(wrapper_);
-    
-    /// Step 2. (recursion) Pass successive every Events to the queryHandler
-    for ( auto event : events_ )
-    {
-        queries.performQueries(event);
-    }
-    
-    /// Step 3. (finalization)
-    // Handle empty pulse ?
-    
-    return queries;
 }
 
 void ImportModel::beautify()
@@ -807,16 +789,40 @@ bool ImportModel::isBefore( float t1, float t2 )
 
 float const QueryHandler::EPSILON = 0.005f; // in beats
 
-QueryHandler::QueryHandler( ImporterWrapper& wrapper ) : wrapper_(wrapper), firstMeasureDuration(0.), currentPulsePhaseDuration(0), accumBeats_(0.)
+void QueryHandler::showQueries(std::ostringstream& o, std::deque<Event*> const& events, ImporterWrapper const* wrapper)
 {
+    /// Step 1. perform queries
+    QueryHandler queries(events, wrapper);
+    
+    /// Step 2. print queries
+    queries.showQueriesOn(o);
 }
 
-void QueryHandler::showQueries(std::ostringstream& o) const
+QueryHandler::QueryHandler( std::deque<Event* > const& events, ImporterWrapper const* wrapper) : wrapper_(wrapper), firstMeasureDuration(0.), currentPulsePhaseDuration(0), accumBeats_(0.)
+{
+    performQueries(events);
+}
+
+void QueryHandler::performQueries(std::deque<Event* > const& events)
+{
+    /// Recursion: Pass successive every Events to the queryHandler
+    for (auto event : events)
+    {
+        performQueries(event);
+    }
+    
+    /// Finalization (if needed)
+}
+
+void QueryHandler::showQueriesOn(std::ostringstream& o) const
 {
     showPulseChangesAsNim(o);
-    showPulseAsNim(o);
+    showPulsesAsNim(o);
 }
 
+/**
+ *  This function selects the queries to perform on each event according to its type
+ */
 void QueryHandler::performQueries(Event const* event)
 {
     if (!event)
@@ -825,25 +831,38 @@ void QueryHandler::performQueries(Event const* event)
     if (event->type() == Event_Measure) // if event is a measure...
     {
         // queries that are measure-specific
-        performQueries(dynamic_cast<Measure const*>(event));
+        performQueriesOn(dynamic_cast<Measure const*>(event));
     }
     else
     {
         // queries that generic for all other events
-        queryPulse(event);
+        performQueriesOn(event);
     }
-    //TODO: handle
 }
 
-void QueryHandler::performQueries(Measure const* measure)
+/**
+ *  Perform queries specific to Measures
+ */
+void QueryHandler::performQueriesOn(Measure const* measure)
 {
     if (!measure)
         return;
     
     queryFirstMeasureDuration(measure);
     queryPulseChange(measure);
-    queryPulse(measure);
+    queryPulses(measure);
     queryTempoBeatUnitChanges(measure);
+}
+
+/**
+ *  Perform queries for generic events
+ */
+void QueryHandler::performQueriesOn(Event const* event)
+{
+    if (!event)
+        return;
+    
+    queryPulses(event);
 }
 
 void QueryHandler::queryPulseChange(Measure const* measure)
@@ -982,7 +1001,10 @@ bool QueryHandler::queryTempoBeatUnitChanges(Measure const* measure)  // retriev
     return false;
 }
 
-void QueryHandler::queryPulse(Event const* event)
+/**
+ *  Fill pulses deque with values that represents the beat duration until next pulse
+ */
+void QueryHandler::queryPulses(Event const* event)
 {
     // Add event duration to keep track of current beat position
     accumBeats_ += event->duration();   // Rmk: do NOT use this for MEASURE, since the measure duration is WRONG
@@ -991,7 +1013,7 @@ void QueryHandler::queryPulse(Event const* event)
     addPulses(event->duration());
 }
 
-void QueryHandler::queryPulse(Measure const* measure)
+void QueryHandler::queryPulses(Measure const* measure)
 {
     // Add event duration to keep track of current beat position
     float const lastAccumBeats = accumBeats_;
@@ -1001,10 +1023,16 @@ void QueryHandler::queryPulse(Measure const* measure)
     addPulses(accumBeats_ - lastAccumBeats);
 
     // (in case) Insert the "reminder pulse" if there is such
-    //float const reminder = measure->duration() - currentPosition.
-    if (currentPulsePhaseDuration > 0)
+    // Rounding strategy
+    if (currentPulsePhaseDuration > EPSILON)        //TODO: no longer use rounding -> this requires using
     {
-        pulses.emplace_back(currentPulsePhaseDuration);
+        // Rounding strategy
+        //TODO: no longer use rounding
+        float const& currentPulse = this->getCurrentPulseDuration().toFloat();
+        if (fabs(currentPulsePhaseDuration - currentPulse) <= EPSILON)
+            pulses.emplace_back(currentPulse);
+        else    // normal behavior
+            pulses.emplace_back(currentPulsePhaseDuration);
     }
     
     // Always reset current duration
@@ -1029,20 +1057,25 @@ void QueryHandler::addPulses(float duration)
     }
 }
 
+/**
+ * Returns current pulse unit
+ */
 rational QueryHandler::getCurrentPulseDuration() const
 {
     return (pulseChangePositions.empty() ? rational(1) : rational(pulseChangePositions.back().second) );
 }
 
 
-
-void QueryHandler::showPulseAsNim( std::ostringstream& stream ) const
+/**
+ * This functions prints a NIM that tells the pulse phase, i.e. the remaining beat duration until next beat
+ */
+void QueryHandler::showPulsesAsNim( std::ostringstream& stream ) const
 {
     int const maxItemPerLine = 10;
     int itemNumber = 0.;
     
     // Nim opening
-    stream << "@eval_when_load {\n$pulse_phase_nim := {";
+    stream << "@eval_when_load {\n$pulse_phase_nim := NIM {";
     bool first = false;
     
     for (float pulseDuration : pulses)

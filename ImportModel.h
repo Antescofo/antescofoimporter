@@ -62,7 +62,6 @@ namespace antescofo
         //void showTempoBeatUnitChangesAsNim( std::ostringstream& stream ) const;  // print the list of beat units in ostream
 
         //void showPulseAsNim( std::ostringstream& stream ) const;
-        QueryHandler performQueries();
         
         static float fractionToFloat(std::string& str);
         
@@ -99,16 +98,21 @@ namespace antescofo
     class QueryHandler
     {
     public:
-        QueryHandler( ImporterWrapper& );
+        QueryHandler(std::deque<Event* > const& events, ImporterWrapper const* = NULL);
         
-        void showQueries(std::ostringstream&) const; //<! show all queries requested by the wrapper_
+        static void showQueries(std::ostringstream&, std::deque<Event* > const&, ImporterWrapper const* = NULL);
         
-        void performQueries(Event const*);
-        void performQueries(Measure const*);
-        void performQueries(BeatPerMinute const*);
-
+        //static QueryHandler performQueries(ImportModel const&, ImporterWrapper const*);
+        
     protected:
-        ImporterWrapper&    wrapper_;   //<! the wrapper option will say which queries are performed in performQueries and printed in showQueries
+        virtual void showQueriesOn(std::ostringstream&) const; //<! show all queries requested by the wrapper_
+        void performQueries(std::deque<Event* > const& events);
+        void performQueries(Event const*);
+        void performQueriesOn(Event const*);
+        void performQueriesOn(Measure const*);
+        void performQueriesOn(BeatPerMinute const*);
+
+        ImporterWrapper const*    wrapper_;   //<! the wrapper option will say which queries are performed in performQueries and printed in showQueries
         
         // individual queries
         // Pulse changes
@@ -123,11 +127,11 @@ namespace antescofo
         rational getCurrentPulseDuration() const;// { return (pulseChangePositions.empty() ? rational(1) : rational(pulseChangePositions.back().second) ); }
         
         // Pulses
-        void queryPulse(Event const* measure);
-        void queryPulse(Measure const* measure);
+        void queryPulses(Event const* measure);
+        void queryPulses(Measure const* measure);
         void addPulses(float const duration);
-        std::deque<float> pulses; //<! liste la position de chaque beat (+ le beat final)
-        void showPulseAsNim( std::ostringstream& stream ) const;
+        std::deque<float> pulses; //<! list of element, each one represents beat duration until next beat
+        void showPulsesAsNim( std::ostringstream& stream ) const;
         float currentPulsePhaseDuration;     //<! 
         float accumBeats_;
 
