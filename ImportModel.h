@@ -61,6 +61,7 @@ namespace antescofo
         //std::deque<std::pair<float, rational> > queryTempoBeatUnitChanges() const;  // retrieve the list of beat units given in tempo marks
         //void showTempoBeatUnitChangesAsNim( std::ostringstream& stream ) const;  // print the list of beat units in ostream
 
+        //void showPulseAsNim( std::ostringstream& stream ) const;
         QueryHandler performQueries();
         
         static float fractionToFloat(std::string& str);
@@ -110,12 +111,26 @@ namespace antescofo
         ImporterWrapper&    wrapper_;   //<! the wrapper option will say which queries are performed in performQueries and printed in showQueries
         
         // individual queries
-        // Pulse
+        // Pulse changes
         void showPulseChangesAsNim( std::ostringstream& ) const;
         void queryPulseChange(Measure const*);
+    public:
         rational inferePulseSignature(std::string const& timeSignature) const; //<! infère et retourne la pulse correspondante à la timeSignature
-        std::deque<std::pair<float, std::string> > pulseChangePositions;
+    protected:
+        static float const EPSILON;
         
+        std::deque<std::pair<float, std::string> > pulseChangePositions;
+        rational getCurrentPulseDuration() const;// { return (pulseChangePositions.empty() ? rational(1) : rational(pulseChangePositions.back().second) ); }
+        
+        // Pulses
+        void queryPulse(Event const* measure);
+        void queryPulse(Measure const* measure);
+        void addPulses(float const duration);
+        std::deque<float> pulses; //<! liste la position de chaque beat (+ le beat final)
+        void showPulseAsNim( std::ostringstream& stream ) const;
+        float currentPulsePhaseDuration;     //<! 
+        float accumBeats_;
+
         // First measure duration
         bool queryFirstMeasureDuration(Measure const* measure);
         float firstMeasureDuration;

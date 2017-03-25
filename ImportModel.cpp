@@ -623,7 +623,7 @@ void QueryHandler::showPulseChangesAsNim( std::ostringstream& stream ) const
 
     //// Write pulse changes them as NIM
     // 1. (initialization) open NIM
-    stream << "$pulses_nim := NIM {";
+    stream << "@eval_when_load {\n$pulses_nim := NIM {";
     // 2. (recursion) fill NIM
     // Handle empty
     if (pulseChanges.empty())
@@ -670,7 +670,7 @@ void QueryHandler::showPulseChangesAsNim( std::ostringstream& stream ) const
             stream << ", (1) (" << pulseChanges.back().second << ")";
     }
     // 3. (finalization) close NIM
-    stream << " }" << endl;
+    stream << " }\n}" << endl;
     
     
     /// STEP 2. initial pulse phase
@@ -684,7 +684,7 @@ void QueryHandler::showPulseChangesAsNim( std::ostringstream& stream ) const
         if (phase)
         {
             float const delta = (pickupDuration-initialPulse);
-            stream << "$pulse_pos := " <<  delta << endl;
+            stream << "@eval_when_load { $pulse_pos := " <<  delta << " }" << endl;
         }
     }
     
@@ -805,13 +805,16 @@ bool ImportModel::isBefore( float t1, float t2 )
     return ( t2 - t1 ) > EPSILON;
 }
 
-QueryHandler::QueryHandler( ImporterWrapper& wrapper ) : wrapper_(wrapper), firstMeasureDuration(0.)
+float const QueryHandler::EPSILON = 0.005f; // in beats
+
+QueryHandler::QueryHandler( ImporterWrapper& wrapper ) : wrapper_(wrapper), firstMeasureDuration(0.), currentPulsePhaseDuration(0), accumBeats_(0.)
 {
 }
 
 void QueryHandler::showQueries(std::ostringstream& o) const
 {
     showPulseChangesAsNim(o);
+    showPulseAsNim(o);
 }
 
 void QueryHandler::performQueries(Event const* event)
@@ -820,7 +823,15 @@ void QueryHandler::performQueries(Event const* event)
         return;
     
     if (event->type() == Event_Measure) // if event is a measure...
+    {
+        // queries that are measure-specific
         performQueries(dynamic_cast<Measure const*>(event));
+    }
+    else
+    {
+        // queries that generic for all other events
+        queryPulse(event);
+    }
     //TODO: handle
 }
 
@@ -829,8 +840,9 @@ void QueryHandler::performQueries(Measure const* measure)
     if (!measure)
         return;
     
-    queryPulseChange(measure);
     queryFirstMeasureDuration(measure);
+    queryPulseChange(measure);
+    queryPulse(measure);
     queryTempoBeatUnitChanges(measure);
 }
 
@@ -969,6 +981,119 @@ bool QueryHandler::queryTempoBeatUnitChanges(Measure const* measure)  // retriev
     
     return false;
 }
+
+void QueryHandler::queryPulse(Event const* event)
+{
+    // Add event duration to keep track of current beat position
+    accumBeats_ += event->duration();   // Rmk: do NOT use this for MEASURE, since the measure duration is WRONG
+    
+    // Insert pulses and keep track of current pulse phase
+    addPulses(event->duration());
+}
+
+void QueryHandler::queryPulse(Measure const* measure)
+{
+    // Add event duration to keep track of current beat position
+    float const lastAccumBeats = accumBeats_;
+    accumBeats_ = measure->accumBeats();
+    
+    // Insert pulses and keep track of current pulse phase
+    addPulses(accumBeats_ - lastAccumBeats);
+
+    // (in case) Insert the "reminder pulse" if there is such
+    //float const reminder = measure->duration() - currentPosition.
+    if (currentPulsePhaseDuration > 0)
+    {
+        pulses.emplace_back(currentPulsePhaseDuration);
+    }
+    
+    // Always reset current duration
+    currentPulsePhaseDuration = 0;
+}
+
+/** This method should be called by all queryPulse
+ * It insert as many pulses as they can fit in duration, and keep track of pulse phase accordingly (in currentPulsePhaseDuration)
+ */
+void QueryHandler::addPulses(float duration)
+{
+    // Add event duration to keep track of current beat phase
+    currentPulsePhaseDuration += duration;
+    
+    float const& currentPulse = this->getCurrentPulseDuration().toFloat();
+    
+    // while currentPulsePhaseDuration is greater than pulse duration, then add a pulse
+    while (currentPulsePhaseDuration > currentPulse)
+    {
+        currentPulsePhaseDuration -= currentPulse;
+        pulses.emplace_back(currentPulse);
+    }
+}
+
+rational QueryHandler::getCurrentPulseDuration() const
+{
+    return (pulseChangePositions.empty() ? rational(1) : rational(pulseChangePositions.back().second) );
+}
+
+
+
+void QueryHandler::showPulseAsNim( std::ostringstream& stream ) const
+{
+    int const maxItemPerLine = 10;
+    int itemNumber = 0.;
+    
+    // Nim opening
+    stream << "@eval_when_load {\n$pulse_phase_nim := {";
+    bool first = false;
+    
+    for (float pulseDuration : pulses)
+    {
+        // Jump line if too many items
+        ++itemNumber;
+        if (itemNumber % maxItemPerLine == 0)
+            stream << std::endl;
+        
+        // write separator
+        if (first)
+            stream << ",";
+        else
+            first = true;
+        
+        // write pulse
+        stream << " 0 (" << pulseDuration << "), (" << pulseDuration << ") (" << 0 << ")";
+    }
+    
+    /*
+    // Case of all first measure except the last one
+    for (auto event : events_)
+    {
+        if (event->type() == Event_Measure) // if event is a measure...
+        {
+            Measure const* measure = dynamic_cast<Measure const*>(event);
+            measureBeatPosition = measure->accumBeats();
+            measureDuration = measure->duration();
+            if (measureBeatPosition > lastMeasureBeatPosition)  // TO
+            {
+                // Jump line if too many items
+                ++itemNumber;
+                if (itemNumber % maxItemPerLine == 0)
+                    stream << std::endl;
+                
+                // Get pulse unit of current measure
+                std::string const& currentPulse = QueryHandler::inferePulseSignature(measure->timeSignature());
+                
+                // Write all beats in measure
+            }
+            lastMeasureBeatPosition = measureBeatPosition;
+        }
+    }
+    
+    // Case of last measure*/
+    
+    
+    // Nim ending
+    stream << " }\n}" << endl;
+}
+
 
 bool QueryHandler::queryTempoBeatUnitChanges(BeatPerMinute const* bpm)
 {

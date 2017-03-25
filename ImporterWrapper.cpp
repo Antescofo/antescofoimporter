@@ -90,7 +90,7 @@ bool ImporterWrapper::parseArguments( vector<string>& args )
             trackSelection_ = args[i].substr( 8 );
             cout << "  ✔︎ Track selection" << endl;
         }
-        else if ( args[i] == "-quarternotetime" )
+        else if (( args[i] == "-quarternotetime" ) || ( args[i] == "-quarternotetimes" ))
         {
             quarterNoteTempo_ = true;
             cout << "  ✔︎ Quarter note division mode" << endl;
