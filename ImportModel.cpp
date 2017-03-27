@@ -622,7 +622,7 @@ void QueryHandler::showPulseChangesAsNim( std::ostringstream& stream ) const
 
     //// Write pulse changes them as NIM
     // 1. (initialization) open NIM
-    stream << "@eval_when_load {\n$pulses_nim := NIM {";
+    stream << "@eval_when_load"<< ' ' << "{\n$pulses_nim := NIM {";
     // 2. (recursion) fill NIM
     // Handle empty
     if (pulseChanges.empty())
@@ -683,7 +683,7 @@ void QueryHandler::showPulseChangesAsNim( std::ostringstream& stream ) const
         if (phase)
         {
             float const delta = (pickupDuration-initialPulse);
-            stream << "@eval_when_load {\n$pulse_pos := " <<  delta << "\n}" << endl;
+            stream << "@eval_when_load"<< ' ' << "{\n$pulse_pos := " <<  delta << "\n}" << endl;
         }
     }
     
@@ -803,6 +803,8 @@ QueryHandler::QueryHandler( std::deque<Event* > const& events, ImporterWrapper c
     performQueries(events);
 }
 
+/*! @brief  Launch queries by iterating on all Events
+ */
 void QueryHandler::performQueries(std::deque<Event* > const& events)
 {
     /// Recursion: Pass successive every Events to the queryHandler
@@ -814,14 +816,17 @@ void QueryHandler::performQueries(std::deque<Event* > const& events)
     /// Finalization (if needed)
 }
 
+/*! @brief  Print selected queries
+ *
+ *  À terme, il faudra que cette fonction n'imprime que les Queries sélectionnées
+ */
 void QueryHandler::showQueriesOn(std::ostringstream& o) const
 {
     showPulseChangesAsNim(o);
     showPulsesAsNim(o);
 }
 
-/**
- *  This function selects the queries to perform on each event according to its type
+/*! @brief   This function selects the queries to perform on each event according to its type
  */
 void QueryHandler::performQueries(Event const* event)
 {
@@ -840,8 +845,7 @@ void QueryHandler::performQueries(Event const* event)
     }
 }
 
-/**
- *  Perform queries specific to Measures
+/*! @brief  Perform queries specific to Measures
  */
 void QueryHandler::performQueriesOn(Measure const* measure)
 {
@@ -854,8 +858,7 @@ void QueryHandler::performQueriesOn(Measure const* measure)
     queryTempoBeatUnitChanges(measure);
 }
 
-/**
- *  Perform queries for generic events
+/*! @brief  Perform queries for other kind of events
  */
 void QueryHandler::performQueriesOn(Event const* event)
 {
@@ -865,6 +868,10 @@ void QueryHandler::performQueriesOn(Event const* event)
     queryPulses(event);
 }
 
+/*! @brief  Extracts the pulse of input measure, and add it to pulseChangePositions if there is a change
+ *
+ *  Pour l'instant, on ne gère pas les compound measures
+ */
 void QueryHandler::queryPulseChange(Measure const* measure)
 {
     // Get last pulse unit
@@ -915,6 +922,11 @@ bool QueryHandler::queryFirstMeasureDuration(Measure const* measure)
 }
 
 
+/*! @brief  Returns the Pulse unit corresponding to input time signature
+ *
+ *  This function contains the musicologic rules to translate a time signature into a pulse
+ *  So far, it is not suitable for compound time signature, odd time signature
+ */
 rational QueryHandler::inferePulseSignature(std::string const& timeSignature) const
 {
     // if there is an error, returns 1 = 1/1
@@ -963,7 +975,9 @@ rational QueryHandler::inferePulseSignature(std::string const& timeSignature) co
 }
 
 
-bool QueryHandler::queryTempoBeatUnitChanges(Measure const* measure)  // retrieve the list of beat units given in tempo marks
+/*! @brief  Retrieve the list of beat units given in tempo marks
+ */
+bool QueryHandler::queryTempoBeatUnitChanges(Measure const* measure)
 {//TODO: finir cette fonction
     /*
    auto const& tempoBeatUnitChanges = this->tempoBeatUnitChanges;
@@ -1001,8 +1015,7 @@ bool QueryHandler::queryTempoBeatUnitChanges(Measure const* measure)  // retriev
     return false;
 }
 
-/**
- *  Fill pulses deque with values that represents the beat duration until next pulse
+/*! @brief  Fill pulses deque with values that represents the beat duration until next pulse
  */
 void QueryHandler::queryPulses(Event const* event)
 {
@@ -1075,7 +1088,7 @@ void QueryHandler::showPulsesAsNim( std::ostringstream& stream ) const
     int itemNumber = 0.;
     
     // Nim opening
-    stream << "@eval_when_load {\n$pulse_phase_nim := NIM {";
+    stream << "@eval_when_load"<< ' ' << "{\n$pulse_phase_nim := NIM {";
     bool first = false;
     
     for (float pulseDuration : pulses)
