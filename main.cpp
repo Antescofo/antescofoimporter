@@ -68,6 +68,7 @@ void displayHelp()
          << bright << "  -verbose" << normal << " / -v for (too!) many details." << endl
          << bright << "  -help" << normal << " / -h displays these info." << endl
          << bright << "  -metadata" << normal << " prepend score with metadata" << endl
+         << bright << "  -querymetadata" << normal << " outputs only the metadata, not the score" << endl
          << endl;
 }
 

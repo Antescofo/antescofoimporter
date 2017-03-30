@@ -78,7 +78,14 @@ string ImportModel::displayScoreInfo() const
 
 void ImportModel::displayMetadata()
 {
+    // Front matter
+    serialization_ << ";<metadata>" << endl;
+    
+    // Main matter
     QueryHandler::showQueries(serialization_, events_, &wrapper_);
+    
+    // Back matter
+    serialization_ << ";</metadata>" << endl << endl;
 }
 
 void ImportModel::setHeader()
@@ -110,8 +117,12 @@ void ImportModel::serialize()
 {
     serialization_.str( "" );
     // rajout begin
+    // We begin by displaying score metadata
     if (wrapper_.displayMetadata())
         displayMetadata();
+    // If wrapper asks only for queries, then we do not print score
+    if (wrapper_.displayQueriesOnly())
+        return;
     // rajout end
     setHeader();
     serialization_ << "; start" << endl;

@@ -33,6 +33,7 @@ ImporterWrapper::ImporterWrapper() :
     treat_3_8_as_compound_  ( false ),
     originalAccidentals_    ( false ),
     displayMetadata_        ( false )
+    ,displayQueriesOnly_    ( false )
 {
     addImporter( new MusicXmlImporter( *this ) );
     addImporter( new MidiImporter( *this ) );
@@ -113,6 +114,11 @@ bool ImporterWrapper::parseArguments( vector<string>& args )
         {
             displayMetadata_ = true;
             cout << "  ✔︎ Add metadata in score" << endl;
+        }
+        else if ( args[i] == "-querymetadata" )
+        {
+            displayMetadata_ = displayQueriesOnly_ = true;
+            cout << "  ✔︎ Replace metadata in score" << endl;
         }
         else
         {
@@ -384,5 +390,10 @@ bool ImporterWrapper::is3_8_compound() const
 bool ImporterWrapper::displayMetadata() const
 {
     return displayMetadata_;
+}
+
+bool ImporterWrapper::displayQueriesOnly() const
+{
+    return displayQueriesOnly_;
 }
 
