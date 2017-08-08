@@ -289,7 +289,7 @@ using namespace std;
 
 - (IBAction)open:(id)sender
 {
-    NSArray *fileTypes = [NSArray arrayWithObjects:@"mid",@"midi",@"xml",@"mxl",nil];
+    NSArray *fileTypes = [NSArray arrayWithObjects:@"mid",@"midi",@"xml",@"musicxml", @"mxl",nil];
     NSOpenPanel * openDialog = [NSOpenPanel openPanel];
     [openDialog setAllowsMultipleSelection:NO];
     [openDialog setCanChooseDirectories:NO];

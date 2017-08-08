@@ -51,6 +51,7 @@ namespace antescofo
         float processNote( TiXmlNode* node );
         float processTimeSignature( TiXmlNode* node, std::string& timeSignature );
         int   getMidiCents( const char diatonic, int octave, float accidental ) const;
+        void  improveXml( TiXmlDocument& musicXML );
         
     private:
         ImporterWrapper& wrapper_;

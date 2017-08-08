@@ -45,6 +45,7 @@ ImportModel::~ImportModel()
 bool ImportModel::save( const string& outputPath )
 {
     serialize();
+    
     FILE* output = fopen ( outputPath.c_str(), "w" );
     if ( output )
     {

@@ -77,6 +77,7 @@ namespace antescofo
         std::deque<Event*>::iterator emplaceEvent( std::deque<Event*>::iterator it, Event* event );
         void consolidateNotesAndRests();
         void checkTies();
+        
         void consolidateTemposAndMeasures();
         inline bool isEqual( float t1, float t2 );
         inline bool isAfter( float t1, float t2 );

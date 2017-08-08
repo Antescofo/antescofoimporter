@@ -71,6 +71,7 @@ namespace antescofo
         bool                is3_8_compound() const;
         bool                displayMetadata() const;
         bool                displayQueriesOnly() const;
+        bool                improveXml() { return improveXml_;} const;
         
     private:
         void addImporter( Importer* importer );
@@ -90,6 +91,7 @@ namespace antescofo
         bool                    originalAccidentals_;
         bool                    displayMetadata_;
         bool                    displayQueriesOnly_;
+        bool                    improveXml_;
     };
 }
 

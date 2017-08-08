@@ -537,7 +537,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -R \"${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/${PRODUCT_NAME}.app\" ../apps/Antescofo/Ascograph/bin\ncp -R \"${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/${PRODUCT_NAME}.app\" out/mac/";
+			shellScript = "#cp -R \"${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/${PRODUCT_NAME}.app\" ../apps/Antescofo/Ascograph/bin\ncp -R \"${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/${PRODUCT_NAME}.app\" out/mac/";
 		};
 		0594EC311B867D1A005B781F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -743,7 +743,6 @@
 					"$(PROJECT_DIR)/zlib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				VALID_ARCHS = "x86_64 i386";
 			};
 			name = Debug;
@@ -761,7 +760,6 @@
 					"$(PROJECT_DIR)/zlib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				VALID_ARCHS = "x86_64 i386";
 			};
 			name = Release;
@@ -770,7 +768,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -778,7 +775,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -856,7 +852,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.10;
 				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
@@ -893,7 +889,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.10;
 				VALID_ARCHS = x86_64;
 			};
 			name = Release;

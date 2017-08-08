@@ -16,7 +16,7 @@
 `-' '  ` '   `-' ' '  '  `-' ' ' 
                                  
 For MusicXML and MIDI files.
-©IRCAM 2015
+©Antescofo 2017
 Developped by Robert Piéchaud
 
 * * Using the Mac antescofo_importer command line * *

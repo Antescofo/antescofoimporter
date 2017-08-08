@@ -66,8 +66,9 @@ void displayHelp()
          << bright << "  -outputdirectory" << normal << "=[path] for specific output directory." << endl
          << bright << "  -unittest" << normal << "=[folder path] will process unit tests (for internal use.)" << endl
          << bright << "  -verbose" << normal << " / -v for (too!) many details." << endl
+         << bright << "  -improvexml" << normal << " fixes some xml dialect issues (trills...) and resaves the xml document with a suffix '_fixed'" << endl
          << bright << "  -help" << normal << " / -h displays these info." << endl
-         << bright << "  -metadata" << normal << " prepend score with metadata" << endl
+         << bright << "  -metadata" << normal << " prepends score with metadata" << endl
          << bright << "  -querymetadata" << normal << " outputs only the metadata, not the score" << endl
          << endl;
 }
@@ -77,10 +78,10 @@ int main( int argc, char **argv )
     int success = 0;
     
     cout << endl;
-    cout << "Antescofo musicXML and MIDI importer ~ designed by Robert Piéchaud for IRCAM" << endl;
+    cout << "Antescofo musicXML and MIDI importer ~ designed by Robert Piéchaud for Antescofo" << endl;
     cout << "Command line utility" << endl;
     cout << ImporterWrapper::getVersion() << endl;
-    cout << "©2015 IRCAM" << endl;
+    cout << "©2017 Antescofo" << endl;
     
     char* unitaryTestFolderPath = nullptr;
     vector<string> arguments;

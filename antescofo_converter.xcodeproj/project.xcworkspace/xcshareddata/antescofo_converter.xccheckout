@@ -10,31 +10,31 @@
 	<string>antescofo_converter</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>8535FC581DFE7CA28E8BDD7D0984F2259C522DDF</key>
-		<string>git+ssh://git.forge.ircam.fr/AscoGraph.git</string>
+		<key>0C86EC8AA3018830066B4FF1DE66EDC68741D690</key>
+		<string>https://bitbucket.org/antescofo/antescofoimporter.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>antescofo_importer/antescofo_converter.xcodeproj</string>
+	<string>antescofo_converter.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>8535FC581DFE7CA28E8BDD7D0984F2259C522DDF</key>
-		<string>../../..</string>
+		<key>0C86EC8AA3018830066B4FF1DE66EDC68741D690</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>git+ssh://git.forge.ircam.fr/AscoGraph.git</string>
+	<string>https://bitbucket.org/antescofo/antescofoimporter.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>8535FC581DFE7CA28E8BDD7D0984F2259C522DDF</string>
+	<string>0C86EC8AA3018830066B4FF1DE66EDC68741D690</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>8535FC581DFE7CA28E8BDD7D0984F2259C522DDF</string>
+			<string>0C86EC8AA3018830066B4FF1DE66EDC68741D690</string>
 			<key>IDESourceControlWCCName</key>
-			<string>AscoGraph</string>
+			<string>antescofoimporter</string>
 		</dict>
 	</array>
 </dict>

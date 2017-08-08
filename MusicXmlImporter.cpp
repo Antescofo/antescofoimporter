@@ -263,6 +263,16 @@ bool MusicXmlImporter::retrieveScoreInfo( TiXmlNode* root )
     return true;
 }
 
+void MusicXmlImporter::improveXml( TiXmlDocument& musicXML )
+{
+    //TODO: correct dialect idiosyncrasies (and flaws) such as Trill as 
+    //
+    string newPath = wrapper_.getInputPath();
+    newPath = newPath.substr( 0, newPath.find_last_of( "." ) ) + "_fixed.xml";
+    cout << "  Improving music xml file (and saving result as " << newPath << ")" << endl;
+    musicXML.SaveFile( newPath );
+}
+
 bool MusicXmlImporter::import()
 {
     TiXmlDocument musicXML ( wrapper_.getInputPath() );
@@ -275,6 +285,8 @@ bool MusicXmlImporter::import()
             return false;
         else
         {
+            if ( wrapper_.improveXml() )
+                improveXml( musicXML );
             retrieveScoreInfo( root );
             TiXmlNode* part = root->FirstChildElement( "part" );
             int count = 0;
@@ -777,7 +789,16 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
     }
     EntryFeatures features = None;
     TiXmlNode* grace = note->FirstChildElement( "grace" );
-    if ( !grace )
+    if ( grace )
+    {
+        features |= GraceNote;
+        const char* slash = grace->ToElement()->Attribute( "slash" );
+        if ( slash && strcmp( slash, "yes" ) == 0 )
+        {
+            features |= SlashedGraceNote;
+        }
+    }
+    else
     {
         TiXmlNode* durationNode = note->FirstChildElement( "duration" );
         if ( !durationNode )    //should not happen, but better safe than sorry!
@@ -785,8 +806,6 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
         intDuration = atoi( durationNode->ToElement()->GetText() );
         duration = (float) currentMetricFactor_ * intDuration / currentDivision_;
     }
-    else
-        features |= GraceNote;
     
     SimpleRational rationalDuration( intDuration, currentDivision_ );
     SimpleRational rationalMetricFactor ( currentIntMetricFactor_, 3 );

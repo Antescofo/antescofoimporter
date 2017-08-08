@@ -32,8 +32,9 @@ ImporterWrapper::ImporterWrapper() :
     displayMidiCents_       ( false ),
     treat_3_8_as_compound_  ( false ),
     originalAccidentals_    ( false ),
-    displayMetadata_        ( false )
-    ,displayQueriesOnly_    ( false )
+    displayMetadata_        ( false ),
+    displayQueriesOnly_    ( false ),
+    improveXml_             ( false )
 {
     addImporter( new MusicXmlImporter( *this ) );
     addImporter( new MidiImporter( *this ) );
@@ -50,7 +51,7 @@ ImporterWrapper::~ImporterWrapper()
 
 std::string ImporterWrapper::getVersion()
 {
-    return "version 0.1.44";
+    return "version 0.2.1";
 }
 
 bool ImporterWrapper::parseArguments( vector<string>& args )
@@ -120,6 +121,11 @@ bool ImporterWrapper::parseArguments( vector<string>& args )
             displayMetadata_ = displayQueriesOnly_ = true;
             cout << "  ✔︎ Replace metadata in score" << endl;
         }
+        else if ( args[i] == "-improvexml" )
+        {
+            improveXml_ = true;
+            cout << "  ✔︎ Improve source music xml files" << endl;
+        }
         else
         {
             struct stat st;
@@ -169,7 +175,9 @@ const string& ImporterWrapper::getInputPath() const
 
 bool ImporterWrapper::inputIsMIDI() const
 {
-    return inputPath_.find( ".xml") == string::npos && inputPath_.find( ".mxl") == string::npos;
+    return inputPath_.find( ".xml") == string::npos &&
+           inputPath_.find( ".musicxml") == string::npos &&
+           inputPath_.find( ".mxl") == string::npos;
 }
 
 ImportModel& ImporterWrapper::getModel()
