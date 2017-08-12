@@ -51,6 +51,7 @@ namespace antescofo
         NaturalHarmonic     = 0x00004000,
         SquareNotehead      = 0x00008000,
         Fermata             = 0x00010000,
+        Cue                 = 0x00020000,
         Tiedbackwards       = 0x00100000,
         Transposed          = 0x00800000,
         DisplayCents        = 0x01000000,
@@ -85,6 +86,7 @@ namespace antescofo
         
         virtual bool          isMeasure() const;
         virtual bool          isRest() const { return false; }
+        virtual void          setAsRest() {}
         virtual float         start() const;
         virtual float         duration() const;
         virtual void          changeStart( float newTime ) {}

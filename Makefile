@@ -11,7 +11,7 @@ INCLUDES = -Izlib/ -Izlib/unzip/ -Ixml
 LIBS = -lpthread -lstdc++ -lm
 LFLAGS = -L. zlib/libzlinux.a -static -static-libstdc++
 
-SOURCES = main.cpp ImporterWrapper.cpp ImportModel.cpp UnitTester.cpp Event.cpp Measure.cpp Entry.cpp Pitch.cpp Repeat.cpp Tempo.cpp BeatPerMinute.cpp MusicXmlImporter.cpp MidiImporter.cpp MidiNoteAction.cpp ActionGroup.cpp GeneralMIDISoundset.cpp SimpleRational.cpp xml/ConvertUTF.cpp xml/tinystr.cpp xml/tinyxml.cpp xml/tinyxmlerror.cpp xml/tinyxmlparser.cpp zlib/unzip/unzip.cpp zlib/unzip/ioapi.cpp zlib/unzip/extract.cpp
+SOURCES = main.cpp ImporterWrapper.cpp rational.cpp ImportModel.cpp UnitTester.cpp Event.cpp Measure.cpp Entry.cpp Pitch.cpp Repeat.cpp Tempo.cpp BeatPerMinute.cpp MusicXmlImporter.cpp MidiImporter.cpp MidiNoteAction.cpp ActionGroup.cpp GeneralMIDISoundset.cpp SimpleRational.cpp xml/ConvertUTF.cpp xml/tinystr.cpp xml/tinyxml.cpp xml/tinyxmlerror.cpp xml/tinyxmlparser.cpp zlib/unzip/unzip.cpp zlib/unzip/ioapi.cpp zlib/unzip/extract.cpp
 OBJS = $(SOURCES:.cpp=.o)
 
 LEVEL = -O3

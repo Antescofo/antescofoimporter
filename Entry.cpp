@@ -566,9 +566,13 @@ Event* Entry::duplicate() const
     return new Entry( *this );
 }
 
-
 bool Entry::isRest() const
 {
     return pitches_.size() > 0 && *pitches_.begin() == 0;
+}
+
+void Entry::setAsRest()
+{
+    pitches_.begin()->setMidiCents( 0 );
 }
 

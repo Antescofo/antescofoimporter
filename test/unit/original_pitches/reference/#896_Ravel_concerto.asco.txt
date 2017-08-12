@@ -1,11 +1,11 @@
-﻿; Antescofo score generated using native importer
+﻿; Antescofo score generated using native importer version 0.2.1.b1
 ; Copyright (c) IRCAM 2015
 ; Designed by Robert Piéchaud
 
 ; Original file: #896_Ravel_concerto.xml
 ; exported from Finale 2011 for Macintosh ~ Dolet Light for Finale 2011
 ; MusicXML version 2.0
-; Converted to Antescofo on Fri Oct  9 13:28:48 2015
+; Converted to Antescofo on Sat Aug 12 20:19:38 2017
 
 ; start
 
@@ -739,54 +739,54 @@ NOTE Eb2 1/16
 NOTE Db2 1/16
 NOTE Bb1 1/16
 NOTE A1 1/16
-TRILL (A1 A1 Bb1 Bb2) 1/12
-TRILL ((A1 Bb1 Bb2) (Bb1 Bb2)) 1/12
-TRILL (A1 A1 Bb1 Bb2) 1/12
-TRILL ((A1 Bb1 Bb2) (Bb1 Bb2)) 1/12
-TRILL (A1 A1 Bb1 Bb2) 1/12
-TRILL ((A1 Bb1 Bb2) (Bb1 Bb2)) 1/12
-TRILL (A1 A1 Bb1 Bb2) 1/12
-TRILL ((A1 Bb1 Bb2) (Bb1 Bb2)) 1/12
-TRILL (A1 A1 Bb1 Bb2) 1/12
-TRILL ((A1 Bb1 Bb2) (Bb1 Bb2)) 1/12
-TRILL (A1 A1 Bb1 Bb2) 1/12
-TRILL ((A1 Bb1 Bb2) (Bb1 Bb2)) 1/12
-TRILL (A1 A1 Bb1 Bb2) 1/12
-TRILL ((A1 Bb1 Bb2) (Bb1 Bb2)) 1/12
-TRILL (A1 A1 Bb1 Bb2) 1/12
-TRILL ((A1 Bb1 Bb2) (Bb1 Bb2)) 1/12
-TRILL (A1 A1 Bb1 Bb2) 1/12
-TRILL ((A1 Bb1 Bb2) (Bb1 Bb2)) 1/12
-TRILL (A1 A1 Bb1 Bb2) 1/12
-TRILL ((A1 Bb1 Bb2) (Bb1 Bb2)) 1/12
-TRILL (A1 A1 Bb1 Bb2) 1/12
-TRILL ((A1 Bb1 Bb2) (Bb1 Bb2)) 1/12
-TRILL (A1 A1 Bb1 Bb2) 1/12
-TRILL ((A1 Bb1 Bb2) (Bb1 Bb2)) 1/11
-TRILL (A1 A1 A2 B2) 1/12
-TRILL ((A1 A2 B2) (A2 B2)) 1/12
-TRILL (A1 A1 A2 B2) 1/12
-TRILL ((A1 A2 B2) (A2 B2)) 1/12
-TRILL (A1 A1 A2 B2) 1/12
-TRILL ((A1 A2 B2) (A2 B2)) 1/12
-TRILL (A1 A1 A2 B2) 1/12
-TRILL ((A1 A2 B2) (A2 B2)) 1/12
-TRILL (A1 A1 A2 B2) 1/12
-TRILL ((A1 A2 B2) (A2 B2)) 1/12
-TRILL (A1 A1 A2 B2) 1/12
-TRILL ((A1 A2 B2) (A2 B2)) 1/12
-TRILL (A1 A1 A2 B2) 1/12
-TRILL ((A1 A2 B2) (A2 B2)) 1/12
-TRILL (A1 A1 A2 B2) 1/12
-TRILL ((A1 A2 B2) (A2 B2)) 1/12
-TRILL (A1 A1 A2 B2) 1/12
-TRILL ((A1 A2 B2) (A2 B2)) 1/12
-TRILL (A1 A1 A2 B2) 1/12
-TRILL ((A1 A2 B2) (A2 B2)) 1/12
-TRILL (A1 A1 A2 B2) 1/12
-TRILL ((A1 A2 B2) (A2 B2)) 1/12
-TRILL (A1 A1 A2 B2) 1/12
-TRILL ((A1 A2 B2) (A2 B2)) 1/11
+NOTE A1 1/12
+CHORD (-A1 Bb1 Bb2) 1/12
+NOTE -A1 1/12
+CHORD (-A1 Bb1 Bb2) 1/12
+NOTE -A1 1/12
+CHORD (-A1 Bb1 Bb2) 1/12
+NOTE -A1 1/12
+CHORD (-A1 Bb1 Bb2) 1/12
+NOTE -A1 1/12
+CHORD (-A1 Bb1 Bb2) 1/12
+NOTE -A1 1/12
+CHORD (-A1 Bb1 Bb2) 3/34
+CHORD (A1 Bb1 Bb2) 1/12
+CHORD (-Bb1 -Bb2) 1/12
+CHORD (A1 -Bb1 -Bb2) 1/12
+CHORD (-Bb1 -Bb2) 1/12
+CHORD (A1 -Bb1 -Bb2) 1/12
+CHORD (-Bb1 -Bb2) 1/12
+CHORD (A1 -Bb1 -Bb2) 1/12
+CHORD (-Bb1 -Bb2) 1/12
+CHORD (A1 -Bb1 -Bb2) 1/12
+CHORD (-Bb1 -Bb2) 1/12
+CHORD (A1 -Bb1 -Bb2) 1/12
+CHORD (-Bb1 -Bb2) 3/34
+NOTE A1 1/12
+CHORD (-A1 A2 B2) 1/12
+NOTE -A1 1/12
+CHORD (-A1 A2 B2) 1/12
+NOTE -A1 1/12
+CHORD (-A1 A2 B2) 1/12
+NOTE -A1 1/12
+CHORD (-A1 A2 B2) 1/12
+NOTE -A1 1/12
+CHORD (-A1 A2 B2) 1/12
+NOTE -A1 1/12
+CHORD (-A1 A2 B2) 3/34
+CHORD (A1 A2 B2) 1/12
+CHORD (-A2 -B2) 1/12
+CHORD (A1 -A2 -B2) 1/12
+CHORD (-A2 -B2) 1/12
+CHORD (A1 -A2 -B2) 1/12
+CHORD (-A2 -B2) 1/12
+CHORD (A1 -A2 -B2) 1/12
+CHORD (-A2 -B2) 1/12
+CHORD (A1 -A2 -B2) 1/12
+CHORD (-A2 -B2) 1/12
+CHORD (A1 -A2 -B2) 1/12
+CHORD (-A2 -B2) 3/34
 
 ; ----------- measure 62 --- beat 193.9 --- time signature 2/4+3/16+1/4
 

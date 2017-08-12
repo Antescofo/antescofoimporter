@@ -93,6 +93,7 @@ using namespace std;
 {
     _importer = new ImporterWrapper();
     _importer->setOriginalPitches( true );
+    _importer->setImproveXml( true );
     std::string text = "Antescofo Importer " + self.importer->getVersion();
     NSString* display = [[NSString alloc] initWithUTF8String:text.c_str()];
     [self.versionText setStringValue:display];
@@ -121,11 +122,13 @@ using namespace std;
     [self.originalPitchesCheckbox setEnabled:!self.importer->inputIsMIDI() && self.importer->getInputPath().size()];
     [self.quarterNoteTimeChekbox setEnabled:self.importer->getInputPath().size()];
     [self.compound3_8Checkbox setEnabled:self.importer->getInputPath().size()];
+    [self.improveXmlCheckbox setEnabled:self.importer->getInputPath().size()];
     
     [self.displayCentsCheckBox setState:self.importer->pitchesAsMidiCents()];
     [self.originalPitchesCheckbox setState:self.importer->hasOriginalPitches()];
     [self.quarterNoteTimeChekbox setState:self.importer->hasQuarterNoteTempo()];
     [self.compound3_8Checkbox setState:self.importer->is3_8_compound()];
+    [self.improveXmlCheckbox setState:self.importer->improveXml()];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
@@ -347,8 +350,9 @@ using namespace std;
     }
     self.importer->set3_8_compound( [self.compound3_8Checkbox state] );
     self.importer->setOriginalPitches( [self.originalPitchesCheckbox state] );
-    self.importer->setQuarterNoteTempo([self.quarterNoteTimeChekbox state]);
-    self.importer->setPitchesAsMidiCents([self.displayCentsCheckBox state]);
+    self.importer->setQuarterNoteTempo( [self.quarterNoteTimeChekbox state] );
+    self.importer->setPitchesAsMidiCents( [self.displayCentsCheckBox state] );
+    self.importer->setImproveXml( [self.improveXmlCheckbox state] );
     self.importer->import( trackSelection );
     self.importer->save();
     if ( self.invokedWithArguments )

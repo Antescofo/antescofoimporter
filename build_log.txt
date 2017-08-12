@@ -33,6 +33,9 @@ Developped by Robert Piéchaud
      
 * * Build log * *
 
+* * * v. 0.2.1.b1 ~ Aug. 12 2017 * * *
+- AIMP-11: music xml source improvement (trills)
+
 * * * v. 0.2.1 ~ Aug. 9 2017 * * *
 - work-in-progress: grace notes and music xml source improvement.
 

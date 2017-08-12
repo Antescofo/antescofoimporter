@@ -622,7 +622,7 @@ long MidiImporter::handleNote( long delta, short noteIndex, bool isOn )
                     start = measureStart;
                     if ( diff > EPSILON_MIDI )
                     {
-                        features |= Tiedbackwards;
+                        features |= Feature::Tiedbackwards;
                         length = noteOn + duration - start;
                     }
                 }

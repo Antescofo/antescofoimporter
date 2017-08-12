@@ -71,6 +71,7 @@ namespace antescofo
         bool                is3_8_compound() const;
         bool                displayMetadata() const;
         bool                displayQueriesOnly() const;
+        void                setImproveXml( bool status ) { improveXml_ = status; };
         bool                improveXml() { return improveXml_;} const;
         
     private:

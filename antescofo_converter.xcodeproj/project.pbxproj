@@ -186,7 +186,7 @@
 		05C829261BC047C900037C4C /* GeneralMIDISoundset.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GeneralMIDISoundset.cpp; sourceTree = SOURCE_ROOT; };
 		05D3CE031BA36DBA00EE2E38 /* Antescofo Importer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Antescofo Importer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05D3CE061BA36DBA00EE2E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05D3CE071BA36DBA00EE2E38 /* AppDelegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		05D3CE071BA36DBA00EE2E38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		05D3CE081BA36DBA00EE2E38 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		05D3CE0A1BA36DBA00EE2E38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		05D3CE0C1BA36DBA00EE2E38 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };

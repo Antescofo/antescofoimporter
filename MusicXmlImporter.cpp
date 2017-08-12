@@ -265,12 +265,84 @@ bool MusicXmlImporter::retrieveScoreInfo( TiXmlNode* root )
 
 void MusicXmlImporter::improveXml( TiXmlDocument& musicXML )
 {
-    //TODO: correct dialect idiosyncrasies (and flaws) such as Trill as 
-    //
-    string newPath = wrapper_.getInputPath();
-    newPath = newPath.substr( 0, newPath.find_last_of( "." ) ) + "_fixed.xml";
-    cout << "  Improving music xml file (and saving result as " << newPath << ")" << endl;
-    musicXML.SaveFile( newPath );
+    TiXmlHandle hDocument ( &musicXML );
+    TiXmlElement* root = hDocument.FirstChildElement( "score-partwise" ).Element();
+    if ( root )
+    {
+        TiXmlNode* part = root->FirstChildElement( "part" );
+        int count = 0;
+        while ( part )
+        {
+            TiXmlNode* measure = part->FirstChildElement( "measure" );
+            TiXmlNode* itemBefore = measure->FirstChild();
+            bool trillFound = false;
+            while ( measure )
+            {
+                TiXmlNode* item = measure->FirstChild();
+                while ( item )
+                {
+                    if ( strcmp( item->Value(), "direction") == 0 )
+                    {
+                        TiXmlNode* type = item->FirstChildElement( "direction-type" );
+                        if ( type )
+                        {
+                            TiXmlNode* other = type->FirstChildElement( "other-direction" );
+                            if ( other )
+                            {
+                                TiXmlNode* content = other->FirstChild();
+                                if ( content && strncmp( content->Value(), "Tril", 4 ) == 0 )
+                                {
+                                    trillFound = true;
+                                    ++count;
+                                    measure->RemoveChild( item );
+                                }
+                            }
+                        }
+                    }
+                    else if ( strcmp( item->Value(), "note") == 0 )
+                    {
+                        if ( trillFound )
+                        {
+                            TiXmlNode* notations = item->FirstChildElement( "notations" );
+                            if ( !notations )
+                            {
+                                notations = new TiXmlElement( "notations" );
+                                notations = item->InsertEndChild( *notations );
+                            }
+                            TiXmlNode* ornaments = notations->FirstChildElement( "ornaments" );
+                            if ( !ornaments )
+                            {
+                                ornaments = new TiXmlElement( "ornaments" );
+                                ornaments = notations->InsertEndChild( *ornaments );
+                            }
+                            TiXmlElement* trill = new TiXmlElement( "trill-mark" );
+                            trill->SetAttribute( "placement", "above" );
+                            ornaments->InsertEndChild( *trill );
+                            trillFound = false;
+                        }
+                    }
+                    if ( trillFound )
+                    {
+                        item = measure->IterateChildren( itemBefore );
+                    }
+                    else
+                    {
+                        itemBefore = item;
+                        item = measure->IterateChildren( item );
+                    }
+                }
+                measure = part->IterateChildren( "measure", measure );
+            }
+            part = root->IterateChildren( "part", part );
+        }
+        if ( count > 0 )
+        {
+            string newPath = wrapper_.getInputPath();
+            newPath = newPath.substr( 0, newPath.find_last_of( "." ) ) + "_improved.xml";
+            cout << "  Improving music xml file (" << count << " changes) and saving result as " << newPath << endl;
+            musicXML.SaveFile( newPath );
+        }
+    }
 }
 
 bool MusicXmlImporter::import()
@@ -788,14 +860,24 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
         return -duration;
     }
     EntryFeatures features = None;
+    // 2 ways to track cue-like notes (which are not always cues...):
+    if ( note->FirstChildElement( "cue" ) )
+        features |= Feature::Cue;
+    TiXmlNode* type = note->FirstChildElement( "type" );
+    if ( type )
+    {
+        const char* size = type->ToElement()->Attribute( "size" );
+        if ( size && strcmp( size, "cue" ) == 0 )
+            features |= Feature::Cue;
+    }
     TiXmlNode* grace = note->FirstChildElement( "grace" );
     if ( grace )
     {
-        features |= GraceNote;
+        features |= Feature::GraceNote;
         const char* slash = grace->ToElement()->Attribute( "slash" );
         if ( slash && strcmp( slash, "yes" ) == 0 )
         {
-            features |= SlashedGraceNote;
+            features |= Feature::SlashedGraceNote;
         }
     }
     else
@@ -815,7 +897,7 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
     {
         if ( rest->ToElement()->Attribute( "measure" ) != nullptr )
         {
-            features |= MeasureRest;
+            features |= Feature::MeasureRest;
         }
     }
 
@@ -864,7 +946,7 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
               const char* tieType = tie->ToElement()->Attribute( "type" );
               if ( tieType && strcmp( tieType, "stop" ) == 0 )
               {
-                  features |= Tiedbackwards;
+                  features |= Feature::Tiedbackwards;
               }
             }
         }
@@ -904,9 +986,9 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
     }
     if ( midiCents > 0 && currentTrillVoice_ > 0 && currentTrillVoice_ == currentVoice_ && duration > 0.5 )
     {
-        features |= Trill;
+        features |= Feature::Trill;
         if ( semitoneAfter == 2 )
-            features |= WholeToneTrill;
+            features |= Feature::WholeToneTrill;
         ++midiCents;
     }
     TiXmlNode* chord = note->FirstChildElement( "chord" );
@@ -914,7 +996,7 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
     if ( notations )
     {
         if ( notations->FirstChildElement( "fermata" ) )
-            features |= Fermata;
+            features |= Feature::Fermata;
         TiXmlNode* glissando = notations->FirstChildElement( "slide" );
         if ( !glissando )
             glissando = notations->FirstChildElement( "glissando" );
@@ -925,18 +1007,18 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
               string type = glissType;
               if ( type == "start")
               {
-                features |= GlissandoStart;
+                features |= Feature::GlissandoStart;
               }
               if ( type == "stop")
               {
-                features |= GlissandoEnd;
+                features |= Feature::GlissandoEnd;
               }
             }
         }
         if ( TiXmlNode* articulations = notations->FirstChildElement( "articulations" ) )
         {
             if ( articulations->FirstChildElement( "staccato" ) != nullptr )
-                features |= Staccato;
+                features |= Feature::Staccato;
         }
         TiXmlNode* ornaments = notations->FirstChildElement( "ornaments" );
         if ( duration > 0 && ornaments )
@@ -965,7 +1047,7 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
                         newNote.setMidiCents( midiCents );
                         return model_.addRepeatedNotes( currentMeasure_, accumLocal_, duration, noteDivision, newNote );
                     }
-                    features |= FastRepeatedTremolo;
+                    features |= Feature::FastRepeatedTremolo;
                   }
                   else
                   {
@@ -984,23 +1066,23 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
                     {
                       if ( type == "start" ) //alternate tremolo start
                       {
-                        if ( !chord && currentNoteFeatures_&AlternateTremolo )    //Sibelius xml export bug ('start' instead of 'stop'...)
+                        if ( !chord && currentNoteFeatures_ & Feature::AlternateTremolo )    //Sibelius xml export bug ('start' instead of 'stop'...)
                         {
-                          currentNoteFeatures_ = TremoloEnd;
-                          features |= TremoloEnd;
+                          currentNoteFeatures_ = Feature::TremoloEnd;
+                          features |= Feature::TremoloEnd;
                           accumLocal_ -= duration*2;
                         }
                         else
                         {
-                          currentNoteFeatures_ = AlternateTremolo;
-                          features |= AlternateTremolo;
+                          currentNoteFeatures_ = Feature::AlternateTremolo;
+                          features |= Feature::AlternateTremolo;
                         }
                         duration *= 2;
                       }
-                      else if ( type == "stop" && currentNoteFeatures_&AlternateTremolo ) //alternate tremolo end
+                      else if ( type == "stop" && currentNoteFeatures_ & Feature::AlternateTremolo ) //alternate tremolo end
                       {
                         currentNoteFeatures_ = TremoloEnd;
-                        features |= TremoloEnd;
+                        features |= Feature::TremoloEnd;
                         accumLocal_ -= duration*2;
                         duration *= 2;  // ex: 𝅗𝅥 ≣ 𝅗𝅥 is 2 x quarter note
                       }
@@ -1052,25 +1134,25 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
                                  ( displayedAccidental == -1 && displayedTrillAccidental == -1 && ( baseDegree == 1 || baseDegree == 4 ) ) )
                             semitoneAfter = 1;
                     }
-                    features |= Trill;
+                    features |= Feature::Trill;
                     if ( semitoneAfter == 2 )
-                        features |= WholeToneTrill;
+                        features |= Feature::WholeToneTrill;
                 }
             }
         }
     }
     if ( !chord && features == None && duration >= 1 && normalNotes >= 4*actualNotes ) //buggy Finale "piano" tremolo...
     {
-        if ( currentNoteFeatures_ & AlternateTremolo )
+        if ( currentNoteFeatures_ & Feature::AlternateTremolo )
         {
-            currentNoteFeatures_ = TremoloEnd;
-            features |= TremoloEnd;
+            currentNoteFeatures_ = Feature::TremoloEnd;
+            features |= Feature::TremoloEnd;
             accumLocal_ -= duration*2;
         }
         else
         {
-            currentNoteFeatures_ = AlternateTremolo;
-            features |= AlternateTremolo;
+            currentNoteFeatures_ = Feature::AlternateTremolo;
+            features |= Feature::AlternateTremolo;
         }
         duration *= 2;
     }
@@ -1078,22 +1160,22 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
     if ( notehead )
     {
         if ( strcmp( notehead->ToElement()->GetText(), "diamond" ) == 0 )
-            features |= Harmonic;
+            features |= Feature::Harmonic;
         else if ( strcmp( notehead->ToElement()->GetText(), "square" ) == 0 )
-            features |= SquareNotehead;
+            features |= Feature::SquareNotehead;
     }
     if ( chord )
     {
-        features |= Chord;
+        features |= Feature::Chord;
         if ( currentNoteFeatures_ & AlternateTremolo || currentNoteFeatures_ & TremoloEnd )
         {
-            features |= AlternateTremolo;
+            features |= Feature::AlternateTremolo;
         }
         if ( currentRepeatNoteAmount_ == 0 )
             duration = previousDuration_;
-        if ( currentNoteFeatures_ & TremoloEnd )
+        if ( currentNoteFeatures_ & Feature::TremoloEnd )
         {
-            features |= TremoloEnd;
+            features |= Feature::TremoloEnd;
         }
         newNote.setFeatures( features );
         newNote.setMidiCents( midiCents );
@@ -1108,7 +1190,7 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
         previousDuration_ = duration;
         currentRepeatNoteAmount_ = 0;
         if ( features == None )
-            currentNoteFeatures_ &= ~(TremoloEnd|AlternateTremolo);
+            currentNoteFeatures_ &= ~(Feature::TremoloEnd|Feature::AlternateTremolo);
     }
     newNote.setFeatures( features );
     newNote.setMidiCents( midiCents );

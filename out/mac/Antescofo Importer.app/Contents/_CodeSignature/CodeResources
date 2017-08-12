@@ -8,14 +8,14 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pFgYeOAk/yCDj1o2JQ0QJd9nUdw=
+			iRibNNS5PSAQW9wHlVTZautidyU=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		oLBf/yPvI4FDRetY6lBmgZRmCic=
+		NRvXNKzV6x5JEmLp8xOsTO4xXSQ=
 		</data>
 		<key>Resources/en.lproj/MainMenu.strings</key>
 		<dict>
@@ -33,35 +33,20 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pFgYeOAk/yCDj1o2JQ0QJd9nUdw=
-			</data>
-			<key>hash2</key>
-			<data>
-			QpYrJm46zJkfhqql35Stng0r9AMo3g5S2xYIosONPuc=
+			iRibNNS5PSAQW9wHlVTZautidyU=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>Resources/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			oLBf/yPvI4FDRetY6lBmgZRmCic=
-			</data>
-			<key>hash2</key>
-			<data>
-			Xqv+bJfm390NBRl3M7biSVA0OMVOgxOt+VW+WfrP/R4=
-			</data>
-		</dict>
+		<data>
+		NRvXNKzV6x5JEmLp8xOsTO4xXSQ=
+		</data>
 		<key>Resources/en.lproj/MainMenu.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
 			aoh7KtaUykXr1zSefnWzIqpxxyk=
-			</data>
-			<key>hash2</key>
-			<data>
-			3G9fG3z0ZK0zm0Oxjibc9cA0tPBfmxnmZrqQMuCOvHM=
 			</data>
 			<key>optional</key>
 			<true/>

@@ -220,9 +220,9 @@ float ImportModel::addNote( float measure, float start, float duration, Pitch& p
 {
     EntryFeatures& features = pitch.features();
     if ( wrapper_.pitchesAsMidiCents() )
-        features |= DisplayCents;
+        features |= Feature::DisplayCents;
     if ( wrapper_.hasOriginalPitches() )
-        features |= OriginalEnharmony;
+        features |= Feature::OriginalEnharmony;
     bool splitAndForward = false;
     float forwardDuration ( duration );
     auto it = events_.begin();
@@ -312,7 +312,7 @@ float ImportModel::addNote( float measure, float start, float duration, Pitch& p
             {
                     (*it)->addPitch( pitch );
                     pitch.flagFeatures( Tiedbackwards );
-                    features |= Tiedbackwards;
+                    features |= Feature::Tiedbackwards;
                     duration -= d;
                     start += d;
             }
@@ -335,7 +335,7 @@ float ImportModel::addNote( float measure, float start, float duration, Pitch& p
             {
                 it = emplaceEvent( it, new Entry( measure, start, s - start, pitch ));
                 pitch.flagFeatures( Tiedbackwards );
-                features |= Tiedbackwards;
+                features |= Feature::Tiedbackwards;
                 (*++it)->addPitch( pitch );
                 duration -= ( s - start + d );
                 start = s + d;
@@ -369,7 +369,7 @@ float ImportModel::addNote( float measure, float start, float duration, Pitch& p
                     {
                         it = splitEvent( it, start - s );
                         (*it)->addPitch( pitch );
-                        features |= Tiedbackwards;
+                        features |= Feature::Tiedbackwards;
                     }
                     duration = ( start + duration ) - ( s + d );
                     start = s + d;
@@ -388,7 +388,7 @@ float ImportModel::addNote( float measure, float start, float duration, Pitch& p
                 }
                 duration = duration - d;
                 start = s + d;
-                features |= Tiedbackwards;
+                features |= Feature::Tiedbackwards;
                 splitAndForward = true;
             }
             else if ( m > measure || ( m == measure && isAfter( s, start ) ) ) //new entry starts after any event in this measure
@@ -704,6 +704,7 @@ void QueryHandler::showPulseChangesAsNim( std::ostringstream& stream ) const
 
 void ImportModel::beautify()
 {
+    cleanupCueNotes();
     consolidateNotesAndRests();
     consolidateTemposAndMeasures();
 }
@@ -734,6 +735,17 @@ void ImportModel::consolidateNotesAndRests()
             it = events_.erase( itNext );
             --it;
         }
+        ++it;
+    }
+}
+
+void ImportModel::cleanupCueNotes()
+{
+    auto it = events_.begin(), first = events_.begin(), last = events_.end();
+    while ( it != events_.end() )
+    {
+        Event* event = *it;
+        //TODO
         ++it;
     }
 }

@@ -61,6 +61,7 @@ namespace antescofo
         void          tiePitches() override;
         Event*        duplicate() const override;
         bool          isRest() const override;
+        void          setAsRest() override;
         
         const std::list<Pitch>& pitches() const;
         std::list<Pitch>&       pitches();

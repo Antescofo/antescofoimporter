@@ -45,6 +45,7 @@
 @property (weak) IBOutlet NSButton *originalPitchesCheckbox;
 @property (weak) IBOutlet NSButton *quarterNoteTimeChekbox;
 @property (weak) IBOutlet NSButton *compound3_8Checkbox;
+@property (weak) IBOutlet NSButton *improveXmlCheckbox;
 @property (weak) IBOutlet NSTextField *playbackTrackLabel;
 @property (weak) IBOutlet NSTextField *versionText;
 @property (weak) IBOutlet NSView *rootView;

@@ -33,7 +33,7 @@ ImporterWrapper::ImporterWrapper() :
     treat_3_8_as_compound_  ( false ),
     originalAccidentals_    ( false ),
     displayMetadata_        ( false ),
-    displayQueriesOnly_    ( false ),
+    displayQueriesOnly_     ( false ),
     improveXml_             ( false )
 {
     addImporter( new MusicXmlImporter( *this ) );
@@ -51,7 +51,7 @@ ImporterWrapper::~ImporterWrapper()
 
 std::string ImporterWrapper::getVersion()
 {
-    return "version 0.2.1";
+    return "version 0.2.1.b1";
 }
 
 bool ImporterWrapper::parseArguments( vector<string>& args )
@@ -124,7 +124,6 @@ bool ImporterWrapper::parseArguments( vector<string>& args )
         else if ( args[i] == "-improvexml" )
         {
             improveXml_ = true;
-            cout << "  ✔︎ Improve source music xml files" << endl;
         }
         else
         {
@@ -135,6 +134,9 @@ bool ImporterWrapper::parseArguments( vector<string>& args )
     }
     if ( filePath.length() == 0 && unitaryTestFolderPath.length() == 0 )
         return false;
+    
+    if ( improveXml_ )
+        cout << "  ✔︎ Improve source music xml files" << endl;
     
     if ( filePath.length() > 0 )
         setInputPath( filePath );
