@@ -72,7 +72,9 @@ namespace antescofo
         bool                displayMetadata() const;
         bool                displayQueriesOnly() const;
         void                setImproveXml( bool status ) { improveXml_ = status; };
-        bool                improveXml() { return improveXml_;} const;
+        bool                improveXml() const { return improveXml_;}
+        void                setChaseCues( bool status ) { chaseCues_ = status; };
+        bool                chaseCues() const { return chaseCues_;}
         
     private:
         void addImporter( Importer* importer );
@@ -93,6 +95,7 @@ namespace antescofo
         bool                    displayMetadata_;
         bool                    displayQueriesOnly_;
         bool                    improveXml_;
+        bool                    chaseCues_;
     };
 }
 

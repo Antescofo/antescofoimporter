@@ -34,7 +34,8 @@ ImporterWrapper::ImporterWrapper() :
     originalAccidentals_    ( false ),
     displayMetadata_        ( false ),
     displayQueriesOnly_     ( false ),
-    improveXml_             ( false )
+    improveXml_             ( false ),
+    chaseCues_              ( false )
 {
     addImporter( new MusicXmlImporter( *this ) );
     addImporter( new MidiImporter( *this ) );
@@ -51,7 +52,7 @@ ImporterWrapper::~ImporterWrapper()
 
 std::string ImporterWrapper::getVersion()
 {
-    return "version 0.2.1.b1";
+    return "version 0.2.1.b2";
 }
 
 bool ImporterWrapper::parseArguments( vector<string>& args )
@@ -125,6 +126,10 @@ bool ImporterWrapper::parseArguments( vector<string>& args )
         {
             improveXml_ = true;
         }
+        else if ( args[i] == "-chasecues" )
+        {
+            chaseCues_ = true;
+        }
         else
         {
             struct stat st;
@@ -137,6 +142,8 @@ bool ImporterWrapper::parseArguments( vector<string>& args )
     
     if ( improveXml_ )
         cout << "  ✔︎ Improve source music xml files" << endl;
+    if ( chaseCues_ )
+        cout << "  ✔︎ Cues will be chased!" << endl;
     
     if ( filePath.length() > 0 )
         setInputPath( filePath );

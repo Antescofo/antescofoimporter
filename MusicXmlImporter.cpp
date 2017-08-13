@@ -564,6 +564,8 @@ void MusicXmlImporter::processMeasure( TiXmlNode* measure )
         currentKeyAccidentals_ = ((Measure*) specs)->keyAccidentals();
         currentMeasureDuration_ = specs->duration();
     }
+    if ( wrapper_.chaseCues() )
+        chaseCues( measure );
     accumLocal_ = 0.0;
     TiXmlNode* item = measure->FirstChild();
     bool hasNotes = false;
@@ -580,6 +582,69 @@ void MusicXmlImporter::processMeasure( TiXmlNode* measure )
     {
         Pitch measureRest ( 0, MeasureRest );
         model_.addNote( currentMeasure_, accumLocal_, currentMeasureDuration_*currentMetricFactor_, measureRest );
+    }
+}
+
+void MusicXmlImporter::chaseCues( TiXmlNode* measure )
+{
+    TiXmlNode* cueCheck = measure->FirstChild();
+    int cueCount = 0;
+    bool isCue = false;
+    vector<float> cueDurations;
+    vector<TiXmlNode*> cueNotes;
+    while ( cueCheck )
+    {
+        if ( cueCheck->ValueStr() == "backup" && cueDurations.size() )
+            break;
+        else if ( cueCheck->ValueStr() == "note" && cueCheck->FirstChildElement( "rest" ) == nullptr )
+        {
+            if ( cueCheck->FirstChildElement( "cue" ) )
+                isCue = true;
+            else
+            {
+                TiXmlNode* type = cueCheck->FirstChildElement( "type" );
+                if ( type )
+                {
+                    const char* size = type->ToElement()->Attribute( "size" );
+                    if ( size && strcmp( size, "cue" ) == 0 )
+                        isCue = true;
+                }
+            }
+            if ( isCue )
+            {
+                TiXmlNode* durationNode = cueCheck->FirstChildElement( "duration" );
+                if ( durationNode )
+                {
+                    cueDurations.push_back( atof( durationNode->ToElement()->GetText() )/currentDivision_ );
+                    cueNotes.push_back(cueCheck);
+                }
+                ++cueCount;
+            }
+        }
+        cueCheck = measure->IterateChildren( cueCheck );
+    }
+    if ( cueDurations.size() )
+    {
+        //mean:
+        float E = 0;
+        for ( auto x = cueDurations.begin(); x != cueDurations.end(); ++x )
+            E += *x;
+        E /= cueDurations.size();
+        
+        //standard deviation:
+        float S = 0;
+        for ( auto x = cueDurations.begin(); x != cueDurations.end(); ++x )
+            S += (E - *x)*(E - *x);
+        S /= cueDurations.size();
+        S = sqrtf( S );
+        cout << "meas. " << currentMeasure_ << " => E = " << E << "  S = " << S << endl;
+        if ( E >= 0.25 || S > 0 )
+        {
+            for ( auto it = cueNotes.begin(); it != cueNotes.end(); ++it )
+            {
+                (*it)->ToElement()->SetAttribute( "real-cue", "1" );
+            }
+        }
     }
 }
 
@@ -860,16 +925,6 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
         return -duration;
     }
     EntryFeatures features = None;
-    // 2 ways to track cue-like notes (which are not always cues...):
-    if ( note->FirstChildElement( "cue" ) )
-        features |= Feature::Cue;
-    TiXmlNode* type = note->FirstChildElement( "type" );
-    if ( type )
-    {
-        const char* size = type->ToElement()->Attribute( "size" );
-        if ( size && strcmp( size, "cue" ) == 0 )
-            features |= Feature::Cue;
-    }
     TiXmlNode* grace = note->FirstChildElement( "grace" );
     if ( grace )
     {
@@ -892,6 +947,7 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
     SimpleRational rationalDuration( intDuration, currentDivision_ );
     SimpleRational rationalMetricFactor ( currentIntMetricFactor_, 3 );
     rationalDuration *= rationalMetricFactor;   //so the duration is relative to the current "beat" definition
+
     TiXmlNode* rest = note->FirstChildElement( "rest" );
     if ( rest )
     {
@@ -906,7 +962,8 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
     int diatonicStep = -1;
     float displayedAccidental = 0.0;
     Pitch newNote( 0, features );
-    if ( pitch )
+    const char* realCue = note->ToElement()->Attribute( "real-cue" );
+    if ( pitch && realCue == nullptr )
     {
         TiXmlNode* tie = note->FirstChildElement( "tie" );
         TiXmlNode* accidental = note->FirstChildElement( "accidental" );

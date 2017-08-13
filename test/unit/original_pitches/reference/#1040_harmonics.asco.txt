@@ -1,11 +1,11 @@
-﻿; Antescofo score generated using native importer version 0.1.40
+﻿; Antescofo score generated using native importer version 0.2.1.b2
 ; Copyright (c) IRCAM 2015
 ; Designed by Robert Piéchaud
 
 ; Original file: #1040_harmonics.xml
 ; exported from Sibelius 7.5.0 ~ Direct export, not from Dolet
 ; MusicXML version 3.0
-; Converted to Antescofo on Thu Oct 15 22:21:12 2015
+; Converted to Antescofo on Sun Aug 13 18:07:45 2017
 ; Credits: Tesla ou l'effet d'étrangeté Version alto solo et électronique
 
 ; start
@@ -1486,8 +1486,7 @@ NOTE G3 1/8
 NOTE Ab3 1/8
 NOTE G3 1/8
 NOTE Ab3 1/8
-NOTE 0 5/4
-NOTE 0 1/2
+NOTE 0 7/4
 CHORD (F3 B3) 1/8
 CHORD (F3 B3) 1/8
 CHORD (F3 B3) 1/8
@@ -2431,8 +2430,7 @@ NOTE 0 1
 
 ; ----------- measure 164 --- beat 740 --- time signature 4/4
 
-NOTE 0 2 measure164
-NOTE 0 2
+NOTE 0 4 measure164
 
 ; ----------- measure 165 --- beat 744 --- time signature 4/4
 
@@ -2473,8 +2471,7 @@ NOTE 0 2
 
 ; ----------- measure 167 --- beat 752 --- time signature 4/4
 
-NOTE 0 2 measure167
-NOTE 0 2
+NOTE 0 4 measure167
 
 ; ----------- measure 168 --- beat 756 --- time signature 4/4
 
@@ -2787,8 +2784,7 @@ NOTE C7 1/8
 NOTE B6 1/8
 NOTE B6 1/8
 NOTE A6 1/8
-NOTE 0 5
-NOTE 0 4
+NOTE 0 9
 
 ; ----------- measure 205 --- beat 932 --- time signature 4/4
 
@@ -2806,9 +2802,7 @@ TRILL (B6) 4 ; square notehead
 
 ; ----------- measure 208 --- beat 956 --- time signature 16/4
 
-NOTE 0 5 measure208
-NOTE 0 3
-NOTE 0 8
+NOTE 0 16 measure208
 
 ; ----------- measure 209 --- beat 972 --- time signature 20/4
 
@@ -2824,8 +2818,7 @@ NOTE G#4 1/2
 NOTE 0 3/2
 NOTE B6 1 ; harmonics
 NOTE A#3 2 @fermata
-NOTE 0 5
-NOTE 0 4
+NOTE 0 9
 
 ; ----------- measure 210 --- beat 992 --- time signature 20/4
 

@@ -67,6 +67,7 @@ void displayHelp()
          << bright << "  -unittest" << normal << "=[folder path] will process unit tests (for internal use.)" << endl
          << bright << "  -verbose" << normal << " / -v for (too!) many details." << endl
          << bright << "  -improvexml" << normal << " fixes some xml dialect issues (trills...) and resaves the xml document with a suffix '_fixed'" << endl
+         << bright << "  -chasecues" << normal << " removes cues from the antescofo result (making the difference between cadentials solo notes and actual cues)" << endl
          << bright << "  -help" << normal << " / -h displays these info." << endl
          << bright << "  -metadata" << normal << " prepends score with metadata" << endl
          << bright << "  -querymetadata" << normal << " outputs only the metadata, not the score" << endl

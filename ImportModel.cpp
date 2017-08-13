@@ -586,7 +586,6 @@ void ImportModel::replaceEvent( Event* event )
     }
 }
 
-
 void ImportModel::queryTempi( std::vector<std::string>& tempi )
 {
     auto it = events_.begin();
@@ -704,7 +703,6 @@ void QueryHandler::showPulseChangesAsNim( std::ostringstream& stream ) const
 
 void ImportModel::beautify()
 {
-    cleanupCueNotes();
     consolidateNotesAndRests();
     consolidateTemposAndMeasures();
 }
@@ -729,23 +727,14 @@ void ImportModel::consolidateNotesAndRests()
             ++it;
             continue;
         }
-        if ( event->isRest() && ( (Entry*) event )->isTiedTo( (Entry*) *itNext ) )
+        if ( event->isRest() && ( ( (Entry*) event )->isTiedTo( (Entry*) *itNext )
+                                 || ( (*itNext)->isRest() && event->measure() == (*itNext)->measure() ) ) )
         {
             event->changeDuration( event->duration() + (*itNext)->duration() );
             it = events_.erase( itNext );
             --it;
+            continue;
         }
-        ++it;
-    }
-}
-
-void ImportModel::cleanupCueNotes()
-{
-    auto it = events_.begin(), first = events_.begin(), last = events_.end();
-    while ( it != events_.end() )
-    {
-        Event* event = *it;
-        //TODO
         ++it;
     }
 }

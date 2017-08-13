@@ -1,11 +1,11 @@
-; Antescofo score generated using native importer
+﻿; Antescofo score generated using native importer version 0.2.1.b2
 ; Copyright (c) IRCAM 2015
 ; Designed by Robert Piéchaud
 
-; Original file: Sib_Polyph01.xml
+; Original file: #921-Sib_Polyph01.xml
 ; exported from Sibelius 7.5.0 ~ Direct export, not from Dolet
 ; MusicXML version 3.0
-; Converted to Antescofo on Tue Jun 16 10:22:32 2015
+; Converted to Antescofo on Sun Aug 13 17:46:50 2017
 
 ; start
 
@@ -30,5 +30,4 @@ CHORD (-D4 -D#5) 1
 CHORD (-D4 -D#5) 1
 CHORD (-D4 -D#5) 1
 CHORD (-D4 -D#5) 2
-NOTE 0 5
-NOTE 0 4
+NOTE 0 9
