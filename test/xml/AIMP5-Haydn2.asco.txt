@@ -5,7 +5,7 @@
 ; Original file: AIMP5-Haydn2.musicxml
 ; exported from Finale v25 for Mac
 ; MusicXML version 3.1
-; Converted to Antescofo on Sun Aug 13 17:39:25 2017
+; Converted to Antescofo on Sun Aug 13 18:16:01 2017
 ; Credits: 2
 
 ; start

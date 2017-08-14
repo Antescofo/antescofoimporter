@@ -589,7 +589,6 @@ void MusicXmlImporter::chaseCues( TiXmlNode* measure )
 {
     TiXmlNode* cueCheck = measure->FirstChild();
     int cueCount = 0;
-    bool isCue = false;
     vector<float> cueDurations;
     vector<TiXmlNode*> cueNotes;
     while ( cueCheck )
@@ -598,7 +597,8 @@ void MusicXmlImporter::chaseCues( TiXmlNode* measure )
             break;
         else if ( cueCheck->ValueStr() == "note" && cueCheck->FirstChildElement( "rest" ) == nullptr )
         {
-            if ( cueCheck->FirstChildElement( "cue" ) )
+            bool isCue = false;
+            if ( cueCheck->FirstChildElement( "cue" ) && cueCheck->FirstChildElement( "lyric" ) == nullptr )
                 isCue = true;
             else
             {
@@ -637,13 +637,18 @@ void MusicXmlImporter::chaseCues( TiXmlNode* measure )
             S += (E - *x)*(E - *x);
         S /= cueDurations.size();
         S = sqrtf( S );
+#ifdef DEBUG
         cout << "meas. " << currentMeasure_ << " => E = " << E << "  S = " << S << endl;
-        if ( E >= 0.25 || S > 0 )
+#endif
+        if ( E >= 0.25 || S > 0.15 )
         {
             for ( auto it = cueNotes.begin(); it != cueNotes.end(); ++it )
             {
                 (*it)->ToElement()->SetAttribute( "real-cue", "1" );
             }
+#ifdef DEBUG
+            cout << "Ignoring " << cueNotes.size() << " notes found in meas. " << currentMeasure_ << endl;
+#endif
         }
     }
 }
