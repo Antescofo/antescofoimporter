@@ -10,7 +10,7 @@
 //  Importer.h
 //
 //  Created by Robert Piéchaud on 29/04/15.
-//  Copyright (c) 2015 ircam. All rights reserved.
+//  Copyright (c) 2017 Antescofo. All rights reserved.
 //
 
 #ifndef _ANTESCOFO_IMPORTER_WRAPPER_
@@ -75,6 +75,8 @@ namespace antescofo
         bool                improveXml() const { return improveXml_;}
         void                setChaseCues( bool status ) { chaseCues_ = status; };
         bool                chaseCues() const { return chaseCues_;}
+        void                setSmartGraceNotes( bool status ) { smartGraceNotes_ = status; };
+        bool                smartGraceNotes() const { return smartGraceNotes_;}
         
     private:
         void addImporter( Importer* importer );
@@ -96,6 +98,7 @@ namespace antescofo
         bool                    displayQueriesOnly_;
         bool                    improveXml_;
         bool                    chaseCues_;
+        bool                    smartGraceNotes_;
     };
 }
 

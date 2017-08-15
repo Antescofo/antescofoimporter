@@ -27,6 +27,7 @@
                 <outlet property="quarterNoteTimeChekbox" destination="zgK-lK-3r1" id="175-j0-ooa"/>
                 <outlet property="rootView" destination="EiT-Mj-1SZ" id="gLj-w7-1Oe"/>
                 <outlet property="saveMenuItem" destination="nq6-xL-ot9" id="BBM-PM-0bl"/>
+                <outlet property="smartGraceNotes" destination="d7z-Qj-PTg" id="5hd-Mm-7iH"/>
                 <outlet property="trackList" destination="1zO-0t-Mpr" id="jCQ-tw-wzo"/>
                 <outlet property="versionText" destination="3Qh-Oh-BxH" id="325-yg-5Ft"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
@@ -111,10 +112,10 @@
         <window title="Antescofo Importer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="QvC-M9-y7g" userLabel="Antescofo Converter" customClass="ImporterWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="860" height="480"/>
+            <rect key="contentRect" x="335" y="390" width="860" height="510"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="877"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="-1" width="860" height="480"/>
+                <rect key="frame" x="0.0" y="0.0" width="860" height="510"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" id="0TL-7X-Zxc">
@@ -146,7 +147,7 @@ Gw
                         </connections>
                     </button>
                     <box autoresizesSubviews="NO" title="Score Info" borderType="line" id="YSw-0W-GS5">
-                        <rect key="frame" x="537" y="272" width="306" height="188"/>
+                        <rect key="frame" x="537" y="302" width="306" height="188"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
                             <rect key="frame" x="1" y="1" width="304" height="172"/>
@@ -167,14 +168,14 @@ Gw
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <box autoresizesSubviews="NO" title="Import Options" borderType="line" id="EDr-eK-F7M">
-                        <rect key="frame" x="537" y="66" width="306" height="201"/>
+                        <rect key="frame" x="537" y="66" width="306" height="231"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
-                            <rect key="frame" x="1" y="1" width="304" height="185"/>
+                            <rect key="frame" x="1" y="1" width="304" height="215"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <button identifier="cents" toolTip="If checked, &quot;6000&quot; will be output instead of &quot;C4&quot; " tag="10" id="dLm-Vc-Zez">
-                                    <rect key="frame" x="16" y="159" width="168" height="18"/>
+                                    <rect key="frame" x="16" y="189" width="168" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="check" title="Write Pitches in MIDI Cents" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Ebk-2h-kFh">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -185,7 +186,7 @@ Gw
                                     </connections>
                                 </button>
                                 <button identifier="pitches" toolTip="If checked, pitches will be output as in the original score (otherwise, D# will be used instead of Eb for instance)" tag="11" id="Wex-Re-d6E">
-                                    <rect key="frame" x="16" y="129" width="137" height="18"/>
+                                    <rect key="frame" x="16" y="159" width="137" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="check" title="Keep Original Pitches" bezelStyle="regularSquare" imagePosition="left" inset="2" id="rPp-RS-nI9">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -196,7 +197,7 @@ Gw
                                     </connections>
                                 </button>
                                 <button identifier="quarter" tag="11" id="zgK-lK-3r1">
-                                    <rect key="frame" x="16" y="99" width="120" height="18"/>
+                                    <rect key="frame" x="16" y="129" width="120" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <string key="toolTip">If checked, tempos and note duration will always be relative to the quarter note, even for compound time signatures such as 6/8 etc.</string>
                                     <buttonCell key="cell" type="check" title="Quarter Note Time" bezelStyle="regularSquare" imagePosition="left" inset="2" id="4V4-zb-U3J">
@@ -208,7 +209,7 @@ Gw
                                     </connections>
                                 </button>
                                 <button identifier="compound" toolTip="If checked, 3/8 will be seen as one-beat compound time." tag="11" id="DkU-zn-O0h">
-                                    <rect key="frame" x="16" y="69" width="153" height="18"/>
+                                    <rect key="frame" x="16" y="99" width="153" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="check" title="Treat 3/8 as Compound" bezelStyle="regularSquare" imagePosition="left" inset="2" id="xEA-2I-Qbq">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -219,7 +220,7 @@ Gw
                                     </connections>
                                 </button>
                                 <button identifier="compound" toolTip="If checked, 3/8 will be seen as one-beat compound time." tag="-1" id="V5v-L5-q9Y">
-                                    <rect key="frame" x="16" y="39" width="216" height="18"/>
+                                    <rect key="frame" x="16" y="69" width="216" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="check" title="Improve the MusicXml file if possible" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Rrp-EC-Lqf">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -230,7 +231,7 @@ Gw
                                     </connections>
                                 </button>
                                 <button identifier="compound" toolTip="If checked, 3/8 will be seen as one-beat compound time." tag="-1" id="mbP-u6-NCX">
-                                    <rect key="frame" x="16" y="9" width="216" height="18"/>
+                                    <rect key="frame" x="16" y="39" width="216" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="check" title="Chase cues" bezelStyle="regularSquare" imagePosition="left" inset="2" id="L9a-Jz-iVu">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -238,6 +239,17 @@ Gw
                                     </buttonCell>
                                     <connections>
                                         <action selector="checkboxEvent:" target="Voe-Tx-rLC" id="B5m-43-m8B"/>
+                                    </connections>
+                                </button>
+                                <button identifier="compound" toolTip="If checked, 3/8 will be seen as one-beat compound time." tag="-1" id="d7z-Qj-PTg">
+                                    <rect key="frame" x="16" y="9" width="216" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="check" title="Smart grace notes" bezelStyle="regularSquare" imagePosition="left" inset="2" id="kkv-eX-CUa">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="smallSystem"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="checkboxEvent:" target="Voe-Tx-rLC" id="ciu-Ff-kU8"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -264,14 +276,14 @@ Gw
                         </textFieldCell>
                     </textField>
                     <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" id="dUV-WQ-1i7">
-                        <rect key="frame" x="20" y="70" width="509" height="390"/>
+                        <rect key="frame" x="20" y="70" width="509" height="420"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <clipView key="contentView" id="H8Q-Yu-oKt">
-                            <rect key="frame" x="1" y="17" width="507" height="372"/>
+                            <rect key="frame" x="1" y="17" width="507" height="402"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" headerView="s7w-4W-yJ1" id="1zO-0t-Mpr">
-                                    <rect key="frame" x="0.0" y="0.0" width="507" height="372"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="507" height="402"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>

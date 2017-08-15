@@ -11,7 +11,7 @@
 //  AntescofoConverterApp
 //
 //  Created by Robert Piéchaud on 11/09/15.
-//  Copyright (c) 2015 ircam. All rights reserved.
+//  Copyright (c) 2017 Antescofo. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -95,6 +95,7 @@ using namespace std;
     _importer->setOriginalPitches( true );
     _importer->setImproveXml( true );
     _importer->setChaseCues( true );
+    _importer->setSmartGraceNotes( true );
     std::string text = "Antescofo Importer " + self.importer->getVersion();
     NSString* display = [[NSString alloc] initWithUTF8String:text.c_str()];
     [self.versionText setStringValue:display];
@@ -125,6 +126,7 @@ using namespace std;
     [self.compound3_8Checkbox setEnabled:self.importer->getInputPath().size()];
     [self.improveXmlCheckbox setEnabled:self.importer->getInputPath().size()];
     [self.chaseCues setEnabled:self.importer->getInputPath().size()];
+    [self.smartGraceNotes setEnabled:self.importer->getInputPath().size()];
     
     [self.displayCentsCheckBox setState:self.importer->pitchesAsMidiCents()];
     [self.originalPitchesCheckbox setState:self.importer->hasOriginalPitches()];
@@ -132,6 +134,7 @@ using namespace std;
     [self.compound3_8Checkbox setState:self.importer->is3_8_compound()];
     [self.improveXmlCheckbox setState:self.importer->improveXml()];
     [self.chaseCues setState:self.importer->chaseCues()];
+    [self.smartGraceNotes setState:self.importer->smartGraceNotes()];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
@@ -357,6 +360,7 @@ using namespace std;
     self.importer->setPitchesAsMidiCents( [self.displayCentsCheckBox state] );
     self.importer->setImproveXml( [self.improveXmlCheckbox state] );
     self.importer->setChaseCues( [self.chaseCues state] );
+    self.importer->setSmartGraceNotes( [self.smartGraceNotes state] );
     self.importer->import( trackSelection );
     self.importer->save();
     if ( self.invokedWithArguments )

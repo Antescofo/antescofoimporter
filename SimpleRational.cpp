@@ -10,7 +10,7 @@
 //  SimpleRational.cpp
 //
 //  Created by Robert Piéchaud on 07/10/15.
-//  Copyright (c) 2015 ircam. All rights reserved.
+//  Copyright (c) 2017 Antescofo. All rights reserved.
 //
 
 #include "SimpleRational.h"

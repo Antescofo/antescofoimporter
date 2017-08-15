@@ -10,7 +10,7 @@
 //  Converter.cpp
 //
 //  Created by Robert Piéchaud on 29/04/15.
-//  Copyright (c) 2015 ircam. All rights reserved.
+//  Copyright (c) 2017 Antescofo. All rights reserved.
 //
 
 #include "ImporterWrapper.h"
@@ -35,7 +35,8 @@ ImporterWrapper::ImporterWrapper() :
     displayMetadata_        ( false ),
     displayQueriesOnly_     ( false ),
     improveXml_             ( false ),
-    chaseCues_              ( false )
+    chaseCues_              ( false ),
+    smartGraceNotes_        ( false )
 {
     addImporter( new MusicXmlImporter( *this ) );
     addImporter( new MidiImporter( *this ) );
@@ -52,7 +53,7 @@ ImporterWrapper::~ImporterWrapper()
 
 std::string ImporterWrapper::getVersion()
 {
-    return "version 0.2.1.b2";
+    return "version 0.2.1.b4";
 }
 
 bool ImporterWrapper::parseArguments( vector<string>& args )
@@ -130,6 +131,10 @@ bool ImporterWrapper::parseArguments( vector<string>& args )
         {
             chaseCues_ = true;
         }
+        else if ( args[i] == "-smartgracenotes" )
+        {
+            smartGraceNotes_ = true;
+        }
         else
         {
             struct stat st;
@@ -143,7 +148,9 @@ bool ImporterWrapper::parseArguments( vector<string>& args )
     if ( improveXml_ )
         cout << "  ✔︎ Improve source music xml files" << endl;
     if ( chaseCues_ )
-        cout << "  ✔︎ Chasing cues!" << endl;
+        cout << "  ✔︎ Chasing cues" << endl;
+    if ( smartGraceNotes_ )
+        cout << "  ✔︎ Smart grace notes" << endl;
     
     if ( filePath.length() > 0 )
         setInputPath( filePath );

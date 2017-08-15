@@ -576,7 +576,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$CONFIGURATION\" = \"Release\" ] ; then\n#/usr/local/bin/${TARGET_NAME} -unittest=test/unit/plain -chasecues\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ] ; then\n#/usr/local/bin/${TARGET_NAME} -unittest=test/unit/original_pitches -originalpitches -chasecues\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\ncp ${TARGET_BUILD_DIR}/${TARGET_NAME} out/mac";
+			shellScript = "if [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/plain -chasecues\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/original_pitches -originalpitches -chasecues\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\ncp ${TARGET_BUILD_DIR}/${TARGET_NAME} out/mac";
 		};
 /* End PBXShellScriptBuildPhase section */
 

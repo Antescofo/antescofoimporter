@@ -1,11 +1,11 @@
-﻿; Antescofo score generated using native importer version 0.2.1.b2
+﻿; Antescofo score generated using native importer version 0.2.1.b4
 ; Copyright (c) IRCAM 2015
 ; Designed by Robert Piéchaud
 
 ; Original file: AIMP-4.xml
 ; exported from Finale v25 for Mac
 ; MusicXML version 3.1
-; Converted to Antescofo on Tue Aug 15 22:24:54 2017
+; Converted to Antescofo on Wed Aug 16 00:21:48 2017
 ; Credits: Cues, Appogiaturas, Grace Notes...
 
 ; start

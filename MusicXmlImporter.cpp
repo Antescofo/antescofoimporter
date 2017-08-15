@@ -10,7 +10,7 @@
 //  MusicXmlImporter.cpp
 //
 //  Created by Robert Piéchaud on 09/05/15.
-//  Copyright (c) 2015 ircam. All rights reserved.
+//  Copyright (c) 2017 Antescofo. All rights reserved.
 //
 
 #include "MusicXmlImporter.h"
@@ -364,7 +364,8 @@ bool MusicXmlImporter::import()
             int count = 0;
             while ( part )
             {
-                beautifyGraceNotes( part );
+                if ( wrapper_.smartGraceNotes() )
+                    beautifyGraceNotes( part );
                 if ( !tracks_.size() || ( tracks_.size() && find( tracks_.begin(), tracks_.end(), count + 1 ) != tracks_.end() ) )
                 {
                     if ( wrapper_.isVerbose() )
@@ -745,7 +746,6 @@ void MusicXmlImporter::beautifyGraceNotes( TiXmlNode* part )
                 {
                     if ( firstEntry && graceNotes.size() )  //grace note(s) in previous measure followed by another grace note
                     {
-                        //TODO: process grace notes from preceeding measure...
 #ifdef DEBUG
                         cout << "  Group of " << graceNotes.size() << " grace notes found in m." << currentMeasure << endl;
 #endif

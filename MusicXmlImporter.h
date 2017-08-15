@@ -10,7 +10,7 @@
 //  MusicXmlImporter.h
 //
 //  Created by Robert Piéchaud on 09/05/15.
-//  Copyright (c) 2015 ircam. All rights reserved.
+//  Copyright (c) 2017 Antescofo. All rights reserved.
 //
 
 #ifndef _ANTESCOFO_MUSICXML_IMPORTER_
