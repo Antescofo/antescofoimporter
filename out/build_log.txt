@@ -33,6 +33,13 @@ Developped by Robert Piéchaud
      
 * * Build log * *
 
+* * * v. 0.2.1.b3 ~ Aug. 15 2017 * * *
+- AIMP-5: refining cue note chasing
+
+* * * v. 0.2.1.b2 ~ Aug. 13 2017 * * *
+- AIMP-5: cue note chasing
+- AIMP-4: work-in-progress (grace notes/cadenzas)
+
 * * * v. 0.2.1.b1 ~ Aug. 12 2017 * * *
 - AIMP-11: music xml source improvement (trills)
 

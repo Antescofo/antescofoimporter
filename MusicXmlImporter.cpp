@@ -373,11 +373,22 @@ bool MusicXmlImporter::import()
                     currentDiatonicTransposition_ = 0;
                     accumLocal_ = 0.0;
                     TiXmlNode* measure = part->FirstChildElement( "measure" );
+                    bool shouldChaseCue = true;
+                    int noCueChaseCount = 0;
                     while ( measure )
                     {
+                        if ( noCueChaseCount > 1 )
+                        {
+                            shouldChaseCue = true;
+                            noCueChaseCount = 0;
+                        }
                         currentVoice_ = 0;
                         currentNoteFeatures_ = None;
                         previousDuration_ = 0.0;
+                        if ( wrapper_.chaseCues() && shouldChaseCue )
+                            shouldChaseCue = chaseCues( measure );
+                        if ( !shouldChaseCue )
+                            ++noCueChaseCount;
                         processMeasure( measure );
                         measure = part->IterateChildren( "measure", measure );
                     }
@@ -564,8 +575,6 @@ void MusicXmlImporter::processMeasure( TiXmlNode* measure )
         currentKeyAccidentals_ = ((Measure*) specs)->keyAccidentals();
         currentMeasureDuration_ = specs->duration();
     }
-    if ( wrapper_.chaseCues() )
-        chaseCues( measure );
     accumLocal_ = 0.0;
     TiXmlNode* item = measure->FirstChild();
     bool hasNotes = false;
@@ -585,10 +594,48 @@ void MusicXmlImporter::processMeasure( TiXmlNode* measure )
     }
 }
 
-void MusicXmlImporter::chaseCues( TiXmlNode* measure )
+float MusicXmlImporter::typeToDuration( const char* type ) const
 {
+    if ( type == nullptr )
+        return 0.;
+    //efficiently parsing music xml "type" visual rhythmic values:
+    if (strncmp( type, "q", 1) == 0 )
+        return 1.;
+    else if (strncmp( type, "e", 1) == 0 )
+        return 1./2.;
+    else if (strncmp( type, "16", 2) == 0 )
+        return 1./4.;
+    else if (strncmp( type, "3", 1) == 0 )
+        return 1./8.;
+    else if (strncmp( type, "h", 1) == 0 )
+        return 2.;
+    else if (strncmp( type, "w", 1) == 0 )
+        return 4.;
+    else if (strncmp( type, "6", 1) == 0 )
+        return 1./16.;
+    else if (strncmp( type, "5", 1) == 0 )
+        return 1./128.;
+    else if (strncmp( type, "2", 1) == 0 )
+        return 1./64.;
+    else if (strncmp( type, "12", 2) == 0 )
+        return 1./32.;
+    else if (strncmp( type, "b", 1) == 0 )
+        return 8.;
+    else if (strncmp( type, "l", 1) == 0 )
+        return 16.;
+    else if (strncmp( type, "m", 1) == 0 )
+        return 32.;
+    else if (strncmp( type, "10", 2) == 0 )
+        return 1./256.;
+    return 1.;
+}
+
+bool MusicXmlImporter::chaseCues( TiXmlNode* measure )
+{
+    bool hasCue = false;
     TiXmlNode* cueCheck = measure->FirstChild();
     int cueCount = 0;
+    int noteCount = 0;
     vector<float> cueDurations;
     vector<TiXmlNode*> cueNotes;
     while ( cueCheck )
@@ -598,27 +645,31 @@ void MusicXmlImporter::chaseCues( TiXmlNode* measure )
         else if ( cueCheck->ValueStr() == "note" && cueCheck->FirstChildElement( "rest" ) == nullptr )
         {
             bool isCue = false;
-            if ( cueCheck->FirstChildElement( "cue" ) && cueCheck->FirstChildElement( "lyric" ) == nullptr )
-                isCue = true;
-            else
+            TiXmlNode* type = cueCheck->FirstChildElement( "type" );
+            if ( type )
             {
-                TiXmlNode* type = cueCheck->FirstChildElement( "type" );
-                if ( type )
-                {
-                    const char* size = type->ToElement()->Attribute( "size" );
-                    if ( size && strcmp( size, "cue" ) == 0 )
-                        isCue = true;
-                }
+                const char* size = type->ToElement()->Attribute( "size" );
+                if ( size && strcmp( size, "cue" ) == 0 )
+                    isCue = true;
             }
-            if ( isCue )
+            if ( !isCue && cueCheck->FirstChildElement( "cue" ) && cueCheck->FirstChildElement( "lyric" ) == nullptr )
+                isCue = true;
+            if ( isCue && type )
             {
-                TiXmlNode* durationNode = cueCheck->FirstChildElement( "duration" );
-                if ( durationNode )
+                
+                TiXmlNode* content = type->FirstChild();
+                if ( content )
                 {
-                    cueDurations.push_back( atof( durationNode->ToElement()->GetText() )/currentDivision_ );
+                    float duration = typeToDuration( content->Value() );
+                    cueDurations.push_back( duration );
                     cueNotes.push_back(cueCheck);
                 }
                 ++cueCount;
+            }
+            else
+            {
+                ++noteCount;
+                break;
             }
         }
         cueCheck = measure->IterateChildren( cueCheck );
@@ -638,19 +689,26 @@ void MusicXmlImporter::chaseCues( TiXmlNode* measure )
         S /= cueDurations.size();
         S = sqrtf( S );
 #ifdef DEBUG
-        cout << "meas. " << currentMeasure_ << " => E = " << E << "  S = " << S << endl;
+        cout << "meas. " << currentMeasure_ + 1 << ": E = " << E << "  S = " << S << endl;
 #endif
-        if ( E >= 0.25 || S > 0.15 )
+        //TODO: perhaps a less simplistic discriminant f(E,S)?..
+        if ( E > 0.25 || S > 0.15 )
         {
             for ( auto it = cueNotes.begin(); it != cueNotes.end(); ++it )
             {
                 (*it)->ToElement()->SetAttribute( "real-cue", "1" );
             }
+            hasCue = true;
 #ifdef DEBUG
-            cout << "Ignoring " << cueNotes.size() << " notes found in meas. " << currentMeasure_ << endl;
+            cout << "  => ignoring " << cueNotes.size() << " notes found in meas. " << currentMeasure_ + 1 << endl;
 #endif
         }
+        else
+            measure->ToElement()->SetAttribute( "real-notes", "1" );
     }
+    else if ( noteCount > 0 )
+        measure->ToElement()->SetAttribute( "real-notes", "1" );
+    return noteCount == 0;
 }
 
 float MusicXmlImporter::processTimeSignature( TiXmlNode* time, string& timeSignature )

@@ -49,9 +49,10 @@ namespace antescofo
         void  processDirection( TiXmlNode* node );
         bool  processTempo( TiXmlNode* node );
         float processNote( TiXmlNode* node );
-        void  chaseCues( TiXmlNode* node );
+        bool  chaseCues( TiXmlNode* node );
         float processTimeSignature( TiXmlNode* node, std::string& timeSignature );
         int   getMidiCents( const char diatonic, int octave, float accidental ) const;
+        float typeToDuration( const char* type ) const;
         void  improveXml( TiXmlDocument& musicXML );
         
     private:

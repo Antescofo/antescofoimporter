@@ -143,7 +143,7 @@ bool ImporterWrapper::parseArguments( vector<string>& args )
     if ( improveXml_ )
         cout << "  ✔︎ Improve source music xml files" << endl;
     if ( chaseCues_ )
-        cout << "  ✔︎ Cues will be chased!" << endl;
+        cout << "  ✔︎ Chasing cues!" << endl;
     
     if ( filePath.length() > 0 )
         setInputPath( filePath );
