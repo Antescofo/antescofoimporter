@@ -306,18 +306,18 @@ void MusicXmlImporter::improveXml( TiXmlDocument& musicXML )
                             TiXmlNode* notations = item->FirstChildElement( "notations" );
                             if ( !notations )
                             {
-                                notations = new TiXmlElement( "notations" );
-                                notations = item->InsertEndChild( *notations );
+                                TiXmlElement newItem ( "notations" );
+                                notations = item->InsertEndChild( newItem );
                             }
                             TiXmlNode* ornaments = notations->FirstChildElement( "ornaments" );
                             if ( !ornaments )
                             {
-                                ornaments = new TiXmlElement( "ornaments" );
-                                ornaments = notations->InsertEndChild( *ornaments );
+                                TiXmlElement newItem( "ornaments" );
+                                ornaments = notations->InsertEndChild( newItem );
                             }
-                            TiXmlElement* trill = new TiXmlElement( "trill-mark" );
-                            trill->SetAttribute( "placement", "above" );
-                            ornaments->InsertEndChild( *trill );
+                            TiXmlElement trill( "trill-mark" );
+                            trill.SetAttribute( "placement", "above" );
+                            ornaments->InsertEndChild( trill );
                             trillFound = false;
                         }
                     }
@@ -476,15 +476,8 @@ bool MusicXmlImporter::queryScoreInfo()
     return good;
 }
 
-void MusicXmlImporter::processMeasure( TiXmlNode* measure )
+TiXmlNode* MusicXmlImporter::processMeasureAttributes( TiXmlNode* measure )
 {
-    float measNumber = 0;
-    float previousMeasureBeats = model_.getMeasureDuration( currentMeasure_ );
-    measure->ToElement()->QueryValueAttribute( "number", &measNumber );
-    if ( measNumber == 0 )
-        currentMeasure_ += 0.5; //convention for pickup measure
-    else
-        currentMeasure_ = measNumber;
     TiXmlNode* attributes = measure->FirstChildElement( "attributes" );
     if ( attributes )
     {
@@ -502,6 +495,19 @@ void MusicXmlImporter::processMeasure( TiXmlNode* measure )
                 currentDiatonicTransposition_ = atoi( chromatic->ToElement()->GetText() );
         }
     }
+    return attributes;
+}
+
+void MusicXmlImporter::processMeasure( TiXmlNode* measure )
+{
+    float measNumber = 0;
+    float previousMeasureBeats = model_.getMeasureDuration( currentMeasure_ );
+    measure->ToElement()->QueryValueAttribute( "number", &measNumber );
+    if ( measNumber == 0 )
+        currentMeasure_ += 0.5; //convention for pickup measure
+    else
+        currentMeasure_ = measNumber;
+    TiXmlNode* attributes = processMeasureAttributes( measure );
     TiXmlNode* barline = measure->FirstChildElement( "barline" );
     while ( barline )
     {
@@ -720,29 +726,30 @@ void MusicXmlImporter::beautifyGraceNotes( TiXmlNode* part )
     vector<TiXmlNode*> graceNotes;
     while ( measure )
     {
-        int measNumber = 0;
-        measure->ToElement()->QueryValueAttribute( "number", &measNumber );
+        int currentMeasure = 0;
+        processMeasureAttributes( measure );
+        measure->ToElement()->QueryValueAttribute( "number", &currentMeasure );
         TiXmlNode* item = measure->FirstChild();
         bool firstEntry = true;
         while ( item )
         {
-            /*
             if ( item->ValueStr() == "backup" )
             {
-                //TODO (multiple layers)
+                //TODO: multiple layers?..
+                break;
             }
-            */
             if ( item->ValueStr() == "note" && item->FirstChildElement( "rest" ) == nullptr )
             {
                 TiXmlNode* grace = item->FirstChildElement( "grace" );
                 if ( grace )
                 {
-                    if ( firstEntry && graceNotes.size() )
+                    if ( firstEntry && graceNotes.size() )  //grace note(s) in previous measure followed by another grace note
                     {
                         //TODO: process grace notes from preceeding measure...
 #ifdef DEBUG
-                        cout << "  Group of " << graceNotes.size() << " grace notes found in m." << measNumber << endl;
+                        cout << "  Group of " << graceNotes.size() << " grace notes found in m." << currentMeasure << endl;
 #endif
+                        handleGraceNoteGroup( graceNotes, entryBefore, item );
                         graceNotes.clear();
                     }
                     graceNotes.push_back( item );
@@ -753,53 +760,100 @@ void MusicXmlImporter::beautifyGraceNotes( TiXmlNode* part )
                     {
                         if ( graceNotes.size() == 1 )
                         {
-                            TiXmlNode* graceNote = graceNotes[0];
-                            TiXmlNode* graceNode = graceNote->FirstChildElement( "grace" );
-                            const char* slash = graceNode->ToElement()->Attribute( "slash" );
-                            if ( !slash || strcmp( slash, "yes" ) != 0 )
-                            {
-                                int value = 0;
-                                TiXmlNode* duration = item->FirstChildElement( "duration" );
-                                if ( duration )
-                                {
-                                    value = atoi( duration->ToElement()->GetText() );
-                                    //float floatDuration = (float) currentMetricFactor_ * value / currentDivision_;
-                                    value /= 2;
-                                    char buffer[8];
-                                    sprintf( buffer, "%d", value );
-                                    duration->ToElement()->FirstChild()->SetValue( buffer );
-                                    duration = new TiXmlElement( "duration" );
-                                    duration = graceNote->InsertEndChild( *duration );
-                                    duration->InsertEndChild( TiXmlText( buffer ) );
-                                    graceNote->InsertEndChild( *duration );
-                                    graceNote->RemoveChild( graceNode );
 #ifdef DEBUG
-                                    cout << "  Real appoggiatura found and adjusted in m." << measNumber << endl;
+                            cout << "  Single grace note found in m." << currentMeasure;
 #endif
-                                }
-                            }
-                            else
-                            {
-#ifdef DEBUG
-                                cout << "  Accacciatura found in m." << measNumber << " (doing nothing)" << endl;
-#endif
-                            }
+                            handleSingleGraceNote( graceNotes[0], item );
                         }
                         else
                         {
 #ifdef DEBUG
-                            cout << "  Group of " << graceNotes.size() << " grace notes found in m." << measNumber << endl;
+                            cout << "  Group of " << graceNotes.size() << " grace notes found in m." << currentMeasure << endl;
 #endif
+                            handleGraceNoteGroup( graceNotes, entryBefore, item );
                         }
                         graceNotes.clear();
                     }
                     entryBefore = item;
+                    entryBefore->ToElement()->SetAttribute( "measure", currentMeasure );
                 }
                 firstEntry = false;
             }
             item = measure->IterateChildren( item );
         }
         measure = part->IterateChildren( "measure", measure );
+    }
+}
+
+void MusicXmlImporter::handleGraceNoteGroup( vector<TiXmlNode*>& group, TiXmlNode* entryBefore, TiXmlNode* entryAfter )
+{
+    TiXmlNode* entry = entryAfter;
+    if ( entryBefore )
+        entry = entryBefore;
+    TiXmlNode* duration = entry->FirstChildElement( "duration" );
+    if ( duration )
+    {
+        char buffer[8];
+        float value = atof( duration->ToElement()->GetText() );
+        float realValue = (float) currentMetricFactor_ * value / currentDivision_;
+        float duraBefore = value;
+        float duraGrace = 0;
+        if ( (1./8.)*(group.size()+1) < realValue )
+        {
+            duraGrace = (1./8.)*currentDivision_/currentMetricFactor_;
+            duraBefore = value - duraGrace*group.size();
+        }
+        else
+        {
+            duraGrace = value / ( group.size() + 1);
+            duraBefore = duraGrace;
+        }
+        sprintf( buffer, "%d", (int) duraBefore );
+        duration->ToElement()->FirstChild()->SetValue( buffer );
+        sprintf( buffer, "%d", (int) duraGrace );
+        
+        for ( auto graceNote = group.begin(); graceNote != group.end(); ++graceNote )
+        {
+            TiXmlElement newItem ( "duration" );
+            duration = (*graceNote)->InsertEndChild( newItem );
+            duration->InsertEndChild( TiXmlText( buffer ) );
+            (*graceNote)->InsertEndChild( *duration );
+            TiXmlNode* graceNode = (*graceNote)->FirstChildElement( "grace" );
+            (*graceNote)->RemoveChild( graceNode );
+        }
+    }
+}
+
+void MusicXmlImporter::handleSingleGraceNote( TiXmlNode* graceNote, TiXmlNode* note )
+{
+    TiXmlNode* graceNode = graceNote->FirstChildElement( "grace" );
+    const char* slash = graceNode->ToElement()->Attribute( "slash" );
+    if ( !slash || strcmp( slash, "yes" ) != 0 )
+    {
+        int value = 0;
+        TiXmlNode* duration = note->FirstChildElement( "duration" );
+        if ( duration )
+        {
+            value = atoi( duration->ToElement()->GetText() );
+            value /= 2; //TODO: this could be refined a bit...
+            char buffer[8];
+            sprintf( buffer, "%d", value );
+            duration->ToElement()->FirstChild()->SetValue( buffer );
+            TiXmlElement newItem( "duration" );
+            duration = graceNote->InsertEndChild( newItem );
+            duration->InsertEndChild( TiXmlText( buffer ) );
+            graceNote->InsertEndChild( *duration );
+            graceNote->RemoveChild( graceNode );
+#ifdef DEBUG
+            cout << "  => real appoggiatura (adjusted)" << endl;
+#endif
+        }
+    }
+    else
+    {
+#ifdef DEBUG
+        cout << "  => accacciatura (nothing done)" << endl;
+#endif
     }
 }
 

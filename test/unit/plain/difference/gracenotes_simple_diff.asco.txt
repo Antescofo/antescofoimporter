@@ -1,0 +1,24 @@
+﻿; Antescofo score generated using native importer version 0.2.1.b2
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: gracenotes_simple.xml
+; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
+; MusicXML version 3.0
+; Converted to Antescofo on Tue Aug 15 22:25:42 2017
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+NOTE G3 0 measure1
+NOTE A3 0
+NOTE B3 0
+NOTE C4 0
+NOTE C4 0
+NOTE D4 0
+NOTE E4 1/2
+NOTE E4 0
+NOTE F4 0
+NOTE G4 1
+NOTE 0 1

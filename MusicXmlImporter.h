@@ -46,11 +46,14 @@ namespace antescofo
         bool  retrieveScoreInfo( TiXmlNode* node );
         bool  openDocument( TiXmlDocument& musicXML );
         void  processMeasure( TiXmlNode* measure );
+        TiXmlNode* processMeasureAttributes( TiXmlNode* measure );
         void  processDirection( TiXmlNode* node );
         bool  processTempo( TiXmlNode* node );
         float processNote( TiXmlNode* node );
         bool  chaseCues( TiXmlNode* measure );
         void  beautifyGraceNotes( TiXmlNode* part );
+        void  handleSingleGraceNote( TiXmlNode* graceNote, TiXmlNode* note );
+        void  handleGraceNoteGroup( std::vector<TiXmlNode*>& group, TiXmlNode* entryBefore, TiXmlNode* entryAfter );
         float processTimeSignature( TiXmlNode* node, std::string& timeSignature );
         int   getMidiCents( const char diatonic, int octave, float accidental ) const;
         float typeToDuration( const char* type ) const;

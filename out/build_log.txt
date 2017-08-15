@@ -34,7 +34,9 @@ Developped by Robert Piéchaud
 * * Build log * *
 
 * * * v. 0.2.1.b3 ~ Aug. 15 2017 * * *
+- AIMP-4: appoggiatura, accacciatura, grace note groups (including trill prefix/suffix) ready for testing.
 - AIMP-5: refining cue note chasing
+- possible source of memory leak fixed.
 
 * * * v. 0.2.1.b2 ~ Aug. 13 2017 * * *
 - AIMP-5: cue note chasing

@@ -5,33 +5,39 @@
 ; Original file: AIMP-4.xml
 ; exported from Finale v25 for Mac
 ; MusicXML version 3.1
-; Converted to Antescofo on Tue Aug 15 13:35:05 2017
+; Converted to Antescofo on Tue Aug 15 22:24:54 2017
 ; Credits: Cues, Appogiaturas, Grace Notes...
 
 ; start
 
 ; ----------- measure 1 --- beat 0 --- time signature 4/4
 
+NOTE G4 1/8 measure1
+NOTE A4 1/8
+NOTE B4 1/8
+NOTE C5 5/8 @staccato
+NOTE E5 1 @staccato
+NOTE G5 1 @staccato
+NOTE 0 1
+
+; ----------- measure 2 --- beat 3 --- time signature 4/4
+
 NOTE 0 4
 
-; ----------- measure 2 --- beat 4 --- time signature 4/4
+; ----------- measure 3 --- beat 7 --- time signature 4/4
 
 NOTE 0 4
 
-; ----------- measure 3 --- beat 8 --- time signature 4/4
-
-NOTE 0 4
-
-; ----------- measure 4 --- beat 12 --- time signature 4/4
+; ----------- measure 4 --- beat 11 --- time signature 4/4
 
 NOTE 0 4 measure4
 
-; ----------- measure 5 --- beat 16 --- time signature 4/4
+; ----------- measure 5 --- beat 15 --- time signature 4/4
 
 NOTE 0 3 measure5
 NOTE G4 1
 
-; ----------- measure 6 --- beat 20 --- time signature 4/4
+; ----------- measure 6 --- beat 19 --- time signature 4/4
 
 NOTE C5 1 measure6
 NOTE D#5 0
@@ -44,20 +50,20 @@ NOTE B5 1/2
 NOTE B5 1/2
 NOTE A5 1/2
 
-; ----------- measure 7 --- beat 24 --- time signature 4/4
+; ----------- measure 7 --- beat 23 --- time signature 4/4
 
 NOTE A5 1/2 measure7
 NOTE G5 1/2
 NOTE 0 1
-NOTE G4 2
-NOTE A4 0
-NOTE B4 0
-NOTE C5 0
-NOTE D5 0
-NOTE E5 0
-NOTE F5 0
+NOTE G4 5/4
+NOTE A4 1/8
+NOTE B4 1/8
+NOTE C5 1/8
+NOTE D5 1/8
+NOTE E5 1/8
+NOTE F5 1/8
 
-; ----------- measure 8 --- beat 28 --- time signature 4/4
+; ----------- measure 8 --- beat 27 --- time signature 4/4
 
 NOTE F#5 3/4 measure8
 NOTE G5 3/4
@@ -77,46 +83,57 @@ NOTE E5 2/13
 NOTE D#5 2/13
 NOTE D5 2/13
 
-; ----------- measure 9 --- beat 32 --- time signature 4/4
+; ----------- measure 9 --- beat 31 --- time signature 4/4
 
-NOTE D#5 1 measure9
+NOTE D#5 3/2 measure9
+NOTE E5 9/8
+NOTE 0 1
+
+; ----------- measure 10 --- beat  35.6 --- time signature 4/4
+
+NOTE G4 1/8 measure10
+NOTE A4 1/8
+NOTE B4 1/8
+NOTE C5 3/4
+NOTE B4 1/8
+NOTE C5 1/8
+NOTE D5 3/4
+NOTE C5 1/8
+NOTE D5 1/8
+NOTE E5 3/4
+NOTE D5 1/8
+NOTE E5 1/8
+NOTE F5 5/8
+
+; ----------- measure 11 --- beat  39.6 --- time signature 4/4
+
+NOTE F5 1/8 measure11
+NOTE F#5 1/8
+NOTE G5 1/8
+TRILL (F#5 G5) 7/4
+NOTE F5 1/8
+NOTE F#5 1/8
+TRILL (G5 A5) 7/4
+NOTE F#5 1/8
+NOTE G5 1/8
+
+; ----------- measure 12 --- beat 43 --- time signature 4/4
+
+NOTE C6 1 measure12
+NOTE C5 1/2
+NOTE D5 1/8
+NOTE C5 1/8
+NOTE B4 1/8
+NOTE C5 1/8
 NOTE E5 1
-NOTE 0 2
+NOTE C5 1/2
+NOTE G5 1/10
+NOTE G#5 1/10
+NOTE G5 1/10
+NOTE F#5 1/10
+NOTE G5 1/10
 
-; ----------- measure 10 --- beat 36 --- time signature 4/4
-
-NOTE G4 0 measure10
-NOTE A4 0
-NOTE B4 0
-NOTE C5 1
-NOTE B4 0
-NOTE C5 0
-NOTE D5 1
-NOTE C5 0
-NOTE D5 0
-NOTE E5 1
-NOTE D5 0
-NOTE E5 0
-NOTE F5 1
-
-; ----------- measure 11 --- beat 40 --- time signature 4/4
-
-NOTE F5 0 measure11
-NOTE F#5 0
-NOTE G5 0
-TRILL (F#5 G5) 2
-NOTE F5 0
-NOTE F#5 0
-TRILL (G5 A5) 2
-NOTE F#5 0
-NOTE G5 0
-
-; ----------- measure 12 --- beat 44 --- time signature 4/4
-
-TRILL (C6 D6) 1 measure12
-NOTE 0 3
-
-; ----------- measure 13 --- beat 48 --- time signature 4/4
+; ----------- measure 13 --- beat 47 --- time signature 4/4
 
 NOTE G6 4/15 measure13
 NOTE F#6 4/15
@@ -134,7 +151,7 @@ NOTE G5 4/15
 NOTE F#5 4/15
 NOTE F5 4/15
 
-; ----------- measure 14 --- beat 52 --- time signature 4/4
+; ----------- measure 14 --- beat 51 --- time signature 4/4
 
 NOTE E5 4/13 measure14
 NOTE D#5 4/13
@@ -150,24 +167,24 @@ NOTE F#4 4/13
 NOTE F4 4/13
 NOTE E4 4/13
 
-; ----------- measure 15 --- beat 56 --- time signature 4/4
+; ----------- measure 15 --- beat 55 --- time signature 4/4
 
-TRILL (F4 G4) 1 measure15
+NOTE F4 1 measure15
 NOTE 0 3
 
-; ----------- measure 16 --- beat 60 --- time signature 4/4
+; ----------- measure 16 --- beat 59 --- time signature 4/4
 
 NOTE 0 4
 
-; ----------- measure 17 --- beat 64 --- time signature 4/4
+; ----------- measure 17 --- beat 63 --- time signature 4/4
 
 NOTE 0 4
 
-; ----------- measure 18 --- beat 68 --- time signature 4/4
+; ----------- measure 18 --- beat 67 --- time signature 4/4
 
 NOTE 0 4 measure18
 
-; ----------- measure 19 --- beat 72 --- time signature 4/4
+; ----------- measure 19 --- beat 71 --- time signature 4/4
 
 NOTE 0 3 measure19
 NOTE E5 1/4
@@ -175,13 +192,13 @@ NOTE D5 1/4
 NOTE E5 1/4
 NOTE F#5 1/4
 
-; ----------- measure 20 --- beat 76 --- time signature 4/4
+; ----------- measure 20 --- beat 75 --- time signature 4/4
 
 NOTE G5 1/2 @staccato measure20
 NOTE A5 1/2 @staccato
 NOTE B5 1/2 @staccato
 NOTE 0 5/2
 
-; ----------- measure 21 --- beat 80 --- time signature 4/4
+; ----------- measure 21 --- beat 79 --- time signature 4/4
 
 NOTE 0 4
