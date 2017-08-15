@@ -5,7 +5,7 @@
   <identification>
     <encoding>
       <software>Finale v25 for Mac</software>
-      <encoding-date>2017-08-14</encoding-date>
+      <encoding-date>2017-08-15</encoding-date>
       <supports attribute="new-system" element="print" type="yes" value="yes"/>
       <supports attribute="new-page" element="print" type="yes" value="yes"/>
       <supports element="accidental" type="yes"/>
@@ -134,7 +134,7 @@
     <measure number="4" width="209">
       <direction placement="above">
         <direction-type>
-          <words default-y="35" font-family="Garamond Italic" relative-x="4" valign="top">cue:</words>
+          <words default-y="35" font-family="Garamond Italic" relative-x="-16" valign="top">cue:</words>
         </direction-type>
       </direction>
       <note default-x="16">
@@ -352,7 +352,7 @@
       </note>
     </measure>
     <!--=======================================================-->
-    <measure number="7" width="241">
+    <measure number="7" width="242">
       <print new-system="yes">
         <system-layout>
           <system-distance>142</system-distance>
@@ -403,7 +403,7 @@ followed by appoggiatura:</words>
         </direction-type>
         <offset>366</offset>
       </direction>
-      <note default-x="145">
+      <note default-x="146">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -416,7 +416,7 @@ followed by appoggiatura:</words>
           <slur bezier-x="17" bezier-y="30" default-x="14" default-y="11" number="1" placement="above" type="start"/>
         </notations>
       </note>
-      <note default-x="163">
+      <note default-x="164">
         <grace/>
         <pitch>
           <step>A</step>
@@ -427,7 +427,7 @@ followed by appoggiatura:</words>
         <stem default-y="18">up</stem>
         <beam number="1">begin</beam>
       </note>
-      <note default-x="176">
+      <note default-x="177">
         <grace/>
         <pitch>
           <step>B</step>
@@ -438,7 +438,7 @@ followed by appoggiatura:</words>
         <stem default-y="18.5">up</stem>
         <beam number="1">continue</beam>
       </note>
-      <note default-x="189">
+      <note default-x="190">
         <grace/>
         <pitch>
           <step>C</step>
@@ -460,7 +460,7 @@ followed by appoggiatura:</words>
         <stem default-y="20">up</stem>
         <beam number="1">continue</beam>
       </note>
-      <note default-x="215">
+      <note default-x="216">
         <grace/>
         <pitch>
           <step>E</step>
@@ -484,7 +484,7 @@ followed by appoggiatura:</words>
       </note>
     </measure>
     <!--=======================================================-->
-    <measure number="8" width="440">
+    <measure number="8" width="441">
       <note default-x="23">
         <grace/>
         <pitch>
@@ -512,7 +512,7 @@ followed by appoggiatura:</words>
         <stem default-y="-30">down</stem>
         <notations>
           <slur number="2" type="stop"/>
-          <slur bezier-x="-5" bezier-y="32" default-x="7" default-y="19" number="1" type="stop"/>
+          <slur bezier-x="-5" bezier-y="32" default-x="6" default-y="19" number="1" type="stop"/>
         </notations>
       </note>
       <note default-x="89">
@@ -548,7 +548,7 @@ followed by appoggiatura:</words>
         <beam number="1">end</beam>
         <beam number="2">end</beam>
       </note>
-      <note default-x="139">
+      <note default-x="140">
         <pitch>
           <step>F</step>
           <octave>5</octave>
@@ -568,7 +568,7 @@ followed by appoggiatura:</words>
           <tuplet number="1" placement="below" type="start"/>
         </notations>
       </note>
-      <note default-x="157">
+      <note default-x="158">
         <pitch>
           <step>G</step>
           <octave>5</octave>
@@ -584,7 +584,7 @@ followed by appoggiatura:</words>
         <beam number="1">continue</beam>
         <beam number="2">continue</beam>
       </note>
-      <note default-x="175">
+      <note default-x="176">
         <pitch>
           <step>F</step>
           <octave>5</octave>
@@ -600,7 +600,7 @@ followed by appoggiatura:</words>
         <beam number="1">continue</beam>
         <beam number="2">continue</beam>
       </note>
-      <note default-x="193">
+      <note default-x="194">
         <pitch>
           <step>E</step>
           <octave>5</octave>
@@ -616,7 +616,7 @@ followed by appoggiatura:</words>
         <beam number="1">continue</beam>
         <beam number="2">continue</beam>
       </note>
-      <note default-x="211">
+      <note default-x="212">
         <pitch>
           <step>F</step>
           <octave>5</octave>
@@ -648,7 +648,7 @@ followed by appoggiatura:</words>
         <beam number="1">continue</beam>
         <beam number="2">continue</beam>
       </note>
-      <note default-x="266">
+      <note default-x="267">
         <pitch>
           <step>G</step>
           <alter>1</alter>
@@ -683,7 +683,7 @@ followed by appoggiatura:</words>
         <beam number="1">continue</beam>
         <beam number="2">continue</beam>
       </note>
-      <note default-x="326">
+      <note default-x="327">
         <pitch>
           <step>F</step>
           <alter>1</alter>
@@ -718,7 +718,7 @@ followed by appoggiatura:</words>
         <beam number="1">continue</beam>
         <beam number="2">continue</beam>
       </note>
-      <note default-x="373">
+      <note default-x="375">
         <pitch>
           <step>E</step>
           <octave>5</octave>
@@ -734,7 +734,7 @@ followed by appoggiatura:</words>
         <beam number="1">continue</beam>
         <beam number="2">continue</beam>
       </note>
-      <note default-x="403">
+      <note default-x="404">
         <pitch>
           <step>E</step>
           <alter>-1</alter>
@@ -752,7 +752,7 @@ followed by appoggiatura:</words>
         <beam number="1">continue</beam>
         <beam number="2">continue</beam>
       </note>
-      <note default-x="421">
+      <note default-x="422">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -774,8 +774,8 @@ followed by appoggiatura:</words>
       </note>
     </measure>
     <!--=======================================================-->
-    <measure number="9" width="151">
-      <note default-x="23">
+    <measure number="9" width="148">
+      <note default-x="22">
         <grace/>
         <pitch>
           <step>D</step>
@@ -795,24 +795,25 @@ followed by appoggiatura:</words>
           <step>E</step>
           <octave>5</octave>
         </pitch>
-        <duration>1560</duration>
+        <duration>2340</duration>
         <voice>1</voice>
         <type>half</type>
+        <dot/>
         <stem default-y="-40">down</stem>
         <notations>
           <slur number="1" type="stop"/>
         </notations>
       </note>
-      <note default-x="91">
+      <note default-x="113">
         <rest/>
-        <duration>1560</duration>
+        <duration>780</duration>
         <voice>1</voice>
-        <type>half</type>
+        <type>quarter</type>
       </note>
     </measure>
     <!--=======================================================-->
-    <measure number="10" width="221">
-      <note default-x="13">
+    <measure number="10" width="222">
+      <note default-x="14">
         <grace/>
         <pitch>
           <step>G</step>
@@ -839,7 +840,7 @@ followed by appoggiatura:</words>
         <beam number="1">continue</beam>
         <beam number="2">continue</beam>
       </note>
-      <note default-x="39">
+      <note default-x="38">
         <grace/>
         <pitch>
           <step>B</step>
@@ -910,7 +911,7 @@ before the beat)</words>
           <slur number="1" type="stop"/>
         </notations>
       </note>
-      <note default-x="113">
+      <note default-x="114">
         <grace/>
         <pitch>
           <step>C</step>
@@ -950,7 +951,7 @@ before the beat)</words>
           <slur number="1" type="stop"/>
         </notations>
       </note>
-      <note default-x="158">
+      <note default-x="157">
         <grace/>
         <pitch>
           <step>D</step>
@@ -965,7 +966,7 @@ before the beat)</words>
           <slur number="1" placement="below" type="start"/>
         </notations>
       </note>
-      <note default-x="170">
+      <note default-x="171">
         <grace/>
         <pitch>
           <step>E</step>

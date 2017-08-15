@@ -364,6 +364,7 @@ bool MusicXmlImporter::import()
             int count = 0;
             while ( part )
             {
+                beautifyGraceNotes( part );
                 if ( !tracks_.size() || ( tracks_.size() && find( tracks_.begin(), tracks_.end(), count + 1 ) != tracks_.end() ) )
                 {
                     if ( wrapper_.isVerbose() )
@@ -709,6 +710,97 @@ bool MusicXmlImporter::chaseCues( TiXmlNode* measure )
     else if ( noteCount > 0 )
         measure->ToElement()->SetAttribute( "real-notes", "1" );
     return noteCount == 0;
+}
+
+
+void MusicXmlImporter::beautifyGraceNotes( TiXmlNode* part )
+{
+    TiXmlNode* measure = part->FirstChildElement( "measure" );
+    TiXmlNode* entryBefore = nullptr;
+    vector<TiXmlNode*> graceNotes;
+    while ( measure )
+    {
+        int measNumber = 0;
+        measure->ToElement()->QueryValueAttribute( "number", &measNumber );
+        TiXmlNode* item = measure->FirstChild();
+        bool firstEntry = true;
+        while ( item )
+        {
+            /*
+            if ( item->ValueStr() == "backup" )
+            {
+                //TODO (multiple layers)
+            }
+            */
+            if ( item->ValueStr() == "note" && item->FirstChildElement( "rest" ) == nullptr )
+            {
+                TiXmlNode* grace = item->FirstChildElement( "grace" );
+                if ( grace )
+                {
+                    if ( firstEntry && graceNotes.size() )
+                    {
+                        //TODO: process grace notes from preceeding measure...
+#ifdef DEBUG
+                        cout << "  Group of " << graceNotes.size() << " grace notes found in m." << measNumber << endl;
+#endif
+                        graceNotes.clear();
+                    }
+                    graceNotes.push_back( item );
+                }
+                else
+                {
+                    if ( graceNotes.size() )
+                    {
+                        if ( graceNotes.size() == 1 )
+                        {
+                            TiXmlNode* graceNote = graceNotes[0];
+                            TiXmlNode* graceNode = graceNote->FirstChildElement( "grace" );
+                            const char* slash = graceNode->ToElement()->Attribute( "slash" );
+                            if ( !slash || strcmp( slash, "yes" ) != 0 )
+                            {
+                                int value = 0;
+                                TiXmlNode* duration = item->FirstChildElement( "duration" );
+                                if ( duration )
+                                {
+                                    value = atoi( duration->ToElement()->GetText() );
+                                    //float floatDuration = (float) currentMetricFactor_ * value / currentDivision_;
+                                    value /= 2;
+                                    char buffer[8];
+                                    sprintf( buffer, "%d", value );
+                                    duration->ToElement()->FirstChild()->SetValue( buffer );
+                                    duration = new TiXmlElement( "duration" );
+                                    duration = graceNote->InsertEndChild( *duration );
+                                    duration->InsertEndChild( TiXmlText( buffer ) );
+                                    graceNote->InsertEndChild( *duration );
+                                    graceNote->RemoveChild( graceNode );
+#ifdef DEBUG
+                                    cout << "  Real appoggiatura found and adjusted in m." << measNumber << endl;
+#endif
+                                }
+                            }
+                            else
+                            {
+#ifdef DEBUG
+                                cout << "  Accacciatura found in m." << measNumber << " (doing nothing)" << endl;
+#endif
+                            }
+                        }
+                        else
+                        {
+#ifdef DEBUG
+                            cout << "  Group of " << graceNotes.size() << " grace notes found in m." << measNumber << endl;
+#endif
+                        }
+                        graceNotes.clear();
+                    }
+                    entryBefore = item;
+                }
+                firstEntry = false;
+            }
+            item = measure->IterateChildren( item );
+        }
+        measure = part->IterateChildren( "measure", measure );
+    }
 }
 
 float MusicXmlImporter::processTimeSignature( TiXmlNode* time, string& timeSignature )
