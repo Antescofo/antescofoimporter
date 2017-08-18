@@ -133,7 +133,7 @@ bool MusicXmlImporter::openDocument( TiXmlDocument& musicXML )
     clear();
     bool loaded = musicXML.LoadFile( TIXML_ENCODING_UTF8 );
     compressedXML_ = false;
-    if ( !loaded )  //ok... then perhaps it's UTF-16 ? (from $!*#!! Dolet plug-int) or compressed file ?  (zipped xml = mxl)
+    if ( !loaded )  //ok... then perhaps it's UTF-16 ? (from $!*#!! Dolet plug-in) or compressed file ?  (zipped xml = mxl)
     {
         std::string content;
         string inputPath = wrapper_.getInputPath();
@@ -640,6 +640,11 @@ float MusicXmlImporter::typeToDuration( const char* type ) const
 
 bool MusicXmlImporter::chaseCues( TiXmlNode* measure )
 {
+    // This algorithm needs a bit of explanation. In order to make a difference between real cues and grace, ornamental grace notes, there are a few assumptions:
+    // 1) graces ornamental notes are generally of regular values, general >= 8th notes (ex: a series of 16th little notes)
+    // 2) graces ornamental notes are *inside* the music (i.e. a passage of cue notes that immediately follows some normal notes is ornamental).
+    // 3) cue notes have mixed rhythms
+    // So in one word, the magic happens by observing the mean (E) and standard deviation (S) of cue note groups.
     bool hasCue = false;
     TiXmlNode* cueCheck = measure->FirstChild();
     int cueCount = 0;
@@ -718,7 +723,6 @@ bool MusicXmlImporter::chaseCues( TiXmlNode* measure )
         measure->ToElement()->SetAttribute( "real-notes", "1" );
     return noteCount == 0;
 }
-
 
 void MusicXmlImporter::beautifyGraceNotes( TiXmlNode* part )
 {
