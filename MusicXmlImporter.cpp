@@ -1369,8 +1369,29 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
                     string type = wavy->ToElement()->Attribute( "type" );
                     start = ( type == "start" /*|| type == "continue"*/ );
                     stop = ( type == "stop" );
+                    
+                    bool wavyStoppingWithinScore = false;
+                    
                     if ( start )
-                        currentTrillVoice_ = currentVoice_;
+                    {
+                        // AIMP-2 & AIMP-13 : Check if there's a closing wavy within the same scope! Though it doesn't make sense, it can happen in some MXMLs.. Go figure..
+                        TiXmlNode* anotherWavy=wavy->NextSibling("wavy-line");
+                        if (anotherWavy)
+                        {
+                            string lastWayType = anotherWavy->ToElement()->Attribute("type");
+                            wavyStoppingWithinScore = (lastWayType == "stop");
+                        }
+                        if (wavyStoppingWithinScore)
+                        {
+                            currentTrillVoice_ = 0;
+                            stop = true;
+                        }
+                        else
+                            currentTrillVoice_ = currentVoice_;
+                        
+                    }
+                    
+                    
                     if ( stop && !start)
                         currentTrillVoice_ = 0;
                 }
