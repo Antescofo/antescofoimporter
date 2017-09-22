@@ -1,0 +1,22 @@
+﻿; Antescofo score generated using native importer version 0.2.2
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: TrillTie4.xml
+; exported from Finale 2014.5 for Mac ~ Dolet 6.9 for Finale
+; MusicXML version 3.0
+; Converted to Antescofo on Fri Sep 22 11:40:31 2017
+; Credits: Copyright ©
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 2/4
+
+NOTE D6 1 measure1
+TRILL (D5 D#5) 1
+
+; ----------- measure 2 --- beat 2 --- time signature 2/4
+
+TRILL (D5 D#5) 1 measure2
+TRILL (D5 D#5) 1/2
+NOTE 0 1/2

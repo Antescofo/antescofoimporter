@@ -1362,17 +1362,17 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
             }
             else
             {
-                bool start = false;
-                bool stop = false;
+                bool wavyStart = false;
+                bool wavyStop = false;
                 if ( wavy )
                 {
                     string type = wavy->ToElement()->Attribute( "type" );
-                    start = ( type == "start" /*|| type == "continue"*/ );
-                    stop = ( type == "stop" );
+                    wavyStart = ( type == "start" /*|| type == "continue"*/ );
+                    wavyStop = ( type == "stop" );
                     
                     bool wavyStoppingWithinScore = false;
                     
-                    if ( start )
+                    if ( wavyStart )
                     {
                         // AIMP-2 & AIMP-13 : Check if there's a closing wavy within the same scope! Though it doesn't make sense, it can happen in some MXMLs.. Go figure..
                         TiXmlNode* anotherWavy=wavy->NextSibling("wavy-line");
@@ -1384,19 +1384,18 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
                         if (wavyStoppingWithinScore)
                         {
                             currentTrillVoice_ = 0;
-                            stop = true;
+                            wavyStop = true;
                         }
                         else
                             currentTrillVoice_ = currentVoice_;
-                        
                     }
                     
                     
-                    if ( stop && !start)
-                        currentTrillVoice_ = 0;
+                    // Dealing with Wavy Stop after assigning Trill now (AIMP-14)
                 }
                 
-                if ( trill || (wavy && !stop && !start && !trill) )
+//                if ( trill || (wavy && !wavyStop && !wavyStart && !trill) )
+                if ( trill || (wavy && !wavyStart && !trill) )  // wavyStop SHOULD generate Trill! (AIMP-14)
                 {
                     if ( !(features & Trill) && midiCents > 0 )
                         ++midiCents;    //by this trick, we mark the primary pitch as a trill (ex: 6200 -> 6201)
@@ -1429,6 +1428,9 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
                     if ( semitoneAfter == 2 )
                         features |= Feature::WholeToneTrill;
                 }
+                
+                if ( wavyStop && !wavyStart)
+                    currentTrillVoice_ = 0;
             }
         }
     }
