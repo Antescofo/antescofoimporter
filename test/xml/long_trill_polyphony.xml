@@ -4,9 +4,9 @@
   <movement-title>Long Trill with Polyphony</movement-title>
   <identification>
     <encoding>
-      <software>Finale 2014 for Mac</software>
-      <software>Dolet Light for Finale 2014</software>
-      <encoding-date>2015-05-23</encoding-date>
+      <software>Finale 2014.5 for Mac</software>
+      <software>Dolet 6.9 for Finale</software>
+      <encoding-date>2017-09-22</encoding-date>
       <supports attribute="new-system" element="print" type="yes" value="yes"/>
       <supports attribute="new-page" element="print" type="yes" value="yes"/>
       <supports element="accidental" type="yes"/>
@@ -172,7 +172,7 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
-      <note default-x="45">
+      <note default-x="46">
         <pitch>
           <step>B</step>
           <octave>4</octave>
@@ -211,6 +211,9 @@
         <stem default-y="-55">down</stem>
         <notations>
           <tied type="stop"/>
+          <ornaments>
+            <wavy-line number="1" relative-x="-22" type="stop"/>
+          </ornaments>
         </notations>
       </note>
       <note default-x="116">
@@ -222,11 +225,6 @@
         <voice>1</voice>
         <type>eighth</type>
         <stem default-y="-55">down</stem>
-        <notations>
-          <ornaments>
-            <wavy-line number="1" relative-x="-22" type="stop"/>
-          </ornaments>
-        </notations>
       </note>
       <note default-x="141">
         <pitch>
@@ -392,7 +390,7 @@
         <voice>1</voice>
         <type>quarter</type>
       </note>
-      <note default-x="85">
+      <note default-x="86">
         <rest/>
         <duration>1</duration>
         <voice>1</voice>
