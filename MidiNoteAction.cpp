@@ -13,7 +13,7 @@
 //  Copyright (c) 2017 Antescofo. All rights reserved.
 //
 
-#include "MidiNoteAction.H"
+#include "MidiNoteAction.h"
 
 using namespace antescofo;
 
