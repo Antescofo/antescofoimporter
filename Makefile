@@ -10,6 +10,8 @@ CURRENT_DIR = $(shell pwd)
 INCLUDES = -Izlib/ -Izlib/unzip/ -Ixml
 LIBS = -lpthread -lstdc++ -lm
 LFLAGS = -L. zlib/libzlinux.a -static -static-libstdc++
+TAG = latest
+IMAGENAME = buildimporterlinux
 
 SOURCES = main.cpp ImporterWrapper.cpp rational.cpp ImportModel.cpp UnitTester.cpp Event.cpp Measure.cpp Entry.cpp Pitch.cpp Repeat.cpp Tempo.cpp BeatPerMinute.cpp MusicXmlImporter.cpp MidiImporter.cpp MidiNoteAction.cpp ActionGroup.cpp GeneralMIDISoundset.cpp SimpleRational.cpp xml/ConvertUTF.cpp xml/tinystr.cpp xml/tinyxml.cpp xml/tinyxmlerror.cpp xml/tinyxmlparser.cpp zlib/unzip/unzip.cpp zlib/unzip/ioapi.cpp zlib/unzip/extract.cpp
 OBJS = $(SOURCES:.cpp=.o)
@@ -39,3 +41,8 @@ clean:
 .cpp.o:
 	$(CC) $(CFLAGS) $(INCLUDES) -c $<  -o $@
 
+image:
+	cd $(CURRENT_DIR)/Dockerimage && docker build --rm -t $(IMAGENAME):$(TAG) .
+
+linux:
+	docker run -v "$$(pwd)":/data $(IMAGENAME):$(TAG) bash -c "make clean && make"
