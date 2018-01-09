@@ -100,15 +100,11 @@ void ImportModel::setHeader()
     sprintf( bom, "\xef\xbb\xbf" );
     serialization_ << bom; //BOM (Byte order Mark) for UTF8
     serialization_  << "; Antescofo score generated using native importer " << wrapper_.getVersion() << endl
-    << "; Copyright (c) IRCAM 2015" << endl
-    << "; Designed by Robert Piéchaud" << endl << endl
     << "; Original file: " << path << endl;
     if ( fileOrigin_.size() )
         serialization_ << "; " << fileOrigin_ << endl;
     if ( version_.size() )
         serialization_ << "; " << version_ << endl;
-    serialization_ << "; Converted to Antescofo on ";
-    setDate( serialization_ );
     if ( credits_.size() )
         serialization_ << "; Credits: " << credits_ << endl;
     serialization_ << endl;

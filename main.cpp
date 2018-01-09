@@ -79,11 +79,8 @@ int main( int argc, char **argv )
 {
     int success = 0;
     
-    cout << endl;
-    cout << "Antescofo musicXML and MIDI importer ~ designed by Robert Piéchaud for Antescofo" << endl;
-    cout << "Command line utility" << endl;
-    cout << ImporterWrapper::getVersion() << endl;
-    cout << "©2017 Antescofo" << endl;
+    cout << "Antescofo musicXML and MIDI importer ~ designed by Robert Piéchaud for Antescofo (";
+    cout << ImporterWrapper::getVersion() << ")" << endl;
     
     char* unitaryTestFolderPath = nullptr;
     vector<string> arguments;
@@ -198,15 +195,15 @@ int main( int argc, char **argv )
             {
                 if ( importer->save() )
                 {
-                    cout << endl << "  saved as '" << importer->outputPath() << "'" << endl;
-                    cout << green << "  Conversion to Antescofo successful! :-)" << normal << endl;
+                    cout << "  saved as '" << importer->outputPath() << "'" << endl;
+                    cout << green << "  Conversion to Antescofo successful! :-)" << normal;
                 }
                 else
                 {
                     cout << red << "  Could not saved file! :-(" << normal << endl;
                 }
                 long long delta = nanoseconds() - t0;
-                cout << "  (file processed in " << (float) delta*1.0e-9 << " sec.)" << endl;
+                cout << " (file processed in " << (float) delta*1.0e-9 << " sec.)" << endl;
             }
             else
                 success = -1;
