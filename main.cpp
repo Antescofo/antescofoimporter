@@ -69,6 +69,7 @@ void displayHelp()
          << bright << "  -improvexml" << normal << " fixes some xml dialect issues (trills...) and resaves the xml document with a suffix '_fixed'" << endl
          << bright << "  -chasecues" << normal << " removes cues from the antescofo result (making the difference between cadential solo notes and actual cues)" << endl
          << bright << "  -smartgracenotes" << normal << " improves greatly the import of appoggiaturas, accacciaturas and other grace notes." << endl
+         << bright << "  -appoggiaturas" << normal << " convert appoggiaturas into regular notes" << endl
          << bright << "  -help" << normal << " / -h displays these info." << endl
          << bright << "  -metadata" << normal << " prepends score with metadata" << endl
          << bright << "  -querymetadata" << normal << " outputs only the metadata, not the score" << endl

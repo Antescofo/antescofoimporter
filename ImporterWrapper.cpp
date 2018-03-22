@@ -36,7 +36,8 @@ ImporterWrapper::ImporterWrapper() :
     displayQueriesOnly_     ( false ),
     improveXml_             ( false ),
     chaseCues_              ( false ),
-    smartGraceNotes_        ( false )
+    smartGraceNotes_        ( false ),
+    appoggiaturas_          ( true )
 {
     addImporter( new MusicXmlImporter( *this ) );
     addImporter( new MidiImporter( *this ) );
@@ -134,6 +135,10 @@ bool ImporterWrapper::parseArguments( vector<string>& args )
         else if ( args[i] == "-smartgracenotes" )
         {
             smartGraceNotes_ = true;
+        }
+        else if ( args[i] == "-appoggiaturas" )
+        {
+            appoggiaturas_ = true;
         }
         else
         {

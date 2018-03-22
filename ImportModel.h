@@ -20,7 +20,7 @@
 #include "rational.h"
 #include <string>
 #include <deque>
-#import <vector>
+#include <vector>
 
 namespace antescofo
 {

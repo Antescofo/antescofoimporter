@@ -14,7 +14,7 @@
 //  Copyright (c) 2017 Antescofo. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#include "AppDelegate.h"
 #include "ImporterWrapper.h"
 #include <vector>
 
@@ -94,8 +94,9 @@ using namespace std;
     _importer = new ImporterWrapper();
     _importer->setOriginalPitches( true );
     _importer->setImproveXml( true );
-    _importer->setChaseCues( true );
-    _importer->setSmartGraceNotes( true );
+    _importer->setChaseCues( false );
+    _importer->setSmartGraceNotes( false );
+    _importer->setAppoggiaturas( true );
     std::string text = "Antescofo Importer " + self.importer->getVersion();
     NSString* display = [[NSString alloc] initWithUTF8String:text.c_str()];
     [self.versionText setStringValue:display];
@@ -127,6 +128,7 @@ using namespace std;
     [self.improveXmlCheckbox setEnabled:self.importer->getInputPath().size()];
     [self.chaseCues setEnabled:self.importer->getInputPath().size()];
     [self.smartGraceNotes setEnabled:self.importer->getInputPath().size()];
+    [self.appoggiaturas setEnabled:self.importer->getInputPath().size()];
     
     [self.displayCentsCheckBox setState:self.importer->pitchesAsMidiCents()];
     [self.originalPitchesCheckbox setState:self.importer->hasOriginalPitches()];
@@ -135,6 +137,7 @@ using namespace std;
     [self.improveXmlCheckbox setState:self.importer->improveXml()];
     [self.chaseCues setState:self.importer->chaseCues()];
     [self.smartGraceNotes setState:self.importer->smartGraceNotes()];
+    [self.appoggiaturas setState:self.importer->appoggiaturas()];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
@@ -361,6 +364,7 @@ using namespace std;
     self.importer->setImproveXml( [self.improveXmlCheckbox state] );
     self.importer->setChaseCues( [self.chaseCues state] );
     self.importer->setSmartGraceNotes( [self.smartGraceNotes state] );
+    self.importer->setAppoggiaturas( [self.appoggiaturas state] );
     self.importer->import( trackSelection );
     self.importer->save();
     if ( self.invokedWithArguments )

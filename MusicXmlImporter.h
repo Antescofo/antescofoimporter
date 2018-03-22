@@ -42,6 +42,24 @@ namespace antescofo
         
         static rational getBeatDurationFromNoteType(const char*);
         
+        class Utils {
+        public:
+            static int const STEP_NUMBER = 7;
+            
+            static int stepDistance(char const step1, char const step2) {
+                return (step1 - step2) % STEP_NUMBER;
+            }
+            
+            static bool oneDegreeBetween(char const step1, char const step2) {
+                return (abs(stepDistance(step1, step2)) == 1);
+            }
+        };
+        
+        class Default {
+        public:
+            static int const DIVISIONS = 1;
+        };
+        
     private:
         bool  retrieveScoreInfo( TiXmlNode* node );
         bool  openDocument( TiXmlDocument& musicXML );
@@ -51,9 +69,13 @@ namespace antescofo
         bool  processTempo( TiXmlNode* node );
         float processNote( TiXmlNode* node );
         bool  chaseCues( TiXmlNode* measure );
-        void  beautifyGraceNotes( TiXmlNode* part );
+        void  beautifyGraceNotes( TiXmlNode* part, bool beautifyGroups = false );
+        bool  isGraceAppoggiatura( TiXmlNode* graceNote, TiXmlNode* isAppoggiatura) const;
         void  handleSingleGraceNote( TiXmlNode* graceNote, TiXmlNode* note );
         void  handleGraceNoteGroup( std::vector<TiXmlNode*>& group, TiXmlNode* entryBefore, TiXmlNode* entryAfter );
+        void  handleSingleGraceNoteBeforeTrill( TiXmlNode* graceNote, TiXmlNode* note, int const divisions);
+        //TODO: implement this function
+        //void  handleGraceNoteGroupTrill( std::vector<TiXmlNode*>& group, TiXmlNode* entryBefore, TiXmlNode* entryAfter );
         float processTimeSignature( TiXmlNode* node, std::string& timeSignature );
         int   getMidiCents( const char diatonic, int octave, float accidental ) const;
         float typeToDuration( const char* type ) const;
