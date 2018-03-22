@@ -866,7 +866,8 @@ void MusicXmlImporter::handleGraceNoteGroup( vector<TiXmlNode*>& group, TiXmlNod
     }
 }
 
-/**
+
+/*!
  */
 bool MusicXmlImporter::isGraceAppoggiatura( TiXmlNode* graceNote, TiXmlNode* note) const {
     bool isAppoggiatura = false;
@@ -885,11 +886,11 @@ bool MusicXmlImporter::isGraceAppoggiatura( TiXmlNode* graceNote, TiXmlNode* not
     }
 
     // Musicology: an appoggiatura is always a degree above or below its principal note
-        isAppoggiatura = false;
-        // Retrieve base note step
-        // Retrieve appoggiatura step
-        TiXmlNode const* pitch1 = note->FirstChildElement( "pitch" );
-        TiXmlNode const* pitch2 = graceNote->FirstChildElement( "pitch" );
+    isAppoggiatura = false;
+    // Retrieve base note step
+    // Retrieve appoggiatura step
+    TiXmlNode const* pitch1 = note->FirstChildElement( "pitch" );
+    TiXmlNode const* pitch2 = graceNote->FirstChildElement( "pitch" );
         if (pitch1 && pitch2) {
             // Check step
             TiXmlNode const* step1 = pitch1->FirstChildElement( "step" );
@@ -917,10 +918,13 @@ bool MusicXmlImporter::isGraceAppoggiatura( TiXmlNode* graceNote, TiXmlNode* not
     return isAppoggiatura;
 }
 
-// Refer to https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Appoggiatura
-// for musicological rules about appoggiaturas (aka. long appoggiaturas) and acciaccaturas (aka. short appoggiaturas)
-/**
- * This function assume that 'note' is NOT a trill
+
+/*!
+ * \brief   Process "human playback" of single grace note before a non-trill single note.
+ *
+ * Detect if a single note is a an appoggiatura, and if yes, replace it by a "real" note.
+ *
+ *  \see  https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Appoggiatura for musicological rules about appoggiaturas (aka. long appoggiaturas) and acciaccaturas (aka. short appoggiaturas)
  */
 void MusicXmlImporter::handleSingleGraceNote( TiXmlNode* graceNote, TiXmlNode* note )
 {
@@ -977,20 +981,23 @@ void MusicXmlImporter::handleSingleGraceNote( TiXmlNode* graceNote, TiXmlNode* n
     }
 }
 
-/**
+
+/*!
+ * \brief   Process "human playback" of single grace note before a single trill note.
  *
+ * Detect if a single note is a an appoggiatura, and if yes, replace it by a "real" note.
  */
+//TODO: finish this function: infer graceValueDuration correctly
 void MusicXmlImporter::handleSingleGraceNoteBeforeTrill( TiXmlNode* graceNote, TiXmlNode* note, int const divisions )
 {
     // infere if graceNote is an appoggiatura or an acciaccatura
     bool isAppoggiatura = this->isGraceAppoggiatura( graceNote, note);
-    
     // retrieve 'duration' node of principal note
     TiXmlNode* duration = note->FirstChildElement( "duration" );
     if ( !duration ) {
         isAppoggiatura = false;
     }
-    
+    /*
     // retrieve 'grace' node of grace note
     TiXmlNode* graceNode = graceNote->FirstChildElement( "grace" );
     if ( !graceNode ) {
@@ -1004,8 +1011,7 @@ void MusicXmlImporter::handleSingleGraceNoteBeforeTrill( TiXmlNode* graceNote, T
         fullDuration = atoi( duration->ToElement()->GetText() );
         
         // Compute grace note duration corresponding to its value
-        int graceValueDuration = fullDuration / 2 ; //TODO: compute it from MusicXML elements: value, time-modification,
-        
+        int graceValueDuration = fullDuration / 2 ; //TODO: compute it from MusicXML elements: value, time-modification, dot, etc.
         
         // Compute duration of 'converted' grace note
         // Rule: Give to the grace note its full value duration if possible, else half-duration of principal note
@@ -1031,14 +1037,13 @@ void MusicXmlImporter::handleSingleGraceNoteBeforeTrill( TiXmlNode* graceNote, T
     }
     else
     {
-        //TODO:
-        // - if single slashed note on a different degree, then it determines the trill prefix
-        // - if single slashed note on the SAME degree, then just remove it!
-        
+        // - if single slashed note is on a neighbor degree, then it determines the trill prefix
+        //TODO: if on the SAME or one degree ABOVE, then simply remove it! Indeed, those degree are already in the trill pitches
+        //TODO: if one degree
 #ifdef DEBUG
         cout << "  => accacciatura (nothing done)" << endl;
 #endif
-    }
+    }*/
 }
 
 float MusicXmlImporter::processTimeSignature( TiXmlNode* time, string& timeSignature )

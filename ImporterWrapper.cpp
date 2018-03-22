@@ -37,7 +37,7 @@ ImporterWrapper::ImporterWrapper() :
     improveXml_             ( false ),
     chaseCues_              ( false ),
     smartGraceNotes_        ( false ),
-    appoggiaturas_          ( true )
+    appoggiaturas_          ( false )
 {
     addImporter( new MusicXmlImporter( *this ) );
     addImporter( new MidiImporter( *this ) );
@@ -54,7 +54,7 @@ ImporterWrapper::~ImporterWrapper()
 
 std::string ImporterWrapper::getVersion()
 {
-    return "version 0.2.4";
+    return "version 0.2.5";
 }
 
 bool ImporterWrapper::parseArguments( vector<string>& args )
@@ -139,6 +139,7 @@ bool ImporterWrapper::parseArguments( vector<string>& args )
         else if ( args[i] == "-appoggiaturas" )
         {
             appoggiaturas_ = true;
+            cout << "  ✔︎ Convert appoggiaturas" << endl;
         }
         else
         {

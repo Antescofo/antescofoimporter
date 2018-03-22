@@ -47,11 +47,12 @@ namespace antescofo
             static int const STEP_NUMBER = 7;
             
             static int stepDistance(char const step1, char const step2) {
-                return (step1 - step2) % STEP_NUMBER;
+                int const unfoldedDistance = abs(step1 - step2);
+                return (unfoldedDistance+1 == STEP_NUMBER ? 1 : unfoldedDistance);
             }
             
             static bool oneDegreeBetween(char const step1, char const step2) {
-                return (abs(stepDistance(step1, step2)) == 1);
+                return (stepDistance(step1, step2) == 1);
             }
         };
         

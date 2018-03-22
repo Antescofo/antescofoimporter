@@ -27027,7 +27027,7 @@ Version alto solo et électronique</credit-words>
     <staff>1</staff>
    </direction>
    <note color="#000000" default-x="80" default-y="-48">
-    <grace />
+    <grace slash="yes"/>
     <pitch>
      <step>G</step>
      <octave>4</octave>

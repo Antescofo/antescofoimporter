@@ -1,0 +1,41 @@
+﻿; Antescofo score generated using native importer version 0.2.4
+; Original file: #1140_appoggiaturas.xml
+; exported from Finale for Mac
+; MusicXML version 3.0
+; Credits: Score
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 2/4
+
+NOTE G3 3/4 measure1
+NOTE A3 1/8
+NOTE B3 1/8
+NOTE C4 1/2
+NOTE E3 1/2
+
+; ----------- measure 2 --- beat 2 --- time signature 2/4
+
+NOTE G3 1/4 measure2
+NOTE F3 1/4
+NOTE E3 1/4
+NOTE D3 1/4
+NOTE C3 1/4
+NOTE B2 1/4
+NOTE D3 1/4
+NOTE F3 1/4
+
+; ----------- measure 3 --- beat 4 --- time signature 2/4
+
+NOTE G3 1/8 measure3
+NOTE F3 1/8
+NOTE E3 1/8
+NOTE F3 1/8
+NOTE E3 1/2
+NOTE 0 1/4
+NOTE B2 1/8
+NOTE C3 1/8
+NOTE D3 1/8
+NOTE C3 1/8
+NOTE B2 1/8
+NOTE C3 1/8

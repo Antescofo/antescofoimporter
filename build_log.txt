@@ -34,6 +34,9 @@ Developped by Robert Piéchaud
 * * Build log * *
 
 * * * v. 0.2.1.b4 ~ Aug. 16 2017 * * *
+- AIMP-17: added command line option -appoggiaturas (also to cocoa app.) to handle single appoggiaturas
+
+* * * v. 0.2.1.b4 ~ Aug. 16 2017 * * *
 - AIMP-4: added command line option -smartgracenotes (also to cocoa app.)
 
 * * * v. 0.2.1.b3 ~ Aug. 15 2017 * * *
