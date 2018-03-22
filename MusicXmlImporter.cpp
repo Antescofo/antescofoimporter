@@ -73,6 +73,9 @@ static const MusicXMLaccidental MusicXMLaccidentals [] =
     { nullptr, 0.}
 };
 
+std::vector<std::string> const MusicXmlImporter::Const::aTempo = {"a tempo", "tempo I", "tempo I°", "tempo 1", "tempo 1°", "tempo primo"};
+
+
 MusicXmlImporter::MusicXmlImporter( ImporterWrapper& wrapper ) :
     wrapper_                ( wrapper ),
     model_                  ( wrapper_.getModel() ),
@@ -1100,7 +1103,7 @@ float MusicXmlImporter::processTimeSignature( TiXmlNode* time, string& timeSigna
     }
     if ( currentQuarterNoteTempo_ != 0.0 && factor != currentMetricFactor_ )
     {
-        model_.appendEvent( new BeatPerMinute( currentMeasure_, accumLocal_, currentQuarterNoteTempo_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_, true ) );
+        appendCurrentTempo(true);
     }
     if ( duration == 0.0 )
         duration = currentMeasureDuration_;
@@ -1109,20 +1112,46 @@ float MusicXmlImporter::processTimeSignature( TiXmlNode* time, string& timeSigna
 
 void MusicXmlImporter::processDirection( TiXmlNode* direction )
 {
-    TiXmlNode* directionType = direction->FirstChildElement( "direction-type" );
-    while ( directionType )
-    {
-        TiXmlNode* metronome = directionType->FirstChildElement( "metronome" );
-        if ( metronome )
+    // 1. Look for 'metronome' element
+    if (TiXmlNode* directionType = direction->FirstChildElement( "direction-type" )) {
+        do
         {
-            if ( processTempo( metronome ) )
-                return;
-        }
-        directionType = direction->IterateChildren( "direction-type", directionType );
+            if ( TiXmlNode* metronome = directionType->FirstChildElement( "metronome" ) )
+            {
+                if ( processTempo( metronome ) )
+                    return;
+            }
+            // Find an 'other-direction' or 'words' element that contains an 'a tempo'-like text
+        } while ( (directionType = direction->IterateChildren( "direction-type", directionType )) );
     }
+    
+    // 2. Look for 'sound' element
     if ( TiXmlNode* sound = direction->FirstChildElement( "sound" ) )
     {
         processTempo( sound );
+    }
+    
+    // 3. Look for 'a tempo' or 'tempo primo' text element
+    else if (TiXmlNode* directionType = direction->FirstChildElement( "direction-type" )) {
+        do
+        {
+            // Find an 'other-direction' or 'words' element that contains an 'a tempo'-like text
+
+                TiXmlNode* otherDirection = directionType->FirstChildElement( "other-direction" );
+                if (!otherDirection) {
+                    otherDirection = directionType->FirstChildElement( "words" );
+                }
+                if (otherDirection)
+                {
+                    string content = otherDirection->ToElement()->GetText();
+                    content = Utils::trim(content);
+                    std::transform(content.begin(), content.end(), content.begin(), ::tolower);
+                    vector<string> const& aTempo = Const::aTempo;
+                    if (std::find(aTempo.begin(), aTempo.end(), content) != aTempo.end()) {
+                        appendCurrentTempo(false);
+                    }
+                }
+        } while ( (directionType = direction->IterateChildren( "direction-type", directionType )) );
     }
 }
 
@@ -1189,6 +1218,14 @@ rational MusicXmlImporter::getBeatDurationFromNoteType(const char* unit)
     return 1;
 }
 
+
+/*! \short Add a new Tempo Event using current score attributes
+ */
+void MusicXmlImporter::appendCurrentTempo(bool generated) {
+    model_.appendEvent( new BeatPerMinute( currentMeasure_, accumLocal_, currentQuarterNoteTempo_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_, generated) );
+}
+
+
 /* Handle 3 cases:
  * - 1.     tempo Mark : quarter = 90 BPM
  * - 2.     tempo modulation : quarter = eighth
@@ -1199,13 +1236,11 @@ bool MusicXmlImporter::processTempo( TiXmlNode* item )
     float quarterNoteValue = 0.0;
     float quarterBase = 1.0;
     float beats = -1.0;
-    TiXmlNode* beatUnit = item->FirstChildElement( "beat-unit" );
-    //TiXmlNode* perMinute = item->FirstChildElement( "per-minute" );
     bool tempoMark = false, tempoModulation = false;    // indicate
     float quarterBaseBeforeModulation = 1.0;
     unsigned short dotCount = 0.;
     
-    if (beatUnit)
+    if (TiXmlNode* beatUnit = item->FirstChildElement( "beat-unit" ))
     {
         // Read quarter time duration of beat unit
         const char* unit = beatUnit->ToElement()->GetText();
