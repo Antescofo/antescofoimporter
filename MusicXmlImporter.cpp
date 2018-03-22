@@ -87,7 +87,7 @@ MusicXmlImporter::MusicXmlImporter( ImporterWrapper& wrapper ) :
     accumLocal_             ( 0.0 ),
     currentChromaticTransposition_  ( 0 ),
     currentDiatonicTransposition_   ( 0 ),
-    currentDivision_        ( 1 ),
+    currentDivision_        ( Default::DIVISIONS ),
     currentRepeatNoteAmount_( 0 ),
     currentMetricFactor_    ( 1.0 ),
     currentIntMetricFactor_ ( 3 ),
@@ -364,8 +364,12 @@ bool MusicXmlImporter::import()
             int count = 0;
             while ( part )
             {
-                if ( wrapper_.smartGraceNotes() )
-                    beautifyGraceNotes( part );
+                bool const
+                beautifyAppoggiaturas = wrapper_.appoggiaturas(),
+                beautifyGroups = wrapper_.smartGraceNotes();
+        
+                if (beautifyAppoggiaturas || beautifyGroups)
+                    beautifyGraceNotes( part, beautifyGroups );
                 if ( !tracks_.size() || ( tracks_.size() && find( tracks_.begin(), tracks_.end(), count + 1 ) != tracks_.end() ) )
                 {
                     if ( wrapper_.isVerbose() )
@@ -729,13 +733,17 @@ bool MusicXmlImporter::chaseCues( TiXmlNode* measure )
     return noteCount == 0;
 }
 
-void MusicXmlImporter::beautifyGraceNotes( TiXmlNode* part )
+void MusicXmlImporter::beautifyGraceNotes(TiXmlNode* part, bool beautifyGroups)
 {
+    int currentDivision_ = 1;
     TiXmlNode* measure = part->FirstChildElement( "measure" );
     TiXmlNode* entryBefore = nullptr;
     vector<TiXmlNode*> graceNotes;
     while ( measure )
     {
+        // flush grace notes before the next measure
+        graceNotes.clear();
+        
         int currentMeasure = 0;
         processMeasureAttributes( measure );
         measure->ToElement()->QueryValueAttribute( "number", &currentMeasure );
@@ -743,12 +751,16 @@ void MusicXmlImporter::beautifyGraceNotes( TiXmlNode* part )
         bool firstEntry = true;
         while ( item )
         {
-            if ( item->ValueStr() == "backup" )
+            if ( item->ValueStr() == "divisions" )
+            {
+                currentDivision_ = atoi( item->ToElement()->GetText() );
+            }
+            else if ( item->ValueStr() == "backup" )
             {
                 //TODO: multiple layers?..
-                break;
+                //;
             }
-            if ( item->ValueStr() == "note" && item->FirstChildElement( "rest" ) == nullptr )
+            else if ( item->ValueStr() == "note" && item->FirstChildElement( "rest" ) == nullptr )
             {
                 TiXmlNode* grace = item->FirstChildElement( "grace" );
                 if ( grace )
@@ -758,27 +770,48 @@ void MusicXmlImporter::beautifyGraceNotes( TiXmlNode* part )
 #ifdef DEBUG
                         cout << "  Group of " << graceNotes.size() << " grace notes found in m." << currentMeasure << endl;
 #endif
-                        handleGraceNoteGroup( graceNotes, entryBefore, item );
+                        if (beautifyGroups) {
+                            handleGraceNoteGroup( graceNotes, entryBefore, item );
+                        }
                         graceNotes.clear();
                     }
                     graceNotes.push_back( item );
                 }
                 else
                 {
-                    if ( graceNotes.size() )
+                    if ( !graceNotes.empty() )
                     {
+                        bool isTrill = false;
+                        TiXmlNode* notations = item->FirstChildElement( "notations" );
+                        if ( notations )
+                        {
+                            TiXmlNode* ornaments = notations->FirstChildElement( "notations" );
+                            if ( ornaments )
+                            {
+                                TiXmlNode* trill = ornaments->FirstChildElement( "trill-mark" );
+                                if ( trill )
+                                {
+                                    isTrill = true;
+                                    return;
+                                }
+                            }
+                        }
                         if ( graceNotes.size() == 1 )
                         {
 #ifdef DEBUG
                             cout << "  Single grace note found in m." << currentMeasure;
 #endif
-                            handleSingleGraceNote( graceNotes[0], item );
+                            if (isTrill)
+                                handleSingleGraceNoteBeforeTrill(graceNotes[0], item, currentDivision_);
+                            else
+                                handleSingleGraceNote( graceNotes[0], item );
                         }
-                        else
+                        else if (beautifyGroups)
                         {
 #ifdef DEBUG
                             cout << "  Group of " << graceNotes.size() << " grace notes found in m." << currentMeasure << endl;
 #endif
+                            //TODO: manage trills differently
                             handleGraceNoteGroup( graceNotes, entryBefore, item );
                         }
                         graceNotes.clear();
@@ -833,30 +866,112 @@ void MusicXmlImporter::handleGraceNoteGroup( vector<TiXmlNode*>& group, TiXmlNod
     }
 }
 
+
+/*!
+ */
+bool MusicXmlImporter::isGraceAppoggiatura( TiXmlNode* graceNote, TiXmlNode* note) const {
+    bool isAppoggiatura = false;
+    
+    // exception case: do nothing if note has no duration
+    TiXmlNode* duration = note->FirstChildElement( "duration" );
+    if ( !duration ) {
+        return false;
+    }
+    
+    // Music notation: an appoggiatura cannot be slashed
+    TiXmlNode const* graceNode = graceNote->FirstChildElement( "grace" );
+    const char* slash = graceNode->ToElement()->Attribute( "slash" );
+    if ( slash && !strcmp( slash, "yes" ) ) {
+        return false;
+    }
+
+    // Musicology: an appoggiatura is always a degree above or below its principal note
+    isAppoggiatura = false;
+    // Retrieve base note step
+    // Retrieve appoggiatura step
+    TiXmlNode const* pitch1 = note->FirstChildElement( "pitch" );
+    TiXmlNode const* pitch2 = graceNote->FirstChildElement( "pitch" );
+        if (pitch1 && pitch2) {
+            // Check step
+            TiXmlNode const* step1 = pitch1->FirstChildElement( "step" );
+            TiXmlNode const* step2 = pitch2->FirstChildElement( "step" );
+            if (step1 && step2) {
+                char const diatonic1 = step1->ToElement()->GetText()[0];
+                char const diatonic2 = step2->ToElement()->GetText()[0];
+                isAppoggiatura = Utils::oneDegreeBetween(diatonic1, diatonic2);
+                if (isAppoggiatura) {
+                    // Check octave
+                    TiXmlNode const* octaveNode1 = pitch1->FirstChildElement( "octave" );
+                    TiXmlNode const* octaveNode2 = pitch2->FirstChildElement( "octave" );
+                    if (octaveNode1 && octaveNode2) {
+                        int octave1 = 0, octave2 = 0;
+                        octave1 = atoi( octaveNode1->ToElement()->GetText() );
+                        octave2 = atoi( octaveNode2->ToElement()->GetText() );
+                        isAppoggiatura = (octave1 == octave2)
+                        || ((octave2 == octave1 +1) && (diatonic2 == 'C'))  // e.g. B4 to C5
+                        || ((octave1 == octave2 +1) && (diatonic1 == 'C'));
+                    }
+                }
+            }
+        }
+    
+    return isAppoggiatura;
+}
+
+
+/*!
+ * \brief   Process "human playback" of single grace note before a non-trill single note.
+ *
+ * Detect if a single note is a an appoggiatura, and if yes, replace it by a "real" note.
+ *
+ *  \see  https://en.wikisource.org/wiki/A_Dictionary_of_Music_and_Musicians/Appoggiatura for musicological rules about appoggiaturas (aka. long appoggiaturas) and acciaccaturas (aka. short appoggiaturas)
+ */
 void MusicXmlImporter::handleSingleGraceNote( TiXmlNode* graceNote, TiXmlNode* note )
 {
+    // infere if graceNote is an appoggiatura or an acciaccatura
+    bool isAppoggiatura = this->isGraceAppoggiatura( graceNote, note);
+    
+    // retrieve 'duration' node of principal note
+    TiXmlNode* duration = note->FirstChildElement( "duration" );
+    if ( !duration ) {
+        isAppoggiatura = false;
+    }
+    
+    // retrieve 'grace' node of grace note
     TiXmlNode* graceNode = graceNote->FirstChildElement( "grace" );
-    const char* slash = graceNode->ToElement()->Attribute( "slash" );
-    if ( !slash || strcmp( slash, "yes" ) != 0 )
+    if ( !graceNode ) {
+        isAppoggiatura = false;
+    }
+    
+    if ( isAppoggiatura )
     {
-        int value = 0;
-        TiXmlNode* duration = note->FirstChildElement( "duration" );
-        if ( duration )
-        {
-            value = atoi( duration->ToElement()->GetText() );
-            value /= 2; //TODO: this could be refined a bit...
-            char buffer[8];
-            sprintf( buffer, "%d", value );
-            duration->ToElement()->FirstChild()->SetValue( buffer );
-            TiXmlElement newItem( "duration" );
-            duration = graceNote->InsertEndChild( newItem );
-            duration->InsertEndChild( TiXmlText( buffer ) );
-            graceNote->InsertEndChild( *duration );
-            graceNote->RemoveChild( graceNode );
+        // Retrieve full duration
+        int fullDuration = 0;
+        fullDuration = atoi( duration->ToElement()->GetText() );
+        
+        // Compute grace note duration
+        // Rule 1. 'Whenever it is possible to divide the principal note into two equal parts, the appoggiatura receives one half' (Ex. 5 in ref.)
+        int graceDuration = fullDuration / 2;
+        //TODO: Rule 2. 'When the principal note is dotted the appoggiatura receives two-thirds and the principal note one' (Ex. 6)
+        //TODO: Rule 3.If the principal note is tied to another shorter note, the appogiatura receives the whole value of the principal note' (Ex. 7)
+        
+        // Compute principal note duration
+        int noteDuration = fullDuration - graceDuration;
+
+        // Alter duration of principal note
+        char noteDurationStr[16]; sprintf( noteDurationStr, "%d", noteDuration );
+        duration->ToElement()->FirstChild()->SetValue( noteDurationStr );
+        // Add duration of grace note
+        char graceDurationStr[16]; sprintf( graceDurationStr, "%d", graceDuration );
+        TiXmlElement newItem( "duration" );
+        duration = graceNote->InsertEndChild( newItem );
+        duration->InsertEndChild( TiXmlText( graceDurationStr ) );
+        graceNote->InsertEndChild( *duration );
+        // Convert grace note into real note
+        graceNote->RemoveChild( graceNode );
 #ifdef DEBUG
-            cout << "  => real appoggiatura (adjusted)" << endl;
+        cout << "  => real appoggiatura (adjusted)" << endl;
 #endif
-        }
     }
     else
     {
@@ -864,6 +979,71 @@ void MusicXmlImporter::handleSingleGraceNote( TiXmlNode* graceNote, TiXmlNode* n
         cout << "  => accacciatura (nothing done)" << endl;
 #endif
     }
+}
+
+
+/*!
+ * \brief   Process "human playback" of single grace note before a single trill note.
+ *
+ * Detect if a single note is a an appoggiatura, and if yes, replace it by a "real" note.
+ */
+//TODO: finish this function: infer graceValueDuration correctly
+void MusicXmlImporter::handleSingleGraceNoteBeforeTrill( TiXmlNode* graceNote, TiXmlNode* note, int const divisions )
+{
+    // infere if graceNote is an appoggiatura or an acciaccatura
+    bool isAppoggiatura = this->isGraceAppoggiatura( graceNote, note);
+    // retrieve 'duration' node of principal note
+    TiXmlNode* duration = note->FirstChildElement( "duration" );
+    if ( !duration ) {
+        isAppoggiatura = false;
+    }
+    /*
+    // retrieve 'grace' node of grace note
+    TiXmlNode* graceNode = graceNote->FirstChildElement( "grace" );
+    if ( !graceNode ) {
+        isAppoggiatura = false;
+    }
+    
+    if ( isAppoggiatura )
+    {
+        // Retrieve full duration
+        int fullDuration = 0;
+        fullDuration = atoi( duration->ToElement()->GetText() );
+        
+        // Compute grace note duration corresponding to its value
+        int graceValueDuration = fullDuration / 2 ; //TODO: compute it from MusicXML elements: value, time-modification, dot, etc.
+        
+        // Compute duration of 'converted' grace note
+        // Rule: Give to the grace note its full value duration if possible, else half-duration of principal note
+        int graceDuration = (graceValueDuration < fullDuration ?  graceValueDuration : fullDuration / 2 );
+        
+        // Compute principal note duration
+        int noteDuration = fullDuration - graceDuration;
+        
+        // Alter duration of principal note
+        char noteDurationStr[16]; sprintf( noteDurationStr, "%d", noteDuration );
+        duration->ToElement()->FirstChild()->SetValue( noteDurationStr );
+        // Add duration of grace note
+        char graceDurationStr[16]; sprintf( graceDurationStr, "%d", graceDuration );
+        TiXmlElement newItem( "duration" );
+        duration = graceNote->InsertEndChild( newItem );
+        duration->InsertEndChild( TiXmlText( graceDurationStr ) );
+        graceNote->InsertEndChild( *duration );
+        // Convert grace note into real note
+        graceNote->RemoveChild( graceNode );
+#ifdef DEBUG
+        cout << "  => real appoggiatura (adjusted)" << endl;
+#endif
+    }
+    else
+    {
+        // - if single slashed note is on a neighbor degree, then it determines the trill prefix
+        //TODO: if on the SAME or one degree ABOVE, then simply remove it! Indeed, those degree are already in the trill pitches
+        //TODO: if one degree
+#ifdef DEBUG
+        cout << "  => accacciatura (nothing done)" << endl;
+#endif
+    }*/
 }
 
 float MusicXmlImporter::processTimeSignature( TiXmlNode* time, string& timeSignature )

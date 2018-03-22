@@ -71,13 +71,14 @@ namespace antescofo
         bool                is3_8_compound() const;
         bool                displayMetadata() const;
         bool                displayQueriesOnly() const;
-        void                setImproveXml( bool status ) { improveXml_ = status; };
-        bool                improveXml() const { return improveXml_;}
-        void                setChaseCues( bool status ) { chaseCues_ = status; };
-        bool                chaseCues() const { return chaseCues_;}
-        void                setSmartGraceNotes( bool status ) { smartGraceNotes_ = status; };
-        bool                smartGraceNotes() const { return smartGraceNotes_;}
-        
+        void                setImproveXml( bool status ) { improveXml_ = status; }
+        bool                improveXml() const { return improveXml_; }
+        void                setChaseCues( bool status ) { chaseCues_ = status; }
+        bool                chaseCues() const { return chaseCues_; }
+        void                setSmartGraceNotes( bool status ) { smartGraceNotes_ = status; }
+        bool                smartGraceNotes() const { return smartGraceNotes_; }
+        bool                appoggiaturas() const { return (appoggiaturas_ || smartGraceNotes()); }
+        void                setAppoggiaturas( bool status ) { appoggiaturas_ = status; }
     private:
         void addImporter( Importer* importer );
         
@@ -99,6 +100,7 @@ namespace antescofo
         bool                    improveXml_;
         bool                    chaseCues_;
         bool                    smartGraceNotes_;
+        bool                    appoggiaturas_;
     };
 }
 

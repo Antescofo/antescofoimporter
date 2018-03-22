@@ -14,7 +14,7 @@
 //  Copyright (c) 2017 Antescofo. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#include <Cocoa/Cocoa.h>
 
 int main(int argc, const char * argv[])
 {
