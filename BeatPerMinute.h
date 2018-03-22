@@ -25,7 +25,7 @@ namespace antescofo
     class BeatPerMinute: public Event
     {
     public:
-        explicit BeatPerMinute( float measure, float bpm, float originalBeats, float originalBase, bool generated = 0 );
+        explicit BeatPerMinute( float measure, float start, float bpm, float originalBeats, float originalBase, bool generated = 0 );
         explicit BeatPerMinute( float measure, float start, float bpm );  //used mostly for MIDI import
         virtual ~BeatPerMinute();
         

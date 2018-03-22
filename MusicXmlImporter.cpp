@@ -569,12 +569,13 @@ void MusicXmlImporter::processMeasure( TiXmlNode* measure )
                                                       currentKeyAccidentals_,
                                                       currentTimeSignature_ ) );
         
-        TiXmlNode* direction = measure->FirstChildElement( "direction" );
+        /* // Error! directions should not be parsed at the beginning of the measure!
+         TiXmlNode* direction = measure->FirstChildElement( "direction" );
         while ( direction )
         {
             processDirection( direction );
             direction = measure->IterateChildren( "direction", direction );
-        }
+        }*/
     }
     else
     {
@@ -592,6 +593,10 @@ void MusicXmlImporter::processMeasure( TiXmlNode* measure )
         {
             accumLocal_ += processNote( item );
             hasNotes = true;
+        }
+        // process directions (e.g. tempo change)
+        else if (!strcmp( item->Value(), "direction")) {
+            processDirection( item );
         }
         item = measure->IterateChildren( item );
     }
@@ -915,7 +920,7 @@ float MusicXmlImporter::processTimeSignature( TiXmlNode* time, string& timeSigna
     }
     if ( currentQuarterNoteTempo_ != 0.0 && factor != currentMetricFactor_ )
     {
-        model_.appendEvent( new BeatPerMinute( currentMeasure_, currentQuarterNoteTempo_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_, true ) );
+        model_.appendEvent( new BeatPerMinute( currentMeasure_, accumLocal_, currentQuarterNoteTempo_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_, true ) );
     }
     if ( duration == 0.0 )
         duration = currentMeasureDuration_;
@@ -1098,7 +1103,7 @@ bool MusicXmlImporter::processTempo( TiXmlNode* item )
             currentQuarterNoteTempo_ *= (quarterBase / quarterBaseBeforeModulation);
             currentOriginalBeats_ *= (quarterBase / quarterBaseBeforeModulation);
             // Insert tempo mark as a "generated" one (@modulate)
-            model_.appendEvent( new BeatPerMinute( currentMeasure_, currentQuarterNoteTempo_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_, true ) );
+            model_.insertOrReplaceEvent( new BeatPerMinute( currentMeasure_, accumLocal_, currentQuarterNoteTempo_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_, true ) );
         }
         return true;
     }
@@ -1109,7 +1114,7 @@ bool MusicXmlImporter::processTempo( TiXmlNode* item )
         currentOriginalBase_ = quarterBase;
         currentQuarterNoteTempo_ = quarterNoteValue;
         currentOriginalBeats_ = beats;
-        model_.appendEvent( new BeatPerMinute( currentMeasure_, currentQuarterNoteTempo_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_ ) );
+        model_.insertOrReplaceEvent( new BeatPerMinute( currentMeasure_, accumLocal_, currentQuarterNoteTempo_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_ ) );
         return true;
     }
     return false;

@@ -1,0 +1,28 @@
+﻿; Antescofo score generated using native importer version 0.2.4
+; Original file: #1139_tempo_change.xml
+; exported from Finale for Mac
+; MusicXML version 3.0
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+BPM 56
+NOTE C5 3/2 measure1
+NOTE D4 1/2
+NOTE A#4 3/2
+NOTE D#4 1/2
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+NOTE C4 1/2 measure2
+NOTE G#4 1/2
+NOTE G4 1/2
+NOTE 0 1/4
+NOTE F4 1/4
+BPM 138
+NOTE D#4 2
+
+; ----------- measure 3 --- beat 8 --- time signature 4/4
+
+NOTE 0 4 measure3

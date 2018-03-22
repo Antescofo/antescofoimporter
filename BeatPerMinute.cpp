@@ -18,13 +18,13 @@
 
 using namespace antescofo;
 
-BeatPerMinute::BeatPerMinute( float measure, float value, float originalBeats, float originalBase, bool generated ):
-    Event       (),
-    bpm_        ( value ),
-    start_      ( 0.0 ),
-    beats_      ( originalBeats ),
-    base_       ( originalBase ),
-    generated_  ( generated )
+BeatPerMinute::BeatPerMinute( float measure, float start, float value, float originalBeats, float originalBase, bool generated ):
+Event       (),
+bpm_        ( value ),
+start_      ( start ),
+beats_      ( originalBeats ),
+base_       ( originalBase ),
+generated_  ( generated )
 {
     measure_ = measure;
 }

@@ -98,7 +98,6 @@ NOTE Ab5 1/6
 
 ; ----------- measure 6 --- beat 30 --- time signature 4/4
 
-BPM 66
 CHORD (A4 D5) 1/8 measure6
 MULTI ((D5 D5) -> (A4 Gb5)) 1/8 @staccato
 NOTE E5 1/8 @staccato
@@ -112,6 +111,7 @@ NOTE Bb5 0
 CHORD (-A4 A5) 1/2
 MULTI ((-A4 -A5) -> (-A5 -A4 G#5)) 1 @fermata
 CHORD (-A4 G#5) 1
+BPM 66
 NOTE 0 1
 
 ; ----------- measure 7 --- beat 35 --- time signature 4/4
@@ -389,11 +389,11 @@ NOTE 0 1
 
 ; ----------- measure 30 --- beat 151 --- time signature 6/4
 
-BPM 80
 NOTE A3 1/4 measure30
 NOTE E5 1/12 ; harmonics
 NOTE Eb4 1/3
 NOTE A5 1/3 ; harmonics
+BPM 80
 NOTE A#6 3 ; harmonics
 
 ; ----------- measure 31 --- beat 155 --- time signature 4/4
@@ -889,8 +889,8 @@ CHORD (G4 C5) 1/2
 
 ; ----------- measure 77 --- beat 343 --- time signature 4/4
 
-BPM 60
 MULTI ((F5 Db6) -> (Db6 B5 G6)) 3 measure77
+BPM 60
 CHORD (B5 G6) 6
 
 ; ----------- measure 78 --- beat 352 --- time signature 4/4
@@ -1979,8 +1979,8 @@ NOTE C3 1/8
 
 ; ----------- measure 135 --- beat 621 --- time signature 4/4
 
-BPM 84
 NOTE 0 1/4 measure135
+BPM 84
 NOTE B3 3/4
 NOTE -B3 1
 NOTE B3 1/4
