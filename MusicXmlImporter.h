@@ -54,10 +54,21 @@ namespace antescofo
             static bool oneDegreeBetween(char const step1, char const step2) {
                 return (stepDistance(step1, step2) == 1);
             }
+            
+            static std::string trim(std::string const& s)
+            {
+                auto wsfront=std::find_if_not(s.begin(),s.end(),[](int c){return std::isspace(c);});
+                auto wsback=std::find_if_not(s.rbegin(),s.rend(),[](int c){return std::isspace(c);}).base();
+                return (wsback<=wsfront ? std::string() : std::string(wsfront,wsback));
+            }
         };
         
-        class Default {
-        public:
+        struct Dictionary {
+            static std::vector<std::string> const aTempo;
+            static std::vector<std::string> const tempoPrimo;
+        };
+        
+        struct Default {
             static int const DIVISIONS = 1;
         };
         
@@ -67,6 +78,8 @@ namespace antescofo
         void  processMeasure( TiXmlNode* measure );
         TiXmlNode* processMeasureAttributes( TiXmlNode* measure );
         void  processDirection( TiXmlNode* node );
+        void  appendCurrentTempo(bool generated = false);
+        void  appendTempoPrimo();
         bool  processTempo( TiXmlNode* node );
         float processNote( TiXmlNode* node );
         bool  chaseCues( TiXmlNode* measure );

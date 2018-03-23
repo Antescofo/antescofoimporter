@@ -466,6 +466,20 @@ Event* ImportModel::findMeasure( float measure ) const
     return measureEvent;
 }
 
+/*! \brief  Returns the first BeatPerMinute type Event in score.
+ */
+Event* ImportModel::findFirstBeatPerMinute() const
+{
+    auto const &it = find_if(events_.begin(), events_.end(), [](Event * const&  event) { return (event->type() == Event_BeatPerMinute) && (event); });
+    
+    if (it == events_.end()) {
+        return nullptr;
+    }
+    else {
+        return (*it);
+    }
+}
+
 float ImportModel::getMeasureDuration( float measure ) const
 {
     float duration = 0.0;

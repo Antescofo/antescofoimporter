@@ -7,6 +7,10 @@
 build/*
 DerivedData/
 GeneratedDoc/
+out/
+
+# (optional) Exclude library folder
+zlib/
 
 
 # Automatically generated Git version data:
