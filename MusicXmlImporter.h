@@ -63,8 +63,9 @@ namespace antescofo
             }
         };
         
-        struct Const {
+        struct Dictionary {
             static std::vector<std::string> const aTempo;
+            static std::vector<std::string> const tempoPrimo;
         };
         
         struct Default {
@@ -78,6 +79,7 @@ namespace antescofo
         TiXmlNode* processMeasureAttributes( TiXmlNode* measure );
         void  processDirection( TiXmlNode* node );
         void  appendCurrentTempo(bool generated = false);
+        void  appendTempoPrimo();
         bool  processTempo( TiXmlNode* node );
         float processNote( TiXmlNode* node );
         bool  chaseCues( TiXmlNode* measure );

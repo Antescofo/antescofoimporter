@@ -48,6 +48,7 @@ namespace antescofo
         float addNote( float measure, float start, float duration, Pitch& pitch );
         float addRepeatedNotes( float measure, float start, float duration, float divisions, Pitch& pitch );
         Event* findMeasure( float measure ) const;
+        Event* findFirstBeatPerMinute() const;
         float getMeasureDuration( float measure ) const;
         float getMeasureAccumulutatedBeats( float measure ) const;
         bool  areThereNotesInMeasure( float measure ) const;

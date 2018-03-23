@@ -55,6 +55,14 @@ float BeatPerMinute::start() const
     return start_;
 }
 
+
+/*! \brief  Copy a BeatPerMinute event at given score position
+ */
+BeatPerMinute* BeatPerMinute::copyAt( float measure, float start, BeatPerMinute const& bpm) {
+    return new BeatPerMinute(measure, start, bpm.bpm_, bpm.beats_, bpm.base_, false);
+}
+
+
 void BeatPerMinute::serialize( std::ostringstream& stream )
 {
     //stream.precision(4);

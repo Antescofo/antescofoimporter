@@ -73,7 +73,17 @@ static const MusicXMLaccidental MusicXMLaccidentals [] =
     { nullptr, 0.}
 };
 
-std::vector<std::string> const MusicXmlImporter::Const::aTempo = {"a tempo", "tempo I", "tempo I°", "tempo 1", "tempo 1°", "tempo primo"};
+std::vector<std::string> const MusicXmlImporter::Dictionary::aTempo = {
+    "a tempo"
+    , "a  tempo"    // typo: with two blank spaces
+    , "a tempo."                    // typo: with a final dot
+};
+
+std::vector<std::string> const MusicXmlImporter::Dictionary::tempoPrimo = {
+    "tempo i", "tempo i°", "tempo 1", "tempo 1°", "tempo primo",
+    "tempo  i", "tempo  i°", "tempo  1", "tempo  1°", "tempo  primo",   // typo: with two blank spaces
+    "tempo i.", "tempo i°.", "tempo 1.", "tempo 1°.", "tempo primo.",   // typo: with a final dot
+};
 
 
 MusicXmlImporter::MusicXmlImporter( ImporterWrapper& wrapper ) :
@@ -1136,21 +1146,30 @@ void MusicXmlImporter::processDirection( TiXmlNode* direction )
         do
         {
             // Find an 'other-direction' or 'words' element that contains an 'a tempo'-like text
-
-                TiXmlNode* otherDirection = directionType->FirstChildElement( "other-direction" );
-                if (!otherDirection) {
-                    otherDirection = directionType->FirstChildElement( "words" );
+            TiXmlNode* otherDirection = directionType->FirstChildElement( "other-direction" );
+            if (!otherDirection) {
+                otherDirection = directionType->FirstChildElement( "words" );
+            }
+            if (otherDirection)
+            {
+                // Look for a 'tempo primo'-compatible text
+                string content = otherDirection->ToElement()->GetText();
+                content = Utils::trim(content);
+                std::transform(content.begin(), content.end(), content.begin(), ::tolower);
+                // Look for 'tempo primo'-compatible text
+                vector<string> const& tempoPrimo = Dictionary::tempoPrimo;
+                if (std::find(tempoPrimo.begin(), tempoPrimo.end(), content) != tempoPrimo.end()) {
+                    appendTempoPrimo();
                 }
-                if (otherDirection)
+                // Look for 'a tempo'-compatible text
+                else
                 {
-                    string content = otherDirection->ToElement()->GetText();
-                    content = Utils::trim(content);
-                    std::transform(content.begin(), content.end(), content.begin(), ::tolower);
-                    vector<string> const& aTempo = Const::aTempo;
+                    vector<string> const& aTempo = Dictionary::aTempo;
                     if (std::find(aTempo.begin(), aTempo.end(), content) != aTempo.end()) {
                         appendCurrentTempo(false);
                     }
                 }
+            }
         } while ( (directionType = direction->IterateChildren( "direction-type", directionType )) );
     }
 }
@@ -1219,10 +1238,27 @@ rational MusicXmlImporter::getBeatDurationFromNoteType(const char* unit)
 }
 
 
-/*! \short Add a new Tempo Event using current score attributes
+/*! \short  Add a new Tempo event that copies the previous event
  */
-void MusicXmlImporter::appendCurrentTempo(bool generated) {
+void MusicXmlImporter::appendCurrentTempo(bool generated)
+{
     model_.appendEvent( new BeatPerMinute( currentMeasure_, accumLocal_, currentQuarterNoteTempo_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_, generated) );
+}
+
+
+/*! \short  Add a new Tempo event that copies the first Tempo event of the score
+ *
+ *  If no Tempo Event is found, then a new one with current score attributes is created.
+ */
+void MusicXmlImporter::appendTempoPrimo()
+{
+    if (Event *event = model_.findFirstBeatPerMinute()) {
+        BeatPerMinute *bpm = (BeatPerMinute*) event;
+        model_.appendEvent(BeatPerMinute::copyAt(currentMeasure_, accumLocal_, *bpm));
+    }
+    else {
+        appendCurrentTempo(false);
+    }
 }
 
 
