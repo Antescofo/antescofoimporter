@@ -61,11 +61,18 @@ namespace antescofo
                 auto wsback=std::find_if_not(s.rbegin(),s.rend(),[](int c){return std::isspace(c);}).base();
                 return (wsback<=wsfront ? std::string() : std::string(wsfront,wsback));
             }
+            
+            static std::string clean(std::string const& s) {
+                std::string content = Utils::trim(s);
+                std::transform(content.begin(), content.end(), content.begin(), ::tolower);
+                return content;
+            }
         };
         
         struct Dictionary {
             static std::vector<std::string> const aTempo;
             static std::vector<std::string> const tempoPrimo;
+            static std::vector<std::string> const waitForNote;
         };
         
         struct Default {
@@ -94,6 +101,8 @@ namespace antescofo
         int   getMidiCents( const char diatonic, int octave, float accidental ) const;
         float typeToDuration( const char* type ) const;
         void  improveXml( TiXmlDocument& musicXML );
+        
+        void  addWaitForNote();        
         
     private:
         ImporterWrapper& wrapper_;

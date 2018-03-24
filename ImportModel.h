@@ -53,6 +53,7 @@ namespace antescofo
         float getMeasureAccumulutatedBeats( float measure ) const;
         bool  areThereNotesInMeasure( float measure ) const;
         void  beautify();
+        void  addWaitForNote(std::string position);
         
         void  queryTempi( std::vector<std::string>& tempi );
         //float queryFirstMeasureDuration();
@@ -92,6 +93,7 @@ namespace antescofo
         std::string         fileOrigin_;
         std::string         version_;
         std::string         credits_;
+        std::vector<std::string> waitForNoteArray_;
     };
     
     class Measure;
@@ -134,7 +136,7 @@ namespace antescofo
         void addPulses(float const duration);
         std::deque<float> pulses; //<! list of element, each one represents beat duration until next beat
         void showPulsesAsNim( std::ostringstream& stream ) const;
-        float currentPulsePhaseDuration;     //<! 
+        float currentPulsePhaseDuration;     //<!
         float accumBeats_;
 
         // First measure duration
@@ -149,6 +151,10 @@ namespace antescofo
         rational currentTimeSignature;  //<! last time signature
         rational currentTempoMarkBeatUnit;  //<! beat unit of last tempo mark
         rational currentTempoMarkTimeSignature; //<! time signature of last tempo mark
+        
+    public:
+        // Wait for notes
+        static void showWaitForNotes(std::vector<std::string> const& array, std::ostringstream& stream );
     };
 }
 

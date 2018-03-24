@@ -1,0 +1,32 @@
+;<metadata>
+
+$tab_tight_pos := [(($measure1)+(1.75))]
+
+@eval_when_load {
+$pulses_nim := NIM { (0) (1), (1) (1) }
+}
+
+@eval_when_load {
+$pulse_phase_nim := NIM { 0 (1), (1) (0), 0 (1), (1) (0), 0 (1), (1) (0) }
+}
+;</metadata>
+
+﻿; Antescofo score generated using native importer version 0.2.5
+; Original file: waitfornote1.xml
+; exported from Finale for Mac
+; MusicXML version 3.0
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+NOTE A#3 1/2 measure1
+NOTE F#4 1/2
+NOTE E4 1/2
+NOTE F#4 1/4
+NOTE D#4 1/4
+NOTE E4 1/2
+NOTE A3 1/4
+NOTE B3 1/4
+TRILL ((E3 B3) (F3 B3)) 3/4
+NOTE A3 1/4

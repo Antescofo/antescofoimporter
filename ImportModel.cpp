@@ -83,6 +83,7 @@ void ImportModel::displayMetadata()
     serialization_ << ";<metadata>" << endl;
     
     // Main matter
+    QueryHandler::showWaitForNotes(waitForNoteArray_, serialization_);
     QueryHandler::showQueries(serialization_, events_, &wrapper_);
     
     // Back matter
@@ -113,14 +114,12 @@ void ImportModel::setHeader()
 void ImportModel::serialize()
 {
     serialization_.str( "" );
-    // rajout begin
     // We begin by displaying score metadata
     if (wrapper_.displayMetadata())
         displayMetadata();
     // If wrapper asks only for queries, then we do not print score
     if (wrapper_.displayQueriesOnly())
         return;
-    // rajout end
     setHeader();
     serialization_ << "; start" << endl;
     auto it = events_.begin();
@@ -717,6 +716,12 @@ void ImportModel::beautify()
     consolidateTemposAndMeasures();
 }
 
+void ImportModel::addWaitForNote(std::string position)
+{
+    if (waitForNoteArray_.empty() || waitForNoteArray_.back() != position)
+        waitForNoteArray_.push_back(position);
+}
+
 void ImportModel::consolidateNotesAndRests()
 {
     auto it = events_.begin();
@@ -942,6 +947,26 @@ bool QueryHandler::queryFirstMeasureDuration(Measure const* measure)
     }
     else
         return false;
+}
+
+
+void QueryHandler::showWaitForNotes( std::vector<std::string> const& notes, std::ostringstream& stream )
+{
+    stream << "\n$tab_tight_pos := [";
+    
+    bool first = false;
+    for (auto const& note : notes)
+    {
+        // write separator
+        if (first)
+            stream << ", ";
+        else
+            first = true;
+        
+        stream << note;
+    }
+    
+    stream << "]\n" << endl;
 }
 
 
