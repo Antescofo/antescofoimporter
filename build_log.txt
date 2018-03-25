@@ -33,7 +33,10 @@ Developped by Robert Piéchaud
      
 * * Build log * *
 
-* * * v. 0.2.1.b4 ~ Aug. 16 2017 * * *
+* * * v. 0.2.6 ~ Mar. 23 2018 * * *
+- AIMP-18: import 'wait for note' annotations (aka. 'tight') when using -metadata
+
+* * * v. 0.2.5 ~ Mar. 23 2018 * * *
 - AIMP-17: added command line option -appoggiaturas (also to cocoa app.) to handle single appoggiaturas
 
 * * * v. 0.2.1.b4 ~ Aug. 16 2017 * * *

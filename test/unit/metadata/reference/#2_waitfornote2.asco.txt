@@ -1,0 +1,78 @@
+;<metadata>
+
+$tab_tight_pos := [($measure6), (($measure9)+(0.5))]
+
+@eval_when_load {
+$pulses_nim := NIM { (0) (1/2), (1) (1/2) }
+}
+
+@eval_when_load {
+$pulse_phase_nim := NIM { 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0)
+, 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0)
+, 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0) }
+}
+;</metadata>
+
+﻿; Antescofo score generated using native importer version 0.2.5
+; Original file: waitfornote.xml
+; exported from Finale for Mac
+; MusicXML version 3.0
+; Credits: Score
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 3/8
+
+BPM 94.50 ; ( ← 𝅘𝅥. =63) 
+CHORD (E4 G4 C5) 1/2 measure1
+CHORD (C4 G4 C5) 1/2
+CHORD (E4 G4 C5) 1/2
+
+; ----------- measure 2 --- beat   1.5 --- time signature 3/8
+
+BPM 94.50 ; ( ← 𝅘𝅥. =63) 
+CHORD (G4 C5) 1/2 measure2
+CHORD (F4 B4) 1/2
+CHORD (E4 G4 C5) 1/2
+
+; ----------- measure 3 --- beat 3 --- time signature 3/8
+
+CHORD (D4 F4 B4) 3/2 measure3
+
+; ----------- measure 4 --- beat   4.5 --- time signature 3/8
+
+CHORD (D4 F4 B4) 3/2 measure4
+
+; ----------- measure 5 --- beat 6 --- time signature 3/8
+
+CHORD (E4 G4 C5) 3/2 measure5
+
+; ----------- measure 6 --- beat   7.5 --- time signature 3/8
+
+BPM 94.50 ; ( ← 𝅘𝅥. =63) 
+CHORD (D4 F4 B4) 1/2 measure6
+CHORD (C4 E4 A4) 1
+
+; ----------- measure 7 --- beat 9 --- time signature 3/8
+
+CHORD (D4 A4) 1/2 measure7
+CHORD (G4 C5) 1/2
+CHORD (F4 B4) 1/2
+
+; ----------- measure 8 --- beat  10.5 --- time signature 3/8
+
+CHORD (C4 G4 C5) 1/2 measure8
+CHORD (E4 G4 C5) 1
+
+; ----------- measure 9 --- beat 12 --- time signature 3/8
+
+NOTE C5 1/2 measure9
+NOTE 0 1/2
+NOTE G4 1/4
+NOTE F4 1/4
+
+; ----------- measure 10 --- beat  13.5 --- time signature 3/8
+
+CHORD (G4 C5) 1/2 measure10
+CHORD (F4 B4) 1/2
+CHORD (E4 G4 C5) 1/2

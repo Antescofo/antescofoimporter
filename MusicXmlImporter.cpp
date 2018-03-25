@@ -75,8 +75,9 @@ static const MusicXMLaccidental MusicXMLaccidentals [] =
 
 std::vector<std::string> const MusicXmlImporter::Dictionary::aTempo = {
     "a tempo"
-    , "a  tempo"    // typo: with two blank spaces
+    , "a  tempo"                    // typo: with two blank spaces
     , "a tempo."                    // typo: with a final dot
+    , "sm: reset tempo"             // SmartMusic marker that resets tempo
 };
 
 std::vector<std::string> const MusicXmlImporter::Dictionary::tempoPrimo = {
@@ -85,6 +86,9 @@ std::vector<std::string> const MusicXmlImporter::Dictionary::tempoPrimo = {
     "tempo i.", "tempo i°.", "tempo 1.", "tempo 1°.", "tempo primo.",   // typo: with a final dot
 };
 
+std::vector<std::string> const MusicXmlImporter::Dictionary::waitForNote = {
+    "sm: wait for note", "sm: resume"               // SmartMusic markers
+};
 
 MusicXmlImporter::MusicXmlImporter( ImporterWrapper& wrapper ) :
     wrapper_                ( wrapper ),
@@ -1120,8 +1124,16 @@ float MusicXmlImporter::processTimeSignature( TiXmlNode* time, string& timeSigna
     return duration;
 }
 
+/*!
+ Imported elements:
+ - 'metronome' elements
+ - 'sound' elements
+ - SmartMusic markers: see Dictionary::waitForNote
+ */
 void MusicXmlImporter::processDirection( TiXmlNode* direction )
 {
+    //// A. Tempo
+    
     // 1. Look for 'metronome' element
     if (TiXmlNode* directionType = direction->FirstChildElement( "direction-type" )) {
         do
@@ -1154,8 +1166,7 @@ void MusicXmlImporter::processDirection( TiXmlNode* direction )
             {
                 // Look for a 'tempo primo'-compatible text
                 string content = otherDirection->ToElement()->GetText();
-                content = Utils::trim(content);
-                std::transform(content.begin(), content.end(), content.begin(), ::tolower);
+                content = Utils::clean(content);
                 // Look for 'tempo primo'-compatible text
                 vector<string> const& tempoPrimo = Dictionary::tempoPrimo;
                 if (std::find(tempoPrimo.begin(), tempoPrimo.end(), content) != tempoPrimo.end()) {
@@ -1170,6 +1181,25 @@ void MusicXmlImporter::processDirection( TiXmlNode* direction )
                     }
                 }
             }
+        } while ( (directionType = direction->IterateChildren( "direction-type", directionType )) );
+    }
+    
+    
+    ///// B. Other SmartMusic markers
+    if (TiXmlNode* directionType = direction->FirstChildElement( "direction-type" )) {
+        do
+        {
+            if ( TiXmlNode* otherDirection = directionType->FirstChildElement( "other-direction" ) )
+            {
+                string content = otherDirection->ToElement()->GetText();
+                content = Utils::clean(content);
+                // Look for "wait for note" compatible events
+                vector<string> const& dict = Dictionary::waitForNote;
+                if (std::find(dict.begin(), dict.end(), content) != dict.end()) {
+                    addWaitForNote();
+                }
+            }
+            // Find an 'other-direction' or 'words' element that contains an 'a tempo'-like text
         } while ( (directionType = direction->IterateChildren( "direction-type", directionType )) );
     }
 }
@@ -1782,4 +1812,18 @@ int MusicXmlImporter::getMidiCents( const char diatonic, int octave, float accid
     midiCents *= 100;
     midiCents += accidental*100;
     return midiCents;
+}
+
+
+void MusicXmlImporter::addWaitForNote() {
+    int const measureNumber = (int)currentMeasure_;
+    float const measurePosition = accumLocal_;
+    std::ostringstream stringStream;
+    if (measurePosition)
+        stringStream << "(($measure" << measureNumber << ")+(" << measurePosition << "))";
+    else
+        stringStream << "($measure" << measureNumber << ")";
+    std::string const position = stringStream.str();
+    if (!position.empty())
+        model_.addWaitForNote(position);
 }
