@@ -194,6 +194,7 @@ void ImportModel::clear()
         delete *it;
         it = events_.erase( it );
     }
+    waitForNoteArray_.clear();
 }
 
 void ImportModel::setFileOrigin( const string& origin )
