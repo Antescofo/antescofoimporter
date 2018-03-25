@@ -47,7 +47,7 @@ MidiImporter::MidiImporter( ImporterWrapper& wrapper ) :
     currentMeasureStart_    ( 0 ),
     newMeasureDuration_     ( 0 ),
     newTimeSignatureMeasure_( 0 ),
-    currentQuarterNoteTempo_( 0.0 ),
+    currentQuarterNoteTempo_( Importer::Default::beatPerMinute ),
     currentMetricFactor_    ( 1.0 )
 {
     clear();
