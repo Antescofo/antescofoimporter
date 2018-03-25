@@ -1272,7 +1272,10 @@ rational MusicXmlImporter::getBeatDurationFromNoteType(const char* unit)
  */
 void MusicXmlImporter::appendCurrentTempo(bool generated)
 {
-    model_.appendEvent( new BeatPerMinute( currentMeasure_, accumLocal_, currentQuarterNoteTempo_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_, generated) );
+    float currentTempo = currentQuarterNoteTempo_;
+    if (!currentTempo)
+        currentTempo = Importer::Default::beatPerMinute;
+    model_.appendEvent( new BeatPerMinute( currentMeasure_, accumLocal_, currentTempo * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_, generated) );
 }
 
 

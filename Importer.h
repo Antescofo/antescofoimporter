@@ -33,6 +33,11 @@ namespace antescofo
         virtual void clear() = 0;
         virtual bool queryTracks( std::vector<std::string>& tracks ) = 0;
         virtual bool queryScoreInfo() = 0;
+        
+        struct Default
+        {
+            static int const beatPerMinute = 120;
+        };
     };
 }
 

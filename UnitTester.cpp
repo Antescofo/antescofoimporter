@@ -197,6 +197,21 @@ bool UnitTester::compareFiles( const ifstream& ref, const ostringstream& import 
     while ( getline( reference, left ) && getline( fresh, right ) )
     {
         ++rightLine;
+        // Remove BOM
+        if ((left[0] & 0xFF) == 0xEF &&
+            (left[1] & 0xFF) == 0xBB &&
+            (left[2] & 0xFF) == 0xBF)
+        {
+            left.erase(0,3);
+        }
+        // Remove BOM
+        if ((right[0] & 0xFF) == 0xEF &&
+            (right[1] & 0xFF) == 0xBB &&
+            (right[2] & 0xFF) == 0xBF)
+        {
+            right.erase(0,3);
+        }
+        
         if ( left[0] == ';' && right[0] == ';' )
             continue;
         left = left.substr( 0, left.find(" ;") );
