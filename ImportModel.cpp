@@ -953,17 +953,13 @@ bool QueryHandler::queryFirstMeasureDuration(Measure const* measure)
 
 void QueryHandler::showWaitForNotes( std::vector<std::string> const& notes, std::ostringstream& stream )
 {
-    stream << "\n@eval_when_load {\n$tab_tight_pos := [";
+    stream << "\n@eval_when_load {\n$tab_tight_pos := [0";
     
-    bool first = false;
     for (auto const& note : notes)
     {
         // write separator
-        if (first)
-            stream << ", ";
-        else
-            first = true;
-        
+        stream << ", ";
+        // write value
         stream << note;
     }
     
