@@ -1,6 +1,8 @@
 ;<metadata>
 
+@eval_when_load {
 $tab_tight_pos := [($measure6), (($measure9)+(0.5))]
+}
 
 @eval_when_load {
 $pulses_nim := NIM { (0) (1/2), (1) (1/2) }
@@ -13,8 +15,8 @@ $pulse_phase_nim := NIM { 0 (0.5), (0.5) (0), 0 (0.5), (0.5) (0), 0 (0.5), (0.5)
 }
 ;</metadata>
 
-﻿; Antescofo score generated using native importer version 0.2.5
-; Original file: waitfornote.xml
+﻿; Antescofo score generated using native importer version 0.2.6
+; Original file: #2_waitfornote2.xml
 ; exported from Finale for Mac
 ; MusicXML version 3.0
 ; Credits: Score
