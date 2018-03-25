@@ -108,7 +108,7 @@ MusicXmlImporter::MusicXmlImporter( ImporterWrapper& wrapper ) :
     currentRepeatNoteAmount_( 0 ),
     currentMetricFactor_    ( 1.0 ),
     currentIntMetricFactor_ ( 3 ),
-    currentQuarterNoteTempo_( Importer::Default::beatPerMinute ),
+    currentQuarterNoteTempo_( 0.0 ),
     currentOriginalBeats_   ( 0.0 ),
     currentOriginalBase_    ( 0.0 ),
     previousDuration_       ( 0.0 )
@@ -138,7 +138,7 @@ void MusicXmlImporter::clear()
     currentRepeatNoteAmount_ = 0;
     currentMetricFactor_ = 1.0;
     currentIntMetricFactor_ = 3;
-    currentQuarterNoteTempo_ = Importer::Default::beatPerMinute;
+    currentQuarterNoteTempo_ = 0.0;
     currentOriginalBeats_ = 0.0;
     currentOriginalBase_ = 0.0;
     previousDuration_ = 0.0;
@@ -1272,7 +1272,10 @@ rational MusicXmlImporter::getBeatDurationFromNoteType(const char* unit)
  */
 void MusicXmlImporter::appendCurrentTempo(bool generated)
 {
-    model_.appendEvent( new BeatPerMinute( currentMeasure_, accumLocal_, currentQuarterNoteTempo_ * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_, generated) );
+    float currentTempo = currentQuarterNoteTempo_;
+    if (!currentTempo)
+        currentTempo = Importer::Default::beatPerMinute;
+    model_.appendEvent( new BeatPerMinute( currentMeasure_, accumLocal_, currentTempo * currentMetricFactor_, currentOriginalBeats_, currentOriginalBase_, generated) );
 }
 
 
