@@ -1,7 +1,7 @@
 ;<metadata>
 
 @eval_when_load {
-$tab_tight_pos := [($measure6), (($measure9)+(0.5))]
+$tab_tight_pos := [0, ($measure6), (($measure9)+(0.5))]
 }
 
 @eval_when_load {
