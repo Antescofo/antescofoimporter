@@ -138,7 +138,7 @@ void MusicXmlImporter::clear()
     currentRepeatNoteAmount_ = 0;
     currentMetricFactor_ = 1.0;
     currentIntMetricFactor_ = 3;
-    currentQuarterNoteTempo_ = 0.0;
+    currentQuarterNoteTempo_ = Importer::Default::beatPerMinute;
     currentOriginalBeats_ = 0.0;
     currentOriginalBase_ = 0.0;
     previousDuration_ = 0.0;
