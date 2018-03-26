@@ -90,6 +90,20 @@ std::vector<std::string> const MusicXmlImporter::Dictionary::waitForNote = {
     "sm: wait for note", "sm: resume"               // SmartMusic markers
 };
 
+
+std::string MusicXmlImporter::Utils::trim(std::string const& s)
+{
+    auto wsfront=std::find_if_not(s.begin(),s.end(),[](int c){return std::isspace(c);});
+    auto wsback=std::find_if_not(s.rbegin(),s.rend(),[](int c){return std::isspace(c);}).base();
+    return (wsback<=wsfront ? std::string() : std::string(wsfront,wsback));
+}
+
+std::string MusicXmlImporter::Utils::clean(std::string const& s) {
+    std::string content = Utils::trim(s);
+    std::transform(content.begin(), content.end(), content.begin(), ::tolower);
+    return content;
+}
+
 MusicXmlImporter::MusicXmlImporter( ImporterWrapper& wrapper ) :
     wrapper_                ( wrapper ),
     model_                  ( wrapper_.getModel() ),

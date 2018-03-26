@@ -49,8 +49,8 @@ namespace antescofo
         EventType     type() const override { return Event_Entry; }
         bool          hasNotes() const override;
         float         start() const override;
-        void          changeStart( float newTime );
-        void          changeDuration( float newTime );
+        void          changeStart( float newTime ) override;
+        void          changeDuration( float newTime ) override;
         float         duration() const override;
         bool          addPitch( const Pitch& pitch ) override;
         int           primaryPitchCount() const override { return (int) pitches_.size(); }
