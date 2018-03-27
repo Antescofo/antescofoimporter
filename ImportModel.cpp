@@ -20,6 +20,7 @@
 #include "Entry.h"
 #include "Pitch.h"
 #include "BeatPerMinute.h"
+#include <algorithm>
 #include <math.h>
 #ifdef _WIN32
 #include <Winbase.h>
