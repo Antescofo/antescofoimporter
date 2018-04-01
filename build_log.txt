@@ -33,6 +33,9 @@ Developped by Robert Piéchaud
      
 * * Build log * *
 
+* * * v. 0.2.7 ~ Avr. 1 2018 * * *
+- AIMP-17: fixed bug when using -appoggiaturas with grace note before a trill
+
 * * * v. 0.2.6 ~ Mar. 23 2018 * * *
 - AIMP-18: import 'wait for note' annotations (aka. 'tight') when using -metadata
 
