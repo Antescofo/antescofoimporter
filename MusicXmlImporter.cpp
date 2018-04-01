@@ -813,17 +813,13 @@ void MusicXmlImporter::beautifyGraceNotes(TiXmlNode* part, bool beautifyGroups)
                     if ( !graceNotes.empty() )
                     {
                         bool isTrill = false;
-                        TiXmlNode* notations = item->FirstChildElement( "notations" );
-                        if ( notations )
+                        if ( TiXmlNode* notations = item->FirstChildElement( "notations" ) )
                         {
-                            TiXmlNode* ornaments = notations->FirstChildElement( "notations" );
-                            if ( ornaments )
+                            if ( TiXmlNode* ornaments = notations->FirstChildElement( "ornaments" ) )
                             {
-                                TiXmlNode* trill = ornaments->FirstChildElement( "trill-mark" );
-                                if ( trill )
+                                if ( TiXmlNode* trill = ornaments->FirstChildElement( "trill-mark" ) )
                                 {
                                     isTrill = true;
-                                    return;
                                 }
                             }
                         }
@@ -843,7 +839,8 @@ void MusicXmlImporter::beautifyGraceNotes(TiXmlNode* part, bool beautifyGroups)
                             cout << "  Group of " << graceNotes.size() << " grace notes found in m." << currentMeasure << endl;
 #endif
                             //TODO: manage trills differently
-                            handleGraceNoteGroup( graceNotes, entryBefore, item );
+                            if (!isTrill)
+                                handleGraceNoteGroup( graceNotes, entryBefore, item );
                         }
                         graceNotes.clear();
                     }
