@@ -33,6 +33,9 @@ Developped by Robert Piéchaud
      
 * * Build log * *
 
+* * * v. 0.2.7.1 ~ Avr. 10 2018 * * *
+- remove BOM which caused problem with our python scripts
+
 * * * v. 0.2.7 ~ Avr. 1 2018 * * *
 - AIMP-17: fixed bug when using -appoggiaturas with grace note before a trill
 
