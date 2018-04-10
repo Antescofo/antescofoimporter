@@ -98,9 +98,6 @@ void ImportModel::setHeader()
     if ( sep != string::npos )
         path = path.substr( sep + 1, path.size() - sep - 1 );
     
-    char bom [4];
-    sprintf( bom, "\xef\xbb\xbf" );
-    serialization_ << bom; //BOM (Byte order Mark) for UTF8
     serialization_  << "; Antescofo score generated using native importer " << wrapper_.getVersion() << endl
     << "; Original file: " << path << endl;
     if ( fileOrigin_.size() )
