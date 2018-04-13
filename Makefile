@@ -13,7 +13,7 @@ LFLAGS = -L. zlib/libzlinux.a -static -static-libstdc++
 TAG = latest
 IMAGENAME = buildimporterlinux
 
-SOURCES = main.cpp ImporterWrapper.cpp rational.cpp ImportModel.cpp UnitTester.cpp Event.cpp Measure.cpp Entry.cpp Pitch.cpp Repeat.cpp Tempo.cpp BeatPerMinute.cpp MusicXmlImporter.cpp MidiImporter.cpp MidiNoteAction.cpp ActionGroup.cpp GeneralMIDISoundset.cpp SimpleRational.cpp xml/ConvertUTF.cpp xml/tinystr.cpp xml/tinyxml.cpp xml/tinyxmlerror.cpp xml/tinyxmlparser.cpp zlib/unzip/unzip.cpp zlib/unzip/ioapi.cpp zlib/unzip/extract.cpp
+SOURCES = main.cpp ActionGroup.cpp BeatPerMinute.cpp Entry.cpp Event.cpp GeneralMIDISoundset.cpp ImporterWrapper.cpp ImportModel.cpp Measure.cpp MidiImporter.cpp MidiNoteAction.cpp MusicXmlImporter.cpp Nosync.cpp Pitch.cpp rational.cpp Repeat.cpp SimpleRational.cpp Tempo.cpp UnitTester.cpp xml/ConvertUTF.cpp xml/tinystr.cpp xml/tinyxml.cpp xml/tinyxmlerror.cpp xml/tinyxmlparser.cpp zlib/unzip/extract.cpp zlib/unzip/ioapi.cpp zlib/unzip/unzip.cpp
 OBJS = $(SOURCES:.cpp=.o)
 
 LEVEL = -O3
