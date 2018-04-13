@@ -64,6 +64,9 @@ namespace antescofo
             static std::vector<std::string> const aTempo;
             static std::vector<std::string> const tempoPrimo;
             static std::vector<std::string> const waitForNote;
+            static std::vector<std::string> const noSyncOnNote;
+            static std::vector<std::string> const noSyncStart;
+            static std::vector<std::string> const noSyncStop;
         };
         
         struct Default {
@@ -76,8 +79,10 @@ namespace antescofo
         void  processMeasure( TiXmlNode* measure );
         TiXmlNode* processMeasureAttributes( TiXmlNode* measure );
         void  processDirection( TiXmlNode* node );
+        void  processDirectionNosyncOnNote( TiXmlNode* direction );
         void  appendCurrentTempo(bool generated = false);
         void  appendTempoPrimo();
+        void  appendNosyncOnNote();
         bool  processTempo( TiXmlNode* node );
         float processNote( TiXmlNode* node );
         bool  chaseCues( TiXmlNode* measure );

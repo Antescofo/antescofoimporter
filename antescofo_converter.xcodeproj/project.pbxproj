@@ -82,6 +82,8 @@
 		05EE0B481AFE089800DD86D1 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05EE0B3E1AFE089800DD86D1 /* tinyxml.cpp */; };
 		05EE0B4A1AFE089800DD86D1 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05EE0B411AFE089800DD86D1 /* tinyxmlerror.cpp */; };
 		05EE0B4C1AFE089800DD86D1 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05EE0B431AFE089800DD86D1 /* tinyxmlparser.cpp */; };
+		1B031D3F2080E49B00C32993 /* Nosync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B031D3E2080E49B00C32993 /* Nosync.cpp */; };
+		1B031D402080E79900C32993 /* Nosync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B031D3E2080E49B00C32993 /* Nosync.cpp */; };
 		457949FA1E7C86B200B7C101 /* rational.h in Headers */ = {isa = PBXBuildFile; fileRef = 457949F81E7C86B200B7C101 /* rational.h */; };
 		457949FB1E7C86B200B7C101 /* rational.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457949F91E7C86B200B7C101 /* rational.cpp */; };
 		457949FC1E7C86B200B7C101 /* rational.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457949F91E7C86B200B7C101 /* rational.cpp */; };
@@ -199,6 +201,8 @@
 		05EE0B3F1AFE089800DD86D1 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
 		05EE0B411AFE089800DD86D1 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
 		05EE0B431AFE089800DD86D1 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
+		1B031D3D2080E40800C32993 /* Nosync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nosync.h; sourceTree = SOURCE_ROOT; };
+		1B031D3E2080E49B00C32993 /* Nosync.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Nosync.cpp; sourceTree = SOURCE_ROOT; };
 		457949F81E7C86B200B7C101 /* rational.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rational.h; sourceTree = SOURCE_ROOT; };
 		457949F91E7C86B200B7C101 /* rational.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rational.cpp; sourceTree = SOURCE_ROOT; };
 		723DE56D1B25E007003AFB66 /* ConvertUTF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConvertUTF.cpp; sourceTree = "<group>"; };
@@ -268,6 +272,8 @@
 				05323F251B2B1E420040E587 /* Repeat.h */,
 				0577FCA71AFE7D9A00D816FF /* Tempo.cpp */,
 				0577FCA81AFE7D9A00D816FF /* Tempo.h */,
+				1B031D3D2080E40800C32993 /* Nosync.h */,
+				1B031D3E2080E49B00C32993 /* Nosync.cpp */,
 				0577FC981AFE75F700D816FF /* BeatPerMinute.cpp */,
 				0577FC991AFE75F700D816FF /* BeatPerMinute.h */,
 				050112F21BBFD54600EB4402 /* ActionGroup.cpp */,
@@ -608,6 +614,7 @@
 				0594EC271B8678AE005B781F /* tinyxmlparser.cpp in Sources */,
 				0594EC281B8678AE005B781F /* unzip.cpp in Sources */,
 				0594EC291B8678AE005B781F /* ioapi.cpp in Sources */,
+				1B031D402080E79900C32993 /* Nosync.cpp in Sources */,
 				0594EC2A1B8678AE005B781F /* extract.cpp in Sources */,
 				457949FC1E7C86B200B7C101 /* rational.cpp in Sources */,
 			);
@@ -635,6 +642,7 @@
 				05C829271BC047C900037C4C /* GeneralMIDISoundset.cpp in Sources */,
 				0554B1681AFE35C900055EF1 /* MusicXmlImporter.cpp in Sources */,
 				0568371E1AFECA80009A646C /* Measure.cpp in Sources */,
+				1B031D3F2080E49B00C32993 /* Nosync.cpp in Sources */,
 				05542C5B1B0062690035F522 /* Entry.cpp in Sources */,
 				05EE0B341AFE083A00DD86D1 /* main.cpp in Sources */,
 				05681AFE1B11B226009E9A48 /* extract.cpp in Sources */,

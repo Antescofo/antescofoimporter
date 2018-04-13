@@ -20,6 +20,7 @@
 #include "Entry.h"
 #include "Pitch.h"
 #include "BeatPerMinute.h"
+#include "Nosync.h"
 #include <algorithm>
 #include <math.h>
 #ifdef _WIN32
@@ -123,9 +124,41 @@ void ImportModel::serialize()
     auto it = events_.begin();
     int previousMeasure = 0;
     bool setFirst = false;
+    bool isNoSyncOnNote = false;
+    bool isNoSyncStart = false;
+    
     while ( it != events_.end() )
     {
         Event* event = *it;
+        
+        if( event->type() == Event_NosyncOnNote )
+        {
+            isNoSyncOnNote = true;
+            ++it;
+            continue;
+        }
+        
+        if( event->type() == Event_NosyncStart )
+        {
+            isNoSyncStart = true;
+            ++it;
+            continue;
+        }
+        
+        if( event->type() == Event_NosyncStop )
+        {
+            isNoSyncStart = false;
+            isNoSyncOnNote = true;
+            ++it;
+            continue;
+        }
+        
+        if( (isNoSyncOnNote || isNoSyncStart) && event->type() == Event_Entry )
+        {
+            isNoSyncOnNote = false;
+            event->setNosync();
+        }
+        
         if ( previousMeasure != event->measure() )
         {
             float duration = getMeasureDuration( previousMeasure );
@@ -161,6 +194,7 @@ void ImportModel::serialize()
                 ++itNext;
             }
         }
+        
         event->serialize( serialization_ );
         if ( event->isFirstInMeasure() )
             setFirst = false;

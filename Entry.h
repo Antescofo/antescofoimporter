@@ -69,7 +69,9 @@ namespace antescofo
         std::list<Pitch>&       secondaryPitches();
         
         bool isTiedTo( Entry* entry );
-        
+        bool isNosync() const override { return nosync; }
+        void setNosync() override { nosync = true; }
+
     private:
         std::string formatDuration() const;
         void        serializeNote( std::ostringstream& stream );
@@ -86,6 +88,7 @@ namespace antescofo
         std::list<Pitch>    pitches_;
         std::list<Pitch>    secondaryPitches_; //for alternate tremolos & trills
         EntryFeatures       features_;
+        bool                nosync;
     };
 }
 

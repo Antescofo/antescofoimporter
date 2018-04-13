@@ -24,7 +24,8 @@ Entry::Entry( float measure, float start, float duration, const Pitch& pitch ):
     Event         (),
     start_        ( start),
     duration_     ( duration ),
-    features_     ( pitch.features() )
+    features_     ( pitch.features() ),
+    nosync         (false)
 {
     Pitch newPitch ( pitch );
     int cents = pitch.midiCents();
@@ -133,6 +134,8 @@ void Entry::serialize( ostringstream& stream )
         stream << " @fermata";
     if ( isFirstInMeasure() && !isPickup && !(features_&MeasureRest) )
         stream << " measure" << measure();
+    if(isNosync())
+        stream << " nosync";
     if ( features_ & Harmonic )
         stream << " ; harmonics";
     if ( features_ & SquareNotehead )
