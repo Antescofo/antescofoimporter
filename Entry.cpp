@@ -64,7 +64,8 @@ Entry::Entry( const Entry& from ):
     duration_         ( from.duration_ ),
     pitches_          ( from.pitches_ ),
     secondaryPitches_ ( from.secondaryPitches_ ),
-    features_         ( from.features_ )
+    features_         ( from.features_ ),
+    nosync            ( false )
 {
     //NOTHING
 }

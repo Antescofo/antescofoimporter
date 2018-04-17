@@ -88,7 +88,7 @@ namespace antescofo
         std::list<Pitch>    pitches_;
         std::list<Pitch>    secondaryPitches_; //for alternate tremolos & trills
         EntryFeatures       features_;
-        bool                nosync;
+        bool                nosync = false;
     };
 }
 
