@@ -1221,6 +1221,7 @@ void MusicXmlImporter::processDirection( TiXmlNode* direction )
                 if (std::find(dict.begin(), dict.end(), content) != dict.end()) {
                     addWaitForNote();
                 }
+                
                 // Look for "noSyncOnNote" compatible events
                 vector<string> const& nosyncOnNoteDict = Dictionary::noSyncOnNote;
                 if (std::find(nosyncOnNoteDict.begin(), nosyncOnNoteDict.end(), content) != nosyncOnNoteDict.end()) {
@@ -1236,6 +1237,7 @@ void MusicXmlImporter::processDirection( TiXmlNode* direction )
                 if (std::find(nosyncStopDict.begin(), nosyncStopDict.end(), content) != nosyncStopDict.end()) {
                     model_.appendEvent(new NosyncStop());
                 }
+                 
             }
             // Find an 'other-direction' or 'words' element that contains an 'a tempo'-like text
         } while ( (directionType = direction->IterateChildren( "direction-type", directionType )) );
