@@ -501,6 +501,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -914,7 +915,7 @@
 					"$(PROJECT_DIR)/zlib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -931,7 +932,7 @@
 					"$(PROJECT_DIR)/zlib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
