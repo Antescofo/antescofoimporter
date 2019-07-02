@@ -158,6 +158,7 @@ void MusicXmlImporter::clear()
     currentMeasureDuration_  = 0.0;
     currentChromaticTransposition_ = 0;
     currentDiatonicTransposition_ = 0;
+    currentOctaveTransposition_ = 0;
     accumGlobal_ = 0.0;
     accumLocal_ = 0.0;
     currentDivision_ = 1;
@@ -420,6 +421,7 @@ bool MusicXmlImporter::import()
                     currentTrillVoice_ = 0;
                     currentChromaticTransposition_ = 0;
                     currentDiatonicTransposition_ = 0;
+                    currentOctaveTransposition_ = 0;
                     accumLocal_ = 0.0;
                     TiXmlNode* measure = part->FirstChildElement( "measure" );
                     bool shouldChaseCue = true;
@@ -541,6 +543,8 @@ TiXmlNode* MusicXmlImporter::processMeasureAttributes( TiXmlNode* measure )
             TiXmlNode* diatonic = transpose->FirstChildElement( "diatonic" );
             if ( diatonic )
                 currentDiatonicTransposition_ = atoi( chromatic->ToElement()->GetText() );
+            if ( TiXmlNode* octaveChange = transpose->FirstChildElement( "octave-change" ) )
+                currentOctaveTransposition_ = atoi( octaveChange->ToElement()->GetText() );
         }
     }
     return attributes;
@@ -1824,7 +1828,7 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
 
 int MusicXmlImporter::getMidiCents( const char diatonic, int octave, float accidental ) const
 {
-    int midiCents = currentChromaticTransposition_ + ( octave + 1 )*12;
+    int midiCents = currentChromaticTransposition_ + ( currentOctaveTransposition_ + octave + 1 ) * 12;
     switch ( diatonic )
     {
         case 'D':
