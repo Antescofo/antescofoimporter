@@ -18,6 +18,7 @@
 #include "ImportModel.h"
 #include "tinyxml.h"
 #include "BeatPerMinute.h"
+#include "Nosync.h"
 #include "Measure.h"
 #include "Repeat.h"
 #include "Pitch.h"
@@ -90,6 +91,17 @@ std::vector<std::string> const MusicXmlImporter::Dictionary::waitForNote = {
     "sm: wait for note", "sm: resume"               // SmartMusic markers
 };
 
+std::vector<std::string> const MusicXmlImporter::Dictionary::noSyncOnNote = {
+    "no sync on note"
+};
+
+std::vector<std::string> const MusicXmlImporter::Dictionary::noSyncStart = {
+    "no sync start"
+};
+
+std::vector<std::string> const MusicXmlImporter::Dictionary::noSyncStop = {
+    "no sync stop"
+};
 
 std::string MusicXmlImporter::Utils::trim(std::string const& s)
 {
@@ -1209,11 +1221,30 @@ void MusicXmlImporter::processDirection( TiXmlNode* direction )
                 if (std::find(dict.begin(), dict.end(), content) != dict.end()) {
                     addWaitForNote();
                 }
+                
+                // Look for "noSyncOnNote" compatible events
+                vector<string> const& nosyncOnNoteDict = Dictionary::noSyncOnNote;
+                if (std::find(nosyncOnNoteDict.begin(), nosyncOnNoteDict.end(), content) != nosyncOnNoteDict.end()) {
+                    model_.appendEvent(new NosyncOnNote());
+                }
+                // Look for "noSyncStart" compatible events
+                vector<string> const& nosyncStartDict = Dictionary::noSyncStart;
+                if (std::find(nosyncStartDict.begin(), nosyncStartDict.end(), content) != nosyncStartDict.end()) {
+                    model_.appendEvent(new NosyncStart());
+                }
+                // Look for "noSyncStart" compatible events
+                vector<string> const& nosyncStopDict = Dictionary::noSyncStop;
+                if (std::find(nosyncStopDict.begin(), nosyncStopDict.end(), content) != nosyncStopDict.end()) {
+                    model_.appendEvent(new NosyncStop());
+                }
+                 
             }
             // Find an 'other-direction' or 'words' element that contains an 'a tempo'-like text
         } while ( (directionType = direction->IterateChildren( "direction-type", directionType )) );
     }
 }
+
+
 
 rational MusicXmlImporter::getBeatDurationFromNoteType(const char* unit)
 {
@@ -1841,3 +1872,4 @@ void MusicXmlImporter::addWaitForNote() {
     if (!position.empty())
         model_.addWaitForNote(position);
 }
+

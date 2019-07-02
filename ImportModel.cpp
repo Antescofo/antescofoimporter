@@ -20,6 +20,7 @@
 #include "Entry.h"
 #include "Pitch.h"
 #include "BeatPerMinute.h"
+#include "Nosync.h"
 #include <algorithm>
 #include <math.h>
 #ifdef _WIN32
@@ -123,9 +124,11 @@ void ImportModel::serialize()
     auto it = events_.begin();
     int previousMeasure = 0;
     bool setFirst = false;
+    
     while ( it != events_.end() )
     {
         Event* event = *it;
+        
         if ( previousMeasure != event->measure() )
         {
             float duration = getMeasureDuration( previousMeasure );
@@ -711,6 +714,7 @@ void QueryHandler::showPulseChangesAsNim( std::ostringstream& stream ) const
 
 void ImportModel::beautify()
 {
+    manageNosyncNotes();
     consolidateNotesAndRests();
     consolidateTemposAndMeasures();
 }
@@ -719,6 +723,49 @@ void ImportModel::addWaitForNote(std::string position)
 {
     if (waitForNoteArray_.empty() || waitForNoteArray_.back() != position)
         waitForNoteArray_.push_back(position);
+}
+
+void ImportModel::manageNosyncNotes()
+{
+    bool isNoSyncOnNote = false;
+    bool isNoSyncStart = false;
+
+    auto it = events_.begin();
+    
+    while ( it != events_.end() )
+    {
+        Event* event = *it;
+        
+        switch (event->type()) {
+            case Event_NosyncOnNote:
+                isNoSyncOnNote = true;
+                events_.erase( it );
+                ++it;
+                break;
+            case Event_NosyncStart:
+                isNoSyncStart = true;
+                events_.erase( it );
+                ++it;
+                break;
+            case Event_NosyncStop:
+                isNoSyncStart = false;
+                isNoSyncOnNote = true;
+                events_.erase( it );
+                ++it;
+                break;
+            case Event_Entry:
+                if(isNoSyncOnNote || isNoSyncStart)
+                {
+                    isNoSyncOnNote = false;
+                    event->setNosync();
+                }
+                ++it;
+                break;
+            default:
+                ++it;
+                break;
+        }
+    }
 }
 
 void ImportModel::consolidateNotesAndRests()

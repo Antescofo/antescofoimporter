@@ -68,7 +68,10 @@ namespace antescofo
         Event_BeatPerMinute,
         Event_RepeatBar,
         Event_RepeatEnding,
-        Action_ActionGroup
+        Action_ActionGroup,
+        Event_NosyncOnNote,
+        Event_NosyncStart,
+        Event_NosyncStop
     };
     
     class Pitch;
@@ -83,7 +86,8 @@ namespace antescofo
         virtual void        serialize( std::ostringstream& stream ) = 0;
         virtual EventType   type() const = 0;
         virtual bool        hasNotes() const = 0;
-        
+        virtual bool        isNosync() const { return false; }
+        virtual void        setNosync() {}
         virtual bool          isMeasure() const;
         virtual bool          isRest() const { return false; }
         virtual void          setAsRest() {}

@@ -33,6 +33,9 @@ Developped by Robert Piéchaud
      
 * * Build log * *
 
+* * * v. 0.2.8 ~ Avr. 17 2018 * * *
+- import 'no sync' attribute from MusicXML
+
 * * * v. 0.2.7.1 ~ Avr. 10 2018 * * *
 - remove BOM which caused problem with our python scripts
 
