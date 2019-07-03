@@ -50,3 +50,10 @@ position.hh
 !default.perspectivev3
 
 max-darwin
+
+# personal exclude
+test/TODO/
+out/*
+zlib/*
+out/
+zlib/

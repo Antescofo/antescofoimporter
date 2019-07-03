@@ -501,6 +501,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -582,7 +583,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/plain -chasecues\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/original_pitches -originalpitches -chasecues\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/appoggiaturas -originalpitches -appoggiaturas\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/metadata -metadata\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\ncp ${TARGET_BUILD_DIR}/${TARGET_NAME} out/mac";
+			shellScript = "if [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/plain -chasecues\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/original_pitches -originalpitches -chasecues\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/original_pitches -originalpitches -chasecues\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/appoggiaturas -originalpitches -appoggiaturas\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/metadata -metadata\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/midicents -midicents\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\ncp ${TARGET_BUILD_DIR}/${TARGET_NAME} out/mac\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -914,7 +915,7 @@
 					"$(PROJECT_DIR)/zlib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -931,7 +932,7 @@
 					"$(PROJECT_DIR)/zlib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};

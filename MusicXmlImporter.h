@@ -116,6 +116,7 @@ namespace antescofo
         float            accumLocal_;
         int              currentChromaticTransposition_;
         int              currentDiatonicTransposition_;
+        int              currentOctaveTransposition_;
         int              currentDivision_;
         int              currentRepeatNoteAmount_;
         float            currentQuarterNoteTempo_;

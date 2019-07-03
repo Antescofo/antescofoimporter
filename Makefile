@@ -50,3 +50,4 @@ linux:
 testlinux:
 	docker run -ti -v "$$(pwd)"/out/linux:/usr/local/bin alpine antescofo_importer --help
 
+build: image linux
