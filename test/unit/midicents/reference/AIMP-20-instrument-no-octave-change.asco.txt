@@ -1,0 +1,43 @@
+; Antescofo score generated using native importer version 0.2.8
+; Original file: 67772bd9cf8cd6ab30c6d10cae91912a893619e7.musicxml
+; exported from Finale v25 for Mac
+; MusicXML version 3.1
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 3/8
+
+BPM 108 ; ( ← 𝅘𝅥. =72) 
+NOTE 5000 1/4 measure1
+NOTE 5200 1/4
+NOTE 5300 1/4
+NOTE 5500 1/4
+NOTE 5700 1/4
+NOTE 5800 1/4
+
+; ----------- measure 2 --- beat   1.5 --- time signature 3/8
+
+NOTE 4900 1/4 measure2
+NOTE 5800 1/4
+NOTE 5700 1/4
+NOTE 5500 1/4
+NOTE 5300 1/4
+NOTE 5200 1/4
+
+; ----------- measure 3 --- beat 3 --- time signature 3/8
+
+CHORD (5000 5300) 1/4 measure3
+CHORD (5200 -5300) 1/4
+CHORD (5300 5700) 1/4
+CHORD (5500 -5700) 1/4
+CHORD (5700 6200) 1/4
+CHORD (5800 -6200) 1/4
+
+; ----------- measure 4 --- beat   4.5 --- time signature 3/8
+
+CHORD (4900 5500) 1/4 measure4
+CHORD (-5500 5800) 1/4
+CHORD (5700 6100) 1/4
+CHORD (5500 -6100) 1/4
+CHORD (5300 6400) 1/4
+CHORD (5200 -6400) 1/4
