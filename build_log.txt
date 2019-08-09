@@ -33,8 +33,11 @@ Developped by Robert Piéchaud
      
 * * Build log * *
 
+* * * v. 0.3.0 ~ Aug. 9 2019 * * *
+- fixed crashes on imports of music sheets with 'noSync' element
+
 * * * v. 0.2.9 ~ Jul. 3 2019 * * *
-- fixed instrument transposition with 'octave-change' element.
+- fixed instrument transposition with 'octave-change' element
 
 * * * v. 0.2.8 ~ Avr. 17 2018 * * *
 - import 'no sync' attribute from MusicXML
