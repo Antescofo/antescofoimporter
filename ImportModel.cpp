@@ -739,19 +739,19 @@ void ImportModel::manageNosyncNotes()
         switch (event->type()) {
             case Event_NosyncOnNote:
                 isNoSyncOnNote = true;
-                events_.erase( it );
-                ++it;
+                it = events_.erase( it );
+                delete event;
                 break;
             case Event_NosyncStart:
                 isNoSyncStart = true;
-                events_.erase( it );
-                ++it;
+                it = events_.erase( it );
+                delete event;
                 break;
             case Event_NosyncStop:
                 isNoSyncStart = false;
                 isNoSyncOnNote = true;
-                events_.erase( it );
-                ++it;
+                it = events_.erase( it );
+                delete event;
                 break;
             case Event_Entry:
                 if(isNoSyncOnNote || isNoSyncStart)
