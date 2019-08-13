@@ -29,6 +29,7 @@ main: $(OBJS)
 	$(MAKE) -C zlib -f Makefile_linux
 	cd $(CURRENT_DIR)
 	$(CC) $(LEVEL) $(CCFLAGS) $(INCLUDES) -o $(MAIN) $(OBJS) $(LFLAGS) $(LIBS)
+	mkdir -p out/linux/
 	mv -f $(MAIN) out/linux/
 
 debug:
