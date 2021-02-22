@@ -49,6 +49,10 @@ namespace antescofo
         bool  queryTracklist( const std::string& path, std::vector<std::string>& tracks );
         bool  queryTracklist( std::vector<std::string>& tracks );
         bool  queryScoreInfo( std::string& scoreInfo );
+        /// Staves that should be imported (empty means all staves should be).
+        std::vector<int> staffList() const { return staffSelection_; }
+        /// Parse an array of staves out of a string.
+        std::vector<int> parseStaffList( std::string staffSelection ) const;
         float getInitialTempo() const;
         void  clear();
         bool  inputIsMIDI() const;
@@ -88,6 +92,7 @@ namespace antescofo
         bool                    verbose_;
         bool                    trackListQuery_;
         std::string             trackSelection_;
+        std::vector<int>        staffSelection_;
         std::string             inputPath_;
         std::string             outputFilePath_;
         std::string             outputDirectory_;

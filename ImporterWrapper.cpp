@@ -95,6 +95,12 @@ bool ImporterWrapper::parseArguments( vector<string>& args )
             trackSelection_ = args[i].substr( 8 );
             cout << "  ✔︎ Track selection" << endl;
         }
+        else if ( args[i].substr( 0, 8 ) == "-staves=" )
+        {
+            string staffSelection = args[i].substr( 8 );
+            staffSelection_ = parseStaffList(staffSelection);
+            cout << "  ✔︎ Staff selection" << endl;
+        }
         else if (( args[i] == "-quarternotetime" ) || ( args[i] == "-quarternotetimes" ))
         {
             quarterNoteTempo_ = true;
@@ -319,6 +325,57 @@ bool ImporterWrapper::queryScoreInfo( string& scoreInfo )
     return false;
 }
 
+std::vector<int> ImporterWrapper::parseStaffList(string staffSelection) const {
+    string tracks = staffSelection;
+    vector<int> trackList;
+    if ( tracks.length() )
+    {
+        bool listOk = true;
+        for ( int i = 0; i < tracks.length(); ++i)
+        {
+            if ( tracks[i] != ',' && tracks[i] != '-' && !isdigit(tracks[i]))
+            {
+                cout << "  Bad track list syntax (good example: -tracks=1,3,4)" << endl;
+                listOk = false;
+                break;
+            }
+        }
+        if ( listOk )
+        {
+            string sub;
+            size_t pos = string::npos;
+            do
+            {
+                pos = tracks.find(',');
+                if ( pos == string::npos )
+                {
+                    sub = tracks;
+                    tracks = "";
+                }
+                else
+                {
+                    sub = tracks.substr( 0, pos );
+                    tracks = tracks.substr( pos + 1 );
+                }
+                trackList.push_back( atoi( sub.c_str()));
+            }
+            while ( tracks.length() > 0 );
+        }
+        if ( trackList.size() )
+        {
+            if ( trackList.size() > 1 )
+            {
+                cout << "  Processing staves: ";
+                for ( int i = 0; i < trackList.size(); ++i )
+                    cout << abs( trackList[i] ) << " ";
+                cout << endl;
+            }
+        }
+    }
+    
+    return trackList;
+}
+
 bool ImporterWrapper::save( const string& path )
 {
     return model_->save( path );
@@ -381,6 +438,7 @@ void ImporterWrapper::clear()
     inputPath_.clear();
     outputFilePath_.clear();
     trackSelection_.clear();
+    staffSelection_.clear();
     for ( vector<Importer*>::iterator it = importers_.begin(); it != importers_.end(); ++it)
     {
         (*it)->clear();

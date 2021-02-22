@@ -33,6 +33,9 @@ Developped by Robert Piéchaud
      
 * * Build log * *
 
+* * * v. 0.3.1 ~ Fev. 23 2021 * * *
+- added command line option -staves to filter on some staves during import.
+
 * * * v. 0.3.0 ~ Aug. 9 2019 * * *
 - fixed crashes on imports of music sheets with 'noSync' element
 

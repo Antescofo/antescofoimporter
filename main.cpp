@@ -59,10 +59,11 @@ void displayHelp()
          <<           "     (so as one-beat time, note that the 'quarternotetime' option must be off!)" << endl
          << bright << "  -originalpitches" << normal << " shows pitches & accidentals as specified in the original score" << endl
          <<           "     (otherwise Eb can show up as D# for instance)." << endl
-         << bright << "  -querytracks" << normal << " displays the file’s available tracks/staves." << endl
-         << bright << "  -tracks=" << normal << "1,4,5,... restricts the conversion to some specific tracks/staves." << endl
+         << bright << "  -querytracks" << normal << " displays the file’s available tracks/parts." << endl
+         << bright << "  -tracks=" << normal << "1,4,5,... restricts the conversion to some specific tracks/parts." << endl
          <<           "     (for MIDI files, negative number will mean 'playback track'," << endl
          <<           "      thus converted as 'action group')." << endl
+         << bright << "  -staves=" << normal << "1,2,... restricts the conversion to some specific staves (only for MusicXML files, no effect on MIDI files)." << endl
          << bright << "  -outputdirectory" << normal << "=[path] for specific output directory." << endl
          << bright << "  -unittest" << normal << "=[folder path] will process unit tests (for internal use.)" << endl
          << bright << "  -verbose" << normal << " / -v for (too!) many details." << endl

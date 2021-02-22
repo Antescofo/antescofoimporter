@@ -1492,10 +1492,6 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
         duration = (float) currentMetricFactor_ * intDuration / currentDivision_;
     }
     
-    SimpleRational rationalDuration( intDuration, currentDivision_ );
-    SimpleRational rationalMetricFactor ( currentIntMetricFactor_, 3 );
-    rationalDuration *= rationalMetricFactor;   //so the duration is relative to the current "beat" definition
-
     TiXmlNode* rest = note->FirstChildElement( "rest" );
     if ( rest )
     {
@@ -1506,12 +1502,28 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
     }
 
     TiXmlNode* pitch = note->FirstChildElement( "pitch" );
+    const char* realCue = note->ToElement()->Attribute( "real-cue" );
+    bool isMuted = realCue != nullptr;
+    TiXmlNode* staffElement = note->FirstChildElement( "staff" );
+    if ( staffElement ) {
+        int staff = atoi( staffElement->ToElement()->GetText() );
+        std::vector<int> staffList = wrapper_.staffList();
+        if (!staffList.empty() && (std::find(staffList.begin(), staffList.end(), staff) == staffList.end()))
+        {
+            isMuted = true;
+            if (pitch) {
+                note->RemoveChild(pitch);
+                pitch = nullptr;
+            }
+        }
+    }
+    
     float midiCents = 0.0;
     int diatonicStep = -1;
     float displayedAccidental = 0.0;
     Pitch newNote( 0, features );
-    const char* realCue = note->ToElement()->Attribute( "real-cue" );
-    if ( pitch && realCue == nullptr )
+                                             
+    if ( pitch && !isMuted )
     {
         TiXmlNode* tie = note->FirstChildElement( "tie" );
         TiXmlNode* accidental = note->FirstChildElement( "accidental" );
