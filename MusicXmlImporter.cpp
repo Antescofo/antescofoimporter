@@ -1725,7 +1725,7 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
                         TiXmlNode* anotherWavy=wavy->NextSibling("wavy-line");
                         if (anotherWavy)
                         {
-                            string lastWayType = anotherWavy->ToElement()->Attribute("type");
+                            string lastWayType = anotherWavy->ToElement()->Attribute( "type" );
                             wavyStoppingWithinScore = (lastWayType == "stop");
                         }
                         if (wavyStoppingWithinScore)
@@ -1781,9 +1781,27 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
             }
         }
     }
-    if ( !chord && features == None && duration >= 1 && normalNotes >= 4*actualNotes ) //buggy Finale "piano" tremolo...
+    // Start: Workaround for Finale MusicXML export bug.
+    // For half note tremolos, Finale usually does not export the "tremolo" attribute.
+    bool is32ndOrShorterType = false; // Music notation rule: un-measured tremolos are written with 32nd or shorter note types.
+    TiXmlNode* type = note->FirstChildElement( "type" );
+    if ( type )
     {
-        if ( currentNoteFeatures_ & Feature::AlternateTremolo )
+        if (const char* typeDuration = type->ToElement()->GetText())
+        {
+            rational rationalTypeDurational = getBeatDurationFromNoteType(typeDuration);
+            {
+                if ( rationalTypeDurational <= getBeatDurationFromNoteType("32nd") )
+                {
+                    is32ndOrShorterType = true;
+                }
+            }
+        }
+    }
+    bool isHalfNoteTremolo = is32ndOrShorterType && normalNotes >= 4 * actualNotes; // Ad hoc rule to identify half note tremolos.
+    if ( !chord && features == None && isHalfNoteTremolo )
+    {
+        if ( currentNoteFeatures_ & Feature::AlternateTremolo ) //Sibelius xml export bug ('start' instead of 'stop'...)
         {
             currentNoteFeatures_ = Feature::TremoloEnd;
             features |= Feature::TremoloEnd;
@@ -1796,6 +1814,7 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
         }
         duration *= 2;
     }
+    // End: Workaround for Finale MusicXML export bug.
     TiXmlNode* notehead = note->FirstChildElement( "notehead" );
     if ( notehead )
     {
