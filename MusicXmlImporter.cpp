@@ -1645,9 +1645,11 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
             TiXmlNode* wavy = ornaments->FirstChildElement( "wavy-line" );
             if ( tremolo )
             {
+                string type = string( "single" ); // owing to MusicXML standard, default type of tremolo is "single".
                 if ( const char* tremoloType = tremolo->ToElement()->Attribute( "type" ) )
                 {
-                  string type ( tremoloType );
+                    type = string( tremoloType );
+                }
                   
                   if ( type == "single" ) //repeated note or chord
                   {
@@ -1664,12 +1666,41 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
                         newNote.setMidiCents( midiCents );
                         return model_.addRepeatedNotes( currentMeasure_, accumLocal_, duration, noteDivision, newNote );
                     }
-                    features |= Feature::FastRepeatedTremolo;
+                    else {
+                        features |= Feature::FastRepeatedTremolo;
+                    }
                   }
                   else
                   {
                     int strokes = atoi( tremolo->ToElement()->GetText() );
-                    if ( ( duration*2 > 0.5 && strokes <= 2 ) || ( duration*2 <= 0.5 && strokes == 1 ))
+                      
+                    bool isMeasuredTremolo = false;
+                      bool isHalfNote = false;
+                      TiXmlNode* noteType = note->FirstChildElement( "type" );
+                      if ( noteType )
+                      {
+                          if ( const char* typeDuration = noteType->ToElement()->GetText() )
+                          {
+                              if ( !strcmp(typeDuration, "half") )
+                              {
+                                  isHalfNote = true;
+                              }
+                          }
+                      }
+                      if ( isHalfNote )
+                      {
+                          // Music notation rules: exclude all possible notations of unmeasured half note tremolos.
+                          if ( strokes == 1 || ( strokes == 2 && !note->FirstChildElement( "beam" ) ) )
+                          {
+                              isMeasuredTremolo = true;
+                          }
+                      }
+                      else if ( ( duration*2 > 0.5 && strokes <= 2 ) || ( duration*2 <= 0.5 && strokes == 1 ) ) // old heuristic
+                      {
+                          isMeasuredTremolo = true;
+                      }
+                      
+                    if ( isMeasuredTremolo )
                     {
                       //int noteDivision = 2;
                       //if ( duration > 0.5 )
@@ -1705,7 +1736,6 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
                       }
                     }
                   }
-                }
             }
             else
             {
@@ -1725,7 +1755,7 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
                         TiXmlNode* anotherWavy=wavy->NextSibling("wavy-line");
                         if (anotherWavy)
                         {
-                            string lastWayType = anotherWavy->ToElement()->Attribute("type");
+                            string lastWayType = anotherWavy->ToElement()->Attribute( "type" );
                             wavyStoppingWithinScore = (lastWayType == "stop");
                         }
                         if (wavyStoppingWithinScore)
@@ -1781,9 +1811,27 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
             }
         }
     }
-    if ( !chord && features == None && duration >= 1 && normalNotes >= 4*actualNotes ) //buggy Finale "piano" tremolo...
+    // Start: Workaround for Finale MusicXML export bug.
+    // For half note tremolos, Finale usually does not export the "tremolo" attribute.
+    bool is32ndOrShorterType = false; // Music notation rule: un-measured tremolos are written with 32nd or shorter note types.
+    TiXmlNode* type = note->FirstChildElement( "type" );
+    if ( type )
     {
-        if ( currentNoteFeatures_ & Feature::AlternateTremolo )
+        if (const char* typeDuration = type->ToElement()->GetText())
+        {
+            rational rationalTypeDurational = getBeatDurationFromNoteType(typeDuration);
+            {
+                if ( rationalTypeDurational <= getBeatDurationFromNoteType("32nd") )
+                {
+                    is32ndOrShorterType = true;
+                }
+            }
+        }
+    }
+    bool isHalfNoteTremolo = is32ndOrShorterType && normalNotes >= 4 * actualNotes; // Ad hoc rule to identify half note tremolos.
+    if ( !chord && features == None && isHalfNoteTremolo )
+    {
+        if ( currentNoteFeatures_ & Feature::AlternateTremolo ) //Sibelius xml export bug ('start' instead of 'stop'...)
         {
             currentNoteFeatures_ = Feature::TremoloEnd;
             features |= Feature::TremoloEnd;
@@ -1796,6 +1844,7 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
         }
         duration *= 2;
     }
+    // End: Workaround for Finale MusicXML export bug.
     TiXmlNode* notehead = note->FirstChildElement( "notehead" );
     if ( notehead )
     {

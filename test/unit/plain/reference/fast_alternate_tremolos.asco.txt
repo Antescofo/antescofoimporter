@@ -1,18 +1,14 @@
-; Antescofo score generated using native importer
-; Copyright (c) IRCAM 2015
-; Designed by Robert Piéchaud
-
+; Antescofo score generated using native importer version 0.3.1
 ; Original file: fast_alternate_tremolos.xml
-; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
-; MusicXML version 3.0
-; Converted to Antescofo on Sun May 24 17:06:26 2015
+; exported from Finale v27.1 for Mac
+; MusicXML version 3.1
 ; Credits: Fast Alternate Tremolos
 
 ; start
 
 ; ----------- measure 1 --- beat 0 --- time signature 4/4
 
-BPM 56 ; ( ← 𝅘𝅥 =56) 
+BPM 56
 TRILL ((A4 C5) (C5 E5)) 1 measure1
 TRILL ((G#4 A#4) (C5 E5)) 1
 TRILL ((A4 B4) (D5 F5 G#5)) 2
@@ -23,13 +19,20 @@ TRILL (G3 D4) 2 measure2
 TRILL (B3 F4) 2
 TRILL (D4 G#4) 2
 
-; ----------- measure 3 --- beat 8 --- time signature 4/2
+; ----------- measure 3 --- beat 10 --- time signature 4/2
 
 TRILL (C4 G4) 4 measure3
 TRILL (E4 A#4) 4
 
-; ----------- measure 4 --- beat 16 --- time signature 4/2
+; ----------- measure 4 --- beat 18 --- time signature 4/2
 
 TRILL (G4 C#5) 4 measure4
 TRILL (F4 C5) 3
 NOTE 0 1
+
+; ----------- measure 5 --- beat 26 --- time signature 4/2
+
+TRILL (E4 F4) 2 measure5
+TRILL (E5 B4) 2
+TRILL (G5 G4) 7/2
+NOTE 0 1/2
