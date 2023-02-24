@@ -9,4 +9,4 @@
 
 * Install [Docker](https://download.docker.com/mac/stable/Docker.dmg).
 * Run `make build` to build the Docker image, then compile antescofo_importer.
-* Run `make testlinux` to execute --help on the newly created binary.
+* Run `make testlinux` to execute --help on the newly created binary and make sure that the binary is compiled for x86-64.

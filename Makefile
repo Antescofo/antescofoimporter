@@ -49,6 +49,7 @@ linux:
 	docker run -v "$$(pwd)":/data $(IMAGENAME):$(TAG) bash -c "make clean && make"
 
 testlinux:
-	docker run -ti -v "$$(pwd)"/out/linux:/usr/local/bin alpine antescofo_importer --help
+	docker run -ti -v "$$(pwd)"/out/linux:/usr/local/bin $(IMAGENAME):$(TAG) antescofo_importer --help
+	docker run -ti -v "$$(pwd)"/out/linux:/data/ $(IMAGENAME):$(TAG) file antescofo_importer
 
 build: image linux
