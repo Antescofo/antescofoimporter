@@ -256,14 +256,20 @@ float ImportModel::addNote( float measure, float start, float duration, Pitch& p
                 (*it)->addPitch( pitch );
                 break;
             }
-            else if ( event->hasNotes() && f & AlternateTremolo
+            else if ( event->hasNotes() && f & AlternateTremolo  //special case of second part of alternate (unmeasured) tremolo
                      && features & TremoloEnd
-                     && m == measure
-                     && isEqual( s, start ) ) //special case of second part of alternate (unmeasured) tremolo
+                     && m == measure )
             {
-                if ( pitch.midiCents() != 0 )
-                    event->addSecondaryPitch( pitch );
-                break;
+                if ( pitch.midiCents() == 0 )
+                    break;
+                else {
+                    if ( isIncluded(s, d, start, duration) ) // add secondary pitch to all notes included in the alternate
+                    {
+                        event->addSecondaryPitch( pitch );
+                    }
+                    if ( !isBefore(s + d, start + duration) ) // break after having reached the event end.
+                        break;
+                }
             }
             else if ( event->hasNotes() && m == measure
                      && d > 0
@@ -859,6 +865,11 @@ bool ImportModel::isBefore( float t1, float t2 )
     if ( wrapper_.inputIsMIDI() )
         return ( t2 - t1 ) > EPSILON_MIDI;
     return ( t2 - t1 ) > EPSILON;
+}
+
+bool ImportModel::isIncluded( float start1, float duration1, float start2, float duration2 )
+{
+    return !isBefore( start1, start2 ) && !isAfter(start2 + duration2, start1 + duration2);
 }
 
 float const QueryHandler::EPSILON = 0.005f; // in beats

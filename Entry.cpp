@@ -115,7 +115,10 @@ void Entry::serialize( ostringstream& stream )
     {
         serializeFastRepeatedTremolo( stream );
     }
-    else if ( features_& (Trill | AlternateTremolo) && !( features_&Trill && pitches_.size() == 1 && !secondaryPitches_.size() ) )
+    else if ( features_& (Trill | AlternateTremolo)
+             && !( features_&Trill && pitches_.size() == 1 && !secondaryPitches_.size() ) // do not serialize empty trills as TRILL
+             && !( features_&AlternateTremolo && !secondaryPitches_.size() ) // do not serialize empty tremolos as TRILL
+             )
     {
         serializeTrill( stream );
     }

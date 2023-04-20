@@ -85,6 +85,8 @@ namespace antescofo
         inline bool isEqual( float t1, float t2 );
         inline bool isAfter( float t1, float t2 );
         inline bool isBefore( float t1, float t2 );
+        /// True if first interval is contained in second interval.
+        inline bool isIncluded( float start1, float duration1, float start2, float duration2 );
         
     private:
         ImporterWrapper&    wrapper_;
