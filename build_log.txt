@@ -33,6 +33,10 @@ Developped by Robert Piéchaud
      
 * * Build log * *
 
+* * * v. 0.3.3 ~ Avr. 20 2023 * * *
+- fixed multi-voice tremolos.
+- fixed serialization of invalid trills.
+
 * * * v. 0.3.2 ~ Dec. 20 2022 * * *
 - fixed unmeasured half note tremolos for all standard notations.
 - fixed import of buggy Finale MusicXML export of half note tremolos.
