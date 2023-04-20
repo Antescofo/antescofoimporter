@@ -1,0 +1,17 @@
+; Antescofo score generated using native importer version 0.3.2
+; Original file: tremolo-2.xml
+; exported from Finale v27.3 for Mac
+; MusicXML version 3.1
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 6/4
+
+NOTE 0 6
+
+; ----------- measure 2 --- beat 6 --- time signature 6/4
+
+TRILL ((D3 F4) (E3)) 3 measure2
+TRILL ((D3 E4) (E3)) 1
+TRILL ((F3 D4) (A3)) 1
+TRILL ((F3 C4) (A3)) 1
