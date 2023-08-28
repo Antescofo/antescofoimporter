@@ -894,9 +894,9 @@ void MusicXmlImporter::handleGraceNoteGroup( vector<TiXmlNode*>& group, TiXmlNod
             duraGrace = value / ( group.size() + 1);
             duraBefore = duraGrace;
         }
-        sprintf( buffer, "%d", (int) duraBefore );
+        snprintf( buffer, sizeof(buffer), "%d", (int) duraBefore );
         duration->ToElement()->FirstChild()->SetValue( buffer );
-        sprintf( buffer, "%d", (int) duraGrace );
+        snprintf( buffer, sizeof(buffer), "%d", (int) duraGrace );
         
         for ( auto graceNote = group.begin(); graceNote != group.end(); ++graceNote )
         {
@@ -1003,10 +1003,10 @@ void MusicXmlImporter::handleSingleGraceNote( TiXmlNode* graceNote, TiXmlNode* n
         int noteDuration = fullDuration - graceDuration;
 
         // Alter duration of principal note
-        char noteDurationStr[16]; sprintf( noteDurationStr, "%d", noteDuration );
+        char noteDurationStr[16]; snprintf( noteDurationStr, sizeof(noteDurationStr), "%d", noteDuration );
         duration->ToElement()->FirstChild()->SetValue( noteDurationStr );
         // Add duration of grace note
-        char graceDurationStr[16]; sprintf( graceDurationStr, "%d", graceDuration );
+        char graceDurationStr[16]; snprintf( graceDurationStr, sizeof(graceDurationStr), "%d", graceDuration );
         TiXmlElement newItem( "duration" );
         duration = graceNote->InsertEndChild( newItem );
         duration->InsertEndChild( TiXmlText( graceDurationStr ) );
