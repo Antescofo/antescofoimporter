@@ -273,7 +273,7 @@ void Entry::serializeMulti( ostringstream& stream )
 string Entry::formatDuration() const
 {
     string displayDuration = to_string( duration_ );
-    if ( duration_ == 0.40000 )
+    if ( duration_ == 0.40000f )
         displayDuration = displayDuration;
     unsigned short limit = features_& MidiNote? 16:64;
     float theta = features_& MidiNote? THETA_MIDI:THETA;

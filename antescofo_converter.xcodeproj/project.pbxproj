@@ -542,7 +542,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#cp -R \"${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/${PRODUCT_NAME}.app\" ../apps/Antescofo/Ascograph/bin\ncp -R \"${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/${PRODUCT_NAME}.app\" out/mac/";
+			shellScript = "#cp -R \"${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/${PRODUCT_NAME}.app\" ../apps/Antescofo/Ascograph/bin\ncp -R \"${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/${PRODUCT_NAME}.app\" out/mac/\n";
 		};
 		0594EC311B867D1A005B781F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
