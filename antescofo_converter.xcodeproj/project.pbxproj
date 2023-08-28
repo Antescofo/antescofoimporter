@@ -37,7 +37,6 @@
 		05578AAD1B0E699C004AC9CC /* UnitTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05578AAB1B0E699C004AC9CC /* UnitTester.cpp */; };
 		05673F2F1B31E5E00085CF95 /* Pitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05673F2D1B31E5E00085CF95 /* Pitch.cpp */; };
 		05681AFE1B11B226009E9A48 /* extract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05681AFD1B11B1E4009E9A48 /* extract.cpp */; };
-		05681B001B11B27E009E9A48 /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05681AFF1B11B27E009E9A48 /* libz.a */; };
 		05681B031B11B387009E9A48 /* unzip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05681B021B11B387009E9A48 /* unzip.cpp */; };
 		05681B051B11B3AF009E9A48 /* ioapi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05681B041B11B3AF009E9A48 /* ioapi.cpp */; };
 		0568371E1AFECA80009A646C /* Measure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0568371C1AFECA80009A646C /* Measure.cpp */; };
@@ -64,7 +63,6 @@
 		0594EC281B8678AE005B781F /* unzip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05681B021B11B387009E9A48 /* unzip.cpp */; };
 		0594EC291B8678AE005B781F /* ioapi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05681B041B11B3AF009E9A48 /* ioapi.cpp */; };
 		0594EC2A1B8678AE005B781F /* extract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05681AFD1B11B1E4009E9A48 /* extract.cpp */; };
-		0594EC2B1B8678C7005B781F /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05681AFF1B11B27E009E9A48 /* libz.a */; };
 		0594EC2C1B8678E6005B781F /* ImporterWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 0554B1611AFE2D8900055EF1 /* ImporterWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05C829231BC0439200037C4C /* MidiNoteAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C829211BC0439100037C4C /* MidiNoteAction.cpp */; };
 		05C829241BC0439200037C4C /* MidiNoteAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C829211BC0439100037C4C /* MidiNoteAction.cpp */; };
@@ -88,6 +86,8 @@
 		457949FC1E7C86B200B7C101 /* rational.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457949F91E7C86B200B7C101 /* rational.cpp */; };
 		457949FD1E7C86B200B7C101 /* rational.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457949F91E7C86B200B7C101 /* rational.cpp */; };
 		723DE56F1B25E007003AFB66 /* ConvertUTF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 723DE56D1B25E007003AFB66 /* ConvertUTF.cpp */; };
+		C04D4F792A9D39D800C93B60 /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C04D4F782A9D39D800C93B60 /* libz.a */; };
+		C04D4F7A2A9D39D800C93B60 /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C04D4F782A9D39D800C93B60 /* libz.a */; };
 		CFDE2BAF1C0322DD00FC3D64 /* antescofo_importer in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05EE0B301AFE083A00DD86D1 /* antescofo_importer */; };
 /* End PBXBuildFile section */
 
@@ -164,7 +164,6 @@
 		05673F2D1B31E5E00085CF95 /* Pitch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pitch.cpp; sourceTree = SOURCE_ROOT; };
 		05673F2E1B31E5E00085CF95 /* Pitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pitch.h; sourceTree = SOURCE_ROOT; };
 		05681AFD1B11B1E4009E9A48 /* extract.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = extract.cpp; path = zlib/unzip/extract.cpp; sourceTree = SOURCE_ROOT; };
-		05681AFF1B11B27E009E9A48 /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libz.a; path = zlib/libz.a; sourceTree = SOURCE_ROOT; };
 		05681B021B11B387009E9A48 /* unzip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unzip.cpp; path = zlib/unzip/unzip.cpp; sourceTree = SOURCE_ROOT; };
 		05681B041B11B3AF009E9A48 /* ioapi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ioapi.cpp; path = zlib/unzip/ioapi.cpp; sourceTree = SOURCE_ROOT; };
 		05681B061B11B8DE009E9A48 /* extract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = extract.h; path = zlib/unzip/extract.h; sourceTree = SOURCE_ROOT; };
@@ -206,6 +205,7 @@
 		457949F91E7C86B200B7C101 /* rational.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rational.cpp; sourceTree = SOURCE_ROOT; };
 		723DE56D1B25E007003AFB66 /* ConvertUTF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConvertUTF.cpp; sourceTree = "<group>"; };
 		723DE56E1B25E007003AFB66 /* ConvertUTF.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = ConvertUTF.h; sourceTree = "<group>"; };
+		C04D4F782A9D39D800C93B60 /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libz.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0594EC2B1B8678C7005B781F /* libz.a in Frameworks */,
+				C04D4F7A2A9D39D800C93B60 /* libz.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +229,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05681B001B11B27E009E9A48 /* libz.a in Frameworks */,
+				C04D4F792A9D39D800C93B60 /* libz.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,10 +250,10 @@
 		05681B011B11B2C3009E9A48 /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				05681AFF1B11B27E009E9A48 /* libz.a */,
+				C04D4F782A9D39D800C93B60 /* libz.a */,
 			);
 			name = libs;
-			path = antescofo_converter;
+			path = zlib;
 			sourceTree = SOURCE_ROOT;
 		};
 		0577FCAA1AFE7DA500D816FF /* Events */ = {
@@ -536,9 +536,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/newOutputFile",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -568,7 +571,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp build_log.txt out/\nIMPORTER_VERSION=$(/usr/libexec/PlistBuddy -c \"Print :ImporterVersion\" version.plist)\ncd out/\nzip -y -r -X archive/${TARGET_NAME}_${IMPORTER_VERSION}.zip mac/ linux/ build_log.txt";
+			shellScript = "cp build_log.txt out/\nIMPORTER_VERSION=$(/usr/libexec/PlistBuddy -c \"Print :ImporterVersion\" version.plist)\ncd out/\nzip -y -r -X archive/${TARGET_NAME}_${IMPORTER_VERSION}.zip mac/ linux/ build_log.txt\n";
 		};
 		05A27B751BB4A5CD00CC0DE1 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -578,6 +581,7 @@
 			inputPaths = (
 			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/newOutputFile",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -709,16 +713,15 @@
 		05681AFB1B11B072009E9A48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUGGING_SYMBOLS = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				OTHER_CFLAGS = "";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -727,9 +730,7 @@
 		05681AFC1B11B072009E9A48 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				OTHER_CFLAGS = "";
+				DEAD_CODE_STRIPPING = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -740,7 +741,6 @@
 			buildSettings = {
 				DEAD_CODE_STRIPPING = YES;
 				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -753,7 +753,6 @@
 					"$(PROJECT_DIR)/zlib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "x86_64 i386";
 			};
 			name = Debug;
 		};
@@ -762,7 +761,6 @@
 			buildSettings = {
 				DEAD_CODE_STRIPPING = YES;
 				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -771,7 +769,6 @@
 					"$(PROJECT_DIR)/zlib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "x86_64 i386";
 			};
 			name = Release;
 		};
@@ -798,7 +795,6 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -821,7 +817,6 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				INFOPLIST_FILE = AntescofoConverterApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -835,7 +830,6 @@
 		05EE0B351AFE083A00DD86D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -858,7 +852,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -885,15 +879,15 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-Wno-deprecated-non-prototype";
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				SDKROOT = macosx;
-				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
 		05EE0B361AFE083A00DD86D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -916,7 +910,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -935,8 +929,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "-Wno-deprecated-non-prototype";
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				SDKROOT = macosx;
-				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
@@ -946,13 +941,11 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				DEAD_CODE_STRIPPING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/zlib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -962,14 +955,12 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				DEAD_CODE_STRIPPING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/zlib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
