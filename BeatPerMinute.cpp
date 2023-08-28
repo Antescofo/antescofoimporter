@@ -71,7 +71,7 @@ void BeatPerMinute::serialize( std::ostringstream& stream )
     else
     {
         char buffer [12];
-        sprintf( buffer, "%.2f", bpm_ );
+        snprintf( buffer, sizeof(buffer), "%.2f", bpm_ );
         stream << "BPM " << buffer;
     }
     if ( measure_ > 1 && generated_ )

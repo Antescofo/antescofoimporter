@@ -52,9 +52,9 @@ void Measure::serialize( std::ostringstream& stream )
     char buffer [32];
     float duration = accumBeats_;///metricFactor_;
     if ( fabs( round(duration) - duration ) < 0.05 )
-        sprintf(buffer, "%ld", (long) duration );
+        snprintf(buffer, sizeof(buffer), "%ld", (long) duration );
     else
-        sprintf(buffer, "%5.1f", duration );
+        snprintf(buffer, sizeof(buffer), "%5.1f", duration );
     stream << std::endl;
     bool isPickup = ceilf( measure() ) != measure();
     if ( isPickup )
