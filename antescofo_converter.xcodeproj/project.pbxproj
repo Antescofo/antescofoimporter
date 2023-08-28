@@ -879,8 +879,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = "-Wno-deprecated-non-prototype";
-				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -929,8 +927,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_CFLAGS = "-Wno-deprecated-non-prototype";
-				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				SDKROOT = macosx;
 			};
 			name = Release;
