@@ -558,7 +558,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp ${TARGET_BUILD_DIR}/lib${TARGET_NAME}.a out/lib";
+			shellScript = "cp ${TARGET_BUILD_DIR}/lib${TARGET_NAME}.a out/lib\n";
 		};
 		05A27B741BB4A4C300CC0DE1 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -878,7 +878,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-Wno-deprecated-non-prototype";
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				SDKROOT = macosx;

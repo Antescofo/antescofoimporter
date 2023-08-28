@@ -18,7 +18,7 @@
 
 CC=clang
 
-CFLAGS=-O3 -DNO_FSEEKO -DNO_snprintf -DHAS_sprintf_void -DNO_VIZ -arch i386 -arch x86_64
+CFLAGS=-O3 -DNO_FSEEKO -DNO_snprintf -DHAS_sprintf_void -DNO_VIZ -arch i386 -arch x86_64 -arch arm64
 
 SFLAGS=-O3 -fPIC -DNO_FSEEKO -DNO_snprintf -DHAS_sprintf_void -DNO_VIZ
 LDFLAGS= -L. libz.a
