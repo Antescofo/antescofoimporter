@@ -1810,6 +1810,20 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
                     currentTrillVoice_ = 0;
             }
         }
+        else {
+            if (ornaments) {
+                // ornaments can turn off on grace:
+                TiXmlNode* wavy = ornaments->FirstChildElement( "wavy-line" );
+                if (wavy) {
+                    string type = wavy->ToElement()->Attribute( "type" );
+                    //wavyStart = ( type == "start" /*|| type == "continue"*/ );
+                    bool wavyStop = ( type == "stop" );
+                    if (wavyStop) {
+                        currentTrillVoice_ = 0;
+                    }
+                }
+            }
+        }
     }
     // Start: Workaround for Finale MusicXML export bug.
     // For half note tremolos, Finale usually does not export the "tremolo" attribute.
