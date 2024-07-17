@@ -33,6 +33,9 @@ Developped by Robert Piéchaud
      
 * * Build log * *
 
+* * * v. 0.3.4 ~ Jully 17th 2024 * * *
+- Stop wavy-line also on grace notes
+
 * * * v. 0.3.3 ~ Avr. 20 2023 * * *
 - fixed multi-voice tremolos.
 - fixed serialization of invalid trills.
