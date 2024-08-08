@@ -1,0 +1,2686 @@
+; Antescofo score generated using native importer version 0.3.4
+; Original file: score.xml
+; exported from Finale v26.3 for Mac
+; MusicXML version 3.1
+; Credits: www.antescofo.com
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 3/8
+
+BPM 114
+NOTE 0 3/2
+
+; ----------- measure 2 --- beat   1.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 3 --- beat 3 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 4 --- beat   4.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 5 --- beat 6 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 6 --- beat   7.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 7 --- beat 9 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 8 --- beat  10.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 9 --- beat 12 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 10 --- beat  13.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 11 --- beat 15 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 12 --- beat  16.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 13 --- beat 18 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 14 --- beat  19.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 15 --- beat 21 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 16 --- beat  22.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 17 --- beat 24 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 18 --- beat  25.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 19 --- beat 27 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 20 --- beat  28.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 21 --- beat 30 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 22 --- beat  31.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 23 --- beat 33 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 24 --- beat  34.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 25 --- beat 36 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 26 --- beat  37.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 27 --- beat 39 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 28 --- beat  40.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 29 --- beat 42 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 30 --- beat  43.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 31 --- beat 45 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 32 --- beat  46.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 33 --- beat 48 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 34 --- beat  49.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 35 --- beat 51 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 36 --- beat  52.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 37 --- beat 54 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 38 --- beat  55.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 39 --- beat 57 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 40 --- beat  58.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 41 --- beat 60 --- time signature 3/8
+
+NOTE D5 3/2 measure41
+
+; ----------- measure 42 --- beat  61.5 --- time signature 3/8
+
+NOTE -D5 1/2 measure42
+NOTE G5 1/2
+NOTE B5 1/2
+
+; ----------- measure 43 --- beat 63 --- time signature 3/8
+
+NOTE A5 1/2 measure43
+NOTE G5 1/2
+NOTE G5 1/2 @staccato
+
+; ----------- measure 44 --- beat  64.5 --- time signature 3/8
+
+TRILL (G5 A5) 1/2 measure44
+NOTE 0 1
+
+; ----------- measure 45 --- beat 66 --- time signature 3/8
+
+NOTE E5 3/2 measure45
+
+; ----------- measure 46 --- beat  67.5 --- time signature 3/8
+
+NOTE -E5 1/2 measure46
+NOTE G5 1/2
+NOTE E5 1/2
+
+; ----------- measure 47 --- beat 69 --- time signature 3/8
+
+NOTE C#5 1/2 measure47
+NOTE D5 1/2
+NOTE D5 1/2 @staccato
+
+; ----------- measure 48 --- beat  70.5 --- time signature 3/8
+
+TRILL (D5 E5) 1/2 measure48
+NOTE 0 1
+
+; ----------- measure 49 --- beat 72 --- time signature 3/8
+
+NOTE D5 1/2 measure49
+NOTE A4 1/2
+NOTE 0 1/2
+
+; ----------- measure 50 --- beat  73.5 --- time signature 3/8
+
+NOTE D5 1/2 measure50
+NOTE B4 1/2
+NOTE 0 1/2
+
+; ----------- measure 51 --- beat 75 --- time signature 3/8
+
+NOTE D5 1/2 measure51
+NOTE C5 1/2
+NOTE C5 1/2 @staccato
+
+; ----------- measure 52 --- beat  76.5 --- time signature 3/8
+
+TRILL (F#5 G5) 1 measure52
+NOTE E5 1/4
+NOTE F#5 1/4
+
+; ----------- measure 53 --- beat 78 --- time signature 3/8
+
+NOTE G5 1/4 measure53
+NOTE A5 1/4
+NOTE B5 1/4
+NOTE G5 1/4
+NOTE D5 1/2 @staccato
+
+; ----------- measure 54 --- beat  79.5 --- time signature 3/8
+
+NOTE E5 1/4 measure54
+NOTE F#5 1/4
+NOTE G5 1/4
+NOTE E5 1/4
+NOTE C5 1/2 @staccato
+
+; ----------- measure 55 --- beat 81 --- time signature 3/8
+
+NOTE B4 3/2 measure55
+
+; ----------- measure 56 --- beat  82.5 --- time signature 3/8
+
+NOTE A4 1/2 measure56
+NOTE B4 1/2 @staccato
+NOTE C5 1/2 @staccato
+
+; ----------- measure 57 --- beat 84 --- time signature 3/8
+
+NOTE C#5 1/2 measure57
+NOTE D5 1
+
+; ----------- measure 58 --- beat  85.5 --- time signature 3/8
+
+NOTE -D5 1/2 measure58
+NOTE G5 1/2
+NOTE B5 1/2
+
+; ----------- measure 59 --- beat 87 --- time signature 3/8
+
+NOTE A5 1/2 measure59
+NOTE G5 1/2
+NOTE G5 1/2 @staccato
+
+; ----------- measure 60 --- beat  88.5 --- time signature 3/8
+
+TRILL (G5 A5) 1/2 measure60
+NOTE 0 1
+
+; ----------- measure 61 --- beat 90 --- time signature 3/8
+
+NOTE E5 3/2 measure61
+
+; ----------- measure 62 --- beat  91.5 --- time signature 3/8
+
+NOTE -E5 1/2 measure62
+NOTE G5 1/2
+NOTE E5 1/2
+
+; ----------- measure 63 --- beat 93 --- time signature 3/8
+
+NOTE C#5 1/2 measure63
+NOTE D5 1/2
+NOTE D5 1/2 @staccato
+
+; ----------- measure 64 --- beat  94.5 --- time signature 3/8
+
+TRILL (D5 E5) 1/2 measure64
+NOTE 0 1
+
+; ----------- measure 65 --- beat 96 --- time signature 3/8
+
+NOTE G5 1/2 measure65
+NOTE E5 1/2
+NOTE 0 1/2
+
+; ----------- measure 66 --- beat  97.5 --- time signature 3/8
+
+NOTE D5 1/2 measure66
+NOTE C#5 1/2
+NOTE 0 1/2
+
+; ----------- measure 67 --- beat 99 --- time signature 3/8
+
+NOTE A5 1/2 measure67
+NOTE F#5 1/2
+NOTE 0 1/2
+
+; ----------- measure 68 --- beat 100.5 --- time signature 3/8
+
+NOTE E5 1/2 measure68
+NOTE D5 1/2
+NOTE 0 1/2
+
+; ----------- measure 69 --- beat 102 --- time signature 3/8
+
+NOTE B4 1/2 measure69
+NOTE B5 1/2
+NOTE A5 1/2
+
+; ----------- measure 70 --- beat 103.5 --- time signature 3/8
+
+NOTE G5 1/2 measure70
+NOTE F#5 1/2
+NOTE E5 1/2
+
+; ----------- measure 71 --- beat 105 --- time signature 3/8
+
+NOTE D5 1 measure71
+NOTE C#5 1/2
+
+; ----------- measure 72 --- beat 106.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 73 --- beat 108 --- time signature 3/8
+
+NOTE F#5 1/4 @staccato measure73
+NOTE A5 1/4
+NOTE B5 1/4
+NOTE A5 1/4
+NOTE B5 1/4
+NOTE A5 1/4
+
+; ----------- measure 74 --- beat 109.5 --- time signature 3/8
+
+NOTE D6 1/4 @staccato measure74
+NOTE A5 1/4
+NOTE B5 1/4
+NOTE A5 1/4
+NOTE B5 1/4
+NOTE A5 1/4
+
+; ----------- measure 75 --- beat 111 --- time signature 3/8
+
+NOTE E6 1/4 @staccato measure75
+NOTE A5 1/4
+NOTE B5 1/4
+NOTE A5 1/4
+NOTE B5 1/4
+NOTE A5 1/4
+
+; ----------- measure 76 --- beat 112.5 --- time signature 3/8
+
+NOTE E5 1/4 measure76
+NOTE A5 1/4
+NOTE F#5 1/4
+NOTE A5 1/4
+NOTE G5 1/4
+NOTE A5 1/4
+
+; ----------- measure 77 --- beat 114 --- time signature 3/8
+
+NOTE F#5 1/4 @staccato measure77
+NOTE A5 1/4 @staccato
+NOTE B5 1/4 @staccato
+NOTE A5 1/4 @staccato
+NOTE B5 1/4 @staccato
+NOTE A5 1/4 @staccato
+
+; ----------- measure 78 --- beat 115.5 --- time signature 3/8
+
+NOTE D6 1/4 @staccato measure78
+NOTE A5 1/4 @staccato
+NOTE B5 1/4 @staccato
+NOTE A5 1/4 @staccato
+NOTE B5 1/4 @staccato
+NOTE A5 1/4 @staccato
+
+; ----------- measure 79 --- beat 117 --- time signature 3/8
+
+NOTE E6 1/4 @staccato measure79
+NOTE A5 1/4 @staccato
+NOTE B5 1/4 @staccato
+NOTE A5 1/4 @staccato
+NOTE B5 1/4 @staccato
+NOTE A5 1/4 @staccato
+
+; ----------- measure 80 --- beat 118.5 --- time signature 3/8
+
+NOTE E5 1/4 @staccato measure80
+NOTE A5 1/4 @staccato
+NOTE F#5 1/4 @staccato
+NOTE A5 1/4 @staccato
+NOTE G5 1/4 @staccato
+NOTE A5 1/4 @staccato
+
+; ----------- measure 81 --- beat 120 --- time signature 3/8
+
+NOTE F#5 1/4 measure81
+NOTE A5 1/4
+NOTE D6 1/4
+NOTE F#5 1/4
+NOTE E5 1/4
+NOTE C#6 1/4
+
+; ----------- measure 82 --- beat 121.5 --- time signature 3/8
+
+NOTE D5 1/4 measure82
+NOTE B5 1/4
+NOTE C#5 1/4
+NOTE A5 1/4
+NOTE B4 1/4
+NOTE G5 1/4
+
+; ----------- measure 83 --- beat 123 --- time signature 3/8
+
+NOTE A4 1/4 measure83
+NOTE F#5 1/4
+NOTE G4 1/4
+NOTE E5 1/4
+NOTE F#4 1/4
+NOTE D5 1/4
+
+; ----------- measure 84 --- beat 124.5 --- time signature 3/8
+
+NOTE E4 1/4 measure84
+NOTE C#5 1/4
+NOTE A3 1/4
+NOTE G4 1/4
+NOTE D4 1/4
+NOTE F#4 1/4
+
+; ----------- measure 85 --- beat 126 --- time signature 3/8
+
+NOTE G3 1/4 measure85
+NOTE B4 1/4
+NOTE A#4 1/4
+NOTE B4 1/4
+NOTE A#4 1/4
+NOTE B4 1/4
+
+; ----------- measure 86 --- beat 127.5 --- time signature 3/8
+
+NOTE 0 1/4 measure86
+NOTE D6 1/4
+NOTE C#6 1/4
+NOTE D6 1/4
+NOTE C#6 1/4
+NOTE D6 1/4
+
+; ----------- measure 87 --- beat 129 --- time signature 3/8
+
+NOTE A4 3/2 measure87
+
+; ----------- measure 88 --- beat 130.5 --- time signature 3/8
+
+TRILL (E5 F#5) 3/2 measure88
+NOTE D5 0
+NOTE E5 0
+
+; ----------- measure 89 --- beat 132 --- time signature 3/8
+
+NOTE F#5 1/4 measure89
+NOTE A5 1/4
+NOTE D6 1/4 @staccato
+NOTE F#5 1/4 @staccato
+NOTE E5 1/4 @staccato
+NOTE C#6 1/4 @staccato
+
+; ----------- measure 90 --- beat 133.5 --- time signature 3/8
+
+NOTE D5 1/4 @staccato measure90
+NOTE B5 1/4 @staccato
+NOTE C#5 1/4 @staccato
+NOTE A5 1/4 @staccato
+NOTE B4 1/4 @staccato
+NOTE G5 1/4 @staccato
+
+; ----------- measure 91 --- beat 135 --- time signature 3/8
+
+NOTE A4 1/4 @staccato measure91
+NOTE F#5 1/4 @staccato
+NOTE G4 1/4 @staccato
+NOTE E5 1/4 @staccato
+NOTE F#4 1/4 @staccato
+NOTE D5 1/4 @staccato
+
+; ----------- measure 92 --- beat 136.5 --- time signature 3/8
+
+NOTE E4 1/4 @staccato measure92
+NOTE C#5 1/4 @staccato
+NOTE A3 1/4 @staccato
+NOTE G4 1/4 @staccato
+NOTE D4 1/4 @staccato
+NOTE F#4 1/4 @staccato
+
+; ----------- measure 93 --- beat 138 --- time signature 3/8
+
+NOTE G3 1/4 measure93
+NOTE B4 1/4
+NOTE A#4 1/4
+NOTE B4 1/4
+NOTE A#4 1/4
+NOTE B4 1/4
+
+; ----------- measure 94 --- beat 139.5 --- time signature 3/8
+
+NOTE 0 1/4 measure94
+NOTE D6 1/4
+NOTE C#6 1/4
+NOTE D6 1/4
+NOTE C#6 1/4
+NOTE D6 1/4
+
+; ----------- measure 95 --- beat 141 --- time signature 3/8
+
+NOTE A4 3/2 measure95
+
+; ----------- measure 96 --- beat 142.5 --- time signature 3/8
+
+TRILL (E5 F#5) 3/2 measure96
+
+; ----------- measure 97 --- beat 144 --- time signature 3/8
+
+NOTE D5 1/2 measure97
+NOTE E5 1/2 @staccato
+NOTE F#5 1/2 @staccato
+
+; ----------- measure 98 --- beat 145.5 --- time signature 3/8
+
+NOTE G5 1/2 @staccato measure98
+NOTE A5 1/2 @staccato
+NOTE B5 1/2 @staccato
+
+; ----------- measure 99 --- beat 147 --- time signature 3/8
+
+NOTE A5 3/2 measure99
+
+; ----------- measure 100 --- beat 148.5 --- time signature 3/8
+
+NOTE -A5 1/2 measure100
+NOTE G5 1/2
+NOTE E5 1/2
+
+; ----------- measure 101 --- beat 150 --- time signature 3/8
+
+NOTE D5 1/2 @staccato measure101
+NOTE E5 1/2 @staccato
+NOTE F#5 1/2 @staccato
+
+; ----------- measure 102 --- beat 151.5 --- time signature 3/8
+
+NOTE G5 1/2 @staccato measure102
+NOTE A5 1/2 @staccato
+NOTE B5 1/2 @staccato
+
+; ----------- measure 103 --- beat 153 --- time signature 3/8
+
+NOTE A5 3/2 measure103
+
+; ----------- measure 104 --- beat 154.5 --- time signature 3/8
+
+NOTE -A5 1/2 measure104
+NOTE G5 1/2
+NOTE E5 1/2
+
+; ----------- measure 105 --- beat 156 --- time signature 3/8
+
+NOTE D5 1/2 @staccato measure105
+NOTE F#5 1/2
+NOTE D5 1/2
+
+; ----------- measure 106 --- beat 157.5 --- time signature 3/8
+
+NOTE A5 1/2 @staccato measure106
+NOTE 0 1
+
+; ----------- measure 107 --- beat 159 --- time signature 3/8
+
+NOTE 0 1/2 measure107
+NOTE F#5 1/2
+NOTE D5 1/2
+
+; ----------- measure 108 --- beat 160.5 --- time signature 3/8
+
+NOTE A5 1/2 @staccato measure108
+NOTE 0 1
+
+; ----------- measure 109 --- beat 162 --- time signature 3/8
+
+NOTE 0 1/2 measure109
+NOTE A5 1/2 @staccato
+NOTE A5 1/2 @staccato
+
+; ----------- measure 110 --- beat 163.5 --- time signature 3/8
+
+NOTE A5 1/2 @staccato measure110
+NOTE A5 1/2 @staccato
+NOTE A5 1/2 @staccato
+
+; ----------- measure 111 --- beat 165 --- time signature 3/8
+
+NOTE C#6 3/2 measure111
+
+; ----------- measure 112 --- beat 166.5 --- time signature 3/8
+
+NOTE D6 1/2 measure112
+NOTE 0 1
+
+; ----------- measure 113 --- beat 168 --- time signature 3/8
+
+NOTE C#5 3/2 measure113
+
+; ----------- measure 114 --- beat 169.5 --- time signature 3/8
+
+NOTE D5 1/2 measure114
+NOTE 0 1
+
+; ----------- measure 115 --- beat 171 --- time signature 3/8
+
+NOTE C#4 3/2 measure115
+
+; ----------- measure 116 --- beat 172.5 --- time signature 3/8
+
+NOTE D4 1/2 measure116
+NOTE 0 1
+
+; ----------- measure 117 --- beat 174 --- time signature 3/8
+
+NOTE 0 1/2 measure117
+NOTE C#4 1/2
+NOTE D4 1/2
+
+; ----------- measure 118 --- beat 175.5 --- time signature 3/8
+
+NOTE F#4 1/2 measure118
+NOTE 0 1
+
+; ----------- measure 119 --- beat 177 --- time signature 3/8
+
+NOTE 0 1/2 measure119
+NOTE C#4 1/2
+NOTE D4 1/2
+
+; ----------- measure 120 --- beat 178.5 --- time signature 3/8
+
+NOTE A4 1/2 measure120
+NOTE 0 1
+
+; ----------- measure 121 --- beat 180 --- time signature 3/8
+
+NOTE 0 1/2 measure121
+NOTE C#4 1/2
+NOTE D4 1/2
+
+; ----------- measure 122 --- beat 181.5 --- time signature 3/8
+
+NOTE E4 1/2 measure122
+NOTE F#4 1/2
+NOTE G4 1/2
+
+; ----------- measure 123 --- beat 183 --- time signature 3/8
+
+NOTE G#4 1/2 measure123
+NOTE A4 1/2
+NOTE Bb4 1/2
+
+; ----------- measure 124 --- beat 184.5 --- time signature 3/8
+
+NOTE B4 1/2 measure124
+NOTE C5 1/2
+NOTE C#5 1/2
+
+; ----------- measure 125 --- beat 186 --- time signature 3/8
+
+NOTE D4 0 measure125
+NOTE D5 1
+NOTE C5 1/4
+NOTE A4 1/4
+
+; ----------- measure 126 --- beat 187.5 --- time signature 3/8
+
+NOTE A4 0 measure126
+NOTE G4 1/2 @staccato
+NOTE G4 1/2 @staccato
+NOTE G4 1/2 @staccato
+
+; ----------- measure 127 --- beat 189 --- time signature 3/8
+
+NOTE E4 0 measure127
+NOTE E5 1
+NOTE C5 1/4
+NOTE A4 1/4
+
+; ----------- measure 128 --- beat 190.5 --- time signature 3/8
+
+NOTE G4 0 measure128
+NOTE F#4 1/2 @staccato
+NOTE F#4 1/2 @staccato
+NOTE F#4 1/2 @staccato
+
+; ----------- measure 129 --- beat 192 --- time signature 3/8
+
+NOTE G4 1/2 measure129
+NOTE D4 1/2
+NOTE B4 1/2 @staccato
+
+; ----------- measure 130 --- beat 193.5 --- time signature 3/8
+
+NOTE A4 1/2 measure130
+NOTE D4 1/2
+NOTE C5 1/2 @staccato
+
+; ----------- measure 131 --- beat 195 --- time signature 3/8
+
+NOTE B4 1/2 measure131
+NOTE D4 1/2
+NOTE D5 1/2 @staccato
+
+; ----------- measure 132 --- beat 196.5 --- time signature 3/8
+
+NOTE B4 1 measure132
+NOTE A4 1/2
+
+; ----------- measure 133 --- beat 198 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 134 --- beat 199.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 135 --- beat 201 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 136 --- beat 202.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 137 --- beat 204 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 138 --- beat 205.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 139 --- beat 207 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 140 --- beat 208.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 141 --- beat 210 --- time signature 3/8
+
+NOTE B4 3/2 measure141
+
+; ----------- measure 142 --- beat 211.5 --- time signature 3/8
+
+NOTE -B4 1/2 measure142
+NOTE E5 1/2
+NOTE G5 1/2
+
+; ----------- measure 143 --- beat 213 --- time signature 3/8
+
+NOTE G5 1/2 measure143
+NOTE F#5 1/2
+NOTE F#5 1/2 @staccato
+
+; ----------- measure 144 --- beat 214.5 --- time signature 3/8
+
+TRILL (F#5 G5) 1/2 measure144
+NOTE 0 1
+
+; ----------- measure 145 --- beat 216 --- time signature 3/8
+
+NOTE F#5 3/2 measure145
+
+; ----------- measure 146 --- beat 217.5 --- time signature 3/8
+
+NOTE -F#5 1/2 measure146
+NOTE B5 1/2
+NOTE A5 1/2
+
+; ----------- measure 147 --- beat 219 --- time signature 3/8
+
+NOTE F#5 1/2 measure147
+NOTE G5 1/2
+NOTE G5 1/2 @staccato
+
+; ----------- measure 148 --- beat 220.5 --- time signature 3/8
+
+TRILL (G5 A5) 1/2 measure148
+NOTE 0 1
+
+; ----------- measure 149 --- beat 222 --- time signature 3/8
+
+TRILL (G5 A5) 3/4 measure149
+NOTE F#5 1/4 @staccato
+NOTE G5 1/2 @staccato
+
+; ----------- measure 150 --- beat 223.5 --- time signature 3/8
+
+NOTE G5 1 measure150
+NOTE G5 1/2
+
+; ----------- measure 151 --- beat 225 --- time signature 3/8
+
+NOTE G5 3/2 measure151
+
+; ----------- measure 152 --- beat 226.5 --- time signature 3/8
+
+NOTE C6 1/2 measure152
+NOTE 0 1
+
+; ----------- measure 153 --- beat 228 --- time signature 3/8
+
+TRILL (G5 A5) 3/4 measure153
+NOTE F#5 1/4 @staccato
+NOTE E5 1/2 @staccato
+
+; ----------- measure 154 --- beat 229.5 --- time signature 3/8
+
+NOTE E5 1 measure154
+NOTE E5 1/2
+
+; ----------- measure 155 --- beat 231 --- time signature 3/8
+
+NOTE A#5 3/2 measure155
+
+; ----------- measure 156 --- beat 232.5 --- time signature 3/8
+
+NOTE B5 1/2 measure156
+NOTE 0 1
+
+; ----------- measure 157 --- beat 234 --- time signature 3/8
+
+NOTE A#3 3/2 measure157
+
+; ----------- measure 158 --- beat 235.5 --- time signature 3/8
+
+NOTE B3 1/2 measure158
+NOTE 0 1
+
+; ----------- measure 159 --- beat 237 --- time signature 3/8
+
+NOTE B4 1/4 @staccato measure159
+NOTE B5 1/4
+NOTE A#5 1/4
+NOTE B5 1/4
+NOTE A#5 1/4
+NOTE B5 1/4
+
+; ----------- measure 160 --- beat 238.5 --- time signature 3/8
+
+NOTE B4 1/4 @staccato measure160
+NOTE A5 1/4
+NOTE G#5 1/4
+NOTE A5 1/4
+NOTE G#5 1/4
+NOTE A5 1/4
+
+; ----------- measure 161 --- beat 240 --- time signature 3/8
+
+NOTE G5 1/4 measure161
+NOTE B5 1/4
+NOTE A5 1/4
+NOTE G5 1/4
+NOTE F#5 1/4
+NOTE E5 1/4
+
+; ----------- measure 162 --- beat 241.5 --- time signature 3/8
+
+NOTE D#5 1/4 measure162
+NOTE C5 1/4
+NOTE B4 1/4
+NOTE A4 1/4
+NOTE G4 1/4
+NOTE F#4 1/4
+
+; ----------- measure 163 --- beat 243 --- time signature 3/8
+
+NOTE G4 1/4 measure163
+NOTE B4 1/4
+NOTE A4 1/4
+NOTE G4 1/4
+NOTE F#4 1/4
+NOTE E4 1/4
+
+; ----------- measure 164 --- beat 244.5 --- time signature 3/8
+
+NOTE C5 1/4 measure164
+NOTE B4 1/4
+NOTE A4 1/4
+NOTE G4 1/4
+NOTE F#4 1/4
+NOTE E4 1/4
+
+; ----------- measure 165 --- beat 246 --- time signature 3/8
+
+NOTE D#4 1/4 measure165
+NOTE E4 1/4
+NOTE F#4 1/4
+NOTE G4 1/4
+NOTE F#4 1/4
+NOTE G4 1/4
+
+; ----------- measure 166 --- beat 247.5 --- time signature 3/8
+
+NOTE F#4 1/2 measure166
+NOTE 0 1
+
+; ----------- measure 167 --- beat 249 --- time signature 3/8
+
+NOTE B4 1/4 @staccato measure167
+NOTE B5 1/4 @staccato
+NOTE A#5 1/4 @staccato
+NOTE B5 1/4 @staccato
+NOTE A#5 1/4 @staccato
+NOTE B5 1/4 @staccato
+
+; ----------- measure 168 --- beat 250.5 --- time signature 3/8
+
+NOTE B4 1/4 @staccato measure168
+NOTE A5 1/4 @staccato
+NOTE G#5 1/4 @staccato
+NOTE A5 1/4 @staccato
+NOTE G#5 1/4 @staccato
+NOTE A5 1/4 @staccato
+
+; ----------- measure 169 --- beat 252 --- time signature 3/8
+
+NOTE G5 1/4 @staccato measure169
+NOTE B5 1/4 @staccato
+NOTE A5 1/4 @staccato
+NOTE G5 1/4 @staccato
+NOTE F#5 1/4 @staccato
+NOTE E5 1/4 @staccato
+
+; ----------- measure 170 --- beat 253.5 --- time signature 3/8
+
+NOTE D#5 1/4 @staccato measure170
+NOTE C5 1/4 @staccato
+NOTE B4 1/4 @staccato
+NOTE A4 1/4 @staccato
+NOTE G4 1/4 @staccato
+NOTE F#4 1/4 @staccato
+
+; ----------- measure 171 --- beat 255 --- time signature 3/8
+
+NOTE G4 1/4 @staccato measure171
+NOTE B4 1/4 @staccato
+NOTE A4 1/4 @staccato
+NOTE G4 1/4 @staccato
+NOTE F#4 1/4 @staccato
+NOTE E4 1/4 @staccato
+
+; ----------- measure 172 --- beat 256.5 --- time signature 3/8
+
+NOTE C5 1/4 @staccato measure172
+NOTE B4 1/4 @staccato
+NOTE A4 1/4 @staccato
+NOTE G4 1/4 @staccato
+NOTE F#4 1/4 @staccato
+NOTE E4 1/4 @staccato
+
+; ----------- measure 173 --- beat 258 --- time signature 3/8
+
+NOTE D#4 1/2 @staccato measure173
+NOTE F#4 1/2
+NOTE G4 1/2
+
+; ----------- measure 174 --- beat 259.5 --- time signature 3/8
+
+NOTE G#4 1/2 measure174
+NOTE A4 1/2
+NOTE A#4 1/2
+
+; ----------- measure 175 --- beat 261 --- time signature 3/8
+
+NOTE B4 3/2 measure175
+
+; ----------- measure 176 --- beat 262.5 --- time signature 3/8
+
+NOTE -B4 1/2 measure176
+NOTE E5 1/2
+NOTE G5 1/2
+
+; ----------- measure 177 --- beat 264 --- time signature 3/8
+
+NOTE G5 1/2 measure177
+NOTE F#5 1/2
+NOTE F#5 1/2 @staccato
+
+; ----------- measure 178 --- beat 265.5 --- time signature 3/8
+
+TRILL (F#5 G5) 1/2 measure178
+NOTE 0 1
+
+; ----------- measure 179 --- beat 267 --- time signature 3/8
+
+NOTE F#5 3/2 measure179
+
+; ----------- measure 180 --- beat 268.5 --- time signature 3/8
+
+NOTE -F#5 1/2 measure180
+NOTE B5 1/2
+NOTE A5 1/2
+
+; ----------- measure 181 --- beat 270 --- time signature 3/8
+
+NOTE F#5 1/2 measure181
+NOTE G5 1/2
+NOTE G5 1/2 @staccato
+
+; ----------- measure 182 --- beat 271.5 --- time signature 3/8
+
+TRILL (G5 A5) 1/2 measure182
+NOTE 0 1
+
+; ----------- measure 183 --- beat 273 --- time signature 3/8
+
+TRILL (F5 F#5) 3/4 measure183
+NOTE E5 1/4 @staccato
+NOTE F5 1/2 @staccato
+
+; ----------- measure 184 --- beat 274.5 --- time signature 3/8
+
+NOTE F5 1 measure184
+NOTE F5 1/2
+
+; ----------- measure 185 --- beat 276 --- time signature 3/8
+
+NOTE F5 3/2 measure185
+
+; ----------- measure 186 --- beat 277.5 --- time signature 3/8
+
+NOTE C6 1/2 measure186
+NOTE 0 1
+
+; ----------- measure 187 --- beat 279 --- time signature 3/8
+
+NOTE E5 3/2 measure187
+
+; ----------- measure 188 --- beat 280.5 --- time signature 3/8
+
+NOTE G5 0 measure188
+NOTE F#5 3/4
+NOTE E5 1/4 @staccato
+NOTE D#5 1/2 @staccato
+
+; ----------- measure 189 --- beat 282 --- time signature 3/8
+
+NOTE D#5 3/2 measure189
+
+; ----------- measure 190 --- beat 283.5 --- time signature 3/8
+
+NOTE E5 1/2 measure190
+NOTE 0 1
+
+; ----------- measure 191 --- beat 285 --- time signature 3/8
+
+NOTE D#4 3/2 measure191
+
+; ----------- measure 192 --- beat 286.5 --- time signature 3/8
+
+NOTE E4 1/2 measure192
+NOTE 0 1
+
+; ----------- measure 193 --- beat 288 --- time signature 3/8
+
+TRILL (F5 F#5) 3/4 measure193
+NOTE E5 1/4 @staccato
+NOTE F5 1/2 @staccato
+
+; ----------- measure 194 --- beat 289.5 --- time signature 3/8
+
+NOTE F5 1 measure194
+NOTE F5 1/2
+
+; ----------- measure 195 --- beat 291 --- time signature 3/8
+
+NOTE F5 3/2 measure195
+
+; ----------- measure 196 --- beat 292.5 --- time signature 3/8
+
+NOTE C6 1/2 measure196
+NOTE 0 1
+
+; ----------- measure 197 --- beat 294 --- time signature 3/8
+
+NOTE F5 3/2 measure197
+
+; ----------- measure 198 --- beat 295.5 --- time signature 3/8
+
+NOTE C6 1/2 measure198
+NOTE 0 1
+
+; ----------- measure 199 --- beat 297 --- time signature 3/8
+
+NOTE E5 3/2 measure199
+
+; ----------- measure 200 --- beat 298.5 --- time signature 3/8
+
+NOTE G5 0 measure200
+NOTE F#5 3/4
+NOTE E5 1/4 @staccato
+NOTE D#5 1/2 @staccato
+
+; ----------- measure 201 --- beat 300 --- time signature 3/8
+
+NOTE E5 1/2 measure201
+NOTE G5 1/2
+NOTE F#5 1/2
+
+; ----------- measure 202 --- beat 301.5 --- time signature 3/8
+
+NOTE G5 1/2 @staccato measure202
+NOTE 0 1
+
+; ----------- measure 203 --- beat 303 --- time signature 3/8
+
+NOTE 0 1/2 measure203
+NOTE F5 1/2
+NOTE E5 1/2
+
+; ----------- measure 204 --- beat 304.5 --- time signature 3/8
+
+NOTE F5 1/2 @staccato measure204
+NOTE 0 1
+
+; ----------- measure 205 --- beat 306 --- time signature 3/8
+
+NOTE 0 1/2 measure205
+NOTE E5 1/2
+NOTE D#5 1/2
+
+; ----------- measure 206 --- beat 307.5 --- time signature 3/8
+
+NOTE E5 1/2 @staccato measure206
+NOTE 0 1
+
+; ----------- measure 207 --- beat 309 --- time signature 3/8
+
+NOTE 0 1/2 measure207
+NOTE D5 1/2
+NOTE C#5 1/2
+
+; ----------- measure 208 --- beat 310.5 --- time signature 3/8
+
+NOTE D5 1/2 @staccato measure208
+NOTE 0 1
+
+; ----------- measure 209 --- beat 312 --- time signature 3/8
+
+NOTE 0 1/2 measure209
+NOTE B4 1/2
+NOTE C5 1/2
+
+; ----------- measure 210 --- beat 313.5 --- time signature 3/8
+
+NOTE 0 1/2 measure210
+NOTE A#4 1/2
+NOTE B4 1/2
+
+; ----------- measure 211 --- beat 315 --- time signature 3/8
+
+NOTE 0 1/2 measure211
+NOTE G#4 1/2
+NOTE A4 1/2
+
+; ----------- measure 212 --- beat 316.5 --- time signature 3/8
+
+NOTE 0 1/2 measure212
+NOTE A4 1/2
+NOTE A#4 1/2
+
+; ----------- measure 213 --- beat 318 --- time signature 3/8
+
+NOTE B4 3/2 measure213
+
+; ----------- measure 214 --- beat 319.5 --- time signature 3/8
+
+NOTE -B4 3/2 measure214
+
+; ----------- measure 215 --- beat 321 --- time signature 3/8
+
+NOTE -B4 3/2 measure215
+
+; ----------- measure 216 --- beat 322.5 --- time signature 3/8
+
+NOTE -B4 3/2 measure216
+
+; ----------- measure 217 --- beat 324 --- time signature 3/8
+
+NOTE -B4 1/2 @fermata measure217
+NOTE A#4 1/2
+NOTE B4 1/2
+
+; ----------- measure X1 --- beat 325.5 --- time signature 3/8
+
+NOTE D#5 1/2 measureX1
+NOTE A#4 1/2
+NOTE B4 1/2
+
+; ----------- measure X2 --- beat 327 --- time signature 3/8
+
+NOTE F#5 1/2 measureX2
+NOTE A#4 1/2
+NOTE B4 1/2
+
+; ----------- measure X3 --- beat 328.5 --- time signature 3/8
+
+NOTE C6 1/4 measureX3
+NOTE B5 1/4
+NOTE A5 1/4
+NOTE F#5 1/4
+NOTE D#5 1/4
+NOTE F#5 1/4
+
+; ----------- measure X4 --- beat 330 --- time signature 3/8
+
+NOTE C5 1/4 measureX4
+NOTE B4 1/4
+NOTE A4 1/4
+NOTE F#4 1/4
+NOTE D#4 1/4
+NOTE F#4 1/4
+
+; ----------- measure X5 --- beat 331.5 --- time signature 3/8
+
+NOTE C4 1/4 measureX5
+NOTE B3 1/4
+NOTE A#3 1/4
+NOTE B3 1/4
+NOTE C#4 1/4
+NOTE D#4 1/4
+
+; ----------- measure X6 --- beat 333 --- time signature 3/8
+
+NOTE E4 1/4 measureX6
+NOTE F#4 1/4
+NOTE G4 1/4
+NOTE G#4 1/4
+NOTE A4 1/4
+NOTE A#4 1/4
+
+; ----------- measure X7 --- beat 334.5 --- time signature 3/8
+
+TRILL (B4 C5) 3/2 measureX7
+
+; ----------- measure X8 --- beat 336 --- time signature 3/8
+
+TRILL (C5 D5) 3/2 measureX8
+
+; ----------- measure X9 --- beat 337.5 --- time signature 3/8
+
+TRILL (C#5 D5) 3/2 measureX9
+
+; ----------- measure X10 --- beat 339 --- time signature 3/8
+
+TRILL (C#5 D5) 1 @fermata measureX10
+TRILL (B4 C5) 1/4
+NOTE C#5 1/4
+
+; ----------- measure 218 --- beat 340.5 --- time signature 3/8
+
+NOTE D4 0 measure218
+BPM 114
+NOTE D5 1
+NOTE C5 1/4
+NOTE A4 1/4
+
+; ----------- measure 219 --- beat 342 --- time signature 3/8
+
+NOTE A4 0 measure219
+NOTE G4 1/2 @staccato
+NOTE G4 1/2 @staccato
+NOTE G4 1/2 @staccato
+
+; ----------- measure 220 --- beat 343.5 --- time signature 3/8
+
+NOTE E4 0 measure220
+NOTE E5 1
+NOTE C5 1/4
+NOTE A4 1/4
+
+; ----------- measure 221 --- beat 345 --- time signature 3/8
+
+NOTE G4 0 measure221
+NOTE F#4 1/2 @staccato
+NOTE F#4 1/2 @staccato
+NOTE F#4 1/2 @staccato
+
+; ----------- measure 222 --- beat 346.5 --- time signature 3/8
+
+NOTE G4 1/2 measure222
+NOTE D4 1/2
+NOTE B4 1/2 @staccato
+
+; ----------- measure 223 --- beat 348 --- time signature 3/8
+
+NOTE A4 1/2 measure223
+NOTE D4 1/2
+NOTE C5 1/2 @staccato
+
+; ----------- measure 224 --- beat 349.5 --- time signature 3/8
+
+NOTE B4 1/2 measure224
+NOTE D4 1/2
+NOTE D5 1/2 @staccato
+
+; ----------- measure 225 --- beat 351 --- time signature 3/8
+
+NOTE B4 1 measure225
+NOTE A4 1/2
+
+; ----------- measure 226 --- beat 352.5 --- time signature 3/8
+
+NOTE C#5 1/4 measure226
+NOTE D5 1/4
+NOTE C#5 1/4
+NOTE D5 1/4
+NOTE C5 1/4
+NOTE A4 1/4
+
+; ----------- measure 227 --- beat 354 --- time signature 3/8
+
+NOTE A4 0 measure227
+NOTE G4 1/2 @staccato
+NOTE G4 1/2 @staccato
+NOTE G4 1/2 @staccato
+
+; ----------- measure 228 --- beat 355.5 --- time signature 3/8
+
+NOTE D#5 1/4 measure228
+NOTE E5 1/4
+NOTE D#5 1/4
+NOTE E5 1/4
+NOTE C5 1/4
+NOTE A4 1/4
+
+; ----------- measure 229 --- beat 357 --- time signature 3/8
+
+NOTE G4 0 measure229
+NOTE F#4 1/2 @staccato
+NOTE F#4 1/2 @staccato
+NOTE F#4 1/2 @staccato
+
+; ----------- measure 230 --- beat 358.5 --- time signature 3/8
+
+NOTE G4 1/2 measure230
+NOTE B4 1/2
+NOTE D5 1/2 @staccato
+
+; ----------- measure 231 --- beat 360 --- time signature 3/8
+
+NOTE E5 1/2 measure231
+NOTE G5 1/2
+NOTE C5 1/2 @staccato
+
+; ----------- measure 232 --- beat 361.5 --- time signature 3/8
+
+NOTE B4 1/2 measure232
+NOTE C5 1/2
+NOTE A4 1/2 @staccato
+
+; ----------- measure 233 --- beat 363 --- time signature 3/8
+
+TRILL (G4 A4) 1/4 measure233
+NOTE F#4 1/4
+NOTE G4 1/4
+NOTE A4 1/4
+NOTE B4 1/4
+NOTE C5 1/4
+
+; ----------- measure 234 --- beat 364.5 --- time signature 3/8
+
+NOTE D5 1/2 @staccato measure234
+NOTE 0 1
+
+; ----------- measure 235 --- beat 366 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 236 --- beat 367.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 237 --- beat 369 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 238 --- beat 370.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 239 --- beat 372 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 240 --- beat 373.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 241 --- beat 375 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 242 --- beat 376.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 243 --- beat 378 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 244 --- beat 379.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 245 --- beat 381 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 246 --- beat 382.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 247 --- beat 384 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 248 --- beat 385.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 249 --- beat 387 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 250 --- beat 388.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 251 --- beat 390 --- time signature 3/8
+
+NOTE 0 3/2 @fermata
+
+; ----------- measure 252 --- beat 391.5 --- time signature 2/2
+
+BPM 120
+NOTE 0 2 measure252
+NOTE D5 1/2 @staccato
+NOTE 0 1/2
+NOTE D5 1/2 @staccato
+NOTE 0 1/2
+
+; ----------- measure 253 --- beat 395.5 --- time signature 2/2
+
+NOTE Eb5 1/2 @staccato measure253
+NOTE 0 1/2
+NOTE Eb5 1/2 @staccato
+NOTE 0 1/2
+TRILL (C5 D5) 3/2
+TRILL (Bb4 B4) 1/4
+NOTE C5 1/4
+
+; ----------- measure 254 --- beat 399.5 --- time signature 2/2
+
+NOTE D5 2 measure254
+TRILL (Bb4 B4) 3/4
+NOTE A4 1/4
+NOTE Bb4 1/2 @staccato
+NOTE G4 1/2 @staccato
+
+; ----------- measure 255 --- beat 403.5 --- time signature 2/2
+
+NOTE C5 1 measure255
+NOTE Eb5 1/2
+NOTE 0 1/2
+TRILL (A4 A#4) 3/2
+TRILL (G4 A4) 1/4
+NOTE A4 1/4
+
+; ----------- measure 256 --- beat 407.5 --- time signature 2/2
+
+NOTE G4 3/2 measure256
+NOTE Bb4 1/2
+NOTE D5 1/2 @staccato
+NOTE 0 1/2
+NOTE D5 1/2 @staccato
+NOTE 0 1/2
+
+; ----------- measure 257 --- beat 411.5 --- time signature 2/2
+
+NOTE F5 0 measure257
+NOTE Eb5 1/2 @staccato
+NOTE 0 1/2
+NOTE Eb5 1/2 @staccato
+NOTE 0 1/2
+TRILL (C5 D5) 3/2
+TRILL (Bb4 B4) 1/4
+NOTE C5 1/4
+
+; ----------- measure 258 --- beat 415.5 --- time signature 2/2
+
+NOTE D5 2 measure258
+TRILL (Bb4 B4) 3/4
+NOTE A4 1/4
+NOTE Bb4 1/2 @staccato
+NOTE G4 1/2 @staccato
+
+; ----------- measure 259 --- beat 419.5 --- time signature 2/2
+
+NOTE C5 1 measure259
+NOTE Eb5 1/2
+NOTE 0 1/2
+TRILL (A4 A#4) 3/2
+TRILL (G4 A4) 1/4
+NOTE A4 1/4
+
+; ----------- measure 260 --- beat 423.5 --- time signature 2/2
+
+NOTE G4 1 measure260
+NOTE 0 1
+NOTE D5 1/2 @staccato
+NOTE 0 1/2
+NOTE G4 1/2 @staccato
+NOTE 0 1/2
+
+; ----------- measure 261 --- beat 427.5 --- time signature 2/2
+
+NOTE F#4 1 measure261
+NOTE A4 1/2
+NOTE 0 1/2
+NOTE A5 1/2 @staccato
+NOTE 0 1/2
+NOTE D5 1/2 @staccato
+NOTE 0 1/2
+
+; ----------- measure 262 --- beat 431.5 --- time signature 2/2
+
+NOTE G5 1 measure262
+NOTE Bb5 1/2
+NOTE 0 1/2
+NOTE G5 1/2 @staccato
+NOTE 0 1/2
+NOTE C#5 1/2 @staccato
+NOTE 0 1/2
+
+; ----------- measure 263 --- beat 435.5 --- time signature 2/2
+
+NOTE D5 1 measure263
+NOTE F#5 1/2
+NOTE 0 1/2
+NOTE F#5 1
+NOTE A5 1/2
+NOTE 0 1/2
+
+; ----------- measure 264 --- beat 439.5 --- time signature 2/2
+
+NOTE A5 1 measure264
+NOTE D6 1/2
+NOTE 0 3/2
+NOTE D4 1 @staccato
+
+; ----------- measure 265 --- beat 443.5 --- time signature 2/2
+
+BPM 160
+NOTE G4 1 @staccato measure265
+NOTE G4 1 @staccato
+NOTE G4 1
+NOTE A4 1
+
+; ----------- measure 266 --- beat 447.5 --- time signature 2/2
+
+NOTE B4 1 @staccato measure266
+NOTE B4 1 @staccato
+NOTE B4 1
+NOTE G4 1
+
+; ----------- measure 267 --- beat 451.5 --- time signature 2/2
+
+NOTE A4 1 @staccato measure267
+NOTE A4 1 @staccato
+NOTE A4 1
+NOTE F#4 1
+
+; ----------- measure 268 --- beat 455.5 --- time signature 2/2
+
+TRILL (G4 A4) 1/2 measure268
+NOTE F#4 1/2
+NOTE G4 1/2 @staccato
+NOTE A4 1/2 @staccato
+NOTE G4 1
+NOTE 0 1
+
+; ----------- measure 269 --- beat 459.5 --- time signature 2/2
+
+NOTE D6 1/3 measure269
+NOTE B5 1/3
+NOTE G5 1/3
+NOTE D5 1/3
+NOTE G5 1/3
+NOTE B5 1/3
+NOTE D6 1/3
+NOTE B5 1/3
+NOTE D5 1/3
+NOTE C6 1/3
+NOTE A5 1/3
+NOTE D5 1/3
+
+; ----------- measure 270 --- beat 463.5 --- time signature 2/2
+
+NOTE B5 1/3 measure270
+NOTE G5 1/3
+NOTE D5 1/3
+NOTE B4 1/3
+NOTE D5 1/3
+NOTE G5 1/3
+NOTE B5 1/3
+NOTE G5 1/3
+NOTE D5 1/3
+NOTE G5 1/3
+NOTE D5 1/3
+NOTE B4 1/3
+
+; ----------- measure 271 --- beat 467.5 --- time signature 2/2
+
+NOTE A5 1/3 measure271
+NOTE E5 1/3
+NOTE C5 1/3
+NOTE A4 1/3
+NOTE C5 1/3
+NOTE E5 1/3
+NOTE F#5 1/3
+NOTE C6 1/3
+NOTE A5 1/3
+NOTE F#5 1/3
+NOTE D5 1/3
+NOTE C5 1/3
+
+; ----------- measure 272 --- beat 471.5 --- time signature 2/2
+
+NOTE B4 1/3 measure272
+NOTE D5 1/3
+NOTE B4 1/3
+NOTE G5 1/3
+NOTE D5 1/3
+NOTE B4 1/3
+NOTE G4 1
+NOTE 0 1
+
+; ----------- measure 273 --- beat 475.5 --- time signature 2/2
+
+CHORD (D4 D5) 2 measure273
+CHORD (D4 D5) 1/2
+CHORD (-D4 E5) 1/2
+CHORD (-D4 D5) 1/2
+CHORD (-D4 C5) 1/2
+
+; ----------- measure 274 --- beat 479.5 --- time signature 2/2
+
+CHORD (D4 B4) 1 measure274
+CHORD (D4 A4) 1
+CHORD (D4 B4) 1
+CHORD (D4 C5) 1
+
+; ----------- measure 275 --- beat 483.5 --- time signature 2/2
+
+CHORD (D4 D5) 2 measure275
+CHORD (D4 D5) 1/2
+CHORD (-D4 E5) 1/2
+CHORD (-D4 D5) 1/2
+CHORD (-D4 C5) 1/2
+
+; ----------- measure 276 --- beat 487.5 --- time signature 2/2
+
+CHORD (D4 C5) 2 measure276
+CHORD (-D4 B4) 1
+NOTE 0 1
+
+; ----------- measure 277 --- beat 491.5 --- time signature 2/2
+
+NOTE D6 1/3 measure277
+NOTE B5 1/3
+NOTE G5 1/3
+NOTE D5 1/3
+NOTE G5 1/3
+NOTE B5 1/3
+NOTE D6 1/3
+NOTE B5 1/3
+NOTE D5 1/3
+NOTE C6 1/3
+NOTE A5 1/3
+NOTE D5 1/3
+
+; ----------- measure 278 --- beat 495.5 --- time signature 2/2
+
+NOTE B5 1/3 measure278
+NOTE G5 1/3
+NOTE D5 1/3
+NOTE B4 1/3
+NOTE D5 1/3
+NOTE G5 1/3
+NOTE B5 1/3
+NOTE G5 1/3
+NOTE D5 1/3
+NOTE G5 1/3
+NOTE D5 1/3
+NOTE B4 1/3
+
+; ----------- measure 279 --- beat 499.5 --- time signature 2/2
+
+NOTE A5 1/3 measure279
+NOTE E5 1/3
+NOTE C5 1/3
+NOTE A4 1/3
+NOTE C5 1/3
+NOTE E5 1/3
+NOTE F#5 1/3
+NOTE C6 1/3
+NOTE A5 1/3
+NOTE F#5 1/3
+NOTE D5 1/3
+NOTE C5 1/3
+
+; ----------- measure 280 --- beat 503.5 --- time signature 2/2
+
+NOTE B4 1/3 measure280
+NOTE D5 1/3
+NOTE B4 1/3
+NOTE G5 1/3
+NOTE D5 1/3
+NOTE B4 1/3
+NOTE G4 1
+NOTE 0 1
+
+; ----------- measure 281 --- beat 507.5 --- time signature 2/2
+
+CHORD (D4 D5) 2 measure281
+CHORD (D4 D5) 1/2
+CHORD (-D4 E5) 1/2
+CHORD (-D4 D5) 1/2
+CHORD (-D4 C5) 1/2
+
+; ----------- measure 282 --- beat 511.5 --- time signature 2/2
+
+CHORD (D4 B4) 1 measure282
+CHORD (D4 A4) 1
+CHORD (D4 B4) 1
+CHORD (D4 C5) 1
+
+; ----------- measure 283 --- beat 515.5 --- time signature 2/2
+
+CHORD (D4 D5) 2 measure283
+CHORD (D4 D5) 1/2
+CHORD (-D4 E5) 1/2
+CHORD (-D4 D5) 1/2
+CHORD (-D4 C5) 1/2
+
+; ----------- measure 284 --- beat 519.5 --- time signature 2/2
+
+CHORD (D4 C5) 2 measure284
+CHORD (-D4 B4) 1
+NOTE 0 1
+
+; ----------- measure 285 --- beat 523.5 --- time signature 2/2
+
+NOTE D6 1/3 measure285
+NOTE B5 1/3
+NOTE G5 1/3
+NOTE D5 1/3
+NOTE G5 1/3
+NOTE B5 1/3
+NOTE D6 1/3
+NOTE B5 1/3
+NOTE D5 1/3
+NOTE C6 1/3
+NOTE A5 1/3
+NOTE D5 1/3
+
+; ----------- measure 286 --- beat 527.5 --- time signature 2/2
+
+NOTE B5 1/3 measure286
+NOTE G5 1/3
+NOTE D5 1/3
+NOTE B4 1/3
+NOTE D5 1/3
+NOTE G5 1/3
+NOTE B5 1/3
+NOTE G5 1/3
+NOTE D5 1/3
+NOTE G5 1/3
+NOTE D5 1/3
+NOTE B4 1/3
+
+; ----------- measure 287 --- beat 531.5 --- time signature 2/2
+
+NOTE A5 1/3 measure287
+NOTE E5 1/3
+NOTE C5 1/3
+NOTE A4 1/3
+NOTE C5 1/3
+NOTE E5 1/3
+NOTE F#5 1/3
+NOTE C6 1/3
+NOTE A5 1/3
+NOTE F#5 1/3
+NOTE D5 1/3
+NOTE C5 1/3
+
+; ----------- measure 288 --- beat 535.5 --- time signature 2/2
+
+NOTE A4 1/3 measure288
+NOTE F#4 1/3
+NOTE D4 1/3
+NOTE C4 1/3
+NOTE B3 1/3
+NOTE A3 1/3
+NOTE G3 1
+NOTE 0 1
+
+; ----------- measure 289 --- beat 539.5 --- time signature 2/2
+
+NOTE F#4 2 measure289
+NOTE G4 1/2
+NOTE 0 3/2
+
+; ----------- measure 290 --- beat 543.5 --- time signature 2/2
+
+NOTE 0 4 @fermata measure290
+
+; ----------- measure 291 --- beat 547.5 --- time signature 3/8
+
+BPM 114
+NOTE 0 1/2 measure291
+NOTE F#4 1/2
+NOTE G4 1/2
+
+; ----------- measure 292 --- beat 549 --- time signature 3/8
+
+NOTE B4 1/2 measure292
+NOTE 0 1
+
+; ----------- measure 293 --- beat 550.5 --- time signature 3/8
+
+NOTE 0 1/2 measure293
+NOTE F#4 1/2
+NOTE G4 1/2
+
+; ----------- measure 294 --- beat 552 --- time signature 3/8
+
+NOTE D5 1/2 measure294
+NOTE 0 1
+
+; ----------- measure 295 --- beat 553.5 --- time signature 3/8
+
+NOTE 0 1/2 measure295
+NOTE F#4 1/2
+NOTE G4 1/2
+
+; ----------- measure 296 --- beat 555 --- time signature 3/8
+
+NOTE A#4 1/2 measure296
+NOTE B4 1/2
+NOTE C#5 1/2
+
+; ----------- measure 297 --- beat 556.5 --- time signature 3/8
+
+NOTE D5 1/2 measure297
+NOTE F#5 1/2
+NOTE G5 1/2
+
+; ----------- measure 298 --- beat 558 --- time signature 3/8
+
+NOTE A#5 1/2 measure298
+NOTE B5 1/2
+NOTE D6 1/2 @staccato
+
+; ----------- measure 299 --- beat 559.5 --- time signature 3/8
+
+NOTE G5 3/2 measure299
+
+; ----------- measure 300 --- beat 561 --- time signature 3/8
+
+NOTE -G5 1/2 measure300
+NOTE A5 1/2
+NOTE F5 1/2
+
+; ----------- measure 301 --- beat 562.5 --- time signature 3/8
+
+NOTE D#5 1/2 measure301
+NOTE E5 1/2
+NOTE E5 1/2 @staccato
+
+; ----------- measure 302 --- beat 564 --- time signature 3/8
+
+TRILL (E5 F#5) 1/2 measure302
+NOTE 0 1
+
+; ----------- measure 303 --- beat 565.5 --- time signature 3/8
+
+NOTE E5 3/2 measure303
+
+; ----------- measure 304 --- beat 567 --- time signature 3/8
+
+NOTE -E5 1/2 measure304
+NOTE F5 1/2
+NOTE D5 1/2
+
+; ----------- measure 305 --- beat 568.5 --- time signature 3/8
+
+NOTE B4 1/2 measure305
+NOTE C5 1/2
+NOTE C5 1/2 @staccato
+
+; ----------- measure 306 --- beat 570 --- time signature 3/8
+
+TRILL (C5 D5) 1/2 measure306
+NOTE 0 1
+
+; ----------- measure 307 --- beat 571.5 --- time signature 3/8
+
+NOTE C6 1/2 measure307
+NOTE A5 1/2
+NOTE 0 1/2
+
+; ----------- measure 308 --- beat 573 --- time signature 3/8
+
+NOTE G5 1/2 measure308
+NOTE F#5 1/2
+NOTE 0 1/2
+
+; ----------- measure 309 --- beat 574.5 --- time signature 3/8
+
+NOTE D6 1/2 measure309
+NOTE B5 1/2
+NOTE 0 1/2
+
+; ----------- measure 310 --- beat 576 --- time signature 3/8
+
+NOTE A5 1/2 measure310
+NOTE G5 1/2
+NOTE 0 1/2
+
+; ----------- measure 311 --- beat 577.5 --- time signature 3/8
+
+NOTE E5 1/2 measure311
+NOTE E6 1/2
+NOTE D6 1/2
+
+; ----------- measure 312 --- beat 579 --- time signature 3/8
+
+NOTE C6 1/2 measure312
+NOTE B5 1/2
+NOTE A5 1/2
+
+; ----------- measure 313 --- beat 580.5 --- time signature 3/8
+
+NOTE G5 1 measure313
+NOTE F#5 1/2
+
+; ----------- measure 314 --- beat 582 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 315 --- beat 583.5 --- time signature 3/8
+
+NOTE D5 0 measure315
+NOTE D6 1
+NOTE C6 1/4
+NOTE A5 1/4
+
+; ----------- measure 316 --- beat 585 --- time signature 3/8
+
+NOTE G5 1/2 @staccato measure316
+NOTE G5 1/2 @staccato
+NOTE G5 1/2 @staccato
+
+; ----------- measure 317 --- beat 586.5 --- time signature 3/8
+
+NOTE Eb6 1 measure317
+NOTE C6 1/4
+NOTE A5 1/4
+
+; ----------- measure 318 --- beat 588 --- time signature 3/8
+
+NOTE G5 0 measure318
+NOTE F#5 1/2 @staccato
+NOTE F#5 1/2 @staccato
+NOTE F#5 1/2 @staccato
+
+; ----------- measure 319 --- beat 589.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 320 --- beat 591 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 321 --- beat 592.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 322 --- beat 594 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 323 --- beat 595.5 --- time signature 3/8
+
+NOTE B4 1/4 @staccato measure323
+NOTE D5 1/4
+NOTE E5 1/4
+NOTE D5 1/4
+NOTE E5 1/4
+NOTE D5 1/4
+
+; ----------- measure 324 --- beat 597 --- time signature 3/8
+
+NOTE G5 1/4 @staccato measure324
+NOTE D5 1/4
+NOTE E5 1/4
+NOTE D5 1/4
+NOTE E5 1/4
+NOTE D5 1/4
+
+; ----------- measure 325 --- beat 598.5 --- time signature 3/8
+
+NOTE A5 1/4 @staccato measure325
+NOTE D5 1/4
+NOTE E5 1/4
+NOTE D5 1/4
+NOTE E5 1/4
+NOTE D5 1/4
+
+; ----------- measure 326 --- beat 600 --- time signature 3/8
+
+NOTE A4 1/4 measure326
+NOTE D5 1/4
+NOTE B4 1/4
+NOTE D5 1/4
+NOTE C5 1/4
+NOTE D5 1/4
+
+; ----------- measure 327 --- beat 601.5 --- time signature 3/8
+
+NOTE B4 1/4 @staccato measure327
+NOTE D5 1/4 @staccato
+NOTE E5 1/4 @staccato
+NOTE D5 1/4 @staccato
+NOTE E5 1/4 @staccato
+NOTE D5 1/4 @staccato
+
+; ----------- measure 328 --- beat 603 --- time signature 3/8
+
+NOTE G5 1/4 @staccato measure328
+NOTE D5 1/4 @staccato
+NOTE E5 1/4 @staccato
+NOTE D5 1/4 @staccato
+NOTE E5 1/4 @staccato
+NOTE D5 1/4 @staccato
+
+; ----------- measure 329 --- beat 604.5 --- time signature 3/8
+
+NOTE A5 1/4 @staccato measure329
+NOTE D5 1/4 @staccato
+NOTE E5 1/4 @staccato
+NOTE D5 1/4 @staccato
+NOTE E5 1/4 @staccato
+NOTE D5 1/4 @staccato
+
+; ----------- measure 330 --- beat 606 --- time signature 3/8
+
+NOTE A4 1/4 @staccato measure330
+NOTE D5 1/4 @staccato
+NOTE B4 1/4 @staccato
+NOTE D5 1/4 @staccato
+NOTE C5 1/4 @staccato
+NOTE D5 1/4 @staccato
+
+; ----------- measure 331 --- beat 607.5 --- time signature 3/8
+
+NOTE B4 1/4 measure331
+NOTE D5 1/4
+NOTE G5 1/4
+NOTE B4 1/4
+NOTE A4 1/4
+NOTE F#5 1/4
+
+; ----------- measure 332 --- beat 609 --- time signature 3/8
+
+NOTE G4 1/4 measure332
+NOTE E5 1/4
+NOTE F#4 1/4
+NOTE D5 1/4
+NOTE E4 1/4
+NOTE C5 1/4
+
+; ----------- measure 333 --- beat 610.5 --- time signature 3/8
+
+NOTE D4 1/4 measure333
+NOTE B4 1/4
+NOTE C4 1/4
+NOTE A4 1/4
+NOTE B3 1/4
+NOTE G4 1/4
+
+; ----------- measure 334 --- beat 612 --- time signature 3/8
+
+NOTE A3 1/4 measure334
+NOTE F#4 1/4
+NOTE D4 1/4
+NOTE C5 1/4
+NOTE G4 1/4
+NOTE B4 1/4
+
+; ----------- measure 335 --- beat 613.5 --- time signature 3/8
+
+NOTE C4 1/4 measure335
+NOTE E5 1/4
+NOTE D#5 1/4
+NOTE E5 1/4
+NOTE D#5 1/4
+NOTE E5 1/4
+
+; ----------- measure 336 --- beat 615 --- time signature 3/8
+
+NOTE 0 1/4 measure336
+NOTE G5 1/4
+NOTE F#5 1/4
+NOTE G5 1/4
+NOTE F#5 1/4
+NOTE G5 1/4
+
+; ----------- measure 337 --- beat 616.5 --- time signature 3/8
+
+NOTE D4 3/2 measure337
+
+; ----------- measure 338 --- beat 618 --- time signature 3/8
+
+TRILL (A4 B4) 3/2 measure338
+NOTE G4 0
+NOTE A4 0
+
+; ----------- measure 339 --- beat 619.5 --- time signature 3/8
+
+NOTE B4 1/4 measure339
+NOTE D5 1/4
+NOTE G5 1/4 @staccato
+NOTE B4 1/4 @staccato
+NOTE A4 1/4 @staccato
+NOTE F#5 1/4 @staccato
+
+; ----------- measure 340 --- beat 621 --- time signature 3/8
+
+NOTE G4 1/4 @staccato measure340
+NOTE E5 1/4 @staccato
+NOTE F#4 1/4 @staccato
+NOTE D5 1/4 @staccato
+NOTE E4 1/4 @staccato
+NOTE C5 1/4 @staccato
+
+; ----------- measure 341 --- beat 622.5 --- time signature 3/8
+
+NOTE D4 1/4 @staccato measure341
+NOTE B4 1/4 @staccato
+NOTE C4 1/4 @staccato
+NOTE A4 1/4 @staccato
+NOTE B3 1/4 @staccato
+NOTE G4 1/4 @staccato
+
+; ----------- measure 342 --- beat 624 --- time signature 3/8
+
+NOTE A3 1/4 @staccato measure342
+NOTE F#4 1/4 @staccato
+NOTE D4 1/4 @staccato
+NOTE C5 1/4 @staccato
+NOTE G4 1/4 @staccato
+NOTE B4 1/4 @staccato
+
+; ----------- measure 343 --- beat 625.5 --- time signature 3/8
+
+NOTE C4 1/4 measure343
+NOTE E5 1/4
+NOTE D#5 1/4
+NOTE E5 1/4
+NOTE D#5 1/4
+NOTE E5 1/4
+
+; ----------- measure 344 --- beat 627 --- time signature 3/8
+
+NOTE 0 1/4 measure344
+NOTE E6 1/4
+NOTE D#6 1/4
+NOTE E6 1/4
+NOTE D#6 1/4
+NOTE E6 1/4
+
+; ----------- measure 345 --- beat 628.5 --- time signature 3/8
+
+NOTE D4 3/2 measure345
+
+; ----------- measure 346 --- beat 630 --- time signature 3/8
+
+TRILL (A5 B5) 3/2 measure346
+
+; ----------- measure 347 --- beat 631.5 --- time signature 3/8
+
+NOTE G5 1/2 @staccato measure347
+NOTE A5 1/2 @staccato
+NOTE B5 1/2 @staccato
+
+; ----------- measure 348 --- beat 633 --- time signature 3/8
+
+NOTE C6 1/2 @staccato measure348
+NOTE D6 1/2 @staccato
+NOTE E6 1/2 @staccato
+
+; ----------- measure 349 --- beat 634.5 --- time signature 3/8
+
+NOTE D6 3/2 measure349
+
+; ----------- measure 350 --- beat 636 --- time signature 3/8
+
+NOTE -D6 1/2 measure350
+NOTE C6 1/2
+NOTE A5 1/2
+
+; ----------- measure 351 --- beat 637.5 --- time signature 3/8
+
+NOTE G5 1/2 @staccato measure351
+NOTE F#5 1/2 @staccato
+NOTE G5 1/2 @staccato
+
+; ----------- measure 352 --- beat 639 --- time signature 3/8
+
+NOTE A5 1/2 @staccato measure352
+NOTE B5 1/2 @staccato
+NOTE C6 1/2 @staccato
+
+; ----------- measure 353 --- beat 640.5 --- time signature 3/8
+
+NOTE B5 3/2 measure353
+
+; ----------- measure 354 --- beat 642 --- time signature 3/8
+
+NOTE -B5 1/2 measure354
+NOTE A5 1/2
+NOTE F#5 1/2
+
+; ----------- measure 355 --- beat 643.5 --- time signature 3/8
+
+NOTE 0 1/2 measure355
+NOTE E5 1/2 @staccato
+NOTE F#5 1/2 @staccato
+
+; ----------- measure 356 --- beat 645 --- time signature 3/8
+
+NOTE G5 1/2 @staccato measure356
+NOTE A5 1/2 @staccato
+NOTE B5 1/2 @staccato
+
+; ----------- measure 357 --- beat 646.5 --- time signature 3/8
+
+NOTE A5 3/2 measure357
+
+; ----------- measure 358 --- beat 648 --- time signature 3/8
+
+NOTE -A5 1/2 measure358
+NOTE G5 1/2
+NOTE E5 1/2
+
+; ----------- measure 359 --- beat 649.5 --- time signature 3/8
+
+NOTE D5 1/2 measure359
+NOTE F#5 1/2
+NOTE D5 1/2
+
+; ----------- measure 360 --- beat 651 --- time signature 3/8
+
+NOTE A5 1/2 @staccato measure360
+NOTE 0 1
+
+; ----------- measure 361 --- beat 652.5 --- time signature 3/8
+
+NOTE 0 1/2 measure361
+NOTE F#5 1/2
+NOTE D5 1/2
+
+; ----------- measure 362 --- beat 654 --- time signature 3/8
+
+NOTE A5 1/2 @staccato measure362
+NOTE 0 1
+
+; ----------- measure 363 --- beat 655.5 --- time signature 3/8
+
+NOTE 0 1/2 measure363
+NOTE A5 1/2 @staccato
+NOTE A5 1/2 @staccato
+
+; ----------- measure 364 --- beat 657 --- time signature 3/8
+
+NOTE A5 1/2 @staccato measure364
+NOTE A5 1/2 @staccato
+NOTE A5 1/2 @staccato
+
+; ----------- measure 365 --- beat 658.5 --- time signature 3/8
+
+NOTE C#6 3/2 measure365
+
+; ----------- measure 366 --- beat 660 --- time signature 3/8
+
+NOTE D6 1/2 measure366
+NOTE 0 1
+
+; ----------- measure 367 --- beat 661.5 --- time signature 3/8
+
+NOTE C#5 3/2 measure367
+
+; ----------- measure 368 --- beat 663 --- time signature 3/8
+
+NOTE D5 1/2 measure368
+NOTE 0 1
+
+; ----------- measure 369 --- beat 664.5 --- time signature 3/8
+
+NOTE C#4 3/2 measure369
+
+; ----------- measure 370 --- beat 666 --- time signature 3/8
+
+NOTE D4 1/2 measure370
+NOTE 0 1
+
+; ----------- measure 371 --- beat 667.5 --- time signature 3/8
+
+NOTE 0 1/2 measure371
+NOTE C#4 1/2
+NOTE D4 1/2
+
+; ----------- measure 372 --- beat 669 --- time signature 3/8
+
+NOTE F#4 1/2 measure372
+NOTE 0 1
+
+; ----------- measure 373 --- beat 670.5 --- time signature 3/8
+
+NOTE 0 1/2 measure373
+NOTE C#4 1/2
+NOTE D4 1/2
+
+; ----------- measure 374 --- beat 672 --- time signature 3/8
+
+NOTE A4 1/2 measure374
+NOTE 0 1
+
+; ----------- measure 375 --- beat 673.5 --- time signature 3/8
+
+NOTE 0 1/2 measure375
+NOTE C#4 1/2
+NOTE D4 1/2
+
+; ----------- measure 376 --- beat 675 --- time signature 3/8
+
+NOTE C5 1/2 measure376
+NOTE F#5 1/2
+NOTE A5 1/2
+
+; ----------- measure 377 --- beat 676.5 --- time signature 3/8
+
+NOTE C6 3/2 @fermata measure377
+
+; ----------- measure 378 --- beat 678 --- time signature 3/8
+
+NOTE D4 0 measure378
+BPM 114
+NOTE D5 1
+NOTE C5 1/4
+NOTE A4 1/4
+
+; ----------- measure 379 --- beat 679.5 --- time signature 3/8
+
+NOTE A4 0 measure379
+NOTE G4 1/2 @staccato
+NOTE G4 1/2 @staccato
+NOTE G4 1/2 @staccato
+
+; ----------- measure 380 --- beat 681 --- time signature 3/8
+
+NOTE E4 0 measure380
+NOTE E5 1
+NOTE C5 1/4
+NOTE A4 1/4
+
+; ----------- measure 381 --- beat 682.5 --- time signature 3/8
+
+NOTE G4 0 measure381
+NOTE F#4 1/2 @staccato
+NOTE F#4 1/2 @staccato
+NOTE F#4 1/2 @staccato
+
+; ----------- measure 382 --- beat 684 --- time signature 3/8
+
+NOTE G4 1/2 measure382
+NOTE D4 1/2
+NOTE B4 1/2
+
+; ----------- measure 383 --- beat 685.5 --- time signature 3/8
+
+NOTE A4 1/2 measure383
+NOTE D4 1/2
+NOTE C5 1/2
+
+; ----------- measure 384 --- beat 687 --- time signature 3/8
+
+NOTE B4 1/2 measure384
+NOTE D4 1/2
+NOTE D5 1/2
+
+; ----------- measure 385 --- beat 688.5 --- time signature 3/8
+
+NOTE B4 1 measure385
+NOTE A4 1/2
+
+; ----------- measure 386 --- beat 690 --- time signature 3/8
+
+NOTE C#6 1/4 measure386
+NOTE D6 1/4
+NOTE C#6 1/4
+NOTE D6 1/4
+NOTE C6 1/4
+NOTE A5 1/4
+
+; ----------- measure 387 --- beat 691.5 --- time signature 3/8
+
+NOTE A5 0 measure387
+NOTE G5 1/2 @staccato
+NOTE G5 1/2 @staccato
+NOTE G5 1/2 @staccato
+
+; ----------- measure 388 --- beat 693 --- time signature 3/8
+
+NOTE D#6 1/4 measure388
+NOTE E6 1/4
+NOTE D#6 1/4
+NOTE E6 1/4
+NOTE C6 1/4
+NOTE A5 1/4
+
+; ----------- measure 389 --- beat 694.5 --- time signature 3/8
+
+NOTE G5 0 measure389
+NOTE F#5 1/2 @staccato
+NOTE F#5 1/2 @staccato
+NOTE F#5 1/2 @staccato
+
+; ----------- measure 390 --- beat 696 --- time signature 3/8
+
+NOTE G5 1/2 measure390
+NOTE B5 1/2
+NOTE D6 1/2 @staccato
+
+; ----------- measure 391 --- beat 697.5 --- time signature 3/8
+
+NOTE E6 1/2 measure391
+NOTE G6 1/2
+NOTE C6 1/2 @staccato
+
+; ----------- measure 392 --- beat 699 --- time signature 3/8
+
+NOTE B5 1/2 measure392
+NOTE C6 1/2
+NOTE A5 1/2 @staccato
+
+; ----------- measure 393 --- beat 700.5 --- time signature 3/8
+
+NOTE A5 1 measure393
+NOTE G5 1/2
+
+; ----------- measure 394 --- beat 702 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 395 --- beat 703.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 396 --- beat 705 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 397 --- beat 706.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 398 --- beat 708 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 399 --- beat 709.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 400 --- beat 711 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 401 --- beat 712.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 402 --- beat 714 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 403 --- beat 715.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 404 --- beat 717 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 405 --- beat 718.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 406 --- beat 720 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 407 --- beat 721.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 408 --- beat 723 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 409 --- beat 724.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 410 --- beat 726 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 411 --- beat 727.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 412 --- beat 729 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 413 --- beat 730.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 414 --- beat 732 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 415 --- beat 733.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 416 --- beat 735 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 417 --- beat 736.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 418 --- beat 738 --- time signature 3/8
+
+NOTE G4 1/2 @staccato measure418
+NOTE A4 1/2 @staccato
+NOTE B4 1/2 @staccato
+
+; ----------- measure 419 --- beat 739.5 --- time signature 3/8
+
+NOTE C5 1/2 @staccato measure419
+NOTE D5 1/2 @staccato
+NOTE E5 1/2 @staccato
+
+; ----------- measure 420 --- beat 741 --- time signature 3/8
+
+NOTE D5 3/2 measure420
+
+; ----------- measure 421 --- beat 742.5 --- time signature 3/8
+
+NOTE -D5 1/2 measure421
+NOTE C5 1/2
+NOTE A4 1/2
+
+; ----------- measure 422 --- beat 744 --- time signature 3/8
+
+NOTE G4 1/2 @staccato measure422
+NOTE A4 1/2 @staccato
+NOTE B4 1/2 @staccato
+
+; ----------- measure 423 --- beat 745.5 --- time signature 3/8
+
+NOTE C5 1/2 @staccato measure423
+NOTE D5 1/2 @staccato
+NOTE E5 1/2 @staccato
+
+; ----------- measure 424 --- beat 747 --- time signature 3/8
+
+NOTE D5 3/2 measure424
+
+; ----------- measure 425 --- beat 748.5 --- time signature 3/8
+
+NOTE -D5 1/2 measure425
+NOTE C5 1/2
+NOTE A4 1/2
+
+; ----------- measure 426 --- beat 750 --- time signature 3/8
+
+NOTE G4 1/2 measure426
+NOTE 0 1
+
+; ----------- measure 427 --- beat 751.5 --- time signature 3/8
+
+NOTE 0 1/2 measure427
+NOTE C5 1/2
+NOTE A4 1/2
+
+; ----------- measure 428 --- beat 753 --- time signature 3/8
+
+NOTE G4 1/2 measure428
+NOTE 0 1
+
+; ----------- measure 429 --- beat 754.5 --- time signature 3/8
+
+NOTE 0 1/2 measure429
+NOTE C5 1/2
+NOTE A4 1/2
+
+; ----------- measure 430 --- beat 756 --- time signature 3/8
+
+NOTE G4 1/2 measure430
+NOTE 0 1
+
+; ----------- measure 431 --- beat 757.5 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 432 --- beat 759 --- time signature 3/8
+
+NOTE 0 3/2
+
+; ----------- measure 433 --- beat 760.5 --- time signature 3/8
+
+NOTE 0 3/2
