@@ -18,7 +18,7 @@
 
 using namespace antescofo;
 
-BeatPerMinute::BeatPerMinute( float measure, float start, float value, float originalBeats, float originalBase, bool generated ):
+BeatPerMinute::BeatPerMinute( const std::string& measure, float start, float value, float originalBeats, float originalBase, bool generated ):
 Event       (),
 bpm_        ( value ),
 start_      ( start ),
@@ -29,7 +29,7 @@ generated_  ( generated )
     measure_ = measure;
 }
 
-BeatPerMinute::BeatPerMinute( float measure, float start, float bmp ):
+BeatPerMinute::BeatPerMinute( const std::string& measure, float start, float bmp ):
     Event       (),
     bpm_        ( bmp ),
     start_      ( start ),
@@ -58,7 +58,7 @@ float BeatPerMinute::start() const
 
 /*! \brief  Copy a BeatPerMinute event at given score position
  */
-BeatPerMinute* BeatPerMinute::copyAt( float measure, float start, BeatPerMinute const& bpm) {
+BeatPerMinute* BeatPerMinute::copyAt( const std::string& measure, float start, BeatPerMinute const& bpm) {
     return new BeatPerMinute(measure, start, bpm.bpm_, bpm.beats_, bpm.base_, false);
 }
 
@@ -74,7 +74,7 @@ void BeatPerMinute::serialize( std::ostringstream& stream )
         snprintf( buffer, sizeof(buffer), "%.2f", bpm_ );
         stream << "BPM " << buffer;
     }
-    if ( measure_ > 1 && generated_ )
+    if ( !measure_.empty() && measure_ != "1" && generated_ )
         stream << " @modulate";
     if ( beats_ && base_ && beats_ != bpm_  )
     {

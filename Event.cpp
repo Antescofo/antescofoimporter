@@ -18,7 +18,7 @@
 using namespace antescofo;
 
 Event::Event():
-    measure_          ( -1 ),
+    measure_          ( "" ),
     isFirstInMeasure_ ( false )
 {
     //NOTHING
@@ -36,7 +36,7 @@ Event::~Event()
     //NOTHING
 }
 
-float Event::measure() const
+const std::string Event::measure() const
 {
     return measure_;
 }

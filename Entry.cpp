@@ -20,7 +20,7 @@
 using namespace antescofo;
 using namespace std;
 
-Entry::Entry( float measure, float start, float duration, const Pitch& pitch ):
+Entry::Entry( const std::string& measure, float start, float duration, const Pitch& pitch ):
     Event         (),
     start_        ( start),
     duration_     ( duration ),
@@ -131,12 +131,12 @@ void Entry::serialize( ostringstream& stream )
         serializeChord( stream );
     }
     stream << formatDuration(); //<< " ; " << duration_;
-    bool isPickup = ceilf( measure() ) != measure();
+    //bool isPickup = ceilf( measure() ) != measure();
     if ( features_& Staccato )
         stream << " @staccato";
     if ( features_& Fermata )
         stream << " @fermata";
-    if ( isFirstInMeasure() && !isPickup && !(features_&MeasureRest) )
+    if ( isFirstInMeasure() && !(features_&MeasureRest) )
         stream << " measure" << measure();
     if(isNosync())
         stream << " nosync";

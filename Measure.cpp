@@ -20,7 +20,7 @@
 
 using namespace antescofo;
 
-Measure::Measure( float num, float duration, float accum, float metricFactor, const std::string& timeSignature ):
+Measure::Measure( const std::string& num, float duration, float accum, float metricFactor, const std::string& timeSignature ):
     Event           (),
     beatDuration_   ( duration ),
     accumBeats_     ( accum ),
@@ -31,7 +31,7 @@ Measure::Measure( float num, float duration, float accum, float metricFactor, co
     measure_ = num;
 }
 
-Measure::Measure( float num, float duration, float accum, float metricFactor, int keyAccidentals, const std::string& timeSignature ):
+Measure::Measure( const std::string& num, float duration, float accum, float metricFactor, int keyAccidentals, const std::string& timeSignature ):
     Event           (),
     beatDuration_   ( duration ),
     accumBeats_     ( accum ),
@@ -56,13 +56,9 @@ void Measure::serialize( std::ostringstream& stream )
     else
         snprintf(buffer, sizeof(buffer), "%5.1f", duration );
     stream << std::endl;
-    bool isPickup = ceilf( measure() ) != measure();
-    if ( isPickup )
-        stream << "; ----------- pickup to measure " << (int) ceilf( measure() );
-    else
-        stream << "; ----------- measure " << (int) measure();
+    stream << "; ----------- measure " << measure();
     stream << " --- beat " << buffer;
-    if ( timeSignature().size() > 0 && !isPickup )
+    if ( timeSignature().size() > 0 )
         stream << " --- time signature " << timeSignature();
     stream << std::endl << std::endl;
 }

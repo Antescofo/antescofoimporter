@@ -125,7 +125,7 @@ bool UnitTester::processTest( const string& testFile )
     reference.open( referencePath, std::ifstream::in );
     if ( reference.fail() )
     {
-        cout << "  Error: could not open " << referencePath << "reference file!" << endl;
+        cout << "  Error: could not open " << referencePath << " reference file!" << endl;
         return false;
     }
     cout << "  Processing " << testFile << "...";

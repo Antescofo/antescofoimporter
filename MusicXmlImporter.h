@@ -105,7 +105,8 @@ namespace antescofo
         ImportModel&     model_;
         std::vector<int> tracks_;
         bool             compressedXML_;
-        float            currentMeasure_;       //can be fractional: 0.5 means pickup to meas 1, 14.5 is pickup to meas 15 etc.
+        // 2024: Changed currentMeasure_ to String to take into account Implicit measures in MusicXML
+        std::string      currentMeasure_;       //can be fractional: 0.5 means pickup to meas 1, 14.5 is pickup to meas 15 etc.
         std::string      currentTimeSignature_;
         int              currentKeyAccidentals_; // -2 -> 2 flats, +3 -> 3 sharps etc.
         int              currentVoice_;

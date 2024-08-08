@@ -21,6 +21,7 @@
 #include <sstream>
 #include <math.h>
 #include <deque>
+#include <string>
 
 static const float EPSILON = 0.01;
 static const float EPSILON_MIDI = 0.0457;  //used for MIDI quantification: represents the difference between a 16th note (as part of a 6-uplet)
@@ -104,7 +105,7 @@ namespace antescofo
         virtual void          removeFeatures( EntryFeatures feature ) {}
         virtual Event*        duplicate() const;
         
-        float measure() const;
+        const std::string measure() const;
         bool  isFirstInMeasure() const;
         void  setFirstInMeasure( bool status );
         
@@ -115,7 +116,7 @@ namespace antescofo
         bool isEqual( float t1, float t2 ) const;
         
     protected:
-        float   measure_;
+        std::string   measure_;
         bool    isFirstInMeasure_;
     };
 }

@@ -25,7 +25,7 @@ namespace antescofo
     class Repeat: public Event   //to be used with Repeat OFF/ON events
     {
     public:
-        explicit Repeat( float measure, int direction, int ending );
+        explicit Repeat( const std::string& measure, int direction, int ending );
         virtual ~Repeat();
         
         void        serialize( std::ostringstream& stream ) override;

@@ -24,7 +24,7 @@ ActionGroup::ActionGroup( const string& name  ):
     GMpatch_    ( -1 ),
     name_       ( name )
 {
-    measure_ = 0;
+    measure_ = "";
 }
 
 ActionGroup::~ActionGroup()
