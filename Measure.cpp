@@ -60,7 +60,6 @@ void Measure::serialize( std::ostringstream& stream )
     stream << " --- beat " << buffer;
     if ( timeSignature().size() > 0 )
         stream << " --- time signature " << timeSignature();
-    std::cout<<"<<< yo MEASNUM2 "<< measure()<<std::endl;
     stream << std::endl << std::endl;
 }
 

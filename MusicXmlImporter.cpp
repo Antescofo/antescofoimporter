@@ -556,7 +556,6 @@ void MusicXmlImporter::processMeasure( TiXmlNode* measure )
     float previousMeasureBeats = model_.getMeasureDuration( currentMeasure_ );
     measure->ToElement()->QueryValueAttribute( "number", &measNumberStr );
     currentMeasure_ = measNumberStr;
-    cout<<"<<< yo MEASNUM "<< currentMeasure_<<endl;
     TiXmlNode* attributes = processMeasureAttributes( measure );
     TiXmlNode* barline = measure->FirstChildElement( "barline" );
     while ( barline )
