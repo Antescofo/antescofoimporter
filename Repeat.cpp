@@ -17,7 +17,7 @@
 
 using namespace antescofo;
 
-Repeat::Repeat( float measure, int direction, int ending ):
+Repeat::Repeat( const std::string& measure, int direction, int ending ):
     Event  (),
     direction_ ( direction ),
     ending_    ( ending )

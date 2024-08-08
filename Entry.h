@@ -20,6 +20,7 @@
 #include <sstream>
 #include <list>
 #include <utility>
+#include <string>
 #include "Event.h"
 #include "Pitch.h"
 #include "SimpleRational.h"
@@ -41,7 +42,7 @@ namespace antescofo
     class Entry: public Event
     {
     public:
-        explicit Entry( float measure, float start, float duration, const Pitch& pitch );
+        explicit Entry( const std::string& measure, float start, float duration, const Pitch& pitch );
         Entry( const Entry& from );
         virtual ~Entry();
         

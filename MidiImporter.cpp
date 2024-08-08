@@ -567,7 +567,7 @@ long MidiImporter::handleNote( long delta, short noteIndex, bool isOn )
             Pitch rest ( 0, MidiNote);
             while ( silence > 0 && onCount_ == 0 )
             {
-                const Event* specs = model_.findMeasure( measure );
+                const Event* specs = model_.findMeasure( std::to_string(measure) );
                 if ( specs )
                 {
                     measureLength = specs->duration() * quarterNoteDivision_;
@@ -584,7 +584,7 @@ long MidiImporter::handleNote( long delta, short noteIndex, bool isOn )
                 if ( length > 0 )
                 {
                     rest.setFeatures( MidiNote );
-                    model_.addNote( measure,
+                    model_.addNote( std::to_string(measure),
                                     (float)(start - measureStart)/quarterNoteDivision_,
                                     (float)length/quarterNoteDivision_,
                                     rest ); //creating rest
@@ -632,14 +632,14 @@ long MidiImporter::handleNote( long delta, short noteIndex, bool isOn )
                     note.setMidiCents( noteIndex * 100 );
                     note.setFeatures( features );
                     if ( length > 0 )
-                        model_.addNote( measure,
+                        model_.addNote( std::to_string(measure),
                                         (float)(start - measureStart)/quarterNoteDivision_,
                                         (float)length/quarterNoteDivision_,
                                         note ); //creating tied notes
                 }
                 duration -= length;
                 --measure;
-                const Event* specs = model_.findMeasure( measure );
+                const Event* specs = model_.findMeasure( std::to_string(measure) );
                 if ( specs )
                 {
                     long measureLength = specs->duration() * quarterNoteDivision_;
@@ -705,7 +705,7 @@ void MidiImporter::handleTempo( long time, long microseconds )
     //if ( wrapper_.isVerbose() )
     //    cout << "  tempo=" << BPM << " BPM at time=" << accumGlobal_ << endl;
     
-    model_.insertOrReplaceEvent( new BeatPerMinute( currentMeasure_, (accumGlobal_ - currentMeasureStart_)/quarterNoteDivision_, BPM * currentMetricFactor_ ) );
+    model_.insertOrReplaceEvent( new BeatPerMinute( std::to_string(currentMeasure_), (accumGlobal_ - currentMeasureStart_)/quarterNoteDivision_, BPM * currentMetricFactor_ ) );
 }
 
 void MidiImporter::handleTimeSignature( long delta, short upper, short lower )
@@ -723,7 +723,7 @@ void MidiImporter::handleTimeSignature( long delta, short upper, short lower )
         m += ((accumGlobal_+ delta) - currentMeasureStart_)/currentMeasureDuration_;
     if ( m == 0 )
         ++m;
-    Event* measure =  model_.findMeasure( m );
+    Event* measure =  model_.findMeasure( std::to_string(m) );
     newTimeSignatureMeasure_ = m;
     if ( measure )
     {
@@ -745,7 +745,7 @@ void MidiImporter::stampMeasure( long delta )
             if ( currentMeasure_ > 0 )
                 currentMeasureStart_ += currentMeasureDuration_;
             ++currentMeasure_;
-            const Event* measure =  model_.findMeasure( currentMeasure_ );
+            const Event* measure =  model_.findMeasure( std::to_string(currentMeasure_) );
             if ( measure == nullptr )
             {
                 long measureDuration = currentMeasureDuration_;
@@ -755,7 +755,7 @@ void MidiImporter::stampMeasure( long delta )
                     measureDuration = newMeasureDuration_;
                     timeSignature = newTimeSignature_;
                 }
-                model_.insertFirstEventInMeasure( new Measure( ( float ) currentMeasure_,
+                model_.insertFirstEventInMeasure( new Measure( std::to_string(currentMeasure_),
                                                               (float) measureDuration/quarterNoteDivision_,
                                                               (float) currentMeasureStart_/quarterNoteDivision_,
                                                               1.0,

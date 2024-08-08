@@ -122,7 +122,7 @@ void ImportModel::serialize()
     setHeader();
     serialization_ << "; start" << endl;
     auto it = events_.begin();
-    int previousMeasure = 0;
+    std::string previousMeasure = "";
     bool setFirst = false;
     
     while ( it != events_.end() )
@@ -132,7 +132,7 @@ void ImportModel::serialize()
         if ( previousMeasure != event->measure() )
         {
             float duration = getMeasureDuration( previousMeasure );
-            if ( previousMeasure != 0 && !areThereNotesInMeasure( previousMeasure ) && duration > 0 )
+            if ( previousMeasure != "" && !areThereNotesInMeasure( previousMeasure ) && duration > 0 )
             {
                 serialization_  << "NOTE 0 " << getMeasureDuration( previousMeasure )
                                 << " ; empty measure" << endl;
@@ -213,7 +213,7 @@ void ImportModel::setCredits( const string& credits )
     credits_ = credits;
 }
 
-float ImportModel::addNote( float measure, float start, float duration, Pitch& pitch )
+float ImportModel::addNote( const std::string& measure, float start, float duration, Pitch& pitch )
 {
     EntryFeatures& features = pitch.features();
     if ( wrapper_.pitchesAsMidiCents() )
@@ -230,7 +230,7 @@ float ImportModel::addNote( float measure, float start, float duration, Pitch& p
             emplaceEvent( it, new Entry( measure, start, duration, pitch ) );
             break;
         }
-        else if ( (*it)->type() == Event_BeatPerMinute || (*it)->measure() < measure )
+        else if ( (*it)->type() == Event_BeatPerMinute || (*it)->measure() != measure )
         {
             ++it;
             continue;
@@ -238,7 +238,7 @@ float ImportModel::addNote( float measure, float start, float duration, Pitch& p
         else
         {
             Event* event = *it;
-            float m = event->measure();
+            std::string m = event->measure();
             float s = event->start();
             float d = event->duration();
             EntryFeatures f = event->features();
@@ -394,7 +394,7 @@ float ImportModel::addNote( float measure, float start, float duration, Pitch& p
                 features |= Feature::Tiedbackwards;
                 splitAndForward = true;
             }
-            else if ( m > measure || ( m == measure && isAfter( s, start ) ) ) //new entry starts after any event in this measure
+            else if ( m == measure && isAfter( s, start ) ) //new entry starts after any event in this measure
             {
                 emplaceEvent( it, new Entry( measure, start, duration, pitch ));
                 break;
@@ -405,7 +405,7 @@ float ImportModel::addNote( float measure, float start, float duration, Pitch& p
     return forwardDuration;
 }
 
-float ImportModel::addRepeatedNotes( float measure, float initial, float duration, float divisions, Pitch& pitch )
+float ImportModel::addRepeatedNotes( const std::string& measure, float initial, float duration, float divisions, Pitch& pitch )
 {
     float fullDuration ( duration );
     float start = initial;
@@ -456,7 +456,7 @@ deque<Event*>::iterator ImportModel::splitEvent( deque<Event*>::iterator it, flo
     return it;
 }
 
-Event* ImportModel::findMeasure( float measure ) const
+Event* ImportModel::findMeasure( const std::string& measure ) const
 {
     Event* measureEvent = nullptr;
     deque<Event*>::const_iterator it = events_.begin();
@@ -487,7 +487,7 @@ Event* ImportModel::findFirstBeatPerMinute() const
     }
 }
 
-float ImportModel::getMeasureDuration( float measure ) const
+float ImportModel::getMeasureDuration( const std::string& measure ) const
 {
     float duration = 0.0;
     deque<Event*>::const_iterator it = events_.begin();
@@ -507,7 +507,7 @@ float ImportModel::getMeasureDuration( float measure ) const
     return duration;
 }
 
-float ImportModel::getMeasureAccumulutatedBeats( float measure ) const
+float ImportModel::getMeasureAccumulutatedBeats( const std::string& measure ) const
 {
     float duration = 0.0;
     deque<Event*>::const_iterator it = events_.begin();
@@ -527,7 +527,7 @@ float ImportModel::getMeasureAccumulutatedBeats( float measure ) const
     return duration;
 }
 
-bool ImportModel::areThereNotesInMeasure( float measure ) const
+bool ImportModel::areThereNotesInMeasure( const std::string& measure ) const
 {
     bool notes = false;
     auto it = events_.begin();
@@ -557,7 +557,7 @@ deque<Event*>::iterator ImportModel::emplaceEvent( deque<Event*>::iterator it, E
 void ImportModel::insertFirstEventInMeasure( Event* event )
 {
     auto it = events_.begin();
-    while ( it != events_.end() && (*it)->measure() < event->measure() )
+    while ( it != events_.end() && (*it)->measure() != event->measure() )
     {
         ++it;
     }
@@ -568,7 +568,7 @@ void ImportModel::insertOrReplaceEvent( Event* event )
 {
     auto it = events_.begin();
     while ( it != events_.end() &&
-            ((*it)->measure() < event->measure() || ((*it)->measure() == event->measure() && (*it)->start() < event->start() ) ) )
+            ((*it)->measure() != event->measure() || ((*it)->measure() == event->measure() && (*it)->start() < event->start() ) ) )
     {
         ++it;
     }

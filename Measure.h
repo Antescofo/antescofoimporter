@@ -27,8 +27,8 @@ namespace antescofo
     class Measure: public Event
     {
     public:
-        explicit Measure( float measure, float duration, float accum, float metricFactor, const std::string& timeSignature );
-        explicit Measure( float measure, float duration, float accum, float metricFactor, int keyAccidentals, const std::string& timeSignature );
+        explicit Measure( const std::string& measure, float duration, float accum, float metricFactor, const std::string& timeSignature );
+        explicit Measure( const std::string& measure, float duration, float accum, float metricFactor, int keyAccidentals, const std::string& timeSignature );
         virtual ~Measure();
         
         void        serialize( std::ostringstream& stream ) override;

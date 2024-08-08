@@ -45,13 +45,13 @@ namespace antescofo
         void  insertOrReplaceEvent( Event* event );
         void  insertFirstEventInMeasure( Event* event );
         void  replaceEvent( Event* event );
-        float addNote( float measure, float start, float duration, Pitch& pitch );
-        float addRepeatedNotes( float measure, float start, float duration, float divisions, Pitch& pitch );
-        Event* findMeasure( float measure ) const;
+        float addNote( const std::string& measure, float start, float duration, Pitch& pitch );
+        float addRepeatedNotes( const std::string& measure, float start, float duration, float divisions, Pitch& pitch );
+        Event* findMeasure( const std::string& measure ) const;
         Event* findFirstBeatPerMinute() const;
-        float getMeasureDuration( float measure ) const;
-        float getMeasureAccumulutatedBeats( float measure ) const;
-        bool  areThereNotesInMeasure( float measure ) const;
+        float getMeasureDuration( const std::string& measure ) const;
+        float getMeasureAccumulutatedBeats( const std::string& measure ) const;
+        bool  areThereNotesInMeasure( const std::string& measure ) const;
         void  beautify();
         void  addWaitForNote(std::string position);
         

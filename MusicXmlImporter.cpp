@@ -120,7 +120,7 @@ MusicXmlImporter::MusicXmlImporter( ImporterWrapper& wrapper ) :
     wrapper_                ( wrapper ),
     model_                  ( wrapper_.getModel() ),
     compressedXML_          ( false ),
-    currentMeasure_         ( 0. ),
+    currentMeasure_         ( "" ),
     currentKeyAccidentals_  ( 0 ),
     currentVoice_           ( 0 ),
     currentTrillVoice_      ( 0 ),
@@ -150,7 +150,7 @@ MusicXmlImporter::~MusicXmlImporter()
 void MusicXmlImporter::clear()
 {
     compressedXML_ = false;
-    currentMeasure_ = 0.;
+    currentMeasure_ = "";
     currentKeyAccidentals_ = 0;
     currentVoice_ = 0;
     currentTrillVoice_ = 0;
@@ -443,7 +443,7 @@ bool MusicXmlImporter::import()
                         processMeasure( measure );
                         measure = part->IterateChildren( "measure", measure );
                     }
-                    currentMeasure_ = 0.;
+                    currentMeasure_ = "";
                 }
                 ++count;
                 part = root->IterateChildren( "part", part );
@@ -552,13 +552,11 @@ TiXmlNode* MusicXmlImporter::processMeasureAttributes( TiXmlNode* measure )
 
 void MusicXmlImporter::processMeasure( TiXmlNode* measure )
 {
-    float measNumber = 0;
+    string measNumberStr = "";
     float previousMeasureBeats = model_.getMeasureDuration( currentMeasure_ );
-    measure->ToElement()->QueryValueAttribute( "number", &measNumber );
-    if ( measNumber == 0 )
-        currentMeasure_ += 0.5; //convention for pickup measure
-    else
-        currentMeasure_ = measNumber;
+    measure->ToElement()->QueryValueAttribute( "number", &measNumberStr );
+    currentMeasure_ = measNumberStr;
+    cout<<"<<< yo MEASNUM "<< currentMeasure_<<endl;
     TiXmlNode* attributes = processMeasureAttributes( measure );
     TiXmlNode* barline = measure->FirstChildElement( "barline" );
     while ( barline )
@@ -758,7 +756,7 @@ bool MusicXmlImporter::chaseCues( TiXmlNode* measure )
         S /= cueDurations.size();
         S = sqrtf( S );
 #ifdef DEBUG
-        cout << "meas. " << currentMeasure_ + 1 << ": E = " << E << "  S = " << S << endl;
+        cout << "meas. " << currentMeasure_ << ": E = " << E << "  S = " << S << endl;
 #endif
         //TODO: perhaps a less simplistic discriminant f(E,S)?..
         if ( E > 0.25 || S > 0.15 )
@@ -769,7 +767,7 @@ bool MusicXmlImporter::chaseCues( TiXmlNode* measure )
             }
             hasCue = true;
 #ifdef DEBUG
-            cout << "  => ignoring " << cueNotes.size() << " notes found in meas. " << currentMeasure_ + 1 << endl;
+            cout << "  => ignoring " << cueNotes.size() << " notes found in meas. " << currentMeasure_ << endl;
 #endif
         }
         else
@@ -1940,7 +1938,7 @@ int MusicXmlImporter::getMidiCents( const char diatonic, int octave, float accid
 
 
 void MusicXmlImporter::addWaitForNote() {
-    int const measureNumber = (int)currentMeasure_;
+    std::string const measureNumber = currentMeasure_;
     float const measurePosition = accumLocal_;
     std::ostringstream stringStream;
     if (measurePosition)
