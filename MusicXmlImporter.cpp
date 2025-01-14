@@ -609,6 +609,13 @@ void MusicXmlImporter::processMeasure( TiXmlNode* measure )
         {
             currentTimeSignature_ = signature;
         }
+        
+        // Look for 'sound' element
+        if ( currentQuarterNoteTempo_ == 0.0 ) {
+            if (TiXmlNode* sound = measure->FirstChildElement( "sound" ))
+                processTempo( sound );
+        }
+        
         accumGlobal_ += previousMeasureBeats; // * currentMetricFactor_; //currentMeasureDuration_
         model_.insertFirstEventInMeasure( new Measure(  currentMeasure_,
                                                       currentMeasureDuration_,
