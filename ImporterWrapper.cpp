@@ -54,7 +54,7 @@ ImporterWrapper::~ImporterWrapper()
 
 std::string ImporterWrapper::getVersion()
 {
-    return "version 0.3.5";
+    return "version 0.3.6";
 }
 
 bool ImporterWrapper::parseArguments( vector<string>& args )

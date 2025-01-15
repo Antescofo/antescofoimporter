@@ -33,6 +33,13 @@ Developped by Robert Piéchaud
      
 * * Build log * *
 
+* * * v. 0.3.6 ~ January 15th 2025 * * *
+- Add tempo parsing when it is not in attributes
+- Avoid crash on "other-direction" when there is no text (such as new smufl elements)
+
+* * * v. 0.3.5 ~ August 8th 2024 * * *
+- Conceptual: Use String for Measure numbers instead of Int
+
 * * * v. 0.3.4 ~ Jully 17th 2024 * * *
 - Stop wavy-line also on grace notes
 
