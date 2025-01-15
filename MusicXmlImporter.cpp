@@ -1186,69 +1186,71 @@ void MusicXmlImporter::processDirection( TiXmlNode* direction )
     
     // 3. Look for 'a tempo' or 'tempo primo' text element
     else if (TiXmlNode* directionType = direction->FirstChildElement( "direction-type" )) {
-        do
-        {
-            // Find an 'other-direction' or 'words' element that contains an 'a tempo'-like text
-            TiXmlNode* otherDirection = directionType->FirstChildElement( "other-direction" );
+        do {
+            // Find an 'other-direction' or 'words' element
+            TiXmlNode* otherDirection = directionType->FirstChildElement("other-direction");
             if (!otherDirection) {
-                otherDirection = directionType->FirstChildElement( "words" );
+                otherDirection = directionType->FirstChildElement("words");
             }
-            if (otherDirection)
-            {
-                // Look for a 'tempo primo'-compatible text
-                string content = otherDirection->ToElement()->GetText();
-                content = Utils::clean(content);
-                // Look for 'tempo primo'-compatible text
-                vector<string> const& tempoPrimo = Dictionary::tempoPrimo;
-                if (std::find(tempoPrimo.begin(), tempoPrimo.end(), content) != tempoPrimo.end()) {
-                    appendTempoPrimo();
-                }
-                // Look for 'a tempo'-compatible text
-                else
-                {
-                    vector<string> const& aTempo = Dictionary::aTempo;
-                    if (std::find(aTempo.begin(), aTempo.end(), content) != aTempo.end()) {
-                        appendCurrentTempo(false);
+
+            if (otherDirection) {
+                // Check if the element contains text
+                const char* text = otherDirection->ToElement()->GetText();
+                if (text) { // Ensure text is not nullptr
+                    string content = Utils::clean(text);
+                    // Look for 'tempo primo'-compatible text
+                    const vector<string>& tempoPrimo = Dictionary::tempoPrimo;
+                    if (std::find(tempoPrimo.begin(), tempoPrimo.end(), content) != tempoPrimo.end()) {
+                        appendTempoPrimo();
+                    }
+                    // Look for 'a tempo'-compatible text
+                    else {
+                        const vector<string>& aTempo = Dictionary::aTempo;
+                        if (std::find(aTempo.begin(), aTempo.end(), content) != aTempo.end()) {
+                            appendCurrentTempo(false);
+                        }
                     }
                 }
             }
-        } while ( (directionType = direction->IterateChildren( "direction-type", directionType )) );
+        } while ((directionType = direction->IterateChildren("direction-type", directionType)));
     }
     
     
     ///// B. Other SmartMusic markers
     if (TiXmlNode* directionType = direction->FirstChildElement( "direction-type" )) {
-        do
-        {
-            if ( TiXmlNode* otherDirection = directionType->FirstChildElement( "other-direction" ) )
-            {
-                string content = otherDirection->ToElement()->GetText();
-                content = Utils::clean(content);
-                // Look for "wait for note" compatible events
-                vector<string> const& dict = Dictionary::waitForNote;
-                if (std::find(dict.begin(), dict.end(), content) != dict.end()) {
-                    addWaitForNote();
+        do {
+            if (TiXmlNode* otherDirection = directionType->FirstChildElement("other-direction")) {
+                // Check if the element contains text
+                const char* text = otherDirection->ToElement()->GetText();
+                if (text) { // Ensure text is not nullptr
+                    string content = Utils::clean(text);
+
+                    // Look for "wait for note" compatible events
+                    const vector<string>& dict = Dictionary::waitForNote;
+                    if (std::find(dict.begin(), dict.end(), content) != dict.end()) {
+                        addWaitForNote();
+                    }
+
+                    // Look for "noSyncOnNote" compatible events
+                    const vector<string>& nosyncOnNoteDict = Dictionary::noSyncOnNote;
+                    if (std::find(nosyncOnNoteDict.begin(), nosyncOnNoteDict.end(), content) != nosyncOnNoteDict.end()) {
+                        model_.appendEvent(new NosyncOnNote());
+                    }
+
+                    // Look for "noSyncStart" compatible events
+                    const vector<string>& nosyncStartDict = Dictionary::noSyncStart;
+                    if (std::find(nosyncStartDict.begin(), nosyncStartDict.end(), content) != nosyncStartDict.end()) {
+                        model_.appendEvent(new NosyncStart());
+                    }
+
+                    // Look for "noSyncStop" compatible events
+                    const vector<string>& nosyncStopDict = Dictionary::noSyncStop;
+                    if (std::find(nosyncStopDict.begin(), nosyncStopDict.end(), content) != nosyncStopDict.end()) {
+                        model_.appendEvent(new NosyncStop());
+                    }
                 }
-                
-                // Look for "noSyncOnNote" compatible events
-                vector<string> const& nosyncOnNoteDict = Dictionary::noSyncOnNote;
-                if (std::find(nosyncOnNoteDict.begin(), nosyncOnNoteDict.end(), content) != nosyncOnNoteDict.end()) {
-                    model_.appendEvent(new NosyncOnNote());
-                }
-                // Look for "noSyncStart" compatible events
-                vector<string> const& nosyncStartDict = Dictionary::noSyncStart;
-                if (std::find(nosyncStartDict.begin(), nosyncStartDict.end(), content) != nosyncStartDict.end()) {
-                    model_.appendEvent(new NosyncStart());
-                }
-                // Look for "noSyncStart" compatible events
-                vector<string> const& nosyncStopDict = Dictionary::noSyncStop;
-                if (std::find(nosyncStopDict.begin(), nosyncStopDict.end(), content) != nosyncStopDict.end()) {
-                    model_.appendEvent(new NosyncStop());
-                }
-                 
             }
-            // Find an 'other-direction' or 'words' element that contains an 'a tempo'-like text
-        } while ( (directionType = direction->IterateChildren( "direction-type", directionType )) );
+        } while ((directionType = direction->IterateChildren("direction-type", directionType)));
     }
 }
 
