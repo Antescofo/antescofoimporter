@@ -298,7 +298,10 @@ bool MusicXmlImporter::retrieveScoreInfo( TiXmlNode* root )
             {
                 if ( content.size() )
                     content += " ~ ";
-                content += creditWords->ToElement()->GetText();
+                const char* txt = creditWords->ToElement()->GetText();
+                if (txt) {
+                    content += txt;
+                }
                 creditWords = credit->IterateChildren( "software", creditWords );
             }
             model_.setCredits( content );
