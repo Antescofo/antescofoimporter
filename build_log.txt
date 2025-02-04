@@ -33,6 +33,10 @@ Developped by Robert Piéchaud
      
 * * Build log * *
 
+* * * v. 0.3.7 ~ February 4 2025 * * *
+- fixed crash when reading credits
+
+
 * * * v. 0.3.6 ~ January 15th 2025 * * *
 - Add tempo parsing when it is not in attributes
 - Avoid crash on "other-direction" when there is no text (such as new smufl elements)
