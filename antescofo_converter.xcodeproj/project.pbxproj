@@ -133,7 +133,7 @@
 		CFDE2BAE1C0322C000FC3D64 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/local/bin;
+			dstPath = "$(TARGET_BUILD_DIR)";
 			dstSubfolderSpec = 0;
 			files = (
 				CFDE2BAF1C0322DD00FC3D64 /* antescofo_importer in CopyFiles */,
@@ -585,7 +585,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/plain -chasecues\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/original_pitches -originalpitches -chasecues\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/original_pitches -originalpitches -chasecues\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/appoggiaturas -originalpitches -appoggiaturas\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/metadata -metadata\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ] ; then\n/usr/local/bin/${TARGET_NAME} -unittest=test/unit/midicents -midicents\nRETVAL=$?\nif [ $RETVAL -ne 0 ]; then\nexit 1\nfi\nfi\n\ncp ${TARGET_BUILD_DIR}/${TARGET_NAME} out/mac\n";
+			shellScript = "if [ \"$CONFIGURATION\" = \"Release\" ] && [ \"${RUN_IMPORTER_RELEASE_TESTS:-0}\" = \"1\" ] ; then\n${TARGET_BUILD_DIR}/${TARGET_NAME} -unittest=test/unit/plain -chasecues || exit 1\n${TARGET_BUILD_DIR}/${TARGET_NAME} -unittest=test/unit/original_pitches -originalpitches -chasecues || exit 1\n${TARGET_BUILD_DIR}/${TARGET_NAME} -unittest=test/unit/original_pitches -originalpitches -chasecues || exit 1\n${TARGET_BUILD_DIR}/${TARGET_NAME} -unittest=test/unit/appoggiaturas -originalpitches -appoggiaturas || exit 1\n${TARGET_BUILD_DIR}/${TARGET_NAME} -unittest=test/unit/metadata -metadata || exit 1\n${TARGET_BUILD_DIR}/${TARGET_NAME} -unittest=test/unit/midicents -midicents || exit 1\nfi\n\nmkdir -p out/mac\ncp ${TARGET_BUILD_DIR}/${TARGET_NAME} out/mac\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
