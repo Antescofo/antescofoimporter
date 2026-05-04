@@ -22,6 +22,7 @@
 #include <math.h>
 #include <deque>
 #include <string>
+#include <vector>
 
 static const float EPSILON = 0.01;
 static const float EPSILON_MIDI = 0.0457;  //used for MIDI quantification: represents the difference between a 16th note (as part of a 6-uplet)
@@ -108,16 +109,20 @@ namespace antescofo
         const std::string measure() const;
         bool  isFirstInMeasure() const;
         void  setFirstInMeasure( bool status );
+        void  addJump( const std::string& label );
+        void  clearJumps();
         
         //virtual void queryPulseChange(std::deque<std::pair<float, std::string> >& pulseChangePositions) { } // by default, do nothing
         //virtual void queryTempoBeatUnitChanges(std::deque<std::pair<float, rational> >&) const { } // by default, do nothing
         
     protected:
         bool isEqual( float t1, float t2 ) const;
+        void serializeJumps( std::ostringstream& stream ) const;
         
     protected:
         std::string   measure_;
         bool    isFirstInMeasure_;
+        std::vector<std::string> jumps_;
     };
 }
 

@@ -32,6 +32,8 @@ namespace antescofo
         EventType   type() const override;
         bool        hasNotes() const override;
         float       start() const override;
+        int         direction() const;
+        int         ending() const;
         
     private:
         int     direction_;

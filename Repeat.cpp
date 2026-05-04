@@ -42,6 +42,15 @@ float Repeat::start() const
     return 0.0;
 }
 
+int Repeat::direction() const
+{
+    return direction_;
+}
+
+int Repeat::ending() const
+{
+    return ending_;
+}
 
 EventType Repeat::type() const
 {

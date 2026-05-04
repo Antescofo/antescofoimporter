@@ -19,14 +19,16 @@ using namespace antescofo;
 
 Event::Event():
     measure_          ( "" ),
-    isFirstInMeasure_ ( false )
+    isFirstInMeasure_ ( false ),
+    jumps_            ()
 {
     //NOTHING
 }
 
 Event::Event( const Event& from ):
     measure_          ( from.measure_ ),
-    isFirstInMeasure_ ( from.isFirstInMeasure_ )
+    isFirstInMeasure_ ( from.isFirstInMeasure_ ),
+    jumps_            ( from.jumps_ )
 {
     //NOTHING
 }
@@ -69,6 +71,39 @@ void Event::setFirstInMeasure( bool status )
 bool Event::isFirstInMeasure() const
 {
     return isFirstInMeasure_;
+}
+
+void Event::addJump( const std::string& label )
+{
+    if ( label.empty() )
+        return;
+    for ( auto it = jumps_.begin(); it != jumps_.end(); ++it )
+    {
+        if ( *it == label )
+            return;
+    }
+    jumps_.push_back( label );
+}
+
+void Event::clearJumps()
+{
+    jumps_.clear();
+}
+
+void Event::serializeJumps( std::ostringstream& stream ) const
+{
+    if ( jumps_.empty() )
+        return;
+    stream << " @jump ";
+    bool first = true;
+    for ( auto it = jumps_.begin(); it != jumps_.end(); ++it )
+    {
+        if ( first )
+            first = false;
+        else
+            stream << ", ";
+        stream << *it;
+    }
 }
 
 bool Event::isEqual( float t1, float t2 ) const

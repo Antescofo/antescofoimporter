@@ -81,6 +81,7 @@ namespace antescofo
         void consolidateTemposAndMeasures();
         void manageNosyncNotes();
         void checkTies();
+        void addRepeatJumps();
         
         inline bool isEqual( float t1, float t2 );
         inline bool isAfter( float t1, float t2 );

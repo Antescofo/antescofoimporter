@@ -21,6 +21,7 @@
 #include "Pitch.h"
 #include "BeatPerMinute.h"
 #include "Nosync.h"
+#include "Repeat.h"
 #include <algorithm>
 #include <math.h>
 #ifdef _WIN32
@@ -120,6 +121,7 @@ void ImportModel::serialize()
     if (wrapper_.displayQueriesOnly())
         return;
     setHeader();
+    addRepeatJumps();
     serialization_ << "; start" << endl;
     auto it = events_.begin();
     std::string previousMeasure = "";
@@ -723,6 +725,75 @@ void ImportModel::beautify()
     manageNosyncNotes();
     consolidateNotesAndRests();
     consolidateTemposAndMeasures();
+}
+
+void ImportModel::addRepeatJumps()
+{
+    std::vector<std::string> measures;
+    for ( auto event : events_ )
+    {
+        event->clearJumps();
+        if ( event->isMeasure() )
+            measures.push_back( event->measure() );
+    }
+
+    if ( measures.empty() )
+        return;
+
+    std::string forwardRepeatMeasure;
+    const std::string& firstMeasure = measures.front();
+
+    for ( auto it = events_.begin(); it != events_.end(); ++it )
+    {
+        Event* event = *it;
+        if ( event->type() != Event_RepeatBar )
+            continue;
+
+        Repeat* repeat = dynamic_cast<Repeat*>( event );
+        if ( !repeat )
+            continue;
+
+        if ( repeat->direction() == 1 )
+        {
+            forwardRepeatMeasure = repeat->measure();
+            continue;
+        }
+
+        if ( repeat->direction() != -1 )
+            continue;
+
+        Event* source = nullptr;
+        auto previous = it;
+        while ( previous != events_.begin() )
+        {
+            --previous;
+            Event* candidate = *previous;
+            if ( candidate->measure() != repeat->measure() )
+                break;
+            if ( candidate->hasNotes() )
+            {
+                source = candidate;
+                break;
+            }
+        }
+
+        if ( source )
+        {
+            std::string targetMeasure = forwardRepeatMeasure.empty()? firstMeasure: forwardRepeatMeasure;
+            source->addJump( "measure" + targetMeasure );
+
+            auto measureIt = std::find( measures.begin(), measures.end(), repeat->measure() );
+            if ( measureIt != measures.end() )
+            {
+                ++measureIt;
+                if ( measureIt != measures.end() )
+                    source->addJump( "measure" + *measureIt );
+            }
+        }
+
+        // Keep the current forward repeat active. First-ending constructs can
+        // contain another backward repeat before the second ending continues.
+    }
 }
 
 void ImportModel::addWaitForNote(std::string position)

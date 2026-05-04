@@ -1,16 +1,14 @@
-; Antescofo score generated using native importer
-; Copyright (c) IRCAM 2015
-; Designed by Robert Piéchaud
-
+; Antescofo score generated using native importer version 0.3.7
 ; Original file: #940_repeats.xml
 ; exported from Finale 2014 for Mac ~ Dolet Light for Finale 2014
 ; MusicXML version 3.0
-; Converted to Antescofo on Fri Jun 12 16:37:08 2015
 
 ; start
 
 ; ----------- measure 1 --- beat 0 --- time signature 4/4
 
+; repeat (opening)
+BPM 96
 ; repeat (opening)
 NOTE C3 1 measure1
 NOTE G3 1
@@ -22,7 +20,7 @@ NOTE E4 1
 NOTE G4 1 measure2
 NOTE C5 1
 NOTE E4 1
-NOTE C3 1
+NOTE C3 1 @jump measure1, measure3
 ; repeat (closing)
 
 ; ----------- measure 3 --- beat 8 --- time signature 4/4
@@ -38,7 +36,7 @@ NOTE A4 1
 NOTE F4 1 measure4
 NOTE C4 1
 NOTE A4 1
-NOTE C4 1
+NOTE C4 1 @jump measure3, measure5
 ; repeat (closing)
 
 ; ----------- measure 5 --- beat 16 --- time signature 4/4
@@ -61,7 +59,7 @@ NOTE E4 1
 NOTE G4 1 measure7
 NOTE C5 1
 NOTE E4 1
-NOTE C3 1
+NOTE C3 1 @jump measure6, measure8
 ; repeat (closing)
 
 ; ----------- measure 8 --- beat 28 --- time signature 4/4
@@ -70,7 +68,7 @@ NOTE C3 1
 NOTE B2 1 measure8
 NOTE G2 1
 NOTE G2 1
-NOTE B2 1
+NOTE B2 1 @jump measure6, measure9
 ; repeat (closing)
 
 ; ----------- measure 9 --- beat 32 --- time signature 4/4

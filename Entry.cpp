@@ -140,6 +140,7 @@ void Entry::serialize( ostringstream& stream )
         stream << " measure" << measure();
     if(isNosync())
         stream << " nosync";
+    serializeJumps( stream );
     if ( features_ & Harmonic )
         stream << " ; harmonics";
     if ( features_ & SquareNotehead )
