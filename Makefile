@@ -43,7 +43,7 @@ clean:
 	$(CC) $(CFLAGS) $(INCLUDES) -c $<  -o $@
 
 image:
-	cd $(CURRENT_DIR)/Dockerimage && docker build --rm -t $(IMAGENAME):$(TAG) .
+	cd $(CURRENT_DIR)/Dockerimage && docker build --platform=linux/amd64 --rm -t $(IMAGENAME):$(TAG) .
 
 linux:
 	docker run -v "$$(pwd)":/data $(IMAGENAME):$(TAG) bash -c "make clean && make"
