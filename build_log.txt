@@ -33,6 +33,10 @@ Developped by Robert Piéchaud
      
 * * Build log * *
 
+* * * v. 0.3.8 ~ May 4 2026 * * *
+- Add repeat jump export
+
+
 * * * v. 0.3.7 ~ February 4 2025 * * *
 - fixed crash when reading credits
 
