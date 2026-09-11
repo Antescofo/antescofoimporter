@@ -407,6 +407,35 @@ bool MusicXmlImporter::import()
             if ( wrapper_.improveXml() )
                 improveXml( musicXML );
             retrieveScoreInfo( root );
+
+            // MusicXML exporters commonly write score-wide tempo directions only
+            // in the top part. When a different part is selected, retain that
+            // global tempo map while continuing to import notes exclusively from
+            // the requested part(s).
+            TiXmlNode* inheritedTempoPart = nullptr;
+            if ( !tracks_.empty() )
+            {
+                TiXmlNode* tempoPart = nullptr;
+                TiXmlNode* candidate = root->FirstChildElement( "part" );
+                int candidateIndex = 1;
+                bool hasSelectedPart = false;
+                bool tempoPartIsSelected = false;
+                while ( candidate )
+                {
+                    bool const isSelected = find( tracks_.begin(), tracks_.end(), candidateIndex ) != tracks_.end();
+                    hasSelectedPart = hasSelectedPart || isSelected;
+                    if ( !tempoPart && partContainsTempo( candidate ) )
+                    {
+                        tempoPart = candidate;
+                        tempoPartIsSelected = isSelected;
+                    }
+                    candidate = root->IterateChildren( "part", candidate );
+                    ++candidateIndex;
+                }
+                if ( hasSelectedPart && tempoPart && !tempoPartIsSelected )
+                    inheritedTempoPart = tempoPart;
+            }
+
             TiXmlNode* part = root->FirstChildElement( "part" );
             int count = 0;
             while ( part )
@@ -450,6 +479,11 @@ bool MusicXmlImporter::import()
                 }
                 ++count;
                 part = root->IterateChildren( "part", part );
+            }
+            if ( inheritedTempoPart )
+            {
+                clear();
+                processGlobalTempoMap( inheritedTempoPart );
             }
         }
         tracks_.clear();
@@ -1167,7 +1201,50 @@ float MusicXmlImporter::processTimeSignature( TiXmlNode* time, string& timeSigna
 void MusicXmlImporter::processDirection( TiXmlNode* direction )
 {
     //// A. Tempo
-    
+
+    if ( processTempoDirection( direction ) )
+        return;
+
+    ///// B. Other SmartMusic markers
+    if (TiXmlNode* directionType = direction->FirstChildElement( "direction-type" )) {
+        do {
+            if (TiXmlNode* otherDirection = directionType->FirstChildElement("other-direction")) {
+                // Check if the element contains text
+                const char* text = otherDirection->ToElement()->GetText();
+                if (text) { // Ensure text is not nullptr
+                    string content = Utils::clean(text);
+
+                    // Look for "wait for note" compatible events
+                    const vector<string>& dict = Dictionary::waitForNote;
+                    if (std::find(dict.begin(), dict.end(), content) != dict.end()) {
+                        addWaitForNote();
+                    }
+
+                    // Look for "noSyncOnNote" compatible events
+                    const vector<string>& nosyncOnNoteDict = Dictionary::noSyncOnNote;
+                    if (std::find(nosyncOnNoteDict.begin(), nosyncOnNoteDict.end(), content) != nosyncOnNoteDict.end()) {
+                        model_.appendEvent(new NosyncOnNote());
+                    }
+
+                    // Look for "noSyncStart" compatible events
+                    const vector<string>& nosyncStartDict = Dictionary::noSyncStart;
+                    if (std::find(nosyncStartDict.begin(), nosyncStartDict.end(), content) != nosyncStartDict.end()) {
+                        model_.appendEvent(new NosyncStart());
+                    }
+
+                    // Look for "noSyncStop" compatible events
+                    const vector<string>& nosyncStopDict = Dictionary::noSyncStop;
+                    if (std::find(nosyncStopDict.begin(), nosyncStopDict.end(), content) != nosyncStopDict.end()) {
+                        model_.appendEvent(new NosyncStop());
+                    }
+                }
+            }
+        } while ((directionType = direction->IterateChildren("direction-type", directionType)));
+    }
+}
+
+bool MusicXmlImporter::processTempoDirection( TiXmlNode* direction )
+{
     // 1. Look for 'metronome' element
     if (TiXmlNode* directionType = direction->FirstChildElement( "direction-type" )) {
         do
@@ -1175,7 +1252,7 @@ void MusicXmlImporter::processDirection( TiXmlNode* direction )
             if ( TiXmlNode* metronome = directionType->FirstChildElement( "metronome" ) )
             {
                 if ( processTempo( metronome ) )
-                    return;
+                    return true;
             }
             // Find an 'other-direction' or 'words' element that contains an 'a tempo'-like text
         } while ( (directionType = direction->IterateChildren( "direction-type", directionType )) );
@@ -1217,43 +1294,119 @@ void MusicXmlImporter::processDirection( TiXmlNode* direction )
             }
         } while ((directionType = direction->IterateChildren("direction-type", directionType)));
     }
-    
-    
-    ///// B. Other SmartMusic markers
-    if (TiXmlNode* directionType = direction->FirstChildElement( "direction-type" )) {
-        do {
-            if (TiXmlNode* otherDirection = directionType->FirstChildElement("other-direction")) {
-                // Check if the element contains text
-                const char* text = otherDirection->ToElement()->GetText();
-                if (text) { // Ensure text is not nullptr
-                    string content = Utils::clean(text);
+    return false;
+}
 
-                    // Look for "wait for note" compatible events
-                    const vector<string>& dict = Dictionary::waitForNote;
-                    if (std::find(dict.begin(), dict.end(), content) != dict.end()) {
-                        addWaitForNote();
-                    }
+bool MusicXmlImporter::directionContainsTempo( TiXmlNode* direction ) const
+{
+    if ( TiXmlNode* sound = direction->FirstChildElement( "sound" ) )
+    {
+        float tempo = 0.0;
+        if ( sound->ToElement()->QueryFloatAttribute( "tempo", &tempo ) == TIXML_SUCCESS && tempo > 0.0 )
+            return true;
+    }
 
-                    // Look for "noSyncOnNote" compatible events
-                    const vector<string>& nosyncOnNoteDict = Dictionary::noSyncOnNote;
-                    if (std::find(nosyncOnNoteDict.begin(), nosyncOnNoteDict.end(), content) != nosyncOnNoteDict.end()) {
-                        model_.appendEvent(new NosyncOnNote());
-                    }
+    TiXmlNode* directionType = direction->FirstChildElement( "direction-type" );
+    while ( directionType )
+    {
+        if ( directionType->FirstChildElement( "metronome" ) )
+            return true;
 
-                    // Look for "noSyncStart" compatible events
-                    const vector<string>& nosyncStartDict = Dictionary::noSyncStart;
-                    if (std::find(nosyncStartDict.begin(), nosyncStartDict.end(), content) != nosyncStartDict.end()) {
-                        model_.appendEvent(new NosyncStart());
-                    }
+        TiXmlNode* textNode = directionType->FirstChildElement( "other-direction" );
+        if ( !textNode )
+            textNode = directionType->FirstChildElement( "words" );
+        if ( textNode && textNode->ToElement()->GetText() )
+        {
+            string const content = Utils::clean( textNode->ToElement()->GetText() );
+            if ( find( Dictionary::tempoPrimo.begin(), Dictionary::tempoPrimo.end(), content ) != Dictionary::tempoPrimo.end()
+                || find( Dictionary::aTempo.begin(), Dictionary::aTempo.end(), content ) != Dictionary::aTempo.end() )
+                return true;
+        }
+        directionType = direction->IterateChildren( "direction-type", directionType );
+    }
+    return false;
+}
 
-                    // Look for "noSyncStop" compatible events
-                    const vector<string>& nosyncStopDict = Dictionary::noSyncStop;
-                    if (std::find(nosyncStopDict.begin(), nosyncStopDict.end(), content) != nosyncStopDict.end()) {
-                        model_.appendEvent(new NosyncStop());
-                    }
-                }
+bool MusicXmlImporter::partContainsTempo( TiXmlNode* part ) const
+{
+    TiXmlNode* measure = part->FirstChildElement( "measure" );
+    while ( measure )
+    {
+        TiXmlNode* item = measure->FirstChild();
+        while ( item )
+        {
+            if ( !strcmp( item->Value(), "direction" ) && directionContainsTempo( item ) )
+                return true;
+            if ( !strcmp( item->Value(), "sound" ) )
+            {
+                float tempo = 0.0;
+                if ( item->ToElement()->QueryFloatAttribute( "tempo", &tempo ) == TIXML_SUCCESS && tempo > 0.0 )
+                    return true;
             }
-        } while ((directionType = direction->IterateChildren("direction-type", directionType)));
+            item = measure->IterateChildren( item );
+        }
+        measure = part->IterateChildren( "measure", measure );
+    }
+    return false;
+}
+
+float MusicXmlImporter::tempoScanDuration( TiXmlNode* item ) const
+{
+    bool const isNote = !strcmp( item->Value(), "note" );
+    if ( isNote && ( item->FirstChildElement( "chord" ) || item->FirstChildElement( "grace" ) ) )
+        return 0.0;
+
+    TiXmlNode* durationNode = item->FirstChildElement( "duration" );
+    if ( !durationNode || currentDivision_ == 0 || !durationNode->ToElement()->GetText() )
+        return 0.0;
+
+    float duration = (float) currentMetricFactor_ * atoi( durationNode->ToElement()->GetText() ) / currentDivision_;
+    return !strcmp( item->Value(), "backup" ) ? -duration : duration;
+}
+
+void MusicXmlImporter::processGlobalTempoMap( TiXmlNode* part )
+{
+    TiXmlNode* measure = part->FirstChildElement( "measure" );
+    while ( measure )
+    {
+        string measureNumber;
+        measure->ToElement()->QueryValueAttribute( "number", &measureNumber );
+        currentMeasure_ = measureNumber;
+        accumLocal_ = 0.0;
+
+        if ( TiXmlNode* attributes = measure->FirstChildElement( "attributes" ) )
+        {
+            if ( TiXmlNode* divisions = attributes->FirstChildElement( "divisions" ) )
+                currentDivision_ = atoi( divisions->ToElement()->GetText() );
+            if ( TiXmlNode* time = attributes->FirstChildElement( "time" ) )
+            {
+                string signature;
+                currentMeasureDuration_ = processTimeSignature( time, signature );
+                if ( !signature.empty() )
+                    currentTimeSignature_ = signature;
+            }
+        }
+
+        TiXmlNode* item = measure->FirstChild();
+        while ( item )
+        {
+            if ( !strcmp( item->Value(), "note" )
+                || !strcmp( item->Value(), "forward" )
+                || !strcmp( item->Value(), "backup" ) )
+            {
+                accumLocal_ += tempoScanDuration( item );
+            }
+            else if ( !strcmp( item->Value(), "direction" ) && directionContainsTempo( item ) )
+            {
+                processTempoDirection( item );
+            }
+            else if ( !strcmp( item->Value(), "sound" ) )
+            {
+                processTempo( item );
+            }
+            item = measure->IterateChildren( item );
+        }
+        measure = part->IterateChildren( "measure", measure );
     }
 }
 
@@ -1960,4 +2113,3 @@ void MusicXmlImporter::addWaitForNote() {
     if (!position.empty())
         model_.addWaitForNote(position);
 }
-

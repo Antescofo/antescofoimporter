@@ -33,6 +33,10 @@ Developped by Robert Piéchaud
      
 * * Build log * *
 
+* * * v. 0.3.9 ~ Sept. 11 2026 * * *
+- Preserve the global MusicXML tempo map when importing selected tracks
+
+
 * * * v. 0.3.8 ~ May 4 2026 * * *
 - Add repeat jump export
 

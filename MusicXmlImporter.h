@@ -79,6 +79,11 @@ namespace antescofo
         void  processMeasure( TiXmlNode* measure );
         TiXmlNode* processMeasureAttributes( TiXmlNode* measure );
         void  processDirection( TiXmlNode* node );
+        bool  processTempoDirection( TiXmlNode* direction );
+        bool  directionContainsTempo( TiXmlNode* direction ) const;
+        bool  partContainsTempo( TiXmlNode* part ) const;
+        void  processGlobalTempoMap( TiXmlNode* part );
+        float tempoScanDuration( TiXmlNode* item ) const;
         void  processDirectionNosyncOnNote( TiXmlNode* direction );
         void  appendCurrentTempo(bool generated = false);
         void  appendTempoPrimo();

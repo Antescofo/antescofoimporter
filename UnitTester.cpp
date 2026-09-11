@@ -129,7 +129,11 @@ bool UnitTester::processTest( const string& testFile )
         return false;
     }
     cout << "  Processing " << testFile << "...";
-    if ( !wrapper_.import( parentPath + "source/" + testFile ) )
+    vector<int> const selectedTracks = wrapper_.parseStaffList( wrapper_.rawTrackSelection() );
+    bool const imported = selectedTracks.empty()
+        ? wrapper_.import( parentPath + "source/" + testFile )
+        : wrapper_.import( parentPath + "source/" + testFile, selectedTracks );
+    if ( !imported )
         return false;
     ostringstream& freshResult = wrapper_.getCurrentSerialization();
     bool result = compareFiles( reference, freshResult );

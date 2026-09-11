@@ -1,0 +1,11 @@
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+BPM 125
+NOTE 6700 4 measure1
+
+; ----------- measure 2 --- beat 4 --- time signature 4/4
+
+BPM 90
+NOTE 6900 4 measure2
