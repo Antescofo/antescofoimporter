@@ -28,6 +28,7 @@
 #include <sstream>
 #include <fstream>
 #include <algorithm>
+#include <cmath>
 #include <stdio.h>
 #include "ConvertUTF.h"
 
@@ -170,6 +171,7 @@ void MusicXmlImporter::clear()
     currentOriginalBase_ = 0.0;
     previousDuration_ = 0.0;
     currentTimeSignature_.clear();
+    currentVelocityByStaff_.clear();
 }
 
 bool MusicXmlImporter::openDocument( TiXmlDocument& musicXML )
@@ -454,6 +456,8 @@ bool MusicXmlImporter::import()
                     currentChromaticTransposition_ = 0;
                     currentDiatonicTransposition_ = 0;
                     currentOctaveTransposition_ = 0;
+                    currentVelocityByStaff_.clear();
+                    currentVelocityByStaff_[1] = 70;
                     accumLocal_ = 0.0;
                     TiXmlNode* measure = part->FirstChildElement( "measure" );
                     bool shouldChaseCue = true;
@@ -1200,6 +1204,8 @@ float MusicXmlImporter::processTimeSignature( TiXmlNode* time, string& timeSigna
  */
 void MusicXmlImporter::processDirection( TiXmlNode* direction )
 {
+    processExpressiveDirection( direction );
+
     //// A. Tempo
 
     if ( processTempoDirection( direction ) )
@@ -1241,6 +1247,87 @@ void MusicXmlImporter::processDirection( TiXmlNode* direction )
             }
         } while ((directionType = direction->IterateChildren("direction-type", directionType)));
     }
+}
+
+namespace
+{
+    int clampMidiVelocity( int velocity )
+    {
+        return std::max( 1, std::min( 127, velocity ) );
+    }
+
+    int velocityForDynamicName( const std::string& name )
+    {
+        if ( name == "pppppp" ) return 8;
+        if ( name == "ppppp" ) return 14;
+        if ( name == "pppp" ) return 20;
+        if ( name == "ppp" ) return 32;
+        if ( name == "pp" ) return 40;
+        if ( name == "p" ) return 49;
+        if ( name == "mp" ) return 64;
+        if ( name == "mf" ) return 80;
+        if ( name == "f" ) return 96;
+        if ( name == "ff" ) return 112;
+        if ( name == "fff" ) return 126;
+        if ( name == "ffff" || name == "fffff" || name == "ffffff" ) return 127;
+        if ( name == "sf" || name == "sfp" || name == "sfpp" || name == "sfz" || name == "sffz" || name == "rf" || name == "rfz" || name == "fz" ) return 112;
+        if ( name == "fp" ) return 96;
+        return -1;
+    }
+}
+
+int MusicXmlImporter::velocityForDirection( TiXmlNode* direction ) const
+{
+    if ( TiXmlElement* sound = direction->FirstChildElement( "sound" ) )
+    {
+        double dynamics = 0.0;
+        if ( sound->QueryDoubleAttribute( "dynamics", &dynamics ) == TIXML_SUCCESS )
+            return clampMidiVelocity( static_cast<int>( std::lround( dynamics * 0.9 ) ) );
+    }
+
+    for ( TiXmlNode* directionType = direction->FirstChildElement( "direction-type" );
+          directionType;
+          directionType = direction->IterateChildren( "direction-type", directionType ) )
+    {
+        TiXmlNode* dynamics = directionType->FirstChildElement( "dynamics" );
+        if ( dynamics && dynamics->FirstChildElement() )
+            return velocityForDynamicName( dynamics->FirstChildElement()->Value() );
+    }
+    return -1;
+}
+
+void MusicXmlImporter::processExpressiveDirection( TiXmlNode* direction )
+{
+    if ( !wrapper_.expressivePlayback() )
+        return;
+
+    int velocity = velocityForDirection( direction );
+    if ( velocity < 0 )
+        return;
+
+    int staff = 1;
+    if ( TiXmlNode* staffNode = direction->FirstChildElement( "staff" ) )
+        staff = std::max( 1, atoi( staffNode->ToElement()->GetText() ) );
+    currentVelocityByStaff_[staff] = velocity;
+}
+
+int MusicXmlImporter::velocityForNote( TiXmlNode* note, int staff ) const
+{
+    int velocity = 70;
+    auto staffVelocity = currentVelocityByStaff_.find( staff );
+    if ( staffVelocity != currentVelocityByStaff_.end() )
+        velocity = staffVelocity->second;
+    else
+    {
+        auto primaryStaffVelocity = currentVelocityByStaff_.find( 1 );
+        if ( primaryStaffVelocity != currentVelocityByStaff_.end() )
+            velocity = primaryStaffVelocity->second;
+    }
+
+    double noteDynamics = 0.0;
+    if ( note->ToElement()->QueryDoubleAttribute( "dynamics", &noteDynamics ) == TIXML_SUCCESS )
+        velocity = clampMidiVelocity( static_cast<int>( std::lround( noteDynamics * 0.9 ) ) );
+    return velocity;
 }
 
 bool MusicXmlImporter::processTempoDirection( TiXmlNode* direction )
@@ -1666,9 +1753,10 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
     TiXmlNode* pitch = note->FirstChildElement( "pitch" );
     const char* realCue = note->ToElement()->Attribute( "real-cue" );
     bool isMuted = realCue != nullptr;
+    int staff = 1;
     TiXmlNode* staffElement = note->FirstChildElement( "staff" );
     if ( staffElement ) {
-        int staff = atoi( staffElement->ToElement()->GetText() );
+        staff = atoi( staffElement->ToElement()->GetText() );
         std::vector<int> staffList = wrapper_.staffList();
         if (!staffList.empty() && (std::find(staffList.begin(), staffList.end(), staff) == staffList.end()))
         {
@@ -2028,6 +2116,21 @@ float MusicXmlImporter::processNote( TiXmlNode* note )
             features |= Feature::Harmonic;
         else if ( strcmp( notehead->ToElement()->GetText(), "square" ) == 0 )
             features |= Feature::SquareNotehead;
+    }
+    if ( wrapper_.expressivePlayback() && midiCents != 0 )
+    {
+        int velocity = velocityForNote( note, staff );
+        if ( notations )
+        {
+            if ( TiXmlNode* articulations = notations->FirstChildElement( "articulations" ) )
+            {
+                if ( articulations->FirstChildElement( "strong-accent" ) )
+                    velocity += 18;
+                else if ( articulations->FirstChildElement( "accent" ) )
+                    velocity += 10;
+            }
+        }
+        newNote.setVelocity( clampMidiVelocity( velocity ) );
     }
     if ( chord )
     {

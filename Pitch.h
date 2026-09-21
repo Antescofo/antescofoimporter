@@ -50,6 +50,8 @@ namespace antescofo
         void setOctave( int octave ) { octave_ = octave; }
         void resetNote();
         int  computeMidiCents() const;
+        int  velocity() const { return velocity_; }
+        void setVelocity( int velocity ) { velocity_ = velocity; }
         
     private:
         int             midiCents_;
@@ -57,6 +59,7 @@ namespace antescofo
         int             accidental_;
         int             octave_;
         EntryFeatures   features_;
+        int             velocity_;
     };
 }
 

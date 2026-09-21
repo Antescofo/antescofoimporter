@@ -16,7 +16,8 @@ Pitch::Pitch():
     note_       ( 0 ),
     accidental_ ( 0 ),
     octave_     ( 0 ),
-    features_   ( None )
+    features_   ( None ),
+    velocity_   ( -1 )
 {
     //NOTHING ELSE
 }
@@ -26,7 +27,8 @@ Pitch::Pitch( int cents ):
     note_       ( 0 ),
     accidental_ ( 0 ),
     octave_     ( 0 ),
-    features_   ( None )
+    features_   ( None ),
+    velocity_   ( -1 )
 {
     if ( cents < 0 )
         features_ |= Tiedbackwards;
@@ -37,7 +39,8 @@ Pitch::Pitch( int cents, const EntryFeatures feature ):
     note_       ( 0 ),
     accidental_ ( 0 ),
     octave_     ( 0 ),
-    features_( feature )
+    features_   ( feature ),
+    velocity_   ( -1 )
 {
     features_ &= ~OriginalEnharmony;
 }
@@ -47,7 +50,8 @@ Pitch::Pitch( const Pitch& otherPitch ):
     note_       ( otherPitch.note_ ),
     accidental_ ( otherPitch.accidental_ ),
     octave_     ( otherPitch.octave_ ),
-    features_( otherPitch.features_ )
+    features_   ( otherPitch.features_ ),
+    velocity_   ( otherPitch.velocity_ )
 {
     //NOTHING ELSE
 }
@@ -79,6 +83,7 @@ Pitch& Pitch::operator=( const Pitch& otherPitch )
     note_ = otherPitch.note_;
     accidental_ = otherPitch.accidental_;
     octave_ = otherPitch.octave_;
+    velocity_ = otherPitch.velocity_;
     return *this;
 }
 

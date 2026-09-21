@@ -18,6 +18,7 @@
 
 #include "Importer.h"
 #include "Event.h"
+#include <map>
 #include <string>
 
 class TiXmlNode;
@@ -79,6 +80,9 @@ namespace antescofo
         void  processMeasure( TiXmlNode* measure );
         TiXmlNode* processMeasureAttributes( TiXmlNode* measure );
         void  processDirection( TiXmlNode* node );
+        void  processExpressiveDirection( TiXmlNode* direction );
+        int   velocityForDirection( TiXmlNode* direction ) const;
+        int   velocityForNote( TiXmlNode* note, int staff ) const;
         bool  processTempoDirection( TiXmlNode* direction );
         bool  directionContainsTempo( TiXmlNode* direction ) const;
         bool  partContainsTempo( TiXmlNode* part ) const;
@@ -131,6 +135,7 @@ namespace antescofo
         float            currentOriginalBeats_;
         float            currentOriginalBase_;
         float            previousDuration_;     //a safeguard for Sibelius xml export bug...
+        std::map<int, int> currentVelocityByStaff_;
     };
 }
 

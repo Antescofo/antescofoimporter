@@ -83,6 +83,8 @@ namespace antescofo
         bool                smartGraceNotes() const { return smartGraceNotes_; }
         bool                appoggiaturas() const { return (appoggiaturas_ || smartGraceNotes()); }
         void                setAppoggiaturas( bool status ) { appoggiaturas_ = status; }
+        bool                expressivePlayback() const { return expressivePlayback_; }
+        void                setExpressivePlayback( bool status ) { expressivePlayback_ = status; }
     private:
         void addImporter( Importer* importer );
         
@@ -106,6 +108,7 @@ namespace antescofo
         bool                    chaseCues_;
         bool                    smartGraceNotes_;
         bool                    appoggiaturas_;
+        bool                    expressivePlayback_;
     };
 }
 

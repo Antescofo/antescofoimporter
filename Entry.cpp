@@ -102,7 +102,7 @@ bool comparePitches( const Pitch& p1, const Pitch& p2 )
 
 void Entry::serialize( ostringstream& stream )
 {
-    
+    bool supportsExpressiveAttributes = false;
     if ( features_& GlissandoEnd && duration_ == 0 )
     {
         return;
@@ -125,12 +125,38 @@ void Entry::serialize( ostringstream& stream )
     else if ( pitches_.size() == 1 )
     {
         serializeNote( stream );
+        supportsExpressiveAttributes = true;
     }
     else if ( pitches_.size() > 1 )
     {
         serializeChord( stream );
+        supportsExpressiveAttributes = true;
     }
     stream << formatDuration(); //<< " ; " << duration_;
+    if ( supportsExpressiveAttributes )
+    {
+        if ( pitches_.size() == 1 && pitches_.begin()->velocity() >= 0 )
+        {
+            stream << " @velocity " << pitches_.begin()->velocity();
+        }
+        else if ( pitches_.size() > 1 )
+        {
+            bool hasVelocities = true;
+            for ( auto it = pitches_.begin(); it != pitches_.end(); ++it )
+                hasVelocities = hasVelocities && it->velocity() >= 0;
+            if ( hasVelocities )
+            {
+                stream << " @velocities (";
+                for ( auto it = pitches_.begin(); it != pitches_.end(); ++it )
+                {
+                    if ( it != pitches_.begin() )
+                        stream << " ";
+                    stream << it->velocity();
+                }
+                stream << ")";
+            }
+        }
+    }
     //bool isPickup = ceilf( measure() ) != measure();
     if ( features_& Staccato )
         stream << " @staccato";
@@ -583,4 +609,3 @@ void Entry::setAsRest()
 {
     pitches_.begin()->setMidiCents( 0 );
 }
-

@@ -37,7 +37,8 @@ ImporterWrapper::ImporterWrapper() :
     improveXml_             ( false ),
     chaseCues_              ( false ),
     smartGraceNotes_        ( false ),
-    appoggiaturas_          ( false )
+    appoggiaturas_          ( false ),
+    expressivePlayback_     ( false )
 {
     addImporter( new MusicXmlImporter( *this ) );
     addImporter( new MidiImporter( *this ) );
@@ -146,6 +147,11 @@ bool ImporterWrapper::parseArguments( vector<string>& args )
         {
             appoggiaturas_ = true;
             cout << "  ✔︎ Convert appoggiaturas" << endl;
+        }
+        else if ( args[i] == "-expressive" )
+        {
+            expressivePlayback_ = true;
+            cout << "  ✔︎ Add expressive playback attributes" << endl;
         }
         else
         {
